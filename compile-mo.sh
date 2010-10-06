@@ -15,6 +15,6 @@ if [[ ($# -ne 1) || (! -d "$1") ]]; then usage; fi
 for lang in `find $1 -type f -name "*.po"`; do
     dir=`dirname $lang`
     stem=`basename $lang .po`
-    msgfmt -f -o ${dir}/${stem}.mo $lang
+    msgfmt -o ${dir}/${stem}.mo $lang
 done
 
