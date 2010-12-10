@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-24 07:41-0700\n"
+"POT-Creation-Date: 2010-12-10 05:37-0700\n"
 "PO-Revision-Date: 2010-04-26 18:09-0700\n"
 "Last-Translator: James <james@localhost>\n"
 "Language-Team: Danish\n"
@@ -16,10 +16,16 @@ msgstr ""
 msgid "Join our Army of Awesome"
 msgstr ""
 
-#: apps/customercare/templates/customercare/landing.html:59 apps/gallery/templates/gallery/search.html:7 apps/search/templates/search/down.html:3 apps/search/templates/search/form.html:3
+#: apps/customercare/templates/customercare/landing.html:116 apps/gallery/templates/gallery/search.html:7 apps/search/templates/search/down.html:3 apps/search/templates/search/form.html:3
 #: apps/search/templates/search/results.html:3 apps/search/templates/search/results.html:19 apps/wiki/templates/wiki/includes/common_macros.html:15
 msgid "Search"
 msgstr "Søg"
+
+#: apps/customercare/templates/customercare/tweets.html:12
+msgid "{0} and {1} other replied"
+msgid_plural "{0} and {1} others replied"
+msgstr[0] ""
+msgstr[1] ""
 
 #: apps/dashboards/readouts.py:28
 #, fuzzy
@@ -108,11 +114,10 @@ msgid "Contributor Dashboard"
 msgstr ""
 
 #: apps/dashboards/templates/dashboards/contributors.html:10 apps/dashboards/templates/dashboards/kb_detail.html:9 apps/dashboards/templates/dashboards/localization.html:10
-#: apps/gallery/templates/gallery/confirm_media_delete.html:9 apps/gallery/templates/gallery/edit_media.html:13 apps/gallery/templates/gallery/gallery.html:13
-#: apps/gallery/templates/gallery/media.html:16 apps/gallery/templates/gallery/search.html:12 apps/wiki/templates/wiki/compare_revisions.html:13
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:12 apps/wiki/templates/wiki/document_revisions.html:12 apps/wiki/templates/wiki/edit_document.html:17
-#: apps/wiki/templates/wiki/list_documents.html:15 apps/wiki/templates/wiki/new_document.html:15 apps/wiki/templates/wiki/review_revision.html:12 apps/wiki/templates/wiki/review_translation.html:12
-#: apps/wiki/templates/wiki/revision.html:15 apps/wiki/templates/wiki/select_locale.html:12 apps/wiki/templates/wiki/translate.html:16
+#: apps/gallery/templates/gallery/edit_media.html:20 apps/gallery/templates/gallery/gallery.html:12 apps/gallery/templates/gallery/media.html:23 apps/gallery/templates/gallery/search.html:12
+#: apps/wiki/templates/wiki/compare_revisions.html:13 apps/wiki/templates/wiki/confirm_revision_delete.html:12 apps/wiki/templates/wiki/document_revisions.html:12
+#: apps/wiki/templates/wiki/edit_document.html:17 apps/wiki/templates/wiki/list_documents.html:15 apps/wiki/templates/wiki/new_document.html:15 apps/wiki/templates/wiki/review_revision.html:12
+#: apps/wiki/templates/wiki/review_translation.html:12 apps/wiki/templates/wiki/revision.html:15 apps/wiki/templates/wiki/select_locale.html:12 apps/wiki/templates/wiki/translate.html:16
 #, fuzzy
 msgid "You are here:"
 msgstr "Du er bortvist fra"
@@ -202,7 +207,7 @@ msgstr ""
 msgid "The template \"%s\" does not exist."
 msgstr ""
 
-#: apps/dashboards/views.py:70 apps/wiki/templates/wiki/includes/sidebar_modules.html:57
+#: apps/dashboards/views.py:70
 msgid "Localization Dashboard"
 msgstr ""
 
@@ -266,9 +271,9 @@ msgstr "Handling"
 msgid "Edit"
 msgstr "Rediger"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/gallery/templates/gallery/confirm_media_delete.html:55
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:27 apps/kbforums/templates/kbforums/confirm_thread_delete.html:29 apps/kbforums/templates/kbforums/includes/post.html:13
-#: apps/kbforums/templates/kbforums/posts.html:37 apps/wiki/templates/wiki/confirm_revision_delete.html:28 apps/wiki/templates/wiki/document_revisions.html:87
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:27
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29 apps/kbforums/templates/kbforums/includes/post.html:13 apps/kbforums/templates/kbforums/posts.html:37
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:28 apps/wiki/templates/wiki/document_revisions.html:87
 msgid "Delete"
 msgstr "Slet"
 
@@ -316,11 +321,11 @@ msgstr ""
 msgid "There is no flagged content pending moderation."
 msgstr ""
 
-#: apps/flagit/views.py:37
+#: apps/flagit/views.py:36
 msgid "You already flagged this content."
 msgstr ""
 
-#: apps/flagit/views.py:42
+#: apps/flagit/views.py:41
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr ""
 
@@ -376,217 +381,225 @@ msgstr ""
 msgid "Please select a different title."
 msgstr "Vælg venligst en chatkanal"
 
-#. {t} is the title of the media, {type} is image or video.
-#: apps/gallery/templates/gallery/confirm_media_delete.html:4
-msgid "Delete {type} | {t} | Media Gallery"
+#: apps/gallery/forms.py:42
+msgid "Include this in wiki syntax with [[%(type)s:title]]"
 msgstr ""
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:12
-msgid "Are you sure you want to delete this {type}?"
+#: apps/gallery/forms.py:43
+msgid "Provide a brief description of this media."
 msgstr ""
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:14 apps/kbforums/templates/kbforums/confirm_thread_delete.html:14 apps/kbforums/templates/kbforums/threads.html:32
-msgid "Title"
-msgstr "Titel"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:16
+#: apps/gallery/forms.py:59 apps/gallery/forms.py:136
 #, fuzzy
 msgid "Locale"
 msgstr "Lokal"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:18
+#: apps/gallery/forms.py:64 apps/gallery/forms.py:141 apps/kbforums/templates/kbforums/confirm_thread_delete.html:14 apps/kbforums/templates/kbforums/threads.html:32
+msgid "Title"
+msgstr "Titel"
+
+#: apps/gallery/forms.py:71 apps/gallery/forms.py:148
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:20 apps/kbforums/templates/kbforums/confirm_thread_delete.html:16 apps/wiki/templates/wiki/confirm_revision_delete.html:16
-msgid "Creator"
-msgstr "Opretter"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:22 apps/kbforums/templates/kbforums/confirm_post_delete.html:16 apps/kbforums/templates/kbforums/confirm_thread_delete.html:18
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:18
-msgid "Date"
-msgstr "Dato"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:25 apps/gallery/templates/gallery/confirm_media_delete.html:42
-#, fuzzy
-msgid "Available formats"
-msgstr "Tilgængelige skabeloner"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:39 apps/gallery/templates/gallery/gallery.html:78 apps/gallery/templates/gallery/gallery.html:147
-msgid "Video"
-msgstr ""
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:44 apps/gallery/templates/gallery/gallery.html:77 apps/gallery/templates/gallery/gallery.html:87
-msgid "Image"
-msgstr "Billede"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:51
-msgid "You are about to permanently delete this {type}. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
-msgstr ""
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:54 apps/gallery/templates/gallery/edit_media.html:25 apps/gallery/templates/gallery/gallery.html:96
-#: apps/gallery/templates/gallery/gallery.html:125 apps/gallery/templates/gallery/gallery.html:137 apps/gallery/templates/gallery/gallery.html:141 apps/gallery/templates/gallery/gallery.html:145
-#: apps/gallery/templates/gallery/gallery.html:189 apps/gallery/templates/gallery/gallery.html:207 apps/kbforums/templates/kbforums/confirm_post_delete.html:26
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:28 apps/kbforums/templates/kbforums/edit_post.html:28 apps/kbforums/templates/kbforums/edit_thread.html:25
-#: apps/kbforums/templates/kbforums/new_thread.html:33 apps/notifications/templates/notifications/remove.html:15 apps/wiki/templates/wiki/confirm_revision_delete.html:29
-#: apps/wiki/templates/wiki/includes/review_form.html:38 apps/wiki/templates/wiki/includes/review_form.html:57 apps/wiki/templates/wiki/includes/submit_revision_modal.html:22
-msgid "Cancel"
-msgstr "Fortryd"
-
-#. {t} is the title of the media, {type} is image or video.
 #: apps/gallery/templates/gallery/edit_media.html:5
-msgid "Edit {type} | {t} | Media Gallery"
-msgstr ""
+#, fuzzy
+msgid "Edit image"
+msgstr "rediger billede"
 
-#: apps/gallery/templates/gallery/edit_media.html:6 apps/gallery/templates/gallery/gallery.html:5 apps/gallery/templates/gallery/gallery.html:8 apps/gallery/templates/gallery/gallery.html:16
+#: apps/gallery/templates/gallery/edit_media.html:6
+#, fuzzy
+msgid "Save image"
+msgstr "Flyt billede"
+
+#: apps/gallery/templates/gallery/edit_media.html:7
+#, fuzzy
+msgid "Edit image | {t} | Media Gallery"
+msgstr "Filgalleri"
+
+#: apps/gallery/templates/gallery/edit_media.html:9
+#, fuzzy
+msgid "Edit video"
+msgstr "Rediger emne"
+
+#: apps/gallery/templates/gallery/edit_media.html:10
+#, fuzzy
+msgid "Save video"
+msgstr "Gem position"
+
+#: apps/gallery/templates/gallery/edit_media.html:11
+#, fuzzy
+msgid "Edit video | {t} | Media Gallery"
+msgstr "Filgalleri"
+
+#: apps/gallery/templates/gallery/edit_media.html:13 apps/gallery/templates/gallery/gallery.html:4 apps/gallery/templates/gallery/gallery.html:7 apps/gallery/templates/gallery/gallery.html:15
 #: apps/gallery/templates/gallery/media.html:9 apps/gallery/templates/gallery/search.html:6 apps/gallery/templates/gallery/search.html:15 apps/wiki/templates/wiki/includes/sidebar_modules.html:58
 #, fuzzy
 msgid "Media Gallery"
 msgstr "Rediger galleri"
 
-#: apps/gallery/templates/gallery/edit_media.html:8
-#, fuzzy
-msgid "Edit {type}"
-msgstr "Rediger emne"
+#: apps/gallery/templates/gallery/edit_media.html:32 apps/gallery/templates/gallery/includes/upload_media_form.html:36 apps/gallery/templates/gallery/includes/upload_media_form.html:58
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:84 apps/gallery/templates/gallery/includes/upload_media_form.html:88
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:92 apps/gallery/templates/gallery/includes/upload_media_form.html:122
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:139 apps/kbforums/templates/kbforums/confirm_post_delete.html:26 apps/kbforums/templates/kbforums/confirm_thread_delete.html:28
+#: apps/kbforums/templates/kbforums/edit_post.html:28 apps/kbforums/templates/kbforums/edit_thread.html:25 apps/kbforums/templates/kbforums/new_thread.html:33
+#: apps/notifications/templates/notifications/remove.html:15 apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_revision_delete.html:29
+#: apps/wiki/templates/wiki/includes/review_form.html:38 apps/wiki/templates/wiki/includes/review_form.html:57 apps/wiki/templates/wiki/includes/submit_revision_modal.html:22
+msgid "Cancel"
+msgstr "Fortryd"
 
-#: apps/gallery/templates/gallery/edit_media.html:26
-msgid "Save {type}"
-msgstr ""
-
-#: apps/gallery/templates/gallery/gallery.html:19 apps/gallery/templates/gallery/gallery.html:72
+#: apps/gallery/templates/gallery/gallery.html:18 apps/gallery/templates/gallery/includes/upload_media_form.html:12
 #, fuzzy
 msgid "Upload a New Media File"
 msgstr "Upload et nyt spil"
 
-#: apps/gallery/templates/gallery/gallery.html:22 apps/gallery/templates/gallery/search.html:18
+#: apps/gallery/templates/gallery/gallery.html:21 apps/gallery/templates/gallery/search.html:18
 msgid "Show media for:"
 msgstr ""
 
-#: apps/gallery/templates/gallery/gallery.html:29 apps/gallery/templates/gallery/search.html:25
+#: apps/gallery/templates/gallery/gallery.html:28 apps/gallery/templates/gallery/search.html:25
 msgid "Go"
 msgstr ""
 
-#: apps/gallery/templates/gallery/gallery.html:31
+#: apps/gallery/templates/gallery/gallery.html:30
 msgid "You have JavaScript disabled. Please enable JavaScript to upload files."
 msgstr ""
 
-#: apps/gallery/templates/gallery/gallery.html:38 apps/gallery/templates/gallery/search.html:31
+#: apps/gallery/templates/gallery/gallery.html:37 apps/gallery/templates/gallery/search.html:31
 #, fuzzy
 msgid "Show:"
 msgstr "Vis alle"
 
-#: apps/gallery/templates/gallery/gallery.html:42 apps/gallery/templates/gallery/gallery.html:44 apps/gallery/templates/gallery/search.html:35 apps/gallery/templates/gallery/search.html:37
+#: apps/gallery/templates/gallery/gallery.html:41 apps/gallery/templates/gallery/gallery.html:43 apps/gallery/templates/gallery/search.html:35 apps/gallery/templates/gallery/search.html:37
 msgid "Images"
 msgstr "Billeder"
 
-#: apps/gallery/templates/gallery/gallery.html:49 apps/gallery/templates/gallery/gallery.html:51 apps/gallery/templates/gallery/search.html:42 apps/gallery/templates/gallery/search.html:44
-#: templates/layout/footer.html:30 templates/layout/header.html:19
+#: apps/gallery/templates/gallery/gallery.html:48 apps/gallery/templates/gallery/gallery.html:50 apps/gallery/templates/gallery/search.html:42 apps/gallery/templates/gallery/search.html:44
+#: templates/global/menu_links.html:8
 msgid "Videos"
 msgstr ""
 
-#: apps/gallery/templates/gallery/gallery.html:59 apps/gallery/templates/gallery/search.html:52
+#: apps/gallery/templates/gallery/gallery.html:58 apps/gallery/templates/gallery/search.html:52
 #, fuzzy
 msgid "Search Gallery"
 msgstr "Brug galleri"
-
-#: apps/gallery/templates/gallery/gallery.html:70
-msgid "Continue Uploading Media"
-msgstr ""
-
-#: apps/gallery/templates/gallery/gallery.html:75 apps/upload/templates/upload/attachments.html:56
-#, fuzzy
-msgid "Upload"
-msgstr "overfør"
-
-#: apps/gallery/templates/gallery/gallery.html:89
-#, fuzzy
-msgid "Select an image file to upload."
-msgstr "Du skal vælge en fil til upload."
-
-#: apps/gallery/templates/gallery/gallery.html:91
-msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
-msgstr ""
-
-#: apps/gallery/templates/gallery/gallery.html:93 apps/gallery/templates/gallery/gallery.html:134 apps/gallery/templates/gallery/gallery.html:186
-msgid "Progress"
-msgstr ""
-
-#: apps/gallery/templates/gallery/gallery.html:98 apps/gallery/templates/gallery/gallery.html:161 apps/kbforums/templates/kbforums/edit_post.html:29
-#: apps/kbforums/templates/kbforums/new_thread.html:34 apps/kbforums/templates/kbforums/posts.html:94
-msgid "Preview"
-msgstr "Test"
-
-#: apps/gallery/templates/gallery/gallery.html:104 apps/gallery/templates/gallery/gallery.html:125 apps/gallery/templates/gallery/gallery.html:207 apps/gallery/templates/gallery/media.html:68
-#, fuzzy
-msgid "Delete this {type}"
-msgstr "Stem dette emne"
-
-#: apps/gallery/templates/gallery/gallery.html:116
-msgid "Include this in wiki syntax with [[{type}:title]]"
-msgstr ""
-
-#: apps/gallery/templates/gallery/gallery.html:118
-msgid "Provide a brief description of this media."
-msgstr ""
-
-#: apps/gallery/templates/gallery/gallery.html:124 apps/gallery/templates/gallery/gallery.html:204
-#, fuzzy
-msgid "Submit file"
-msgstr "Indsend artikel"
-
-#: apps/gallery/templates/gallery/gallery.html:149
-msgid "Select a Flash video (FLV) to upload."
-msgstr ""
-
-#: apps/gallery/templates/gallery/gallery.html:151
-msgid "Please no SWFs, only FLVs."
-msgstr ""
-
-#: apps/gallery/templates/gallery/gallery.html:154
-#, fuzzy
-msgid "Select an Ogv video to upload."
-msgstr "Du skal vælge en fil til upload."
-
-#: apps/gallery/templates/gallery/gallery.html:158
-#, fuzzy
-msgid "Select a WebM video to upload."
-msgstr "Du skal vælge en fil til upload."
-
-#: apps/gallery/templates/gallery/gallery.html:168 apps/gallery/templates/gallery/gallery.html:174 apps/gallery/templates/gallery/gallery.html:180 apps/gallery/templates/gallery/gallery.html:197
-msgid "Delete {format} file"
-msgstr ""
-
-#: apps/gallery/templates/gallery/gallery.html:191
-msgid "Thumbnail"
-msgstr "Miniaturebillede"
-
-#: apps/gallery/templates/gallery/gallery.html:199
-msgid "Upload a thumbnail for your video. Suggested size: {width}x{height}px"
-msgstr ""
 
 #: apps/gallery/templates/gallery/includes/media_list.html:14
 #, fuzzy
 msgid "No media files found."
 msgstr "Ingen sider fundet"
 
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:10
+msgid "Continue Uploading Media"
+msgstr ""
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:15 apps/upload/templates/upload/attachments.html:56
+#, fuzzy
+msgid "Upload"
+msgstr "overfør"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:17 apps/gallery/templates/gallery/includes/upload_media_form.html:27
+msgid "Image"
+msgstr "Billede"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:18 apps/gallery/templates/gallery/includes/upload_media_form.html:67
+msgid "Video"
+msgstr ""
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:29
+#, fuzzy
+msgid "Select an image file to upload."
+msgstr "Du skal vælge en fil til upload."
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:31
+msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
+msgstr ""
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:33 apps/gallery/templates/gallery/includes/upload_media_form.html:81
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:119
+msgid "Progress"
+msgstr ""
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:38 apps/gallery/templates/gallery/includes/upload_media_form.html:94 apps/kbforums/templates/kbforums/edit_post.html:29
+#: apps/kbforums/templates/kbforums/new_thread.html:34 apps/kbforums/templates/kbforums/posts.html:93
+msgid "Preview"
+msgstr "Test"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:44 apps/gallery/templates/gallery/media.html:13 apps/upload/templates/upload/attachments.html:12
+#: apps/upload/templates/upload/attachments.html:17 apps/upload/templates/upload/attachments.html:19
+#, fuzzy
+msgid "Delete this image"
+msgstr "Stem dette emne"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:57 apps/gallery/templates/gallery/includes/upload_media_form.html:136
+#, fuzzy
+msgid "Submit file"
+msgstr "Indsend artikel"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:69
+msgid "Select a Flash video (FLV) to upload."
+msgstr ""
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:71
+msgid "Please no SWFs, only FLVs."
+msgstr ""
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:74
+#, fuzzy
+msgid "Select an Ogv video to upload."
+msgstr "Du skal vælge en fil til upload."
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:78
+#, fuzzy
+msgid "Select a WebM video to upload."
+msgstr "Du skal vælge en fil til upload."
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:101 apps/gallery/templates/gallery/includes/upload_media_form.html:107
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:113
+msgid "Delete {format} file"
+msgstr ""
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:124
+msgid "Thumbnail"
+msgstr "Miniaturebillede"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:130
+#, fuzzy
+msgid "Delete thumbnail"
+msgstr "genopret miniaturebilleder"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:132
+msgid "Upload a thumbnail for your video. Suggested size: {width}x{height}px"
+msgstr ""
+
 #: apps/gallery/templates/gallery/media.html:5
 #, fuzzy
 msgid "{title} | Media Gallery"
 msgstr "Filgalleri"
 
-#: apps/gallery/templates/gallery/media.html:51
+#: apps/gallery/templates/gallery/media.html:14
+#, fuzzy
+msgid "Edit this image"
+msgstr "Rediger denne side"
+
+#: apps/gallery/templates/gallery/media.html:16
+#, fuzzy
+msgid "Delete this video"
+msgstr "Stem dette emne"
+
+#: apps/gallery/templates/gallery/media.html:17
+#, fuzzy
+msgid "Edit this video"
+msgstr "Rediger dette spørgeskema"
+
+#: apps/gallery/templates/gallery/media.html:58
 msgid "by {user}"
 msgstr ""
 
-#: apps/gallery/templates/gallery/media.html:52
+#: apps/gallery/templates/gallery/media.html:59
 #, fuzzy
 msgid "Uploaded {date}"
 msgstr "Upload dato"
-
-#: apps/gallery/templates/gallery/media.html:69
-#, fuzzy
-msgid "Edit this {type}"
-msgstr "Rediger denne side"
 
 #: apps/gallery/templates/gallery/search.html:4
 #, fuzzy
@@ -659,6 +672,10 @@ msgstr ""
 msgid "Author"
 msgstr "Forfatter"
 
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:16 apps/kbforums/templates/kbforums/confirm_thread_delete.html:18 apps/wiki/templates/wiki/confirm_revision_delete.html:18
+msgid "Date"
+msgstr "Dato"
+
 #: apps/kbforums/templates/kbforums/confirm_post_delete.html:18 apps/wiki/templates/wiki/confirm_revision_delete.html:20
 msgid "Content"
 msgstr "Indhold"
@@ -680,6 +697,10 @@ msgstr "læs venligst"
 #: apps/kbforums/templates/kbforums/confirm_thread_delete.html:12
 msgid "Are you sure you want to delete this thread?"
 msgstr ""
+
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:16 apps/wiki/templates/wiki/confirm_revision_delete.html:16
+msgid "Creator"
+msgstr "Opretter"
 
 #: apps/kbforums/templates/kbforums/confirm_thread_delete.html:20
 #, fuzzy
@@ -739,7 +760,7 @@ msgstr "poster"
 msgid "Link to this post."
 msgstr "email denne post"
 
-#: apps/kbforums/templates/kbforums/includes/post.html:26 apps/kbforums/templates/kbforums/posts.html:95
+#: apps/kbforums/templates/kbforums/includes/post.html:26 apps/kbforums/templates/kbforums/posts.html:94
 #, fuzzy
 msgid "Reply"
 msgstr "besvar"
@@ -804,16 +825,20 @@ msgstr "handling status"
 msgid "Message"
 msgstr "Besked"
 
-#: apps/kbforums/templates/kbforums/posts.html:82 apps/kbforums/templates/kbforums/posts.html:101
+#: apps/kbforums/templates/kbforums/posts.html:76
+msgid "Oh, no! Looks like there are no posts!"
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/posts.html:81 apps/kbforums/templates/kbforums/posts.html:100
 #, fuzzy
 msgid "Post a reply"
 msgstr "Post dato"
 
-#: apps/kbforums/templates/kbforums/posts.html:103
+#: apps/kbforums/templates/kbforums/posts.html:102
 msgid "This thread has been locked. It is no longer possible to post new replies."
 msgstr ""
 
-#: apps/kbforums/templates/kbforums/posts.html:108
+#: apps/kbforums/templates/kbforums/posts.html:107
 #, fuzzy
 msgid "Reply Preview:"
 msgstr "Test"
@@ -863,6 +888,10 @@ msgstr ""
 
 #: apps/kbforums/templates/kbforums/threads.html:56
 msgid "by <a class=\"username\" href=\"{profile_url}\">{username}</a>"
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/threads.html:65
+msgid "There are no threads. Maybe you should create some!"
 msgstr ""
 
 #: apps/notifications/templates/notifications/gone.html:3
@@ -966,7 +995,7 @@ msgstr ""
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
 msgstr ""
 
-#: apps/search/templates/search/form.html:16 apps/wiki/templates/wiki/edit_document.html:8 apps/wiki/templates/wiki/new_document.html:8 templates/layout/sidebar.html:4
+#: apps/search/templates/search/form.html:16 apps/wiki/templates/wiki/edit_document.html:8 apps/wiki/templates/wiki/new_document.html:8
 msgid "Knowledge Base"
 msgstr ""
 
@@ -1142,52 +1171,52 @@ msgstr ""
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr ""
 
-#: apps/sumo/helpers.py:132 templates/layout/footer.html:66 templates/layout/header.html:54 templates/layout/sidebar.html:3
+#: apps/sumo/helpers.py:132 templates/global/menu_links.html:44 templates/layout/menu_links.html:7 templates/layout/sidebar.html:3
 msgid "Firefox Support"
 msgstr ""
 
-#: apps/sumo/helpers.py:195
+#: apps/sumo/helpers.py:181
 #, fuzzy
 msgid "Today at %s"
 msgstr "Idag"
 
-#: apps/sumo/helpers.py:267
+#: apps/sumo/helpers.py:253
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/sumo/helpers.py:269
+#: apps/sumo/helpers.py:255
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/sumo/helpers.py:271
+#: apps/sumo/helpers.py:257
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/sumo/helpers.py:273
+#: apps/sumo/helpers.py:259
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/sumo/helpers.py:275
+#: apps/sumo/helpers.py:261
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/sumo/helpers.py:277
+#: apps/sumo/helpers.py:263
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/sumo/helpers.py:279
+#: apps/sumo/helpers.py:265
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] ""
@@ -1249,11 +1278,6 @@ msgstr ""
 msgid "Add"
 msgstr "Tilføj"
 
-#: apps/upload/templates/upload/attachments.html:12 apps/upload/templates/upload/attachments.html:17 apps/upload/templates/upload/attachments.html:19
-#, fuzzy
-msgid "Delete this image"
-msgstr "Stem dette emne"
-
 #: apps/upload/templates/upload/attachments.html:36
 #, fuzzy
 msgid "Uploaded images:"
@@ -1277,25 +1301,393 @@ msgstr ""
 msgid "\"%s\" is too large (%sKB), the limit is %sKB"
 msgstr ""
 
-#: apps/upload/views.py:27
+#: apps/upload/views.py:26
 #, fuzzy
 msgid "Model does not exist."
 msgstr "Brugeren findes desværre ikke"
 
-#: apps/upload/views.py:35
+#: apps/upload/views.py:34
 #, fuzzy
 msgid "Object does not exist."
 msgstr "Brugeren findes desværre ikke"
 
-#: apps/upload/views.py:49
+#: apps/upload/views.py:48
 #, fuzzy
 msgid "Invalid or no image received."
 msgstr "Ugyldigt eller ukendt brugernavn"
 
-#: apps/upload/views.py:66
+#: apps/upload/views.py:65
 #, fuzzy
 msgid "The requested image could not be found."
 msgstr "Den valgte side kan desværre ikke findes - brug evt. FAQ"
+
+#: apps/users/forms.py:13
+msgid "Username may contain only letters, numbers and @/./+/-/_ characters."
+msgstr ""
+
+#: apps/users/forms.py:15
+#, fuzzy
+msgid "Username is required."
+msgstr "Bruger logind er nødvendig"
+
+#: apps/users/forms.py:16
+msgid "Username is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
+msgstr ""
+
+#: apps/users/forms.py:18
+msgid "Username is too long (%(show_value)s characters). It must be %(limit_value)s characters or less."
+msgstr ""
+
+#: apps/users/forms.py:20
+#, fuzzy
+msgid "Email address is required."
+msgstr "Email er nødvendig"
+
+#: apps/users/forms.py:21
+msgid "Email address is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
+msgstr ""
+
+#: apps/users/forms.py:23
+msgid "Email address is too long (%(show_value)s characters). It must be %(limit_value)s characters or less."
+msgstr ""
+
+#: apps/users/forms.py:25
+#, fuzzy
+msgid "Password is required."
+msgstr "Adgangskode er nødvendig"
+
+#: apps/users/forms.py:26
+#, fuzzy
+msgid "Please enter your password twice."
+msgstr "Skift din adgangskode"
+
+#: apps/users/forms.py:38 apps/users/templates/users/login.html:17 templates/layout/login.html:8
+#, fuzzy
+msgid "Username:"
+msgstr "Brugernavn"
+
+#: apps/users/forms.py:40
+msgid "Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr ""
+
+#: apps/users/forms.py:46
+msgid "Email address:"
+msgstr ""
+
+#: apps/users/forms.py:50 apps/users/templates/users/login.html:21 templates/layout/login.html:11
+#, fuzzy
+msgid "Password:"
+msgstr "Adgangskode"
+
+#: apps/users/forms.py:54
+#, fuzzy
+msgid "Repeat password:"
+msgstr "Gentag adgangskode"
+
+#: apps/users/forms.py:58
+msgid "Enter the same password as above, for verification."
+msgstr ""
+
+#: apps/users/forms.py:71
+#, fuzzy
+msgid "Passwords must match."
+msgstr "Adgangskoderne passer desværre ikke sammen"
+
+#: apps/users/forms.py:78
+msgid "A user with that email address already exists."
+msgstr ""
+
+#: apps/users/forms.py:93
+msgid "Password"
+msgstr "Adgangskode"
+
+#: apps/users/forms.py:109
+msgid "Please enter a correct username and password. Note that both fields are case-sensitive."
+msgstr ""
+
+#: apps/users/forms.py:112
+msgid "This account is inactive."
+msgstr ""
+
+#: apps/users/forms.py:117
+msgid "Your Web browser doesn't appear to have cookies enabled. Cookies are required for logging in."
+msgstr ""
+
+#: apps/users/models.py:29
+msgid "User"
+msgstr "Bruger"
+
+#: apps/users/models.py:31
+#, fuzzy
+msgid "Display name"
+msgstr "viser billede"
+
+#: apps/users/models.py:33
+msgid "Make my email public"
+msgstr ""
+
+#: apps/users/models.py:35 apps/users/templates/users/edit_profile.html:13
+#, fuzzy
+msgid "Avatar"
+msgstr "Avatar billede"
+
+#: apps/users/models.py:38
+#, fuzzy
+msgid "Biography"
+msgstr "graf"
+
+#: apps/users/models.py:41 apps/users/templates/users/profile.html:49
+#, fuzzy
+msgid "Website"
+msgstr "hjemmeside"
+
+#: apps/users/models.py:44
+msgid "Twitter URL"
+msgstr ""
+
+#: apps/users/models.py:47
+msgid "Facebook URL"
+msgstr ""
+
+#: apps/users/models.py:49
+#, fuzzy
+msgid "IRC nickname"
+msgstr "Kaldenavn"
+
+#: apps/users/models.py:51
+#, fuzzy
+msgid "Timezone"
+msgstr "Tids Zone"
+
+#: apps/users/models.py:53
+msgid "Country"
+msgstr "Land"
+
+#: apps/users/models.py:56
+msgid "City"
+msgstr ""
+
+#: apps/users/models.py:59
+msgid "Livechat ID"
+msgstr ""
+
+#: apps/users/models.py:125
+#, fuzzy
+msgid "Please confirm your email address"
+msgstr "Brugere kan tilmelde alle slags emailadresser"
+
+#: apps/users/models.py:186
+msgid "user"
+msgstr "bruger"
+
+#: apps/users/models.py:187
+#, fuzzy
+msgid "activation key"
+msgstr "aktiver"
+
+#: apps/users/models.py:192
+#, fuzzy
+msgid "registration profile"
+msgstr "Registrerings kode"
+
+#: apps/users/models.py:193
+#, fuzzy
+msgid "registration profiles"
+msgstr "Registrerings kode"
+
+#: apps/users/templates/users/activate.html:4
+#, fuzzy
+msgid "Account successfully verified!"
+msgstr " afsendt korrekt"
+
+#: apps/users/templates/users/activate.html:6
+msgid "Something is wrong"
+msgstr ""
+
+#: apps/users/templates/users/activate.html:14
+msgid "You've confirmed your email address and activated your account! You can now <a href=\"%(login_url)s\">log in</a>, and go <a href=\"%(profile_url)s\">edit your profile</a>."
+msgstr ""
+
+#: apps/users/templates/users/activate.html:21
+msgid "We could not activate your account. Please make sure that you have clicked the correct link in your email or typed in the correct address."
+msgstr ""
+
+#: apps/users/templates/users/confirm_avatar_delete.html:3 apps/users/templates/users/confirm_avatar_delete.html:24
+#, fuzzy
+msgid "Delete avatar"
+msgstr "Slet"
+
+#: apps/users/templates/users/confirm_avatar_delete.html:8
+msgid "Are you sure you want to delete your avatar?"
+msgstr ""
+
+#: apps/users/templates/users/confirm_avatar_delete.html:16
+msgid "You are about to permanently delete your avatar. <strong>This cannot be undone!</strong> You can always <a href=\"%(upload_url)s\">upload another avatar</a> to replace your current one."
+msgstr ""
+
+#: apps/users/templates/users/edit_avatar.html:3
+#, fuzzy
+msgid "Change Avatar"
+msgstr "Skift adgangskode"
+
+#: apps/users/templates/users/edit_avatar.html:15
+#, fuzzy
+msgctxt "avatar"
+msgid "Upload"
+msgstr "overfør"
+
+#: apps/users/templates/users/edit_profile.html:3
+#, fuzzy
+msgid "Edit Profile"
+msgstr "Rediger artikel"
+
+#: apps/users/templates/users/edit_profile.html:17
+#, fuzzy
+msgctxt "avatar"
+msgid "Change"
+msgstr "ændret"
+
+#: apps/users/templates/users/edit_profile.html:21
+#, fuzzy
+msgctxt "avatar"
+msgid "Delete"
+msgstr "Slet"
+
+#: apps/users/templates/users/edit_profile.html:29 apps/users/templates/users/pw_reset_confirm.html:27
+msgid "Update"
+msgstr "Updater"
+
+#: apps/users/templates/users/login.html:4 apps/users/templates/users/login.html:9 templates/layout/sidebar.html:11
+msgid "Log In"
+msgstr ""
+
+#: apps/users/templates/users/login.html:27 apps/users/templates/users/pw_reset_complete.html:9 templates/layout/login.html:5 templates/layout/login.html:20
+#, fuzzy
+msgid "Log in"
+msgstr "log på"
+
+#: apps/users/templates/users/login.html:31
+msgid "Login Problems?"
+msgstr ""
+
+#: apps/users/templates/users/login.html:33
+msgid "I don't have an account."
+msgstr ""
+
+#: apps/users/templates/users/login.html:34
+#, fuzzy
+msgid "I forgot my password."
+msgstr "Jeg har desværre glemt min adgangskode"
+
+#: apps/users/templates/users/profile.html:3
+#, fuzzy
+msgid "{user} | Profile"
+msgstr "bruger filer"
+
+#: apps/users/templates/users/profile.html:11
+#, fuzzy
+msgid "Edit my profile"
+msgstr "Rediger artikel"
+
+#: apps/users/templates/users/profile.html:19
+msgid "{city}, {country}"
+msgstr ""
+
+#: apps/users/templates/users/profile.html:29
+#, fuzzy
+msgid "Username: {username}"
+msgstr "komma separeret brugernavne"
+
+#: apps/users/templates/users/profile.html:32
+msgid "Livechat ID: {livechat_id}"
+msgstr ""
+
+#: apps/users/templates/users/profile.html:42
+msgid "Contact"
+msgstr "Kontakt"
+
+#: apps/users/templates/users/profile.html:52
+#, fuzzy
+msgid "Twitter"
+msgstr "Titel"
+
+#: apps/users/templates/users/profile.html:55
+msgid "Facebook"
+msgstr ""
+
+#: apps/users/templates/users/profile.html:58
+#, fuzzy
+msgid "IRC nickname: {nickname}"
+msgstr "Intet kaldenavn valgt"
+
+#: apps/users/templates/users/profile.html:62
+#, fuzzy
+msgid "This user has not mady any contact information public."
+msgstr "Brugeren har desværre valgt at holde sine oplysninger private"
+
+#: apps/users/templates/users/pw_reset_complete.html:3
+#, fuzzy
+msgid "Password successfully reset."
+msgstr " afsendt korrekt"
+
+#: apps/users/templates/users/pw_reset_confirm.html:4 apps/users/templates/users/pw_reset_form.html:4 apps/users/templates/users/pw_reset_sent.html:4
+#, fuzzy
+msgid "Password Reset"
+msgstr "Adgangskode"
+
+#: apps/users/templates/users/pw_reset_confirm.html:17
+msgid "New password"
+msgstr "Ny adgangskode"
+
+#: apps/users/templates/users/pw_reset_confirm.html:21
+#, fuzzy
+msgid "Confirm password"
+msgstr "Forum adgangskode"
+
+#: apps/users/templates/users/pw_reset_confirm.html:31
+#, fuzzy
+msgid "Password reset unsuccessful"
+msgstr "Upload lykkedes ikke"
+
+#: apps/users/templates/users/pw_reset_confirm.html:32
+msgid "The password reset link was invalid, possibly because it has already been used. Please request a new password reset."
+msgstr ""
+
+#: apps/users/templates/users/pw_reset_form.html:14
+msgid "Forgotten your password? Enter your email address below, and we'll send you instructions for setting a new one."
+msgstr ""
+
+#: apps/users/templates/users/pw_reset_form.html:21
+msgid "Email Address:"
+msgstr ""
+
+#: apps/users/templates/users/pw_reset_form.html:27
+#, fuzzy
+msgid "Send password reset link"
+msgstr "Send glemte adgangskoder via email"
+
+#: apps/users/templates/users/pw_reset_sent.html:10
+#, fuzzy
+msgid "The password reset link was sent to your email address."
+msgstr "Nyhedsbrevet blev sendt til disse {$sent} email addresser"
+
+#: apps/users/templates/users/register.html:4 apps/users/templates/users/register.html:9 apps/users/templates/users/register.html:19 templates/layout/login.html:24
+msgid "Register"
+msgstr "Tilmelding"
+
+#: apps/users/templates/users/register_done.html:4 apps/users/templates/users/register_done.html:9
+#, fuzzy
+msgid "Thank you for registering!"
+msgstr "Tak for din registrering. Du kan logge ind nu."
+
+#. This string appears on the 'thank you for registering' page.
+#: apps/users/templates/users/register_done.html:11
+msgid "Thank you for being awesome!"
+msgstr ""
+
+#: apps/users/templates/users/register_done.html:12
+msgid "Before you can log in, you need to confirm your email address. We've sent you an email with a confirmation link in it. Just click the link and you'll be ready to go!"
+msgstr ""
 
 #: apps/wiki/forms.py:20
 msgid "Please keep the length of the title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
@@ -1521,36 +1913,36 @@ msgstr "Opret venligst en kategori først"
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr ""
 
-#: apps/wiki/parser.py:278
+#: apps/wiki/parser.py:321
 msgid "[Recursive inclusion of \"%s\"]"
 msgstr ""
 
-#: apps/wiki/parser.py:333
+#: apps/wiki/parser.py:375
 msgid "The document \"%s\" does not exist."
 msgstr ""
 
-#: apps/wiki/parser.py:361
+#: apps/wiki/parser.py:403
 msgid "The template \"%s\" does not exist or has no approved revision."
 msgstr ""
 
-#: apps/wiki/parser.py:393
+#: apps/wiki/parser.py:435
 msgid "The video \"%s\" does not exist."
 msgstr ""
 
-#: apps/wiki/tasks.py:35
+#: apps/wiki/tasks.py:36
 #, fuzzy
 msgid "Your revision has been approved: %s"
 msgstr "Din forespørgsel bliver behandlet"
 
-#: apps/wiki/tasks.py:37
+#: apps/wiki/tasks.py:38
 msgid "Your revision has been rejected: %s"
 msgstr ""
 
-#: apps/wiki/tasks.py:57
+#: apps/wiki/tasks.py:58
 msgid "%(title)s is ready for review (%(creator)s)"
 msgstr ""
 
-#: apps/wiki/tasks.py:70
+#: apps/wiki/tasks.py:71
 msgid "%(title)s was edited by %(creator)s"
 msgstr ""
 
@@ -1566,19 +1958,19 @@ msgstr ""
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
 msgstr ""
 
-#: apps/wiki/templates/wiki/base.html:52
+#: apps/wiki/templates/wiki/base.html:51
 msgid "Grab your cape and join us &raquo;"
 msgstr ""
 
-#: apps/wiki/templates/wiki/base.html:56
+#: apps/wiki/templates/wiki/base.html:55
 msgid "Check your <mark>plugins</mark>"
 msgstr ""
 
-#: apps/wiki/templates/wiki/base.html:61
+#: apps/wiki/templates/wiki/base.html:60
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
 msgstr ""
 
-#: apps/wiki/templates/wiki/base.html:67
+#: apps/wiki/templates/wiki/base.html:65
 msgid "Find out more &raquo;"
 msgstr ""
 
@@ -1772,7 +2164,7 @@ msgstr ""
 msgid "Profile"
 msgstr "Ingen fil"
 
-#: apps/wiki/templates/wiki/includes/common_macros.html:27
+#: apps/wiki/templates/wiki/includes/common_macros.html:27 templates/layout/sidebar.html:9
 msgid "Sign Out"
 msgstr ""
 
@@ -1847,6 +2239,11 @@ msgstr ""
 msgid "Reject"
 msgstr "Afvis"
 
+#: apps/wiki/templates/wiki/includes/revision_diff.html:11 apps/wiki/templates/wiki/includes/revision_diff.html:21
+#, fuzzy
+msgid "Revision {num}:"
+msgstr "Udgaver"
+
 #: apps/wiki/templates/wiki/includes/revision_diff.html:14 apps/wiki/templates/wiki/includes/revision_diff.html:24 apps/wiki/templates/wiki/review_translation.html:46
 #: apps/wiki/templates/wiki/review_translation.html:50
 msgid "Revision {id} by {user} on {date}"
@@ -1881,33 +2278,47 @@ msgstr ""
 msgid "Contributor Home Page"
 msgstr "Retur til HjemmeSide"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:59
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:57
 #, fuzzy
-msgid "Creating Articles"
-msgstr "Send Artikler"
+msgid "Knowledge Base Dashboard"
+msgstr "Alle artikler"
+
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:59
+msgid "Help on Twitter"
+msgstr ""
 
 #: apps/wiki/templates/wiki/includes/sidebar_modules.html:60
-msgid "Helping in the Forum"
-msgstr ""
+#, fuzzy
+msgid "Answer Support Questions"
+msgstr "Support forespørgsler"
 
 #: apps/wiki/templates/wiki/includes/sidebar_modules.html:61
-msgid "Helping in Live Chat"
+msgid "Help with Live Chat"
 msgstr ""
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:73
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:62
+msgid "Improve the Knowledge Base"
+msgstr ""
+
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:63
+#, fuzzy
+msgid "Translate Articles"
+msgstr "Oversæt"
+
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:75
 msgid "Unsubscribe from edit notifications"
 msgstr ""
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:78
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:80
 #, fuzzy
 msgid "Subscribe to edit notifications"
 msgstr "Tiki email påmindelse"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:89
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:91 templates/layout/sidebar.html:4
 msgid "Firefox Help Home"
 msgstr ""
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:92 templates/layout/sidebar.html:6
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:94 templates/layout/sidebar.html:5
 msgid "Ask a Question"
 msgstr ""
 
@@ -2146,6 +2557,11 @@ msgstr "Oversættelse"
 msgid "Translating article to {locale}"
 msgstr ""
 
+#: apps/wiki/templates/wiki/translate.html:23
+#, fuzzy
+msgid "Change"
+msgstr "ændret"
+
 #: apps/wiki/templates/wiki/translate.html:26
 msgid "Choose a locale:"
 msgstr ""
@@ -2190,259 +2606,240 @@ msgstr "Tilføj en oversættelse"
 msgid "Cancel Changes"
 msgstr "Seneste ændringer"
 
-#: apps/wiki/views.py:383
+#: apps/wiki/views.py:382
 #, fuzzy
 msgid "You cannot translate this document."
 msgstr "Du kan ikke besvare dette spørgeskema flere gange"
 
-#: apps/wiki/views.py:540
+#: apps/wiki/views.py:539
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr ""
 
-#: apps/wiki/views.py:542
+#: apps/wiki/views.py:541
 msgid "Sorry to hear that. Perhaps one of the solutions below can help."
 msgstr ""
 
-#: apps/wiki/views.py:552
+#: apps/wiki/views.py:551
 msgid "You already voted on this Article."
 msgstr ""
 
-#: templates/layout/footer.html:5
-#, fuzzy
-msgid "Other Languages"
-msgstr "Opret Sprog"
-
-#: templates/layout/footer.html:18
+#: templates/global/footer.html:6
 #, fuzzy
 msgid "Back to home page"
 msgstr "tilbage til hjem"
 
-#: templates/layout/footer.html:18 templates/layout/header.html:7
+#: templates/global/footer.html:6 templates/global/header.html:7
 msgid "Firefox"
 msgstr ""
 
-#: templates/layout/footer.html:23 templates/layout/footer.html:25 templates/layout/footer.html:39 templates/layout/header.html:12 templates/layout/header.html:14 templates/layout/header.html:28
-msgid "Features"
-msgstr "Funktioner"
-
-#: templates/layout/footer.html:26 templates/layout/header.html:15
-msgid "Security"
-msgstr ""
-
-#: templates/layout/footer.html:27 templates/layout/header.html:16
-msgid "Performance"
-msgstr ""
-
-#: templates/layout/footer.html:28 templates/layout/header.html:17
-msgid "Customization"
-msgstr ""
-
-#: templates/layout/footer.html:29 templates/layout/header.html:18
-#, fuzzy
-msgid "Download Stats"
-msgstr "Download seneste kopi"
-
-#: templates/layout/footer.html:31 templates/layout/header.html:20
-msgid "Tour"
-msgstr ""
-
-#: templates/layout/footer.html:35 templates/layout/header.html:24
-msgid "Mobile"
-msgstr ""
-
-#: templates/layout/footer.html:37 templates/layout/header.html:26
-msgid "Mobile Overview"
-msgstr ""
-
-#: templates/layout/footer.html:38 templates/layout/header.html:27
-#, fuzzy
-msgid "Download"
-msgstr "Ned"
-
-#: templates/layout/footer.html:40 templates/layout/header.html:29
-#, fuzzy
-msgid "Customize"
-msgstr "Selvvalgt startside"
-
-#: templates/layout/footer.html:41 templates/layout/header.html:30
-msgid "Sync"
-msgstr ""
-
-#: templates/layout/footer.html:42 templates/layout/header.html:31
-#, fuzzy
-msgid "Develop"
-msgstr "niveau"
-
-#: templates/layout/footer.html:43 templates/layout/header.html:32
-msgid "Get Involved"
-msgstr ""
-
-#: templates/layout/footer.html:44 templates/layout/header.html:33
-msgid "FAQ"
-msgstr ""
-
-#: templates/layout/footer.html:45 templates/layout/footer.html:81 templates/layout/header.html:34 templates/layout/header.html:69
-msgid "Blog"
-msgstr ""
-
-#: templates/layout/footer.html:49 templates/layout/header.html:37
-msgid "Add-ons"
-msgstr ""
-
-#: templates/layout/footer.html:51 templates/layout/header.html:40
-msgid "Firefox Add-ons"
-msgstr ""
-
-#: templates/layout/footer.html:52 templates/layout/header.html:41
-#, fuzzy
-msgid "Featured Add-ons"
-msgstr "Udvalgte links"
-
-#: templates/layout/footer.html:53 templates/layout/header.html:42
-#, fuzzy
-msgid "Extensions"
-msgstr "Udgaver"
-
-#: templates/layout/footer.html:54 templates/layout/header.html:43
-msgid "Themes"
-msgstr ""
-
-#: templates/layout/footer.html:55 templates/layout/header.html:44
-msgid "Personas"
-msgstr ""
-
-#: templates/layout/footer.html:56 templates/layout/header.html:45
-#, fuzzy
-msgid "Search Tools"
-msgstr "Søgninger"
-
-#: templates/layout/footer.html:57 templates/layout/header.html:46
-#, fuzzy
-msgid "Language Support"
-msgstr "Sprog oprettet"
-
-#: templates/layout/footer.html:58 templates/layout/header.html:47
-#, fuzzy
-msgid "Collections"
-msgstr "Afsnit"
-
-#: templates/layout/footer.html:59 templates/layout/header.html:48
-msgid "Mobile Add-ons"
-msgstr ""
-
-#: templates/layout/footer.html:60 templates/layout/header.html:49
-msgid "Developer Hub"
-msgstr ""
-
-#: templates/layout/footer.html:64 templates/layout/header.html:52
-msgid "Support"
-msgstr ""
-
-#: templates/layout/footer.html:67 templates/layout/header.html:55
-msgid "Mobile Support"
-msgstr ""
-
-#: templates/layout/footer.html:68 templates/layout/header.html:56
-msgid "Thunderbird Support"
-msgstr ""
-
-#: templates/layout/footer.html:72 templates/layout/header.html:60
-msgid "About"
-msgstr "Om Portalen"
-
-#: templates/layout/footer.html:74 templates/layout/header.html:62
-msgid "About Firefox"
-msgstr ""
-
-#: templates/layout/footer.html:75 templates/layout/header.html:63
-#, fuzzy
-msgid "Participate"
-msgstr "Deltagere"
-
-#: templates/layout/footer.html:76 templates/layout/header.html:64
-#, fuzzy
-msgid "Communications"
-msgstr "Beskeder"
-
-#: templates/layout/footer.html:77 templates/layout/header.html:65
-msgid "Careers"
-msgstr ""
-
-#: templates/layout/footer.html:78 templates/layout/header.html:66
-msgid "Partnerships"
-msgstr ""
-
-#: templates/layout/footer.html:79 templates/layout/header.html:67
-msgid "Legal"
-msgstr ""
-
-#: templates/layout/footer.html:80 templates/layout/header.html:68
-msgid "Contact Us"
-msgstr "Kontakt os"
-
-#: templates/layout/footer.html:89
+#: templates/global/footer.html:17
 msgid "Privacy Policy"
 msgstr ""
 
-#: templates/layout/footer.html:90
+#: templates/global/footer.html:18
 msgid "Legal Notices"
 msgstr ""
 
-#: templates/layout/footer.html:91
+#: templates/global/footer.html:19
 msgid "Report Trademark Abuse"
 msgstr ""
 
-#: templates/layout/footer.html:94
+#: templates/global/footer.html:22
 msgid ""
 "Except where otherwise <a href=\"http://mozilla.com/about/legal.html#site\">noted</a>, content on this site is licensed under the <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> "
 "Creative Commons Attribution Share-Alike License v3.0 </a> or any later version."
 msgstr ""
 
-#: templates/layout/header.html:3
+#: templates/global/header.html:3
 msgid "skip to navigation"
 msgstr ""
 
-#: templates/layout/header.html:4
+#: templates/global/header.html:4
 msgid "switch language"
 msgstr ""
 
-#: templates/layout/header.html:8
-msgid "visit mozilla"
+#: templates/global/header.html:7
+msgid "Back to Mozilla.com"
 msgstr ""
 
-#: templates/layout/login.html:5 templates/layout/login.html:21
+#: templates/global/header.html:8
 #, fuzzy
-msgid "Log in"
-msgstr "log på"
+msgid "visit {0}"
+msgstr "besøg"
 
-#: templates/layout/login.html:9
+#: templates/global/menu_links.html:2 templates/global/menu_links.html:4 templates/global/menu_links.html:16
+msgid "Features"
+msgstr "Funktioner"
+
+#: templates/global/menu_links.html:5
+msgid "Security"
+msgstr ""
+
+#: templates/global/menu_links.html:6
+msgid "Performance"
+msgstr ""
+
+#: templates/global/menu_links.html:7
+msgid "Customization"
+msgstr ""
+
+#: templates/global/menu_links.html:9
+msgid "Tour"
+msgstr ""
+
+#: templates/global/menu_links.html:12
+msgid "Mobile"
+msgstr ""
+
+#: templates/global/menu_links.html:14
+msgid "Mobile Overview"
+msgstr ""
+
+#: templates/global/menu_links.html:15
 #, fuzzy
-msgid "Username:"
-msgstr "Brugernavn"
+msgid "Download"
+msgstr "Ned"
 
-#: templates/layout/login.html:12
+#: templates/global/menu_links.html:17
 #, fuzzy
-msgid "Password:"
-msgstr "Adgangskode"
+msgid "Customize"
+msgstr "Selvvalgt startside"
 
-#: templates/layout/login.html:17
+#: templates/global/menu_links.html:18
+msgid "Sync"
+msgstr ""
+
+#: templates/global/menu_links.html:19
+#, fuzzy
+msgid "Develop"
+msgstr "niveau"
+
+#: templates/global/menu_links.html:20
+msgid "Get Involved"
+msgstr ""
+
+#: templates/global/menu_links.html:21
+msgid "FAQ"
+msgstr ""
+
+#: templates/global/menu_links.html:22 templates/global/menu_links.html:59
+msgid "Blog"
+msgstr ""
+
+#: templates/global/menu_links.html:26
+msgid "Add-ons"
+msgstr ""
+
+#: templates/global/menu_links.html:28
+msgid "Firefox Add-ons"
+msgstr ""
+
+#: templates/global/menu_links.html:29
+#, fuzzy
+msgid "Featured Add-ons"
+msgstr "Udvalgte links"
+
+#: templates/global/menu_links.html:30
+#, fuzzy
+msgid "Extensions"
+msgstr "Udgaver"
+
+#: templates/global/menu_links.html:31
+msgid "Themes"
+msgstr ""
+
+#: templates/global/menu_links.html:32
+msgid "Personas"
+msgstr ""
+
+#: templates/global/menu_links.html:33
+#, fuzzy
+msgid "Search Tools"
+msgstr "Søgninger"
+
+#: templates/global/menu_links.html:34
+#, fuzzy
+msgid "Language Support"
+msgstr "Sprog oprettet"
+
+#: templates/global/menu_links.html:35
+#, fuzzy
+msgid "Collections"
+msgstr "Afsnit"
+
+#: templates/global/menu_links.html:36
+msgid "Mobile Add-ons"
+msgstr ""
+
+#: templates/global/menu_links.html:37
+msgid "Developer Hub"
+msgstr ""
+
+#: templates/global/menu_links.html:42 templates/layout/menu_links.html:5
+msgid "Support"
+msgstr ""
+
+#: templates/global/menu_links.html:45 templates/layout/menu_links.html:8
+msgid "Mobile Support"
+msgstr ""
+
+#: templates/global/menu_links.html:46 templates/layout/menu_links.html:9
+msgid "Thunderbird Support"
+msgstr ""
+
+#: templates/global/menu_links.html:50
+msgid "About"
+msgstr "Om Portalen"
+
+#: templates/global/menu_links.html:52
+msgid "About Firefox"
+msgstr ""
+
+#: templates/global/menu_links.html:53
+#, fuzzy
+msgid "Participate"
+msgstr "Deltagere"
+
+#: templates/global/menu_links.html:54
+#, fuzzy
+msgid "Communications"
+msgstr "Beskeder"
+
+#: templates/global/menu_links.html:55
+msgid "Careers"
+msgstr ""
+
+#: templates/global/menu_links.html:56
+msgid "Partnerships"
+msgstr ""
+
+#: templates/global/menu_links.html:57
+msgid "Legal"
+msgstr ""
+
+#: templates/global/menu_links.html:58
+msgid "Contact Us"
+msgstr "Kontakt os"
+
+#: templates/layout/footer.html:11
+#, fuzzy
+msgid "Other Languages"
+msgstr "Opret Sprog"
+
+#: templates/layout/login.html:16
 msgid "Remember me"
 msgstr "Husk mig"
 
-#: templates/layout/login.html:24
+#: templates/layout/login.html:23
 #, fuzzy
 msgid "Click here to register"
 msgstr "Klik her for at bekræfte genoprettelse"
 
-#: templates/layout/login.html:25
-msgid "Register"
-msgstr "Tilmelding"
-
-#: templates/layout/login.html:27
+#: templates/layout/login.html:26
 msgid "Click here if you've forgotten your password"
 msgstr ""
 
-#: templates/layout/login.html:27
+#: templates/layout/login.html:26
 msgid "I forgot my password"
 msgstr "Jeg har desværre glemt min adgangskode"
 
@@ -2454,29 +2851,38 @@ msgstr "Tidligere"
 msgid "Next"
 msgstr "Næste"
 
-#: templates/layout/sidebar.html:5
-msgid "Support Forum"
-msgstr ""
-
-#: templates/layout/sidebar.html:7
-msgid "Other Firefox Support"
+#: templates/layout/sidebar.html:6
+msgid "Be Awesome"
 msgstr ""
 
 #: templates/layout/sidebar.html:8
-msgid "How to Contribute"
-msgstr ""
+#, fuzzy
+msgid "My Profile"
+msgstr "Ingen fil"
 
-#: templates/layout/sidebar.html:10
-msgid "My Account"
-msgstr ""
+#, fuzzy
+#~ msgid "Available formats"
+#~ msgstr "Tilgængelige skabeloner"
 
-#: templates/layout/sidebar.html:11
-msgid "Log Out"
-msgstr ""
+#, fuzzy
+#~ msgid "Edit {type}"
+#~ msgstr "Rediger emne"
 
-#: templates/layout/sidebar.html:13
-msgid "Log In"
-msgstr ""
+#, fuzzy
+#~ msgid "Delete this {type}"
+#~ msgstr "Stem dette emne"
+
+#, fuzzy
+#~ msgid "Edit this {type}"
+#~ msgstr "Rediger denne side"
+
+#, fuzzy
+#~ msgid "Creating Articles"
+#~ msgstr "Send Artikler"
+
+#, fuzzy
+#~ msgid "Download Stats"
+#~ msgstr "Download seneste kopi"
 
 #, fuzzy
 #~ msgid "Topics in {locale}:"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-24 07:41-0700\n"
+"POT-Creation-Date: 2010-12-10 05:37-0700\n"
 "PO-Revision-Date: 2010-04-26 18:10-0700\n"
 "Last-Translator: James <james@localhost>\n"
 "Language-Team: Finnish\n"
@@ -16,10 +16,16 @@ msgstr ""
 msgid "Join our Army of Awesome"
 msgstr ""
 
-#: apps/customercare/templates/customercare/landing.html:59 apps/gallery/templates/gallery/search.html:7 apps/search/templates/search/down.html:3 apps/search/templates/search/form.html:3
+#: apps/customercare/templates/customercare/landing.html:116 apps/gallery/templates/gallery/search.html:7 apps/search/templates/search/down.html:3 apps/search/templates/search/form.html:3
 #: apps/search/templates/search/results.html:3 apps/search/templates/search/results.html:19 apps/wiki/templates/wiki/includes/common_macros.html:15
 msgid "Search"
 msgstr "Etsi"
+
+#: apps/customercare/templates/customercare/tweets.html:12
+msgid "{0} and {1} other replied"
+msgid_plural "{0} and {1} others replied"
+msgstr[0] ""
+msgstr[1] ""
 
 #: apps/dashboards/readouts.py:28
 #, fuzzy
@@ -111,11 +117,10 @@ msgid "Contributor Dashboard"
 msgstr "Avustajien keskustelualue"
 
 #: apps/dashboards/templates/dashboards/contributors.html:10 apps/dashboards/templates/dashboards/kb_detail.html:9 apps/dashboards/templates/dashboards/localization.html:10
-#: apps/gallery/templates/gallery/confirm_media_delete.html:9 apps/gallery/templates/gallery/edit_media.html:13 apps/gallery/templates/gallery/gallery.html:13
-#: apps/gallery/templates/gallery/media.html:16 apps/gallery/templates/gallery/search.html:12 apps/wiki/templates/wiki/compare_revisions.html:13
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:12 apps/wiki/templates/wiki/document_revisions.html:12 apps/wiki/templates/wiki/edit_document.html:17
-#: apps/wiki/templates/wiki/list_documents.html:15 apps/wiki/templates/wiki/new_document.html:15 apps/wiki/templates/wiki/review_revision.html:12 apps/wiki/templates/wiki/review_translation.html:12
-#: apps/wiki/templates/wiki/revision.html:15 apps/wiki/templates/wiki/select_locale.html:12 apps/wiki/templates/wiki/translate.html:16
+#: apps/gallery/templates/gallery/edit_media.html:20 apps/gallery/templates/gallery/gallery.html:12 apps/gallery/templates/gallery/media.html:23 apps/gallery/templates/gallery/search.html:12
+#: apps/wiki/templates/wiki/compare_revisions.html:13 apps/wiki/templates/wiki/confirm_revision_delete.html:12 apps/wiki/templates/wiki/document_revisions.html:12
+#: apps/wiki/templates/wiki/edit_document.html:17 apps/wiki/templates/wiki/list_documents.html:15 apps/wiki/templates/wiki/new_document.html:15 apps/wiki/templates/wiki/review_revision.html:12
+#: apps/wiki/templates/wiki/review_translation.html:12 apps/wiki/templates/wiki/revision.html:15 apps/wiki/templates/wiki/select_locale.html:12 apps/wiki/templates/wiki/translate.html:16
 #, fuzzy
 msgid "You are here:"
 msgstr "Sinut on poistettu"
@@ -216,7 +221,7 @@ msgstr ""
 msgid "The template \"%s\" does not exist."
 msgstr "Tällaista galleriaa ei ole"
 
-#: apps/dashboards/views.py:70 apps/wiki/templates/wiki/includes/sidebar_modules.html:57
+#: apps/dashboards/views.py:70
 msgid "Localization Dashboard"
 msgstr "Lokalisointikojelauta"
 
@@ -283,9 +288,9 @@ msgstr "Toiminto"
 msgid "Edit"
 msgstr "Muokkaa"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/gallery/templates/gallery/confirm_media_delete.html:55
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:27 apps/kbforums/templates/kbforums/confirm_thread_delete.html:29 apps/kbforums/templates/kbforums/includes/post.html:13
-#: apps/kbforums/templates/kbforums/posts.html:37 apps/wiki/templates/wiki/confirm_revision_delete.html:28 apps/wiki/templates/wiki/document_revisions.html:87
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:27
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29 apps/kbforums/templates/kbforums/includes/post.html:13 apps/kbforums/templates/kbforums/posts.html:37
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:28 apps/wiki/templates/wiki/document_revisions.html:87
 msgid "Delete"
 msgstr "Poista"
 
@@ -333,11 +338,11 @@ msgstr ""
 msgid "There is no flagged content pending moderation."
 msgstr ""
 
-#: apps/flagit/views.py:37
+#: apps/flagit/views.py:36
 msgid "You already flagged this content."
 msgstr ""
 
-#: apps/flagit/views.py:42
+#: apps/flagit/views.py:41
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr ""
 
@@ -393,222 +398,228 @@ msgstr ""
 msgid "Please select a different title."
 msgstr "Koodi on käytössä, valitse toinen koodi"
 
-#. {t} is the title of the media, {type} is image or video.
-#: apps/gallery/templates/gallery/confirm_media_delete.html:4
-msgid "Delete {type} | {t} | Media Gallery"
+#: apps/gallery/forms.py:42
+msgid "Include this in wiki syntax with [[%(type)s:title]]"
 msgstr ""
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:12
+#: apps/gallery/forms.py:43
 #, fuzzy
-msgid "Are you sure you want to delete this {type}?"
-msgstr "Oletko varma, että haluat poistaa tämän mallin?"
+msgid "Provide a brief description of this media."
+msgstr "Näyttää listan plugeista tällä sivustolla."
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:14 apps/kbforums/templates/kbforums/confirm_thread_delete.html:14 apps/kbforums/templates/kbforums/threads.html:32
-msgid "Title"
-msgstr "Otsikko"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:16
+#: apps/gallery/forms.py:59 apps/gallery/forms.py:136
 #, fuzzy
 msgid "Locale"
 msgstr "Paikallinen"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:18
+#: apps/gallery/forms.py:64 apps/gallery/forms.py:141 apps/kbforums/templates/kbforums/confirm_thread_delete.html:14 apps/kbforums/templates/kbforums/threads.html:32
+msgid "Title"
+msgstr "Otsikko"
+
+#: apps/gallery/forms.py:71 apps/gallery/forms.py:148
 msgid "Description"
 msgstr "Kuvaus"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:20 apps/kbforums/templates/kbforums/confirm_thread_delete.html:16 apps/wiki/templates/wiki/confirm_revision_delete.html:16
-msgid "Creator"
-msgstr "Luonut"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:22 apps/kbforums/templates/kbforums/confirm_post_delete.html:16 apps/kbforums/templates/kbforums/confirm_thread_delete.html:18
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:18
-msgid "Date"
-msgstr "Päiväys"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:25 apps/gallery/templates/gallery/confirm_media_delete.html:42
-#, fuzzy
-msgid "Available formats"
-msgstr "Saatavilla olevat mallit"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:39 apps/gallery/templates/gallery/gallery.html:78 apps/gallery/templates/gallery/gallery.html:147
-msgid "Video"
-msgstr ""
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:44 apps/gallery/templates/gallery/gallery.html:77 apps/gallery/templates/gallery/gallery.html:87
-msgid "Image"
-msgstr "Kuva"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:51
-msgid "You are about to permanently delete this {type}. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
-msgstr ""
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:54 apps/gallery/templates/gallery/edit_media.html:25 apps/gallery/templates/gallery/gallery.html:96
-#: apps/gallery/templates/gallery/gallery.html:125 apps/gallery/templates/gallery/gallery.html:137 apps/gallery/templates/gallery/gallery.html:141 apps/gallery/templates/gallery/gallery.html:145
-#: apps/gallery/templates/gallery/gallery.html:189 apps/gallery/templates/gallery/gallery.html:207 apps/kbforums/templates/kbforums/confirm_post_delete.html:26
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:28 apps/kbforums/templates/kbforums/edit_post.html:28 apps/kbforums/templates/kbforums/edit_thread.html:25
-#: apps/kbforums/templates/kbforums/new_thread.html:33 apps/notifications/templates/notifications/remove.html:15 apps/wiki/templates/wiki/confirm_revision_delete.html:29
-#: apps/wiki/templates/wiki/includes/review_form.html:38 apps/wiki/templates/wiki/includes/review_form.html:57 apps/wiki/templates/wiki/includes/submit_revision_modal.html:22
-msgid "Cancel"
-msgstr "Peruuta"
-
-#. {t} is the title of the media, {type} is image or video.
 #: apps/gallery/templates/gallery/edit_media.html:5
-msgid "Edit {type} | {t} | Media Gallery"
-msgstr ""
+#, fuzzy
+msgid "Edit image"
+msgstr "muokkaa kuvaa"
 
-#: apps/gallery/templates/gallery/edit_media.html:6 apps/gallery/templates/gallery/gallery.html:5 apps/gallery/templates/gallery/gallery.html:8 apps/gallery/templates/gallery/gallery.html:16
+#: apps/gallery/templates/gallery/edit_media.html:6
+#, fuzzy
+msgid "Save image"
+msgstr "Siirrä kuva"
+
+#: apps/gallery/templates/gallery/edit_media.html:7
+#, fuzzy
+msgid "Edit image | {t} | Media Gallery"
+msgstr "Tiedosto Galleria"
+
+#: apps/gallery/templates/gallery/edit_media.html:9
+#, fuzzy
+msgid "Edit video"
+msgstr "Muuta osaa"
+
+#: apps/gallery/templates/gallery/edit_media.html:10
+#, fuzzy
+msgid "Save video"
+msgstr "Tallenna arvostelut"
+
+#: apps/gallery/templates/gallery/edit_media.html:11
+#, fuzzy
+msgid "Edit video | {t} | Media Gallery"
+msgstr "Tiedosto Galleria"
+
+#: apps/gallery/templates/gallery/edit_media.html:13 apps/gallery/templates/gallery/gallery.html:4 apps/gallery/templates/gallery/gallery.html:7 apps/gallery/templates/gallery/gallery.html:15
 #: apps/gallery/templates/gallery/media.html:9 apps/gallery/templates/gallery/search.html:6 apps/gallery/templates/gallery/search.html:15 apps/wiki/templates/wiki/includes/sidebar_modules.html:58
 #, fuzzy
 msgid "Media Gallery"
 msgstr "Muokkaa galleriaa"
 
-#: apps/gallery/templates/gallery/edit_media.html:8
-#, fuzzy
-msgid "Edit {type}"
-msgstr "Muuta tpl"
+#: apps/gallery/templates/gallery/edit_media.html:32 apps/gallery/templates/gallery/includes/upload_media_form.html:36 apps/gallery/templates/gallery/includes/upload_media_form.html:58
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:84 apps/gallery/templates/gallery/includes/upload_media_form.html:88
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:92 apps/gallery/templates/gallery/includes/upload_media_form.html:122
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:139 apps/kbforums/templates/kbforums/confirm_post_delete.html:26 apps/kbforums/templates/kbforums/confirm_thread_delete.html:28
+#: apps/kbforums/templates/kbforums/edit_post.html:28 apps/kbforums/templates/kbforums/edit_thread.html:25 apps/kbforums/templates/kbforums/new_thread.html:33
+#: apps/notifications/templates/notifications/remove.html:15 apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_revision_delete.html:29
+#: apps/wiki/templates/wiki/includes/review_form.html:38 apps/wiki/templates/wiki/includes/review_form.html:57 apps/wiki/templates/wiki/includes/submit_revision_modal.html:22
+msgid "Cancel"
+msgstr "Peruuta"
 
-#: apps/gallery/templates/gallery/edit_media.html:26
-#, fuzzy
-msgid "Save {type}"
-msgstr "kaikki tyypit"
-
-#: apps/gallery/templates/gallery/gallery.html:19 apps/gallery/templates/gallery/gallery.html:72
+#: apps/gallery/templates/gallery/gallery.html:18 apps/gallery/templates/gallery/includes/upload_media_form.html:12
 #, fuzzy
 msgid "Upload a New Media File"
 msgstr "Lähetä uusi peli"
 
-#: apps/gallery/templates/gallery/gallery.html:22 apps/gallery/templates/gallery/search.html:18
+#: apps/gallery/templates/gallery/gallery.html:21 apps/gallery/templates/gallery/search.html:18
 #, fuzzy
 msgid "Show media for:"
 msgstr "Näytä kirjoittaja"
 
-#: apps/gallery/templates/gallery/gallery.html:29 apps/gallery/templates/gallery/search.html:25
+#: apps/gallery/templates/gallery/gallery.html:28 apps/gallery/templates/gallery/search.html:25
 msgid "Go"
 msgstr "Mene"
 
-#: apps/gallery/templates/gallery/gallery.html:31
+#: apps/gallery/templates/gallery/gallery.html:30
 msgid "You have JavaScript disabled. Please enable JavaScript to upload files."
 msgstr ""
 
-#: apps/gallery/templates/gallery/gallery.html:38 apps/gallery/templates/gallery/search.html:31
+#: apps/gallery/templates/gallery/gallery.html:37 apps/gallery/templates/gallery/search.html:31
 #, fuzzy
 msgid "Show:"
 msgstr "Näytä"
 
-#: apps/gallery/templates/gallery/gallery.html:42 apps/gallery/templates/gallery/gallery.html:44 apps/gallery/templates/gallery/search.html:35 apps/gallery/templates/gallery/search.html:37
+#: apps/gallery/templates/gallery/gallery.html:41 apps/gallery/templates/gallery/gallery.html:43 apps/gallery/templates/gallery/search.html:35 apps/gallery/templates/gallery/search.html:37
 msgid "Images"
 msgstr "Kuvat"
 
-#: apps/gallery/templates/gallery/gallery.html:49 apps/gallery/templates/gallery/gallery.html:51 apps/gallery/templates/gallery/search.html:42 apps/gallery/templates/gallery/search.html:44
-#: templates/layout/footer.html:30 templates/layout/header.html:19
+#: apps/gallery/templates/gallery/gallery.html:48 apps/gallery/templates/gallery/gallery.html:50 apps/gallery/templates/gallery/search.html:42 apps/gallery/templates/gallery/search.html:44
+#: templates/global/menu_links.html:8
 msgid "Videos"
 msgstr ""
 
-#: apps/gallery/templates/gallery/gallery.html:59 apps/gallery/templates/gallery/search.html:52
+#: apps/gallery/templates/gallery/gallery.html:58 apps/gallery/templates/gallery/search.html:52
 #, fuzzy
 msgid "Search Gallery"
 msgstr "Valitse Galleria"
-
-#: apps/gallery/templates/gallery/gallery.html:70
-msgid "Continue Uploading Media"
-msgstr ""
-
-#: apps/gallery/templates/gallery/gallery.html:75 apps/upload/templates/upload/attachments.html:56
-msgid "Upload"
-msgstr "Lähetä"
-
-#: apps/gallery/templates/gallery/gallery.html:89
-#, fuzzy
-msgid "Select an image file to upload."
-msgstr "On valittava tiedosto lähetettäväksi."
-
-#: apps/gallery/templates/gallery/gallery.html:91
-msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
-msgstr ""
-
-#: apps/gallery/templates/gallery/gallery.html:93 apps/gallery/templates/gallery/gallery.html:134 apps/gallery/templates/gallery/gallery.html:186
-#, fuzzy
-msgid "Progress"
-msgstr "Ohjelma"
-
-#: apps/gallery/templates/gallery/gallery.html:98 apps/gallery/templates/gallery/gallery.html:161 apps/kbforums/templates/kbforums/edit_post.html:29
-#: apps/kbforums/templates/kbforums/new_thread.html:34 apps/kbforums/templates/kbforums/posts.html:94
-msgid "Preview"
-msgstr "Näytä"
-
-#: apps/gallery/templates/gallery/gallery.html:104 apps/gallery/templates/gallery/gallery.html:125 apps/gallery/templates/gallery/gallery.html:207 apps/gallery/templates/gallery/media.html:68
-#, fuzzy
-msgid "Delete this {type}"
-msgstr "Poista tämä tyyppi"
-
-#: apps/gallery/templates/gallery/gallery.html:116
-msgid "Include this in wiki syntax with [[{type}:title]]"
-msgstr ""
-
-#: apps/gallery/templates/gallery/gallery.html:118
-#, fuzzy
-msgid "Provide a brief description of this media."
-msgstr "Näyttää listan plugeista tällä sivustolla."
-
-#: apps/gallery/templates/gallery/gallery.html:124 apps/gallery/templates/gallery/gallery.html:204
-#, fuzzy
-msgid "Submit file"
-msgstr "Lähetä artikkeli"
-
-#: apps/gallery/templates/gallery/gallery.html:149
-msgid "Select a Flash video (FLV) to upload."
-msgstr ""
-
-#: apps/gallery/templates/gallery/gallery.html:151
-msgid "Please no SWFs, only FLVs."
-msgstr ""
-
-#: apps/gallery/templates/gallery/gallery.html:154
-#, fuzzy
-msgid "Select an Ogv video to upload."
-msgstr "On valittava tiedosto lähetettäväksi."
-
-#: apps/gallery/templates/gallery/gallery.html:158
-#, fuzzy
-msgid "Select a WebM video to upload."
-msgstr "On valittava tiedosto lähetettäväksi."
-
-#: apps/gallery/templates/gallery/gallery.html:168 apps/gallery/templates/gallery/gallery.html:174 apps/gallery/templates/gallery/gallery.html:180 apps/gallery/templates/gallery/gallery.html:197
-#, fuzzy
-msgid "Delete {format} file"
-msgstr "Poista tämä tyyppi"
-
-#: apps/gallery/templates/gallery/gallery.html:191
-msgid "Thumbnail"
-msgstr "Minikuva"
-
-#: apps/gallery/templates/gallery/gallery.html:199
-msgid "Upload a thumbnail for your video. Suggested size: {width}x{height}px"
-msgstr ""
 
 #: apps/gallery/templates/gallery/includes/media_list.html:14
 #, fuzzy
 msgid "No media files found."
 msgstr "Ei löytynyt sivuja"
 
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:10
+msgid "Continue Uploading Media"
+msgstr ""
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:15 apps/upload/templates/upload/attachments.html:56
+msgid "Upload"
+msgstr "Lähetä"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:17 apps/gallery/templates/gallery/includes/upload_media_form.html:27
+msgid "Image"
+msgstr "Kuva"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:18 apps/gallery/templates/gallery/includes/upload_media_form.html:67
+msgid "Video"
+msgstr ""
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:29
+#, fuzzy
+msgid "Select an image file to upload."
+msgstr "On valittava tiedosto lähetettäväksi."
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:31
+msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
+msgstr ""
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:33 apps/gallery/templates/gallery/includes/upload_media_form.html:81
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:119
+#, fuzzy
+msgid "Progress"
+msgstr "Ohjelma"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:38 apps/gallery/templates/gallery/includes/upload_media_form.html:94 apps/kbforums/templates/kbforums/edit_post.html:29
+#: apps/kbforums/templates/kbforums/new_thread.html:34 apps/kbforums/templates/kbforums/posts.html:93
+msgid "Preview"
+msgstr "Näytä"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:44 apps/gallery/templates/gallery/media.html:13 apps/upload/templates/upload/attachments.html:12
+#: apps/upload/templates/upload/attachments.html:17 apps/upload/templates/upload/attachments.html:19
+#, fuzzy
+msgid "Delete this image"
+msgstr "Poista tämä tyyppi"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:57 apps/gallery/templates/gallery/includes/upload_media_form.html:136
+#, fuzzy
+msgid "Submit file"
+msgstr "Lähetä artikkeli"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:69
+msgid "Select a Flash video (FLV) to upload."
+msgstr ""
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:71
+msgid "Please no SWFs, only FLVs."
+msgstr ""
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:74
+#, fuzzy
+msgid "Select an Ogv video to upload."
+msgstr "On valittava tiedosto lähetettäväksi."
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:78
+#, fuzzy
+msgid "Select a WebM video to upload."
+msgstr "On valittava tiedosto lähetettäväksi."
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:101 apps/gallery/templates/gallery/includes/upload_media_form.html:107
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:113
+#, fuzzy
+msgid "Delete {format} file"
+msgstr "Poista tämä tyyppi"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:124
+msgid "Thumbnail"
+msgstr "Minikuva"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:130
+#, fuzzy
+msgid "Delete thumbnail"
+msgstr "rakenna minikuvat"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:132
+msgid "Upload a thumbnail for your video. Suggested size: {width}x{height}px"
+msgstr ""
+
 #: apps/gallery/templates/gallery/media.html:5
 #, fuzzy
 msgid "{title} | Media Gallery"
 msgstr "Tiedosto Galleria"
 
-#: apps/gallery/templates/gallery/media.html:51
+#: apps/gallery/templates/gallery/media.html:14
+#, fuzzy
+msgid "Edit this image"
+msgstr "Muokkaa sivua"
+
+#: apps/gallery/templates/gallery/media.html:16
+#, fuzzy
+msgid "Delete this video"
+msgstr "Poista tämä tyyppi"
+
+#: apps/gallery/templates/gallery/media.html:17
+#, fuzzy
+msgid "Edit this video"
+msgstr "Muuta tätä tutkimusta"
+
+#: apps/gallery/templates/gallery/media.html:58
 msgid "by {user}"
 msgstr ""
 
-#: apps/gallery/templates/gallery/media.html:52
+#: apps/gallery/templates/gallery/media.html:59
 #, fuzzy
 msgid "Uploaded {date}"
 msgstr "Lähetys päivä"
-
-#: apps/gallery/templates/gallery/media.html:69
-#, fuzzy
-msgid "Edit this {type}"
-msgstr "Muokkaa sivua"
 
 #: apps/gallery/templates/gallery/search.html:4
 #, fuzzy
@@ -683,6 +694,10 @@ msgstr "Oletko varma, että haluat poistaa tämän dsn:n?"
 msgid "Author"
 msgstr "Kirjoittaja"
 
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:16 apps/kbforums/templates/kbforums/confirm_thread_delete.html:18 apps/wiki/templates/wiki/confirm_revision_delete.html:18
+msgid "Date"
+msgstr "Päiväys"
+
 #: apps/kbforums/templates/kbforums/confirm_post_delete.html:18 apps/wiki/templates/wiki/confirm_revision_delete.html:20
 msgid "Content"
 msgstr "Sisältö"
@@ -705,6 +720,10 @@ msgstr "Poista valitut"
 #, fuzzy
 msgid "Are you sure you want to delete this thread?"
 msgstr "Oletko varma, että haluat poistaa tämän sanan?"
+
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:16 apps/wiki/templates/wiki/confirm_revision_delete.html:16
+msgid "Creator"
+msgstr "Luonut"
 
 #: apps/kbforums/templates/kbforums/confirm_thread_delete.html:20
 #, fuzzy
@@ -765,7 +784,7 @@ msgstr "uudet postit"
 msgid "Link to this post."
 msgstr "sähköpostita tämä lähetys"
 
-#: apps/kbforums/templates/kbforums/includes/post.html:26 apps/kbforums/templates/kbforums/posts.html:95
+#: apps/kbforums/templates/kbforums/includes/post.html:26 apps/kbforums/templates/kbforums/posts.html:94
 msgid "Reply"
 msgstr "Vastaa"
 
@@ -829,16 +848,20 @@ msgstr "Muuta asetuksia"
 msgid "Message"
 msgstr "Viesti"
 
-#: apps/kbforums/templates/kbforums/posts.html:82 apps/kbforums/templates/kbforums/posts.html:101
+#: apps/kbforums/templates/kbforums/posts.html:76
+msgid "Oh, no! Looks like there are no posts!"
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/posts.html:81 apps/kbforums/templates/kbforums/posts.html:100
 #, fuzzy
 msgid "Post a reply"
 msgstr "Lähetä uusi vastaus"
 
-#: apps/kbforums/templates/kbforums/posts.html:103
+#: apps/kbforums/templates/kbforums/posts.html:102
 msgid "This thread has been locked. It is no longer possible to post new replies."
 msgstr ""
 
-#: apps/kbforums/templates/kbforums/posts.html:108
+#: apps/kbforums/templates/kbforums/posts.html:107
 #, fuzzy
 msgid "Reply Preview:"
 msgstr "Näytä"
@@ -890,6 +913,10 @@ msgstr "Pysyvä"
 
 #: apps/kbforums/templates/kbforums/threads.html:56
 msgid "by <a class=\"username\" href=\"{profile_url}\">{username}</a>"
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/threads.html:65
+msgid "There are no threads. Maybe you should create some!"
 msgstr ""
 
 #: apps/notifications/templates/notifications/gone.html:3
@@ -990,7 +1017,7 @@ msgstr ""
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
 msgstr ""
 
-#: apps/search/templates/search/form.html:16 apps/wiki/templates/wiki/edit_document.html:8 apps/wiki/templates/wiki/new_document.html:8 templates/layout/sidebar.html:4
+#: apps/search/templates/search/form.html:16 apps/wiki/templates/wiki/edit_document.html:8 apps/wiki/templates/wiki/new_document.html:8
 msgid "Knowledge Base"
 msgstr "Tukikanta"
 
@@ -1168,52 +1195,52 @@ msgstr ""
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr ""
 
-#: apps/sumo/helpers.py:132 templates/layout/footer.html:66 templates/layout/header.html:54 templates/layout/sidebar.html:3
+#: apps/sumo/helpers.py:132 templates/global/menu_links.html:44 templates/layout/menu_links.html:7 templates/layout/sidebar.html:3
 msgid "Firefox Support"
 msgstr "Firefox-tuki"
 
-#: apps/sumo/helpers.py:195
+#: apps/sumo/helpers.py:181
 #, fuzzy
 msgid "Today at %s"
 msgstr "Tänään"
 
-#: apps/sumo/helpers.py:267
+#: apps/sumo/helpers.py:253
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/sumo/helpers.py:269
+#: apps/sumo/helpers.py:255
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/sumo/helpers.py:271
+#: apps/sumo/helpers.py:257
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/sumo/helpers.py:273
+#: apps/sumo/helpers.py:259
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/sumo/helpers.py:275
+#: apps/sumo/helpers.py:261
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/sumo/helpers.py:277
+#: apps/sumo/helpers.py:263
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/sumo/helpers.py:279
+#: apps/sumo/helpers.py:265
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] ""
@@ -1277,11 +1304,6 @@ msgstr ""
 msgid "Add"
 msgstr "Lisää"
 
-#: apps/upload/templates/upload/attachments.html:12 apps/upload/templates/upload/attachments.html:17 apps/upload/templates/upload/attachments.html:19
-#, fuzzy
-msgid "Delete this image"
-msgstr "Poista tämä tyyppi"
-
 #: apps/upload/templates/upload/attachments.html:36
 #, fuzzy
 msgid "Uploaded images:"
@@ -1305,25 +1327,399 @@ msgstr ""
 msgid "\"%s\" is too large (%sKB), the limit is %sKB"
 msgstr ""
 
-#: apps/upload/views.py:27
+#: apps/upload/views.py:26
 #, fuzzy
 msgid "Model does not exist."
 msgstr "Käyttäjää ei ole olemassa"
 
-#: apps/upload/views.py:35
+#: apps/upload/views.py:34
 #, fuzzy
 msgid "Object does not exist."
 msgstr "Kohdetta ei ole"
 
-#: apps/upload/views.py:49
+#: apps/upload/views.py:48
 #, fuzzy
 msgid "Invalid or no image received."
 msgstr "Väärä aiha id määritelty"
 
-#: apps/upload/views.py:66
+#: apps/upload/views.py:65
 #, fuzzy
 msgid "The requested image could not be found."
 msgstr "Sivua ei löydy"
+
+#: apps/users/forms.py:13
+msgid "Username may contain only letters, numbers and @/./+/-/_ characters."
+msgstr ""
+
+#: apps/users/forms.py:15
+#, fuzzy
+msgid "Username is required."
+msgstr "Tarvitaan kirjautuminen"
+
+#: apps/users/forms.py:16
+msgid "Username is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
+msgstr ""
+
+#: apps/users/forms.py:18
+msgid "Username is too long (%(show_value)s characters). It must be %(limit_value)s characters or less."
+msgstr ""
+
+#: apps/users/forms.py:20
+#, fuzzy
+msgid "Email address is required."
+msgstr "Tarvitaan sähköpostiosoite"
+
+#: apps/users/forms.py:21
+msgid "Email address is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
+msgstr ""
+
+#: apps/users/forms.py:23
+msgid "Email address is too long (%(show_value)s characters). It must be %(limit_value)s characters or less."
+msgstr ""
+
+#: apps/users/forms.py:25
+#, fuzzy
+msgid "Password is required."
+msgstr "Tarvitaan salasana"
+
+#: apps/users/forms.py:26
+#, fuzzy
+msgid "Please enter your password twice."
+msgstr "Muuta salasanasi"
+
+#: apps/users/forms.py:38 apps/users/templates/users/login.html:17 templates/layout/login.html:8
+#, fuzzy
+msgid "Username:"
+msgstr "Käyttäjä nimi:"
+
+#: apps/users/forms.py:40
+msgid "Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr ""
+
+#: apps/users/forms.py:46
+#, fuzzy
+msgid "Email address:"
+msgstr "Sähköposti osoite"
+
+#: apps/users/forms.py:50 apps/users/templates/users/login.html:21 templates/layout/login.html:11
+#, fuzzy
+msgid "Password:"
+msgstr "Salasana"
+
+#: apps/users/forms.py:54
+#, fuzzy
+msgid "Repeat password:"
+msgstr "Toista salasana"
+
+#: apps/users/forms.py:58
+msgid "Enter the same password as above, for verification."
+msgstr ""
+
+#: apps/users/forms.py:71
+#, fuzzy
+msgid "Passwords must match."
+msgstr "Salasana ei kelpaa"
+
+#: apps/users/forms.py:78
+#, fuzzy
+msgid "A user with that email address already exists."
+msgstr "Karttatiedosto on jo olemassa"
+
+#: apps/users/forms.py:93
+msgid "Password"
+msgstr "Salasana"
+
+#: apps/users/forms.py:109
+msgid "Please enter a correct username and password. Note that both fields are case-sensitive."
+msgstr ""
+
+#: apps/users/forms.py:112
+#, fuzzy
+msgid "This account is inactive."
+msgstr "Tämä ryhmä on väärä"
+
+#: apps/users/forms.py:117
+msgid "Your Web browser doesn't appear to have cookies enabled. Cookies are required for logging in."
+msgstr ""
+
+#: apps/users/models.py:29
+msgid "User"
+msgstr "Käyttäjä"
+
+#: apps/users/models.py:31
+#, fuzzy
+msgid "Display name"
+msgstr "Näyttää kartan"
+
+#: apps/users/models.py:33
+msgid "Make my email public"
+msgstr ""
+
+#: apps/users/models.py:35 apps/users/templates/users/edit_profile.html:13
+msgid "Avatar"
+msgstr "Hahmo"
+
+#: apps/users/models.py:38
+#, fuzzy
+msgid "Biography"
+msgstr "graafi"
+
+#: apps/users/models.py:41 apps/users/templates/users/profile.html:49
+#, fuzzy
+msgid "Website"
+msgstr "sivusto"
+
+#: apps/users/models.py:44
+msgid "Twitter URL"
+msgstr ""
+
+#: apps/users/models.py:47
+msgid "Facebook URL"
+msgstr ""
+
+#: apps/users/models.py:49
+#, fuzzy
+msgid "IRC nickname"
+msgstr "Lempinimi"
+
+#: apps/users/models.py:51
+#, fuzzy
+msgid "Timezone"
+msgstr "Aika Vyöhyke"
+
+#: apps/users/models.py:53
+msgid "Country"
+msgstr "Maa"
+
+#: apps/users/models.py:56
+msgid "City"
+msgstr ""
+
+#: apps/users/models.py:59
+msgid "Livechat ID"
+msgstr ""
+
+#: apps/users/models.py:125
+#, fuzzy
+msgid "Please confirm your email address"
+msgstr "Käyttäjä voi tilata millä tahansa sähköpostiosoitteella"
+
+#: apps/users/models.py:186
+msgid "user"
+msgstr "käyttäjä"
+
+#: apps/users/models.py:187
+#, fuzzy
+msgid "activation key"
+msgstr "aktivoi"
+
+#: apps/users/models.py:192
+#, fuzzy
+msgid "registration profile"
+msgstr "Rekisteröinti koodi"
+
+#: apps/users/models.py:193
+#, fuzzy
+msgid "registration profiles"
+msgstr "Rekisteröinti koodi"
+
+#: apps/users/templates/users/activate.html:4
+#, fuzzy
+msgid "Account successfully verified!"
+msgstr "Tili varmistettu onnistuneesti."
+
+#: apps/users/templates/users/activate.html:6
+msgid "Something is wrong"
+msgstr ""
+
+#: apps/users/templates/users/activate.html:14
+msgid "You've confirmed your email address and activated your account! You can now <a href=\"%(login_url)s\">log in</a>, and go <a href=\"%(profile_url)s\">edit your profile</a>."
+msgstr ""
+
+#: apps/users/templates/users/activate.html:21
+msgid "We could not activate your account. Please make sure that you have clicked the correct link in your email or typed in the correct address."
+msgstr ""
+
+#: apps/users/templates/users/confirm_avatar_delete.html:3 apps/users/templates/users/confirm_avatar_delete.html:24
+#, fuzzy
+msgid "Delete avatar"
+msgstr "Poista"
+
+#: apps/users/templates/users/confirm_avatar_delete.html:8
+#, fuzzy
+msgid "Are you sure you want to delete your avatar?"
+msgstr "Oletko varma, että haluat poistaa tämän kortiston?"
+
+#: apps/users/templates/users/confirm_avatar_delete.html:16
+msgid "You are about to permanently delete your avatar. <strong>This cannot be undone!</strong> You can always <a href=\"%(upload_url)s\">upload another avatar</a> to replace your current one."
+msgstr ""
+
+#: apps/users/templates/users/edit_avatar.html:3
+#, fuzzy
+msgid "Change Avatar"
+msgstr "Muuta Salasana"
+
+#: apps/users/templates/users/edit_avatar.html:15
+#, fuzzy
+msgctxt "avatar"
+msgid "Upload"
+msgstr "Lähetä"
+
+#: apps/users/templates/users/edit_profile.html:3
+#, fuzzy
+msgid "Edit Profile"
+msgstr "Muokkaa Artikkelia"
+
+#: apps/users/templates/users/edit_profile.html:17
+#, fuzzy
+msgctxt "avatar"
+msgid "Change"
+msgstr "Muuta"
+
+#: apps/users/templates/users/edit_profile.html:21
+#, fuzzy
+msgctxt "avatar"
+msgid "Delete"
+msgstr "Poista"
+
+#: apps/users/templates/users/edit_profile.html:29 apps/users/templates/users/pw_reset_confirm.html:27
+msgid "Update"
+msgstr "Päivitä"
+
+#: apps/users/templates/users/login.html:4 apps/users/templates/users/login.html:9 templates/layout/sidebar.html:11
+msgid "Log In"
+msgstr ""
+
+#: apps/users/templates/users/login.html:27 apps/users/templates/users/pw_reset_complete.html:9 templates/layout/login.html:5 templates/layout/login.html:20
+#, fuzzy
+msgid "Log in"
+msgstr "kirjaudu sisään"
+
+#: apps/users/templates/users/login.html:31
+msgid "Login Problems?"
+msgstr ""
+
+#: apps/users/templates/users/login.html:33
+msgid "I don't have an account."
+msgstr ""
+
+#: apps/users/templates/users/login.html:34
+#, fuzzy
+msgid "I forgot my password."
+msgstr "Unohdin salasanan"
+
+#: apps/users/templates/users/profile.html:3
+#, fuzzy
+msgid "{user} | Profile"
+msgstr "Käyttäjä tiedostot"
+
+#: apps/users/templates/users/profile.html:11
+#, fuzzy
+msgid "Edit my profile"
+msgstr "Muokkaa karttatiedostoja"
+
+#: apps/users/templates/users/profile.html:19
+msgid "{city}, {country}"
+msgstr ""
+
+#: apps/users/templates/users/profile.html:29
+#, fuzzy
+msgid "Username: {username}"
+msgstr "pilkku erottaa käyttäjänimet"
+
+#: apps/users/templates/users/profile.html:32
+msgid "Livechat ID: {livechat_id}"
+msgstr ""
+
+#: apps/users/templates/users/profile.html:42
+msgid "Contact"
+msgstr "Yhteys"
+
+#: apps/users/templates/users/profile.html:52
+#, fuzzy
+msgid "Twitter"
+msgstr "Otsikko"
+
+#: apps/users/templates/users/profile.html:55
+#, fuzzy
+msgid "Facebook"
+msgstr "Arvostelukirja"
+
+#: apps/users/templates/users/profile.html:58
+#, fuzzy
+msgid "IRC nickname: {nickname}"
+msgstr "Ei lempinimeä osoitettu"
+
+#: apps/users/templates/users/profile.html:62
+#, fuzzy
+msgid "This user has not mady any contact information public."
+msgstr "Käyttäjä on valinnut tietonsa yksityisiksi"
+
+#: apps/users/templates/users/pw_reset_complete.html:3
+#, fuzzy
+msgid "Password successfully reset."
+msgstr " onnistuneesti lähetetty"
+
+#: apps/users/templates/users/pw_reset_confirm.html:4 apps/users/templates/users/pw_reset_form.html:4 apps/users/templates/users/pw_reset_sent.html:4
+#, fuzzy
+msgid "Password Reset"
+msgstr "Salasana"
+
+#: apps/users/templates/users/pw_reset_confirm.html:17
+msgid "New password"
+msgstr "Uusi salasana"
+
+#: apps/users/templates/users/pw_reset_confirm.html:21
+#, fuzzy
+msgid "Confirm password"
+msgstr "Toista uusi salasana"
+
+#: apps/users/templates/users/pw_reset_confirm.html:31
+#, fuzzy
+msgid "Password reset unsuccessful"
+msgstr "Lähetys ei onnistunut"
+
+#: apps/users/templates/users/pw_reset_confirm.html:32
+msgid "The password reset link was invalid, possibly because it has already been used. Please request a new password reset."
+msgstr ""
+
+#: apps/users/templates/users/pw_reset_form.html:14
+msgid "Forgotten your password? Enter your email address below, and we'll send you instructions for setting a new one."
+msgstr ""
+
+#: apps/users/templates/users/pw_reset_form.html:21
+#, fuzzy
+msgid "Email Address:"
+msgstr "Sähköposti osoite"
+
+#: apps/users/templates/users/pw_reset_form.html:27
+#, fuzzy
+msgid "Send password reset link"
+msgstr "Muistuta salasanoista sähköpostilla"
+
+#: apps/users/templates/users/pw_reset_sent.html:10
+#, fuzzy
+msgid "The password reset link was sent to your email address."
+msgstr "Uutislehti on lähetetty {$sent} sähköposti osoitteisiin"
+
+#: apps/users/templates/users/register.html:4 apps/users/templates/users/register.html:9 apps/users/templates/users/register.html:19 templates/layout/login.html:24
+msgid "Register"
+msgstr "Rekisteröity"
+
+#: apps/users/templates/users/register_done.html:4 apps/users/templates/users/register_done.html:9
+#, fuzzy
+msgid "Thank you for registering!"
+msgstr "Kiitoksia ehdotuksestasi"
+
+#. This string appears on the 'thank you for registering' page.
+#: apps/users/templates/users/register_done.html:11
+#, fuzzy
+msgid "Thank you for being awesome!"
+msgstr "Kiitoksia ehdotuksestasi"
+
+#: apps/users/templates/users/register_done.html:12
+msgid "Before you can log in, you need to confirm your email address. We've sent you an email with a confirmation link in it. Just click the link and you'll be ready to go!"
+msgstr ""
 
 #: apps/wiki/forms.py:20
 msgid "Please keep the length of the title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
@@ -1555,39 +1951,39 @@ msgstr "Luo luokittelu ensin"
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr ""
 
-#: apps/wiki/parser.py:278
+#: apps/wiki/parser.py:321
 msgid "[Recursive inclusion of \"%s\"]"
 msgstr ""
 
-#: apps/wiki/parser.py:333
+#: apps/wiki/parser.py:375
 #, fuzzy
 msgid "The document \"%s\" does not exist."
 msgstr "Kohdetta ei ole"
 
-#: apps/wiki/parser.py:361
+#: apps/wiki/parser.py:403
 msgid "The template \"%s\" does not exist or has no approved revision."
 msgstr ""
 
-#: apps/wiki/parser.py:393
+#: apps/wiki/parser.py:435
 #, fuzzy
 msgid "The video \"%s\" does not exist."
 msgstr "Tällaista galleriaa ei ole"
 
-#: apps/wiki/tasks.py:35
+#: apps/wiki/tasks.py:36
 #, fuzzy
 msgid "Your revision has been approved: %s"
 msgstr "Pyyntösi on käsitelty"
 
-#: apps/wiki/tasks.py:37
+#: apps/wiki/tasks.py:38
 msgid "Your revision has been rejected: %s"
 msgstr ""
 
-#: apps/wiki/tasks.py:57
+#: apps/wiki/tasks.py:58
 #, fuzzy
 msgid "%(title)s is ready for review (%(creator)s)"
 msgstr "Muokatut artikkelit valmiina tarkastettavaksi"
 
-#: apps/wiki/tasks.py:70
+#: apps/wiki/tasks.py:71
 #, fuzzy
 msgid "%(title)s was edited by %(creator)s"
 msgstr "Tehtävän hyväksynyt sen luoja"
@@ -1605,19 +2001,19 @@ msgstr ""
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
 msgstr ""
 
-#: apps/wiki/templates/wiki/base.html:52
+#: apps/wiki/templates/wiki/base.html:51
 msgid "Grab your cape and join us &raquo;"
 msgstr ""
 
-#: apps/wiki/templates/wiki/base.html:56
+#: apps/wiki/templates/wiki/base.html:55
 msgid "Check your <mark>plugins</mark>"
 msgstr ""
 
-#: apps/wiki/templates/wiki/base.html:61
+#: apps/wiki/templates/wiki/base.html:60
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
 msgstr ""
 
-#: apps/wiki/templates/wiki/base.html:67
+#: apps/wiki/templates/wiki/base.html:65
 msgid "Find out more &raquo;"
 msgstr ""
 
@@ -1816,7 +2212,7 @@ msgstr ""
 msgid "Profile"
 msgstr "tied-g"
 
-#: apps/wiki/templates/wiki/includes/common_macros.html:27
+#: apps/wiki/templates/wiki/includes/common_macros.html:27 templates/layout/sidebar.html:9
 #, fuzzy
 msgid "Sign Out"
 msgstr "Kirjaudu ulos"
@@ -1894,6 +2290,11 @@ msgstr ""
 msgid "Reject"
 msgstr "Hylätty"
 
+#: apps/wiki/templates/wiki/includes/revision_diff.html:11 apps/wiki/templates/wiki/includes/revision_diff.html:21
+#, fuzzy
+msgid "Revision {num}:"
+msgstr "Resurssit"
+
 #: apps/wiki/templates/wiki/includes/revision_diff.html:14 apps/wiki/templates/wiki/includes/revision_diff.html:24 apps/wiki/templates/wiki/review_translation.html:46
 #: apps/wiki/templates/wiki/review_translation.html:50
 msgid "Revision {id} by {user} on {date}"
@@ -1928,36 +2329,50 @@ msgstr "Avustajan työkalut"
 msgid "Contributor Home Page"
 msgstr "Avustajien etusivu"
 
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:57
+#, fuzzy
+msgid "Knowledge Base Dashboard"
+msgstr "Tukikanta"
+
 #: apps/wiki/templates/wiki/includes/sidebar_modules.html:59
 #, fuzzy
-msgid "Creating Articles"
-msgstr "Luo artikkeli"
+msgid "Help on Twitter"
+msgstr "Auta Piirroksissa"
 
 #: apps/wiki/templates/wiki/includes/sidebar_modules.html:60
 #, fuzzy
-msgid "Helping in the Forum"
-msgstr "Tämän foorumin aiheet"
+msgid "Answer Support Questions"
+msgstr "Tukee pyyntöjä"
 
 #: apps/wiki/templates/wiki/includes/sidebar_modules.html:61
 #, fuzzy
-msgid "Helping in Live Chat"
+msgid "Help with Live Chat"
 msgstr "Tervetuloa live-tukeen!"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:73
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:62
+msgid "Improve the Knowledge Base"
+msgstr "Paranna tukikantaa"
+
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:63
+#, fuzzy
+msgid "Translate Articles"
+msgstr "Artikkelin kääntäminen"
+
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:75
 msgid "Unsubscribe from edit notifications"
 msgstr ""
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:78
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:80
 #, fuzzy
 msgid "Subscribe to edit notifications"
 msgstr "Sähköpostimuistutukseni"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:89
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:91 templates/layout/sidebar.html:4
 #, fuzzy
 msgid "Firefox Help Home"
 msgstr "Firefox-ohjeet ja -oppaat"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:92 templates/layout/sidebar.html:6
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:94 templates/layout/sidebar.html:5
 msgid "Ask a Question"
 msgstr "Kysy kysymys"
 
@@ -2208,6 +2623,10 @@ msgstr "Artikkelin kääntäminen"
 msgid "Translating article to {locale}"
 msgstr "Artikkelin kääntäminen"
 
+#: apps/wiki/templates/wiki/translate.html:23
+msgid "Change"
+msgstr "Muuta"
+
 #: apps/wiki/templates/wiki/translate.html:26
 #, fuzzy
 msgid "Choose a locale:"
@@ -2255,211 +2674,45 @@ msgstr "käännös"
 msgid "Cancel Changes"
 msgstr "Viimeiset Muutokset"
 
-#: apps/wiki/views.py:383
+#: apps/wiki/views.py:382
 #, fuzzy
 msgid "You cannot translate this document."
 msgstr "Et voi ottaa tutkimusta kahdesti"
 
-#: apps/wiki/views.py:540
+#: apps/wiki/views.py:539
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr ""
 
-#: apps/wiki/views.py:542
+#: apps/wiki/views.py:541
 msgid "Sorry to hear that. Perhaps one of the solutions below can help."
 msgstr ""
 
-#: apps/wiki/views.py:552
+#: apps/wiki/views.py:551
 msgid "You already voted on this Article."
 msgstr ""
 
-#: templates/layout/footer.html:5
-msgid "Other Languages"
-msgstr "Muut kielet"
-
-#: templates/layout/footer.html:18
+#: templates/global/footer.html:6
 #, fuzzy
 msgid "Back to home page"
 msgstr "takaisin etusivulle"
 
-#: templates/layout/footer.html:18 templates/layout/header.html:7
+#: templates/global/footer.html:6 templates/global/header.html:7
 msgid "Firefox"
 msgstr ""
 
-#: templates/layout/footer.html:23 templates/layout/footer.html:25 templates/layout/footer.html:39 templates/layout/header.html:12 templates/layout/header.html:14 templates/layout/header.html:28
-msgid "Features"
-msgstr "Ominaisuudet"
-
-#: templates/layout/footer.html:26 templates/layout/header.html:15
-msgid "Security"
-msgstr "Turvallisuus"
-
-#: templates/layout/footer.html:27 templates/layout/header.html:16
-#, fuzzy
-msgid "Performance"
-msgstr "Suorituskyky asiat"
-
-#: templates/layout/footer.html:28 templates/layout/header.html:17
-msgid "Customization"
-msgstr ""
-
-#: templates/layout/footer.html:29 templates/layout/header.html:18
-#, fuzzy
-msgid "Download Stats"
-msgstr "Imuroinnit"
-
-#: templates/layout/footer.html:31 templates/layout/header.html:20
-msgid "Tour"
-msgstr ""
-
-#: templates/layout/footer.html:35 templates/layout/header.html:24
-msgid "Mobile"
-msgstr ""
-
-#: templates/layout/footer.html:37 templates/layout/header.html:26
-#, fuzzy
-msgid "Mobile Overview"
-msgstr "Yleiskuva"
-
-#: templates/layout/footer.html:38 templates/layout/header.html:27
-msgid "Download"
-msgstr "Imurointi"
-
-#: templates/layout/footer.html:40 templates/layout/header.html:29
-#, fuzzy
-msgid "Customize"
-msgstr "Muokattu koodi"
-
-#: templates/layout/footer.html:41 templates/layout/header.html:30
-msgid "Sync"
-msgstr ""
-
-#: templates/layout/footer.html:42 templates/layout/header.html:31
-#, fuzzy
-msgid "Develop"
-msgstr "taso"
-
-#: templates/layout/footer.html:43 templates/layout/header.html:32
-msgid "Get Involved"
-msgstr ""
-
-#: templates/layout/footer.html:44 templates/layout/header.html:33
-msgid "FAQ"
-msgstr "UKK"
-
-#: templates/layout/footer.html:45 templates/layout/footer.html:81 templates/layout/header.html:34 templates/layout/header.html:69
-msgid "Blog"
-msgstr "Blogi"
-
-#: templates/layout/footer.html:49 templates/layout/header.html:37
-msgid "Add-ons"
-msgstr ""
-
-#: templates/layout/footer.html:51 templates/layout/header.html:40
-#, fuzzy
-msgid "Firefox Add-ons"
-msgstr "Firefox-tuki"
-
-#: templates/layout/footer.html:52 templates/layout/header.html:41
-#, fuzzy
-msgid "Featured Add-ons"
-msgstr "Ominaisuus linkit"
-
-#: templates/layout/footer.html:53 templates/layout/header.html:42
-#, fuzzy
-msgid "Extensions"
-msgstr "Versiot"
-
-#: templates/layout/footer.html:54 templates/layout/header.html:43
-msgid "Themes"
-msgstr ""
-
-#: templates/layout/footer.html:55 templates/layout/header.html:44
-#, fuzzy
-msgid "Personas"
-msgstr "Henkilö"
-
-#: templates/layout/footer.html:56 templates/layout/header.html:45
-#, fuzzy
-msgid "Search Tools"
-msgstr "Etsi "
-
-#: templates/layout/footer.html:57 templates/layout/header.html:46
-#, fuzzy
-msgid "Language Support"
-msgstr "Elävä Tuki"
-
-#: templates/layout/footer.html:58 templates/layout/header.html:47
-#, fuzzy
-msgid "Collections"
-msgstr "osastot"
-
-#: templates/layout/footer.html:59 templates/layout/header.html:48
-msgid "Mobile Add-ons"
-msgstr ""
-
-#: templates/layout/footer.html:60 templates/layout/header.html:49
-msgid "Developer Hub"
-msgstr ""
-
-#: templates/layout/footer.html:64 templates/layout/header.html:52
-msgid "Support"
-msgstr ""
-
-#: templates/layout/footer.html:67 templates/layout/header.html:55
-msgid "Mobile Support"
-msgstr ""
-
-#: templates/layout/footer.html:68 templates/layout/header.html:56
-msgid "Thunderbird Support"
-msgstr ""
-
-#: templates/layout/footer.html:72 templates/layout/header.html:60
-msgid "About"
-msgstr "Tietoja"
-
-#: templates/layout/footer.html:74 templates/layout/header.html:62
-msgid "About Firefox"
-msgstr ""
-
-#: templates/layout/footer.html:75 templates/layout/header.html:63
-#, fuzzy
-msgid "Participate"
-msgstr "Osalliset"
-
-#: templates/layout/footer.html:76 templates/layout/header.html:64
-#, fuzzy
-msgid "Communications"
-msgstr "Yhteisö"
-
-#: templates/layout/footer.html:77 templates/layout/header.html:65
-msgid "Careers"
-msgstr ""
-
-#: templates/layout/footer.html:78 templates/layout/header.html:66
-msgid "Partnerships"
-msgstr ""
-
-#: templates/layout/footer.html:79 templates/layout/header.html:67
-msgid "Legal"
-msgstr ""
-
-#: templates/layout/footer.html:80 templates/layout/header.html:68
-msgid "Contact Us"
-msgstr "Ota Yhteyttä"
-
-#: templates/layout/footer.html:89
+#: templates/global/footer.html:17
 msgid "Privacy Policy"
 msgstr "Tietosuojakäytännöt"
 
-#: templates/layout/footer.html:90
+#: templates/global/footer.html:18
 msgid "Legal Notices"
 msgstr "Käyttöehdot"
 
-#: templates/layout/footer.html:91
+#: templates/global/footer.html:19
 msgid "Report Trademark Abuse"
 msgstr ""
 
-#: templates/layout/footer.html:94
+#: templates/global/footer.html:22
 #, fuzzy
 msgid ""
 "Except where otherwise <a href=\"http://mozilla.com/about/legal.html#site\">noted</a>, content on this site is licensed under the <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> "
@@ -2468,51 +2721,198 @@ msgstr ""
 "Ellei toisin <a href=\"http://www.mozilla.com/en-US/about/legal.html#site\">mainita</a>, tämän sivuston sisältö on lisensoitu<br><strong><a href=\"http://creativecommons.org/licenses/by-sa/3.0/"
 "\">Creative Comm"
 
-#: templates/layout/header.html:3
+#: templates/global/header.html:3
 msgid "skip to navigation"
 msgstr ""
 
-#: templates/layout/header.html:4
+#: templates/global/header.html:4
 msgid "switch language"
 msgstr ""
 
-#: templates/layout/header.html:8
+#: templates/global/header.html:7
 #, fuzzy
-msgid "visit mozilla"
+msgid "Back to Mozilla.com"
 msgstr "Vieraile Mozilla.comissa"
 
-#: templates/layout/login.html:5 templates/layout/login.html:21
+#: templates/global/header.html:8
 #, fuzzy
-msgid "Log in"
-msgstr "kirjaudu sisään"
+msgid "visit {0}"
+msgstr "vierailut"
 
-#: templates/layout/login.html:9
+#: templates/global/menu_links.html:2 templates/global/menu_links.html:4 templates/global/menu_links.html:16
+msgid "Features"
+msgstr "Ominaisuudet"
+
+#: templates/global/menu_links.html:5
+msgid "Security"
+msgstr "Turvallisuus"
+
+#: templates/global/menu_links.html:6
 #, fuzzy
-msgid "Username:"
-msgstr "Käyttäjä nimi:"
+msgid "Performance"
+msgstr "Suorituskyky asiat"
 
-#: templates/layout/login.html:12
+#: templates/global/menu_links.html:7
+msgid "Customization"
+msgstr ""
+
+#: templates/global/menu_links.html:9
+msgid "Tour"
+msgstr ""
+
+#: templates/global/menu_links.html:12
+msgid "Mobile"
+msgstr ""
+
+#: templates/global/menu_links.html:14
 #, fuzzy
-msgid "Password:"
-msgstr "Salasana"
+msgid "Mobile Overview"
+msgstr "Yleiskuva"
 
-#: templates/layout/login.html:17
+#: templates/global/menu_links.html:15
+msgid "Download"
+msgstr "Imurointi"
+
+#: templates/global/menu_links.html:17
+#, fuzzy
+msgid "Customize"
+msgstr "Muokattu koodi"
+
+#: templates/global/menu_links.html:18
+msgid "Sync"
+msgstr ""
+
+#: templates/global/menu_links.html:19
+#, fuzzy
+msgid "Develop"
+msgstr "taso"
+
+#: templates/global/menu_links.html:20
+msgid "Get Involved"
+msgstr ""
+
+#: templates/global/menu_links.html:21
+msgid "FAQ"
+msgstr "UKK"
+
+#: templates/global/menu_links.html:22 templates/global/menu_links.html:59
+msgid "Blog"
+msgstr "Blogi"
+
+#: templates/global/menu_links.html:26
+msgid "Add-ons"
+msgstr ""
+
+#: templates/global/menu_links.html:28
+#, fuzzy
+msgid "Firefox Add-ons"
+msgstr "Firefox-tuki"
+
+#: templates/global/menu_links.html:29
+#, fuzzy
+msgid "Featured Add-ons"
+msgstr "Ominaisuus linkit"
+
+#: templates/global/menu_links.html:30
+#, fuzzy
+msgid "Extensions"
+msgstr "Versiot"
+
+#: templates/global/menu_links.html:31
+msgid "Themes"
+msgstr ""
+
+#: templates/global/menu_links.html:32
+#, fuzzy
+msgid "Personas"
+msgstr "Henkilö"
+
+#: templates/global/menu_links.html:33
+#, fuzzy
+msgid "Search Tools"
+msgstr "Etsi "
+
+#: templates/global/menu_links.html:34
+#, fuzzy
+msgid "Language Support"
+msgstr "Elävä Tuki"
+
+#: templates/global/menu_links.html:35
+#, fuzzy
+msgid "Collections"
+msgstr "osastot"
+
+#: templates/global/menu_links.html:36
+msgid "Mobile Add-ons"
+msgstr ""
+
+#: templates/global/menu_links.html:37
+msgid "Developer Hub"
+msgstr ""
+
+#: templates/global/menu_links.html:42 templates/layout/menu_links.html:5
+msgid "Support"
+msgstr ""
+
+#: templates/global/menu_links.html:45 templates/layout/menu_links.html:8
+msgid "Mobile Support"
+msgstr ""
+
+#: templates/global/menu_links.html:46 templates/layout/menu_links.html:9
+msgid "Thunderbird Support"
+msgstr ""
+
+#: templates/global/menu_links.html:50
+msgid "About"
+msgstr "Tietoja"
+
+#: templates/global/menu_links.html:52
+msgid "About Firefox"
+msgstr ""
+
+#: templates/global/menu_links.html:53
+#, fuzzy
+msgid "Participate"
+msgstr "Osalliset"
+
+#: templates/global/menu_links.html:54
+#, fuzzy
+msgid "Communications"
+msgstr "Yhteisö"
+
+#: templates/global/menu_links.html:55
+msgid "Careers"
+msgstr ""
+
+#: templates/global/menu_links.html:56
+msgid "Partnerships"
+msgstr ""
+
+#: templates/global/menu_links.html:57
+msgid "Legal"
+msgstr ""
+
+#: templates/global/menu_links.html:58
+msgid "Contact Us"
+msgstr "Ota Yhteyttä"
+
+#: templates/layout/footer.html:11
+msgid "Other Languages"
+msgstr "Muut kielet"
+
+#: templates/layout/login.html:16
 msgid "Remember me"
 msgstr "Muista minut"
 
-#: templates/layout/login.html:24
+#: templates/layout/login.html:23
 msgid "Click here to register"
 msgstr "Paina tästä rekisteröityäksesi"
 
-#: templates/layout/login.html:25
-msgid "Register"
-msgstr "Rekisteröity"
-
-#: templates/layout/login.html:27
+#: templates/layout/login.html:26
 msgid "Click here if you've forgotten your password"
 msgstr "Paina tästä jos olet unohtanut salasanasi"
 
-#: templates/layout/login.html:27
+#: templates/layout/login.html:26
 msgid "I forgot my password"
 msgstr "Unohdin salasanan"
 
@@ -2524,29 +2924,69 @@ msgstr "Edellinen"
 msgid "Next"
 msgstr "Seuraava"
 
-#: templates/layout/sidebar.html:5
-msgid "Support Forum"
-msgstr "Tukikeskustelu"
-
-#: templates/layout/sidebar.html:7
-msgid "Other Firefox Support"
-msgstr "Muu Firefox-tuki"
+#: templates/layout/sidebar.html:6
+msgid "Be Awesome"
+msgstr ""
 
 #: templates/layout/sidebar.html:8
-msgid "How to Contribute"
-msgstr "Haluatko auttaa?"
+#, fuzzy
+msgid "My Profile"
+msgstr "tied-g"
 
-#: templates/layout/sidebar.html:10
-msgid "My Account"
-msgstr "Tunnukseni"
+#, fuzzy
+#~ msgid "Are you sure you want to delete this {type}?"
+#~ msgstr "Oletko varma, että haluat poistaa tämän mallin?"
 
-#: templates/layout/sidebar.html:11
-msgid "Log Out"
-msgstr "Kirjaudu ulos"
+#, fuzzy
+#~ msgid "Available formats"
+#~ msgstr "Saatavilla olevat mallit"
 
-#: templates/layout/sidebar.html:13
-msgid "Log In"
-msgstr ""
+#, fuzzy
+#~ msgid "Edit {type}"
+#~ msgstr "Muuta tpl"
+
+#, fuzzy
+#~ msgid "Save {type}"
+#~ msgstr "kaikki tyypit"
+
+#, fuzzy
+#~ msgid "Delete this {type}"
+#~ msgstr "Poista tämä tyyppi"
+
+#, fuzzy
+#~ msgid "Edit this {type}"
+#~ msgstr "Muokkaa sivua"
+
+#, fuzzy
+#~ msgid "Creating Articles"
+#~ msgstr "Luo artikkeli"
+
+#, fuzzy
+#~ msgid "Helping in the Forum"
+#~ msgstr "Tämän foorumin aiheet"
+
+#, fuzzy
+#~ msgid "Download Stats"
+#~ msgstr "Imuroinnit"
+
+#, fuzzy
+#~ msgid "visit mozilla"
+#~ msgstr "Vieraile Mozilla.comissa"
+
+#~ msgid "Support Forum"
+#~ msgstr "Tukikeskustelu"
+
+#~ msgid "Other Firefox Support"
+#~ msgstr "Muu Firefox-tuki"
+
+#~ msgid "How to Contribute"
+#~ msgstr "Haluatko auttaa?"
+
+#~ msgid "My Account"
+#~ msgstr "Tunnukseni"
+
+#~ msgid "Log Out"
+#~ msgstr "Kirjaudu ulos"
 
 #~ msgid "Post status"
 #~ msgstr "Viestin tila"
