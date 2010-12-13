@@ -11,7 +11,7 @@ function usage() {
 }
 
 # check if file and dir are there
-if [ $# -ne 1 ]; then usage; fi
+if [ $# -eq 0 ]; then usage; fi
 
 CURRENT=`pwd`
 for locale in $@; do
