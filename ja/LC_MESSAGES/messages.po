@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-10 05:37-0700\n"
+"POT-Creation-Date: 2011-01-05 08:35-0700\n"
 "PO-Revision-Date: 2010-04-26 18:10-0700\n"
 "Last-Translator: James <james@localhost>\n"
 "Language-Team: Japanese\n"
@@ -18,10 +18,11 @@ msgstr ""
 
 #: apps/customercare/templates/customercare/landing.html:116 apps/gallery/templates/gallery/search.html:7 apps/search/templates/search/down.html:3 apps/search/templates/search/form.html:3
 #: apps/search/templates/search/results.html:3 apps/search/templates/search/results.html:19 apps/wiki/templates/wiki/includes/common_macros.html:15
+#: apps/wiki/templates/wiki/includes/common_macros.html:16
 msgid "Search"
 msgstr "検索"
 
-#: apps/customercare/templates/customercare/tweets.html:12
+#: apps/customercare/templates/customercare/tweets.html:14
 msgid "{0} and {1} other replied"
 msgid_plural "{0} and {1} others replied"
 msgstr[0] ""
@@ -118,10 +119,11 @@ msgid "Contributor Dashboard"
 msgstr "貢献者"
 
 #: apps/dashboards/templates/dashboards/contributors.html:10 apps/dashboards/templates/dashboards/kb_detail.html:9 apps/dashboards/templates/dashboards/localization.html:10
-#: apps/gallery/templates/gallery/edit_media.html:20 apps/gallery/templates/gallery/gallery.html:12 apps/gallery/templates/gallery/media.html:23 apps/gallery/templates/gallery/search.html:12
-#: apps/wiki/templates/wiki/compare_revisions.html:13 apps/wiki/templates/wiki/confirm_revision_delete.html:12 apps/wiki/templates/wiki/document_revisions.html:12
-#: apps/wiki/templates/wiki/edit_document.html:17 apps/wiki/templates/wiki/list_documents.html:15 apps/wiki/templates/wiki/new_document.html:15 apps/wiki/templates/wiki/review_revision.html:12
-#: apps/wiki/templates/wiki/review_translation.html:12 apps/wiki/templates/wiki/revision.html:15 apps/wiki/templates/wiki/select_locale.html:12 apps/wiki/templates/wiki/translate.html:16
+#: apps/gallery/templates/gallery/confirm_media_delete.html:18 apps/gallery/templates/gallery/edit_media.html:20 apps/gallery/templates/gallery/gallery.html:12
+#: apps/gallery/templates/gallery/media.html:23 apps/gallery/templates/gallery/search.html:12 apps/wiki/templates/wiki/compare_revisions.html:13
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:12 apps/wiki/templates/wiki/document_revisions.html:12 apps/wiki/templates/wiki/edit_document.html:17
+#: apps/wiki/templates/wiki/list_documents.html:15 apps/wiki/templates/wiki/new_document.html:15 apps/wiki/templates/wiki/review_revision.html:12 apps/wiki/templates/wiki/review_translation.html:12
+#: apps/wiki/templates/wiki/revision.html:15 apps/wiki/templates/wiki/select_locale.html:12 apps/wiki/templates/wiki/translate.html:16
 #, fuzzy
 msgid "You are here:"
 msgstr "あなたは使用禁止になっています"
@@ -168,9 +170,9 @@ msgstr ""
 msgid "Get emailed when reviews are waiting"
 msgstr ""
 
-#: apps/dashboards/templates/dashboards/localization.html:5
+#: apps/dashboards/templates/dashboards/localization.html:5 apps/dashboards/views.py:70
 #, fuzzy
-msgid "Localizer Dashboard"
+msgid "Localization Dashboard"
 msgstr "個人用ダッシュボード"
 
 #: apps/dashboards/templates/dashboards/localization.html:29
@@ -219,11 +221,6 @@ msgstr "ここはあなたにぴったりのサイトです！ 検索ボック�
 msgid "The template \"%s\" does not exist."
 msgstr "%s というテンプレートは登録されていません"
 
-#: apps/dashboards/views.py:70
-#, fuzzy
-msgid "Localization Dashboard"
-msgstr "個人用ダッシュボード"
-
 #: apps/flagit/models.py:23
 #, fuzzy
 msgid "Spam or other unrelated content"
@@ -255,13 +252,13 @@ msgstr ""
 msgid "Rejected"
 msgstr "reject"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:3 apps/wiki/forms.py:170
-#: apps/wiki/templates/wiki/includes/revision_diff.html:41
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:3 apps/kbforums/forms.py:28 apps/kbforums/forms.py:50
+#: apps/kbforums/forms.py:76 apps/wiki/forms.py:172 apps/wiki/templates/wiki/includes/revision_diff.html:41
 #, fuzzy
 msgid "Content:"
 msgstr "コメント:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:3 apps/flagit/templates/flagit/includes/flagged_question.html:5 apps/wiki/templates/wiki/revision.html:23
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:3 apps/flagit/templates/flagit/includes/flagged_question.html:5 apps/wiki/templates/wiki/revision.html:28
 #, fuzzy
 msgid "Created:"
 msgstr "作成日"
@@ -291,7 +288,7 @@ msgstr "変更"
 msgid "Delete"
 msgstr "削除"
 
-#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/wiki/forms.py:64 apps/wiki/templates/wiki/translate.html:57
+#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:61 apps/wiki/templates/wiki/translate.html:57
 msgid "Title:"
 msgstr "タイトル:"
 
@@ -342,77 +339,149 @@ msgstr ""
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr ""
 
-#: apps/gallery/forms.py:13 apps/kbforums/forms.py:9 apps/wiki/forms.py:17
+#: apps/gallery/forms.py:14 apps/kbforums/forms.py:9 apps/wiki/forms.py:18
 msgid "Please provide a title."
 msgstr ""
 
-#: apps/gallery/forms.py:14 apps/wiki/forms.py:18
+#: apps/gallery/forms.py:15 apps/wiki/forms.py:19
 msgid "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr ""
 
-#: apps/gallery/forms.py:17 apps/kbforums/forms.py:13
+#: apps/gallery/forms.py:18 apps/kbforums/forms.py:13
 msgid "Please keep the length of your title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr ""
 
-#: apps/gallery/forms.py:20
+#: apps/gallery/forms.py:21
 #, fuzzy
 msgid "Please provide a description."
 msgstr "ページ説明を使う"
 
-#: apps/gallery/forms.py:21
+#: apps/gallery/forms.py:22
 msgid "Please keep the length of your description to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr ""
 
-#: apps/gallery/forms.py:24 apps/upload/forms.py:6
+#: apps/gallery/forms.py:25 apps/upload/forms.py:7
 msgid "You have not selected an image to upload."
 msgstr ""
 
-#: apps/gallery/forms.py:25 apps/upload/forms.py:7
+#: apps/gallery/forms.py:26 apps/upload/forms.py:8
 msgid "Please keep the length of your image filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr ""
 
-#: apps/gallery/forms.py:28
+#: apps/gallery/forms.py:29
 msgid "Please keep the length of your webm filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr ""
 
-#: apps/gallery/forms.py:31
+#: apps/gallery/forms.py:32
 msgid "Please keep the length of your ogv filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr ""
 
-#: apps/gallery/forms.py:34
+#: apps/gallery/forms.py:35
 msgid "Please keep the length of your flv filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr ""
 
-#: apps/gallery/forms.py:37
+#: apps/gallery/forms.py:38
 msgid "The video has no files associated with it. You must upload one of the following extensions: webm, ogv, flv."
 msgstr ""
 
-#: apps/gallery/forms.py:40
+#: apps/gallery/forms.py:41
 #, fuzzy
 msgid "Please select a different title."
 msgstr "参加するチャンネルを選んでください"
 
-#: apps/gallery/forms.py:42
+#: apps/gallery/forms.py:43
 msgid "Include this in wiki syntax with [[%(type)s:title]]"
 msgstr ""
 
-#: apps/gallery/forms.py:43
+#: apps/gallery/forms.py:44
 #, fuzzy
 msgid "Provide a brief description of this media."
 msgstr "このWikiのプラグインの一覧を提供する"
 
-#: apps/gallery/forms.py:59 apps/gallery/forms.py:136
+#: apps/gallery/forms.py:65 apps/gallery/forms.py:145 apps/gallery/templates/gallery/confirm_media_delete.html:25
 #, fuzzy
 msgid "Locale"
 msgstr "現地時間帯"
 
-#: apps/gallery/forms.py:64 apps/gallery/forms.py:141 apps/kbforums/templates/kbforums/confirm_thread_delete.html:14 apps/kbforums/templates/kbforums/threads.html:32
+#: apps/gallery/forms.py:70 apps/gallery/forms.py:150 apps/gallery/templates/gallery/confirm_media_delete.html:23 apps/kbforums/templates/kbforums/confirm_thread_delete.html:14
+#: apps/kbforums/templates/kbforums/threads.html:32
 msgid "Title"
 msgstr "タイトル"
 
-#: apps/gallery/forms.py:71 apps/gallery/forms.py:148
+#: apps/gallery/forms.py:77 apps/gallery/forms.py:157 apps/gallery/templates/gallery/confirm_media_delete.html:27
 msgid "Description"
 msgstr "説明"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:4
+#, fuzzy
+msgid "Delete image"
+msgstr "次のページを削除:"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:5
+#, fuzzy
+msgid "Are you sure you want to delete this image?"
+msgstr "本当にこのメニューを削除してもよろしいですか？"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:6
+msgid "You are about to permanently delete this image. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
+msgstr ""
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:7
+#, fuzzy
+msgid "Delete image | {t} | Media Gallery"
+msgstr "ファイルギャラリー"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:9
+#, fuzzy
+msgid "Delete video"
+msgstr "次のページを削除:"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:10
+#, fuzzy
+msgid "Are you sure you want to delete this video?"
+msgstr "本当にこのメニューを削除してもよろしいですか？"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:11
+msgid "You are about to permanently delete this video. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
+msgstr ""
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:12
+#, fuzzy
+msgid "Delete video | {t} | Media Gallery"
+msgstr "ファイルギャラリー"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:29 apps/kbforums/templates/kbforums/confirm_thread_delete.html:16 apps/wiki/templates/wiki/confirm_revision_delete.html:16
+msgid "Creator"
+msgstr "作成者"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:31 apps/kbforums/templates/kbforums/confirm_post_delete.html:16 apps/kbforums/templates/kbforums/confirm_thread_delete.html:18
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:18
+msgid "Date"
+msgstr "日付"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:34 apps/gallery/templates/gallery/confirm_media_delete.html:51
+#, fuzzy
+msgid "Available formats"
+msgstr "可用スケール"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:48 apps/gallery/templates/gallery/includes/upload_media_form.html:18 apps/gallery/templates/gallery/includes/upload_media_form.html:67
+msgid "Video"
+msgstr ""
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:53 apps/gallery/templates/gallery/includes/upload_media_form.html:17 apps/gallery/templates/gallery/includes/upload_media_form.html:27
+msgid "Image"
+msgstr "画像"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:61 apps/gallery/templates/gallery/edit_media.html:32 apps/gallery/templates/gallery/includes/upload_media_form.html:36
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:58 apps/gallery/templates/gallery/includes/upload_media_form.html:84
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:88 apps/gallery/templates/gallery/includes/upload_media_form.html:92
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:122 apps/gallery/templates/gallery/includes/upload_media_form.html:139 apps/kbforums/templates/kbforums/confirm_post_delete.html:26
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:28 apps/kbforums/templates/kbforums/edit_post.html:28 apps/kbforums/templates/kbforums/edit_thread.html:25
+#: apps/kbforums/templates/kbforums/new_thread.html:33 apps/notifications/templates/notifications/remove.html:15 apps/users/templates/users/confirm_avatar_delete.html:23
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:29 apps/wiki/templates/wiki/includes/review_form.html:38 apps/wiki/templates/wiki/includes/review_form.html:57
+#: apps/wiki/templates/wiki/includes/submit_revision_modal.html:22
+msgid "Cancel"
+msgstr "取消"
 
 #: apps/gallery/templates/gallery/edit_media.html:5
 #, fuzzy
@@ -448,16 +517,6 @@ msgstr "ファイルギャラリー"
 #, fuzzy
 msgid "Media Gallery"
 msgstr "ギャラリーの変更"
-
-#: apps/gallery/templates/gallery/edit_media.html:32 apps/gallery/templates/gallery/includes/upload_media_form.html:36 apps/gallery/templates/gallery/includes/upload_media_form.html:58
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:84 apps/gallery/templates/gallery/includes/upload_media_form.html:88
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:92 apps/gallery/templates/gallery/includes/upload_media_form.html:122
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:139 apps/kbforums/templates/kbforums/confirm_post_delete.html:26 apps/kbforums/templates/kbforums/confirm_thread_delete.html:28
-#: apps/kbforums/templates/kbforums/edit_post.html:28 apps/kbforums/templates/kbforums/edit_thread.html:25 apps/kbforums/templates/kbforums/new_thread.html:33
-#: apps/notifications/templates/notifications/remove.html:15 apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_revision_delete.html:29
-#: apps/wiki/templates/wiki/includes/review_form.html:38 apps/wiki/templates/wiki/includes/review_form.html:57 apps/wiki/templates/wiki/includes/submit_revision_modal.html:22
-msgid "Cancel"
-msgstr "取消"
 
 #: apps/gallery/templates/gallery/gallery.html:18 apps/gallery/templates/gallery/includes/upload_media_form.html:12
 #, fuzzy
@@ -508,14 +567,6 @@ msgstr ""
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:15 apps/upload/templates/upload/attachments.html:56
 msgid "Upload"
 msgstr "アップロード"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:17 apps/gallery/templates/gallery/includes/upload_media_form.html:27
-msgid "Image"
-msgstr "画像"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:18 apps/gallery/templates/gallery/includes/upload_media_form.html:67
-msgid "Video"
-msgstr ""
 
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:29
 msgid "Select an image file to upload."
@@ -685,10 +736,6 @@ msgstr "このコンタクトを削除しても宜しいですか？"
 msgid "Author"
 msgstr "投稿者"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:16 apps/kbforums/templates/kbforums/confirm_thread_delete.html:18 apps/wiki/templates/wiki/confirm_revision_delete.html:18
-msgid "Date"
-msgstr "日付"
-
 #: apps/kbforums/templates/kbforums/confirm_post_delete.html:18 apps/wiki/templates/wiki/confirm_revision_delete.html:20
 #, fuzzy
 msgid "Content"
@@ -712,10 +759,6 @@ msgstr "選択アイテムを削除"
 #, fuzzy
 msgid "Are you sure you want to delete this thread?"
 msgstr "このトラッカーを削除しても宜しいですか？"
-
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:16 apps/wiki/templates/wiki/confirm_revision_delete.html:16
-msgid "Creator"
-msgstr "作成者"
 
 #: apps/kbforums/templates/kbforums/confirm_thread_delete.html:20
 #, fuzzy
@@ -809,7 +852,7 @@ msgstr ""
 msgid "Sticky"
 msgstr "sticky"
 
-#: apps/kbforums/templates/kbforums/posts.html:15 apps/search/__init__.py:43 apps/search/views.py:183
+#: apps/kbforums/templates/kbforums/posts.html:15 apps/search/__init__.py:43 apps/search/forms.py:129
 msgid "Locked"
 msgstr "locked"
 
@@ -991,6 +1034,75 @@ msgstr "作成日"
 msgid "Number of answers"
 msgstr "行番号"
 
+#: apps/search/forms.py:62
+msgid "tag1, tag2"
+msgstr ""
+
+#: apps/search/forms.py:65 apps/search/forms.py:148
+msgid "Tags"
+msgstr "タグ"
+
+#: apps/search/forms.py:67
+msgid "Language"
+msgstr "言語"
+
+#: apps/search/forms.py:72
+msgid "Category"
+msgstr "カテゴリ"
+
+#: apps/search/forms.py:76
+#, fuzzy
+msgid "Firefox version"
+msgstr "Firefox のバージョン: "
+
+#: apps/search/forms.py:83
+#, fuzzy
+msgid "Operating System"
+msgstr "投票システム"
+
+#: apps/search/forms.py:91
+msgid "Created"
+msgstr "作成日"
+
+#: apps/search/forms.py:97
+msgid "Last updated"
+msgstr "最終更新日時"
+
+#: apps/search/forms.py:100
+msgid "username"
+msgstr "ユーザ名"
+
+#: apps/search/forms.py:107 apps/search/forms.py:125
+msgid "Sort results by"
+msgstr "結果の並び順"
+
+#: apps/search/forms.py:111
+#, fuzzy
+msgid "Thread type"
+msgstr "スレッド形式"
+
+#: apps/search/forms.py:117
+msgid "Search in forum"
+msgstr "対象のフォーラム"
+
+#: apps/search/forms.py:133
+msgid "Solved"
+msgstr "解決済み"
+
+#: apps/search/forms.py:137
+#, fuzzy
+msgid "Has answers"
+msgstr "回答あり"
+
+#: apps/search/forms.py:141
+#, fuzzy
+msgid "Has helpful answers"
+msgstr "回答あり"
+
+#: apps/search/forms.py:145
+msgid "Votes"
+msgstr "投票"
+
 #: apps/search/templates/search/basic-form.html:4
 msgid "Enter your terms in the form below and click <strong>Search</strong>"
 msgstr ""
@@ -1000,7 +1112,7 @@ msgctxt "button"
 msgid "Search"
 msgstr ""
 
-#: apps/search/templates/search/down.html:7 apps/search/views.py:474
+#: apps/search/templates/search/down.html:7 apps/search/views.py:295
 msgid "Search Unavailable"
 msgstr ""
 
@@ -1096,135 +1208,66 @@ msgstr[0] ""
 msgid "Can't find what you're looking for? <a href='{0}'>Ask a support question instead!</a>"
 msgstr ""
 
-#: apps/search/views.py:118
-msgid "tag1, tag2"
-msgstr ""
-
-#: apps/search/views.py:120 apps/search/views.py:207
-msgid "Tags"
-msgstr "タグ"
-
-#: apps/search/views.py:124
-msgid "Language"
-msgstr "言語"
-
-#: apps/search/views.py:130
-msgid "Category"
-msgstr "カテゴリ"
-
-#: apps/search/views.py:134
-#, fuzzy
-msgid "Firefox version"
-msgstr "Firefox のバージョン: "
-
-#: apps/search/views.py:140
-#, fuzzy
-msgid "Operating System"
-msgstr "投票システム"
-
-#: apps/search/views.py:146
-msgid "Created"
-msgstr "作成日"
-
-#: apps/search/views.py:151
-msgid "Last updated"
-msgstr "最終更新日時"
-
-#: apps/search/views.py:155
-msgid "username"
-msgstr "ユーザ名"
-
-#: apps/search/views.py:162 apps/search/views.py:179
-msgid "Sort results by"
-msgstr "結果の並び順"
-
-#: apps/search/views.py:166
-#, fuzzy
-msgid "Thread type"
-msgstr "スレッド形式"
-
-#: apps/search/views.py:171
-msgid "Search in forum"
-msgstr "対象のフォーラム"
-
-#: apps/search/views.py:188
-msgid "Solved"
-msgstr "解決済み"
-
-#: apps/search/views.py:193
-#, fuzzy
-msgid "Has answers"
-msgstr "回答あり"
-
-#: apps/search/views.py:198
-#, fuzzy
-msgid "Has helpful answers"
-msgstr "回答あり"
-
-#: apps/search/views.py:203
-msgid "Votes"
-msgstr "投票"
-
-#: apps/search/views.py:221
+#: apps/search/views.py:46
 msgid "Invalid callback function."
 msgstr ""
 
-#: apps/search/views.py:262
+#: apps/search/views.py:87
 msgid "Invalid search data."
 msgstr ""
 
-#: apps/search/views.py:535
+#: apps/search/views.py:356
 msgid "No pages matched the search criteria"
 msgstr "検索条件に一致したページはありませんでした"
 
-#: apps/sumo/form_fields.py:63
+#: apps/sumo/form_fields.py:104
 msgid "Ensure this value has at least %(limit_value)s characters (it has %(show_value)s)."
 msgstr ""
 
-#: apps/sumo/form_fields.py:68
+#: apps/sumo/form_fields.py:109
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr ""
 
-#: apps/sumo/helpers.py:132 templates/global/menu_links.html:44 templates/layout/menu_links.html:7 templates/layout/sidebar.html:3
+#: apps/sumo/helpers.py:138 templates/global/menu_links.html:44 templates/layout/menu_links.html:7 templates/layout/sidebar.html:3
 msgid "Firefox Support"
 msgstr "Firefox サポート"
 
-#: apps/sumo/helpers.py:181
+#: apps/sumo/helpers.py:187
 #, fuzzy
 msgid "Today at %s"
 msgstr "今日"
 
-#: apps/sumo/helpers.py:253
+#: apps/sumo/helpers.py:259
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] ""
 
-#: apps/sumo/helpers.py:255
+#: apps/sumo/helpers.py:261
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] ""
 
-#: apps/sumo/helpers.py:257
+#: apps/sumo/helpers.py:263
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] ""
 
-#: apps/sumo/helpers.py:259
+#: apps/sumo/helpers.py:265
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] ""
 
-#: apps/sumo/helpers.py:261
+#: apps/sumo/helpers.py:267
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] ""
 
-#: apps/sumo/helpers.py:263
+#: apps/sumo/helpers.py:269
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] ""
 
-#: apps/sumo/helpers.py:265
+#: apps/sumo/helpers.py:271
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] ""
@@ -1287,6 +1330,10 @@ msgstr ""
 msgid "Add"
 msgstr "追加"
 
+#: apps/upload/forms.py:11
+msgid "Please upload an image with one of the following extensions: jpg, jpeg, png, gif."
+msgstr ""
+
 #: apps/upload/templates/upload/attachments.html:36
 #, fuzzy
 msgid "Uploaded images:"
@@ -1330,98 +1377,107 @@ msgstr "不正または不明なメールアドレスです"
 msgid "The requested image could not be found."
 msgstr "ページはありません"
 
-#: apps/users/forms.py:13
+#: apps/users/forms.py:17
 msgid "Username may contain only letters, numbers and @/./+/-/_ characters."
 msgstr ""
 
-#: apps/users/forms.py:15
+#: apps/users/forms.py:19
 #, fuzzy
 msgid "Username is required."
 msgstr "ユーザ・ログインが必要です"
 
-#: apps/users/forms.py:16
+#: apps/users/forms.py:20
 msgid "Username is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr ""
 
-#: apps/users/forms.py:18
+#: apps/users/forms.py:22
 msgid "Username is too long (%(show_value)s characters). It must be %(limit_value)s characters or less."
 msgstr ""
 
-#: apps/users/forms.py:20
+#: apps/users/forms.py:24
 #, fuzzy
 msgid "Email address is required."
 msgstr "メール・アドレスが必要です"
 
-#: apps/users/forms.py:21
+#: apps/users/forms.py:25
 msgid "Email address is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr ""
 
-#: apps/users/forms.py:23
+#: apps/users/forms.py:27
 msgid "Email address is too long (%(show_value)s characters). It must be %(limit_value)s characters or less."
 msgstr ""
 
-#: apps/users/forms.py:25
+#: apps/users/forms.py:29
 #, fuzzy
 msgid "Password is required."
 msgstr "パスワードが必要です"
 
-#: apps/users/forms.py:26
+#: apps/users/forms.py:30
 #, fuzzy
 msgid "Please enter your password twice."
 msgstr "パスワードを変更する"
 
-#: apps/users/forms.py:38 apps/users/templates/users/login.html:17 templates/layout/login.html:8
+#: apps/users/forms.py:42 apps/users/templates/users/login.html:17 templates/layout/login.html:8
 #, fuzzy
 msgid "Username:"
 msgstr "ユーザ名"
 
-#: apps/users/forms.py:40
+#: apps/users/forms.py:44
 msgid "Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only."
 msgstr ""
 
-#: apps/users/forms.py:46
+#: apps/users/forms.py:50 apps/users/forms.py:179
 #, fuzzy
 msgid "Email address:"
 msgstr "メールアドレス"
 
-#: apps/users/forms.py:50 apps/users/templates/users/login.html:21 templates/layout/login.html:11
+#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:27 apps/users/templates/users/login.html:21 templates/layout/login.html:11
 #, fuzzy
 msgid "Password:"
 msgstr "パスワード"
 
-#: apps/users/forms.py:54
+#: apps/users/forms.py:58
 #, fuzzy
 msgid "Repeat password:"
 msgstr "パスワード(再入力)"
 
-#: apps/users/forms.py:58
+#: apps/users/forms.py:62
 msgid "Enter the same password as above, for verification."
 msgstr ""
 
-#: apps/users/forms.py:71
+#: apps/users/forms.py:75
 #, fuzzy
 msgid "Passwords must match."
 msgstr "パスワードが一致されない"
 
-#: apps/users/forms.py:78
+#: apps/users/forms.py:82
 #, fuzzy
 msgid "A user with that email address already exists."
 msgstr "同じ題名と内容の投稿が既に存在します。"
 
-#: apps/users/forms.py:93
+#: apps/users/forms.py:97
 msgid "Password"
 msgstr "パスワード"
 
-#: apps/users/forms.py:109
+#: apps/users/forms.py:113
 msgid "Please enter a correct username and password. Note that both fields are case-sensitive."
 msgstr ""
 
-#: apps/users/forms.py:112
+#: apps/users/forms.py:116
 msgid "This account is inactive."
 msgstr ""
 
-#: apps/users/forms.py:117
+#: apps/users/forms.py:121
 msgid "Your Web browser doesn't appear to have cookies enabled. Cookies are required for logging in."
+msgstr ""
+
+#: apps/users/forms.py:141
+#, fuzzy
+msgid "Please enter a twitter.com URL."
+msgstr "パスワードを変更する"
+
+#: apps/users/forms.py:147
+msgid "Please enter a facebook.com URL."
 msgstr ""
 
 #: apps/users/models.py:29
@@ -1437,7 +1493,7 @@ msgstr "表示"
 msgid "Make my email public"
 msgstr ""
 
-#: apps/users/models.py:35 apps/users/templates/users/edit_profile.html:13
+#: apps/users/models.py:35
 msgid "Avatar"
 msgstr "アバター"
 
@@ -1480,26 +1536,26 @@ msgstr ""
 msgid "Livechat ID"
 msgstr ""
 
-#: apps/users/models.py:125
+#: apps/users/models.py:166 apps/users/models.py:200
 #, fuzzy
 msgid "Please confirm your email address"
 msgstr "%s のメールアドレスを確認"
 
-#: apps/users/models.py:186
+#: apps/users/models.py:216 apps/users/models.py:258
 msgid "user"
 msgstr "ユーザ"
 
-#: apps/users/models.py:187
+#: apps/users/models.py:217 apps/users/models.py:259
 #, fuzzy
 msgid "activation key"
 msgstr "無効にする"
 
-#: apps/users/models.py:192
+#: apps/users/models.py:223
 #, fuzzy
 msgid "registration profile"
 msgstr "登録コード"
 
-#: apps/users/models.py:193
+#: apps/users/models.py:224
 #, fuzzy
 msgid "registration profiles"
 msgstr "登録コード"
@@ -1519,6 +1575,37 @@ msgstr ""
 
 #: apps/users/templates/users/activate.html:21
 msgid "We could not activate your account. Please make sure that you have clicked the correct link in your email or typed in the correct address."
+msgstr ""
+
+#: apps/users/templates/users/change_email.html:4
+#, fuzzy
+msgid "Change email address"
+msgstr "メールアドレス"
+
+#: apps/users/templates/users/change_email.html:14
+msgid "You will need to confirm the newly set email address to complete the change."
+msgstr ""
+
+#: apps/users/templates/users/change_email.html:24
+#, fuzzy
+msgid "Change my email"
+msgstr "メールアドレスを変更する"
+
+#: apps/users/templates/users/change_email_complete.html:4
+msgid "Email changed for user {username}"
+msgstr ""
+
+#: apps/users/templates/users/change_email_complete.html:11
+msgid "Your email has been changed from {old_email} to {new_email}."
+msgstr ""
+
+#: apps/users/templates/users/change_email_done.html:4
+#, fuzzy
+msgid "Confirmation email sent"
+msgstr "確認が必要です"
+
+#: apps/users/templates/users/change_email_done.html:11
+msgid "We've sent a confirmation to %(new_email)s. Please follow the link in the confirmation to change your account's email."
 msgstr ""
 
 #: apps/users/templates/users/confirm_avatar_delete.html:3 apps/users/templates/users/confirm_avatar_delete.html:24
@@ -1551,6 +1638,10 @@ msgstr "アップロード"
 msgid "Edit Profile"
 msgstr "記事の編集"
 
+#: apps/users/templates/users/edit_profile.html:13
+msgid "Avatar:"
+msgstr "アバター:"
+
 #: apps/users/templates/users/edit_profile.html:17
 #, fuzzy
 msgctxt "avatar"
@@ -1563,7 +1654,17 @@ msgctxt "avatar"
 msgid "Delete"
 msgstr "削除"
 
-#: apps/users/templates/users/edit_profile.html:29 apps/users/templates/users/pw_reset_confirm.html:27
+#: apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/edit_profile.html:33 apps/wiki/templates/wiki/translate.html:23
+#, fuzzy
+msgid "Change"
+msgstr "変更された"
+
+#: apps/users/templates/users/edit_profile.html:31
+#, fuzzy
+msgid "Email:"
+msgstr "メールアドレス"
+
+#: apps/users/templates/users/edit_profile.html:38 apps/users/templates/users/pw_reset_confirm.html:27
 msgid "Update"
 msgstr "更新"
 
@@ -1587,6 +1688,10 @@ msgstr ""
 #, fuzzy
 msgid "I forgot my password."
 msgstr "パスワードを再発行する"
+
+#: apps/users/templates/users/login.html:35
+msgid "My account is inactive."
+msgstr ""
 
 #: apps/users/templates/users/profile.html:3
 #, fuzzy
@@ -1631,8 +1736,27 @@ msgstr "ニックネームが指定されてない"
 
 #: apps/users/templates/users/profile.html:62
 #, fuzzy
-msgid "This user has not mady any contact information public."
+msgid "This user has not made any contact information public."
 msgstr "ユーザはこの情報を非公開に設定しています"
+
+#: apps/users/templates/users/pw_change.html:4
+#, fuzzy
+msgid "Change Password"
+msgstr "パスワードを変更する"
+
+#: apps/users/templates/users/pw_change.html:18
+#, fuzzy
+msgid "Change my password"
+msgstr "パスワードを変更する"
+
+#: apps/users/templates/users/pw_change_complete.html:3
+#, fuzzy
+msgid "Password changed successful!"
+msgstr "正常にアップロードできませんでした"
+
+#: apps/users/templates/users/pw_change_complete.html:9
+msgid "You have successfully changed your password. <a href=\"%(profile_url)s\">Go back to edit profile page.</a>"
+msgstr ""
 
 #: apps/users/templates/users/pw_reset_complete.html:3
 msgid "Password successfully reset."
@@ -1675,10 +1799,9 @@ msgstr "メールアドレス"
 msgid "Send password reset link"
 msgstr "メールでパスワードを知らせる"
 
-#: apps/users/templates/users/pw_reset_sent.html:10
-#, fuzzy
-msgid "The password reset link was sent to your email address."
-msgstr "ニュースレターは{$sent}件のアドレスに送信されました。"
+#: apps/users/templates/users/pw_reset_sent.html:11
+msgid "We've sent an email to any account using this address. Please follow the link in the email to reset your password."
+msgstr ""
 
 #: apps/users/templates/users/register.html:4 apps/users/templates/users/register.html:9 apps/users/templates/users/register.html:19 templates/layout/login.html:24
 msgid "Register"
@@ -1699,123 +1822,156 @@ msgstr "Tikiwiki をご利用いただきありがとうございます"
 msgid "Before you can log in, you need to confirm your email address. We've sent you an email with a confirmation link in it. Just click the link and you'll be ready to go!"
 msgstr ""
 
-#: apps/wiki/forms.py:20
+#: apps/users/templates/users/resend_confirmation.html:4
+#, fuzzy
+msgid "Resend confirmation email"
+msgstr "通知メールを追加"
+
+#: apps/users/templates/users/resend_confirmation.html:14
+msgid "To activate your account you must first confirm your email address. Enter your email and submit the form below, and we will resend the confirmation email."
+msgstr ""
+
+#: apps/users/templates/users/resend_confirmation.html:24
+#, fuzzy
+msgid "Resend account confirmation email."
+msgstr "アカウント情報"
+
+#: apps/users/templates/users/resend_confirmation_done.html:4
+#, fuzzy
+msgid "Confirmation email sent successfully."
+msgstr "アカウントが有効化されました。"
+
+#: apps/users/templates/users/resend_confirmation_done.html:10
+msgid ""
+"Before you can log in, you need to confirm your email address. We've sent a new confirmation email to any account using <strong>%(email)s</strong>. To confirm the email address, just follow the "
+"link in the email."
+msgstr ""
+
+#: apps/wiki/forms.py:21
 msgid "Please keep the length of the title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:23
+#: apps/wiki/forms.py:24
 msgid "Please provide a slug."
 msgstr ""
 
-#: apps/wiki/forms.py:24
+#: apps/wiki/forms.py:25
 #, fuzzy
 msgid "The slug provided is not valid."
 msgstr "サンドボックスは無効化されています"
 
-#: apps/wiki/forms.py:25
+#: apps/wiki/forms.py:26
 msgid "The slug is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:27
+#: apps/wiki/forms.py:28
 msgid "Please keep the length of the slug to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:30
+#: apps/wiki/forms.py:31
 msgid "Please provide a summary."
 msgstr ""
 
-#: apps/wiki/forms.py:31
+#: apps/wiki/forms.py:32
 msgid "The summary is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:33
+#: apps/wiki/forms.py:34
 msgid "Please keep the length of the summary to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:36
+#: apps/wiki/forms.py:37
 #, fuzzy
 msgid "Please provide content."
 msgstr "目次"
 
-#: apps/wiki/forms.py:37
+#: apps/wiki/forms.py:38
 msgid "The content is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:39
+#: apps/wiki/forms.py:40
 msgid "Please keep the length of the content to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:42
+#: apps/wiki/forms.py:43
 msgid "Please keep the length of the comment to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:56
-#, fuzzy
-msgid "Topics:"
-msgstr "トピック"
-
-#: apps/wiki/forms.py:58
-msgid "Popular articles in each topic are displayed on the front page"
-msgstr ""
-
-#: apps/wiki/forms.py:65
+#: apps/wiki/forms.py:62
 #, fuzzy
 msgid "Title of article"
 msgstr "記事の名前"
 
-#: apps/wiki/forms.py:71 apps/wiki/templates/wiki/translate.html:67
+#: apps/wiki/forms.py:68 apps/wiki/templates/wiki/translate.html:67
 msgid "Slug:"
 msgstr ""
 
-#: apps/wiki/forms.py:72
+#: apps/wiki/forms.py:69
 #, fuzzy
 msgid "Article URL"
 msgstr "記事の RSS"
 
-#: apps/wiki/forms.py:78
+#: apps/wiki/forms.py:75
 #, fuzzy
 msgid "Firefox version:"
 msgstr "Firefox のバージョン: "
 
-#: apps/wiki/forms.py:87
+#: apps/wiki/forms.py:84
 #, fuzzy
 msgid "Operating systems:"
 msgstr "投票システム"
 
-#: apps/wiki/forms.py:97
+#: apps/wiki/forms.py:94
 #, fuzzy
 msgid "Allow translations:"
 msgstr "翻訳"
 
-#: apps/wiki/forms.py:104
+#: apps/wiki/forms.py:101
 #, fuzzy
 msgid "Category:"
 msgstr "カテゴリ"
 
-#: apps/wiki/forms.py:105
+#: apps/wiki/forms.py:102
 #, fuzzy
 msgid "Type of article"
 msgstr "記事の名前"
 
-#: apps/wiki/forms.py:150 apps/wiki/templates/wiki/includes/revision_diff.html:27 apps/wiki/templates/wiki/review_revision.html:30 apps/wiki/templates/wiki/translate.html:98
+#: apps/wiki/forms.py:104
+#, fuzzy
+msgid "Topics:"
+msgstr "トピック"
+
+#: apps/wiki/forms.py:105
+msgid "Popular articles in each topic are displayed on the front page"
+msgstr ""
+
+#: apps/wiki/forms.py:152 apps/wiki/templates/wiki/includes/revision_diff.html:27 apps/wiki/templates/wiki/review_revision.html:45 apps/wiki/templates/wiki/translate.html:98
 #, fuzzy
 msgid "Keywords:"
 msgstr "キーワード"
 
-#: apps/wiki/forms.py:151
+#: apps/wiki/forms.py:153
 #, fuzzy
 msgid "Affects search results"
 msgstr "検索結果"
 
-#: apps/wiki/forms.py:155 apps/wiki/templates/wiki/translate.html:108
+#: apps/wiki/forms.py:157 apps/wiki/templates/wiki/translate.html:108
 #, fuzzy
 msgid "Search result summary:"
 msgstr "検索結果"
 
-#: apps/wiki/forms.py:156
+#: apps/wiki/forms.py:158
 #, fuzzy
 msgid "Only displayed on search results page"
 msgstr "件の記事に次の語句が含まれています:"
+
+#: apps/wiki/forms.py:179 apps/wiki/forms.py:207
+msgid "Comment:"
+msgstr "コメント:"
+
+#: apps/wiki/forms.py:211
+msgid "Significance:"
+msgstr ""
 
 #: apps/wiki/models.py:28
 msgid "Minor details like punctuation and spelling errors"
@@ -1860,16 +2016,16 @@ msgstr "テンプレート"
 msgid "Desktop:"
 msgstr ""
 
-#: apps/wiki/models.py:60
+#: apps/wiki/models.py:60 apps/wiki/models.py:61
 msgid "Firefox 3.5-3.6"
 msgstr ""
 
-#: apps/wiki/models.py:62 apps/wiki/models.py:67
+#: apps/wiki/models.py:62 apps/wiki/models.py:63 apps/wiki/models.py:67
 #, fuzzy
 msgid "Firefox 4"
 msgstr "Firefox ヘルプ"
 
-#: apps/wiki/models.py:64
+#: apps/wiki/models.py:64 apps/wiki/models.py:65
 #, fuzzy
 msgid "Firefox 3.0"
 msgstr "Firefox ヘルプ"
@@ -1878,7 +2034,7 @@ msgstr "Firefox ヘルプ"
 msgid "Mobile:"
 msgstr ""
 
-#: apps/wiki/models.py:67
+#: apps/wiki/models.py:68
 msgid "Firefox 4 for Mobile"
 msgstr ""
 
@@ -1928,39 +2084,39 @@ msgstr "カテゴリを選択"
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr ""
 
-#: apps/wiki/parser.py:321
+#: apps/wiki/parser.py:323
 msgid "[Recursive inclusion of \"%s\"]"
 msgstr ""
 
-#: apps/wiki/parser.py:375
+#: apps/wiki/parser.py:377
 #, fuzzy
 msgid "The document \"%s\" does not exist."
 msgstr "編集対象ページが存在しません"
 
-#: apps/wiki/parser.py:403
+#: apps/wiki/parser.py:405
 msgid "The template \"%s\" does not exist or has no approved revision."
 msgstr ""
 
-#: apps/wiki/parser.py:435
+#: apps/wiki/parser.py:437
 #, fuzzy
 msgid "The video \"%s\" does not exist."
 msgstr "編集対象ページが存在しません"
 
-#: apps/wiki/tasks.py:36
+#: apps/wiki/tasks.py:37
 #, fuzzy
 msgid "Your revision has been approved: %s"
 msgstr "あなたの投稿は受け付けられませんでした"
 
-#: apps/wiki/tasks.py:38
+#: apps/wiki/tasks.py:39
 msgid "Your revision has been rejected: %s"
 msgstr ""
 
-#: apps/wiki/tasks.py:58
+#: apps/wiki/tasks.py:59
 #, fuzzy
 msgid "%(title)s is ready for review (%(creator)s)"
 msgstr "レビュー待ちの記事"
 
-#: apps/wiki/tasks.py:71
+#: apps/wiki/tasks.py:72
 msgid "%(title)s was edited by %(creator)s"
 msgstr ""
 
@@ -2178,21 +2334,21 @@ msgstr ""
 msgid "Search Firefox Help"
 msgstr "Firefox ヘルプを検索してください"
 
-#: apps/wiki/templates/wiki/includes/common_macros.html:23
+#: apps/wiki/templates/wiki/includes/common_macros.html:25
 msgid "Welcome, <span class=\"user\">{user}</span>."
 msgstr ""
 
-#: apps/wiki/templates/wiki/includes/common_macros.html:25
+#: apps/wiki/templates/wiki/includes/common_macros.html:27
 #, fuzzy
 msgid "Profile"
 msgstr "トップ・ファイル"
 
-#: apps/wiki/templates/wiki/includes/common_macros.html:27 templates/layout/sidebar.html:9
+#: apps/wiki/templates/wiki/includes/common_macros.html:29 templates/layout/sidebar.html:9
 #, fuzzy
 msgid "Sign Out"
 msgstr "ログアウト"
 
-#: apps/wiki/templates/wiki/includes/common_macros.html:31
+#: apps/wiki/templates/wiki/includes/common_macros.html:33
 msgid "Want to contribute?<br /> <a href=\"%(login_url)s\">Sign In</a> or <a href=\"%(register_url)s\">Register</a>"
 msgstr ""
 
@@ -2274,7 +2430,7 @@ msgstr "バージョン数"
 msgid "Revision {id} by {user} on {date}"
 msgstr ""
 
-#: apps/wiki/templates/wiki/includes/revision_diff.html:34 apps/wiki/templates/wiki/review_revision.html:34
+#: apps/wiki/templates/wiki/includes/revision_diff.html:34 apps/wiki/templates/wiki/review_revision.html:49
 #, fuzzy
 msgid "Search results summary:"
 msgstr "検索結果"
@@ -2431,25 +2587,40 @@ msgstr ""
 msgid "This revision was already reviewed by {user} on {date}."
 msgstr ""
 
-#: apps/wiki/templates/wiki/review_revision.html:25
+#: apps/wiki/templates/wiki/review_revision.html:26
+#, fuzzy
+msgid "Submitted Revision Changes"
+msgstr "翻訳を編集"
+
+#: apps/wiki/templates/wiki/review_revision.html:27
 #, fuzzy
 msgid "Current public revision:"
 msgstr "現在オン"
 
-#: apps/wiki/templates/wiki/review_revision.html:25
+#: apps/wiki/templates/wiki/review_revision.html:27
 #, fuzzy
 msgid "Submitted revision:"
 msgstr "提案"
 
-#: apps/wiki/templates/wiki/review_revision.html:29
+#: apps/wiki/templates/wiki/review_revision.html:32 apps/wiki/templates/wiki/revision.html:64
+#, fuzzy
+msgid "Revision Source"
+msgstr "バージョン数"
+
+#: apps/wiki/templates/wiki/review_revision.html:38 apps/wiki/templates/wiki/review_translation.html:76 apps/wiki/templates/wiki/revision.html:70
+#, fuzzy
+msgid "Revision Content"
+msgstr "メニューのプレビュー"
+
+#: apps/wiki/templates/wiki/review_revision.html:44
 msgid "This document does not have a current revision."
 msgstr ""
 
-#: apps/wiki/templates/wiki/review_revision.html:38
+#: apps/wiki/templates/wiki/review_revision.html:53
 msgid "Revision source:"
 msgstr ""
 
-#: apps/wiki/templates/wiki/review_revision.html:42
+#: apps/wiki/templates/wiki/review_revision.html:57
 msgid "Revision rendered html:"
 msgstr ""
 
@@ -2504,27 +2675,27 @@ msgstr ""
 msgid "Submitted {locale} translation:"
 msgstr "翻訳を追加"
 
-#: apps/wiki/templates/wiki/review_translation.html:76
+#: apps/wiki/templates/wiki/review_translation.html:82
 #, fuzzy
 msgid "This document does not have a current translation."
 msgstr "このページはまだ"
 
-#: apps/wiki/templates/wiki/review_translation.html:77
+#: apps/wiki/templates/wiki/review_translation.html:83
 #, fuzzy
 msgid "Translation keywords:"
 msgstr "訳文"
 
-#: apps/wiki/templates/wiki/review_translation.html:81
+#: apps/wiki/templates/wiki/review_translation.html:87
 #, fuzzy
 msgid "Translation search results summary:"
 msgstr "件の記事に次の語句が含まれています:"
 
-#: apps/wiki/templates/wiki/review_translation.html:85
+#: apps/wiki/templates/wiki/review_translation.html:91
 #, fuzzy
 msgid "Translation source:"
 msgstr "訳文"
 
-#: apps/wiki/templates/wiki/review_translation.html:89
+#: apps/wiki/templates/wiki/review_translation.html:95
 #, fuzzy
 msgid "Translation rendered html:"
 msgstr "このページは翻訳作業中です"
@@ -2534,38 +2705,53 @@ msgstr "このページは翻訳作業中です"
 msgid "Revision {n} | {t} | {c}"
 msgstr ""
 
-#: apps/wiki/templates/wiki/revision.html:9 apps/wiki/templates/wiki/revision.html:20
+#: apps/wiki/templates/wiki/revision.html:9
 msgid "Revision {num}"
 msgstr ""
 
-#: apps/wiki/templates/wiki/revision.html:27
+#: apps/wiki/templates/wiki/revision.html:20
+#, fuzzy
+msgid "Revision Information"
+msgstr "個人情報"
+
+#: apps/wiki/templates/wiki/revision.html:24
+#, fuzzy
+msgid "Revision id:"
+msgstr "バージョン数"
+
+#: apps/wiki/templates/wiki/revision.html:32
 #, fuzzy
 msgid "Creator:"
 msgstr "作成者"
 
-#: apps/wiki/templates/wiki/revision.html:31
+#: apps/wiki/templates/wiki/revision.html:36
 #, fuzzy
 msgid "Is reviewed?"
 msgstr "要レビュー"
 
-#: apps/wiki/templates/wiki/revision.html:36
+#: apps/wiki/templates/wiki/revision.html:41
 #, fuzzy
 msgid "Reviewed:"
 msgstr "表示回数"
 
-#: apps/wiki/templates/wiki/revision.html:40
+#: apps/wiki/templates/wiki/revision.html:45
 #, fuzzy
 msgid "Reviewed by:"
 msgstr "表示回数"
 
-#: apps/wiki/templates/wiki/revision.html:44
+#: apps/wiki/templates/wiki/revision.html:49
 #, fuzzy
 msgid "Is approved?"
 msgstr "承諾"
 
-#: apps/wiki/templates/wiki/revision.html:48
+#: apps/wiki/templates/wiki/revision.html:53
 msgid "Is current revision?"
 msgstr ""
+
+#: apps/wiki/templates/wiki/revision.html:58
+#, fuzzy
+msgid "Edit article based on this revision"
+msgstr "レビュー待ちの記事"
 
 #: apps/wiki/templates/wiki/select_locale.html:4
 msgid "Select Locale | {document}"
@@ -2593,11 +2779,6 @@ msgstr "訳文"
 #: apps/wiki/templates/wiki/translate.html:22
 msgid "Translating article to {locale}"
 msgstr ""
-
-#: apps/wiki/templates/wiki/translate.html:23
-#, fuzzy
-msgid "Change"
-msgstr "変更された"
 
 #: apps/wiki/templates/wiki/translate.html:26
 #, fuzzy
@@ -2645,20 +2826,20 @@ msgstr "ページの翻訳"
 msgid "Cancel Changes"
 msgstr "最後の変更"
 
-#: apps/wiki/views.py:382
+#: apps/wiki/views.py:386
 #, fuzzy
 msgid "You cannot translate this document."
 msgstr "このアンケート調査に答えられるのは一度だけです"
 
-#: apps/wiki/views.py:539
+#: apps/wiki/views.py:548
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr ""
 
-#: apps/wiki/views.py:541
+#: apps/wiki/views.py:550
 msgid "Sorry to hear that. Perhaps one of the solutions below can help."
 msgstr ""
 
-#: apps/wiki/views.py:551
+#: apps/wiki/views.py:560
 #, fuzzy
 msgid "You already voted on this Article."
 msgstr "この種類のファイルをアップロードすることはできません。"
@@ -2705,8 +2886,8 @@ msgstr "mozilla.com に移動"
 
 #: templates/global/header.html:8
 #, fuzzy
-msgid "visit {0}"
-msgstr "閲覧数"
+msgid "visit mozilla.org"
+msgstr "mozilla.com に移動"
 
 #: templates/global/menu_links.html:2 templates/global/menu_links.html:4 templates/global/menu_links.html:16
 msgid "Features"
@@ -2903,74 +3084,78 @@ msgid "My Profile"
 msgstr "トップ・ファイル"
 
 #, fuzzy
-#~ msgid "Are you sure you want to delete this {type}?"
-#~ msgstr "本当にこのメニューを削除してもよろしいですか？"
-
-#, fuzzy
-#~ msgid "Available formats"
-#~ msgstr "可用スケール"
-
-#, fuzzy
-#~ msgid "Edit {type}"
-#~ msgstr "アイテム編集"
-
-#, fuzzy
-#~ msgid "Save {type}"
-#~ msgstr "すべての種類"
-
-#, fuzzy
-#~ msgid "Delete this {type}"
-#~ msgstr "次のページを削除:"
-
-#, fuzzy
-#~ msgid "Edit this {type}"
-#~ msgstr "このページを編集"
-
-#, fuzzy
-#~ msgid "Creating Articles"
-#~ msgstr "記事を送る"
-
-#, fuzzy
-#~ msgid "Helping in the Forum"
-#~ msgstr "このフォーラムのトピック"
-
-#, fuzzy
-#~ msgid "Download Stats"
-#~ msgstr "ダウンロード数"
-
-#, fuzzy
-#~ msgid "visit mozilla"
-#~ msgstr "mozilla.com に移動"
-
-#~ msgid "Support Forum"
-#~ msgstr "サポートフォーラム"
-
-#~ msgid "Other Firefox Support"
-#~ msgstr "他の Firefox サポートサイト"
-
-#~ msgid "How to Contribute"
-#~ msgstr "協力するには"
-
-#~ msgid "My Account"
-#~ msgstr "アカウント"
-
-#~ msgid "Log Out"
-#~ msgstr "ログアウト"
-
-#~ msgid "Post status"
-#~ msgstr "トピックの状態"
-
-#~ msgid "Forum"
-#~ msgstr "フォーラム"
-
-#, fuzzy
-#~ msgid "Topics in {locale}:"
-#~ msgstr "トピックのみ"
+#~ msgid "Category in {locale}:"
+#~ msgstr "カテゴリ:"
 
 #, fuzzy
 #~ msgid "There is no approved revision to translate from."
 #~ msgstr "公開承認済みバージョンを表示"
 
 #, fuzzy
-#~ msgid "Category in {locale}:"
-#~ msgstr "カテゴリ:"
+#~ msgid "Topics in {locale}:"
+#~ msgstr "トピックのみ"
+
+#~ msgid "Forum"
+#~ msgstr "フォーラム"
+
+#~ msgid "Post status"
+#~ msgstr "トピックの状態"
+
+#~ msgid "Log Out"
+#~ msgstr "ログアウト"
+
+#~ msgid "My Account"
+#~ msgstr "アカウント"
+
+#~ msgid "How to Contribute"
+#~ msgstr "協力するには"
+
+#~ msgid "Other Firefox Support"
+#~ msgstr "他の Firefox サポートサイト"
+
+#~ msgid "Support Forum"
+#~ msgstr "サポートフォーラム"
+
+#, fuzzy
+#~ msgid "Download Stats"
+#~ msgstr "ダウンロード数"
+
+#, fuzzy
+#~ msgid "Helping in the Forum"
+#~ msgstr "このフォーラムのトピック"
+
+#, fuzzy
+#~ msgid "Creating Articles"
+#~ msgstr "記事を送る"
+
+#, fuzzy
+#~ msgid "Edit this {type}"
+#~ msgstr "このページを編集"
+
+#, fuzzy
+#~ msgid "Delete this {type}"
+#~ msgstr "次のページを削除:"
+
+#, fuzzy
+#~ msgid "Save {type}"
+#~ msgstr "すべての種類"
+
+#, fuzzy
+#~ msgid "Edit {type}"
+#~ msgstr "アイテム編集"
+
+#, fuzzy
+#~ msgid "Are you sure you want to delete this {type}?"
+#~ msgstr "本当にこのメニューを削除してもよろしいですか？"
+
+#, fuzzy
+#~ msgid "visit {0}"
+#~ msgstr "閲覧数"
+
+#, fuzzy
+#~ msgid "The password reset link was sent to your email address."
+#~ msgstr "ニュースレターは{$sent}件のアドレスに送信されました。"
+
+#, fuzzy
+#~ msgid "Localizer Dashboard"
+#~ msgstr "個人用ダッシュボード"

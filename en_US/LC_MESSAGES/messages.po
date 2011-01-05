@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-10 05:37-0700\n"
+"POT-Creation-Date: 2011-01-05 08:35-0700\n"
 "PO-Revision-Date: 2010-04-26 18:00-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: English\n"
@@ -18,10 +18,11 @@ msgstr "Join our Army of Awesome"
 
 #: apps/customercare/templates/customercare/landing.html:116 apps/gallery/templates/gallery/search.html:7 apps/search/templates/search/down.html:3 apps/search/templates/search/form.html:3
 #: apps/search/templates/search/results.html:3 apps/search/templates/search/results.html:19 apps/wiki/templates/wiki/includes/common_macros.html:15
+#: apps/wiki/templates/wiki/includes/common_macros.html:16
 msgid "Search"
 msgstr "Search"
 
-#: apps/customercare/templates/customercare/tweets.html:12
+#: apps/customercare/templates/customercare/tweets.html:14
 msgid "{0} and {1} other replied"
 msgid_plural "{0} and {1} others replied"
 msgstr[0] "{0} and {1} other replied"
@@ -106,10 +107,11 @@ msgid "Contributor Dashboard"
 msgstr "Contributor Dashboard"
 
 #: apps/dashboards/templates/dashboards/contributors.html:10 apps/dashboards/templates/dashboards/kb_detail.html:9 apps/dashboards/templates/dashboards/localization.html:10
-#: apps/gallery/templates/gallery/edit_media.html:20 apps/gallery/templates/gallery/gallery.html:12 apps/gallery/templates/gallery/media.html:23 apps/gallery/templates/gallery/search.html:12
-#: apps/wiki/templates/wiki/compare_revisions.html:13 apps/wiki/templates/wiki/confirm_revision_delete.html:12 apps/wiki/templates/wiki/document_revisions.html:12
-#: apps/wiki/templates/wiki/edit_document.html:17 apps/wiki/templates/wiki/list_documents.html:15 apps/wiki/templates/wiki/new_document.html:15 apps/wiki/templates/wiki/review_revision.html:12
-#: apps/wiki/templates/wiki/review_translation.html:12 apps/wiki/templates/wiki/revision.html:15 apps/wiki/templates/wiki/select_locale.html:12 apps/wiki/templates/wiki/translate.html:16
+#: apps/gallery/templates/gallery/confirm_media_delete.html:18 apps/gallery/templates/gallery/edit_media.html:20 apps/gallery/templates/gallery/gallery.html:12
+#: apps/gallery/templates/gallery/media.html:23 apps/gallery/templates/gallery/search.html:12 apps/wiki/templates/wiki/compare_revisions.html:13
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:12 apps/wiki/templates/wiki/document_revisions.html:12 apps/wiki/templates/wiki/edit_document.html:17
+#: apps/wiki/templates/wiki/list_documents.html:15 apps/wiki/templates/wiki/new_document.html:15 apps/wiki/templates/wiki/review_revision.html:12 apps/wiki/templates/wiki/review_translation.html:12
+#: apps/wiki/templates/wiki/revision.html:15 apps/wiki/templates/wiki/select_locale.html:12 apps/wiki/templates/wiki/translate.html:16
 msgid "You are here:"
 msgstr "You are here:"
 
@@ -155,9 +157,9 @@ msgstr "Turn off emails."
 msgid "Get emailed when reviews are waiting"
 msgstr "Get emailed when reviews are waiting"
 
-#: apps/dashboards/templates/dashboards/localization.html:5
-msgid "Localizer Dashboard"
-msgstr "Localizer Dashboard"
+#: apps/dashboards/templates/dashboards/localization.html:5 apps/dashboards/views.py:70
+msgid "Localization Dashboard"
+msgstr "Localization Dashboard"
 
 #: apps/dashboards/templates/dashboards/localization.html:29
 msgid "Overview"
@@ -199,10 +201,6 @@ msgstr ""
 msgid "The template \"%s\" does not exist."
 msgstr "The template \"%s\" does not exist."
 
-#: apps/dashboards/views.py:70
-msgid "Localization Dashboard"
-msgstr "Localization Dashboard"
-
 #: apps/flagit/models.py:23
 msgid "Spam or other unrelated content"
 msgstr "Spam or other unrelated content"
@@ -232,12 +230,12 @@ msgstr "Accepted and Fixed"
 msgid "Rejected"
 msgstr "Rejected"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:3 apps/wiki/forms.py:170
-#: apps/wiki/templates/wiki/includes/revision_diff.html:41
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:3 apps/kbforums/forms.py:28 apps/kbforums/forms.py:50
+#: apps/kbforums/forms.py:76 apps/wiki/forms.py:172 apps/wiki/templates/wiki/includes/revision_diff.html:41
 msgid "Content:"
 msgstr "Content:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:3 apps/flagit/templates/flagit/includes/flagged_question.html:5 apps/wiki/templates/wiki/revision.html:23
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:3 apps/flagit/templates/flagit/includes/flagged_question.html:5 apps/wiki/templates/wiki/revision.html:28
 #, fuzzy
 msgid "Created:"
 msgstr "Created"
@@ -266,7 +264,7 @@ msgstr "Edit"
 msgid "Delete"
 msgstr "Delete"
 
-#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/wiki/forms.py:64 apps/wiki/templates/wiki/translate.html:57
+#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:61 apps/wiki/templates/wiki/translate.html:57
 msgid "Title:"
 msgstr "Title:"
 
@@ -314,74 +312,149 @@ msgstr "You already flagged this content."
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr "You have flagged this content. A moderator will review your submission shortly."
 
-#: apps/gallery/forms.py:13 apps/kbforums/forms.py:9 apps/wiki/forms.py:17
+#: apps/gallery/forms.py:14 apps/kbforums/forms.py:9 apps/wiki/forms.py:18
 msgid "Please provide a title."
 msgstr "Please provide a title."
 
-#: apps/gallery/forms.py:14 apps/wiki/forms.py:18
+#: apps/gallery/forms.py:15 apps/wiki/forms.py:19
 msgid "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 
-#: apps/gallery/forms.py:17 apps/kbforums/forms.py:13
+#: apps/gallery/forms.py:18 apps/kbforums/forms.py:13
 msgid "Please keep the length of your title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Please keep the length of your title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 
-#: apps/gallery/forms.py:20
+#: apps/gallery/forms.py:21
 msgid "Please provide a description."
 msgstr "Please provide a description."
 
-#: apps/gallery/forms.py:21
+#: apps/gallery/forms.py:22
 msgid "Please keep the length of your description to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Please keep the length of your description to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 
-#: apps/gallery/forms.py:24 apps/upload/forms.py:6
+#: apps/gallery/forms.py:25 apps/upload/forms.py:7
 msgid "You have not selected an image to upload."
 msgstr "You have not selected an image to upload."
 
-#: apps/gallery/forms.py:25 apps/upload/forms.py:7
+#: apps/gallery/forms.py:26 apps/upload/forms.py:8
 msgid "Please keep the length of your image filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Please keep the length of your image filename to %(max)s characters or less. It is currently %(length)s characters."
 
-#: apps/gallery/forms.py:28
+#: apps/gallery/forms.py:29
 msgid "Please keep the length of your webm filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Please keep the length of your webm filename to %(max)s characters or less. It is currently %(length)s characters."
 
-#: apps/gallery/forms.py:31
+#: apps/gallery/forms.py:32
 msgid "Please keep the length of your ogv filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Please keep the length of your ogv filename to %(max)s characters or less. It is currently %(length)s characters."
 
-#: apps/gallery/forms.py:34
+#: apps/gallery/forms.py:35
 msgid "Please keep the length of your flv filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Please keep the length of your flv filename to %(max)s characters or less. It is currently %(length)s characters."
 
-#: apps/gallery/forms.py:37
+#: apps/gallery/forms.py:38
 msgid "The video has no files associated with it. You must upload one of the following extensions: webm, ogv, flv."
 msgstr "The video has no files associated with it. You must upload one of the following extensions: webm, ogv, flv."
 
-#: apps/gallery/forms.py:40
+#: apps/gallery/forms.py:41
 msgid "Please select a different title."
 msgstr "Please select a different title."
 
-#: apps/gallery/forms.py:42
+#: apps/gallery/forms.py:43
 #, fuzzy
 msgid "Include this in wiki syntax with [[%(type)s:title]]"
 msgstr "Include this in wiki syntax with [[{type}:title]]"
 
-#: apps/gallery/forms.py:43
+#: apps/gallery/forms.py:44
 msgid "Provide a brief description of this media."
 msgstr "Provide a brief description of this media."
 
-#: apps/gallery/forms.py:59 apps/gallery/forms.py:136
+#: apps/gallery/forms.py:65 apps/gallery/forms.py:145 apps/gallery/templates/gallery/confirm_media_delete.html:25
 msgid "Locale"
 msgstr "Locale"
 
-#: apps/gallery/forms.py:64 apps/gallery/forms.py:141 apps/kbforums/templates/kbforums/confirm_thread_delete.html:14 apps/kbforums/templates/kbforums/threads.html:32
+#: apps/gallery/forms.py:70 apps/gallery/forms.py:150 apps/gallery/templates/gallery/confirm_media_delete.html:23 apps/kbforums/templates/kbforums/confirm_thread_delete.html:14
+#: apps/kbforums/templates/kbforums/threads.html:32
 msgid "Title"
 msgstr "Title"
 
-#: apps/gallery/forms.py:71 apps/gallery/forms.py:148
+#: apps/gallery/forms.py:77 apps/gallery/forms.py:157 apps/gallery/templates/gallery/confirm_media_delete.html:27
 msgid "Description"
 msgstr "Description"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:4
+#, fuzzy
+msgid "Delete image"
+msgstr "Delete this image"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:5
+#, fuzzy
+msgid "Are you sure you want to delete this image?"
+msgstr "Are you sure you want to delete this thread?"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:6
+#, fuzzy
+msgid "You are about to permanently delete this image. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
+msgstr "You are about to permanently delete this thread. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:7
+#, fuzzy
+msgid "Delete image | {t} | Media Gallery"
+msgstr "Edit {type} | {t} | Media Gallery"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:9
+#, fuzzy
+msgid "Delete video"
+msgstr "Delete this image"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:10
+#, fuzzy
+msgid "Are you sure you want to delete this video?"
+msgstr "Are you sure you want to delete this thread?"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:11
+#, fuzzy
+msgid "You are about to permanently delete this video. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
+msgstr "You are about to permanently delete this thread. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:12
+#, fuzzy
+msgid "Delete video | {t} | Media Gallery"
+msgstr "Edit {type} | {t} | Media Gallery"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:29 apps/kbforums/templates/kbforums/confirm_thread_delete.html:16 apps/wiki/templates/wiki/confirm_revision_delete.html:16
+#, fuzzy
+msgid "Creator"
+msgstr "Created"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:31 apps/kbforums/templates/kbforums/confirm_post_delete.html:16 apps/kbforums/templates/kbforums/confirm_thread_delete.html:18
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:18
+msgid "Date"
+msgstr "Date"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:34 apps/gallery/templates/gallery/confirm_media_delete.html:51
+msgid "Available formats"
+msgstr "Available formats"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:48 apps/gallery/templates/gallery/includes/upload_media_form.html:18 apps/gallery/templates/gallery/includes/upload_media_form.html:67
+#, fuzzy
+msgid "Video"
+msgstr "Videos"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:53 apps/gallery/templates/gallery/includes/upload_media_form.html:17 apps/gallery/templates/gallery/includes/upload_media_form.html:27
+msgid "Image"
+msgstr "Image"
+
+#: apps/gallery/templates/gallery/confirm_media_delete.html:61 apps/gallery/templates/gallery/edit_media.html:32 apps/gallery/templates/gallery/includes/upload_media_form.html:36
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:58 apps/gallery/templates/gallery/includes/upload_media_form.html:84
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:88 apps/gallery/templates/gallery/includes/upload_media_form.html:92
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:122 apps/gallery/templates/gallery/includes/upload_media_form.html:139 apps/kbforums/templates/kbforums/confirm_post_delete.html:26
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:28 apps/kbforums/templates/kbforums/edit_post.html:28 apps/kbforums/templates/kbforums/edit_thread.html:25
+#: apps/kbforums/templates/kbforums/new_thread.html:33 apps/notifications/templates/notifications/remove.html:15 apps/users/templates/users/confirm_avatar_delete.html:23
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:29 apps/wiki/templates/wiki/includes/review_form.html:38 apps/wiki/templates/wiki/includes/review_form.html:57
+#: apps/wiki/templates/wiki/includes/submit_revision_modal.html:22
+msgid "Cancel"
+msgstr "Cancel"
 
 #: apps/gallery/templates/gallery/edit_media.html:5
 #, fuzzy
@@ -416,16 +489,6 @@ msgstr "Edit {type} | {t} | Media Gallery"
 #: apps/gallery/templates/gallery/media.html:9 apps/gallery/templates/gallery/search.html:6 apps/gallery/templates/gallery/search.html:15 apps/wiki/templates/wiki/includes/sidebar_modules.html:58
 msgid "Media Gallery"
 msgstr "Media Gallery"
-
-#: apps/gallery/templates/gallery/edit_media.html:32 apps/gallery/templates/gallery/includes/upload_media_form.html:36 apps/gallery/templates/gallery/includes/upload_media_form.html:58
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:84 apps/gallery/templates/gallery/includes/upload_media_form.html:88
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:92 apps/gallery/templates/gallery/includes/upload_media_form.html:122
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:139 apps/kbforums/templates/kbforums/confirm_post_delete.html:26 apps/kbforums/templates/kbforums/confirm_thread_delete.html:28
-#: apps/kbforums/templates/kbforums/edit_post.html:28 apps/kbforums/templates/kbforums/edit_thread.html:25 apps/kbforums/templates/kbforums/new_thread.html:33
-#: apps/notifications/templates/notifications/remove.html:15 apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_revision_delete.html:29
-#: apps/wiki/templates/wiki/includes/review_form.html:38 apps/wiki/templates/wiki/includes/review_form.html:57 apps/wiki/templates/wiki/includes/submit_revision_modal.html:22
-msgid "Cancel"
-msgstr "Cancel"
 
 #: apps/gallery/templates/gallery/gallery.html:18 apps/gallery/templates/gallery/includes/upload_media_form.html:12
 msgid "Upload a New Media File"
@@ -473,15 +536,6 @@ msgstr "Continue Uploading Media"
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:15 apps/upload/templates/upload/attachments.html:56
 msgid "Upload"
 msgstr "Upload"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:17 apps/gallery/templates/gallery/includes/upload_media_form.html:27
-msgid "Image"
-msgstr "Image"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:18 apps/gallery/templates/gallery/includes/upload_media_form.html:67
-#, fuzzy
-msgid "Video"
-msgstr "Videos"
 
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:29
 msgid "Select an image file to upload."
@@ -639,10 +693,6 @@ msgstr "Are you sure you want to delete this post?"
 msgid "Author"
 msgstr "Author"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:16 apps/kbforums/templates/kbforums/confirm_thread_delete.html:18 apps/wiki/templates/wiki/confirm_revision_delete.html:18
-msgid "Date"
-msgstr "Date"
-
 #: apps/kbforums/templates/kbforums/confirm_post_delete.html:18 apps/wiki/templates/wiki/confirm_revision_delete.html:20
 msgid "Content"
 msgstr "Content"
@@ -663,11 +713,6 @@ msgstr "Delete Thread"
 #: apps/kbforums/templates/kbforums/confirm_thread_delete.html:12
 msgid "Are you sure you want to delete this thread?"
 msgstr "Are you sure you want to delete this thread?"
-
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:16 apps/wiki/templates/wiki/confirm_revision_delete.html:16
-#, fuzzy
-msgid "Creator"
-msgstr "Created"
 
 #: apps/kbforums/templates/kbforums/confirm_thread_delete.html:20
 msgid "Number of Replies"
@@ -750,7 +795,7 @@ msgstr "{t} | {d} Discussion | Knowledge Base"
 msgid "Sticky"
 msgstr "Sticky"
 
-#: apps/kbforums/templates/kbforums/posts.html:15 apps/search/__init__.py:43 apps/search/views.py:183
+#: apps/kbforums/templates/kbforums/posts.html:15 apps/search/__init__.py:43 apps/search/forms.py:129
 msgid "Locked"
 msgstr "Locked"
 
@@ -918,6 +963,71 @@ msgstr "Question date"
 msgid "Number of answers"
 msgstr "Number of answers"
 
+#: apps/search/forms.py:62
+msgid "tag1, tag2"
+msgstr "tag1, tag2"
+
+#: apps/search/forms.py:65 apps/search/forms.py:148
+msgid "Tags"
+msgstr "Tags"
+
+#: apps/search/forms.py:67
+msgid "Language"
+msgstr "Language"
+
+#: apps/search/forms.py:72
+msgid "Category"
+msgstr "Category"
+
+#: apps/search/forms.py:76
+#, fuzzy
+msgid "Firefox version"
+msgstr "Firefox"
+
+#: apps/search/forms.py:83
+msgid "Operating System"
+msgstr "Operating System"
+
+#: apps/search/forms.py:91
+msgid "Created"
+msgstr "Created"
+
+#: apps/search/forms.py:97
+msgid "Last updated"
+msgstr "Last updated"
+
+#: apps/search/forms.py:100
+msgid "username"
+msgstr "username"
+
+#: apps/search/forms.py:107 apps/search/forms.py:125
+msgid "Sort results by"
+msgstr "Sort results by"
+
+#: apps/search/forms.py:111
+msgid "Thread type"
+msgstr "Thread type"
+
+#: apps/search/forms.py:117
+msgid "Search in forum"
+msgstr "Search in forum"
+
+#: apps/search/forms.py:133
+msgid "Solved"
+msgstr "Solved"
+
+#: apps/search/forms.py:137
+msgid "Has answers"
+msgstr "Has answers"
+
+#: apps/search/forms.py:141
+msgid "Has helpful answers"
+msgstr "Has helpful answers"
+
+#: apps/search/forms.py:145
+msgid "Votes"
+msgstr "Votes"
+
 #: apps/search/templates/search/basic-form.html:4
 msgid "Enter your terms in the form below and click <strong>Search</strong>"
 msgstr "Enter your terms in the form below and click <strong>Search</strong>"
@@ -927,7 +1037,7 @@ msgctxt "button"
 msgid "Search"
 msgstr "Search"
 
-#: apps/search/templates/search/down.html:7 apps/search/views.py:474
+#: apps/search/templates/search/down.html:7 apps/search/views.py:295
 msgid "Search Unavailable"
 msgstr "Search Unavailable"
 
@@ -1024,136 +1134,71 @@ msgstr[1] "Found <strong>{n}</strong> results for <strong>{q}</strong> in <stron
 msgid "Can't find what you're looking for? <a href='{0}'>Ask a support question instead!</a>"
 msgstr "Can't find what you're looking for? <a href='{0}'>Ask a support question instead!</a>"
 
-#: apps/search/views.py:118
-msgid "tag1, tag2"
-msgstr "tag1, tag2"
-
-#: apps/search/views.py:120 apps/search/views.py:207
-msgid "Tags"
-msgstr "Tags"
-
-#: apps/search/views.py:124
-msgid "Language"
-msgstr "Language"
-
-#: apps/search/views.py:130
-msgid "Category"
-msgstr "Category"
-
-#: apps/search/views.py:134
-#, fuzzy
-msgid "Firefox version"
-msgstr "Firefox"
-
-#: apps/search/views.py:140
-msgid "Operating System"
-msgstr "Operating System"
-
-#: apps/search/views.py:146
-msgid "Created"
-msgstr "Created"
-
-#: apps/search/views.py:151
-msgid "Last updated"
-msgstr "Last updated"
-
-#: apps/search/views.py:155
-msgid "username"
-msgstr "username"
-
-#: apps/search/views.py:162 apps/search/views.py:179
-msgid "Sort results by"
-msgstr "Sort results by"
-
-#: apps/search/views.py:166
-msgid "Thread type"
-msgstr "Thread type"
-
-#: apps/search/views.py:171
-msgid "Search in forum"
-msgstr "Search in forum"
-
-#: apps/search/views.py:188
-msgid "Solved"
-msgstr "Solved"
-
-#: apps/search/views.py:193
-msgid "Has answers"
-msgstr "Has answers"
-
-#: apps/search/views.py:198
-msgid "Has helpful answers"
-msgstr "Has helpful answers"
-
-#: apps/search/views.py:203
-msgid "Votes"
-msgstr "Votes"
-
-#: apps/search/views.py:221
+#: apps/search/views.py:46
 msgid "Invalid callback function."
 msgstr "Invalid callback function."
 
-#: apps/search/views.py:262
+#: apps/search/views.py:87
 msgid "Invalid search data."
 msgstr "Invalid search data."
 
-#: apps/search/views.py:535
+#: apps/search/views.py:356
 msgid "No pages matched the search criteria"
 msgstr "No pages matched the search criteria"
 
-#: apps/sumo/form_fields.py:63
+#: apps/sumo/form_fields.py:104
 msgid "Ensure this value has at least %(limit_value)s characters (it has %(show_value)s)."
 msgstr "Ensure this value has at least %(limit_value)s characters (it has %(show_value)s)."
 
-#: apps/sumo/form_fields.py:68
+#: apps/sumo/form_fields.py:109
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 
-#: apps/sumo/helpers.py:132 templates/global/menu_links.html:44 templates/layout/menu_links.html:7 templates/layout/sidebar.html:3
+#: apps/sumo/helpers.py:138 templates/global/menu_links.html:44 templates/layout/menu_links.html:7 templates/layout/sidebar.html:3
 msgid "Firefox Support"
 msgstr "Firefox Support"
 
-#: apps/sumo/helpers.py:181
+#: apps/sumo/helpers.py:187
 msgid "Today at %s"
 msgstr "Today at %s"
 
-#: apps/sumo/helpers.py:253
+#: apps/sumo/helpers.py:259
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "%(number)d year ago"
 msgstr[1] "%(number)d years ago"
 
-#: apps/sumo/helpers.py:255
+#: apps/sumo/helpers.py:261
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "%(number)d month ago"
 msgstr[1] "%(number)d months ago"
 
-#: apps/sumo/helpers.py:257
+#: apps/sumo/helpers.py:263
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "%(number)d week ago"
 msgstr[1] "%(number)d weeks ago"
 
-#: apps/sumo/helpers.py:259
+#: apps/sumo/helpers.py:265
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "%(number)d day ago"
 msgstr[1] "%(number)d days ago"
 
-#: apps/sumo/helpers.py:261
+#: apps/sumo/helpers.py:267
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "%(number)d hour ago"
 msgstr[1] "%(number)d hours ago"
 
-#: apps/sumo/helpers.py:263
+#: apps/sumo/helpers.py:269
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "%(number)d minute ago"
 msgstr[1] "%(number)d minutes ago"
 
-#: apps/sumo/helpers.py:265
+#: apps/sumo/helpers.py:271
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] "%(number)d second ago"
@@ -1212,6 +1257,11 @@ msgstr "Some features on this page are temporarily disabled while we perform web
 msgid "Add"
 msgstr "Add-ons"
 
+#: apps/upload/forms.py:11
+#, fuzzy
+msgid "Please upload an image with one of the following extensions: jpg, jpeg, png, gif."
+msgstr "The video has no files associated with it. You must upload one of the following extensions: webm, ogv, flv."
+
 #: apps/upload/templates/upload/attachments.html:36
 msgid "Uploaded images:"
 msgstr "Uploaded images:"
@@ -1248,95 +1298,104 @@ msgstr "Invalid or no image received."
 msgid "The requested image could not be found."
 msgstr "The requested image could not be found."
 
-#: apps/users/forms.py:13
+#: apps/users/forms.py:17
 msgid "Username may contain only letters, numbers and @/./+/-/_ characters."
 msgstr "Username may contain only letters, numbers and @/./+/-/_ characters."
 
-#: apps/users/forms.py:15
+#: apps/users/forms.py:19
 msgid "Username is required."
 msgstr "Username is required."
 
-#: apps/users/forms.py:16
+#: apps/users/forms.py:20
 #, fuzzy
 msgid "Username is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "The content is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 
-#: apps/users/forms.py:18
+#: apps/users/forms.py:22
 #, fuzzy
 msgid "Username is too long (%(show_value)s characters). It must be %(limit_value)s characters or less."
 msgstr "The content is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 
-#: apps/users/forms.py:20
+#: apps/users/forms.py:24
 msgid "Email address is required."
 msgstr "Email address is required."
 
-#: apps/users/forms.py:21
+#: apps/users/forms.py:25
 #, fuzzy
 msgid "Email address is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 
-#: apps/users/forms.py:23
+#: apps/users/forms.py:27
 #, fuzzy
 msgid "Email address is too long (%(show_value)s characters). It must be %(limit_value)s characters or less."
 msgstr "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 
-#: apps/users/forms.py:25
+#: apps/users/forms.py:29
 msgid "Password is required."
 msgstr "Password is required."
 
-#: apps/users/forms.py:26
+#: apps/users/forms.py:30
 msgid "Please enter your password twice."
 msgstr "Please enter your password twice."
 
-#: apps/users/forms.py:38 apps/users/templates/users/login.html:17 templates/layout/login.html:8
+#: apps/users/forms.py:42 apps/users/templates/users/login.html:17 templates/layout/login.html:8
 msgid "Username:"
 msgstr "Username:"
 
-#: apps/users/forms.py:40
+#: apps/users/forms.py:44
 msgid "Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only."
 msgstr "Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only."
 
-#: apps/users/forms.py:46
+#: apps/users/forms.py:50 apps/users/forms.py:179
 msgid "Email address:"
 msgstr "Email address:"
 
-#: apps/users/forms.py:50 apps/users/templates/users/login.html:21 templates/layout/login.html:11
+#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:27 apps/users/templates/users/login.html:21 templates/layout/login.html:11
 msgid "Password:"
 msgstr "Password:"
 
-#: apps/users/forms.py:54
+#: apps/users/forms.py:58
 #, fuzzy
 msgid "Repeat password:"
 msgstr "Password:"
 
-#: apps/users/forms.py:58
+#: apps/users/forms.py:62
 msgid "Enter the same password as above, for verification."
 msgstr "Enter the same password as above, for verification."
 
-#: apps/users/forms.py:71
+#: apps/users/forms.py:75
 msgid "Passwords must match."
 msgstr "Passwords must match."
 
-#: apps/users/forms.py:78
+#: apps/users/forms.py:82
 msgid "A user with that email address already exists."
 msgstr "A user with that email address already exists."
 
-#: apps/users/forms.py:93
+#: apps/users/forms.py:97
 #, fuzzy
 msgid "Password"
 msgstr "Password:"
 
-#: apps/users/forms.py:109
+#: apps/users/forms.py:113
 msgid "Please enter a correct username and password. Note that both fields are case-sensitive."
 msgstr "Please enter a correct username and password. Note that both fields are case-sensitive."
 
-#: apps/users/forms.py:112
+#: apps/users/forms.py:116
 msgid "This account is inactive."
 msgstr "This account is inactive."
 
-#: apps/users/forms.py:117
+#: apps/users/forms.py:121
 msgid "Your Web browser doesn't appear to have cookies enabled. Cookies are required for logging in."
 msgstr "Your Web browser doesn't appear to have cookies enabled. Cookies are required for logging in."
+
+#: apps/users/forms.py:141
+#, fuzzy
+msgid "Please enter a twitter.com URL."
+msgstr "Please enter your password twice."
+
+#: apps/users/forms.py:147
+msgid "Please enter a facebook.com URL."
+msgstr "Please enter a facebook.com URL."
 
 #: apps/users/models.py:29
 #, fuzzy
@@ -1351,7 +1410,7 @@ msgstr "Display name"
 msgid "Make my email public"
 msgstr "Make my email public"
 
-#: apps/users/models.py:35 apps/users/templates/users/edit_profile.html:13
+#: apps/users/models.py:35
 msgid "Avatar"
 msgstr "Avatar"
 
@@ -1391,24 +1450,24 @@ msgstr "City"
 msgid "Livechat ID"
 msgstr "Livechat ID"
 
-#: apps/users/models.py:125
+#: apps/users/models.py:166 apps/users/models.py:200
 msgid "Please confirm your email address"
 msgstr "Please confirm your email address"
 
-#: apps/users/models.py:186
+#: apps/users/models.py:216 apps/users/models.py:258
 #, fuzzy
 msgid "user"
 msgstr "username"
 
-#: apps/users/models.py:187
+#: apps/users/models.py:217 apps/users/models.py:259
 msgid "activation key"
 msgstr "activation key"
 
-#: apps/users/models.py:192
+#: apps/users/models.py:223
 msgid "registration profile"
 msgstr "registration profile"
 
-#: apps/users/models.py:193
+#: apps/users/models.py:224
 #, fuzzy
 msgid "registration profiles"
 msgstr "Creating Articles"
@@ -1428,6 +1487,36 @@ msgstr "You've confirmed your email address and activated your account! You can 
 #: apps/users/templates/users/activate.html:21
 msgid "We could not activate your account. Please make sure that you have clicked the correct link in your email or typed in the correct address."
 msgstr "We could not activate your account. Please make sure that you have clicked the correct link in your email or typed in the correct address."
+
+#: apps/users/templates/users/change_email.html:4
+#, fuzzy
+msgid "Change email address"
+msgstr "Email address:"
+
+#: apps/users/templates/users/change_email.html:14
+msgid "You will need to confirm the newly set email address to complete the change."
+msgstr "You will need to confirm the newly set email address to complete the change."
+
+#: apps/users/templates/users/change_email.html:24
+#, fuzzy
+msgid "Change my email"
+msgstr "Make my email public"
+
+#: apps/users/templates/users/change_email_complete.html:4
+msgid "Email changed for user {username}"
+msgstr "Email changed for user {username}"
+
+#: apps/users/templates/users/change_email_complete.html:11
+msgid "Your email has been changed from {old_email} to {new_email}."
+msgstr "Your email has been changed from {old_email} to {new_email}."
+
+#: apps/users/templates/users/change_email_done.html:4
+msgid "Confirmation email sent"
+msgstr "Confirmation email sent"
+
+#: apps/users/templates/users/change_email_done.html:11
+msgid "We've sent a confirmation to %(new_email)s. Please follow the link in the confirmation to change your account's email."
+msgstr "We've sent a confirmation to %(new_email)s. Please follow the link in the confirmation to change your account's email."
 
 #: apps/users/templates/users/confirm_avatar_delete.html:3 apps/users/templates/users/confirm_avatar_delete.html:24
 #, fuzzy
@@ -1460,6 +1549,11 @@ msgstr "Upload"
 msgid "Edit Profile"
 msgstr "Edit Article"
 
+#: apps/users/templates/users/edit_profile.html:13
+#, fuzzy
+msgid "Avatar:"
+msgstr "Avatar"
+
 #: apps/users/templates/users/edit_profile.html:17
 #, fuzzy
 msgctxt "avatar"
@@ -1472,7 +1566,17 @@ msgctxt "avatar"
 msgid "Delete"
 msgstr "Delete"
 
-#: apps/users/templates/users/edit_profile.html:29 apps/users/templates/users/pw_reset_confirm.html:27
+#: apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/edit_profile.html:33 apps/wiki/templates/wiki/translate.html:23
+#, fuzzy
+msgid "Change"
+msgstr "Changed"
+
+#: apps/users/templates/users/edit_profile.html:31
+#, fuzzy
+msgid "Email:"
+msgstr "Email address:"
+
+#: apps/users/templates/users/edit_profile.html:38 apps/users/templates/users/pw_reset_confirm.html:27
 #, fuzzy
 msgid "Update"
 msgstr "Last updated"
@@ -1498,6 +1602,11 @@ msgstr "I don't have an account."
 #, fuzzy
 msgid "I forgot my password."
 msgstr "I forgot my password"
+
+#: apps/users/templates/users/login.html:35
+#, fuzzy
+msgid "My account is inactive."
+msgstr "This account is inactive."
 
 #: apps/users/templates/users/profile.html:3
 #, fuzzy
@@ -1541,8 +1650,28 @@ msgid "IRC nickname: {nickname}"
 msgstr "IRC nickname: {nickname}"
 
 #: apps/users/templates/users/profile.html:62
-msgid "This user has not mady any contact information public."
+#, fuzzy
+msgid "This user has not made any contact information public."
 msgstr "This user has not mady any contact information public."
+
+#: apps/users/templates/users/pw_change.html:4
+#, fuzzy
+msgid "Change Password"
+msgstr "Password:"
+
+#: apps/users/templates/users/pw_change.html:18
+#, fuzzy
+msgid "Change my password"
+msgstr "I forgot my password"
+
+#: apps/users/templates/users/pw_change_complete.html:3
+#, fuzzy
+msgid "Password changed successful!"
+msgstr "Oops, your request was unsuccessful"
+
+#: apps/users/templates/users/pw_change_complete.html:9
+msgid "You have successfully changed your password. <a href=\"%(profile_url)s\">Go back to edit profile page.</a>"
+msgstr "You have successfully changed your password. <a href=\"%(profile_url)s\">Go back to edit profile page.</a>"
 
 #: apps/users/templates/users/pw_reset_complete.html:3
 msgid "Password successfully reset."
@@ -1584,9 +1713,9 @@ msgstr "Email Address:"
 msgid "Send password reset link"
 msgstr "Send password reset link"
 
-#: apps/users/templates/users/pw_reset_sent.html:10
-msgid "The password reset link was sent to your email address."
-msgstr "The password reset link was sent to your email address."
+#: apps/users/templates/users/pw_reset_sent.html:11
+msgid "We've sent an email to any account using this address. Please follow the link in the email to reset your password."
+msgstr "We've sent an email to any account using this address. Please follow the link in the email to reset your password."
 
 #: apps/users/templates/users/register.html:4 apps/users/templates/users/register.html:9 apps/users/templates/users/register.html:19 templates/layout/login.html:24
 msgid "Register"
@@ -1605,118 +1734,151 @@ msgstr "Thank you for being awesome!"
 msgid "Before you can log in, you need to confirm your email address. We've sent you an email with a confirmation link in it. Just click the link and you'll be ready to go!"
 msgstr "Before you can log in, you need to confirm your email address. We've sent you an email with a confirmation link in it. Just click the link and you'll be ready to go!"
 
-#: apps/wiki/forms.py:20
+#: apps/users/templates/users/resend_confirmation.html:4
+#, fuzzy
+msgid "Resend confirmation email"
+msgstr "Please confirm your email address"
+
+#: apps/users/templates/users/resend_confirmation.html:14
+msgid "To activate your account you must first confirm your email address. Enter your email and submit the form below, and we will resend the confirmation email."
+msgstr "To activate your account you must first confirm your email address. Enter your email and submit the form below, and we will resend the confirmation email."
+
+#: apps/users/templates/users/resend_confirmation.html:24
+msgid "Resend account confirmation email."
+msgstr "Resend account confirmation email."
+
+#: apps/users/templates/users/resend_confirmation_done.html:4
+msgid "Confirmation email sent successfully."
+msgstr "Confirmation email sent successfully."
+
+#: apps/users/templates/users/resend_confirmation_done.html:10
+#, fuzzy
+msgid ""
+"Before you can log in, you need to confirm your email address. We've sent a new confirmation email to any account using <strong>%(email)s</strong>. To confirm the email address, just follow the "
+"link in the email."
+msgstr "Before you can log in, you need to confirm your email address. We've sent you an email with a confirmation link in it. Just click the link and you'll be ready to go!"
+
+#: apps/wiki/forms.py:21
 msgid "Please keep the length of the title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Please keep the length of the title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 
-#: apps/wiki/forms.py:23
+#: apps/wiki/forms.py:24
 msgid "Please provide a slug."
 msgstr "Please provide a slug."
 
-#: apps/wiki/forms.py:24
+#: apps/wiki/forms.py:25
 #, fuzzy
 msgid "The slug provided is not valid."
 msgstr "The flag is invalid."
 
-#: apps/wiki/forms.py:25
+#: apps/wiki/forms.py:26
 msgid "The slug is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "The slug is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 
-#: apps/wiki/forms.py:27
+#: apps/wiki/forms.py:28
 msgid "Please keep the length of the slug to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Please keep the length of the slug to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 
-#: apps/wiki/forms.py:30
+#: apps/wiki/forms.py:31
 msgid "Please provide a summary."
 msgstr "Please provide a summary."
 
-#: apps/wiki/forms.py:31
+#: apps/wiki/forms.py:32
 msgid "The summary is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "The summary is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 
-#: apps/wiki/forms.py:33
+#: apps/wiki/forms.py:34
 msgid "Please keep the length of the summary to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Please keep the length of the summary to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 
-#: apps/wiki/forms.py:36
+#: apps/wiki/forms.py:37
 msgid "Please provide content."
 msgstr "Please provide content."
 
-#: apps/wiki/forms.py:37
+#: apps/wiki/forms.py:38
 msgid "The content is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "The content is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 
-#: apps/wiki/forms.py:39
+#: apps/wiki/forms.py:40
 msgid "Please keep the length of the content to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Please keep the length of the content to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 
-#: apps/wiki/forms.py:42
+#: apps/wiki/forms.py:43
 msgid "Please keep the length of the comment to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Please keep the length of the comment to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 
-#: apps/wiki/forms.py:56
-msgid "Topics:"
-msgstr "Topics:"
-
-#: apps/wiki/forms.py:58
-#, fuzzy
-msgid "Popular articles in each topic are displayed on the front page"
-msgstr "Popular articles in each topic are displayed on the front page."
-
-#: apps/wiki/forms.py:65
+#: apps/wiki/forms.py:62
 #, fuzzy
 msgid "Title of article"
 msgstr "Title of article."
 
-#: apps/wiki/forms.py:71 apps/wiki/templates/wiki/translate.html:67
+#: apps/wiki/forms.py:68 apps/wiki/templates/wiki/translate.html:67
 msgid "Slug:"
 msgstr "Slug:"
 
-#: apps/wiki/forms.py:72
+#: apps/wiki/forms.py:69
 #, fuzzy
 msgid "Article URL"
 msgstr "Article URL."
 
-#: apps/wiki/forms.py:78
+#: apps/wiki/forms.py:75
 #, fuzzy
 msgid "Firefox version:"
 msgstr "Firefox"
 
-#: apps/wiki/forms.py:87
+#: apps/wiki/forms.py:84
 msgid "Operating systems:"
 msgstr "Operating systems:"
 
-#: apps/wiki/forms.py:97
+#: apps/wiki/forms.py:94
 msgid "Allow translations:"
 msgstr "Allow translations:"
 
-#: apps/wiki/forms.py:104
+#: apps/wiki/forms.py:101
 #, fuzzy
 msgid "Category:"
 msgstr "Category"
 
-#: apps/wiki/forms.py:105
+#: apps/wiki/forms.py:102
 #, fuzzy
 msgid "Type of article"
 msgstr "Type of article."
 
-#: apps/wiki/forms.py:150 apps/wiki/templates/wiki/includes/revision_diff.html:27 apps/wiki/templates/wiki/review_revision.html:30 apps/wiki/templates/wiki/translate.html:98
+#: apps/wiki/forms.py:104
+msgid "Topics:"
+msgstr "Topics:"
+
+#: apps/wiki/forms.py:105
+#, fuzzy
+msgid "Popular articles in each topic are displayed on the front page"
+msgstr "Popular articles in each topic are displayed on the front page."
+
+#: apps/wiki/forms.py:152 apps/wiki/templates/wiki/includes/revision_diff.html:27 apps/wiki/templates/wiki/review_revision.html:45 apps/wiki/templates/wiki/translate.html:98
 msgid "Keywords:"
 msgstr "Keywords:"
 
-#: apps/wiki/forms.py:151
+#: apps/wiki/forms.py:153
 #, fuzzy
 msgid "Affects search results"
 msgstr "Affects search results."
 
-#: apps/wiki/forms.py:155 apps/wiki/templates/wiki/translate.html:108
+#: apps/wiki/forms.py:157 apps/wiki/templates/wiki/translate.html:108
 msgid "Search result summary:"
 msgstr "Search result summary:"
 
-#: apps/wiki/forms.py:156
+#: apps/wiki/forms.py:158
 #, fuzzy
 msgid "Only displayed on search results page"
 msgstr "Only displayed on search results page."
+
+#: apps/wiki/forms.py:179 apps/wiki/forms.py:207
+#, fuzzy
+msgid "Comment:"
+msgstr "Content:"
+
+#: apps/wiki/forms.py:211
+msgid "Significance:"
+msgstr "Significance:"
 
 #: apps/wiki/models.py:28
 msgid "Minor details like punctuation and spelling errors"
@@ -1761,17 +1923,17 @@ msgstr "Themes"
 msgid "Desktop:"
 msgstr "Desktop:"
 
-#: apps/wiki/models.py:60
+#: apps/wiki/models.py:60 apps/wiki/models.py:61
 #, fuzzy
 msgid "Firefox 3.5-3.6"
 msgstr "Firefox"
 
-#: apps/wiki/models.py:62 apps/wiki/models.py:67
+#: apps/wiki/models.py:62 apps/wiki/models.py:63 apps/wiki/models.py:67
 #, fuzzy
 msgid "Firefox 4"
 msgstr "Firefox"
 
-#: apps/wiki/models.py:64
+#: apps/wiki/models.py:64 apps/wiki/models.py:65
 #, fuzzy
 msgid "Firefox 3.0"
 msgstr "Firefox"
@@ -1780,7 +1942,7 @@ msgstr "Firefox"
 msgid "Mobile:"
 msgstr "Mobile:"
 
-#: apps/wiki/models.py:67
+#: apps/wiki/models.py:68
 msgid "Firefox 4 for Mobile"
 msgstr "Firefox 4 for Mobile"
 
@@ -1832,35 +1994,35 @@ msgstr "Please provide a summary."
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr "A revision must be based on an approved revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 
-#: apps/wiki/parser.py:321
+#: apps/wiki/parser.py:323
 msgid "[Recursive inclusion of \"%s\"]"
 msgstr "[Recursive inclusion of \"%s\"]"
 
-#: apps/wiki/parser.py:375
+#: apps/wiki/parser.py:377
 msgid "The document \"%s\" does not exist."
 msgstr "The document \"%s\" does not exist."
 
-#: apps/wiki/parser.py:403
+#: apps/wiki/parser.py:405
 msgid "The template \"%s\" does not exist or has no approved revision."
 msgstr "The template \"%s\" does not exist or has no approved revision."
 
-#: apps/wiki/parser.py:435
+#: apps/wiki/parser.py:437
 msgid "The video \"%s\" does not exist."
 msgstr "The video \"%s\" does not exist."
 
-#: apps/wiki/tasks.py:36
+#: apps/wiki/tasks.py:37
 msgid "Your revision has been approved: %s"
 msgstr "Your revision has been approved: %s"
 
-#: apps/wiki/tasks.py:38
+#: apps/wiki/tasks.py:39
 msgid "Your revision has been rejected: %s"
 msgstr "Your revision has been rejected: %s"
 
-#: apps/wiki/tasks.py:58
+#: apps/wiki/tasks.py:59
 msgid "%(title)s is ready for review (%(creator)s)"
 msgstr "%(title)s is ready for review (%(creator)s)"
 
-#: apps/wiki/tasks.py:71
+#: apps/wiki/tasks.py:72
 msgid "%(title)s was edited by %(creator)s"
 msgstr "%(title)s was edited by %(creator)s"
 
@@ -2067,20 +2229,20 @@ msgstr "For help with writing articles, check out the <a href=\"{url}\">Support 
 msgid "Search Firefox Help"
 msgstr "Firefox"
 
-#: apps/wiki/templates/wiki/includes/common_macros.html:23
+#: apps/wiki/templates/wiki/includes/common_macros.html:25
 msgid "Welcome, <span class=\"user\">{user}</span>."
 msgstr "Welcome, <span class=\"user\">{user}</span>."
 
-#: apps/wiki/templates/wiki/includes/common_macros.html:25
+#: apps/wiki/templates/wiki/includes/common_macros.html:27
 msgid "Profile"
 msgstr "Profile"
 
-#: apps/wiki/templates/wiki/includes/common_macros.html:27 templates/layout/sidebar.html:9
+#: apps/wiki/templates/wiki/includes/common_macros.html:29 templates/layout/sidebar.html:9
 #, fuzzy
 msgid "Sign Out"
 msgstr "Log Out"
 
-#: apps/wiki/templates/wiki/includes/common_macros.html:31
+#: apps/wiki/templates/wiki/includes/common_macros.html:33
 msgid "Want to contribute?<br /> <a href=\"%(login_url)s\">Sign In</a> or <a href=\"%(register_url)s\">Register</a>"
 msgstr "Want to contribute?<br /> <a href=\"%(login_url)s\">Sign In</a> or <a href=\"%(register_url)s\">Register</a>"
 
@@ -2154,7 +2316,7 @@ msgstr "Revision {num}"
 msgid "Revision {id} by {user} on {date}"
 msgstr "Revision {id} by {user} on {date}"
 
-#: apps/wiki/templates/wiki/includes/revision_diff.html:34 apps/wiki/templates/wiki/review_revision.html:34
+#: apps/wiki/templates/wiki/includes/revision_diff.html:34 apps/wiki/templates/wiki/review_revision.html:49
 #, fuzzy
 msgid "Search results summary:"
 msgstr "Sort results by"
@@ -2301,23 +2463,38 @@ msgstr "Reviewing Revision {id} by {user}"
 msgid "This revision was already reviewed by {user} on {date}."
 msgstr "This revision was already reviewed by {user} on {date}."
 
-#: apps/wiki/templates/wiki/review_revision.html:25
+#: apps/wiki/templates/wiki/review_revision.html:26
+#, fuzzy
+msgid "Submitted Revision Changes"
+msgstr "Submitted Translation Changes"
+
+#: apps/wiki/templates/wiki/review_revision.html:27
 msgid "Current public revision:"
 msgstr "Current public revision:"
 
-#: apps/wiki/templates/wiki/review_revision.html:25
+#: apps/wiki/templates/wiki/review_revision.html:27
 msgid "Submitted revision:"
 msgstr "Submitted revision:"
 
-#: apps/wiki/templates/wiki/review_revision.html:29
+#: apps/wiki/templates/wiki/review_revision.html:32 apps/wiki/templates/wiki/revision.html:64
+#, fuzzy
+msgid "Revision Source"
+msgstr "Revision source:"
+
+#: apps/wiki/templates/wiki/review_revision.html:38 apps/wiki/templates/wiki/review_translation.html:76 apps/wiki/templates/wiki/revision.html:70
+#, fuzzy
+msgid "Revision Content"
+msgstr "Preview Content"
+
+#: apps/wiki/templates/wiki/review_revision.html:44
 msgid "This document does not have a current revision."
 msgstr "This document does not have a current revision."
 
-#: apps/wiki/templates/wiki/review_revision.html:38
+#: apps/wiki/templates/wiki/review_revision.html:53
 msgid "Revision source:"
 msgstr "Revision source:"
 
-#: apps/wiki/templates/wiki/review_revision.html:42
+#: apps/wiki/templates/wiki/review_revision.html:57
 msgid "Revision rendered html:"
 msgstr "Revision rendered html:"
 
@@ -2365,23 +2542,23 @@ msgstr "Approved {default_locale} version:"
 msgid "Submitted {locale} translation:"
 msgstr "Submitted {locale} translation:"
 
-#: apps/wiki/templates/wiki/review_translation.html:76
+#: apps/wiki/templates/wiki/review_translation.html:82
 msgid "This document does not have a current translation."
 msgstr "This document does not have a current translation."
 
-#: apps/wiki/templates/wiki/review_translation.html:77
+#: apps/wiki/templates/wiki/review_translation.html:83
 msgid "Translation keywords:"
 msgstr "Translation keywords:"
 
-#: apps/wiki/templates/wiki/review_translation.html:81
+#: apps/wiki/templates/wiki/review_translation.html:87
 msgid "Translation search results summary:"
 msgstr "Translation search results summary:"
 
-#: apps/wiki/templates/wiki/review_translation.html:85
+#: apps/wiki/templates/wiki/review_translation.html:91
 msgid "Translation source:"
 msgstr "Translation source:"
 
-#: apps/wiki/templates/wiki/review_translation.html:89
+#: apps/wiki/templates/wiki/review_translation.html:95
 msgid "Translation rendered html:"
 msgstr "Translation rendered html:"
 
@@ -2390,34 +2567,48 @@ msgstr "Translation rendered html:"
 msgid "Revision {n} | {t} | {c}"
 msgstr "Revision {n} | {t} | {c}"
 
-#: apps/wiki/templates/wiki/revision.html:9 apps/wiki/templates/wiki/revision.html:20
+#: apps/wiki/templates/wiki/revision.html:9
 msgid "Revision {num}"
 msgstr "Revision {num}"
 
-#: apps/wiki/templates/wiki/revision.html:27
+#: apps/wiki/templates/wiki/revision.html:20
+#, fuzzy
+msgid "Revision Information"
+msgstr "Revision {num}"
+
+#: apps/wiki/templates/wiki/revision.html:24
+#, fuzzy
+msgid "Revision id:"
+msgstr "Revisions"
+
+#: apps/wiki/templates/wiki/revision.html:32
 #, fuzzy
 msgid "Creator:"
 msgstr "Created"
 
-#: apps/wiki/templates/wiki/revision.html:31
+#: apps/wiki/templates/wiki/revision.html:36
 msgid "Is reviewed?"
 msgstr "Is reviewed?"
 
-#: apps/wiki/templates/wiki/revision.html:36
+#: apps/wiki/templates/wiki/revision.html:41
 msgid "Reviewed:"
 msgstr "Reviewed:"
 
-#: apps/wiki/templates/wiki/revision.html:40
+#: apps/wiki/templates/wiki/revision.html:45
 msgid "Reviewed by:"
 msgstr "Reviewed by:"
 
-#: apps/wiki/templates/wiki/revision.html:44
+#: apps/wiki/templates/wiki/revision.html:49
 msgid "Is approved?"
 msgstr "Is approved?"
 
-#: apps/wiki/templates/wiki/revision.html:48
+#: apps/wiki/templates/wiki/revision.html:53
 msgid "Is current revision?"
 msgstr "Is current revision?"
+
+#: apps/wiki/templates/wiki/revision.html:58
+msgid "Edit article based on this revision"
+msgstr "Edit article based on this revision"
 
 #: apps/wiki/templates/wiki/select_locale.html:4
 msgid "Select Locale | {document}"
@@ -2442,11 +2633,6 @@ msgstr "Translating {title}"
 #: apps/wiki/templates/wiki/translate.html:22
 msgid "Translating article to {locale}"
 msgstr "Translating article to {locale}"
-
-#: apps/wiki/templates/wiki/translate.html:23
-#, fuzzy
-msgid "Change"
-msgstr "Changed"
 
 #: apps/wiki/templates/wiki/translate.html:26
 msgid "Choose a locale:"
@@ -2488,19 +2674,19 @@ msgstr "{locale} translation:"
 msgid "Cancel Changes"
 msgstr "Cancel Changes"
 
-#: apps/wiki/views.py:382
+#: apps/wiki/views.py:386
 msgid "You cannot translate this document."
 msgstr "You cannot translate this document."
 
-#: apps/wiki/views.py:539
+#: apps/wiki/views.py:548
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "Glad to hear it &mdash; thanks for the feedback!"
 
-#: apps/wiki/views.py:541
+#: apps/wiki/views.py:550
 msgid "Sorry to hear that. Perhaps one of the solutions below can help."
 msgstr "Sorry to hear that. Perhaps one of the solutions below can help."
 
-#: apps/wiki/views.py:551
+#: apps/wiki/views.py:560
 msgid "You already voted on this Article."
 msgstr "You already voted on this Article."
 
@@ -2547,8 +2733,8 @@ msgstr "Back to Mozilla.com"
 
 #: templates/global/header.html:8
 #, fuzzy
-msgid "visit {0}"
-msgstr "Revision {num}"
+msgid "visit mozilla.org"
+msgstr "What is Mozilla?"
 
 #: templates/global/menu_links.html:2 templates/global/menu_links.html:4 templates/global/menu_links.html:16
 msgid "Features"
@@ -2742,97 +2928,44 @@ msgstr "Be <mark>Awesome</mark>"
 msgid "My Profile"
 msgstr "Profile"
 
-#~ msgid "Delete {type} | {t} | Media Gallery"
-#~ msgstr "Delete {type} | {t} | Media Gallery"
+#~ msgid "Category in {locale}:"
+#~ msgstr "Category in {locale}:"
 
-#~ msgid "Are you sure you want to delete this {type}?"
-#~ msgstr "Are you sure you want to delete this {type}?"
+#~ msgid "There is no approved revision to translate from."
+#~ msgstr "There is no approved revision to translate from."
 
-#~ msgid "Available formats"
-#~ msgstr "Available formats"
+#~ msgid "Topics in {locale}:"
+#~ msgstr "Topics in {locale}:"
 
-#~ msgid "You are about to permanently delete this {type}. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
-#~ msgstr "You are about to permanently delete this {type}. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
+#~ msgid "Bugzilla"
+#~ msgstr "Bugzilla"
 
-#~ msgid "Edit {type}"
-#~ msgstr "Edit {type}"
+#~ msgid "Community Store"
+#~ msgstr "Community Store"
 
-#~ msgid "Save {type}"
-#~ msgstr "Save {type}"
+#~ msgid "Delete this video {type} ({format})"
+#~ msgstr "Delete this video {type} ({format})"
 
-#~ msgid "Delete this {type}"
-#~ msgstr "Delete this {type}"
+#~ msgid "Did you mean: {0}"
+#~ msgstr "Did you mean: {0}"
 
-#, fuzzy
-#~ msgid "Helping in the Forum"
-#~ msgstr "Search the Forum"
+#~ msgid "Fastest Firefox"
+#~ msgstr "Fastest Firefox"
 
-#~ msgid "Download Stats"
-#~ msgstr "Download Stats"
+#~ msgid "Forum"
+#~ msgstr "Forum"
 
-#, fuzzy
-#~ msgid "visit mozilla"
-#~ msgstr "What is Mozilla?"
+#~ msgid "Logo Guide"
+#~ msgstr "Logo Guide"
 
-#~ msgid "Support Forum"
-#~ msgstr "Support Forum"
+#~ msgid "Mozilla Developer Center"
+#~ msgstr "Mozilla Developer Center"
 
-#~ msgid "Other Firefox Support"
-#~ msgstr "Other Firefox Support"
+#~ msgid "Mozilla Labs"
+#~ msgstr "Mozilla Labs"
 
-#~ msgid "How to Contribute"
-#~ msgstr "How to Contribute"
-
-#~ msgid "My Account"
-#~ msgstr "My Account"
-
-#~ msgid "Log Out"
-#~ msgstr "Log Out"
-
-#~ msgid "Tips and Tricks"
-#~ msgstr "Tips and Tricks"
-
-#~ msgid "Thunderbird"
-#~ msgstr "Thunderbird"
-
-#~ msgid "Store"
-#~ msgstr "Store"
-
-#~ msgid "SpreadFirefox"
-#~ msgstr "SpreadFirefox"
-
-#~ msgid "Search Engines"
-#~ msgstr "Search Engines"
-
-#~ msgid "Recommended"
-#~ msgstr "Recommended"
-
-#~ msgid "QMO"
-#~ msgstr "QMO"
-
-#~ msgid "Products"
-#~ msgstr "Products"
-
-#~ msgid "Press Center"
-#~ msgstr "Press Center"
-
-#~ msgid "Post status"
-#~ msgstr "Post status"
-
-#~ msgid "Popular"
-#~ msgstr "Popular"
-
-#~ msgid "Plugins"
-#~ msgstr "Plugins"
-
-#~ msgid "Planet Mozilla"
-#~ msgstr "Planet Mozilla"
-
-#~ msgid "MozillaZine"
-#~ msgstr "MozillaZine"
-
-#~ msgid "Mozilla.org"
-#~ msgstr "Mozilla.org"
+#~ msgid "Mozilla Messaging"
+#~ msgstr "Mozilla Messaging"
 
 #~ msgid ""
 #~ "Mozilla is providing links to any applications as a courtesy, and makes no representations regarding the applications or any information related there to. Any questions, complaints or claims "
@@ -2841,41 +2974,97 @@ msgstr "Profile"
 #~ "Mozilla is providing links to any applications as a courtesy, and makes no representations regarding the applications or any information related there to. Any questions, complaints or claims "
 #~ "regarding the applications must be directed to the appropriate software vendor."
 
-#~ msgid "Mozilla Messaging"
-#~ msgstr "Mozilla Messaging"
+#~ msgid "Mozilla.org"
+#~ msgstr "Mozilla.org"
 
-#~ msgid "Mozilla Labs"
-#~ msgstr "Mozilla Labs"
+#~ msgid "MozillaZine"
+#~ msgstr "MozillaZine"
 
-#~ msgid "Mozilla Developer Center"
-#~ msgstr "Mozilla Developer Center"
+#~ msgid "Planet Mozilla"
+#~ msgstr "Planet Mozilla"
 
-#~ msgid "Logo Guide"
-#~ msgstr "Logo Guide"
+#~ msgid "Plugins"
+#~ msgstr "Plugins"
 
-#~ msgid "Forum"
-#~ msgstr "Forum"
+#~ msgid "Popular"
+#~ msgstr "Popular"
 
-#~ msgid "Fastest Firefox"
-#~ msgstr "Fastest Firefox"
+#~ msgid "Post status"
+#~ msgstr "Post status"
 
-#~ msgid "Did you mean: {0}"
-#~ msgstr "Did you mean: {0}"
+#~ msgid "Press Center"
+#~ msgstr "Press Center"
 
-#~ msgid "Delete this video {type} ({format})"
-#~ msgstr "Delete this video {type} ({format})"
+#~ msgid "Products"
+#~ msgstr "Products"
 
-#~ msgid "Community Store"
-#~ msgstr "Community Store"
+#~ msgid "QMO"
+#~ msgstr "QMO"
 
-#~ msgid "Bugzilla"
-#~ msgstr "Bugzilla"
+#~ msgid "Recommended"
+#~ msgstr "Recommended"
 
-#~ msgid "Topics in {locale}:"
-#~ msgstr "Topics in {locale}:"
+#~ msgid "Search Engines"
+#~ msgstr "Search Engines"
 
-#~ msgid "There is no approved revision to translate from."
-#~ msgstr "There is no approved revision to translate from."
+#~ msgid "SpreadFirefox"
+#~ msgstr "SpreadFirefox"
 
-#~ msgid "Category in {locale}:"
-#~ msgstr "Category in {locale}:"
+#~ msgid "Store"
+#~ msgstr "Store"
+
+#~ msgid "Thunderbird"
+#~ msgstr "Thunderbird"
+
+#~ msgid "Tips and Tricks"
+#~ msgstr "Tips and Tricks"
+
+#~ msgid "Log Out"
+#~ msgstr "Log Out"
+
+#~ msgid "My Account"
+#~ msgstr "My Account"
+
+#~ msgid "How to Contribute"
+#~ msgstr "How to Contribute"
+
+#~ msgid "Other Firefox Support"
+#~ msgstr "Other Firefox Support"
+
+#~ msgid "Support Forum"
+#~ msgstr "Support Forum"
+
+#~ msgid "Download Stats"
+#~ msgstr "Download Stats"
+
+#, fuzzy
+#~ msgid "Helping in the Forum"
+#~ msgstr "Search the Forum"
+
+#~ msgid "Delete this {type}"
+#~ msgstr "Delete this {type}"
+
+#~ msgid "Save {type}"
+#~ msgstr "Save {type}"
+
+#~ msgid "Edit {type}"
+#~ msgstr "Edit {type}"
+
+#~ msgid "You are about to permanently delete this {type}. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
+#~ msgstr "You are about to permanently delete this {type}. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
+
+#~ msgid "Are you sure you want to delete this {type}?"
+#~ msgstr "Are you sure you want to delete this {type}?"
+
+#~ msgid "Delete {type} | {t} | Media Gallery"
+#~ msgstr "Delete {type} | {t} | Media Gallery"
+
+#, fuzzy
+#~ msgid "visit {0}"
+#~ msgstr "Revision {num}"
+
+#~ msgid "The password reset link was sent to your email address."
+#~ msgstr "The password reset link was sent to your email address."
+
+#~ msgid "Localizer Dashboard"
+#~ msgstr "Localizer Dashboard"
