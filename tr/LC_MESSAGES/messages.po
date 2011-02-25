@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-04 14:37-0700\n"
+"POT-Creation-Date: 2011-02-25 07:28-0700\n"
 "PO-Revision-Date: 2011-02-11 11:02+0200\n"
 "Last-Translator: Selim <selim@selimsumlu.com.tr>\n"
 "Language-Team: Turkish\n"
@@ -14,22 +14,30 @@ msgstr ""
 "X-Generator: Pootle 2.1.5\n"
 
 #. L10n: the tweet needs to be a reply to another tweet.
-#: apps/customercare/views.py:142
+#: apps/customercare/views.py:144
 msgid "Reply-to is empty"
 msgstr "Yanıt adresi boş"
 
 #. L10n: the tweet has no content.
-#: apps/customercare/views.py:147
+#: apps/customercare/views.py:149
 msgid "Message is empty"
 msgstr "Mesaj boş"
 
-#: apps/customercare/views.py:150
+#: apps/customercare/views.py:152
 msgid "Message is too long"
 msgstr "Mesaj çok uzun"
 
-#: apps/customercare/views.py:157
+#: apps/customercare/views.py:159 apps/customercare/views.py:226
 msgid "An error occured: {message}"
 msgstr "Bir hata oluştu: {message}"
+
+#: apps/customercare/views.py:210 apps/customercare/views.py:215
+msgid "Invalid ID."
+msgstr ""
+
+#: apps/customercare/views.py:218
+msgid "Tweets that are replies or have replies must not be hidden."
+msgstr ""
 
 #: apps/customercare/templates/customercare/landing.html:4
 msgid "Join our Army of Awesome"
@@ -71,59 +79,59 @@ msgstr "Oturumu kapat"
 msgid "Sign in"
 msgstr "Oturum aç"
 
-#: apps/customercare/templates/customercare/landing.html:50
+#: apps/customercare/templates/customercare/landing.html:51
 msgid "We couldn't find any recent tweets for %(language)s at this time. Please check again later or view tweets for other languages by using the language selector at the bottom of the page."
 msgstr "Şu an için güncel %(language)s tweet'ler bulamadık. Lütfen daha sonra tekrar kontrol edin veya sayfanın altındaki dil seçimini kullanarak diğer dillerdeki tweet'leri inceleyin."
 
-#: apps/customercare/templates/customercare/landing.html:75
+#: apps/customercare/templates/customercare/landing.html:76
 msgid "Our army has responded to:"
 msgstr "Ordumuzun şu ana kadarki yanıtları:"
 
-#: apps/customercare/templates/customercare/landing.html:77
+#: apps/customercare/templates/customercare/landing.html:78
 msgid "Recent stats not available."
 msgstr "Güncel istatistikler mevcut değil."
 
-#: apps/customercare/templates/customercare/landing.html:81
+#: apps/customercare/templates/customercare/landing.html:82
 msgid "<mark>{percent}%</mark> of tweets"
 msgstr "<mark>%{percent}</mark> tweet"
 
-#: apps/customercare/templates/customercare/landing.html:85
+#: apps/customercare/templates/customercare/landing.html:86
 msgid "<mark>{num_replies}</mark> replies"
 msgstr "<mark>{num_replies}</mark> yanıt"
 
-#: apps/customercare/templates/customercare/landing.html:89
+#: apps/customercare/templates/customercare/landing.html:90
 msgid "<mark>{num_requests}</mark> tweets"
 msgstr "<mark>{num_requests}</mark> tweet"
 
-#: apps/customercare/templates/customercare/landing.html:100
+#: apps/customercare/templates/customercare/landing.html:101
 msgctxt "army_stats"
 msgid "Yesterday"
 msgstr "Dün"
 
-#: apps/customercare/templates/customercare/landing.html:102
+#: apps/customercare/templates/customercare/landing.html:103
 msgctxt "army_stats"
 msgid "Last Week"
 msgstr "Geçen hafta"
 
-#: apps/customercare/templates/customercare/landing.html:104
+#: apps/customercare/templates/customercare/landing.html:105
 msgctxt "army_stats"
 msgid "Last Month"
 msgstr "Geçen ay"
 
-#: apps/customercare/templates/customercare/landing.html:106
+#: apps/customercare/templates/customercare/landing.html:107
 msgctxt "army_stats"
 msgid "Last Overall"
 msgstr "Son toplam"
 
-#: apps/customercare/templates/customercare/landing.html:136
+#: apps/customercare/templates/customercare/landing.html:137
 msgid "Take it to the <mark>next level!</mark>"
 msgstr "<mark>Sonraki seviyeye</mark> geçin!"
 
-#: apps/customercare/templates/customercare/landing.html:141
+#: apps/customercare/templates/customercare/landing.html:142
 msgid "Want to go beyond 140 characters? <a href=\"%(join_url)s\">Join the support community</a> and help many more Firefox users."
 msgstr "140 karaktere sığmıyor musunuz? <a href=\"%(join_url)s\">Destek topluluğuna katılarak</a> daha fazla Firefox kullanıcısına yardım edin."
 
-#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:93 apps/kbforums/templates/kbforums/includes/post.html:26
+#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:93 apps/kbforums/templates/kbforums/includes/post.html:29
 msgid "Reply"
 msgstr "Yanıtla"
 
@@ -168,6 +176,10 @@ msgstr "{0} yanıtladı"
 msgid "Reply now"
 msgstr "Şimdi yanıtla"
 
+#: apps/customercare/templates/customercare/tweets.html:26
+msgid "Remove"
+msgstr ""
+
 #: apps/customercare/templates/customercare/twitter_modal.html:2
 msgid "Sign in with your Twitter account"
 msgstr "Twitter hesabınızla oturum açın"
@@ -195,7 +207,7 @@ msgstr "Bu hafta"
 msgid "All Time"
 msgstr "Tüm zamanlar"
 
-#: apps/dashboards/readouts.py:58 apps/dashboards/readouts.py:154
+#: apps/dashboards/readouts.py:58 apps/dashboards/readouts.py:155
 msgid "Most-Visited Articles"
 msgstr "En çok ziyaret edilen makaleler"
 
@@ -227,101 +239,101 @@ msgstr "En çok görüntülenen"
 msgid "Most Recent"
 msgstr "En yeni"
 
-#: apps/dashboards/readouts.py:156
+#: apps/dashboards/readouts.py:157
 msgid "All knowledge base articles..."
 msgstr "Tüm bilgi bankası makaleleri..."
 
-#: apps/dashboards/readouts.py:158
+#: apps/dashboards/readouts.py:159
 msgid "Visits"
 msgstr "Ziyaret"
 
-#: apps/dashboards/readouts.py:161
+#: apps/dashboards/readouts.py:162
 msgid "Review Needed"
 msgstr "İncelenmesi gerekiyor"
 
 #. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:200
+#: apps/dashboards/readouts.py:206
 msgid "All translations in English..."
 msgstr "Tüm Türkçe çeviriler..."
 
-#: apps/dashboards/readouts.py:203
+#: apps/dashboards/readouts.py:209
 msgid "Update Needed"
 msgstr "Güncellenmesi gerekiyor"
 
-#: apps/dashboards/readouts.py:204
+#: apps/dashboards/readouts.py:210
 msgid "Out of Date"
 msgstr "Güncel değil"
 
-#: apps/dashboards/readouts.py:256
+#: apps/dashboards/readouts.py:262
 msgid "Untranslated Articles"
 msgstr "Çevrilmemiş Makaleler"
 
-#: apps/dashboards/readouts.py:257
+#: apps/dashboards/readouts.py:263
 msgid "Untranslated"
 msgstr "Çevrilmemiş"
 
-#: apps/dashboards/readouts.py:258
+#: apps/dashboards/readouts.py:264
 msgid "All untranslated articles..."
 msgstr "Tüm çevrilmemiş makaleler..."
 
-#: apps/dashboards/readouts.py:260
+#: apps/dashboards/readouts.py:266
 msgid "Updated"
 msgstr "Güncelleme"
 
-#: apps/dashboards/readouts.py:300
+#: apps/dashboards/readouts.py:306
 msgid "Out-of-Date Translations"
 msgstr "Eski Çeviriler"
 
-#: apps/dashboards/readouts.py:301
+#: apps/dashboards/readouts.py:307
 msgid "Out-of-Date"
 msgstr "Güncel Değil"
 
-#: apps/dashboards/readouts.py:302
+#: apps/dashboards/readouts.py:308
 msgid "All out-of-date translations..."
 msgstr "Tüm eski çeviriler..."
 
-#: apps/dashboards/readouts.py:304
+#: apps/dashboards/readouts.py:310
 msgid "Out of date since"
 msgstr "Bu tarihten beri güncel değil:"
 
-#: apps/dashboards/readouts.py:379
+#: apps/dashboards/readouts.py:385
 msgid "Translations Needing Updates"
 msgstr "Güncellenmesi Gereken Çeviriler"
 
-#: apps/dashboards/readouts.py:380
+#: apps/dashboards/readouts.py:386
 msgid "Needing Updates"
 msgstr "Beklenen Güncellemeler"
 
-#: apps/dashboards/readouts.py:381
+#: apps/dashboards/readouts.py:387
 msgid "All translations needing updates..."
 msgstr "Güncelleme bekleyen tüm çeviriler..."
 
-#: apps/dashboards/readouts.py:388
+#: apps/dashboards/readouts.py:394
 msgid "Unreviewed Changes"
 msgstr "İncelenmemiş Değişiklikler"
 
-#: apps/dashboards/readouts.py:392
+#: apps/dashboards/readouts.py:398
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "İncelenmemiş"
 
-#: apps/dashboards/readouts.py:393
+#: apps/dashboards/readouts.py:399
 msgid "All articles requiring review..."
 msgstr "İncelenmesi gereken tüm makaleler..."
 
-#: apps/dashboards/readouts.py:395
+#: apps/dashboards/readouts.py:401
 msgid "Changed"
 msgstr "Değişiklik"
 
-#: apps/dashboards/views.py:29 apps/dashboards/views.py:40
+#: apps/dashboards/views.py:38 apps/dashboards/views.py:51
 msgid "The template \"%s\" does not exist."
 msgstr "\"%s\" şablonu mevcut değil."
 
-#: apps/dashboards/views.py:73 apps/dashboards/templates/dashboards/contributors.html:4
+#: apps/dashboards/views.py:84 apps/dashboards/templates/dashboards/contributors.html:4
 msgid "Contributor Dashboard"
 msgstr "Yardımcı Merkezi"
 
-#: apps/dashboards/views.py:81 apps/dashboards/templates/dashboards/localization.html:4
+#: apps/dashboards/views.py:92 apps/dashboards/templates/dashboards/localization.html:4
 msgid "Localization Dashboard"
 msgstr "Yerelleştirme Panosu"
 
@@ -329,7 +341,7 @@ msgstr "Yerelleştirme Panosu"
 msgid "Show information for:"
 msgstr "Bununla ilgili bilgileri göster:"
 
-#: apps/dashboards/templates/dashboards/home.html:7
+#: apps/dashboards/templates/dashboards/home.html:7 apps/dashboards/templates/dashboards/mobile/home.html:3
 msgid "Firefox Support Home Page"
 msgstr "Firefox Destek Ana Sayfası"
 
@@ -349,15 +361,19 @@ msgstr ""
 msgid "Overview"
 msgstr "Genel Bakış"
 
-#: apps/dashboards/templates/dashboards/localization.html:54
+#: apps/dashboards/templates/dashboards/localization.html:39
+msgid "%(numerator)s <small>of %(denominator)s</small>"
+msgstr ""
+
+#: apps/dashboards/templates/dashboards/localization.html:56
 msgid "User Interface"
 msgstr "Kullanıcı Arayüzü"
 
-#: apps/dashboards/templates/dashboards/localization.html:58
+#: apps/dashboards/templates/dashboards/localization.html:60
 msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
 msgstr "Tam olarak tercüme edilmiş bir kullanıcı arayüzü, dilinizdeki site ziyaretçilerinin işini kolaylaştırır. <a href=\"%(url)s\">Arayüz çevirisine</a> yardımcı olun."
 
-#: apps/dashboards/templates/dashboards/localization.html:67
+#: apps/dashboards/templates/dashboards/localization.html:69
 msgid "More options:"
 msgstr "Diğer seçenekler:"
 
@@ -436,6 +452,21 @@ msgstr "Bekleyen Türkçe inceleme olduğunu e-posta gönder"
 msgctxt "locale"
 msgid "Get emailed when English reviews are waiting"
 msgstr "Bekleyen Türkçe inceleme olduğunu e-posta gönder"
+
+#: apps/dashboards/templates/dashboards/mobile/home.html:8 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:128 templates/base.html:8 templates/base.html:17
+#: templates/mobile/base.html:15
+msgid "Firefox Help"
+msgstr "Firefox Yardımı"
+
+#: apps/dashboards/templates/dashboards/mobile/home.html:17
+#, fuzzy
+msgid "Common Questions"
+msgstr "Destek Soruları"
+
+#: apps/dashboards/templates/dashboards/mobile/mobile.html:3 templates/mobile/base.html:5
+#, fuzzy
+msgid "Firefox Help <span>for Mobile</span>"
+msgstr "Firefox Mobil Yardımı"
 
 #: apps/flagit/models.py:23
 msgid "Spam or other unrelated content"
@@ -531,12 +562,12 @@ msgstr "Güncelleme:"
 msgid "Take Action:"
 msgstr "Eylemler:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:35 apps/kbforums/templates/kbforums/includes/post.html:9
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:35 apps/kbforums/templates/kbforums/includes/post.html:12
 msgid "Edit"
 msgstr "Düzenle"
 
 #: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:27
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29 apps/kbforums/templates/kbforums/posts.html:39 apps/kbforums/templates/kbforums/includes/post.html:13
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29 apps/kbforums/templates/kbforums/posts.html:39 apps/kbforums/templates/kbforums/includes/post.html:16
 #: apps/wiki/templates/wiki/confirm_revision_delete.html:24 apps/wiki/templates/wiki/document_revisions.html:83
 msgid "Delete"
 msgstr "Sil"
@@ -713,7 +744,7 @@ msgstr "Yeni bir ortam dosyası yükle"
 msgid "Show media for:"
 msgstr "Ortam göster:"
 
-#: apps/gallery/templates/gallery/gallery.html:23 apps/gallery/templates/gallery/search.html:21
+#: apps/gallery/templates/gallery/gallery.html:23 apps/gallery/templates/gallery/search.html:21 templates/includes/lang_form.html:11
 msgid "Go"
 msgstr "Git"
 
@@ -771,8 +802,8 @@ msgstr "{date} tarihinde yüklendi"
 msgid "Media Gallery Search"
 msgstr "Ortam Galerisi Arama"
 
-#: apps/gallery/templates/gallery/search.html:7 apps/search/templates/search/base.html:3 apps/search/templates/search/results.html:17 templates/includes/common_macros.html:13
-#: templates/includes/common_macros.html:14
+#: apps/gallery/templates/gallery/search.html:7 apps/search/templates/search/base.html:3 apps/search/templates/search/basic-form.html:14 apps/search/templates/search/results.html:17
+#: apps/search/templates/search/mobile/down.html:3 apps/search/templates/search/mobile/results.html:3 templates/includes/common_macros.html:13 templates/includes/common_macros.html:14
 msgid "Search"
 msgstr "Arama"
 
@@ -848,7 +879,8 @@ msgid "Reply to: %s"
 msgstr "Yanıtla: %s"
 
 #: apps/kbforums/events.py:54
-msgid "New thread in %s forum: %s"
+#, fuzzy
+msgid "New thread in %s: %s"
 msgstr "%s forumunda yeni başlık: %s"
 
 #: apps/kbforums/feeds.py:22
@@ -1073,15 +1105,18 @@ msgstr "yazan: <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 msgid "There are no threads. Maybe you should create some!"
 msgstr "Hiç başlık yok. Siz açmaya ne dersiniz?"
 
-#: apps/kbforums/templates/kbforums/includes/post.html:6
-msgid "{0} posts"
-msgstr "{0} mesaj"
+#. {0} is the number of posts.
+#: apps/kbforums/templates/kbforums/includes/post.html:8
+#, fuzzy
+msgid "1 post"
+msgid_plural "{0} posts"
+msgstr[0] "{0} mesaj"
 
-#: apps/kbforums/templates/kbforums/includes/post.html:23
+#: apps/kbforums/templates/kbforums/includes/post.html:26
 msgid "Link to this post."
 msgstr "Bu mesaja bağlantı ver."
 
-#: apps/kbforums/templates/kbforums/includes/post.html:31
+#: apps/kbforums/templates/kbforums/includes/post.html:34
 msgid "Modified by {name} on {datetime}"
 msgstr "{name} tarafından {datetime} tarihinde düzenlendi"
 
@@ -1130,11 +1165,11 @@ msgstr "İlk mesaj tarihi"
 msgid "Number of replies"
 msgstr "Yanıt sayısı"
 
-#: apps/search/__init__.py:53 apps/sumo/helpers.py:292 apps/wiki/templates/wiki/document.html:80
+#: apps/search/__init__.py:53 apps/sumo/helpers.py:298 apps/wiki/templates/wiki/includes/document_vote.html:8
 msgid "Yes"
 msgstr "Evet"
 
-#: apps/search/__init__.py:54 apps/sumo/helpers.py:292 apps/wiki/templates/wiki/document.html:81
+#: apps/search/__init__.py:54 apps/sumo/helpers.py:298 apps/wiki/templates/wiki/includes/document_vote.html:9
 msgid "No"
 msgstr "Hayır"
 
@@ -1222,19 +1257,19 @@ msgstr "İşe yarar yanıtlar verildi"
 msgid "Votes"
 msgstr "Oy"
 
-#: apps/search/views.py:48
+#: apps/search/views.py:50
 msgid "Invalid callback function."
 msgstr "Geçersiz çağrı işlevi."
 
-#: apps/search/views.py:89
+#: apps/search/views.py:91
 msgid "Invalid search data."
 msgstr "Geçersiz arama verisi."
 
-#: apps/search/views.py:297 apps/search/templates/search/down.html:6
+#: apps/search/views.py:300 apps/search/templates/search/down.html:6 apps/search/templates/search/mobile/down.html:7
 msgid "Search Unavailable"
 msgstr "Arama Kullanılamıyor"
 
-#: apps/search/views.py:358
+#: apps/search/views.py:362
 msgid "No pages matched the search criteria"
 msgstr "Arama kriterlerinize uygun bir sayfa bulunamadı"
 
@@ -1247,7 +1282,7 @@ msgctxt "button"
 msgid "Search"
 msgstr "Ara"
 
-#: apps/search/templates/search/down.html:8
+#: apps/search/templates/search/down.html:8 apps/search/templates/search/mobile/down.html:9
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
 msgstr "Arama şu anda kullanılamıyor. Lütfen birkaç dakika sonra tekrar deneyin."
 
@@ -1319,10 +1354,6 @@ msgstr "Basit aramayı kullan"
 msgid "Use advanced search"
 msgstr "Gelişmiş aramayı kullan"
 
-#: apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:122 templates/base.html:8 templates/base.html:17
-msgid "Firefox Help"
-msgstr "Firefox Yardımı"
-
 #. The description for the OpenSearch plugin.
 #: apps/search/templates/search/plugin.html:5
 msgid "Search the Firefox Support Knowledge Base and Support Forum."
@@ -1333,7 +1364,7 @@ msgid "Refine your search"
 msgstr "Aramanızı yeniden tanımlayın"
 
 #. {n} is the number of search results, {q} is the search query, {l} is the language searched.
-#: apps/search/templates/search/results.html:24
+#: apps/search/templates/search/results.html:24 apps/search/templates/search/mobile/results.html:14
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
 msgstr[0] "<strong>{l}</strong> dilinde <strong>{q}</strong> için <strong>{n}</strong> sonuç bulundu"
@@ -1350,46 +1381,46 @@ msgstr "Bu değerin en az %(limit_value)s karakter içerdiğinden emin olun. (Ş
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr "Bu değerin en fazla %(limit_value)s karakter içerdiğinden emin olun. (Şu anda %(show_value)s karakter.)"
 
-#: apps/sumo/helpers.py:171
+#: apps/sumo/helpers.py:177
 msgid "Today at %s"
 msgstr "Bugün %s"
 
-#: apps/sumo/helpers.py:249
+#: apps/sumo/helpers.py:255
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "%(number)d yıl önce"
 
-#: apps/sumo/helpers.py:251
+#: apps/sumo/helpers.py:257
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "%(number)d ay önce"
 
-#: apps/sumo/helpers.py:253
+#: apps/sumo/helpers.py:259
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "%(number)d hafta önce"
 
-#: apps/sumo/helpers.py:255
+#: apps/sumo/helpers.py:261
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "%(number)d gün önce"
 
-#: apps/sumo/helpers.py:257
+#: apps/sumo/helpers.py:263
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "%(number)d saat önce"
 
-#: apps/sumo/helpers.py:259
+#: apps/sumo/helpers.py:265
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "%(number)d dakika önce"
 
-#: apps/sumo/helpers.py:261
+#: apps/sumo/helpers.py:267
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] "%(number)d saniye önce"
 
-#: apps/sumo/parser.py:225
+#: apps/sumo/parser.py:226
 msgid "The image \"%s\" does not exist."
 msgstr "\"%s\" resmi mevcut değil."
 
@@ -1481,6 +1512,10 @@ msgstr "Resim ekle:"
 msgid "Browse for an image to upload."
 msgstr "Yüklenecek resmi seçin."
 
+#: apps/users/__init__.py:4
+msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
+msgstr ""
+
 #: apps/users/forms.py:17
 msgid "Username may contain only letters, numbers and @/./+/-/_ characters."
 msgstr "Kullanıcı adı yalnızca harf, rakam ve @/./+/-/_ karakterlerini içerebilir."
@@ -1517,7 +1552,7 @@ msgstr "Parola gereklidir."
 msgid "Please enter your password twice."
 msgstr "Lütfen parolanızı iki kez girin."
 
-#: apps/users/forms.py:42 apps/users/templates/users/login_form.html:10 templates/layout/login.html:8
+#: apps/users/forms.py:42 apps/users/templates/users/includes/macros.html:13 templates/layout/login.html:8
 msgid "Username:"
 msgstr "Kullanıcı adı:"
 
@@ -1529,7 +1564,7 @@ msgstr "Gerekli. En fazla 30 karakter. Yalnızca harf, rakam ve @/./+/-/_ karakt
 msgid "Email address:"
 msgstr "E-posta adresi:"
 
-#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:27 apps/users/templates/users/login_form.html:14 templates/layout/login.html:11
+#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:27 apps/users/templates/users/includes/macros.html:17 templates/layout/login.html:11
 msgid "Password:"
 msgstr "Parola:"
 
@@ -1649,24 +1684,24 @@ msgstr "kayıt profili"
 msgid "registration profiles"
 msgstr "kayıt profilleri"
 
-#: apps/users/templates/users/activate.html:4
+#: apps/users/templates/users/activate.html:5
 msgid "Account successfully verified!"
 msgstr "Hesap başarıyla doğrulandı!"
 
-#: apps/users/templates/users/activate.html:6
+#: apps/users/templates/users/activate.html:7
 msgid "Something is wrong"
 msgstr "Yanlış bir şeyler var"
 
-#: apps/users/templates/users/activate.html:14
+#: apps/users/templates/users/activate.html:15
 msgid "You've confirmed your email address and activated your account! You can now log in, and go edit your profile."
 msgstr "E-posta adresinizi doğruladınız ve hesabınızı etkinleştirdiniz! Şimdi oturum açabilir ve profilinizi düzenleyebilirsiniz."
 
-#: apps/users/templates/users/activate.html:19
+#: apps/users/templates/users/activate.html:20
 msgid "Your question is now visible on the site!"
 msgid_plural "Your questions are now visible on the site!"
 msgstr[0] "Sorunuz sitede yayımlandı!"
 
-#: apps/users/templates/users/activate.html:30
+#: apps/users/templates/users/activate.html:31
 msgid "We could not activate your account. Please make sure that you have clicked the correct link in your email or typed in the correct address."
 msgstr "Hesabınızı etkinleştiremedik. Lütfen e-postanızdaki doğru bağlantıya tıkladığınızdan veya doğru adresi yazdığınızdan emin olun."
 
@@ -1767,29 +1802,9 @@ msgstr "E-posta:"
 msgid "Update"
 msgstr "Güncelle"
 
-#: apps/users/templates/users/login.html:3 apps/users/templates/users/login.html:8
+#: apps/users/templates/users/login.html:4 apps/users/templates/users/login.html:9
 msgid "Log In"
 msgstr "Oturum Aç"
-
-#: apps/users/templates/users/login_form.html:20 templates/layout/login.html:5 templates/layout/login.html:20
-msgid "Log in"
-msgstr "Oturum aç"
-
-#: apps/users/templates/users/login_form.html:24
-msgid "Login Problems?"
-msgstr "Giriş sorunu mu yaşıyorsunuz?"
-
-#: apps/users/templates/users/login_form.html:26
-msgid "I don't have an account."
-msgstr "Hesabım yok."
-
-#: apps/users/templates/users/login_form.html:27
-msgid "I forgot my password."
-msgstr "Parolamı unuttum."
-
-#: apps/users/templates/users/login_form.html:28
-msgid "My account is inactive."
-msgstr "Hesabım pasif durumda."
 
 #: apps/users/templates/users/profile.html:3
 msgid "{user} | Profile"
@@ -1839,11 +1854,11 @@ msgstr "Parola başarıyla değiştirildi!"
 msgid "You have successfully changed your password. <a href=\"%(profile_url)s\">Go back to edit profile page.</a>"
 msgstr "Parolanızı başarıyla değiştirdiniz. <a href=\"%(profile_url)s\">Profil sayfanızı düzenlemek için geri dönün.</a>"
 
-#: apps/users/templates/users/pw_reset_complete.html:3
+#: apps/users/templates/users/pw_reset_complete.html:4
 msgid "Password successfully reset."
 msgstr "Parola başarıyla sıfırlandı."
 
-#: apps/users/templates/users/pw_reset_complete.html:9
+#: apps/users/templates/users/pw_reset_complete.html:10
 msgid "You can now log in."
 msgstr "Şimdi oturum açabilirsiniz."
 
@@ -1883,7 +1898,7 @@ msgstr "Parola sıfırlama bağlantısı gönder"
 msgid "We've sent an email to any account using this address. Please follow the link in the email to reset your password."
 msgstr "Bu adresi kullanan hesaba bir e-posta gönderdik. Parolanızı sıfırlamak için lütfen e-postadaki bağlantıya tıklayın."
 
-#: apps/users/templates/users/register.html:4 apps/users/templates/users/register.html:9 apps/users/templates/users/register.html:19 templates/layout/login.html:24
+#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:51 templates/layout/login.html:24
 msgid "Register"
 msgstr "Kayıt"
 
@@ -1923,6 +1938,47 @@ msgid ""
 msgstr ""
 "Oturum açmadan önce e-posta adresinizi doğrulamalısınız. <strong>%(email)s</strong> adresine doğrulama bağlantısı içeren bir e-posta gönderdik. E-posta adresinizi onaylamak için e-postada "
 "bağlantıya tıklamanız yeterli."
+
+#: apps/users/templates/users/includes/macros.html:23 templates/layout/login.html:5 templates/layout/login.html:20
+msgid "Log in"
+msgstr "Oturum aç"
+
+#: apps/users/templates/users/includes/macros.html:23
+#, fuzzy
+msgid "Logging in..."
+msgstr "Oturum aç"
+
+#: apps/users/templates/users/includes/macros.html:23
+msgid "Logged in!"
+msgstr ""
+
+#: apps/users/templates/users/includes/macros.html:28 apps/users/templates/users/includes/macros.html:33
+msgid "I forgot my password."
+msgstr "Parolamı unuttum."
+
+#: apps/users/templates/users/includes/macros.html:30
+msgid "Login Problems?"
+msgstr "Giriş sorunu mu yaşıyorsunuz?"
+
+#: apps/users/templates/users/includes/macros.html:32
+msgid "I don't have an account."
+msgstr "Hesabım yok."
+
+#: apps/users/templates/users/includes/macros.html:34
+msgid "My account is inactive."
+msgstr "Hesabım pasif durumda."
+
+#: apps/wiki/events.py:49
+msgid "{title} was edited by {creator}"
+msgstr "{title} {creator} tarafından düzenlendi"
+
+#: apps/wiki/events.py:85
+msgid "{title} is ready for review ({creator})"
+msgstr "{title} incelenmeye hazır ({creator})"
+
+#: apps/wiki/events.py:104
+msgid "{title} ({locale}) has a new approved revision"
+msgstr "{title} ({locale}) makelesinin yeni bir revizyonu onaylandı"
 
 #: apps/wiki/forms.py:21
 msgid "Please keep the length of the title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
@@ -2036,107 +2092,107 @@ msgstr "Yorum:"
 msgid "Significance:"
 msgstr "Önem:"
 
-#: apps/wiki/models.py:31
+#: apps/wiki/models.py:32
 msgid "Minor details like punctuation and spelling errors"
 msgstr "Noktalama ve yazım hataları gibi küçük ayrıntılar"
 
-#: apps/wiki/models.py:33
+#: apps/wiki/models.py:34
 msgid "Content changes that don't require immediate translation"
 msgstr "Hemen çevrilmesi gerekmeyen içerik değişiklikleri"
 
-#: apps/wiki/models.py:35
+#: apps/wiki/models.py:36
 msgid "Major content changes that will make older translations inaccurate"
 msgstr "Eski çevirileri geçersiz kılacak kapsamlı içerik değişiklikleri"
 
-#: apps/wiki/models.py:40
+#: apps/wiki/models.py:41
 msgid "Troubleshooting"
 msgstr "Sorun giderme"
 
-#: apps/wiki/models.py:41
+#: apps/wiki/models.py:42
 msgid "How to"
 msgstr "Nasıl yapılır"
 
-#: apps/wiki/models.py:42
+#: apps/wiki/models.py:43
 msgid "How to contribute"
 msgstr "Katkıda bulunma yolları"
 
-#: apps/wiki/models.py:43
+#: apps/wiki/models.py:44
 msgid "Administration"
 msgstr "Yönetim"
 
-#: apps/wiki/models.py:44
+#: apps/wiki/models.py:45
 msgid "Navigation"
 msgstr "Navigasyon"
 
-#: apps/wiki/models.py:45
+#: apps/wiki/models.py:46
 msgid "Templates"
 msgstr "Şablonlar"
 
-#: apps/wiki/models.py:60
+#: apps/wiki/models.py:61
 msgid "Desktop:"
 msgstr "Masaüstü:"
 
-#: apps/wiki/models.py:63 apps/wiki/models.py:64
+#: apps/wiki/models.py:64 apps/wiki/models.py:65
 msgid "Firefox 3.5-3.6"
 msgstr "Firefox 3.5-3.6"
 
-#: apps/wiki/models.py:65 apps/wiki/models.py:66 apps/wiki/models.py:70
+#: apps/wiki/models.py:66 apps/wiki/models.py:67 apps/wiki/models.py:71
 msgid "Firefox 4"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:67 apps/wiki/models.py:68
+#: apps/wiki/models.py:68 apps/wiki/models.py:69
 msgid "Firefox 3.0"
 msgstr "Firefox 3.0"
 
-#: apps/wiki/models.py:69
+#: apps/wiki/models.py:70
 msgid "Mobile:"
 msgstr "Mobil:"
 
-#: apps/wiki/models.py:71
+#: apps/wiki/models.py:72
 msgid "Firefox 4 for Mobile"
 msgstr "Firefox 4 Mobil"
 
-#: apps/wiki/models.py:80
+#: apps/wiki/models.py:81
 msgid "Desktop OS:"
 msgstr "Masaüstü İS:"
 
-#: apps/wiki/models.py:81
+#: apps/wiki/models.py:82
 msgid "Windows"
 msgstr "Windows"
 
-#: apps/wiki/models.py:82
+#: apps/wiki/models.py:83
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: apps/wiki/models.py:83
+#: apps/wiki/models.py:84
 msgid "Linux"
 msgstr "Linux"
 
-#: apps/wiki/models.py:84
+#: apps/wiki/models.py:85
 msgid "Mobile OS:"
 msgstr "Mobil İS:"
 
-#: apps/wiki/models.py:85
+#: apps/wiki/models.py:86
 msgid "Android"
 msgstr "Android"
 
-#: apps/wiki/models.py:86
+#: apps/wiki/models.py:87
 msgid "Maemo"
 msgstr "Maemo"
 
-#: apps/wiki/models.py:95
+#: apps/wiki/models.py:96
 msgid "%(old)s Redirect %(number)i"
 msgstr "%(old)s Yönlendirme %(number)i"
 
-#: apps/wiki/models.py:96
+#: apps/wiki/models.py:97
 msgid "%(old)s-redirect-%(number)i"
 msgstr "%(old)s-yonlendirme-%(number)i"
 
-#: apps/wiki/models.py:236
+#: apps/wiki/models.py:237
 msgid "Please choose a category."
 msgstr "Lütfen bir kategori seçin."
 
-#: apps/wiki/models.py:560
+#: apps/wiki/models.py:566
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr "Bir revizyon, %(locale)s belgenin bir revizyonunu temel almalıdır. Revizyon no %(id)s bu kriteri karşılamıyor."
 
@@ -2157,39 +2213,28 @@ msgstr "\"%s\" şablonu mevcut değil ya da onaylanmış bir revizyonu yok."
 msgid "The video \"%s\" does not exist."
 msgstr "\"%s\" videosu mevcut değil."
 
-#: apps/wiki/tasks.py:37
+#: apps/wiki/tasks.py:35
 msgid "Your revision has been approved: {title}"
 msgstr "Revizyonunuz onaylanmıştır: {title}"
 
-#: apps/wiki/tasks.py:39
+#: apps/wiki/tasks.py:37
 msgid "Your revision has been rejected: {title}"
 msgstr "Revizyonunuz reddedilmiştir: {title}"
-
-#: apps/wiki/tasks.py:59
-msgid "{title} ({locale}) has a new approved revision"
-msgstr "{title} ({locale}) makelesinin yeni bir revizyonu onaylandı"
-
-#: apps/wiki/tasks.py:72
-msgid "{title} is ready for review ({creator})"
-msgstr "{title} incelenmeye hazır ({creator})"
-
-#: apps/wiki/tasks.py:85
-msgid "{title} was edited by {creator}"
-msgstr "{title} {creator} tarafından düzenlendi"
 
 #: apps/wiki/views.py:411
 msgid "You cannot translate this document."
 msgstr "Bu belgeyi çeviremezsiniz."
 
-#: apps/wiki/views.py:599
+#: apps/wiki/views.py:598
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "Bunu duyduğumuza sevindik &mdash; geri bildiriminiz için teşekkürler!"
 
-#: apps/wiki/views.py:601
-msgid "Sorry to hear that. Perhaps one of the solutions below can help."
+#: apps/wiki/views.py:600
+#, fuzzy
+msgid "Sorry to hear that. Try searching for solutions below."
 msgstr "Bunu duyduğumuza üzüldük. Aşağıdaki çözümlerden biri işinize yarayabilir."
 
-#: apps/wiki/views.py:611
+#: apps/wiki/views.py:610
 msgid "You already voted on this Article."
 msgstr "Bu makaleyi daha önce puanladınız."
 
@@ -2223,76 +2268,35 @@ msgid "You are about to permanently delete this revision. <strong>This cannot be
 msgstr "Bu revizyonu kalıcı olarak silmek üzeresiniz. <strong>Bu işlem geri alınamaz!</strong> Devam etmek istediğinizden emin misiniz?"
 
 #. {t} is the title of the document. {c} is the category.
-#: apps/wiki/templates/wiki/document.html:5
+#: apps/wiki/templates/wiki/document.html:6 apps/wiki/templates/wiki/mobile/document.html:5
 msgid "{t} | {c}"
 msgstr "{t} | {c}"
 
-#: apps/wiki/templates/wiki/document.html:17
-msgid "Related Articles"
-msgstr "İlgili Makaleler"
-
-#: apps/wiki/templates/wiki/document.html:28
-msgid "(Redirected from <a href=\"{href}\">{title}</a>)"
-msgstr "(<a href=\"{href}\">{title}</a> başlığından yönlendirildi)"
-
-#: apps/wiki/templates/wiki/document.html:33
-msgid ""
-"<p>This article may be out of date.</p> <p> An important change has been made to the English article on which this is based. Until this page is updated, you might find this helpful: <a href=\"%(url)"
-"s\">%(title)s</a> </p>"
-msgstr ""
-"<p>Bu makale güncel olmayabilir.</p> <p>Bu makalenin temel alındığı İngilizce makalede önemli bir değişiklik yapılmış. Bu sayfa güncellenene kadar şu sayfayı inceleyebilirsiniz: <a href=\"%(url)s\">"
-"%(title)s</a> </p>"
-
-#: apps/wiki/templates/wiki/document.html:48
-msgid "Our volunteers haven't translated this article into %(locale)s yet. <a href=\"%(help_link)s\">Join us and help get the job done!</a>"
-msgstr "Gönüllüleri çevirmenlerimiz henüz bu makaleyi %(locale)sye çevirmemiş.<a href=\"%(help_link)s\">Aramıza katılarak bu işi üstlenebilirsiniz!</a>"
-
-#. This is shown for existing, never-approved translations
-#: apps/wiki/templates/wiki/document.html:58
-msgid "Our volunteers are working on translating this article. Until it's ready, maybe the English version can be of some help."
-msgstr "Gönüllü çevirmenlerimiz bu makalenin çevirisi üzerinde çalışıyor. Çevirisi hazır olana kadar, belki İngilizce sürümü işinize yarayabilir."
-
-#: apps/wiki/templates/wiki/document.html:65
-msgid "This article doesn't have approved content yet."
-msgstr "Bu makalede onaylanmış bir içerik bulunmuyor."
-
-#: apps/wiki/templates/wiki/document.html:69
-msgid "Contributors to this page: %(contributors)s"
-msgstr "Bu sayfaya katkıda bulunanlar: %(contributors)s"
-
-#: apps/wiki/templates/wiki/document.html:79
-msgid "Was this article helpful?"
-msgstr "Bu maddeyi yararlı buldunuz mu?"
-
-#: apps/wiki/templates/wiki/document.html:82
-msgid "Please wait..."
-msgstr "Lütfen bekleyin..."
-
-#: apps/wiki/templates/wiki/document.html:89
+#: apps/wiki/templates/wiki/document.html:25 templates/mobile/base.html:52
 msgid "Couldn't find what you were looking for?"
 msgstr "Aradığınızı bulamadınız mı?"
 
-#: apps/wiki/templates/wiki/document.html:93
+#: apps/wiki/templates/wiki/document.html:29
 msgid "Here's a list of related articles that might help:"
 msgstr "İşinize yarayabilecek, konuyla ilgili makalelerin listesi:"
 
-#: apps/wiki/templates/wiki/document.html:102
+#: apps/wiki/templates/wiki/document.html:38
 msgid "Browse other articles about <a href=\"{url}\">{category}</a>"
 msgstr "<a href=\"{url}\">{category}</a> hakkındaki diğer makalelere göz at"
 
-#: apps/wiki/templates/wiki/document.html:105
+#: apps/wiki/templates/wiki/document.html:41
 msgid "Ask our awesome support community for help"
 msgstr "Şahane destek topluluğumuzdan yardım isteyin"
 
-#: apps/wiki/templates/wiki/document.html:108
+#: apps/wiki/templates/wiki/document.html:44
 msgid "Or try searching:"
 msgstr "veya arama yapmayı deneyin:"
 
-#: apps/wiki/templates/wiki/document.html:121
+#: apps/wiki/templates/wiki/document.html:57
 msgid "Turn off emails."
 msgstr "E-postaları kapat."
 
-#: apps/wiki/templates/wiki/document.html:126
+#: apps/wiki/templates/wiki/document.html:62
 msgid "Get emailed when this article changes."
 msgstr "Bu makale değiştiğinde bana e-posta gönder."
 
@@ -2635,6 +2639,47 @@ msgstr "Not: Bu makalenin onaylanmış bir çevirisi yok."
 msgid "{locale} translation:"
 msgstr "{locale} çeviri:"
 
+#: apps/wiki/templates/wiki/includes/document_macros.html:5
+msgid "Related Articles"
+msgstr "İlgili Makaleler"
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:17
+msgid "Contributors to this page: %(contributors)s"
+msgstr "Bu sayfaya katkıda bulunanlar: %(contributors)s"
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:30
+msgid "(Redirected from <a href=\"{href}\">{title}</a>)"
+msgstr "(<a href=\"{href}\">{title}</a> başlığından yönlendirildi)"
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:35
+msgid ""
+"<p>This article may be out of date.</p> <p> An important change has been made to the English article on which this is based. Until this page is updated, you might find this helpful: <a href=\"%(url)"
+"s\">%(title)s</a> </p>"
+msgstr ""
+"<p>Bu makale güncel olmayabilir.</p> <p>Bu makalenin temel alındığı İngilizce makalede önemli bir değişiklik yapılmış. Bu sayfa güncellenene kadar şu sayfayı inceleyebilirsiniz: <a href=\"%(url)s\">"
+"%(title)s</a> </p>"
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:53
+msgid "Our volunteers haven't translated this article into %(locale)s yet. <a href=\"%(help_link)s\">Join us and help get the job done!</a>"
+msgstr "Gönüllüleri çevirmenlerimiz henüz bu makaleyi %(locale)sye çevirmemiş.<a href=\"%(help_link)s\">Aramıza katılarak bu işi üstlenebilirsiniz!</a>"
+
+#. This is shown for existing, never-approved translations
+#: apps/wiki/templates/wiki/includes/document_macros.html:63
+msgid "Our volunteers are working on translating this article. Until it's ready, maybe the English version can be of some help."
+msgstr "Gönüllü çevirmenlerimiz bu makalenin çevirisi üzerinde çalışıyor. Çevirisi hazır olana kadar, belki İngilizce sürümü işinize yarayabilir."
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:70
+msgid "This article doesn't have approved content yet."
+msgstr "Bu makalede onaylanmış bir içerik bulunmuyor."
+
+#: apps/wiki/templates/wiki/includes/document_vote.html:7
+msgid "Was this article helpful?"
+msgstr "Bu maddeyi yararlı buldunuz mu?"
+
+#: apps/wiki/templates/wiki/includes/document_vote.html:10
+msgid "Please wait..."
+msgstr "Lütfen bekleyin..."
+
 #: apps/wiki/templates/wiki/includes/review_form.html:10
 msgid "Approve Translation"
 msgstr "Çeviriyi onayla"
@@ -2743,32 +2788,32 @@ msgstr "Gelecekte bu sayfada yapılacak değişiklikleri bana bildir"
 msgid "Help with:"
 msgstr "Yardım sistemi:"
 
-#: templates/base.html:14
+#: templates/base.html:14 templates/mobile/base.html:12
 msgctxt "site_title"
 msgid "Firefox Help"
 msgstr "Firefox Yardımı"
 
-#: templates/base.html:86
+#: templates/base.html:89
 msgid "Be <mark>Awesome</mark>"
 msgstr "<mark>Şahane</mark> olun"
 
-#: templates/base.html:91
+#: templates/base.html:94
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
 msgstr "Firefox Yardımı'nın dünyanın her yerindeki gönüllü süper kahramanlarla güçlendiğini biliyor muydunuz?"
 
-#: templates/base.html:94
+#: templates/base.html:97
 msgid "Grab your cape and join us &raquo;"
 msgstr "Siz de pelerininizi giyin ve aramıza katılın &raquo;"
 
-#: templates/base.html:98
+#: templates/base.html:101
 msgid "Check your <mark>plugins</mark>"
 msgstr "<mark>Yan uygulamalarınızı</mark> kontrol edin"
 
-#: templates/base.html:103
+#: templates/base.html:106
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
 msgstr "Yan uygulama nedir? Neden güncel tutulması gerekir? Hem bu soruların yanıtlarını alın hem de güncelliğinizi kontrol etmek için denetim yapın."
 
-#: templates/base.html:108
+#: templates/base.html:111
 msgid "Find out more &raquo;"
 msgstr "Daha fazla bilgi &raquo;"
 
@@ -2780,11 +2825,11 @@ msgstr "Ana sayfaya dön"
 msgid "Firefox"
 msgstr "Firefox"
 
-#: templates/global/footer.html:17
+#: templates/global/footer.html:17 templates/mobile/base.html:88
 msgid "Privacy Policy"
 msgstr "Gizlilik Politikası"
 
-#: templates/global/footer.html:18
+#: templates/global/footer.html:18 templates/mobile/base.html:89
 msgid "Legal Notices"
 msgstr "Yasal Uyarılar"
 
@@ -2816,7 +2861,7 @@ msgstr "Mozilla.com'a Geri Dön"
 msgid "visit <span>mozilla.org</span>"
 msgstr "<span>mozilla.org</span>'u ziyaret et"
 
-#: templates/global/menu_links.html:2 templates/global/menu_links.html:4 templates/global/menu_links.html:16
+#: templates/global/menu_links.html:2 templates/global/menu_links.html:4 templates/global/menu_links.html:16 templates/global/mobile/header.html:4
 msgid "Features"
 msgstr "Özellikler"
 
@@ -2872,7 +2917,7 @@ msgstr "S.S.S."
 msgid "Blog"
 msgstr "Blog"
 
-#: templates/global/menu_links.html:26
+#: templates/global/menu_links.html:26 templates/global/mobile/header.html:6
 msgid "Add-ons"
 msgstr "Eklentiler"
 
@@ -2916,7 +2961,7 @@ msgstr "Mobil Eklentiler"
 msgid "Developer Hub"
 msgstr "Geliştirici Merkezi"
 
-#: templates/global/menu_links.html:42 templates/layout/menu_links.html:5
+#: templates/global/menu_links.html:42 templates/global/mobile/header.html:7 templates/layout/menu_links.html:5
 msgid "Support"
 msgstr "Destek"
 
@@ -2964,6 +3009,25 @@ msgstr "Yasal Uyarılar"
 msgid "Contact Us"
 msgstr "Bize Ulaşın"
 
+#: templates/global/mobile/header.html:3
+#, fuzzy
+msgid "Mozilla Firefox"
+msgstr "MozillaZine"
+
+#: templates/global/mobile/header.html:5
+#, fuzzy
+msgid "Desktop"
+msgstr "Masaüstü:"
+
+#: templates/global/mobile/header.html:8
+#, fuzzy
+msgid "Visit Mozilla"
+msgstr "mozilla'yı ziyaret et"
+
+#: templates/global/mobile/header.html:10
+msgid "Menu"
+msgstr ""
+
 #: templates/includes/common_macros.html:5
 msgid "Search Firefox Help"
 msgstr "Firefox Yardımı'nda Ara"
@@ -2983,6 +3047,10 @@ msgstr "Oturumu Kapat"
 #: templates/includes/common_macros.html:31
 msgid "Want to contribute?<br /> <a href=\"%(login_url)s\">Sign In</a> or <a href=\"%(register_url)s\">Register</a>"
 msgstr "Katkıda bulunmak ister misiniz?<br /> <a href=\"%(login_url)s\">Oturum açın</a> ya da <a href=\"%(register_url)s\">kaydolun</a>"
+
+#: templates/includes/lang_form.html:4
+msgid "Other Languages"
+msgstr "Diğer Diller"
 
 #: templates/includes/sidebar_modules.html:5
 msgid "For Contributors"
@@ -3020,17 +3088,27 @@ msgstr "Makaleleri Çevirin"
 msgid "Contributors Forums"
 msgstr "Yardımcı Forumları"
 
-#: templates/includes/sidebar_modules.html:25
+#: templates/includes/sidebar_modules.html:25 templates/mobile/base.html:40
 msgid "Firefox Help Home"
 msgstr "Firefox Yardım Ana Sayfası"
 
-#: templates/includes/sidebar_modules.html:28
+#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:55 templates/mobile/base.html:60
 msgid "Ask a Question"
 msgstr "Soru Sorun"
 
-#: templates/layout/footer.html:11
-msgid "Other Languages"
-msgstr "Diğer Diller"
+#: templates/includes/mobile/paginator.html:5 templates/includes/mobile/paginator.html:7
+#, fuzzy
+msgid "Prev"
+msgstr "Önizleme"
+
+#: templates/includes/mobile/paginator.html:11
+msgid "Page {n}"
+msgid_plural "Page {n}"
+msgstr[0] ""
+
+#: templates/includes/mobile/paginator.html:15 templates/includes/mobile/paginator.html:17 templates/layout/paginator.html:31
+msgid "Next"
+msgstr "Sonraki"
 
 #: templates/layout/login.html:16
 msgid "Remember me"
@@ -3052,9 +3130,48 @@ msgstr "Parolamı unuttum"
 msgid "Previous"
 msgstr "Önceki"
 
-#: templates/layout/paginator.html:31
-msgid "Next"
-msgstr "Sonraki"
+#: templates/mobile/base.html:31
+#, fuzzy
+msgid "Return to Firefox Support homepage"
+msgstr "Firefox Destek Ana Sayfası"
+
+#: templates/mobile/base.html:58
+msgid "Need More Personal Help?"
+msgstr ""
+
+#: templates/mobile/base.html:61
+#, fuzzy
+msgid "Browse our Support Forum"
+msgstr "Destek Forumu"
+
+#: templates/mobile/base.html:65
+#, fuzzy
+msgid "Other Products"
+msgstr "Ürünler"
+
+#: templates/mobile/base.html:68
+#, fuzzy
+msgid "Firefox for Desktop"
+msgstr "Firefox 4 Mobil"
+
+#: templates/mobile/base.html:70
+#, fuzzy
+msgid "Firefox for Mobile"
+msgstr "Firefox 4 Mobil"
+
+#: templates/mobile/base.html:72
+#, fuzzy
+msgid "Firefox Home"
+msgstr "Firefox Yardımı"
+
+#: templates/mobile/base.html:73
+#, fuzzy
+msgid "Firefox Sync"
+msgstr "Firefox 4"
+
+#: templates/mobile/base.html:86
+msgid "View full site"
+msgstr ""
 
 #~ msgid "Cancel Changes"
 #~ msgstr "Değişikliklerden vazgeç"
@@ -3184,9 +3301,6 @@ msgstr "Sonraki"
 #~ msgid "Mozilla.org"
 #~ msgstr "Mozilla.org"
 
-#~ msgid "MozillaZine"
-#~ msgstr "MozillaZine"
-
 #~ msgid "Planet Mozilla"
 #~ msgstr "Planet Mozilla"
 
@@ -3201,9 +3315,6 @@ msgstr "Sonraki"
 
 #~ msgid "Press Center"
 #~ msgstr "Basın Merkezi"
-
-#~ msgid "Products"
-#~ msgstr "Ürünler"
 
 #~ msgid "QMO"
 #~ msgstr "QMO"
@@ -3256,9 +3367,6 @@ msgstr "Sonraki"
 #~ msgid "Other Firefox Support"
 #~ msgstr "Diğer Firefox Destekleri"
 
-#~ msgid "Support Forum"
-#~ msgstr "Destek Forumu"
-
 #~ msgid "Download Stats"
 #~ msgstr "İndirme İstatistikleri"
 
@@ -3294,6 +3402,3 @@ msgstr "Sonraki"
 
 #~ msgid "This user has not mady any contact information public."
 #~ msgstr "Bu kullanıcı iletişim bilgilerini paylaşmıyor."
-
-#~ msgid "visit mozilla"
-#~ msgstr "mozilla'yı ziyaret et"

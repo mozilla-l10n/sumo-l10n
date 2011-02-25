@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-04 14:37-0700\n"
+"POT-Creation-Date: 2011-02-25 07:28-0700\n"
 "PO-Revision-Date: 2011-02-05 02:38+0200\n"
 "Last-Translator: marsf <chimantaea_mirabilis@yahoo.co.jp>\n"
 "Language-Team: Japanese\n"
@@ -14,22 +14,30 @@ msgstr ""
 "X-Generator: Pootle 2.1.5\n"
 
 #. L10n: the tweet needs to be a reply to another tweet.
-#: apps/customercare/views.py:142
+#: apps/customercare/views.py:144
 msgid "Reply-to is empty"
 msgstr "Reply-to が空です"
 
 #. L10n: the tweet has no content.
-#: apps/customercare/views.py:147
+#: apps/customercare/views.py:149
 msgid "Message is empty"
 msgstr "メッセージが空です"
 
-#: apps/customercare/views.py:150
+#: apps/customercare/views.py:152
 msgid "Message is too long"
 msgstr "メッセージが長すぎます"
 
-#: apps/customercare/views.py:157
+#: apps/customercare/views.py:159 apps/customercare/views.py:226
 msgid "An error occured: {message}"
 msgstr "エラーが発生しました: {message}"
+
+#: apps/customercare/views.py:210 apps/customercare/views.py:215
+msgid "Invalid ID."
+msgstr ""
+
+#: apps/customercare/views.py:218
+msgid "Tweets that are replies or have replies must not be hidden."
+msgstr ""
 
 #: apps/customercare/templates/customercare/landing.html:4
 msgid "Join our Army of Awesome"
@@ -72,64 +80,64 @@ msgstr "サインアウト"
 msgid "Sign in"
 msgstr "サインイン"
 
-#: apps/customercare/templates/customercare/landing.html:50
+#: apps/customercare/templates/customercare/landing.html:51
 msgid "We couldn't find any recent tweets for %(language)s at this time. Please check again later or view tweets for other languages by using the language selector at the bottom of the page."
 msgstr "今のところ、最近のツイートに %(language)s のものはないようです。あとで再び確認するか、ページ下部で言語を選択して他の言語のツイートを見つけてください。"
 
 # AoA ページ右側
-#: apps/customercare/templates/customercare/landing.html:75
+#: apps/customercare/templates/customercare/landing.html:76
 msgid "Our army has responded to:"
 msgstr "サポーターたちによる活躍:"
 
-#: apps/customercare/templates/customercare/landing.html:77
+#: apps/customercare/templates/customercare/landing.html:78
 msgid "Recent stats not available."
 msgstr "最近の統計は現在利用できません。"
 
-#: apps/customercare/templates/customercare/landing.html:81
+#: apps/customercare/templates/customercare/landing.html:82
 msgid "<mark>{percent}%</mark> of tweets"
 msgstr "ツイートの <mark>{percent}%</mark>"
 
 # AoA ページ右側
-#: apps/customercare/templates/customercare/landing.html:85
+#: apps/customercare/templates/customercare/landing.html:86
 msgid "<mark>{num_replies}</mark> replies"
 msgstr "<mark>{num_replies}</mark> 件の返信"
 
 # AoA ページ右側
-#: apps/customercare/templates/customercare/landing.html:89
+#: apps/customercare/templates/customercare/landing.html:90
 msgid "<mark>{num_requests}</mark> tweets"
 msgstr "<mark>{num_requests}</mark> 回のツイート"
 
-#: apps/customercare/templates/customercare/landing.html:100
+#: apps/customercare/templates/customercare/landing.html:101
 msgctxt "army_stats"
 msgid "Yesterday"
 msgstr "昨日"
 
-#: apps/customercare/templates/customercare/landing.html:102
+#: apps/customercare/templates/customercare/landing.html:103
 msgctxt "army_stats"
 msgid "Last Week"
 msgstr "先週"
 
-#: apps/customercare/templates/customercare/landing.html:104
+#: apps/customercare/templates/customercare/landing.html:105
 msgctxt "army_stats"
 msgid "Last Month"
 msgstr "先月"
 
-#: apps/customercare/templates/customercare/landing.html:106
+#: apps/customercare/templates/customercare/landing.html:107
 msgctxt "army_stats"
 msgid "Last Overall"
 msgstr "全部"
 
 # AoA ページ右側下部
-#: apps/customercare/templates/customercare/landing.html:136
+#: apps/customercare/templates/customercare/landing.html:137
 msgid "Take it to the <mark>next level!</mark>"
 msgstr "<mark>次のレベル</mark> へ導いてください！"
 
 # AoA ページ右側下部
-#: apps/customercare/templates/customercare/landing.html:141
+#: apps/customercare/templates/customercare/landing.html:142
 msgid "Want to go beyond 140 characters? <a href=\"%(join_url)s\">Join the support community</a> and help many more Firefox users."
 msgstr "140 文字を超えて手助けしませんか？ <a href=\"%(join_url)s\">サポートコミュニティ</a> に参加して、さらに多くの Firefox ユーザを助けましょう。"
 
-#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:93 apps/kbforums/templates/kbforums/includes/post.html:26
+#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:93 apps/kbforums/templates/kbforums/includes/post.html:29
 msgid "Reply"
 msgstr "返信"
 
@@ -174,6 +182,10 @@ msgstr "返信数 {0} 件"
 msgid "Reply now"
 msgstr "今すぐ返信"
 
+#: apps/customercare/templates/customercare/tweets.html:26
+msgid "Remove"
+msgstr ""
+
 #: apps/customercare/templates/customercare/twitter_modal.html:2
 msgid "Sign in with your Twitter account"
 msgstr "あなたの Twitter アカウントにサインインしてください"
@@ -201,7 +213,7 @@ msgstr "今週"
 msgid "All Time"
 msgstr "すべての期間"
 
-#: apps/dashboards/readouts.py:58 apps/dashboards/readouts.py:154
+#: apps/dashboards/readouts.py:58 apps/dashboards/readouts.py:155
 msgid "Most-Visited Articles"
 msgstr "アクセス数の最も多い記事"
 
@@ -233,101 +245,101 @@ msgstr "表示回数の最も多い記事"
 msgid "Most Recent"
 msgstr "最近更新された記事"
 
-#: apps/dashboards/readouts.py:156
+#: apps/dashboards/readouts.py:157
 msgid "All knowledge base articles..."
 msgstr "すべてのナレッジベース記事..."
 
-#: apps/dashboards/readouts.py:158
+#: apps/dashboards/readouts.py:159
 msgid "Visits"
 msgstr "アクセス数"
 
-#: apps/dashboards/readouts.py:161
+#: apps/dashboards/readouts.py:162
 msgid "Review Needed"
 msgstr "レビューが必要"
 
 #. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:200
+#: apps/dashboards/readouts.py:206
 msgid "All translations in English..."
 msgstr "すべての日本語に翻訳された記事..."
 
-#: apps/dashboards/readouts.py:203
+#: apps/dashboards/readouts.py:209
 msgid "Update Needed"
 msgstr "更新が必要"
 
-#: apps/dashboards/readouts.py:204
+#: apps/dashboards/readouts.py:210
 msgid "Out of Date"
 msgstr "有効期限切れ"
 
-#: apps/dashboards/readouts.py:256
+#: apps/dashboards/readouts.py:262
 msgid "Untranslated Articles"
 msgstr "未訳記事"
 
-#: apps/dashboards/readouts.py:257
+#: apps/dashboards/readouts.py:263
 msgid "Untranslated"
 msgstr "未訳"
 
-#: apps/dashboards/readouts.py:258
+#: apps/dashboards/readouts.py:264
 msgid "All untranslated articles..."
 msgstr "すべての未訳記事..."
 
-#: apps/dashboards/readouts.py:260
+#: apps/dashboards/readouts.py:266
 msgid "Updated"
 msgstr "更新日"
 
-#: apps/dashboards/readouts.py:300
+#: apps/dashboards/readouts.py:306
 msgid "Out-of-Date Translations"
 msgstr "有効期限切れの翻訳記事"
 
-#: apps/dashboards/readouts.py:301
+#: apps/dashboards/readouts.py:307
 msgid "Out-of-Date"
 msgstr "有効期限切れ"
 
-#: apps/dashboards/readouts.py:302
+#: apps/dashboards/readouts.py:308
 msgid "All out-of-date translations..."
 msgstr "すべての有効期限切れの翻訳記事..."
 
-#: apps/dashboards/readouts.py:304
+#: apps/dashboards/readouts.py:310
 msgid "Out of date since"
 msgstr "期限切れ"
 
-#: apps/dashboards/readouts.py:379
+#: apps/dashboards/readouts.py:385
 msgid "Translations Needing Updates"
 msgstr "更新が必要な翻訳記事"
 
-#: apps/dashboards/readouts.py:380
+#: apps/dashboards/readouts.py:386
 msgid "Needing Updates"
 msgstr "更新が必要"
 
-#: apps/dashboards/readouts.py:381
+#: apps/dashboards/readouts.py:387
 msgid "All translations needing updates..."
 msgstr "すべての更新が必要な翻訳記事..."
 
-#: apps/dashboards/readouts.py:388
+#: apps/dashboards/readouts.py:394
 msgid "Unreviewed Changes"
 msgstr "レビュー待ちの更新された記事"
 
-#: apps/dashboards/readouts.py:392
+#: apps/dashboards/readouts.py:398
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "レビュー待ち"
 
-#: apps/dashboards/readouts.py:393
+#: apps/dashboards/readouts.py:399
 msgid "All articles requiring review..."
 msgstr "すべてのレビュー待ちの記事..."
 
-#: apps/dashboards/readouts.py:395
+#: apps/dashboards/readouts.py:401
 msgid "Changed"
 msgstr "変更日"
 
-#: apps/dashboards/views.py:29 apps/dashboards/views.py:40
+#: apps/dashboards/views.py:38 apps/dashboards/views.py:51
 msgid "The template \"%s\" does not exist."
 msgstr "\"%s\" というテンプレートは存在しません。"
 
-#: apps/dashboards/views.py:73 apps/dashboards/templates/dashboards/contributors.html:4
+#: apps/dashboards/views.py:84 apps/dashboards/templates/dashboards/contributors.html:4
 msgid "Contributor Dashboard"
 msgstr "貢献者ダッシュボード"
 
-#: apps/dashboards/views.py:81 apps/dashboards/templates/dashboards/localization.html:4
+#: apps/dashboards/views.py:92 apps/dashboards/templates/dashboards/localization.html:4
 msgid "Localization Dashboard"
 msgstr "L10N ダッシュボード"
 
@@ -335,7 +347,7 @@ msgstr "L10N ダッシュボード"
 msgid "Show information for:"
 msgstr "情報の表示対象:"
 
-#: apps/dashboards/templates/dashboards/home.html:7
+#: apps/dashboards/templates/dashboards/home.html:7 apps/dashboards/templates/dashboards/mobile/home.html:3
 msgid "Firefox Support Home Page"
 msgstr "Firefox サポート ホームページ"
 
@@ -354,15 +366,19 @@ msgstr "ここはあなたにぴったりのサイトです！ 検索ボック�
 msgid "Overview"
 msgstr "概要"
 
-#: apps/dashboards/templates/dashboards/localization.html:54
+#: apps/dashboards/templates/dashboards/localization.html:39
+msgid "%(numerator)s <small>of %(denominator)s</small>"
+msgstr ""
+
+#: apps/dashboards/templates/dashboards/localization.html:56
 msgid "User Interface"
 msgstr "ユーザインタフェース"
 
-#: apps/dashboards/templates/dashboards/localization.html:58
+#: apps/dashboards/templates/dashboards/localization.html:60
 msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
 msgstr "サポートサイトのインタフェースを日本語に翻訳すれば、サイトが分かりやすくなり、利用者数が向上します。<a href=\"%(url)s\">インタフェースの翻訳</a>にご協力ください。"
 
-#: apps/dashboards/templates/dashboards/localization.html:67
+#: apps/dashboards/templates/dashboards/localization.html:69
 msgid "More options:"
 msgstr "分類:"
 
@@ -439,6 +455,21 @@ msgstr "英語版レビュー待ちをメールで通知する"
 msgctxt "locale"
 msgid "Get emailed when English reviews are waiting"
 msgstr "日本語版レビュー待ちをメールで通知する"
+
+#: apps/dashboards/templates/dashboards/mobile/home.html:8 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:128 templates/base.html:8 templates/base.html:17
+#: templates/mobile/base.html:15
+msgid "Firefox Help"
+msgstr "Firefox ヘルプ"
+
+#: apps/dashboards/templates/dashboards/mobile/home.html:17
+#, fuzzy
+msgid "Common Questions"
+msgstr "サポート質問"
+
+#: apps/dashboards/templates/dashboards/mobile/mobile.html:3 templates/mobile/base.html:5
+#, fuzzy
+msgid "Firefox Help <span>for Mobile</span>"
+msgstr "モバイル Firefox ヘルプとチュートリアル"
 
 #: apps/flagit/models.py:23
 msgid "Spam or other unrelated content"
@@ -534,12 +565,12 @@ msgstr "更新日:"
 msgid "Take Action:"
 msgstr "操作:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:35 apps/kbforums/templates/kbforums/includes/post.html:9
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:35 apps/kbforums/templates/kbforums/includes/post.html:12
 msgid "Edit"
 msgstr "編集"
 
 #: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:27
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29 apps/kbforums/templates/kbforums/posts.html:39 apps/kbforums/templates/kbforums/includes/post.html:13
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29 apps/kbforums/templates/kbforums/posts.html:39 apps/kbforums/templates/kbforums/includes/post.html:16
 #: apps/wiki/templates/wiki/confirm_revision_delete.html:24 apps/wiki/templates/wiki/document_revisions.html:83
 msgid "Delete"
 msgstr "削除"
@@ -716,7 +747,7 @@ msgstr "新しいメディアファイルをアップロード"
 msgid "Show media for:"
 msgstr "メディアの対象言語:"
 
-#: apps/gallery/templates/gallery/gallery.html:23 apps/gallery/templates/gallery/search.html:21
+#: apps/gallery/templates/gallery/gallery.html:23 apps/gallery/templates/gallery/search.html:21 templates/includes/lang_form.html:11
 msgid "Go"
 msgstr "移動"
 
@@ -774,8 +805,8 @@ msgstr "アップロード日: {date}"
 msgid "Media Gallery Search"
 msgstr "メディアギャラリー検索"
 
-#: apps/gallery/templates/gallery/search.html:7 apps/search/templates/search/base.html:3 apps/search/templates/search/results.html:17 templates/includes/common_macros.html:13
-#: templates/includes/common_macros.html:14
+#: apps/gallery/templates/gallery/search.html:7 apps/search/templates/search/base.html:3 apps/search/templates/search/basic-form.html:14 apps/search/templates/search/results.html:17
+#: apps/search/templates/search/mobile/down.html:3 apps/search/templates/search/mobile/results.html:3 templates/includes/common_macros.html:13 templates/includes/common_macros.html:14
 msgid "Search"
 msgstr "検索"
 
@@ -851,7 +882,8 @@ msgid "Reply to: %s"
 msgstr "返信先: %s"
 
 #: apps/kbforums/events.py:54
-msgid "New thread in %s forum: %s"
+#, fuzzy
+msgid "New thread in %s: %s"
 msgstr "%s フォーラムの新しいスレッド: %s"
 
 #: apps/kbforums/feeds.py:22
@@ -1076,15 +1108,18 @@ msgstr "by <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 msgid "There are no threads. Maybe you should create some!"
 msgstr "スレッドがありません。新しく作成してください！"
 
-#: apps/kbforums/templates/kbforums/includes/post.html:6
-msgid "{0} posts"
-msgstr "投稿数 {0} 件"
+#. {0} is the number of posts.
+#: apps/kbforums/templates/kbforums/includes/post.html:8
+#, fuzzy
+msgid "1 post"
+msgid_plural "{0} posts"
+msgstr[0] "投稿数 {0} 件"
 
-#: apps/kbforums/templates/kbforums/includes/post.html:23
+#: apps/kbforums/templates/kbforums/includes/post.html:26
 msgid "Link to this post."
 msgstr "この投稿へのリンク。"
 
-#: apps/kbforums/templates/kbforums/includes/post.html:31
+#: apps/kbforums/templates/kbforums/includes/post.html:34
 msgid "Modified by {name} on {datetime}"
 msgstr "この投稿は {name} により {datetime} に変更されました"
 
@@ -1133,11 +1168,11 @@ msgstr "最初の投稿日"
 msgid "Number of replies"
 msgstr "返信数"
 
-#: apps/search/__init__.py:53 apps/sumo/helpers.py:292 apps/wiki/templates/wiki/document.html:80
+#: apps/search/__init__.py:53 apps/sumo/helpers.py:298 apps/wiki/templates/wiki/includes/document_vote.html:8
 msgid "Yes"
 msgstr "はい"
 
-#: apps/search/__init__.py:54 apps/sumo/helpers.py:292 apps/wiki/templates/wiki/document.html:81
+#: apps/search/__init__.py:54 apps/sumo/helpers.py:298 apps/wiki/templates/wiki/includes/document_vote.html:9
 msgid "No"
 msgstr "いいえ"
 
@@ -1225,19 +1260,19 @@ msgstr "役立つ回答あり"
 msgid "Votes"
 msgstr "投票"
 
-#: apps/search/views.py:48
+#: apps/search/views.py:50
 msgid "Invalid callback function."
 msgstr "無効なコールバック関数です。"
 
-#: apps/search/views.py:89
+#: apps/search/views.py:91
 msgid "Invalid search data."
 msgstr "無効な検索データです。"
 
-#: apps/search/views.py:297 apps/search/templates/search/down.html:6
+#: apps/search/views.py:300 apps/search/templates/search/down.html:6 apps/search/templates/search/mobile/down.html:7
 msgid "Search Unavailable"
 msgstr "検索システムは現在利用できません"
 
-#: apps/search/views.py:358
+#: apps/search/views.py:362
 msgid "No pages matched the search criteria"
 msgstr "検索条件に一致するページはありません"
 
@@ -1250,7 +1285,7 @@ msgctxt "button"
 msgid "Search"
 msgstr "検索"
 
-#: apps/search/templates/search/down.html:8
+#: apps/search/templates/search/down.html:8 apps/search/templates/search/mobile/down.html:9
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
 msgstr "検索システムは現在一時的に利用できません。数分後に再度検索してください。"
 
@@ -1322,10 +1357,6 @@ msgstr "基本検索を利用"
 msgid "Use advanced search"
 msgstr "詳細検索を利用"
 
-#: apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:122 templates/base.html:8 templates/base.html:17
-msgid "Firefox Help"
-msgstr "Firefox ヘルプ"
-
 #. The description for the OpenSearch plugin.
 #: apps/search/templates/search/plugin.html:5
 msgid "Search the Firefox Support Knowledge Base and Support Forum."
@@ -1336,7 +1367,7 @@ msgid "Refine your search"
 msgstr "検索条件を見直す"
 
 #. {n} is the number of search results, {q} is the search query, {l} is the language searched.
-#: apps/search/templates/search/results.html:24
+#: apps/search/templates/search/results.html:24 apps/search/templates/search/mobile/results.html:14
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
 msgstr[0] "<strong>{q}</strong> についての検索結果が <strong>{n}</strong> 件見つかりました。(<strong>{l}</strong> の記事)"
@@ -1353,46 +1384,46 @@ msgstr "文字数が少なすぎます (現在 %(show_value)s 文字)。 %(limit
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr "文字数が多すぎます (現在 %(show_value)s 文字)。 %(limit_value)s 文字以下にしてください。"
 
-#: apps/sumo/helpers.py:171
+#: apps/sumo/helpers.py:177
 msgid "Today at %s"
 msgstr "今日 %s"
 
-#: apps/sumo/helpers.py:249
+#: apps/sumo/helpers.py:255
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "%(number)d 年前"
 
-#: apps/sumo/helpers.py:251
+#: apps/sumo/helpers.py:257
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "%(number)d カ月前"
 
-#: apps/sumo/helpers.py:253
+#: apps/sumo/helpers.py:259
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "%(number)d 週間前"
 
-#: apps/sumo/helpers.py:255
+#: apps/sumo/helpers.py:261
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "%(number)d 日前"
 
-#: apps/sumo/helpers.py:257
+#: apps/sumo/helpers.py:263
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "%(number)d 時間前"
 
-#: apps/sumo/helpers.py:259
+#: apps/sumo/helpers.py:265
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "%(number)d 分前"
 
-#: apps/sumo/helpers.py:261
+#: apps/sumo/helpers.py:267
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] "%(number)d 秒前"
 
-#: apps/sumo/parser.py:225
+#: apps/sumo/parser.py:226
 msgid "The image \"%s\" does not exist."
 msgstr "画像 \"%s\" が存在しません。"
 
@@ -1484,6 +1515,10 @@ msgstr "画像を追加:"
 msgid "Browse for an image to upload."
 msgstr "アップロードする画像を参照します。"
 
+#: apps/users/__init__.py:4
+msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
+msgstr ""
+
 #: apps/users/forms.py:17
 msgid "Username may contain only letters, numbers and @/./+/-/_ characters."
 msgstr "ユーザ名に含められるのは、英数字と記号 @ . + - _ のみです。"
@@ -1520,7 +1555,7 @@ msgstr "パスワードが必要です。"
 msgid "Please enter your password twice."
 msgstr "同じパスワードを 2 回入力してください。"
 
-#: apps/users/forms.py:42 apps/users/templates/users/login_form.html:10 templates/layout/login.html:8
+#: apps/users/forms.py:42 apps/users/templates/users/includes/macros.html:13 templates/layout/login.html:8
 msgid "Username:"
 msgstr "ユーザ名:"
 
@@ -1532,7 +1567,7 @@ msgstr "必須。30 文字以下。英数字と記号 @ . + - _ のみ使用可�
 msgid "Email address:"
 msgstr "メールアドレス:"
 
-#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:27 apps/users/templates/users/login_form.html:14 templates/layout/login.html:11
+#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:27 apps/users/templates/users/includes/macros.html:17 templates/layout/login.html:11
 msgid "Password:"
 msgstr "パスワード:"
 
@@ -1652,24 +1687,24 @@ msgstr "登録プロファイル"
 msgid "registration profiles"
 msgstr "登録プロファイル"
 
-#: apps/users/templates/users/activate.html:4
+#: apps/users/templates/users/activate.html:5
 msgid "Account successfully verified!"
 msgstr "アカウントが承認されました！"
 
-#: apps/users/templates/users/activate.html:6
+#: apps/users/templates/users/activate.html:7
 msgid "Something is wrong"
 msgstr "どこかに間違いがあります"
 
-#: apps/users/templates/users/activate.html:14
+#: apps/users/templates/users/activate.html:15
 msgid "You've confirmed your email address and activated your account! You can now log in, and go edit your profile."
 msgstr "あなたのメールアドレスが確認され、アカウントが有効になりました！ 今すぐログインして、あなたのプロファイルを編集してください。"
 
-#: apps/users/templates/users/activate.html:19
+#: apps/users/templates/users/activate.html:20
 msgid "Your question is now visible on the site!"
 msgid_plural "Your questions are now visible on the site!"
 msgstr[0] "あなたの質問がサイト上に表示されるようになりました！"
 
-#: apps/users/templates/users/activate.html:30
+#: apps/users/templates/users/activate.html:31
 msgid "We could not activate your account. Please make sure that you have clicked the correct link in your email or typed in the correct address."
 msgstr "あなたのアカウントを承認できませんでした。あなたのメールアドレスに送られた確認メールの正しいリンクをクリックしてください。または、登録するメールアドレス正しく入力してください。"
 
@@ -1768,29 +1803,9 @@ msgstr "メールアドレス:"
 msgid "Update"
 msgstr "更新"
 
-#: apps/users/templates/users/login.html:3 apps/users/templates/users/login.html:8
+#: apps/users/templates/users/login.html:4 apps/users/templates/users/login.html:9
 msgid "Log In"
 msgstr "ログイン"
-
-#: apps/users/templates/users/login_form.html:20 templates/layout/login.html:5 templates/layout/login.html:20
-msgid "Log in"
-msgstr "ログイン"
-
-#: apps/users/templates/users/login_form.html:24
-msgid "Login Problems?"
-msgstr "ログインに問題がありますか？"
-
-#: apps/users/templates/users/login_form.html:26
-msgid "I don't have an account."
-msgstr "アカウントを登録する。"
-
-#: apps/users/templates/users/login_form.html:27
-msgid "I forgot my password."
-msgstr "パスワードを再発行する。"
-
-#: apps/users/templates/users/login_form.html:28
-msgid "My account is inactive."
-msgstr "アカウントがアクティブではありません。"
 
 #: apps/users/templates/users/profile.html:3
 msgid "{user} | Profile"
@@ -1840,11 +1855,11 @@ msgstr "パスワードの変更が完了しました！"
 msgid "You have successfully changed your password. <a href=\"%(profile_url)s\">Go back to edit profile page.</a>"
 msgstr "あなたのパスワードが正常に変更されました。<a href=\"%(profile_url)s\">プロファイルの編集ページへ戻る。</a>"
 
-#: apps/users/templates/users/pw_reset_complete.html:3
+#: apps/users/templates/users/pw_reset_complete.html:4
 msgid "Password successfully reset."
 msgstr "パスワードのリセットが完了しました。"
 
-#: apps/users/templates/users/pw_reset_complete.html:9
+#: apps/users/templates/users/pw_reset_complete.html:10
 msgid "You can now log in."
 msgstr "ログインできるようになりました。"
 
@@ -1884,7 +1899,7 @@ msgstr "パスワードリセットのリンクを送信"
 msgid "We've sent an email to any account using this address. Please follow the link in the email to reset your password."
 msgstr "リセット確認のメールをあなたのメールアドレスへ送信しました。メールに記載されたパスワードリセットのためのリンクをクリックしてください。"
 
-#: apps/users/templates/users/register.html:4 apps/users/templates/users/register.html:9 apps/users/templates/users/register.html:19 templates/layout/login.html:24
+#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:51 templates/layout/login.html:24
 msgid "Register"
 msgstr "ユーザ登録"
 
@@ -1926,6 +1941,47 @@ msgid ""
 msgstr ""
 "ログインする前に、登録したメールアドレスのメールを確認してください。アカウント確認のためのリンクを記載したメールが <strong>%(email)s</strong> に送信されています。そのメールに書かれた確認のリンクをク"
 "リックすると、あなたのアカウントが承認されます。"
+
+#: apps/users/templates/users/includes/macros.html:23 templates/layout/login.html:5 templates/layout/login.html:20
+msgid "Log in"
+msgstr "ログイン"
+
+#: apps/users/templates/users/includes/macros.html:23
+#, fuzzy
+msgid "Logging in..."
+msgstr "ログイン"
+
+#: apps/users/templates/users/includes/macros.html:23
+msgid "Logged in!"
+msgstr ""
+
+#: apps/users/templates/users/includes/macros.html:28 apps/users/templates/users/includes/macros.html:33
+msgid "I forgot my password."
+msgstr "パスワードを再発行する。"
+
+#: apps/users/templates/users/includes/macros.html:30
+msgid "Login Problems?"
+msgstr "ログインに問題がありますか？"
+
+#: apps/users/templates/users/includes/macros.html:32
+msgid "I don't have an account."
+msgstr "アカウントを登録する。"
+
+#: apps/users/templates/users/includes/macros.html:34
+msgid "My account is inactive."
+msgstr "アカウントがアクティブではありません。"
+
+#: apps/wiki/events.py:49
+msgid "{title} was edited by {creator}"
+msgstr "{title} は {creator} により編集されました"
+
+#: apps/wiki/events.py:85
+msgid "{title} is ready for review ({creator})"
+msgstr "{title} はレビュー待ちです ({creator})"
+
+#: apps/wiki/events.py:104
+msgid "{title} ({locale}) has a new approved revision"
+msgstr "{title} ({locale}) には新たに承認されたリビジョンがあります"
 
 #: apps/wiki/forms.py:21
 msgid "Please keep the length of the title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
@@ -2039,107 +2095,107 @@ msgstr "コメント:"
 msgid "Significance:"
 msgstr "重要性:"
 
-#: apps/wiki/models.py:31
+#: apps/wiki/models.py:32
 msgid "Minor details like punctuation and spelling errors"
 msgstr "句読点や誤字脱字などの細かい修正"
 
-#: apps/wiki/models.py:33
+#: apps/wiki/models.py:34
 msgid "Content changes that don't require immediate translation"
 msgstr "すぐに翻訳に反映させる必要のない変更"
 
-#: apps/wiki/models.py:35
+#: apps/wiki/models.py:36
 msgid "Major content changes that will make older translations inaccurate"
 msgstr "古い翻訳を不正確にする大きな内容の変更"
 
-#: apps/wiki/models.py:40
+#: apps/wiki/models.py:41
 msgid "Troubleshooting"
 msgstr "トラブルシューティング"
 
-#: apps/wiki/models.py:41
+#: apps/wiki/models.py:42
 msgid "How to"
 msgstr "操作方法"
 
-#: apps/wiki/models.py:42
+#: apps/wiki/models.py:43
 msgid "How to contribute"
 msgstr "協力するには"
 
-#: apps/wiki/models.py:43
+#: apps/wiki/models.py:44
 msgid "Administration"
 msgstr "管理者用"
 
-#: apps/wiki/models.py:44
+#: apps/wiki/models.py:45
 msgid "Navigation"
 msgstr "ナビゲーション"
 
-#: apps/wiki/models.py:45
+#: apps/wiki/models.py:46
 msgid "Templates"
 msgstr "テンプレート"
 
-#: apps/wiki/models.py:60
+#: apps/wiki/models.py:61
 msgid "Desktop:"
 msgstr "デスクトップ版:"
 
-#: apps/wiki/models.py:63 apps/wiki/models.py:64
+#: apps/wiki/models.py:64 apps/wiki/models.py:65
 msgid "Firefox 3.5-3.6"
 msgstr "Firefox 3.5-3.6"
 
-#: apps/wiki/models.py:65 apps/wiki/models.py:66 apps/wiki/models.py:70
+#: apps/wiki/models.py:66 apps/wiki/models.py:67 apps/wiki/models.py:71
 msgid "Firefox 4"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:67 apps/wiki/models.py:68
+#: apps/wiki/models.py:68 apps/wiki/models.py:69
 msgid "Firefox 3.0"
 msgstr "Firefox 3.0"
 
-#: apps/wiki/models.py:69
+#: apps/wiki/models.py:70
 msgid "Mobile:"
 msgstr "モバイル版:"
 
-#: apps/wiki/models.py:71
+#: apps/wiki/models.py:72
 msgid "Firefox 4 for Mobile"
 msgstr "Firefox 4 for Mobile"
 
-#: apps/wiki/models.py:80
+#: apps/wiki/models.py:81
 msgid "Desktop OS:"
 msgstr "デスクトップ OS:"
 
-#: apps/wiki/models.py:81
+#: apps/wiki/models.py:82
 msgid "Windows"
 msgstr "Windows"
 
-#: apps/wiki/models.py:82
+#: apps/wiki/models.py:83
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: apps/wiki/models.py:83
+#: apps/wiki/models.py:84
 msgid "Linux"
 msgstr "Linux"
 
-#: apps/wiki/models.py:84
+#: apps/wiki/models.py:85
 msgid "Mobile OS:"
 msgstr "モバイル OS:"
 
-#: apps/wiki/models.py:85
+#: apps/wiki/models.py:86
 msgid "Android"
 msgstr "Android"
 
-#: apps/wiki/models.py:86
+#: apps/wiki/models.py:87
 msgid "Maemo"
 msgstr "Maemo"
 
-#: apps/wiki/models.py:95
+#: apps/wiki/models.py:96
 msgid "%(old)s Redirect %(number)i"
 msgstr "%(old)s Redirect %(number)i"
 
-#: apps/wiki/models.py:96
+#: apps/wiki/models.py:97
 msgid "%(old)s-redirect-%(number)i"
 msgstr "%(old)s-redirect-%(number)i"
 
-#: apps/wiki/models.py:236
+#: apps/wiki/models.py:237
 msgid "Please choose a category."
 msgstr "カテゴリを選択してください。"
 
-#: apps/wiki/models.py:560
+#: apps/wiki/models.py:566
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr "%(locale)sドキュメントのリビジョンをベースに編集してください。リビジョン ID %(id)s はこの基準に合いません。"
 
@@ -2160,39 +2216,28 @@ msgstr "このテンプレート \"%s\" は存在しないか承認されてい�
 msgid "The video \"%s\" does not exist."
 msgstr "\"%s\" の動画は存在しません。"
 
-#: apps/wiki/tasks.py:37
+#: apps/wiki/tasks.py:35
 msgid "Your revision has been approved: {title}"
 msgstr "あなたの編集リビジョンが承認されました: {title}"
 
-#: apps/wiki/tasks.py:39
+#: apps/wiki/tasks.py:37
 msgid "Your revision has been rejected: {title}"
 msgstr "あなたの編集リビジョンが却下されました: {title}"
-
-#: apps/wiki/tasks.py:59
-msgid "{title} ({locale}) has a new approved revision"
-msgstr "{title} ({locale}) には新たに承認されたリビジョンがあります"
-
-#: apps/wiki/tasks.py:72
-msgid "{title} is ready for review ({creator})"
-msgstr "{title} はレビュー待ちです ({creator})"
-
-#: apps/wiki/tasks.py:85
-msgid "{title} was edited by {creator}"
-msgstr "{title} は {creator} により編集されました"
 
 #: apps/wiki/views.py:411
 msgid "You cannot translate this document."
 msgstr "このドキュメントは翻訳が許可されていません。"
 
-#: apps/wiki/views.py:599
+#: apps/wiki/views.py:598
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "お役に立てて光栄です &mdash; フィードバックありがとうございました！"
 
-#: apps/wiki/views.py:601
-msgid "Sorry to hear that. Perhaps one of the solutions below can help."
+#: apps/wiki/views.py:600
+#, fuzzy
+msgid "Sorry to hear that. Try searching for solutions below."
 msgstr "それは残念です。次の解決策のいずれかが助けになるかもしれません。"
 
-#: apps/wiki/views.py:611
+#: apps/wiki/views.py:610
 msgid "You already voted on this Article."
 msgstr "この記事にはすでに投票済みです。"
 
@@ -2226,76 +2271,35 @@ msgid "You are about to permanently delete this revision. <strong>This cannot be
 msgstr "このリビジョンを完全に削除しようとしています。<strong>この操作は元に戻せません！</strong> 本当に削除してもよろしいですか？"
 
 #. {t} is the title of the document. {c} is the category.
-#: apps/wiki/templates/wiki/document.html:5
+#: apps/wiki/templates/wiki/document.html:6 apps/wiki/templates/wiki/mobile/document.html:5
 msgid "{t} | {c}"
 msgstr "{t} | {c}"
 
-#: apps/wiki/templates/wiki/document.html:17
-msgid "Related Articles"
-msgstr "関連記事"
-
-#: apps/wiki/templates/wiki/document.html:28
-msgid "(Redirected from <a href=\"{href}\">{title}</a>)"
-msgstr "(<a href=\"{href}\">{title}</a> からリダイレクトしました)"
-
-#: apps/wiki/templates/wiki/document.html:33
-msgid ""
-"<p>This article may be out of date.</p> <p> An important change has been made to the English article on which this is based. Until this page is updated, you might find this helpful: <a href=\"%(url)"
-"s\">%(title)s</a> </p>"
-msgstr ""
-"<p>この記事の内容は古い可能性があります。</p> <p>この記事の基となっている英語版に重要な変更が加えられています。このページが更新されるまでは英語版を参照してください: <a href=\"%(url)s\">%(title)s</"
-"a> </p>"
-
-#: apps/wiki/templates/wiki/document.html:48
-msgid "Our volunteers haven't translated this article into %(locale)s yet. <a href=\"%(help_link)s\">Join us and help get the job done!</a>"
-msgstr "この記事はまだ %(locale)s に翻訳されていません。<a href=\"%(help_link)s\">サポートへの参加と翻訳のご協力</a> をお願いします！"
-
-#. This is shown for existing, never-approved translations
-#: apps/wiki/templates/wiki/document.html:58
-msgid "Our volunteers are working on translating this article. Until it's ready, maybe the English version can be of some help."
-msgstr "ボランティアがこの記事を翻訳中です。翻訳が完了するまでは英語版を参照してください。"
-
-#: apps/wiki/templates/wiki/document.html:65
-msgid "This article doesn't have approved content yet."
-msgstr "この記事の内容はまだ承認されていません。"
-
-#: apps/wiki/templates/wiki/document.html:69
-msgid "Contributors to this page: %(contributors)s"
-msgstr "このページの貢献者: %(contributors)s"
-
-#: apps/wiki/templates/wiki/document.html:79
-msgid "Was this article helpful?"
-msgstr "この記事は役に立ちましたか？"
-
-#: apps/wiki/templates/wiki/document.html:82
-msgid "Please wait..."
-msgstr "しばらくお待ちください..."
-
-#: apps/wiki/templates/wiki/document.html:89
+#: apps/wiki/templates/wiki/document.html:25 templates/mobile/base.html:52
 msgid "Couldn't find what you were looking for?"
 msgstr "求める答えが見つからないときは..."
 
-#: apps/wiki/templates/wiki/document.html:93
+#: apps/wiki/templates/wiki/document.html:29
 msgid "Here's a list of related articles that might help:"
 msgstr "関連する役立つ記事のリスト:"
 
-#: apps/wiki/templates/wiki/document.html:102
+#: apps/wiki/templates/wiki/document.html:38
 msgid "Browse other articles about <a href=\"{url}\">{category}</a>"
 msgstr "他の <a href=\"{url}\">{category}</a> についての記事から探すか、"
 
-#: apps/wiki/templates/wiki/document.html:105
+#: apps/wiki/templates/wiki/document.html:41
 msgid "Ask our awesome support community for help"
 msgstr "Firefox サポートコミュニティに助けを求めてください"
 
-#: apps/wiki/templates/wiki/document.html:108
+#: apps/wiki/templates/wiki/document.html:44
 msgid "Or try searching:"
 msgstr "または検索してみてください:"
 
-#: apps/wiki/templates/wiki/document.html:121
+#: apps/wiki/templates/wiki/document.html:57
 msgid "Turn off emails."
 msgstr "メール通知をオフにする。"
 
-#: apps/wiki/templates/wiki/document.html:126
+#: apps/wiki/templates/wiki/document.html:62
 msgid "Get emailed when this article changes."
 msgstr "この記事の変更をメールで通知する"
 
@@ -2638,6 +2642,47 @@ msgstr "注意: この記事には公開承認済みの翻訳がありません�
 msgid "{locale} translation:"
 msgstr "{locale}への翻訳:"
 
+#: apps/wiki/templates/wiki/includes/document_macros.html:5
+msgid "Related Articles"
+msgstr "関連記事"
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:17
+msgid "Contributors to this page: %(contributors)s"
+msgstr "このページの貢献者: %(contributors)s"
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:30
+msgid "(Redirected from <a href=\"{href}\">{title}</a>)"
+msgstr "(<a href=\"{href}\">{title}</a> からリダイレクトしました)"
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:35
+msgid ""
+"<p>This article may be out of date.</p> <p> An important change has been made to the English article on which this is based. Until this page is updated, you might find this helpful: <a href=\"%(url)"
+"s\">%(title)s</a> </p>"
+msgstr ""
+"<p>この記事の内容は古い可能性があります。</p> <p>この記事の基となっている英語版に重要な変更が加えられています。このページが更新されるまでは英語版を参照してください: <a href=\"%(url)s\">%(title)s</"
+"a> </p>"
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:53
+msgid "Our volunteers haven't translated this article into %(locale)s yet. <a href=\"%(help_link)s\">Join us and help get the job done!</a>"
+msgstr "この記事はまだ %(locale)s に翻訳されていません。<a href=\"%(help_link)s\">サポートへの参加と翻訳のご協力</a> をお願いします！"
+
+#. This is shown for existing, never-approved translations
+#: apps/wiki/templates/wiki/includes/document_macros.html:63
+msgid "Our volunteers are working on translating this article. Until it's ready, maybe the English version can be of some help."
+msgstr "ボランティアがこの記事を翻訳中です。翻訳が完了するまでは英語版を参照してください。"
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:70
+msgid "This article doesn't have approved content yet."
+msgstr "この記事の内容はまだ承認されていません。"
+
+#: apps/wiki/templates/wiki/includes/document_vote.html:7
+msgid "Was this article helpful?"
+msgstr "この記事は役に立ちましたか？"
+
+#: apps/wiki/templates/wiki/includes/document_vote.html:10
+msgid "Please wait..."
+msgstr "しばらくお待ちください..."
+
 #: apps/wiki/templates/wiki/includes/review_form.html:10
 msgid "Approve Translation"
 msgstr "翻訳を承認"
@@ -2747,32 +2792,32 @@ msgstr "このページの変更をメールで通知する"
 msgid "Help with:"
 msgstr "記事の表示対象:"
 
-#: templates/base.html:14
+#: templates/base.html:14 templates/mobile/base.html:12
 msgctxt "site_title"
 msgid "Firefox Help"
 msgstr "Firefox ヘルプ"
 
-#: templates/base.html:86
+#: templates/base.html:89
 msgid "Be <mark>Awesome</mark>"
 msgstr "<mark>すてきなこと</mark>、はじめよう"
 
-#: templates/base.html:91
+#: templates/base.html:94
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
 msgstr "Firefox ヘルプが世界中のボランティアによって運営されていることをご存知でしたか？"
 
-#: templates/base.html:94
+#: templates/base.html:97
 msgid "Grab your cape and join us &raquo;"
 msgstr "あなたもぜひ参加してください！ &raquo;"
 
-#: templates/base.html:98
+#: templates/base.html:101
 msgid "Check your <mark>plugins</mark>"
 msgstr "<mark>プラグイン</mark>は最新ですか？"
 
-#: templates/base.html:103
+#: templates/base.html:106
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
 msgstr "プラグインって何？ なぜ更新しないといけないの？ これらの質問に答え、インストールされたプラグインが最新バージョンか確認します。"
 
-#: templates/base.html:108
+#: templates/base.html:111
 msgid "Find out more &raquo;"
 msgstr "詳しくはこちら &raquo;"
 
@@ -2784,11 +2829,11 @@ msgstr "トップページへ戻る"
 msgid "Firefox"
 msgstr "Firefox"
 
-#: templates/global/footer.html:17
+#: templates/global/footer.html:17 templates/mobile/base.html:88
 msgid "Privacy Policy"
 msgstr "プライバシーポリシー"
 
-#: templates/global/footer.html:18
+#: templates/global/footer.html:18 templates/mobile/base.html:89
 msgid "Legal Notices"
 msgstr "法的事項"
 
@@ -2820,7 +2865,7 @@ msgstr "mozilla.com へ移動"
 msgid "visit <span>mozilla.org</span>"
 msgstr "<span>mozilla.org</span> を開く"
 
-#: templates/global/menu_links.html:2 templates/global/menu_links.html:4 templates/global/menu_links.html:16
+#: templates/global/menu_links.html:2 templates/global/menu_links.html:4 templates/global/menu_links.html:16 templates/global/mobile/header.html:4
 msgid "Features"
 msgstr "機能と特徴"
 
@@ -2876,7 +2921,7 @@ msgstr "FAQ"
 msgid "Blog"
 msgstr "ブログ"
 
-#: templates/global/menu_links.html:26
+#: templates/global/menu_links.html:26 templates/global/mobile/header.html:6
 msgid "Add-ons"
 msgstr "アドオン"
 
@@ -2920,7 +2965,7 @@ msgstr "モバイル版のアドオン"
 msgid "Developer Hub"
 msgstr "開発者センター"
 
-#: templates/global/menu_links.html:42 templates/layout/menu_links.html:5
+#: templates/global/menu_links.html:42 templates/global/mobile/header.html:7 templates/layout/menu_links.html:5
 msgid "Support"
 msgstr "サポート"
 
@@ -2968,6 +3013,24 @@ msgstr "利用規約"
 msgid "Contact Us"
 msgstr "お問い合わせ"
 
+#: templates/global/mobile/header.html:3
+#, fuzzy
+msgid "Mozilla Firefox"
+msgstr "Firefox について"
+
+#: templates/global/mobile/header.html:5
+#, fuzzy
+msgid "Desktop"
+msgstr "デスクトップ版:"
+
+#: templates/global/mobile/header.html:8
+msgid "Visit Mozilla"
+msgstr ""
+
+#: templates/global/mobile/header.html:10
+msgid "Menu"
+msgstr ""
+
 #: templates/includes/common_macros.html:5
 msgid "Search Firefox Help"
 msgstr "Firefox ヘルプの検索"
@@ -2987,6 +3050,10 @@ msgstr "ログアウト"
 #: templates/includes/common_macros.html:31
 msgid "Want to contribute?<br /> <a href=\"%(login_url)s\">Sign In</a> or <a href=\"%(register_url)s\">Register</a>"
 msgstr "サポートに協力していただけますか？<br /> <a href=\"%(login_url)s\">ログイン</a> | <a href=\"%(register_url)s\">ユーザ登録</a>"
+
+#: templates/includes/lang_form.html:4
+msgid "Other Languages"
+msgstr "他の言語"
 
 # 右上の貢献者メニュー見出し
 #: templates/includes/sidebar_modules.html:5
@@ -3025,17 +3092,27 @@ msgstr "記事を翻訳する"
 msgid "Contributors Forums"
 msgstr "貢献者フォーラム"
 
-#: templates/includes/sidebar_modules.html:25
+#: templates/includes/sidebar_modules.html:25 templates/mobile/base.html:40
 msgid "Firefox Help Home"
 msgstr "Firefox ヘルプ"
 
-#: templates/includes/sidebar_modules.html:28
+#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:55 templates/mobile/base.html:60
 msgid "Ask a Question"
 msgstr "フォーラムで質問する"
 
-#: templates/layout/footer.html:11
-msgid "Other Languages"
-msgstr "他の言語"
+#: templates/includes/mobile/paginator.html:5 templates/includes/mobile/paginator.html:7
+#, fuzzy
+msgid "Prev"
+msgstr "プレビュー"
+
+#: templates/includes/mobile/paginator.html:11
+msgid "Page {n}"
+msgid_plural "Page {n}"
+msgstr[0] ""
+
+#: templates/includes/mobile/paginator.html:15 templates/includes/mobile/paginator.html:17 templates/layout/paginator.html:31
+msgid "Next"
+msgstr "次へ"
 
 #: templates/layout/login.html:16
 msgid "Remember me"
@@ -3057,9 +3134,47 @@ msgstr "パスワードを再発行する"
 msgid "Previous"
 msgstr "前へ"
 
-#: templates/layout/paginator.html:31
-msgid "Next"
-msgstr "次へ"
+#: templates/mobile/base.html:31
+#, fuzzy
+msgid "Return to Firefox Support homepage"
+msgstr "Firefox サポート ホームページ"
+
+#: templates/mobile/base.html:58
+msgid "Need More Personal Help?"
+msgstr ""
+
+#: templates/mobile/base.html:61
+#, fuzzy
+msgid "Browse our Support Forum"
+msgstr "サポートフォーラム"
+
+#: templates/mobile/base.html:65
+msgid "Other Products"
+msgstr ""
+
+#: templates/mobile/base.html:68
+#, fuzzy
+msgid "Firefox for Desktop"
+msgstr "Firefox 4 for Mobile"
+
+#: templates/mobile/base.html:70
+#, fuzzy
+msgid "Firefox for Mobile"
+msgstr "Firefox 4 for Mobile"
+
+#: templates/mobile/base.html:72
+#, fuzzy
+msgid "Firefox Home"
+msgstr "Firefox ヘルプ"
+
+#: templates/mobile/base.html:73
+#, fuzzy
+msgid "Firefox Sync"
+msgstr "Firefox 4"
+
+#: templates/mobile/base.html:86
+msgid "View full site"
+msgstr ""
 
 #~ msgid "Cancel Changes"
 #~ msgstr "変更中止"
@@ -3118,9 +3233,6 @@ msgstr "次へ"
 
 #~ msgid "Other Firefox Support"
 #~ msgstr "他の Firefox サポートサイト"
-
-#~ msgid "Support Forum"
-#~ msgstr "サポートフォーラム"
 
 #, fuzzy
 #~ msgid "Download Stats"

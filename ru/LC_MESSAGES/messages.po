@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-04 14:37-0700\n"
+"POT-Creation-Date: 2011-02-25 07:28-0700\n"
 "PO-Revision-Date: 2011-02-20 22:34+0300\n"
 "Last-Translator: Alexander Slovesnik <unghost@mozilla-russia.org>\n"
 "Language-Team: Russian\n"
@@ -14,22 +14,30 @@ msgstr ""
 "X-Generator: Pootle 2.1.2\n"
 
 #. L10n: the tweet needs to be a reply to another tweet.
-#: apps/customercare/views.py:142
+#: apps/customercare/views.py:144
 msgid "Reply-to is empty"
 msgstr "Reply-to пуст"
 
 #. L10n: the tweet has no content.
-#: apps/customercare/views.py:147
+#: apps/customercare/views.py:149
 msgid "Message is empty"
 msgstr "Сообщение пусто"
 
-#: apps/customercare/views.py:150
+#: apps/customercare/views.py:152
 msgid "Message is too long"
 msgstr "Сообщение слишком длинное"
 
-#: apps/customercare/views.py:157
+#: apps/customercare/views.py:159 apps/customercare/views.py:226
 msgid "An error occured: {message}"
 msgstr "Произошла ошибка: {message}"
+
+#: apps/customercare/views.py:210 apps/customercare/views.py:215
+msgid "Invalid ID."
+msgstr ""
+
+#: apps/customercare/views.py:218
+msgid "Tweets that are replies or have replies must not be hidden."
+msgstr ""
 
 #: apps/customercare/templates/customercare/landing.html:4
 msgid "Join our Army of Awesome"
@@ -67,66 +75,63 @@ msgstr "Обновить"
 msgid "Sign out"
 msgstr "Выйти"
 
-#: apps/customercare/templates/customercare/landing.html:41
-#: apps/customercare/templates/customercare/twitter_modal.html:13
+#: apps/customercare/templates/customercare/landing.html:41 apps/customercare/templates/customercare/twitter_modal.html:13
 msgid "Sign in"
 msgstr "Войти"
 
-#: apps/customercare/templates/customercare/landing.html:50
+#: apps/customercare/templates/customercare/landing.html:51
 msgid "We couldn't find any recent tweets for %(language)s at this time. Please check again later or view tweets for other languages by using the language selector at the bottom of the page."
 msgstr "В данный момент мы не можем найти недавних твитов на %(language)s. Пожалуйста, зайдите попозже, или посмотрите на твиты на других языках, используя меню выбора языка внизу страницы."
 
-#: apps/customercare/templates/customercare/landing.html:75
+#: apps/customercare/templates/customercare/landing.html:76
 msgid "Our army has responded to:"
 msgstr "Наша армия ответила на:"
 
-#: apps/customercare/templates/customercare/landing.html:77
+#: apps/customercare/templates/customercare/landing.html:78
 msgid "Recent stats not available."
 msgstr "Недавняя статистика недоступна."
 
-#: apps/customercare/templates/customercare/landing.html:81
+#: apps/customercare/templates/customercare/landing.html:82
 msgid "<mark>{percent}%</mark> of tweets"
 msgstr "<mark>{percent}%</mark> твитов"
 
-#: apps/customercare/templates/customercare/landing.html:85
+#: apps/customercare/templates/customercare/landing.html:86
 msgid "<mark>{num_replies}</mark> replies"
 msgstr "<mark>{num_replies}</mark> ответов"
 
-#: apps/customercare/templates/customercare/landing.html:89
+#: apps/customercare/templates/customercare/landing.html:90
 msgid "<mark>{num_requests}</mark> tweets"
 msgstr "<mark>{num_requests}</mark> твитов"
 
-#: apps/customercare/templates/customercare/landing.html:100
+#: apps/customercare/templates/customercare/landing.html:101
 msgctxt "army_stats"
 msgid "Yesterday"
 msgstr "Вчера"
 
-#: apps/customercare/templates/customercare/landing.html:102
+#: apps/customercare/templates/customercare/landing.html:103
 msgctxt "army_stats"
 msgid "Last Week"
 msgstr "Последняя неделя"
 
-#: apps/customercare/templates/customercare/landing.html:104
+#: apps/customercare/templates/customercare/landing.html:105
 msgctxt "army_stats"
 msgid "Last Month"
 msgstr "Последний месяц"
 
-#: apps/customercare/templates/customercare/landing.html:106
+#: apps/customercare/templates/customercare/landing.html:107
 msgctxt "army_stats"
 msgid "Last Overall"
 msgstr "Последний общий итог"
 
-#: apps/customercare/templates/customercare/landing.html:136
+#: apps/customercare/templates/customercare/landing.html:137
 msgid "Take it to the <mark>next level!</mark>"
 msgstr "Перейдите на <mark>следующий уровень!</mark>"
 
-#: apps/customercare/templates/customercare/landing.html:141
+#: apps/customercare/templates/customercare/landing.html:142
 msgid "Want to go beyond 140 characters? <a href=\"%(join_url)s\">Join the support community</a> and help many more Firefox users."
 msgstr "Хотите выйти за пределы 140 символов? <a href=\"%(join_url)s\">Присоединяйтесь к сообществу поддержки</a> и помогите многим другим пользователям Firefox."
 
-#: apps/customercare/templates/customercare/reply_modal.html:2
-#: apps/kbforums/templates/kbforums/posts.html:93
-#: apps/kbforums/templates/kbforums/includes/post.html:26
+#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:93 apps/kbforums/templates/kbforums/includes/post.html:29
 msgid "Reply"
 msgstr "Ответить"
 
@@ -135,8 +140,12 @@ msgid "What is your reply about?"
 msgstr "О чём был ваш ответ?"
 
 #: apps/customercare/templates/customercare/reply_modal.html:21
-msgid "We have created <a href=\"%(signpost_help_url)s\">signpost messages</a> for easily replying to top Firefox topics on Twitter. If you would like to have messages for your language appear here, contact Kadir Topal for more info: %(contact_email)s"
-msgstr "Для облегчения ответа на наиболее часто задаваемые вопросы по Firefox на Twitter мы создали <a href=\"%(signpost_help_url)s\">типовые сообщения</a>. Если вы хотите чтобы там появились сообщения на вашем языке, свяжитесь с Kadir Topal по адресу: %(contact_email)s"
+msgid ""
+"We have created <a href=\"%(signpost_help_url)s\">signpost messages</a> for easily replying to top Firefox topics on Twitter. If you would like to have messages for your language appear here, "
+"contact Kadir Topal for more info: %(contact_email)s"
+msgstr ""
+"Для облегчения ответа на наиболее часто задаваемые вопросы по Firefox на Twitter мы создали <a href=\"%(signpost_help_url)s\">типовые сообщения</a>. Если вы хотите чтобы там появились сообщения на "
+"вашем языке, свяжитесь с Kadir Topal по адресу: %(contact_email)s"
 
 #: apps/customercare/templates/customercare/reply_modal.html:49
 msgid "Get personal"
@@ -150,8 +159,7 @@ msgstr "Измените его по своему разумению. Персо
 msgid "Your message was sent!"
 msgstr "Ваше сообщение было отправлено!"
 
-#: apps/customercare/templates/customercare/reply_modal.html:66
-#: apps/wiki/templates/wiki/includes/submit_revision_modal.html:18
+#: apps/customercare/templates/customercare/reply_modal.html:66 apps/wiki/templates/wiki/includes/submit_revision_modal.html:18
 msgid "Submit"
 msgstr "Отправить"
 
@@ -170,6 +178,10 @@ msgstr "ответило {0}"
 msgid "Reply now"
 msgstr "Ответить сейчас"
 
+#: apps/customercare/templates/customercare/tweets.html:26
+msgid "Remove"
+msgstr ""
+
 #: apps/customercare/templates/customercare/twitter_modal.html:2
 msgid "Sign in with your Twitter account"
 msgstr "Войдите с помощью вашей учётной записи Twitter"
@@ -178,27 +190,14 @@ msgstr "Войдите с помощью вашей учётной записи 
 msgid "Before you join the Army of Awesome, you need to log in so you can respond to tweets. You will now be redirected to Twitter to log in."
 msgstr "Перед тем, как присоединиться к нашей армии волонтеров, вам нужно войти, чтобы вы могли отвечать на твиты. Для входа вы сейчас будете перенаправлены на Twitter."
 
-#: apps/customercare/templates/customercare/twitter_modal.html:12
-#: apps/gallery/templates/gallery/confirm_media_delete.html:60
-#: apps/gallery/templates/gallery/edit_media.html:28
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:31
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:53
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:79
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:83
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:87
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:117
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:134
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:28
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:30
-#: apps/kbforums/templates/kbforums/edit_post.html:29
-#: apps/kbforums/templates/kbforums/edit_thread.html:27
-#: apps/kbforums/templates/kbforums/new_thread.html:34
-#: apps/notifications/templates/notifications/remove.html:16
-#: apps/users/templates/users/confirm_avatar_delete.html:23
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:25
-#: apps/wiki/templates/wiki/includes/review_form.html:35
-#: apps/wiki/templates/wiki/includes/review_form.html:49
-#: apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
+#: apps/customercare/templates/customercare/twitter_modal.html:12 apps/gallery/templates/gallery/confirm_media_delete.html:60 apps/gallery/templates/gallery/edit_media.html:28
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:53
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:79 apps/gallery/templates/gallery/includes/upload_media_form.html:83
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:87 apps/gallery/templates/gallery/includes/upload_media_form.html:117
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:134 apps/kbforums/templates/kbforums/confirm_post_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:30
+#: apps/kbforums/templates/kbforums/edit_post.html:29 apps/kbforums/templates/kbforums/edit_thread.html:27 apps/kbforums/templates/kbforums/new_thread.html:34
+#: apps/notifications/templates/notifications/remove.html:16 apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_revision_delete.html:25
+#: apps/wiki/templates/wiki/includes/review_form.html:35 apps/wiki/templates/wiki/includes/review_form.html:49 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -210,8 +209,7 @@ msgstr "Эта неделя"
 msgid "All Time"
 msgstr "Всё время"
 
-#: apps/dashboards/readouts.py:58
-#: apps/dashboards/readouts.py:154
+#: apps/dashboards/readouts.py:58 apps/dashboards/readouts.py:155
 msgid "Most-Visited Articles"
 msgstr "Наиболее часто посещаемые статьи"
 
@@ -243,113 +241,109 @@ msgstr "Чаще всего просмотренные"
 msgid "Most Recent"
 msgstr "Самые последние"
 
-#: apps/dashboards/readouts.py:156
+#: apps/dashboards/readouts.py:157
 msgid "All knowledge base articles..."
 msgstr "Все статьи базы знаний..."
 
-#: apps/dashboards/readouts.py:158
+#: apps/dashboards/readouts.py:159
 msgid "Visits"
 msgstr "Посещений"
 
-#: apps/dashboards/readouts.py:161
+#: apps/dashboards/readouts.py:162
 msgid "Review Needed"
 msgstr "Требуется рецензия"
 
 #. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:200
+#: apps/dashboards/readouts.py:206
 msgid "All translations in English..."
 msgstr "Все переводы на английском..."
 
-#: apps/dashboards/readouts.py:203
+#: apps/dashboards/readouts.py:209
 msgid "Update Needed"
 msgstr "Требуется обновление"
 
-#: apps/dashboards/readouts.py:204
+#: apps/dashboards/readouts.py:210
 msgid "Out of Date"
 msgstr "Устарело"
 
-#: apps/dashboards/readouts.py:256
+#: apps/dashboards/readouts.py:262
 msgid "Untranslated Articles"
 msgstr "Непереведённые статьи"
 
-#: apps/dashboards/readouts.py:257
+#: apps/dashboards/readouts.py:263
 msgid "Untranslated"
 msgstr "Непереведено"
 
-#: apps/dashboards/readouts.py:258
+#: apps/dashboards/readouts.py:264
 msgid "All untranslated articles..."
 msgstr "Все непереведённые статьи..."
 
-#: apps/dashboards/readouts.py:260
+#: apps/dashboards/readouts.py:266
 msgid "Updated"
 msgstr "Обновлено"
 
-#: apps/dashboards/readouts.py:300
+#: apps/dashboards/readouts.py:306
 msgid "Out-of-Date Translations"
 msgstr "Устаревшие переводы"
 
-#: apps/dashboards/readouts.py:301
+#: apps/dashboards/readouts.py:307
 msgid "Out-of-Date"
 msgstr "Устарела"
 
-#: apps/dashboards/readouts.py:302
+#: apps/dashboards/readouts.py:308
 msgid "All out-of-date translations..."
 msgstr "Все устаревшие переводы..."
 
-#: apps/dashboards/readouts.py:304
+#: apps/dashboards/readouts.py:310
 msgid "Out of date since"
 msgstr "Устарело с"
 
-#: apps/dashboards/readouts.py:379
+#: apps/dashboards/readouts.py:385
 msgid "Translations Needing Updates"
 msgstr "Переводы нуждающиеся в обновлениях"
 
-#: apps/dashboards/readouts.py:380
+#: apps/dashboards/readouts.py:386
 msgid "Needing Updates"
 msgstr "Требует обновления"
 
-#: apps/dashboards/readouts.py:381
+#: apps/dashboards/readouts.py:387
 msgid "All translations needing updates..."
 msgstr "Все переводы требующие обновлений..."
 
-#: apps/dashboards/readouts.py:388
+#: apps/dashboards/readouts.py:394
 msgid "Unreviewed Changes"
 msgstr "Неотрецензированные изменения"
 
-#: apps/dashboards/readouts.py:392
+#: apps/dashboards/readouts.py:398
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "Неотрецензирован"
 
-#: apps/dashboards/readouts.py:393
+#: apps/dashboards/readouts.py:399
 msgid "All articles requiring review..."
 msgstr "Все статьи, требующие рецензии..."
 
-#: apps/dashboards/readouts.py:395
+#: apps/dashboards/readouts.py:401
 msgid "Changed"
 msgstr "Изменено"
 
-#: apps/dashboards/views.py:29
-#: apps/dashboards/views.py:40
+#: apps/dashboards/views.py:38 apps/dashboards/views.py:51
 msgid "The template \"%s\" does not exist."
 msgstr "Шаблон \"%s\" не существует."
 
-#: apps/dashboards/views.py:73
-#: apps/dashboards/templates/dashboards/contributors.html:4
+#: apps/dashboards/views.py:84 apps/dashboards/templates/dashboards/contributors.html:4
 msgid "Contributor Dashboard"
 msgstr "Панель помощника"
 
-#: apps/dashboards/views.py:81
-#: apps/dashboards/templates/dashboards/localization.html:4
+#: apps/dashboards/views.py:92 apps/dashboards/templates/dashboards/localization.html:4
 msgid "Localization Dashboard"
 msgstr "Панель локализации"
 
-#: apps/dashboards/templates/dashboards/contributors.html:16
-#: apps/dashboards/templates/dashboards/localization.html:15
+#: apps/dashboards/templates/dashboards/contributors.html:16 apps/dashboards/templates/dashboards/localization.html:15
 msgid "Show information for:"
 msgstr "Показать информацию о:"
 
-#: apps/dashboards/templates/dashboards/home.html:7
+#: apps/dashboards/templates/dashboards/home.html:7 apps/dashboards/templates/dashboards/mobile/home.html:3
 msgid "Firefox Support Home Page"
 msgstr "Страница поддержки Firefox"
 
@@ -358,22 +352,30 @@ msgid "Need Help With <mark>Firefox?</mark>"
 msgstr "Требуется помощь с <mark>Firefox?</mark>"
 
 #: apps/dashboards/templates/dashboards/home.html:15
-msgid "You've come to the right place! Start by searching our site below, or browse our list of popular support articles. If you can't find the answer you need, our community of volunteers are ready to help you find a solution."
-msgstr "Вы пришли в нужное место! Начните с поиска по нашему сайту, или просмотрите список популярных статей поддержки. Если вы не можете найти нужный ответ, добровольцы из нашего сообщества готовы помочь вам найти решение."
+msgid ""
+"You've come to the right place! Start by searching our site below, or browse our list of popular support articles. If you can't find the answer you need, our community of volunteers are ready to "
+"help you find a solution."
+msgstr ""
+"Вы пришли в нужное место! Начните с поиска по нашему сайту, или просмотрите список популярных статей поддержки. Если вы не можете найти нужный ответ, добровольцы из нашего сообщества готовы помочь "
+"вам найти решение."
 
 #: apps/dashboards/templates/dashboards/localization.html:27
 msgid "Overview"
 msgstr "Обзор"
 
-#: apps/dashboards/templates/dashboards/localization.html:54
+#: apps/dashboards/templates/dashboards/localization.html:39
+msgid "%(numerator)s <small>of %(denominator)s</small>"
+msgstr ""
+
+#: apps/dashboards/templates/dashboards/localization.html:56
 msgid "User Interface"
 msgstr "Интерфейс пользователя"
 
-#: apps/dashboards/templates/dashboards/localization.html:58
+#: apps/dashboards/templates/dashboards/localization.html:60
 msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
 msgstr "Полностью переведенный интерфейс пользователя повышает эффективность сайта для посетителей сайта на вашем языке. Помогите <a href=\"%(url)s\">перевести интерфейс</a>."
 
-#: apps/dashboards/templates/dashboards/localization.html:67
+#: apps/dashboards/templates/dashboards/localization.html:69
 msgid "More options:"
 msgstr "Другие настройки:"
 
@@ -390,12 +392,14 @@ msgid "Need Help With <mark>Firefox for Mobile?</mark>"
 msgstr "Нужна помощь с <mark>мобильным Firefox?</mark>"
 
 #: apps/dashboards/templates/dashboards/mobile.html:17
-msgid "You've come to the right place! Start by searching for solutions, or by choosing one of our support articles below. If you can't find the answer you need, our community of volunteers are ready to help."
-msgstr "Вы пришли в нужное место! Начните с поиска решений, или выберите одну из наших статей поддержки, размещённую ниже. Если вы не можете найти нужный вам ответ, вам готово помочь наше сообщество добровольцев."
+msgid ""
+"You've come to the right place! Start by searching for solutions, or by choosing one of our support articles below. If you can't find the answer you need, our community of volunteers are ready to "
+"help."
+msgstr ""
+"Вы пришли в нужное место! Начните с поиска решений, или выберите одну из наших статей поддержки, размещённую ниже. Если вы не можете найти нужный вам ответ, вам готово помочь наше сообщество "
+"добровольцев."
 
-#: apps/dashboards/templates/dashboards/includes/kb_readout.html:4
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:10
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:12
+#: apps/dashboards/templates/dashboards/includes/kb_readout.html:4 apps/wiki/templates/wiki/includes/sidebar_modules.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:12
 msgid "Article"
 msgstr "Статья"
 
@@ -451,6 +455,21 @@ msgctxt "locale"
 msgid "Get emailed when English reviews are waiting"
 msgstr "Отправлять мне письма когда статьи на английском ждут рецензии"
 
+#: apps/dashboards/templates/dashboards/mobile/home.html:8 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:128 templates/base.html:8 templates/base.html:17
+#: templates/mobile/base.html:15
+msgid "Firefox Help"
+msgstr "Справка Firefox"
+
+#: apps/dashboards/templates/dashboards/mobile/home.html:17
+#, fuzzy
+msgid "Common Questions"
+msgstr "Вопросы поддержки"
+
+#: apps/dashboards/templates/dashboards/mobile/mobile.html:3 templates/mobile/base.html:5
+#, fuzzy
+msgid "Firefox Help <span>for Mobile</span>"
+msgstr "Справка для мобильного Firefox"
+
 #: apps/flagit/models.py:23
 msgid "Spam or other unrelated content"
 msgstr "Спам и другое не относящееся к делу содержимое"
@@ -475,8 +494,7 @@ msgstr "В ожидании"
 msgid "Accepted and Fixed"
 msgstr "Принято и зафиксировано"
 
-#: apps/flagit/models.py:32
-#: apps/wiki/templates/wiki/document_revisions.html:62
+#: apps/flagit/models.py:32 apps/wiki/templates/wiki/document_revisions.html:62
 msgid "Rejected"
 msgstr "Отклонено"
 
@@ -488,8 +506,7 @@ msgstr "Вы уже отметили это содержимое."
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr "Вы отметили флагом это содержание. В ближайшее время модератор рассмотрит ваше замечание."
 
-#: apps/flagit/templates/flagit/queue.html:3
-#: apps/flagit/templates/flagit/queue.html:8
+#: apps/flagit/templates/flagit/queue.html:3 apps/flagit/templates/flagit/queue.html:8
 msgid "Flagged Content Pending Moderation"
 msgstr "Отмеченное содержимое ожидающего модерации"
 
@@ -525,77 +542,51 @@ msgstr "Ой! {t} {id} больше не существует."
 msgid "There is no flagged content pending moderation."
 msgstr "Нет отмеченного содержимого ожидающего модерации."
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:1
-#: apps/flagit/templates/flagit/includes/flagged_question.html:3
-#: apps/kbforums/forms.py:28
-#: apps/kbforums/forms.py:50
-#: apps/kbforums/forms.py:76
-#: apps/wiki/forms.py:172
-#: apps/wiki/templates/wiki/includes/revision_diff.html:45
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:3 apps/kbforums/forms.py:28 apps/kbforums/forms.py:50
+#: apps/kbforums/forms.py:76 apps/wiki/forms.py:172 apps/wiki/templates/wiki/includes/revision_diff.html:45
 msgid "Content:"
 msgstr "Содержимое:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:3
-#: apps/flagit/templates/flagit/includes/flagged_question.html:5
-#: apps/wiki/templates/wiki/revision.html:24
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:3 apps/flagit/templates/flagit/includes/flagged_question.html:5 apps/wiki/templates/wiki/revision.html:24
 msgid "Created:"
 msgstr "Создано:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:4
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:7
-#: apps/flagit/templates/flagit/includes/flagged_question.html:6
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:4 apps/flagit/templates/flagit/includes/flagged_answer.html:7 apps/flagit/templates/flagit/includes/flagged_question.html:6
 #: apps/flagit/templates/flagit/includes/flagged_question.html:9
 msgid "{date} by {user}"
 msgstr "{date} от {user}"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:6
-#: apps/flagit/templates/flagit/includes/flagged_question.html:8
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:6 apps/flagit/templates/flagit/includes/flagged_question.html:8
 msgid "Updated:"
 msgstr "Обновлено:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:9
-#: apps/flagit/templates/flagit/includes/flagged_question.html:11
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:9 apps/flagit/templates/flagit/includes/flagged_question.html:11
 msgid "Take Action:"
 msgstr "Произвести действие:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:13
-#: apps/kbforums/templates/kbforums/posts.html:35
-#: apps/kbforums/templates/kbforums/includes/post.html:9
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:35 apps/kbforums/templates/kbforums/includes/post.html:12
 msgid "Edit"
 msgstr "Правка"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:16
-#: apps/flagit/templates/flagit/includes/flagged_question.html:16
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:27
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29
-#: apps/kbforums/templates/kbforums/posts.html:39
-#: apps/kbforums/templates/kbforums/includes/post.html:13
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:24
-#: apps/wiki/templates/wiki/document_revisions.html:83
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:27
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29 apps/kbforums/templates/kbforums/posts.html:39 apps/kbforums/templates/kbforums/includes/post.html:16
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:24 apps/wiki/templates/wiki/document_revisions.html:83
 msgid "Delete"
 msgstr "Удалить"
 
-#: apps/flagit/templates/flagit/includes/flagged_question.html:1
-#: apps/kbforums/forms.py:44
-#: apps/kbforums/forms.py:62
-#: apps/wiki/forms.py:61
-#: apps/wiki/templates/wiki/translate.html:55
+#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:61 apps/wiki/templates/wiki/translate.html:55
 msgid "Title:"
 msgstr "Заголовок:"
 
-#: apps/gallery/forms.py:14
-#: apps/kbforums/forms.py:9
-#: apps/wiki/forms.py:18
+#: apps/gallery/forms.py:14 apps/kbforums/forms.py:9 apps/wiki/forms.py:18
 msgid "Please provide a title."
 msgstr "Пожалуйста, введите заголовок."
 
-#: apps/gallery/forms.py:15
-#: apps/wiki/forms.py:19
+#: apps/gallery/forms.py:15 apps/wiki/forms.py:19
 msgid "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Заголовок слишком короткий (%(show_value)s символов). Он должен быть по крайней мере %(limit_value)s символов."
 
-#: apps/gallery/forms.py:18
-#: apps/kbforums/forms.py:13
+#: apps/gallery/forms.py:18 apps/kbforums/forms.py:13
 msgid "Please keep the length of your title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Пожалуйста, ограничьте длину вашего заголовка %(limit_value)s символами. В данный момент его длина %(show_value)s символов."
 
@@ -607,13 +598,11 @@ msgstr "Пожалуйста, введите описание."
 msgid "Please keep the length of your description to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Пожалуйста, ограничьте длину вашего описания %(limit_value)s символами. В данный момент его длина %(show_value)s символов."
 
-#: apps/gallery/forms.py:25
-#: apps/upload/forms.py:7
+#: apps/gallery/forms.py:25 apps/upload/forms.py:7
 msgid "You have not selected an image to upload."
 msgstr "Вы не выбрали изображение для загрузки."
 
-#: apps/gallery/forms.py:26
-#: apps/upload/forms.py:8
+#: apps/gallery/forms.py:26 apps/upload/forms.py:8
 msgid "Please keep the length of your image filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Пожалуйста, ограничьте длину имени вашего файла изображения %(max)s символами. В данный момент его длина %(length)s символов."
 
@@ -645,23 +634,16 @@ msgstr "Включите это в синтаксис вики с помощью
 msgid "Provide a brief description of this media."
 msgstr "Представьте краткое описание этого медиа."
 
-#: apps/gallery/forms.py:65
-#: apps/gallery/forms.py:145
-#: apps/gallery/templates/gallery/confirm_media_delete.html:24
+#: apps/gallery/forms.py:65 apps/gallery/forms.py:145 apps/gallery/templates/gallery/confirm_media_delete.html:24
 msgid "Locale"
 msgstr "Локаль"
 
-#: apps/gallery/forms.py:70
-#: apps/gallery/forms.py:150
-#: apps/gallery/templates/gallery/confirm_media_delete.html:22
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:15
+#: apps/gallery/forms.py:70 apps/gallery/forms.py:150 apps/gallery/templates/gallery/confirm_media_delete.html:22 apps/kbforums/templates/kbforums/confirm_thread_delete.html:15
 #: apps/kbforums/templates/kbforums/threads.html:33
 msgid "Title"
 msgstr "Заголовок"
 
-#: apps/gallery/forms.py:77
-#: apps/gallery/forms.py:157
-#: apps/gallery/templates/gallery/confirm_media_delete.html:26
+#: apps/gallery/forms.py:77 apps/gallery/forms.py:157 apps/gallery/templates/gallery/confirm_media_delete.html:26
 msgid "Description"
 msgstr "Описание"
 
@@ -705,45 +687,30 @@ msgstr "Вы собираетесь навсегда удалить это ви�
 msgid "Delete video | {t} | Media Gallery"
 msgstr "Удалить видео | {t} | Медиа-галерея"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:14
-#: apps/gallery/templates/gallery/edit_media.html:13
-#: apps/gallery/templates/gallery/gallery.html:3
-#: apps/gallery/templates/gallery/gallery.html:6
-#: apps/gallery/templates/gallery/gallery.html:10
-#: apps/gallery/templates/gallery/media.html:9
-#: apps/gallery/templates/gallery/search.html:6
-#: apps/gallery/templates/gallery/search.html:11
-#: templates/includes/sidebar_modules.html:9
+#: apps/gallery/templates/gallery/confirm_media_delete.html:14 apps/gallery/templates/gallery/edit_media.html:13 apps/gallery/templates/gallery/gallery.html:3
+#: apps/gallery/templates/gallery/gallery.html:6 apps/gallery/templates/gallery/gallery.html:10 apps/gallery/templates/gallery/media.html:9 apps/gallery/templates/gallery/search.html:6
+#: apps/gallery/templates/gallery/search.html:11 templates/includes/sidebar_modules.html:9
 msgid "Media Gallery"
 msgstr "Медиа-галерея"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:28
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:17
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:12
+#: apps/gallery/templates/gallery/confirm_media_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:17 apps/wiki/templates/wiki/confirm_revision_delete.html:12
 msgid "Creator"
 msgstr "Создатель"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:30
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:17
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:19
+#: apps/gallery/templates/gallery/confirm_media_delete.html:30 apps/kbforums/templates/kbforums/confirm_post_delete.html:17 apps/kbforums/templates/kbforums/confirm_thread_delete.html:19
 #: apps/wiki/templates/wiki/confirm_revision_delete.html:14
 msgid "Date"
 msgstr "Дата"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:33
-#: apps/gallery/templates/gallery/confirm_media_delete.html:50
+#: apps/gallery/templates/gallery/confirm_media_delete.html:33 apps/gallery/templates/gallery/confirm_media_delete.html:50
 msgid "Available formats"
 msgstr "Доступные форматы"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:47
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:13
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:62
+#: apps/gallery/templates/gallery/confirm_media_delete.html:47 apps/gallery/templates/gallery/includes/upload_media_form.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:62
 msgid "Video"
 msgstr "Видео"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:52
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:12
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:22
+#: apps/gallery/templates/gallery/confirm_media_delete.html:52 apps/gallery/templates/gallery/includes/upload_media_form.html:12 apps/gallery/templates/gallery/includes/upload_media_form.html:22
 msgid "Image"
 msgstr "Изображение"
 
@@ -771,19 +738,15 @@ msgstr "Сохранить видео"
 msgid "Edit video | {t} | Media Gallery"
 msgstr "Изменить видео | {t} | Медиа-галерея"
 
-#: apps/gallery/templates/gallery/gallery.html:13
-#: apps/gallery/templates/gallery/media.html:24
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:8
+#: apps/gallery/templates/gallery/gallery.html:13 apps/gallery/templates/gallery/media.html:24 apps/gallery/templates/gallery/includes/upload_media_form.html:8
 msgid "Upload a New Media File"
 msgstr "Загрузить новый медиа-файл"
 
-#: apps/gallery/templates/gallery/gallery.html:16
-#: apps/gallery/templates/gallery/search.html:14
+#: apps/gallery/templates/gallery/gallery.html:16 apps/gallery/templates/gallery/search.html:14
 msgid "Show media for:"
 msgstr "Показать медиа для:"
 
-#: apps/gallery/templates/gallery/gallery.html:23
-#: apps/gallery/templates/gallery/search.html:21
+#: apps/gallery/templates/gallery/gallery.html:23 apps/gallery/templates/gallery/search.html:21 templates/includes/lang_form.html:11
 msgid "Go"
 msgstr "Перейти"
 
@@ -791,28 +754,20 @@ msgstr "Перейти"
 msgid "You have JavaScript disabled. Please enable JavaScript to upload files."
 msgstr "У вас отключён JavaScript. Для загрузки файлов, пожалуйста, включите JavaScript."
 
-#: apps/gallery/templates/gallery/gallery.html:32
-#: apps/gallery/templates/gallery/search.html:27
+#: apps/gallery/templates/gallery/gallery.html:32 apps/gallery/templates/gallery/search.html:27
 msgid "Show:"
 msgstr "Показать:"
 
-#: apps/gallery/templates/gallery/gallery.html:36
-#: apps/gallery/templates/gallery/gallery.html:38
-#: apps/gallery/templates/gallery/search.html:31
-#: apps/gallery/templates/gallery/search.html:33
+#: apps/gallery/templates/gallery/gallery.html:36 apps/gallery/templates/gallery/gallery.html:38 apps/gallery/templates/gallery/search.html:31 apps/gallery/templates/gallery/search.html:33
 msgid "Images"
 msgstr "Изображения"
 
-#: apps/gallery/templates/gallery/gallery.html:43
-#: apps/gallery/templates/gallery/gallery.html:45
-#: apps/gallery/templates/gallery/search.html:38
-#: apps/gallery/templates/gallery/search.html:40
+#: apps/gallery/templates/gallery/gallery.html:43 apps/gallery/templates/gallery/gallery.html:45 apps/gallery/templates/gallery/search.html:38 apps/gallery/templates/gallery/search.html:40
 #: templates/global/menu_links.html:8
 msgid "Videos"
 msgstr "Видео"
 
-#: apps/gallery/templates/gallery/gallery.html:53
-#: apps/gallery/templates/gallery/search.html:48
+#: apps/gallery/templates/gallery/gallery.html:53 apps/gallery/templates/gallery/search.html:48
 msgid "Search Gallery"
 msgstr "Поиск в галерее"
 
@@ -820,11 +775,8 @@ msgstr "Поиск в галерее"
 msgid "{title} | Media Gallery"
 msgstr "{title} | Медиа-галерея"
 
-#: apps/gallery/templates/gallery/media.html:13
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:39
-#: apps/upload/templates/upload/attachments.html:12
-#: apps/upload/templates/upload/attachments.html:17
-#: apps/upload/templates/upload/attachments.html:19
+#: apps/gallery/templates/gallery/media.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:39 apps/upload/templates/upload/attachments.html:12
+#: apps/upload/templates/upload/attachments.html:17 apps/upload/templates/upload/attachments.html:19
 msgid "Delete this image"
 msgstr "Удалить это изображение"
 
@@ -852,11 +804,8 @@ msgstr "Загружено {date}"
 msgid "Media Gallery Search"
 msgstr "Поиск в медиа-галерее"
 
-#: apps/gallery/templates/gallery/search.html:7
-#: apps/search/templates/search/base.html:3
-#: apps/search/templates/search/results.html:17
-#: templates/includes/common_macros.html:13
-#: templates/includes/common_macros.html:14
+#: apps/gallery/templates/gallery/search.html:7 apps/search/templates/search/base.html:3 apps/search/templates/search/basic-form.html:14 apps/search/templates/search/results.html:17
+#: apps/search/templates/search/mobile/down.html:3 apps/search/templates/search/mobile/results.html:3 templates/includes/common_macros.html:13 templates/includes/common_macros.html:14
 msgid "Search"
 msgstr "Поиск"
 
@@ -868,8 +817,7 @@ msgstr "Медиа-файлов не найдено."
 msgid "Continue Uploading Media"
 msgstr "Продолжить загрузку медиа"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:10
-#: apps/upload/templates/upload/attachments.html:56
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:10 apps/upload/templates/upload/attachments.html:56
 msgid "Upload"
 msgstr "Закачать"
 
@@ -881,22 +829,17 @@ msgstr "Выберите для загрузки файл изображения
 msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
 msgstr "Принимаемые форматы: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Узнать больше...</a>"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:28
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:76
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:28 apps/gallery/templates/gallery/includes/upload_media_form.html:76
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:114
 msgid "Progress"
 msgstr "Прогресс"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:33
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:89
-#: apps/kbforums/templates/kbforums/edit_post.html:27
-#: apps/kbforums/templates/kbforums/new_thread.html:32
-#: apps/kbforums/templates/kbforums/posts.html:92
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:33 apps/gallery/templates/gallery/includes/upload_media_form.html:89 apps/kbforums/templates/kbforums/edit_post.html:27
+#: apps/kbforums/templates/kbforums/new_thread.html:32 apps/kbforums/templates/kbforums/posts.html:92
 msgid "Preview"
 msgstr "Предпросмотр"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:52
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:131
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:52 apps/gallery/templates/gallery/includes/upload_media_form.html:131
 msgid "Submit file"
 msgstr "Отправить файл"
 
@@ -916,8 +859,7 @@ msgstr "Выберите для загрузки видео в формате Og
 msgid "Select a WebM video to upload."
 msgstr "Выберите для загрузки видео в формате WebM."
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:96
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:102
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:96 apps/gallery/templates/gallery/includes/upload_media_form.html:102
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:108
 msgid "Delete {format} file"
 msgstr "Удалить {format} файл"
@@ -939,7 +881,8 @@ msgid "Reply to: %s"
 msgstr "Ответ на: %s"
 
 #: apps/kbforums/events.py:54
-msgid "New thread in %s forum: %s"
+#, fuzzy
+msgid "New thread in %s: %s"
 msgstr "Новая тема на форуме %s: %s"
 
 #: apps/kbforums/feeds.py:22
@@ -971,13 +914,8 @@ msgstr "Пожалуйста, ограничьте длину вашего со�
 msgid "Delete Post | {t} | {d} Discussion | Knowledge Base"
 msgstr "Удалить сообщение | {t} | {d} Обсуждение | База знаний"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:7
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:7
-#: apps/kbforums/templates/kbforums/edit_post.html:9
-#: apps/kbforums/templates/kbforums/edit_thread.html:8
-#: apps/kbforums/templates/kbforums/new_thread.html:9
-#: apps/kbforums/templates/kbforums/posts.html:9
-#: apps/kbforums/templates/kbforums/threads.html:7
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:7 apps/kbforums/templates/kbforums/confirm_thread_delete.html:7 apps/kbforums/templates/kbforums/edit_post.html:9
+#: apps/kbforums/templates/kbforums/edit_thread.html:8 apps/kbforums/templates/kbforums/new_thread.html:9 apps/kbforums/templates/kbforums/posts.html:9 apps/kbforums/templates/kbforums/threads.html:7
 msgid "Discuss"
 msgstr "Обсудить"
 
@@ -989,14 +927,11 @@ msgstr "Удалить сообщение"
 msgid "Are you sure you want to delete this post?"
 msgstr "Вы уверены, что хотите удалить это сообщение?"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:15
-#: apps/kbforums/templates/kbforums/posts.html:62
-#: apps/kbforums/templates/kbforums/threads.html:34
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:15 apps/kbforums/templates/kbforums/posts.html:62 apps/kbforums/templates/kbforums/threads.html:34
 msgid "Author"
 msgstr "Автор"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:19
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:16
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:19 apps/wiki/templates/wiki/confirm_revision_delete.html:16
 msgid "Content"
 msgstr "Содержимое"
 
@@ -1030,8 +965,7 @@ msgstr "Вы собираетесь навсегда удалить эту те�
 msgid "Edit a post | {t} | {d} Discussion | Knowledge Base"
 msgstr "Изменить сообщение | {t} | {d} Обсуждение | База знаний"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:11
-#: apps/kbforums/templates/kbforums/edit_post.html:15
+#: apps/kbforums/templates/kbforums/edit_post.html:11 apps/kbforums/templates/kbforums/edit_post.html:15
 msgid "Edit a post"
 msgstr "Правка сообщения"
 
@@ -1039,8 +973,7 @@ msgstr "Правка сообщения"
 msgid "Update post"
 msgstr "Обновить сообщение"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:35
-#: apps/kbforums/templates/kbforums/new_thread.html:39
+#: apps/kbforums/templates/kbforums/edit_post.html:35 apps/kbforums/templates/kbforums/new_thread.html:39
 msgid "Post Preview:"
 msgstr "Создать предпросмотр:"
 
@@ -1066,8 +999,7 @@ msgstr "Обновить ветку"
 msgid "Create a new thread | {d} | Knowledge Base"
 msgstr "Создать новую ветку | {d} | База знаний"
 
-#: apps/kbforums/templates/kbforums/new_thread.html:10
-#: apps/kbforums/templates/kbforums/new_thread.html:14
+#: apps/kbforums/templates/kbforums/new_thread.html:10 apps/kbforums/templates/kbforums/new_thread.html:14
 msgid "Create a new thread"
 msgstr "Создать новую ветку"
 
@@ -1080,24 +1012,19 @@ msgstr "Написать"
 msgid "{t} | {d} Discussion | Knowledge Base"
 msgstr "{t} | {d} Обсуждение | База знаний"
 
-#: apps/kbforums/templates/kbforums/posts.html:16
-#: apps/search/__init__.py:42
+#: apps/kbforums/templates/kbforums/posts.html:16 apps/search/__init__.py:42
 msgid "Sticky"
 msgstr "Закреплено"
 
-#: apps/kbforums/templates/kbforums/posts.html:17
-#: apps/search/__init__.py:43
-#: apps/search/forms.py:129
+#: apps/kbforums/templates/kbforums/posts.html:17 apps/search/__init__.py:43 apps/search/forms.py:129
 msgid "Locked"
 msgstr "Закрыто"
 
-#: apps/kbforums/templates/kbforums/posts.html:18
-#: apps/kbforums/templates/kbforums/threads.html:13
+#: apps/kbforums/templates/kbforums/posts.html:18 apps/kbforums/templates/kbforums/threads.html:13
 msgid "Watching"
 msgstr "Наблюдение"
 
-#: apps/kbforums/templates/kbforums/posts.html:25
-#: apps/kbforums/templates/kbforums/threads.html:20
+#: apps/kbforums/templates/kbforums/posts.html:25 apps/kbforums/templates/kbforums/threads.html:20
 msgid "Stop watching"
 msgstr "Прекратить наблюдение"
 
@@ -1121,8 +1048,7 @@ msgstr "Сообщение"
 msgid "Oh, no! Looks like there are no posts!"
 msgstr "О нет! Похоже что тут нет ни одного сообщения!"
 
-#: apps/kbforums/templates/kbforums/posts.html:83
-#: apps/kbforums/templates/kbforums/posts.html:99
+#: apps/kbforums/templates/kbforums/posts.html:83 apps/kbforums/templates/kbforums/posts.html:99
 msgid "Post a reply"
 msgstr "Написать ответ"
 
@@ -1181,15 +1107,20 @@ msgstr "от  <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 msgid "There are no threads. Maybe you should create some!"
 msgstr "Нет ни одного обсуждения. Может вам надо их создать!"
 
-#: apps/kbforums/templates/kbforums/includes/post.html:6
-msgid "{0} posts"
-msgstr "{0} сообщений"
+#. {0} is the number of posts.
+#: apps/kbforums/templates/kbforums/includes/post.html:8
+#, fuzzy
+msgid "1 post"
+msgid_plural "{0} posts"
+msgstr[0] "{0} сообщений"
+msgstr[1] "{0} сообщений"
+msgstr[2] "{0} сообщений"
 
-#: apps/kbforums/templates/kbforums/includes/post.html:23
+#: apps/kbforums/templates/kbforums/includes/post.html:26
 msgid "Link to this post."
 msgstr "Ссылка на это сообщение."
 
-#: apps/kbforums/templates/kbforums/includes/post.html:31
+#: apps/kbforums/templates/kbforums/includes/post.html:34
 msgid "Modified by {name} on {datetime}"
 msgstr "Изменено {name} в {datetime}"
 
@@ -1210,9 +1141,7 @@ msgstr "Отписаться"
 msgid "Do you want to stop receiving email notifications from the {1} <strong>{0}</strong>?"
 msgstr "Вы хотите прекратить получать уведомления по почте от {1} <strong>{0}</strong>?"
 
-#: apps/search/__init__.py:17
-#: apps/search/__init__.py:52
-#: apps/search/__init__.py:58
+#: apps/search/__init__.py:17 apps/search/__init__.py:52 apps/search/__init__.py:58
 msgid "Don't filter"
 msgstr "Не фильтровать"
 
@@ -1224,8 +1153,7 @@ msgstr "Перед"
 msgid "After"
 msgstr "После"
 
-#: apps/search/__init__.py:32
-#: apps/search/__init__.py:72
+#: apps/search/__init__.py:32 apps/search/__init__.py:72
 msgid "Relevance"
 msgstr "Отношение к теме"
 
@@ -1241,15 +1169,11 @@ msgstr "Дата первого сообщения"
 msgid "Number of replies"
 msgstr "Число откликов"
 
-#: apps/search/__init__.py:53
-#: apps/sumo/helpers.py:292
-#: apps/wiki/templates/wiki/document.html:80
+#: apps/search/__init__.py:53 apps/sumo/helpers.py:298 apps/wiki/templates/wiki/includes/document_vote.html:8
 msgid "Yes"
 msgstr "Да"
 
-#: apps/search/__init__.py:54
-#: apps/sumo/helpers.py:292
-#: apps/wiki/templates/wiki/document.html:81
+#: apps/search/__init__.py:54 apps/sumo/helpers.py:298 apps/wiki/templates/wiki/includes/document_vote.html:9
 msgid "No"
 msgstr "Нет"
 
@@ -1277,8 +1201,7 @@ msgstr "Число ответов"
 msgid "tag1, tag2"
 msgstr "метка1, метка2"
 
-#: apps/search/forms.py:65
-#: apps/search/forms.py:148
+#: apps/search/forms.py:65 apps/search/forms.py:148
 msgid "Tags"
 msgstr "Метки"
 
@@ -1310,8 +1233,7 @@ msgstr "Последнее обновление"
 msgid "username"
 msgstr "логин"
 
-#: apps/search/forms.py:107
-#: apps/search/forms.py:125
+#: apps/search/forms.py:107 apps/search/forms.py:125
 msgid "Sort results by"
 msgstr "Сортировать результаты по"
 
@@ -1339,20 +1261,19 @@ msgstr "Имеет полезные ответы"
 msgid "Votes"
 msgstr "Голоса"
 
-#: apps/search/views.py:48
+#: apps/search/views.py:50
 msgid "Invalid callback function."
 msgstr "Неверная функция обратного вызова."
 
-#: apps/search/views.py:89
+#: apps/search/views.py:91
 msgid "Invalid search data."
 msgstr "Неверные данные поиска."
 
-#: apps/search/views.py:297
-#: apps/search/templates/search/down.html:6
+#: apps/search/views.py:300 apps/search/templates/search/down.html:6 apps/search/templates/search/mobile/down.html:7
 msgid "Search Unavailable"
 msgstr "Поиск недоступен"
 
-#: apps/search/views.py:358
+#: apps/search/views.py:362
 msgid "No pages matched the search criteria"
 msgstr "Поисковый запрос не нашёл ни одну страницу"
 
@@ -1360,15 +1281,12 @@ msgstr "Поисковый запрос не нашёл ни одну стран
 msgid "Enter your terms in the form below and click <strong>Search</strong>"
 msgstr "Введите свой запрос в расположенную ниже форму и нажмите <strong>Поиск</strong>"
 
-#: apps/search/templates/search/basic-form.html:7
-#: apps/search/templates/search/form.html:64
-#: apps/search/templates/search/form.html:150
-#: apps/search/templates/search/form.html:199
+#: apps/search/templates/search/basic-form.html:7 apps/search/templates/search/form.html:64 apps/search/templates/search/form.html:150 apps/search/templates/search/form.html:199
 msgctxt "button"
 msgid "Search"
 msgstr "Поиск"
 
-#: apps/search/templates/search/down.html:8
+#: apps/search/templates/search/down.html:8 apps/search/templates/search/mobile/down.html:9
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
 msgstr "Поиск временно недоступен. Пожалуйста, попробуйте снова через несколько минут."
 
@@ -1400,9 +1318,7 @@ msgstr "Форумы для обсуждений"
 msgid "Article contains"
 msgstr "Статья содержит"
 
-#: apps/search/templates/search/form.html:21
-#: apps/search/templates/search/form.html:70
-#: apps/search/templates/search/form.html:156
+#: apps/search/templates/search/form.html:21 apps/search/templates/search/form.html:70 apps/search/templates/search/form.html:156
 msgid "crashes on youtube"
 msgstr "падения на youtube"
 
@@ -1422,13 +1338,11 @@ msgstr "Количество голосов. Должно быть целым ч
 msgid "Note: Searching for \"tag1, tag2\" returns questions tagged with both tag1 and tag2"
 msgstr "Примечание: Поиск по \"метка1, метка2\" вернёт статьи помеченные как меткой1, так и меткой2"
 
-#: apps/search/templates/search/form.html:130
-#: apps/search/templates/search/form.html:174
+#: apps/search/templates/search/form.html:130 apps/search/templates/search/form.html:174
 msgid "Created date. Format: mm/dd/yy"
 msgstr "Дата создания. Формат: мм/дд/гг"
 
-#: apps/search/templates/search/form.html:136
-#: apps/search/templates/search/form.html:180
+#: apps/search/templates/search/form.html:136 apps/search/templates/search/form.html:180
 msgid "Updated date. Format: mm/dd/yy"
 msgstr "Дата обновления. Формат: мм/дд/гг"
 
@@ -1444,13 +1358,6 @@ msgstr "Использовать основной режим поиска"
 msgid "Use advanced search"
 msgstr "Использовать продвинутый режим поиска"
 
-#: apps/search/templates/search/plugin.html:3
-#: apps/sumo/helpers.py:122
-#: templates/base.html:8
-#: templates/base.html:17
-msgid "Firefox Help"
-msgstr "Справка Firefox"
-
 #. The description for the OpenSearch plugin.
 #: apps/search/templates/search/plugin.html:5
 msgid "Search the Firefox Support Knowledge Base and Support Forum."
@@ -1461,7 +1368,7 @@ msgid "Refine your search"
 msgstr "Уточнить поисковый запрос"
 
 #. {n} is the number of search results, {q} is the search query, {l} is the language searched.
-#: apps/search/templates/search/results.html:24
+#: apps/search/templates/search/results.html:24 apps/search/templates/search/mobile/results.html:14
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
 msgstr[0] "Найден <strong>{n}</strong> результат для <strong>{q}</strong> в <strong>{l}</strong>"
@@ -1480,60 +1387,60 @@ msgstr "Убедитесь, что это значение имеет длину
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr "Убедитесь, что это значение имеет длину не более %(limit_value)s символов (сейчас оно содержит %(show_value)s)."
 
-#: apps/sumo/helpers.py:171
+#: apps/sumo/helpers.py:177
 msgid "Today at %s"
 msgstr "Сегодня в %s"
 
-#: apps/sumo/helpers.py:249
+#: apps/sumo/helpers.py:255
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "%(number)d  год назад"
 msgstr[1] "%(number)d  года назад"
 msgstr[2] "%(number)d  лет назад"
 
-#: apps/sumo/helpers.py:251
+#: apps/sumo/helpers.py:257
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "%(number)d месяц назад"
 msgstr[1] "%(number)d месяца назад"
 msgstr[2] "%(number)d месяцев назад"
 
-#: apps/sumo/helpers.py:253
+#: apps/sumo/helpers.py:259
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "%(number)d неделю назад"
 msgstr[1] "%(number)d недели назад"
 msgstr[2] "%(number)d недель назад"
 
-#: apps/sumo/helpers.py:255
+#: apps/sumo/helpers.py:261
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "%(number)d день назад"
 msgstr[1] "%(number)d дня назад"
 msgstr[2] "%(number)d дней назад"
 
-#: apps/sumo/helpers.py:257
+#: apps/sumo/helpers.py:263
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "%(number)d час назад"
 msgstr[1] "%(number)d часа назад"
 msgstr[2] "%(number)d часов назад"
 
-#: apps/sumo/helpers.py:259
+#: apps/sumo/helpers.py:265
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "%(number)d минуту назад"
 msgstr[1] "%(number)d минуты назад"
 msgstr[2] "%(number)d минут назад"
 
-#: apps/sumo/helpers.py:261
+#: apps/sumo/helpers.py:267
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] "%(number)d секунду назад"
 msgstr[1] "%(number)d секунды назад"
 msgstr[2] "%(number)d секунд назад"
 
-#: apps/sumo/parser.py:225
+#: apps/sumo/parser.py:226
 msgid "The image \"%s\" does not exist."
 msgstr "Изображение \"%s\" не существует."
 
@@ -1569,8 +1476,7 @@ msgstr "Произошла ошибка"
 msgid "Oh, no! It looks like an unexpected error occurred. We've already notified the site administrators. Please try again now, or in a few minutes."
 msgstr "О, нет! Похоже, что произошла непредвиденная ошибка. Мы уже уведомили администраторов сайта. Пожалуйста, попробуйте ещё раз сейчас или через несколько минут."
 
-#: apps/sumo/templates/sumo/read-only.html:3
-#: apps/sumo/templates/sumo/read-only.html:7
+#: apps/sumo/templates/sumo/read-only.html:3 apps/sumo/templates/sumo/read-only.html:7
 msgid "Maintenance in progress"
 msgstr "Происходит техническое обслуживание"
 
@@ -1626,6 +1532,10 @@ msgstr "Добавить изображения:"
 msgid "Browse for an image to upload."
 msgstr "Выберите изображение для загрузки."
 
+#: apps/users/__init__.py:4
+msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
+msgstr ""
+
 #: apps/users/forms.py:17
 msgid "Username may contain only letters, numbers and @/./+/-/_ characters."
 msgstr "Имя пользователя может содержать только буквы, цифры и символы @/./+/-/_."
@@ -1662,9 +1572,7 @@ msgstr "Требуется пароль."
 msgid "Please enter your password twice."
 msgstr "Пожалуйста, дважды введите ваш пароль."
 
-#: apps/users/forms.py:42
-#: apps/users/templates/users/login_form.html:10
-#: templates/layout/login.html:8
+#: apps/users/forms.py:42 apps/users/templates/users/includes/macros.html:13 templates/layout/login.html:8
 msgid "Username:"
 msgstr "Имя пользователя:"
 
@@ -1672,16 +1580,11 @@ msgstr "Имя пользователя:"
 msgid "Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only."
 msgstr "Требуется. не более 30 символов. Только буквы, цифры и символы @/./+/-/_."
 
-#: apps/users/forms.py:50
-#: apps/users/forms.py:179
-#: apps/users/forms.py:185
+#: apps/users/forms.py:50 apps/users/forms.py:179 apps/users/forms.py:185
 msgid "Email address:"
 msgstr "Адрес эл. почты:"
 
-#: apps/users/forms.py:54
-#: apps/users/templates/users/edit_profile.html:27
-#: apps/users/templates/users/login_form.html:14
-#: templates/layout/login.html:11
+#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:27 apps/users/templates/users/includes/macros.html:17 templates/layout/login.html:11
 msgid "Password:"
 msgstr "Пароль:"
 
@@ -1697,8 +1600,7 @@ msgstr "Введите тот же пароль, что и выше, для ве
 msgid "Passwords must match."
 msgstr "Пароли должны совпадать."
 
-#: apps/users/forms.py:82
-#: apps/users/forms.py:196
+#: apps/users/forms.py:82 apps/users/forms.py:196
 msgid "A user with that email address already exists."
 msgstr "Пользователь с этим адресом эл. почты уже существует."
 
@@ -1782,18 +1684,15 @@ msgstr "Город"
 msgid "Livechat ID"
 msgstr "ID живого чата"
 
-#: apps/users/models.py:166
-#: apps/users/models.py:200
+#: apps/users/models.py:166 apps/users/models.py:200
 msgid "Please confirm your email address"
 msgstr "Пожалуйста, подтвердите свой адрес эл. почты"
 
-#: apps/users/models.py:216
-#: apps/users/models.py:258
+#: apps/users/models.py:216 apps/users/models.py:258
 msgid "user"
 msgstr "логин"
 
-#: apps/users/models.py:217
-#: apps/users/models.py:259
+#: apps/users/models.py:217 apps/users/models.py:259
 msgid "activation key"
 msgstr "ключ активации"
 
@@ -1805,26 +1704,26 @@ msgstr "профиль регистрации"
 msgid "registration profiles"
 msgstr "профили регистрации"
 
-#: apps/users/templates/users/activate.html:4
+#: apps/users/templates/users/activate.html:5
 msgid "Account successfully verified!"
 msgstr "Учётная запись успешно верифицирована!"
 
-#: apps/users/templates/users/activate.html:6
+#: apps/users/templates/users/activate.html:7
 msgid "Something is wrong"
 msgstr "Что-то пошло не так"
 
-#: apps/users/templates/users/activate.html:14
+#: apps/users/templates/users/activate.html:15
 msgid "You've confirmed your email address and activated your account! You can now log in, and go edit your profile."
 msgstr "Вы подтвердили свой адрес эл. почты и активировали свою учётную запись! Теперь вы можете войти и перейти к редактированию своего профиля."
 
-#: apps/users/templates/users/activate.html:19
+#: apps/users/templates/users/activate.html:20
 msgid "Your question is now visible on the site!"
 msgid_plural "Your questions are now visible on the site!"
 msgstr[0] "Ваш вопрос теперь виден на сайте!"
 msgstr[1] "Ваши вопросы теперь видны на сайте!"
 msgstr[2] "Ваши вопросы теперь видны на сайте!"
 
-#: apps/users/templates/users/activate.html:30
+#: apps/users/templates/users/activate.html:31
 msgid "We could not activate your account. Please make sure that you have clicked the correct link in your email or typed in the correct address."
 msgstr "Мы не смогли активировать вашу учётную запись. Пожалуйста, убедитесь что вы щёлкнули по правильной ссылке в вашем письме или набрали корректный адрес."
 
@@ -1872,8 +1771,7 @@ msgstr "Письмо с подтверждением отправлено"
 msgid "We've sent a confirmation to %(new_email)s. Please follow the link in the confirmation to change your account's email."
 msgstr "Мы послали подтверждение на адрес %(new_email)s. Пожалуйста, проследуйте по ссылке в подтверждении для смены адреса эл. почты своей учётной записи."
 
-#: apps/users/templates/users/confirm_avatar_delete.html:3
-#: apps/users/templates/users/confirm_avatar_delete.html:24
+#: apps/users/templates/users/confirm_avatar_delete.html:3 apps/users/templates/users/confirm_avatar_delete.html:24
 msgid "Delete avatar"
 msgstr "Удалить аватар"
 
@@ -1883,7 +1781,8 @@ msgstr "Вы уверены, что хотите удалить ваш ават�
 
 #: apps/users/templates/users/confirm_avatar_delete.html:16
 msgid "You are about to permanently delete your avatar. <strong>This cannot be undone!</strong> You can always <a href=\"%(upload_url)s\">upload another avatar</a> to replace your current one."
-msgstr "Вы собираетесь навсегда удалить этот аватар. <strong>Это не может быть отменено!</strong> Вы всегда можете <a href=\"%(upload_url)s\">загрузить другой аватар</a> чтобы заменить текущий аватар."
+msgstr ""
+"Вы собираетесь навсегда удалить этот аватар. <strong>Это не может быть отменено!</strong> Вы всегда можете <a href=\"%(upload_url)s\">загрузить другой аватар</a> чтобы заменить текущий аватар."
 
 #: apps/users/templates/users/edit_avatar.html:3
 msgid "Change Avatar"
@@ -1912,48 +1811,21 @@ msgctxt "avatar"
 msgid "Delete"
 msgstr "Удалить"
 
-#: apps/users/templates/users/edit_profile.html:28
-#: apps/users/templates/users/edit_profile.html:33
-#: apps/wiki/templates/wiki/translate.html:19
+#: apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/edit_profile.html:33 apps/wiki/templates/wiki/translate.html:19
 msgid "Change"
 msgstr "Изменить"
 
-#: apps/users/templates/users/edit_profile.html:31
-#: apps/users/templates/users/profile.html:35
+#: apps/users/templates/users/edit_profile.html:31 apps/users/templates/users/profile.html:35
 msgid "Email:"
 msgstr "Ваш email:"
 
-#: apps/users/templates/users/edit_profile.html:38
-#: apps/users/templates/users/pw_reset_confirm.html:27
+#: apps/users/templates/users/edit_profile.html:38 apps/users/templates/users/pw_reset_confirm.html:27
 msgid "Update"
 msgstr "обновить"
 
-#: apps/users/templates/users/login.html:3
-#: apps/users/templates/users/login.html:8
+#: apps/users/templates/users/login.html:4 apps/users/templates/users/login.html:9
 msgid "Log In"
 msgstr "Войти"
-
-#: apps/users/templates/users/login_form.html:20
-#: templates/layout/login.html:5
-#: templates/layout/login.html:20
-msgid "Log in"
-msgstr "Войти"
-
-#: apps/users/templates/users/login_form.html:24
-msgid "Login Problems?"
-msgstr "Проблемы со входом?"
-
-#: apps/users/templates/users/login_form.html:26
-msgid "I don't have an account."
-msgstr "У меня нет учётной записи."
-
-#: apps/users/templates/users/login_form.html:27
-msgid "I forgot my password."
-msgstr "Я забыл мой пароль."
-
-#: apps/users/templates/users/login_form.html:28
-msgid "My account is inactive."
-msgstr "Моя учётная запись неактивна."
 
 #: apps/users/templates/users/profile.html:3
 msgid "{user} | Profile"
@@ -2003,17 +1875,15 @@ msgstr "Пароль успешно изменён!"
 msgid "You have successfully changed your password. <a href=\"%(profile_url)s\">Go back to edit profile page.</a>"
 msgstr "Вы успешно сменили свой пароль. <a href=\"%(profile_url)s\">Вернуться на страницу редактирования прoфиля.</a>"
 
-#: apps/users/templates/users/pw_reset_complete.html:3
+#: apps/users/templates/users/pw_reset_complete.html:4
 msgid "Password successfully reset."
 msgstr "Пароль успешно сброшен."
 
-#: apps/users/templates/users/pw_reset_complete.html:9
+#: apps/users/templates/users/pw_reset_complete.html:10
 msgid "You can now log in."
 msgstr "Теперь вы можете войти."
 
-#: apps/users/templates/users/pw_reset_confirm.html:4
-#: apps/users/templates/users/pw_reset_form.html:4
-#: apps/users/templates/users/pw_reset_sent.html:4
+#: apps/users/templates/users/pw_reset_confirm.html:4 apps/users/templates/users/pw_reset_form.html:4 apps/users/templates/users/pw_reset_sent.html:4
 msgid "Password Reset"
 msgstr "Сброс пароля"
 
@@ -2049,15 +1919,11 @@ msgstr "Отправить ссылку для сброса пароля"
 msgid "We've sent an email to any account using this address. Please follow the link in the email to reset your password."
 msgstr "Мы послали письмо для любой учётной записи используя этот адрес. Пожалуйста, проследуйте по ссылке в письме чтобы сбросить свой пароль."
 
-#: apps/users/templates/users/register.html:4
-#: apps/users/templates/users/register.html:9
-#: apps/users/templates/users/register.html:19
-#: templates/layout/login.html:24
+#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:51 templates/layout/login.html:24
 msgid "Register"
 msgstr "Регистрация"
 
-#: apps/users/templates/users/register_done.html:4
-#: apps/users/templates/users/register_done.html:9
+#: apps/users/templates/users/register_done.html:4 apps/users/templates/users/register_done.html:9
 msgid "Thank you for registering!"
 msgstr "Спасибо за регистрацию!"
 
@@ -2076,7 +1942,9 @@ msgstr "Отправить письмо подтверждения заново"
 
 #: apps/users/templates/users/resend_confirmation.html:14
 msgid "To activate your account you must first confirm your email address. Enter your email and submit the form below, and we will resend the confirmation email."
-msgstr "Чтобы активировать свою учётную запись вы должны сначала подтвердить свой адрес эл. почты. Введите свой адрес эл. почты в расположенную ниже форму и нажмите кнопку для отправки, и мы пошлём вам письмо для подтверждения."
+msgstr ""
+"Чтобы активировать свою учётную запись вы должны сначала подтвердить свой адрес эл. почты. Введите свой адрес эл. почты в расположенную ниже форму и нажмите кнопку для отправки, и мы пошлём вам "
+"письмо для подтверждения."
 
 #: apps/users/templates/users/resend_confirmation.html:24
 msgid "Resend account confirmation email"
@@ -2087,8 +1955,53 @@ msgid "Confirmation email sent successfully."
 msgstr "Письмо для подтверждения успешно отправлено."
 
 #: apps/users/templates/users/resend_confirmation_done.html:10
-msgid "Before you can log in, you need to confirm your email address. We've sent a new confirmation email to any account using <strong>%(email)s</strong>. To confirm the email address, just follow the link in the email."
-msgstr "Перед входом вам нужно подтвердить свой адрес эл. почты. Мы послали новое письмо подтверждения к любой учётной записи, используя <strong>%(email)s</strong>. Чтобы подтвердить адрес эл. почты, просто щёлкните по ссылке в письме."
+msgid ""
+"Before you can log in, you need to confirm your email address. We've sent a new confirmation email to any account using <strong>%(email)s</strong>. To confirm the email address, just follow the "
+"link in the email."
+msgstr ""
+"Перед входом вам нужно подтвердить свой адрес эл. почты. Мы послали новое письмо подтверждения к любой учётной записи, используя <strong>%(email)s</strong>. Чтобы подтвердить адрес эл. почты, "
+"просто щёлкните по ссылке в письме."
+
+#: apps/users/templates/users/includes/macros.html:23 templates/layout/login.html:5 templates/layout/login.html:20
+msgid "Log in"
+msgstr "Войти"
+
+#: apps/users/templates/users/includes/macros.html:23
+#, fuzzy
+msgid "Logging in..."
+msgstr "Войти"
+
+#: apps/users/templates/users/includes/macros.html:23
+msgid "Logged in!"
+msgstr ""
+
+#: apps/users/templates/users/includes/macros.html:28 apps/users/templates/users/includes/macros.html:33
+msgid "I forgot my password."
+msgstr "Я забыл мой пароль."
+
+#: apps/users/templates/users/includes/macros.html:30
+msgid "Login Problems?"
+msgstr "Проблемы со входом?"
+
+#: apps/users/templates/users/includes/macros.html:32
+msgid "I don't have an account."
+msgstr "У меня нет учётной записи."
+
+#: apps/users/templates/users/includes/macros.html:34
+msgid "My account is inactive."
+msgstr "Моя учётная запись неактивна."
+
+#: apps/wiki/events.py:49
+msgid "{title} was edited by {creator}"
+msgstr "{title} был отредактирован {creator}"
+
+#: apps/wiki/events.py:85
+msgid "{title} is ready for review ({creator})"
+msgstr "{title} готов для рецензирования ({creator})"
+
+#: apps/wiki/events.py:104
+msgid "{title} ({locale}) has a new approved revision"
+msgstr "{title} ({locale}) имеет новую одобренную ревизию"
 
 #: apps/wiki/forms.py:21
 msgid "Please keep the length of the title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
@@ -2142,8 +2055,7 @@ msgstr "Пожалуйста, ограничьте длину комментар
 msgid "Title of article"
 msgstr "Заголовок статьи"
 
-#: apps/wiki/forms.py:68
-#: apps/wiki/templates/wiki/translate.html:65
+#: apps/wiki/forms.py:68 apps/wiki/templates/wiki/translate.html:65
 msgid "Slug:"
 msgstr "Короткий url:"
 
@@ -2179,10 +2091,7 @@ msgstr "Темы:"
 msgid "Popular articles in each topic are displayed on the front page"
 msgstr "Популярные статьи в каждом разделе отображаются на главной странице"
 
-#: apps/wiki/forms.py:152
-#: apps/wiki/templates/wiki/review_revision.html:40
-#: apps/wiki/templates/wiki/translate.html:96
-#: apps/wiki/templates/wiki/includes/revision_diff.html:31
+#: apps/wiki/forms.py:152 apps/wiki/templates/wiki/review_revision.html:40 apps/wiki/templates/wiki/translate.html:96 apps/wiki/templates/wiki/includes/revision_diff.html:31
 msgid "Keywords:"
 msgstr "Ключевые слова:"
 
@@ -2190,8 +2099,7 @@ msgstr "Ключевые слова:"
 msgid "Affects search results"
 msgstr "Влияет на результаты поиска"
 
-#: apps/wiki/forms.py:157
-#: apps/wiki/templates/wiki/translate.html:106
+#: apps/wiki/forms.py:157 apps/wiki/templates/wiki/translate.html:106
 msgid "Search result summary:"
 msgstr "Сводка результатов поиска:"
 
@@ -2199,8 +2107,7 @@ msgstr "Сводка результатов поиска:"
 msgid "Only displayed on search results page"
 msgstr "Отображается только на странице результатов поиска"
 
-#: apps/wiki/forms.py:179
-#: apps/wiki/forms.py:207
+#: apps/wiki/forms.py:179 apps/wiki/forms.py:207
 msgid "Comment:"
 msgstr "Комментарий:"
 
@@ -2208,111 +2115,107 @@ msgstr "Комментарий:"
 msgid "Significance:"
 msgstr "Значимость:"
 
-#: apps/wiki/models.py:31
+#: apps/wiki/models.py:32
 msgid "Minor details like punctuation and spelling errors"
 msgstr "Незначительные детали, такие как знаки препинания и орфографические ошибки"
 
-#: apps/wiki/models.py:33
+#: apps/wiki/models.py:34
 msgid "Content changes that don't require immediate translation"
 msgstr "Изменения содержания, которые не требуют немедленного перевода"
 
-#: apps/wiki/models.py:35
+#: apps/wiki/models.py:36
 msgid "Major content changes that will make older translations inaccurate"
 msgstr "Большие изменения в содержании, которые делают старые переводы неточными"
 
-#: apps/wiki/models.py:40
+#: apps/wiki/models.py:41
 msgid "Troubleshooting"
 msgstr "Решение проблем"
 
-#: apps/wiki/models.py:41
+#: apps/wiki/models.py:42
 msgid "How to"
 msgstr "How to"
 
-#: apps/wiki/models.py:42
+#: apps/wiki/models.py:43
 msgid "How to contribute"
 msgstr "Как внести свой вклад"
 
-#: apps/wiki/models.py:43
+#: apps/wiki/models.py:44
 msgid "Administration"
 msgstr "Администрирование"
 
-#: apps/wiki/models.py:44
+#: apps/wiki/models.py:45
 msgid "Navigation"
 msgstr "Навигация"
 
-#: apps/wiki/models.py:45
+#: apps/wiki/models.py:46
 msgid "Templates"
 msgstr "Шаблоны"
 
-#: apps/wiki/models.py:60
+#: apps/wiki/models.py:61
 msgid "Desktop:"
 msgstr "Десктоп:"
 
-#: apps/wiki/models.py:63
-#: apps/wiki/models.py:64
+#: apps/wiki/models.py:64 apps/wiki/models.py:65
 msgid "Firefox 3.5-3.6"
 msgstr "Firefox 3.5-3.6"
 
-#: apps/wiki/models.py:65
-#: apps/wiki/models.py:66
-#: apps/wiki/models.py:70
+#: apps/wiki/models.py:66 apps/wiki/models.py:67 apps/wiki/models.py:71
 msgid "Firefox 4"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:67
-#: apps/wiki/models.py:68
+#: apps/wiki/models.py:68 apps/wiki/models.py:69
 msgid "Firefox 3.0"
 msgstr "Firefox 3.0"
 
-#: apps/wiki/models.py:69
+#: apps/wiki/models.py:70
 msgid "Mobile:"
 msgstr "Мобильный:"
 
-#: apps/wiki/models.py:71
+#: apps/wiki/models.py:72
 msgid "Firefox 4 for Mobile"
 msgstr "Firefox 4 для мобильных"
 
-#: apps/wiki/models.py:80
+#: apps/wiki/models.py:81
 msgid "Desktop OS:"
 msgstr "Настольная ОС:"
 
-#: apps/wiki/models.py:81
+#: apps/wiki/models.py:82
 msgid "Windows"
 msgstr "Windows"
 
-#: apps/wiki/models.py:82
+#: apps/wiki/models.py:83
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: apps/wiki/models.py:83
+#: apps/wiki/models.py:84
 msgid "Linux"
 msgstr "Linux"
 
-#: apps/wiki/models.py:84
+#: apps/wiki/models.py:85
 msgid "Mobile OS:"
 msgstr "Мобильная ОС:"
 
-#: apps/wiki/models.py:85
+#: apps/wiki/models.py:86
 msgid "Android"
 msgstr "Android"
 
-#: apps/wiki/models.py:86
+#: apps/wiki/models.py:87
 msgid "Maemo"
 msgstr "Maemo"
 
-#: apps/wiki/models.py:95
+#: apps/wiki/models.py:96
 msgid "%(old)s Redirect %(number)i"
 msgstr "%(old)s Перенаправление %(number)i"
 
-#: apps/wiki/models.py:96
+#: apps/wiki/models.py:97
 msgid "%(old)s-redirect-%(number)i"
 msgstr "%(old)s-перенаправление-%(number)i"
 
-#: apps/wiki/models.py:236
+#: apps/wiki/models.py:237
 msgid "Please choose a category."
 msgstr "Пожалуйста, выберите категорию."
 
-#: apps/wiki/models.py:560
+#: apps/wiki/models.py:566
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr "Ревизия должна быть основана на ревизии документа на %(locale)s. Ревизия с ID %(id)s не подходит под эти критерии."
 
@@ -2333,39 +2236,28 @@ msgstr "Шаблон \"%s\" не существует или не имеет о�
 msgid "The video \"%s\" does not exist."
 msgstr "Видео \"%s\" не существует."
 
-#: apps/wiki/tasks.py:37
+#: apps/wiki/tasks.py:35
 msgid "Your revision has been approved: {title}"
 msgstr "Ваша ревизия была одобрена: {title}"
 
-#: apps/wiki/tasks.py:39
+#: apps/wiki/tasks.py:37
 msgid "Your revision has been rejected: {title}"
 msgstr "Ваша ревизия была отклонена: {title}"
-
-#: apps/wiki/tasks.py:59
-msgid "{title} ({locale}) has a new approved revision"
-msgstr "{title} ({locale}) имеет новую одобренную ревизию"
-
-#: apps/wiki/tasks.py:72
-msgid "{title} is ready for review ({creator})"
-msgstr "{title} готов для рецензирования ({creator})"
-
-#: apps/wiki/tasks.py:85
-msgid "{title} was edited by {creator}"
-msgstr "{title} был отредактирован {creator}"
 
 #: apps/wiki/views.py:411
 msgid "You cannot translate this document."
 msgstr "Вы не можете перевести этот документ."
 
-#: apps/wiki/views.py:599
+#: apps/wiki/views.py:598
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "Мы рады это слышать &mdash; спасибо за отзыв!"
 
-#: apps/wiki/views.py:601
-msgid "Sorry to hear that. Perhaps one of the solutions below can help."
+#: apps/wiki/views.py:600
+#, fuzzy
+msgid "Sorry to hear that. Try searching for solutions below."
 msgstr "Жаль это слышать. Возможно, вам может помочь одно из приведённых ниже решений."
 
-#: apps/wiki/views.py:611
+#: apps/wiki/views.py:610
 msgid "You already voted on this Article."
 msgstr "Вы уже проголосовали по этой статье."
 
@@ -2373,14 +2265,11 @@ msgstr "Вы уже проголосовали по этой статье."
 msgid "Compare Revisions | {document}"
 msgstr "Сравните ревизии | {document}"
 
-#: apps/wiki/templates/wiki/compare_revisions.html:7
-#: apps/wiki/templates/wiki/compare_revisions.html:13
+#: apps/wiki/templates/wiki/compare_revisions.html:7 apps/wiki/templates/wiki/compare_revisions.html:13
 msgid "Compare Revisions"
 msgstr "Сравнить ревизии"
 
-#: apps/wiki/templates/wiki/compare_revisions.html:17
-#: apps/wiki/templates/wiki/review_revision.html:13
-#: apps/wiki/templates/wiki/review_translation.html:13
+#: apps/wiki/templates/wiki/compare_revisions.html:17 apps/wiki/templates/wiki/review_revision.html:13 apps/wiki/templates/wiki/review_translation.html:13
 #: apps/wiki/templates/wiki/includes/review_form.html:4
 msgid "Back to History"
 msgstr "Вернуться к истории"
@@ -2402,72 +2291,35 @@ msgid "You are about to permanently delete this revision. <strong>This cannot be
 msgstr "Вы собираетесь навсегда удалить эту ревизию. <strong>Это не может быть отменено!</strong> Вы уверены, что хотите продолжить?"
 
 #. {t} is the title of the document. {c} is the category.
-#: apps/wiki/templates/wiki/document.html:5
+#: apps/wiki/templates/wiki/document.html:6 apps/wiki/templates/wiki/mobile/document.html:5
 msgid "{t} | {c}"
 msgstr "{t} | {c}"
 
-#: apps/wiki/templates/wiki/document.html:17
-msgid "Related Articles"
-msgstr "Связанные статьи"
-
-#: apps/wiki/templates/wiki/document.html:28
-msgid "(Redirected from <a href=\"{href}\">{title}</a>)"
-msgstr "(Перенаправлено с <a href=\"{href}\">{title}</a>)"
-
-#: apps/wiki/templates/wiki/document.html:33
-msgid "<p>This article may be out of date.</p> <p> An important change has been made to the English article on which this is based. Until this page is updated, you might find this helpful: <a href=\"%(url)s\">%(title)s</a> </p>"
-msgstr "<p> Эта статья может быть устаревшей.</p><p> В статью на английском языке, на которой она основана, были внесены важные изменения. Пока эта страница не будет обновлена, вы можете найти полезной статью: <a href=\"%(url)s\">%(title)s</a> </p>"
-
-#: apps/wiki/templates/wiki/document.html:48
-msgid "Our volunteers haven't translated this article into %(locale)s yet. <a href=\"%(help_link)s\">Join us and help get the job done!</a>"
-msgstr "Наши добровольцы пока не перевели эту статью на %(locale)s. <a href=\"%(help_link)s\">Присоединяйтесь и помогите выполнить эту работу!</a>"
-
-#. This is shown for existing, never-approved translations
-#: apps/wiki/templates/wiki/document.html:58
-msgid "Our volunteers are working on translating this article. Until it's ready, maybe the English version can be of some help."
-msgstr "Наши волонтёры работают над переводом этой статьи. Пока она не готова, возможно вам поможет Английская версия."
-
-#: apps/wiki/templates/wiki/document.html:65
-msgid "This article doesn't have approved content yet."
-msgstr "Содержимое этой статьи ещё не одобрено."
-
-#: apps/wiki/templates/wiki/document.html:69
-msgid "Contributors to this page: %(contributors)s"
-msgstr "Создатели этой страницы: %(contributors)s"
-
-#: apps/wiki/templates/wiki/document.html:79
-msgid "Was this article helpful?"
-msgstr "Помогла ли эта статья?"
-
-#: apps/wiki/templates/wiki/document.html:82
-msgid "Please wait..."
-msgstr "Пожалуйста, подождите..."
-
-#: apps/wiki/templates/wiki/document.html:89
+#: apps/wiki/templates/wiki/document.html:25 templates/mobile/base.html:52
 msgid "Couldn't find what you were looking for?"
 msgstr "Не можете найти то, что вы ищете?"
 
-#: apps/wiki/templates/wiki/document.html:93
+#: apps/wiki/templates/wiki/document.html:29
 msgid "Here's a list of related articles that might help:"
 msgstr "Вот список статей, которые могут помочь:"
 
-#: apps/wiki/templates/wiki/document.html:102
+#: apps/wiki/templates/wiki/document.html:38
 msgid "Browse other articles about <a href=\"{url}\">{category}</a>"
 msgstr "Просмотрите другие статьи о <a href=\"{url}\">{category}</a>"
 
-#: apps/wiki/templates/wiki/document.html:105
+#: apps/wiki/templates/wiki/document.html:41
 msgid "Ask our awesome support community for help"
 msgstr "Попросите о помощи наше удивительное сообщество поддержки"
 
-#: apps/wiki/templates/wiki/document.html:108
+#: apps/wiki/templates/wiki/document.html:44
 msgid "Or try searching:"
 msgstr "Или попробуйте поискать: "
 
-#: apps/wiki/templates/wiki/document.html:121
+#: apps/wiki/templates/wiki/document.html:57
 msgid "Turn off emails."
 msgstr "Отключить письма."
 
-#: apps/wiki/templates/wiki/document.html:126
+#: apps/wiki/templates/wiki/document.html:62
 msgid "Get emailed when this article changes."
 msgstr "Отправить письмо при изменении этой статьи."
 
@@ -2487,13 +2339,11 @@ msgstr "История {title}"
 msgid "Revision history for:"
 msgstr "История ревизий для:"
 
-#: apps/wiki/templates/wiki/document_revisions.html:30
-#: apps/wiki/templates/wiki/document_revisions.html:91
+#: apps/wiki/templates/wiki/document_revisions.html:30 apps/wiki/templates/wiki/document_revisions.html:91
 msgid "Compare Selected Translations"
 msgstr "Сравнить выбранные переводы"
 
-#: apps/wiki/templates/wiki/document_revisions.html:30
-#: apps/wiki/templates/wiki/document_revisions.html:91
+#: apps/wiki/templates/wiki/document_revisions.html:30 apps/wiki/templates/wiki/document_revisions.html:91
 msgid "Compare Selected Revisions"
 msgstr "Сравнить выбранные ревизии"
 
@@ -2522,9 +2372,7 @@ msgstr "Этот документ не имеет ревизий."
 msgid "Edit Article | {document}"
 msgstr "Изменить статью | {document}"
 
-#: apps/wiki/templates/wiki/edit_document.html:10
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:28
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:30
+#: apps/wiki/templates/wiki/edit_document.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:28 apps/wiki/templates/wiki/includes/sidebar_modules.html:30
 msgid "Edit Article"
 msgstr "Правка статьи"
 
@@ -2536,13 +2384,11 @@ msgstr "<em>Редактирование</em> {title}"
 msgid "Edit Description"
 msgstr "Правка описания"
 
-#: apps/wiki/templates/wiki/edit_document.html:32
-#: apps/wiki/templates/wiki/new_document.html:24
+#: apps/wiki/templates/wiki/edit_document.html:32 apps/wiki/templates/wiki/new_document.html:24
 msgid "Relevant to:"
 msgstr "Относится к:"
 
-#: apps/wiki/templates/wiki/edit_document.html:40
-#: apps/wiki/templates/wiki/translate.html:76
+#: apps/wiki/templates/wiki/edit_document.html:40 apps/wiki/templates/wiki/translate.html:76
 msgid "Save"
 msgstr "Сохранить"
 
@@ -2606,14 +2452,11 @@ msgstr "Текущая публичная ревизия:"
 msgid "Submitted revision:"
 msgstr "Отправленная ревизия:"
 
-#: apps/wiki/templates/wiki/review_revision.html:27
-#: apps/wiki/templates/wiki/revision.html:60
+#: apps/wiki/templates/wiki/review_revision.html:27 apps/wiki/templates/wiki/revision.html:60
 msgid "Revision Source"
 msgstr "Источник ревизии"
 
-#: apps/wiki/templates/wiki/review_revision.html:33
-#: apps/wiki/templates/wiki/review_translation.html:81
-#: apps/wiki/templates/wiki/revision.html:66
+#: apps/wiki/templates/wiki/review_revision.html:33 apps/wiki/templates/wiki/review_translation.html:81 apps/wiki/templates/wiki/revision.html:66
 msgid "Revision Content"
 msgstr "Содержимое ревизии"
 
@@ -2621,8 +2464,7 @@ msgstr "Содержимое ревизии"
 msgid "This document does not have a current revision."
 msgstr "Этот документ не имеет текущей ревизии."
 
-#: apps/wiki/templates/wiki/review_revision.html:44
-#: apps/wiki/templates/wiki/includes/revision_diff.html:38
+#: apps/wiki/templates/wiki/review_revision.html:44 apps/wiki/templates/wiki/includes/revision_diff.html:38
 msgid "Search results summary:"
 msgstr "Сводка результатов поиска:"
 
@@ -2674,14 +2516,11 @@ msgstr "Полные исходники статьи"
 msgid "The {default_locale} version has no approved content to show."
 msgstr "Для версии на {default_locale} нет одобренного содержимого."
 
-#: apps/wiki/templates/wiki/review_translation.html:49
-#: apps/wiki/templates/wiki/translate.html:127
+#: apps/wiki/templates/wiki/review_translation.html:49 apps/wiki/templates/wiki/translate.html:127
 msgid "Approved {default_locale} version:"
 msgstr "Одобренная {default_locale} версия:"
 
-#: apps/wiki/templates/wiki/review_translation.html:50
-#: apps/wiki/templates/wiki/review_translation.html:54
-#: apps/wiki/templates/wiki/includes/revision_diff.html:16
+#: apps/wiki/templates/wiki/review_translation.html:50 apps/wiki/templates/wiki/review_translation.html:54 apps/wiki/templates/wiki/includes/revision_diff.html:16
 #: apps/wiki/templates/wiki/includes/revision_diff.html:28
 msgid "Revision {id} by {user} on {date}"
 msgstr "Ревизия {id} сделанная {user} {date}"
@@ -2771,9 +2610,7 @@ msgstr "Выберите язык для перевода на:"
 msgid "Translate Article | {document}"
 msgstr "Перевести статью | {document}"
 
-#: apps/wiki/templates/wiki/translate.html:9
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:37
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:39
+#: apps/wiki/templates/wiki/translate.html:9 apps/wiki/templates/wiki/includes/sidebar_modules.html:37 apps/wiki/templates/wiki/includes/sidebar_modules.html:39
 msgid "Translate Article"
 msgstr "Перевести статью"
 
@@ -2825,6 +2662,47 @@ msgstr "Примечание: Для этой статьи нет утвержд
 msgid "{locale} translation:"
 msgstr "Перевод на {locale}:"
 
+#: apps/wiki/templates/wiki/includes/document_macros.html:5
+msgid "Related Articles"
+msgstr "Связанные статьи"
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:17
+msgid "Contributors to this page: %(contributors)s"
+msgstr "Создатели этой страницы: %(contributors)s"
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:30
+msgid "(Redirected from <a href=\"{href}\">{title}</a>)"
+msgstr "(Перенаправлено с <a href=\"{href}\">{title}</a>)"
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:35
+msgid ""
+"<p>This article may be out of date.</p> <p> An important change has been made to the English article on which this is based. Until this page is updated, you might find this helpful: <a href=\"%(url)"
+"s\">%(title)s</a> </p>"
+msgstr ""
+"<p> Эта статья может быть устаревшей.</p><p> В статью на английском языке, на которой она основана, были внесены важные изменения. Пока эта страница не будет обновлена, вы можете найти полезной "
+"статью: <a href=\"%(url)s\">%(title)s</a> </p>"
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:53
+msgid "Our volunteers haven't translated this article into %(locale)s yet. <a href=\"%(help_link)s\">Join us and help get the job done!</a>"
+msgstr "Наши добровольцы пока не перевели эту статью на %(locale)s. <a href=\"%(help_link)s\">Присоединяйтесь и помогите выполнить эту работу!</a>"
+
+#. This is shown for existing, never-approved translations
+#: apps/wiki/templates/wiki/includes/document_macros.html:63
+msgid "Our volunteers are working on translating this article. Until it's ready, maybe the English version can be of some help."
+msgstr "Наши волонтёры работают над переводом этой статьи. Пока она не готова, возможно вам поможет Английская версия."
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:70
+msgid "This article doesn't have approved content yet."
+msgstr "Содержимое этой статьи ещё не одобрено."
+
+#: apps/wiki/templates/wiki/includes/document_vote.html:7
+msgid "Was this article helpful?"
+msgstr "Помогла ли эта статья?"
+
+#: apps/wiki/templates/wiki/includes/document_vote.html:10
+msgid "Please wait..."
+msgstr "Пожалуйста, подождите..."
+
 #: apps/wiki/templates/wiki/includes/review_form.html:10
 msgid "Approve Translation"
 msgstr "Одобрить перевод"
@@ -2859,10 +2737,11 @@ msgstr "Спасибо, что нашли время для рассмотрен
 
 #: apps/wiki/templates/wiki/includes/review_form.html:22
 msgid "Clicking Accept will make this version of the article live! Please pick the appropriate revision level below and consider sending a thank you to the person who submitted this."
-msgstr "Нажав кнопку \"Принять\", вы поместите эту версию статьи в публичный доступ! Пожалуйста, выберите ниже подходящий уровень ревизии и, если возможно, отправьте благодарность человеку, который это представил."
+msgstr ""
+"Нажав кнопку \"Принять\", вы поместите эту версию статьи в публичный доступ! Пожалуйста, выберите ниже подходящий уровень ревизии и, если возможно, отправьте благодарность человеку, который это "
+"представил."
 
-#: apps/wiki/templates/wiki/includes/review_form.html:31
-#: apps/wiki/templates/wiki/includes/review_form.html:45
+#: apps/wiki/templates/wiki/includes/review_form.html:31 apps/wiki/templates/wiki/includes/review_form.html:45
 msgid "Leave a message for the contributor: <span class=\"optional\">(optional)</span>"
 msgstr "Оставьте сообщение для участника: <span class=\"optional\">(необязательно)</span>"
 
@@ -2886,13 +2765,11 @@ msgstr "Спасибо, что нашли время для рассмотрен
 msgid "Reject"
 msgstr "Отклонить"
 
-#: apps/wiki/templates/wiki/includes/revision_diff.html:12
-#: apps/wiki/templates/wiki/includes/revision_diff.html:24
+#: apps/wiki/templates/wiki/includes/revision_diff.html:12 apps/wiki/templates/wiki/includes/revision_diff.html:24
 msgid "Revision {num}:"
 msgstr "Ревизия {num}:"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:18
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:20
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:18 apps/wiki/templates/wiki/includes/sidebar_modules.html:20
 msgid "Discussion"
 msgstr "Обсуждение"
 
@@ -2936,32 +2813,32 @@ msgstr "Уведомлять меня о любых будущих измене�
 msgid "Help with:"
 msgstr "Помощь с:"
 
-#: templates/base.html:14
+#: templates/base.html:14 templates/mobile/base.html:12
 msgctxt "site_title"
 msgid "Firefox Help"
 msgstr "Справка Firefox"
 
-#: templates/base.html:86
+#: templates/base.html:89
 msgid "Be <mark>Awesome</mark>"
 msgstr "Станьте <mark>нашим помощником</mark>"
 
-#: templates/base.html:91
+#: templates/base.html:94
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
 msgstr "Знаете ли вы, что справка Firefox поддерживается добровольцами-супергероями со всего мира?"
 
-#: templates/base.html:94
+#: templates/base.html:97
 msgid "Grab your cape and join us &raquo;"
 msgstr "Хватайте свои плащ супергероя и присоединяйтесь к нам &raquo;"
 
-#: templates/base.html:98
+#: templates/base.html:101
 msgid "Check your <mark>plugins</mark>"
 msgstr "Проверьте ваши <mark>плагины</mark>"
 
-#: templates/base.html:103
+#: templates/base.html:106
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
 msgstr "Что такое плагин? Почему я должен следить за их обновлениями? Ответьте на эти вопросы и пройдите мгновенную проверку на свежесть плагинов."
 
-#: templates/base.html:108
+#: templates/base.html:111
 msgid "Find out more &raquo;"
 msgstr "Узнайте больше &raquo;"
 
@@ -2969,16 +2846,15 @@ msgstr "Узнайте больше &raquo;"
 msgid "Back to home page"
 msgstr "Вернуться на домашнюю страницу"
 
-#: templates/global/footer.html:6
-#: templates/global/header.html:7
+#: templates/global/footer.html:6 templates/global/header.html:7
 msgid "Firefox"
 msgstr "Firefox"
 
-#: templates/global/footer.html:17
+#: templates/global/footer.html:17 templates/mobile/base.html:88
 msgid "Privacy Policy"
 msgstr "Политика приватности"
 
-#: templates/global/footer.html:18
+#: templates/global/footer.html:18 templates/mobile/base.html:89
 msgid "Legal Notices"
 msgstr "Правовые уведомления"
 
@@ -2987,8 +2863,12 @@ msgid "Report Trademark Abuse"
 msgstr "Сообщить о злоупотреблении торговой маркой"
 
 #: templates/global/footer.html:22
-msgid "Except where otherwise <a href=\"http://mozilla.com/about/legal.html#site\">noted</a>, content on this site is licensed under the <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> Creative Commons Attribution Share-Alike License v3.0 </a> or any later version."
-msgstr "За исключением содержимого с <a href=\"http://www.mozilla.com/about/legal.html#site\">явно указанной</a> лицензией, содержимое этого сайта лицензировано на условиях<br/><strong><a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> лицензии Creative Commons Атрибуция — С сохранением условий версии 3.0</a></strong> или более поздней."
+msgid ""
+"Except where otherwise <a href=\"http://mozilla.com/about/legal.html#site\">noted</a>, content on this site is licensed under the <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> "
+"Creative Commons Attribution Share-Alike License v3.0 </a> or any later version."
+msgstr ""
+"За исключением содержимого с <a href=\"http://www.mozilla.com/about/legal.html#site\">явно указанной</a> лицензией, содержимое этого сайта лицензировано на условиях<br/><strong><a href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/\"> лицензии Creative Commons Атрибуция — С сохранением условий версии 3.0</a></strong> или более поздней."
 
 #: templates/global/header.html:3
 msgid "skip to navigation"
@@ -3002,14 +2882,11 @@ msgstr "переключить язык"
 msgid "Back to Mozilla.com"
 msgstr "Вернуться на Mozilla.com"
 
-#: templates/global/header.html:8
-#: templates/global/minimal-header.html:2
+#: templates/global/header.html:8 templates/global/minimal-header.html:2
 msgid "visit <span>mozilla.org</span>"
 msgstr "посетить <span>mozilla.org</span>"
 
-#: templates/global/menu_links.html:2
-#: templates/global/menu_links.html:4
-#: templates/global/menu_links.html:16
+#: templates/global/menu_links.html:2 templates/global/menu_links.html:4 templates/global/menu_links.html:16 templates/global/mobile/header.html:4
 msgid "Features"
 msgstr "Возможности"
 
@@ -3061,12 +2938,11 @@ msgstr "Как присоединиться"
 msgid "FAQ"
 msgstr "FAQ"
 
-#: templates/global/menu_links.html:22
-#: templates/global/menu_links.html:59
+#: templates/global/menu_links.html:22 templates/global/menu_links.html:59
 msgid "Blog"
 msgstr "Блог"
 
-#: templates/global/menu_links.html:26
+#: templates/global/menu_links.html:26 templates/global/mobile/header.html:6
 msgid "Add-ons"
 msgstr "Дополнения"
 
@@ -3110,23 +2986,19 @@ msgstr "Мобильные дополнения"
 msgid "Developer Hub"
 msgstr "Центр разработчика"
 
-#: templates/global/menu_links.html:42
-#: templates/layout/menu_links.html:5
+#: templates/global/menu_links.html:42 templates/global/mobile/header.html:7 templates/layout/menu_links.html:5
 msgid "Support"
 msgstr "Поддержка"
 
-#: templates/global/menu_links.html:44
-#: templates/layout/menu_links.html:7
+#: templates/global/menu_links.html:44 templates/layout/menu_links.html:7
 msgid "Firefox Support"
 msgstr "Поддержка Firefox"
 
-#: templates/global/menu_links.html:45
-#: templates/layout/menu_links.html:8
+#: templates/global/menu_links.html:45 templates/layout/menu_links.html:8
 msgid "Mobile Support"
 msgstr "Поддержка мобильной версии"
 
-#: templates/global/menu_links.html:46
-#: templates/layout/menu_links.html:9
+#: templates/global/menu_links.html:46 templates/layout/menu_links.html:9
 msgid "Thunderbird Support"
 msgstr "Поддержка Thunderbird"
 
@@ -3162,6 +3034,25 @@ msgstr "Правовые"
 msgid "Contact Us"
 msgstr "Связаться с нами"
 
+#: templates/global/mobile/header.html:3
+#, fuzzy
+msgid "Mozilla Firefox"
+msgstr "MozillaZine"
+
+#: templates/global/mobile/header.html:5
+#, fuzzy
+msgid "Desktop"
+msgstr "Десктоп:"
+
+#: templates/global/mobile/header.html:8
+#, fuzzy
+msgid "Visit Mozilla"
+msgstr "Mozilla"
+
+#: templates/global/mobile/header.html:10
+msgid "Menu"
+msgstr ""
+
 #: templates/includes/common_macros.html:5
 msgid "Search Firefox Help"
 msgstr "Поиск в справке Firefox"
@@ -3181,6 +3072,10 @@ msgstr "Выйти"
 #: templates/includes/common_macros.html:31
 msgid "Want to contribute?<br /> <a href=\"%(login_url)s\">Sign In</a> or <a href=\"%(register_url)s\">Register</a>"
 msgstr "Хотите поучаствовать? <br /> <a href=\"%(login_url)s\">Войдите</a> или <a href=\"%(register_url)s\">Зарегистрируйтесь</a>"
+
+#: templates/includes/lang_form.html:4
+msgid "Other Languages"
+msgstr "Другие языки"
 
 #: templates/includes/sidebar_modules.html:5
 msgid "For Contributors"
@@ -3218,17 +3113,29 @@ msgstr "Перевести статьи"
 msgid "Contributors Forums"
 msgstr "Форумы помощников"
 
-#: templates/includes/sidebar_modules.html:25
+#: templates/includes/sidebar_modules.html:25 templates/mobile/base.html:40
 msgid "Firefox Help Home"
 msgstr "Страница справки Firefox"
 
-#: templates/includes/sidebar_modules.html:28
+#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:55 templates/mobile/base.html:60
 msgid "Ask a Question"
 msgstr "Задать вопрос"
 
-#: templates/layout/footer.html:11
-msgid "Other Languages"
-msgstr "Другие языки"
+#: templates/includes/mobile/paginator.html:5 templates/includes/mobile/paginator.html:7
+#, fuzzy
+msgid "Prev"
+msgstr "Предпросмотр"
+
+#: templates/includes/mobile/paginator.html:11
+msgid "Page {n}"
+msgid_plural "Page {n}"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: templates/includes/mobile/paginator.html:15 templates/includes/mobile/paginator.html:17 templates/layout/paginator.html:31
+msgid "Next"
+msgstr "Следующее"
 
 #: templates/layout/login.html:16
 msgid "Remember me"
@@ -3250,162 +3157,258 @@ msgstr "Я забыл мой пароль"
 msgid "Previous"
 msgstr "Предыдущее"
 
-#: templates/layout/paginator.html:31
-msgid "Next"
-msgstr "Следующее"
+#: templates/mobile/base.html:31
+#, fuzzy
+msgid "Return to Firefox Support homepage"
+msgstr "Страница поддержки Firefox"
+
+#: templates/mobile/base.html:58
+msgid "Need More Personal Help?"
+msgstr ""
+
+#: templates/mobile/base.html:61
+#, fuzzy
+msgid "Browse our Support Forum"
+msgstr "Форум поддержки"
+
+#: templates/mobile/base.html:65
+#, fuzzy
+msgid "Other Products"
+msgstr "Продукты"
+
+#: templates/mobile/base.html:68
+#, fuzzy
+msgid "Firefox for Desktop"
+msgstr "Firefox 4 для мобильных"
+
+#: templates/mobile/base.html:70
+#, fuzzy
+msgid "Firefox for Mobile"
+msgstr "Firefox 4 для мобильных"
+
+#: templates/mobile/base.html:72
+#, fuzzy
+msgid "Firefox Home"
+msgstr "Справка Firefox"
+
+#: templates/mobile/base.html:73
+#, fuzzy
+msgid "Firefox Sync"
+msgstr "Firefox 4"
+
+#: templates/mobile/base.html:86
+msgid "View full site"
+msgstr ""
 
 #~ msgid "Cancel Changes"
 #~ msgstr "Отменить изменения"
+
 #~ msgid "Be Awesome"
 #~ msgstr "Помогайте"
+
 #~ msgid "My Profile"
 #~ msgstr "Мой Профиль"
+
 #~ msgid "You are here:"
 #~ msgstr "Вы здесь:"
+
 #~ msgid "Revisions"
 #~ msgstr "Ревизии"
+
 #~ msgid "Select Locale"
 #~ msgstr "Выберите язык"
+
 #~ msgid "Username: {username}"
 #~ msgstr "Имя пользователя: {username}"
+
 #~ msgid "Contact"
 #~ msgstr "Связаться"
+
 #~ msgid "IRC nickname: {nickname}"
 #~ msgstr "Ник на IRC: {nickname}"
 
 #, fuzzy
 #~ msgid "This user has not made any contact information public."
 #~ msgstr "Этот пользователь не оставил никакой публичной контактной информации."
+
 #~ msgid "Type of article."
 #~ msgstr "Тип статьи."
+
 #~ msgid "Topics in {locale}:"
 #~ msgstr "Темы на {locale}:"
+
 #~ msgid "Title of article."
 #~ msgstr "Заголовок статьи."
+
 #~ msgid "There is no approved revision to translate from."
 #~ msgstr "Одобренной ревизии для перевода не существует."
+
 #~ msgid "Popular articles in each topic are displayed on the front page."
 #~ msgstr "Популярные статьи в каждом разделе отображаемые на главной странице."
+
 #~ msgid "Only displayed on search results page."
 #~ msgstr "Отображается только на странице результатов поиска."
+
 #~ msgid "For help with writing articles, check out the <a href=\"{url}\">Support Document Guide</a>."
 #~ msgstr "Чтобы помочь с написанием статей, прочтите <a href=\"{url}\">Руководство по написанию документов подержки</a>."
+
 #~ msgid "Store"
 #~ msgstr "Магазин"
+
 #~ msgid "Thunderbird"
 #~ msgstr "Thunderbird"
-#~ msgid "Products"
-#~ msgstr "Продукты"
-#~ msgid "Mozilla"
-#~ msgstr "Mozilla"
+
 #~ msgid ""
 #~ "Mozilla is providing links to any applications as a courtesy, and makes no representations regarding the applications or any information related there to. Any questions, complaints or claims "
 #~ "regarding the applications must be directed to the appropriate software vendor."
 #~ msgstr ""
 #~ "Mozilla любезно обеспечивает ссылки на эти приложения и не предоставляет никаких сведений относительно приложений или любой информации, связанной с ними. Любые вопросы, жалобы или требования "
 #~ "относительно приложений должны направляться соответствующему производителю программного обеспечения."
+
 #~ msgid ""
 #~ "Except where otherwise <a href=\"http://www.mozilla.com/about/legal.html#site\">noted</a>, content on this site is licensed under the<br/><strong><a href=\"http://creativecommons.org/licenses/by-"
 #~ "sa/3.0/\">Creative Commons Attribution Share-Alike License v3.0</a></strong> or any later version."
 #~ msgstr ""
 #~ "За исключением содержимого с <a href=\"http://www.mozilla.com/about/legal.html#site\">явно указанной</a> лицензией, содержимое этого сайта лицензировано на условиях<br/><strong><a href=\"http://"
 #~ "creativecommons.org/licenses/by-sa/3.0/\">лицензии Creative Commons Атрибуция — С сохранением условий версии версии 3.0</a></strong> или более поздней."
+
 #~ msgid "Logo Guide"
 #~ msgstr "Руководство по логотипам"
+
 #~ msgid "Community Store"
 #~ msgstr "Магазин сообщества"
+
 #~ msgid "Category in {locale}:"
 #~ msgstr "Категория на {locale}:"
+
 #~ msgid "Licensing"
 #~ msgstr "Лицензии"
+
 #~ msgid "Press Center"
 #~ msgstr "Пресс-центр"
+
 #~ msgid "What is Mozilla?"
 #~ msgstr "Что такое Mozilla?"
+
 #~ msgid "SpreadFirefox"
 #~ msgstr "SpreadFirefox"
+
 #~ msgid "QMO"
 #~ msgstr "QMO"
+
 #~ msgid "Planet Mozilla"
 #~ msgstr "Планета Mozilla"
-#~ msgid "MozillaZine"
-#~ msgstr "MozillaZine"
+
 #~ msgid "Mozilla.org"
 #~ msgstr "Mozilla.org"
+
 #~ msgid "Mozilla Messaging"
 #~ msgstr "Mozilla Messaging"
+
 #~ msgid "Mozilla Labs"
 #~ msgstr "Лаборатории Mozilla"
+
 #~ msgid "Mozilla Developer Center"
 #~ msgstr "Центр разработки Mozilla"
+
 #~ msgid "Bugzilla"
 #~ msgstr "Bugzilla"
+
 #~ msgid "Plugins"
 #~ msgstr "Плагины"
+
 #~ msgid "Article URL."
 #~ msgstr "Ссылка на статью."
+
 #~ msgid "Search Engines"
 #~ msgstr "Поисковые движки"
+
 #~ msgid "Popular"
 #~ msgstr "Популярные"
+
 #~ msgid "Recommended"
 #~ msgstr "Рекомендуемые"
+
 #~ msgid "All Add-ons"
 #~ msgstr "Все дополнения"
+
 #~ msgid "Fastest Firefox"
 #~ msgstr "Самый быстрый Firefox"
+
 #~ msgid "Other Systems and Languages"
 #~ msgstr "Другие системы и языки"
+
 #~ msgid "Release Notes"
 #~ msgstr "Примечания к выпуску"
+
 #~ msgid "Tips and Tricks"
 #~ msgstr "Советы и хитрости"
+
 #~ msgid "Affects search results."
 #~ msgstr "Влияет на результаты поиска."
+
 #~ msgid "Did you mean: {0}"
 #~ msgstr "Вы имели в виду: {0}"
+
 #~ msgid "Forum"
 #~ msgstr "Форум"
+
 #~ msgid "Search the Forum"
 #~ msgstr "Поиск в форуме"
+
 #~ msgid "A revision must be based on an approved revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 #~ msgstr "Ревизия должна быть основана на одобренной ревизии документа на %(locale)s  Ревизия с идентификатором %(id)s не подходит под эти критерии."
+
 #~ msgid "Post status"
 #~ msgstr "Указать статус"
+
 #~ msgid "Log Out"
 #~ msgstr "Выйти"
+
 #~ msgid "My Account"
 #~ msgstr "Моя учётная запись"
+
 #~ msgid "How to Contribute"
 #~ msgstr "Как внести свой вклад"
+
 #~ msgid "Other Firefox Support"
 #~ msgstr "Другая поддержка Firefox"
-#~ msgid "Support Forum"
-#~ msgstr "Форум поддержки"
+
 #~ msgid "Download Stats"
 #~ msgstr "Статистика загрузок"
+
 #~ msgid "Helping in the Forum"
 #~ msgstr "Помощью в форуме"
+
 #~ msgid "Creating Articles"
 #~ msgstr "Создание статей"
+
 #~ msgid "Edit this {type}"
 #~ msgstr "Редактировать эту {type}"
+
 #~ msgid "Delete this {type}"
 #~ msgstr "Удалить это {type}"
+
 #~ msgid "Save {type}"
 #~ msgstr "Сохранить {type}"
+
 #~ msgid "Edit {type}"
 #~ msgstr "Редактировать {type}"
+
 #~ msgid "You are about to permanently delete this {type}. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 #~ msgstr "Вы собираетесь навсегда удалить этот {type}. <strong>Это не может быть отменено!</strong> Вы уверены, что хотите продолжить?"
+
 #~ msgid "Are you sure you want to delete this {type}?"
 #~ msgstr "Вы уверены, что хотите удалить этот {type}?"
+
 #~ msgid "Delete {type} | {t} | Media Gallery"
 #~ msgstr "Удалить {type} | {t} | Медиа-галерея"
+
 #~ msgid "visit {0}"
 #~ msgstr "посетить {0}"
+
 #~ msgid "The password reset link was sent to your email address."
 #~ msgstr "Ссылка для сброса пароля была отправлена на ваш адрес эл. почты."
+
 #~ msgid "Localizer Dashboard"
 #~ msgstr "Панель локализатора"
-
