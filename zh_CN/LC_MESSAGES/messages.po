@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-18 07:47-0700\n"
+"POT-Creation-Date: 2011-04-12 15:29-0700\n"
 "PO-Revision-Date: 2011-03-20 16:58+0200\n"
 "Last-Translator: Kemcy <kmcreg@gmail.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -33,7 +33,7 @@ msgstr "这份公告什么时候停止出现。无限期的话请留空。（美
 msgid "Use wiki syntax or HTML. It will display similar to a document's content."
 msgstr "使用维基或者HTML语法。它会与文档内容显示形式类似。"
 
-#: apps/customercare/views.py:27 apps/dashboards/readouts.py:86
+#: apps/customercare/views.py:27 apps/dashboards/readouts.py:103
 msgid "Most Recent"
 msgstr "最新"
 
@@ -232,8 +232,8 @@ msgstr "在加入了不起大军之前，您需要登录才能回复tweet。现�
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:87 apps/gallery/templates/gallery/includes/upload_media_form.html:117
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:134 apps/kbforums/templates/kbforums/confirm_post_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:30
 #: apps/kbforums/templates/kbforums/edit_post.html:29 apps/kbforums/templates/kbforums/edit_thread.html:27 apps/kbforums/templates/kbforums/new_thread.html:34
-#: apps/notifications/templates/notifications/remove.html:16 apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_revision_delete.html:25
-#: apps/wiki/templates/wiki/includes/review_form.html:35 apps/wiki/templates/wiki/includes/review_form.html:49 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
+#: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_revision_delete.html:25 apps/wiki/templates/wiki/includes/review_form.html:35
+#: apps/wiki/templates/wiki/includes/review_form.html:49 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "取消"
 
@@ -245,121 +245,136 @@ msgstr "这周"
 msgid "All Time"
 msgstr "全部时间"
 
-#: apps/dashboards/readouts.py:58 apps/dashboards/readouts.py:155
+#: apps/dashboards/readouts.py:68 apps/dashboards/readouts.py:172
 msgid "Most-Visited Articles"
 msgstr "浏览最多的文章"
 
-#: apps/dashboards/readouts.py:62
+#: apps/dashboards/readouts.py:72
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "这是访问量排名前20的文章，占了知识库文章总访问量的50%强。"
 
-#: apps/dashboards/readouts.py:65
+#: apps/dashboards/readouts.py:75 apps/dashboards/readouts.py:318 apps/wiki/models.py:46
+msgid "Templates"
+msgstr "模板"
+
+#: apps/dashboards/readouts.py:79
+#, fuzzy
+msgid "How many of the approved templates which allow translations have an approved translation into this language"
+msgstr "在已通过审核并可被翻译的英文文章中，有多少已经被翻译成简体中文并被审核通过"
+
+#: apps/dashboards/readouts.py:82
 msgid "All Knowledge Base Articles"
 msgstr "所有的知识库文章"
 
-#: apps/dashboards/readouts.py:68
+#: apps/dashboards/readouts.py:85
 msgid "How many of the approved English articles which allow translations have an approved translation into this language"
 msgstr "在已通过审核并可被翻译的英文文章中，有多少已经被翻译成简体中文并被审核通过"
 
-#: apps/dashboards/readouts.py:83
+#: apps/dashboards/readouts.py:100
 msgid "Visits this week"
 msgstr "本周访问量"
 
-#: apps/dashboards/readouts.py:84
+#: apps/dashboards/readouts.py:101
 msgid "Status"
 msgstr "状态"
 
-#: apps/dashboards/readouts.py:85
+#: apps/dashboards/readouts.py:102
 msgid "Most Viewed"
 msgstr "最受欢迎"
 
-#: apps/dashboards/readouts.py:157
+#: apps/dashboards/readouts.py:174
 msgid "All knowledge base articles..."
 msgstr "所有的知识库文章..."
 
-#: apps/dashboards/readouts.py:159
+#: apps/dashboards/readouts.py:176
 msgid "Visits"
 msgstr "访问量"
 
-#: apps/dashboards/readouts.py:162
+#: apps/dashboards/readouts.py:179
 msgid "Review Needed"
 msgstr "需要审核"
 
 #. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:210
+#: apps/dashboards/readouts.py:227
 msgid "All translations in English..."
 msgstr "所有简体中文的翻译..."
 
-#: apps/dashboards/readouts.py:214
+#: apps/dashboards/readouts.py:231
 msgid "Update Needed"
 msgstr "需要更新"
 
-#: apps/dashboards/readouts.py:216
+#: apps/dashboards/readouts.py:233
 msgid "Out of Date"
 msgstr "已过时"
 
-#: apps/dashboards/readouts.py:272
+#: apps/dashboards/readouts.py:293
 msgid "Translation Needed"
 msgstr "需要翻译"
 
-#: apps/dashboards/readouts.py:288
+#. L10n: Replace "English" with your language.
+#: apps/dashboards/readouts.py:322
+#, fuzzy
+msgid "All templates in English..."
+msgstr "所有简体中文的翻译..."
+
+#: apps/dashboards/readouts.py:330
 msgid "Untranslated Articles"
 msgstr "未翻译文章"
 
-#: apps/dashboards/readouts.py:289
+#: apps/dashboards/readouts.py:331
 msgid "Untranslated"
 msgstr "未翻译"
 
-#: apps/dashboards/readouts.py:290
+#: apps/dashboards/readouts.py:332
 msgid "All untranslated articles..."
 msgstr "所有未翻译的文章..."
 
-#: apps/dashboards/readouts.py:292
+#: apps/dashboards/readouts.py:334
 msgid "Updated"
 msgstr "最后更新于"
 
-#: apps/dashboards/readouts.py:332
+#: apps/dashboards/readouts.py:374
 msgid "Out-of-Date Translations"
 msgstr "有新版本原文的翻译"
 
-#: apps/dashboards/readouts.py:333
+#: apps/dashboards/readouts.py:375
 msgid "Out-of-Date"
 msgstr "有新版本"
 
-#: apps/dashboards/readouts.py:334
+#: apps/dashboards/readouts.py:376
 msgid "All out-of-date translations..."
 msgstr "所有有新版本原文的翻译..."
 
-#: apps/dashboards/readouts.py:336
+#: apps/dashboards/readouts.py:378
 msgid "Out of date since"
 msgstr "自从这个时间点后有新版本原文"
 
-#: apps/dashboards/readouts.py:411
+#: apps/dashboards/readouts.py:453
 msgid "Translations Needing Updates"
 msgstr "翻译需要更新"
 
-#: apps/dashboards/readouts.py:412
+#: apps/dashboards/readouts.py:454
 msgid "Needing Updates"
 msgstr "需要更新"
 
-#: apps/dashboards/readouts.py:413
+#: apps/dashboards/readouts.py:455
 msgid "All translations needing updates..."
 msgstr "所有需要更新的翻译..."
 
-#: apps/dashboards/readouts.py:420
+#: apps/dashboards/readouts.py:462
 msgid "Unreviewed Changes"
 msgstr "未审核的更新"
 
-#: apps/dashboards/readouts.py:424
+#: apps/dashboards/readouts.py:466
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "未审核的"
 
-#: apps/dashboards/readouts.py:425
+#: apps/dashboards/readouts.py:467
 msgid "All articles requiring review..."
 msgstr "所有需要审查的文章..."
 
-#: apps/dashboards/readouts.py:427
+#: apps/dashboards/readouts.py:469
 msgid "Changed"
 msgstr "已变更"
 
@@ -370,14 +385,6 @@ msgstr "贡献者面板"
 #: apps/dashboards/views.py:59 apps/dashboards/templates/dashboards/localization.html:4
 msgid "Localization Dashboard"
 msgstr "本地化控制面板"
-
-#: apps/dashboards/templates/dashboards/base.html:19 apps/wiki/templates/wiki/document_revisions.html:52
-msgid "Review"
-msgstr "审核"
-
-#: apps/dashboards/templates/dashboards/base.html:22
-msgid "Forum"
-msgstr "讨论区"
 
 #: apps/dashboards/templates/dashboards/contributors.html:16 apps/dashboards/templates/dashboards/localization.html:42
 msgid "Show information for:"
@@ -391,15 +398,15 @@ msgstr "<small>%(denominator)s</small>中的%(numerator)s"
 msgid "Overview"
 msgstr "概观"
 
-#: apps/dashboards/templates/dashboards/localization.html:61
+#: apps/dashboards/templates/dashboards/localization.html:62
 msgid "User Interface"
 msgstr "使用者界面"
 
-#: apps/dashboards/templates/dashboards/localization.html:65
+#: apps/dashboards/templates/dashboards/localization.html:66
 msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
 msgstr "一个翻译完善的用户界面可以改善与您使用相同语言的使用者的浏览体验。欢迎协助<a href=\"%(url)s\">翻译用户界面</a>。"
 
-#: apps/dashboards/templates/dashboards/localization.html:74
+#: apps/dashboards/templates/dashboards/localization.html:75
 msgid "More options:"
 msgstr "更多选项："
 
@@ -423,52 +430,66 @@ msgstr "文章"
 msgid "changed by {users}"
 msgstr "由{users}变更"
 
-#. Please localize 'English' here.
+#: apps/dashboards/templates/dashboards/includes/macros.html:26
+#, fuzzy
+msgctxt "dashboard"
+msgid "Review"
+msgstr "审核"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:39
+msgid "My profile"
+msgstr "个人资料"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:42
+msgid "Edit my profile"
+msgstr "编辑个人信息"
+
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:9
-msgctxt "english"
+#, fuzzy
 msgid "Stop getting emailed when English revisions are approved"
 msgstr "当简体中文修订被审核通过时不再用电子邮件通知"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:12
-msgctxt "locale"
-msgid "Stop getting emailed when English revisions are approved"
+#, fuzzy
+msgid "Stop getting emailed when YOUR_LOCALE revisions are approved"
 msgstr "当简体中文修订被审核通过时不再用电子邮件通知"
 
-#. Please localize 'English' here.
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:21
-msgctxt "english"
+#, fuzzy
 msgid "Get emailed when English revisions are approved"
 msgstr "当简体中文修订被审核通过时用电子邮件通知"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:24
-msgctxt "locale"
-msgid "Get emailed when English revisions are approved"
+#, fuzzy
+msgid "Get emailed when YOUR_LOCALE revisions are approved"
 msgstr "当简体中文修订被审核通过时用电子邮件通知"
 
-#. Please localize 'English' here.
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:8
-msgctxt "english"
+#, fuzzy
 msgid "Stop getting emailed when English reviews are waiting"
 msgstr "当简体中文中有需要审核的文章时不再用电子邮件通知"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:11
-msgctxt "locale"
-msgid "Stop getting emailed when English reviews are waiting"
-msgstr "当简体中文中有等待审核的文章时不再用电子邮件通知"
+#, fuzzy
+msgid "Stop getting emailed when YOUR_LOCALE reviews are waiting"
+msgstr "当简体中文中有需要审核的文章时不再用电子邮件通知"
 
-#. Please localize 'English' here.
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:19
-msgctxt "english"
+#, fuzzy
 msgid "Get emailed when English reviews are waiting"
 msgstr "当简体中文中有等待审核的文章时用电子邮件通知"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:22
-msgctxt "locale"
-msgid "Get emailed when English reviews are waiting"
+#, fuzzy
+msgid "Get emailed when YOUR_LOCALE reviews are waiting"
 msgstr "当简体中文中有等待审核的文章时用电子邮件通知"
 
 #: apps/flagit/models.py:23
@@ -877,11 +898,11 @@ msgstr "删除缩略图"
 msgid "Upload a thumbnail for your video. Suggested size: {width}x{height}px"
 msgstr "为您的视频上传一张缩略图。建议尺寸：{width}x{height}像素"
 
-#: apps/kbforums/events.py:16
+#: apps/kbforums/events.py:20
 msgid "Reply to: %s"
 msgstr "回复给: %s"
 
-#: apps/kbforums/events.py:32
+#: apps/kbforums/events.py:29
 msgid "New thread in %s: %s"
 msgstr "在%s论坛发布新主题：%s"
 
@@ -1193,7 +1214,7 @@ msgstr "常见问题"
 msgid "Firefox Help <span>for Firefox Home</span>"
 msgstr "<span>Firefox Home</span>帮助"
 
-#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:128 templates/base.html:8 templates/base.html:17 templates/mobile/base.html:15
+#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:139 templates/base.html:8 templates/base.html:17 templates/mobile/base.html:15
 msgid "Firefox Help"
 msgstr "Firefox帮助"
 
@@ -1204,23 +1225,6 @@ msgstr "Firefox <span>移动版</span>帮助"
 #: apps/landings/templates/landings/mobile/sync.html:5
 msgid "Firefox Help <span>for Sync</span>"
 msgstr "Firefox <span>Sync</span>帮助"
-
-#: apps/notifications/templates/notifications/gone.html:3
-msgid "Unsubscribed"
-msgstr "已取消订阅"
-
-#: apps/notifications/templates/notifications/gone.html:10
-msgid "You have been unsubscribed from this notification."
-msgstr "您已取消订阅此通知。"
-
-#: apps/notifications/templates/notifications/remove.html:3
-msgid "Unsubscribe"
-msgstr "取消订阅"
-
-#. {0} is an object title, {1} is an object type.
-#: apps/notifications/templates/notifications/remove.html:11
-msgid "Do you want to stop receiving email notifications from the {1} <strong>{0}</strong>?"
-msgstr "您想要停止收到来自{1}<strong>{0}</strong>的电子邮件通知吗？"
 
 #: apps/search/__init__.py:17 apps/search/__init__.py:52 apps/search/__init__.py:58
 msgid "Don't filter"
@@ -1250,11 +1254,11 @@ msgstr "最初发表日期"
 msgid "Number of replies"
 msgstr "回复数量"
 
-#: apps/search/__init__.py:53 apps/sumo/helpers.py:298 apps/wiki/templates/wiki/includes/document_vote.html:8
+#: apps/search/__init__.py:53 apps/sumo/helpers.py:309 apps/wiki/templates/wiki/includes/document_vote.html:8
 msgid "Yes"
 msgstr "是"
 
-#: apps/search/__init__.py:54 apps/sumo/helpers.py:298 apps/wiki/templates/wiki/includes/document_vote.html:9
+#: apps/search/__init__.py:54 apps/sumo/helpers.py:309 apps/wiki/templates/wiki/includes/document_vote.html:9
 msgid "No"
 msgstr "否"
 
@@ -1467,46 +1471,46 @@ msgstr "至少需要%(limit_value)s个字符（目前已有 %(show_value)s 个�
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr "最多只能有%(limit_value)s 个字符（目前已有 %(show_value)s 个）。"
 
-#: apps/sumo/helpers.py:177
+#: apps/sumo/helpers.py:188
 msgid "Today at %s"
 msgstr "今天的 %s"
 
-#: apps/sumo/helpers.py:255
+#: apps/sumo/helpers.py:266
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "%(number)d 年前"
 
-#: apps/sumo/helpers.py:257
+#: apps/sumo/helpers.py:268
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "%(number)d 个月前"
 
-#: apps/sumo/helpers.py:259
+#: apps/sumo/helpers.py:270
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "%(number)d 周前"
 
-#: apps/sumo/helpers.py:261
+#: apps/sumo/helpers.py:272
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "%(number)d 天前"
 
-#: apps/sumo/helpers.py:263
+#: apps/sumo/helpers.py:274
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "%(number)d 小时前"
 
-#: apps/sumo/helpers.py:265
+#: apps/sumo/helpers.py:276
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "%(number)d 分钟前"
 
-#: apps/sumo/helpers.py:267
+#: apps/sumo/helpers.py:278
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] "%(number)d 秒前"
 
-#: apps/sumo/parser.py:228
+#: apps/sumo/parser.py:232
 msgid "The image \"%s\" does not exist."
 msgstr "图像\"%s\"不存在。"
 
@@ -1762,23 +1766,23 @@ msgstr "实时聊天帐号"
 msgid "Preferred language for email"
 msgstr "电子邮件的首选语言"
 
-#: apps/users/models.py:178 apps/users/models.py:214
+#: apps/users/models.py:180 apps/users/models.py:216
 msgid "Please confirm your email address"
 msgstr "请确认您的电子邮箱地址"
 
-#: apps/users/models.py:230 apps/users/models.py:272
+#: apps/users/models.py:232 apps/users/models.py:274
 msgid "user"
 msgstr "用户"
 
-#: apps/users/models.py:231 apps/users/models.py:273
+#: apps/users/models.py:233 apps/users/models.py:275
 msgid "activation key"
 msgstr "激活码"
 
-#: apps/users/models.py:237
+#: apps/users/models.py:239
 msgid "registration profile"
 msgstr "注册信息"
 
-#: apps/users/models.py:238
+#: apps/users/models.py:240
 msgid "registration profiles"
 msgstr "注册信息"
 
@@ -1802,14 +1806,6 @@ msgstr[0] "您在站点提出的问题现在已经可见！"
 #: apps/users/templates/users/activate.html:31
 msgid "We could not activate your account. Please make sure that you have clicked the correct link in your email or typed in the correct address."
 msgstr "我们不能够激活您的账户。请确信您已经点击了邮件中正确的链接或者是输入了正确的地址。"
-
-#: apps/users/templates/users/base.html:16
-msgid "My profile"
-msgstr "个人资料"
-
-#: apps/users/templates/users/base.html:24
-msgid "Edit my profile"
-msgstr "编辑个人信息"
 
 #: apps/users/templates/users/change_email.html:4
 msgid "Change email address"
@@ -1890,7 +1886,7 @@ msgstr "删除"
 msgid "Change"
 msgstr "更改"
 
-#: apps/users/templates/users/edit_profile.html:31 apps/users/templates/users/profile.html:35
+#: apps/users/templates/users/edit_profile.html:31 apps/users/templates/users/profile.html:36
 msgid "Email:"
 msgstr "邮箱："
 
@@ -1906,31 +1902,31 @@ msgstr "登录"
 msgid "{user} | Profile"
 msgstr "{user}|个人资料"
 
-#: apps/users/templates/users/profile.html:19
+#: apps/users/templates/users/profile.html:20
 msgid "{city}, {country}"
 msgstr "{city}，{country}"
 
-#: apps/users/templates/users/profile.html:41
+#: apps/users/templates/users/profile.html:42
 msgid "Website:"
 msgstr "网站："
 
-#: apps/users/templates/users/profile.html:47
+#: apps/users/templates/users/profile.html:48
 msgid "Twitter:"
 msgstr "Twitter："
 
-#: apps/users/templates/users/profile.html:53
+#: apps/users/templates/users/profile.html:54
 msgid "Facebook:"
 msgstr "Facebook："
 
-#: apps/users/templates/users/profile.html:59
+#: apps/users/templates/users/profile.html:60
 msgid "IRC:"
 msgstr "IRC："
 
-#: apps/users/templates/users/profile.html:65
+#: apps/users/templates/users/profile.html:66
 msgid "Livechat ID: {livechat_id}"
 msgstr "实时聊天ID：{livechat_id}"
 
-#: apps/users/templates/users/profile.html:72
+#: apps/users/templates/users/profile.html:73
 msgid "About {user}"
 msgstr "关于 {user}"
 
@@ -1943,7 +1939,8 @@ msgid "Change my password"
 msgstr "更改我的密码"
 
 #: apps/users/templates/users/pw_change_complete.html:3
-msgid "Password changed successful!"
+#, fuzzy
+msgid "Password change successful!"
 msgstr "密码更改成功！"
 
 #: apps/users/templates/users/pw_change_complete.html:9
@@ -2061,15 +2058,15 @@ msgstr "我还没有账户。"
 msgid "My account is inactive."
 msgstr "我的账户未激活。"
 
-#: apps/wiki/events.py:49
+#: apps/wiki/events.py:50
 msgid "{title} was edited by {creator}"
 msgstr "{title}已被{creator}编辑"
 
-#: apps/wiki/events.py:85
+#: apps/wiki/events.py:86
 msgid "{title} is ready for review ({creator})"
 msgstr "{title}正等待审核({creator})"
 
-#: apps/wiki/events.py:104
+#: apps/wiki/events.py:105
 msgid "{title} ({locale}) has a new approved revision"
 msgstr "{title}({locale})已经有一个新的修订被审核过"
 
@@ -2161,7 +2158,7 @@ msgstr "主题："
 msgid "Popular articles in each topic are displayed on the front page"
 msgstr "各种主题的热门文章会显示在首页"
 
-#: apps/wiki/forms.py:151 apps/wiki/templates/wiki/review_revision.html:40 apps/wiki/templates/wiki/review_translation.html:56 apps/wiki/templates/wiki/translate.html:96
+#: apps/wiki/forms.py:151 apps/wiki/templates/wiki/review_revision.html:41 apps/wiki/templates/wiki/review_translation.html:56 apps/wiki/templates/wiki/translate.html:96
 #: apps/wiki/templates/wiki/includes/revision_diff.html:31
 msgid "Keywords:"
 msgstr "关键词："
@@ -2218,21 +2215,17 @@ msgstr "管理"
 msgid "Navigation"
 msgstr "导航栏"
 
-#: apps/wiki/models.py:46
-msgid "Templates"
-msgstr "模板"
-
 #: apps/wiki/models.py:61
 msgid "Desktop:"
 msgstr "桌面版："
 
-#: apps/wiki/models.py:64 apps/wiki/models.py:65
-msgid "Firefox 3.5-3.6"
-msgstr "Firefox 3.5-3.6"
-
-#: apps/wiki/models.py:66 apps/wiki/models.py:67 apps/wiki/models.py:71
+#: apps/wiki/models.py:64 apps/wiki/models.py:65 apps/wiki/models.py:71
 msgid "Firefox 4"
 msgstr "Firefox 4"
+
+#: apps/wiki/models.py:66 apps/wiki/models.py:67
+msgid "Firefox 3.5-3.6"
+msgstr "Firefox 3.5-3.6"
 
 #: apps/wiki/models.py:68 apps/wiki/models.py:69
 msgid "Firefox 3.0"
@@ -2307,27 +2300,27 @@ msgstr "模板“%s”不存在，或是没有已通过审核的版本。"
 msgid "The video \"%s\" does not exist."
 msgstr "视频“%s”不存在。"
 
-#: apps/wiki/tasks.py:35
+#: apps/wiki/tasks.py:34
 msgid "Your revision has been approved: {title}"
 msgstr "您的修订已被审核通过：{title}"
 
-#: apps/wiki/tasks.py:37
+#: apps/wiki/tasks.py:36
 msgid "Your revision has been rejected: {title}"
 msgstr "您的修订已被退回：{title}"
 
-#: apps/wiki/views.py:412
+#: apps/wiki/views.py:408
 msgid "You cannot translate this document."
 msgstr "您不能翻译此文档。"
 
-#: apps/wiki/views.py:602
+#: apps/wiki/views.py:598
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "感谢您提供的反馈信息！"
 
-#: apps/wiki/views.py:604
+#: apps/wiki/views.py:600
 msgid "Sorry to hear that. Try searching for solutions below."
 msgstr "真抱歉听到这消息。您可以在下面搜索解决方法。"
 
-#: apps/wiki/views.py:614
+#: apps/wiki/views.py:610
 msgid "You already voted on this Article."
 msgstr "这篇文章您已经投过票了。"
 
@@ -2397,11 +2390,11 @@ msgstr "该页面应该有您在Twitter上所提问题的解决方案。<br/>如
 msgid "You were sent here by one of our <br/> volunteers from the <a href=\"%(url)s\">Army of Awesome</a>."
 msgstr "您来到这里是因为得到了我们<br/><a href=\"%(url)s\">了不起大军</a>中志愿者的指引。"
 
-#: apps/wiki/templates/wiki/document.html:86
+#: apps/wiki/templates/wiki/document.html:94
 msgid "Turn off emails."
 msgstr "关闭电子邮件。"
 
-#: apps/wiki/templates/wiki/document.html:91
+#: apps/wiki/templates/wiki/document.html:99
 msgid "Get emailed when this article changes."
 msgstr "在此文章有修订时取得电子邮件通知。"
 
@@ -2428,6 +2421,10 @@ msgstr "比较所选择的翻译"
 #: apps/wiki/templates/wiki/document_revisions.html:30 apps/wiki/templates/wiki/document_revisions.html:91
 msgid "Compare Selected Revisions"
 msgstr "比较所选择的修订"
+
+#: apps/wiki/templates/wiki/document_revisions.html:52
+msgid "Review"
+msgstr "审核"
 
 #: apps/wiki/templates/wiki/document_revisions.html:54
 msgctxt "revision"
@@ -2466,9 +2463,10 @@ msgstr "编辑描述"
 msgid "Relevant to:"
 msgstr "相关于："
 
-#: apps/wiki/templates/wiki/edit_document.html:40 apps/wiki/templates/wiki/translate.html:76
-msgid "Save"
-msgstr "储存"
+#: apps/wiki/templates/wiki/edit_document.html:40
+#, fuzzy
+msgid "Save description"
+msgstr "描述"
 
 #: apps/wiki/templates/wiki/edit_document.html:49
 msgid "Edit Content"
@@ -2538,19 +2536,19 @@ msgstr "修订来源："
 msgid "Revision Content"
 msgstr "修订内容预览"
 
-#: apps/wiki/templates/wiki/review_revision.html:39
+#: apps/wiki/templates/wiki/review_revision.html:40
 msgid "This document does not have a current revision."
 msgstr "此文件目前没有修订内容。"
 
-#: apps/wiki/templates/wiki/review_revision.html:44 apps/wiki/templates/wiki/review_translation.html:63 apps/wiki/templates/wiki/includes/revision_diff.html:38
+#: apps/wiki/templates/wiki/review_revision.html:45 apps/wiki/templates/wiki/review_translation.html:63 apps/wiki/templates/wiki/includes/revision_diff.html:38
 msgid "Search results summary:"
 msgstr "搜索结果概要："
 
-#: apps/wiki/templates/wiki/review_revision.html:48
+#: apps/wiki/templates/wiki/review_revision.html:49
 msgid "Revision source:"
 msgstr "修订来源："
 
-#: apps/wiki/templates/wiki/review_revision.html:52
+#: apps/wiki/templates/wiki/review_revision.html:53
 msgid "Revision rendered html:"
 msgstr "修订产生的HTML："
 
@@ -2607,23 +2605,23 @@ msgstr "由{user}于{date}提交的修订 {id}"
 msgid "Submitted {locale} translation:"
 msgstr "已提交的{locale}翻译："
 
-#: apps/wiki/templates/wiki/review_translation.html:87
+#: apps/wiki/templates/wiki/review_translation.html:88
 msgid "This document does not have a current translation."
 msgstr "此文件尚未被翻译。"
 
-#: apps/wiki/templates/wiki/review_translation.html:88
+#: apps/wiki/templates/wiki/review_translation.html:89
 msgid "Translation keywords:"
 msgstr "翻译关键字："
 
-#: apps/wiki/templates/wiki/review_translation.html:92
+#: apps/wiki/templates/wiki/review_translation.html:93
 msgid "Translation search results summary:"
 msgstr "翻译搜索结果摘要："
 
-#: apps/wiki/templates/wiki/review_translation.html:96
+#: apps/wiki/templates/wiki/review_translation.html:97
 msgid "Translation source:"
 msgstr "翻译来源："
 
-#: apps/wiki/templates/wiki/review_translation.html:100
+#: apps/wiki/templates/wiki/review_translation.html:101
 msgid "Translation rendered html:"
 msgstr "翻译产生的HTML："
 
@@ -2689,6 +2687,7 @@ msgid "Translate Article | {document}"
 msgstr "翻译文章 | {document}"
 
 #: apps/wiki/templates/wiki/translate.html:9 apps/wiki/templates/wiki/includes/sidebar_modules.html:36 apps/wiki/templates/wiki/includes/sidebar_modules.html:38
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:45 apps/wiki/templates/wiki/includes/sidebar_modules.html:47
 msgid "Translate Article"
 msgstr "翻译文章"
 
@@ -2719,6 +2718,10 @@ msgstr "{locale}版本的标题："
 #: apps/wiki/templates/wiki/translate.html:69
 msgid "Slug in {locale}:"
 msgstr "{locale}版本的网址自订字符串："
+
+#: apps/wiki/templates/wiki/translate.html:76
+msgid "Save title and slug"
+msgstr ""
 
 #: apps/wiki/templates/wiki/translate.html:85
 msgid "Translate Content"
@@ -2847,15 +2850,15 @@ msgstr "修订版本{num}"
 msgid "Discussion"
 msgstr "讨论"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:43
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:53
 msgid "Show History"
 msgstr "显示历史"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:55
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:66
 msgid "Unsubscribe from edit notifications"
 msgstr "退订修订通知"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:60
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:71
 msgid "Subscribe to edit notifications"
 msgstr "订阅修订通知"
 
@@ -3133,8 +3136,9 @@ msgid "Welcome, <span class=\"user\">{user}</span>."
 msgstr "<span class=\"user\">{user}</span>，欢迎您"
 
 #: templates/includes/common_macros.html:25
-msgid "Profile"
-msgstr "个人资料"
+#, fuzzy
+msgid "Dashboard"
+msgstr "本地化控制面板"
 
 #: templates/includes/common_macros.html:27
 msgid "Sign Out"
@@ -3260,6 +3264,43 @@ msgstr "Firefox Sync"
 #: templates/mobile/base.html:91
 msgid "View full site"
 msgstr "查看全站"
+
+#~ msgid "Forum"
+#~ msgstr "讨论区"
+
+#~ msgctxt "locale"
+#~ msgid "Stop getting emailed when English revisions are approved"
+#~ msgstr "当简体中文修订被审核通过时不再用电子邮件通知"
+
+#~ msgctxt "locale"
+#~ msgid "Get emailed when English revisions are approved"
+#~ msgstr "当简体中文修订被审核通过时用电子邮件通知"
+
+#~ msgctxt "locale"
+#~ msgid "Stop getting emailed when English reviews are waiting"
+#~ msgstr "当简体中文中有等待审核的文章时不再用电子邮件通知"
+
+#~ msgctxt "locale"
+#~ msgid "Get emailed when English reviews are waiting"
+#~ msgstr "当简体中文中有等待审核的文章时用电子邮件通知"
+
+#~ msgid "Unsubscribed"
+#~ msgstr "已取消订阅"
+
+#~ msgid "You have been unsubscribed from this notification."
+#~ msgstr "您已取消订阅此通知。"
+
+#~ msgid "Unsubscribe"
+#~ msgstr "取消订阅"
+
+#~ msgid "Do you want to stop receiving email notifications from the {1} <strong>{0}</strong>?"
+#~ msgstr "您想要停止收到来自{1}<strong>{0}</strong>的电子邮件通知吗？"
+
+#~ msgid "Save"
+#~ msgstr "储存"
+
+#~ msgid "Profile"
+#~ msgstr "个人资料"
 
 #~ msgid "The template \"%s\" does not exist."
 #~ msgstr "模板“%s”不存在。"
@@ -3425,6 +3466,3 @@ msgstr "查看全站"
 #, fuzzy
 #~ msgid "visit {0}"
 #~ msgstr "修订版本 {num}"
-
-#~ msgid "Localizer Dashboard"
-#~ msgstr "本地化控制面板"

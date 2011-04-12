@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-18 07:47-0700\n"
+"POT-Creation-Date: 2011-04-12 15:29-0700\n"
 "PO-Revision-Date: 2011-04-01 17:24+0200\n"
 "Last-Translator: marsf <chimantaea_mirabilis@yahoo.co.jp>\n"
 "Language-Team: Japanese\n"
@@ -33,7 +33,7 @@ msgstr "アナウンスが表示されなくなる時刻です。無期限の場
 msgid "Use wiki syntax or HTML. It will display similar to a document's content."
 msgstr "Wiki 構文もしくは HTML で記述してください。ドキュメント本文と同様に表示されます。"
 
-#: apps/customercare/views.py:27 apps/dashboards/readouts.py:86
+#: apps/customercare/views.py:27 apps/dashboards/readouts.py:103
 msgid "Most Recent"
 msgstr "最近の投稿"
 
@@ -85,9 +85,7 @@ msgstr "Join our <mark>Army of Awesome</mark>"
 
 #: apps/customercare/templates/customercare/landing.html:14
 msgid "Love Firefox and have a few moments to help?<br /> Help other Firefox users on Twitter. Good things will come to those who tweet!"
-msgstr ""
-"大好きな Firefox のために手助けしませんか？<br /> 他の Firefox ユーザを Twitter で助けてください。<br "
-"/>一日一善のツイートで人々に良いことが起こります！"
+msgstr "大好きな Firefox のために手助けしませんか？<br /> 他の Firefox ユーザを Twitter で助けてください。<br />一日一善のツイートで人々に良いことが起こります！"
 
 #: apps/customercare/templates/customercare/landing.html:24
 msgid "Choose a <mark>tweet below</mark>"
@@ -242,8 +240,8 @@ msgstr "Army of Awesome に参加する前に、ログインする必要があ�
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:87 apps/gallery/templates/gallery/includes/upload_media_form.html:117
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:134 apps/kbforums/templates/kbforums/confirm_post_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:30
 #: apps/kbforums/templates/kbforums/edit_post.html:29 apps/kbforums/templates/kbforums/edit_thread.html:27 apps/kbforums/templates/kbforums/new_thread.html:34
-#: apps/notifications/templates/notifications/remove.html:16 apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_revision_delete.html:25
-#: apps/wiki/templates/wiki/includes/review_form.html:35 apps/wiki/templates/wiki/includes/review_form.html:49 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
+#: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_revision_delete.html:25 apps/wiki/templates/wiki/includes/review_form.html:35
+#: apps/wiki/templates/wiki/includes/review_form.html:49 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -255,121 +253,136 @@ msgstr "今週"
 msgid "All Time"
 msgstr "すべての期間"
 
-#: apps/dashboards/readouts.py:58 apps/dashboards/readouts.py:155
+#: apps/dashboards/readouts.py:68 apps/dashboards/readouts.py:172
 msgid "Most-Visited Articles"
 msgstr "アクセス数の最も多い記事"
 
-#: apps/dashboards/readouts.py:62
+#: apps/dashboards/readouts.py:72
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "これらは英語版で最も表示回数の多いトップ 20 の記事です。これらの合計は、英語版ナレッジベースの全トラフィックの 50% 以上を占めます。"
 
-#: apps/dashboards/readouts.py:65
+#: apps/dashboards/readouts.py:75 apps/dashboards/readouts.py:318 apps/wiki/models.py:46
+msgid "Templates"
+msgstr "テンプレート"
+
+#: apps/dashboards/readouts.py:79
+#, fuzzy
+msgid "How many of the approved templates which allow translations have an approved translation into this language"
+msgstr "翻訳記事数 (承認された翻訳可能な英語記事に対する日本語に翻訳され承認された記事の数)"
+
+#: apps/dashboards/readouts.py:82
 msgid "All Knowledge Base Articles"
 msgstr "すべてのナレッジベース記事"
 
-#: apps/dashboards/readouts.py:68
+#: apps/dashboards/readouts.py:85
 msgid "How many of the approved English articles which allow translations have an approved translation into this language"
 msgstr "翻訳記事数 (承認された翻訳可能な英語記事に対する日本語に翻訳され承認された記事の数)"
 
-#: apps/dashboards/readouts.py:83
+#: apps/dashboards/readouts.py:100
 msgid "Visits this week"
 msgstr "今週のアクセス数"
 
-#: apps/dashboards/readouts.py:84
+#: apps/dashboards/readouts.py:101
 msgid "Status"
 msgstr "状態"
 
-#: apps/dashboards/readouts.py:85
+#: apps/dashboards/readouts.py:102
 msgid "Most Viewed"
 msgstr "表示回数の多い"
 
-#: apps/dashboards/readouts.py:157
+#: apps/dashboards/readouts.py:174
 msgid "All knowledge base articles..."
 msgstr "すべてのナレッジベース記事..."
 
-#: apps/dashboards/readouts.py:159
+#: apps/dashboards/readouts.py:176
 msgid "Visits"
 msgstr "アクセス数"
 
-#: apps/dashboards/readouts.py:162
+#: apps/dashboards/readouts.py:179
 msgid "Review Needed"
 msgstr "レビューが必要"
 
 #. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:210
+#: apps/dashboards/readouts.py:227
 msgid "All translations in English..."
 msgstr "すべての日本語に翻訳された記事..."
 
-#: apps/dashboards/readouts.py:214
+#: apps/dashboards/readouts.py:231
 msgid "Update Needed"
 msgstr "更新が必要"
 
-#: apps/dashboards/readouts.py:216
+#: apps/dashboards/readouts.py:233
 msgid "Out of Date"
 msgstr "有効期限切れ"
 
-#: apps/dashboards/readouts.py:272
+#: apps/dashboards/readouts.py:293
 msgid "Translation Needed"
 msgstr "翻訳が必要"
 
-#: apps/dashboards/readouts.py:288
+#. L10n: Replace "English" with your language.
+#: apps/dashboards/readouts.py:322
+#, fuzzy
+msgid "All templates in English..."
+msgstr "すべての日本語に翻訳された記事..."
+
+#: apps/dashboards/readouts.py:330
 msgid "Untranslated Articles"
 msgstr "未訳記事"
 
-#: apps/dashboards/readouts.py:289
+#: apps/dashboards/readouts.py:331
 msgid "Untranslated"
 msgstr "未訳"
 
-#: apps/dashboards/readouts.py:290
+#: apps/dashboards/readouts.py:332
 msgid "All untranslated articles..."
 msgstr "すべての未訳記事..."
 
-#: apps/dashboards/readouts.py:292
+#: apps/dashboards/readouts.py:334
 msgid "Updated"
 msgstr "更新日"
 
-#: apps/dashboards/readouts.py:332
+#: apps/dashboards/readouts.py:374
 msgid "Out-of-Date Translations"
 msgstr "有効期限切れの翻訳記事"
 
-#: apps/dashboards/readouts.py:333
+#: apps/dashboards/readouts.py:375
 msgid "Out-of-Date"
 msgstr "有効期限切れ"
 
-#: apps/dashboards/readouts.py:334
+#: apps/dashboards/readouts.py:376
 msgid "All out-of-date translations..."
 msgstr "すべての有効期限切れの翻訳記事..."
 
-#: apps/dashboards/readouts.py:336
+#: apps/dashboards/readouts.py:378
 msgid "Out of date since"
 msgstr "期限切れ"
 
-#: apps/dashboards/readouts.py:411
+#: apps/dashboards/readouts.py:453
 msgid "Translations Needing Updates"
 msgstr "更新が必要な翻訳記事"
 
-#: apps/dashboards/readouts.py:412
+#: apps/dashboards/readouts.py:454
 msgid "Needing Updates"
 msgstr "更新が必要"
 
-#: apps/dashboards/readouts.py:413
+#: apps/dashboards/readouts.py:455
 msgid "All translations needing updates..."
 msgstr "すべての更新が必要な翻訳記事..."
 
-#: apps/dashboards/readouts.py:420
+#: apps/dashboards/readouts.py:462
 msgid "Unreviewed Changes"
 msgstr "レビュー待ちの更新された記事"
 
-#: apps/dashboards/readouts.py:424
+#: apps/dashboards/readouts.py:466
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "レビュー待ち"
 
-#: apps/dashboards/readouts.py:425
+#: apps/dashboards/readouts.py:467
 msgid "All articles requiring review..."
 msgstr "すべてのレビュー待ちの記事..."
 
-#: apps/dashboards/readouts.py:427
+#: apps/dashboards/readouts.py:469
 msgid "Changed"
 msgstr "変更日"
 
@@ -380,14 +393,6 @@ msgstr "貢献者ダッシュボード"
 #: apps/dashboards/views.py:59 apps/dashboards/templates/dashboards/localization.html:4
 msgid "Localization Dashboard"
 msgstr "L10N ダッシュボード"
-
-#: apps/dashboards/templates/dashboards/base.html:19 apps/wiki/templates/wiki/document_revisions.html:52
-msgid "Review"
-msgstr "レビュー待ち"
-
-#: apps/dashboards/templates/dashboards/base.html:22
-msgid "Forum"
-msgstr "フォーラム"
 
 #: apps/dashboards/templates/dashboards/contributors.html:16 apps/dashboards/templates/dashboards/localization.html:42
 msgid "Show information for:"
@@ -401,15 +406,15 @@ msgstr "%(numerator)s <small>/ %(denominator)s</small>"
 msgid "Overview"
 msgstr "概要"
 
-#: apps/dashboards/templates/dashboards/localization.html:61
+#: apps/dashboards/templates/dashboards/localization.html:62
 msgid "User Interface"
 msgstr "ユーザインタフェース"
 
-#: apps/dashboards/templates/dashboards/localization.html:65
+#: apps/dashboards/templates/dashboards/localization.html:66
 msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
 msgstr "サポートサイトのインタフェースを日本語に翻訳すれば、サイトが分かりやすくなり、利用者数が向上します。<a href=\"%(url)s\">インタフェースの翻訳</a>にご協力ください。"
 
-#: apps/dashboards/templates/dashboards/localization.html:74
+#: apps/dashboards/templates/dashboards/localization.html:75
 msgid "More options:"
 msgstr "分類:"
 
@@ -433,53 +438,67 @@ msgstr "記事"
 msgid "changed by {users}"
 msgstr "変更者: {users}"
 
-#. Please localize 'English' here.
+#: apps/dashboards/templates/dashboards/includes/macros.html:26
+#, fuzzy
+msgctxt "dashboard"
+msgid "Review"
+msgstr "レビュー待ち"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:39
+msgid "My profile"
+msgstr "マイ プロファイル"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:42
+msgid "Edit my profile"
+msgstr "プロファイルを編集"
+
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:9
-msgctxt "english"
+#, fuzzy
 msgid "Stop getting emailed when English revisions are approved"
 msgstr "英語版リビジョン承認のメール通知を停止する"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:12
-msgctxt "locale"
-msgid "Stop getting emailed when English revisions are approved"
-msgstr "日本語版リビジョン承認のメール通知を停止する"
+#, fuzzy
+msgid "Stop getting emailed when YOUR_LOCALE revisions are approved"
+msgstr "英語版リビジョン承認のメール通知を停止する"
 
-#. Please localize 'English' here.
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:21
-msgctxt "english"
+#, fuzzy
 msgid "Get emailed when English revisions are approved"
 msgstr "英語版リビジョン承認時にメールで通知する"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:24
-msgctxt "locale"
-msgid "Get emailed when English revisions are approved"
-msgstr "日本語版リビジョン承認時にメールで通知する"
+#, fuzzy
+msgid "Get emailed when YOUR_LOCALE revisions are approved"
+msgstr "英語版リビジョン承認時にメールで通知する"
 
-#. Please localize 'English' here.
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:8
-msgctxt "english"
+#, fuzzy
 msgid "Stop getting emailed when English reviews are waiting"
 msgstr "英語版レビュー待ちのメール通知を停止する"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:11
-msgctxt "locale"
-msgid "Stop getting emailed when English reviews are waiting"
-msgstr "日本語版レビュー待ちのメール通知を停止する"
+#, fuzzy
+msgid "Stop getting emailed when YOUR_LOCALE reviews are waiting"
+msgstr "英語版レビュー待ちのメール通知を停止する"
 
-#. Please localize 'English' here.
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:19
-msgctxt "english"
+#, fuzzy
 msgid "Get emailed when English reviews are waiting"
 msgstr "英語版レビュー待ちをメールで通知する"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:22
-msgctxt "locale"
-msgid "Get emailed when English reviews are waiting"
-msgstr "日本語版レビュー待ちをメールで通知する"
+#, fuzzy
+msgid "Get emailed when YOUR_LOCALE reviews are waiting"
+msgstr "英語版レビュー待ちをメールで通知する"
 
 #: apps/flagit/models.py:23
 msgid "Spam or other unrelated content"
@@ -887,11 +906,11 @@ msgstr "サムネイル画像を削除"
 msgid "Upload a thumbnail for your video. Suggested size: {width}x{height}px"
 msgstr "動画のサムネイル画像をアップロードしてください。推奨サイズ: {width}x{height}px"
 
-#: apps/kbforums/events.py:16
+#: apps/kbforums/events.py:20
 msgid "Reply to: %s"
 msgstr "返信先: %s"
 
-#: apps/kbforums/events.py:32
+#: apps/kbforums/events.py:29
 msgid "New thread in %s: %s"
 msgstr "%s の新しいスレッド: %s"
 
@@ -1206,7 +1225,7 @@ msgstr "一般的な質問"
 msgid "Firefox Help <span>for Firefox Home</span>"
 msgstr "<span>Firefox Home</span> ヘルプとチュートリアル"
 
-#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:128 templates/base.html:8 templates/base.html:17 templates/mobile/base.html:15
+#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:139 templates/base.html:8 templates/base.html:17 templates/mobile/base.html:15
 msgid "Firefox Help"
 msgstr "Firefox ヘルプ"
 
@@ -1217,23 +1236,6 @@ msgstr "<span>モバイル版</span> Firefox ヘルプ"
 #: apps/landings/templates/landings/mobile/sync.html:5
 msgid "Firefox Help <span>for Sync</span>"
 msgstr "<span>Firefox Sync</span> ヘルプとチュートリアル"
-
-#: apps/notifications/templates/notifications/gone.html:3
-msgid "Unsubscribed"
-msgstr "変更通知解除"
-
-#: apps/notifications/templates/notifications/gone.html:10
-msgid "You have been unsubscribed from this notification."
-msgstr "この記事の変更通知を解除しました。"
-
-#: apps/notifications/templates/notifications/remove.html:3
-msgid "Unsubscribe"
-msgstr "通知解除"
-
-#. {0} is an object title, {1} is an object type.
-#: apps/notifications/templates/notifications/remove.html:11
-msgid "Do you want to stop receiving email notifications from the {1} <strong>{0}</strong>?"
-msgstr "{1} <strong>{0}</strong> からのメール通知を停止しますか？"
 
 #: apps/search/__init__.py:17 apps/search/__init__.py:52 apps/search/__init__.py:58
 msgid "Don't filter"
@@ -1263,11 +1265,11 @@ msgstr "最初の投稿日"
 msgid "Number of replies"
 msgstr "返信数"
 
-#: apps/search/__init__.py:53 apps/sumo/helpers.py:298 apps/wiki/templates/wiki/includes/document_vote.html:8
+#: apps/search/__init__.py:53 apps/sumo/helpers.py:309 apps/wiki/templates/wiki/includes/document_vote.html:8
 msgid "Yes"
 msgstr "はい"
 
-#: apps/search/__init__.py:54 apps/sumo/helpers.py:298 apps/wiki/templates/wiki/includes/document_vote.html:9
+#: apps/search/__init__.py:54 apps/sumo/helpers.py:309 apps/wiki/templates/wiki/includes/document_vote.html:9
 msgid "No"
 msgstr "いいえ"
 
@@ -1479,46 +1481,46 @@ msgstr "文字数が少なすぎます (現在 %(show_value)s 文字)。 %(limit
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr "文字数が多すぎます (現在 %(show_value)s 文字)。 %(limit_value)s 文字以下にしてください。"
 
-#: apps/sumo/helpers.py:177
+#: apps/sumo/helpers.py:188
 msgid "Today at %s"
 msgstr "今日 %s"
 
-#: apps/sumo/helpers.py:255
+#: apps/sumo/helpers.py:266
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "%(number)d 年前"
 
-#: apps/sumo/helpers.py:257
+#: apps/sumo/helpers.py:268
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "%(number)d カ月前"
 
-#: apps/sumo/helpers.py:259
+#: apps/sumo/helpers.py:270
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "%(number)d 週間前"
 
-#: apps/sumo/helpers.py:261
+#: apps/sumo/helpers.py:272
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "%(number)d 日前"
 
-#: apps/sumo/helpers.py:263
+#: apps/sumo/helpers.py:274
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "%(number)d 時間前"
 
-#: apps/sumo/helpers.py:265
+#: apps/sumo/helpers.py:276
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "%(number)d 分前"
 
-#: apps/sumo/helpers.py:267
+#: apps/sumo/helpers.py:278
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] "%(number)d 秒前"
 
-#: apps/sumo/parser.py:228
+#: apps/sumo/parser.py:232
 msgid "The image \"%s\" does not exist."
 msgstr "画像 \"%s\" が存在しません。"
 
@@ -1774,23 +1776,23 @@ msgstr "Livechat ID"
 msgid "Preferred language for email"
 msgstr "メールで利用する言語"
 
-#: apps/users/models.py:178 apps/users/models.py:214
+#: apps/users/models.py:180 apps/users/models.py:216
 msgid "Please confirm your email address"
 msgstr "あなたのメールアドレスのメールを確認してください"
 
-#: apps/users/models.py:230 apps/users/models.py:272
+#: apps/users/models.py:232 apps/users/models.py:274
 msgid "user"
 msgstr "ユーザ"
 
-#: apps/users/models.py:231 apps/users/models.py:273
+#: apps/users/models.py:233 apps/users/models.py:275
 msgid "activation key"
 msgstr "アクティベーションキー"
 
-#: apps/users/models.py:237
+#: apps/users/models.py:239
 msgid "registration profile"
 msgstr "登録プロファイル"
 
-#: apps/users/models.py:238
+#: apps/users/models.py:240
 msgid "registration profiles"
 msgstr "登録プロファイル"
 
@@ -1814,14 +1816,6 @@ msgstr[0] "あなたの質問がサイト上に表示されるようになりま
 #: apps/users/templates/users/activate.html:31
 msgid "We could not activate your account. Please make sure that you have clicked the correct link in your email or typed in the correct address."
 msgstr "あなたのアカウントを承認できませんでした。あなたのメールアドレスに送られた確認メールの正しいリンクをクリックしてください。または、登録するメールアドレス正しく入力してください。"
-
-#: apps/users/templates/users/base.html:16
-msgid "My profile"
-msgstr "マイ プロファイル"
-
-#: apps/users/templates/users/base.html:24
-msgid "Edit my profile"
-msgstr "プロファイルを編集"
 
 #: apps/users/templates/users/change_email.html:4
 msgid "Change email address"
@@ -1902,7 +1896,7 @@ msgstr "削除"
 msgid "Change"
 msgstr "変更"
 
-#: apps/users/templates/users/edit_profile.html:31 apps/users/templates/users/profile.html:35
+#: apps/users/templates/users/edit_profile.html:31 apps/users/templates/users/profile.html:36
 msgid "Email:"
 msgstr "メールアドレス:"
 
@@ -1918,31 +1912,31 @@ msgstr "ログイン"
 msgid "{user} | Profile"
 msgstr "{user} | プロファイル"
 
-#: apps/users/templates/users/profile.html:19
+#: apps/users/templates/users/profile.html:20
 msgid "{city}, {country}"
 msgstr "{city}, {country}"
 
-#: apps/users/templates/users/profile.html:41
+#: apps/users/templates/users/profile.html:42
 msgid "Website:"
 msgstr "Web サイト:"
 
-#: apps/users/templates/users/profile.html:47
+#: apps/users/templates/users/profile.html:48
 msgid "Twitter:"
 msgstr "Twitter:"
 
-#: apps/users/templates/users/profile.html:53
+#: apps/users/templates/users/profile.html:54
 msgid "Facebook:"
 msgstr "Facebook:"
 
-#: apps/users/templates/users/profile.html:59
+#: apps/users/templates/users/profile.html:60
 msgid "IRC:"
 msgstr "IRC:"
 
-#: apps/users/templates/users/profile.html:65
+#: apps/users/templates/users/profile.html:66
 msgid "Livechat ID: {livechat_id}"
 msgstr "Livechat ID：{livechat_id}"
 
-#: apps/users/templates/users/profile.html:72
+#: apps/users/templates/users/profile.html:73
 msgid "About {user}"
 msgstr "{user} について"
 
@@ -1955,7 +1949,8 @@ msgid "Change my password"
 msgstr "パスワードを変更する"
 
 #: apps/users/templates/users/pw_change_complete.html:3
-msgid "Password changed successful!"
+#, fuzzy
+msgid "Password change successful!"
 msgstr "パスワードの変更が完了しました！"
 
 #: apps/users/templates/users/pw_change_complete.html:9
@@ -2077,15 +2072,15 @@ msgstr "アカウントを登録する。"
 msgid "My account is inactive."
 msgstr "アカウントがアクティブではありません。"
 
-#: apps/wiki/events.py:49
+#: apps/wiki/events.py:50
 msgid "{title} was edited by {creator}"
 msgstr "{title} は {creator} により編集されました"
 
-#: apps/wiki/events.py:85
+#: apps/wiki/events.py:86
 msgid "{title} is ready for review ({creator})"
 msgstr "{title} はレビュー待ちです ({creator})"
 
-#: apps/wiki/events.py:104
+#: apps/wiki/events.py:105
 msgid "{title} ({locale}) has a new approved revision"
 msgstr "{title} ({locale}) には新たに承認されたリビジョンがあります"
 
@@ -2177,7 +2172,7 @@ msgstr "トピック:"
 msgid "Popular articles in each topic are displayed on the front page"
 msgstr "各トピックの人気のある記事がトップページに表示されます"
 
-#: apps/wiki/forms.py:151 apps/wiki/templates/wiki/review_revision.html:40 apps/wiki/templates/wiki/review_translation.html:56 apps/wiki/templates/wiki/translate.html:96
+#: apps/wiki/forms.py:151 apps/wiki/templates/wiki/review_revision.html:41 apps/wiki/templates/wiki/review_translation.html:56 apps/wiki/templates/wiki/translate.html:96
 #: apps/wiki/templates/wiki/includes/revision_diff.html:31
 msgid "Keywords:"
 msgstr "キーワード:"
@@ -2234,21 +2229,17 @@ msgstr "管理者用"
 msgid "Navigation"
 msgstr "ナビゲーション"
 
-#: apps/wiki/models.py:46
-msgid "Templates"
-msgstr "テンプレート"
-
 #: apps/wiki/models.py:61
 msgid "Desktop:"
 msgstr "デスクトップ版:"
 
-#: apps/wiki/models.py:64 apps/wiki/models.py:65
-msgid "Firefox 3.5-3.6"
-msgstr "Firefox 3.5-3.6"
-
-#: apps/wiki/models.py:66 apps/wiki/models.py:67 apps/wiki/models.py:71
+#: apps/wiki/models.py:64 apps/wiki/models.py:65 apps/wiki/models.py:71
 msgid "Firefox 4"
 msgstr "Firefox 4"
+
+#: apps/wiki/models.py:66 apps/wiki/models.py:67
+msgid "Firefox 3.5-3.6"
+msgstr "Firefox 3.5-3.6"
 
 #: apps/wiki/models.py:68 apps/wiki/models.py:69
 msgid "Firefox 3.0"
@@ -2323,27 +2314,27 @@ msgstr "このテンプレート \"%s\" は存在しないか承認されてい�
 msgid "The video \"%s\" does not exist."
 msgstr "\"%s\" の動画は存在しません。"
 
-#: apps/wiki/tasks.py:35
+#: apps/wiki/tasks.py:34
 msgid "Your revision has been approved: {title}"
 msgstr "あなたの編集リビジョンが承認されました: {title}"
 
-#: apps/wiki/tasks.py:37
+#: apps/wiki/tasks.py:36
 msgid "Your revision has been rejected: {title}"
 msgstr "あなたの編集リビジョンが却下されました: {title}"
 
-#: apps/wiki/views.py:412
+#: apps/wiki/views.py:408
 msgid "You cannot translate this document."
 msgstr "このドキュメントは翻訳が許可されていません。"
 
-#: apps/wiki/views.py:602
+#: apps/wiki/views.py:598
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "お役に立てて光栄です &mdash; フィードバックありがとうございました！"
 
-#: apps/wiki/views.py:604
+#: apps/wiki/views.py:600
 msgid "Sorry to hear that. Try searching for solutions below."
 msgstr "それは残念です。以下の検索ボックスから解決策を検索してみてください。"
 
-#: apps/wiki/views.py:614
+#: apps/wiki/views.py:610
 msgid "You already voted on this Article."
 msgstr "この記事にはすでに投票済みです。"
 
@@ -2407,19 +2398,17 @@ msgstr "ここは Firefox の手助けをする、あなたにぴったりの場
 
 #: apps/wiki/templates/wiki/document.html:56
 msgid "This page should provide you with a solution to what you posted on Twitter.<br/> If not, our community volunteers are ready to help."
-msgstr ""
-"このページでは、あなたが Twitter "
-"で投稿した内容についての解決策を提供します。<br/>もしなければ、コミュニティのボランティア達がいつでも手助けします。"
+msgstr "このページでは、あなたが Twitter で投稿した内容についての解決策を提供します。<br/>もしなければ、コミュニティのボランティア達がいつでも手助けします。"
 
 #: apps/wiki/templates/wiki/document.html:64
 msgid "You were sent here by one of our <br/> volunteers from the <a href=\"%(url)s\">Army of Awesome</a>."
 msgstr "<a href=\"%(url)s\">すばらしいコミュニティ</a>のボランティアの一人<br />がここを紹介してくれたんですね。"
 
-#: apps/wiki/templates/wiki/document.html:86
+#: apps/wiki/templates/wiki/document.html:94
 msgid "Turn off emails."
 msgstr "メール通知をオフにする。"
 
-#: apps/wiki/templates/wiki/document.html:91
+#: apps/wiki/templates/wiki/document.html:99
 msgid "Get emailed when this article changes."
 msgstr "この記事の変更をメールで通知する"
 
@@ -2446,6 +2435,10 @@ msgstr "選択した翻訳を比較します"
 #: apps/wiki/templates/wiki/document_revisions.html:30 apps/wiki/templates/wiki/document_revisions.html:91
 msgid "Compare Selected Revisions"
 msgstr "選択したリビジョンを比較します"
+
+#: apps/wiki/templates/wiki/document_revisions.html:52
+msgid "Review"
+msgstr "レビュー待ち"
 
 #: apps/wiki/templates/wiki/document_revisions.html:54
 msgctxt "revision"
@@ -2484,9 +2477,10 @@ msgstr "記事説明の編集"
 msgid "Relevant to:"
 msgstr "関連性:"
 
-#: apps/wiki/templates/wiki/edit_document.html:40 apps/wiki/templates/wiki/translate.html:76
-msgid "Save"
-msgstr "保存"
+#: apps/wiki/templates/wiki/edit_document.html:40
+#, fuzzy
+msgid "Save description"
+msgstr "説明"
 
 #: apps/wiki/templates/wiki/edit_document.html:49
 msgid "Edit Content"
@@ -2556,19 +2550,19 @@ msgstr "リビジョンのソース"
 msgid "Revision Content"
 msgstr "リビジョンの内容"
 
-#: apps/wiki/templates/wiki/review_revision.html:39
+#: apps/wiki/templates/wiki/review_revision.html:40
 msgid "This document does not have a current revision."
 msgstr "このドキュメントには現在公開中のリビジョンがありません。"
 
-#: apps/wiki/templates/wiki/review_revision.html:44 apps/wiki/templates/wiki/review_translation.html:63 apps/wiki/templates/wiki/includes/revision_diff.html:38
+#: apps/wiki/templates/wiki/review_revision.html:45 apps/wiki/templates/wiki/review_translation.html:63 apps/wiki/templates/wiki/includes/revision_diff.html:38
 msgid "Search results summary:"
 msgstr "検索結果に表示される要約:"
 
-#: apps/wiki/templates/wiki/review_revision.html:48
+#: apps/wiki/templates/wiki/review_revision.html:49
 msgid "Revision source:"
 msgstr "リビジョンのソース:"
 
-#: apps/wiki/templates/wiki/review_revision.html:52
+#: apps/wiki/templates/wiki/review_revision.html:53
 msgid "Revision rendered html:"
 msgstr "リビジョンの実際の表示:"
 
@@ -2625,23 +2619,23 @@ msgstr "Revision {id} by {user} on {date}"
 msgid "Submitted {locale} translation:"
 msgstr "提出された{locale}への翻訳:"
 
-#: apps/wiki/templates/wiki/review_translation.html:87
+#: apps/wiki/templates/wiki/review_translation.html:88
 msgid "This document does not have a current translation."
 msgstr "このドキュメントには公開中の翻訳がありません。"
 
-#: apps/wiki/templates/wiki/review_translation.html:88
+#: apps/wiki/templates/wiki/review_translation.html:89
 msgid "Translation keywords:"
 msgstr "日本語キーワード:"
 
-#: apps/wiki/templates/wiki/review_translation.html:92
+#: apps/wiki/templates/wiki/review_translation.html:93
 msgid "Translation search results summary:"
 msgstr "検索結果に表示される翻訳記事の要約:"
 
-#: apps/wiki/templates/wiki/review_translation.html:96
+#: apps/wiki/templates/wiki/review_translation.html:97
 msgid "Translation source:"
 msgstr "翻訳記事のソース:"
 
-#: apps/wiki/templates/wiki/review_translation.html:100
+#: apps/wiki/templates/wiki/review_translation.html:101
 msgid "Translation rendered html:"
 msgstr "翻訳記事のプレビュー:"
 
@@ -2707,6 +2701,7 @@ msgid "Translate Article | {document}"
 msgstr "記事翻訳 | {document}"
 
 #: apps/wiki/templates/wiki/translate.html:9 apps/wiki/templates/wiki/includes/sidebar_modules.html:36 apps/wiki/templates/wiki/includes/sidebar_modules.html:38
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:45 apps/wiki/templates/wiki/includes/sidebar_modules.html:47
 msgid "Translate Article"
 msgstr "記事の翻訳"
 
@@ -2737,6 +2732,10 @@ msgstr "{locale}のタイトル:"
 #: apps/wiki/templates/wiki/translate.html:69
 msgid "Slug in {locale}:"
 msgstr "{locale}のスラッグ (記事 URL):"
+
+#: apps/wiki/templates/wiki/translate.html:76
+msgid "Save title and slug"
+msgstr ""
 
 #: apps/wiki/templates/wiki/translate.html:85
 msgid "Translate Content"
@@ -2867,15 +2866,15 @@ msgstr "リビジョン {num}:"
 msgid "Discussion"
 msgstr "議論"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:43
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:53
 msgid "Show History"
 msgstr "履歴を表示"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:55
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:66
 msgid "Unsubscribe from edit notifications"
 msgstr "変更通知を解除する"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:60
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:71
 msgid "Subscribe to edit notifications"
 msgstr "変更通知を設定する"
 
@@ -3154,8 +3153,9 @@ msgid "Welcome, <span class=\"user\">{user}</span>."
 msgstr "ようこそ、<span class=\"user\">{user}</span> さん。"
 
 #: templates/includes/common_macros.html:25
-msgid "Profile"
-msgstr "プロファイル"
+#, fuzzy
+msgid "Dashboard"
+msgstr "個人用ダッシュボード"
 
 #: templates/includes/common_macros.html:27
 msgid "Sign Out"
@@ -3283,6 +3283,43 @@ msgstr "Firefox Sync"
 msgid "View full site"
 msgstr "PC 用の表示にする"
 
+#~ msgid "Forum"
+#~ msgstr "フォーラム"
+
+#~ msgctxt "locale"
+#~ msgid "Stop getting emailed when English revisions are approved"
+#~ msgstr "日本語版リビジョン承認のメール通知を停止する"
+
+#~ msgctxt "locale"
+#~ msgid "Get emailed when English revisions are approved"
+#~ msgstr "日本語版リビジョン承認時にメールで通知する"
+
+#~ msgctxt "locale"
+#~ msgid "Stop getting emailed when English reviews are waiting"
+#~ msgstr "日本語版レビュー待ちのメール通知を停止する"
+
+#~ msgctxt "locale"
+#~ msgid "Get emailed when English reviews are waiting"
+#~ msgstr "日本語版レビュー待ちをメールで通知する"
+
+#~ msgid "Unsubscribed"
+#~ msgstr "変更通知解除"
+
+#~ msgid "You have been unsubscribed from this notification."
+#~ msgstr "この記事の変更通知を解除しました。"
+
+#~ msgid "Unsubscribe"
+#~ msgstr "通知解除"
+
+#~ msgid "Do you want to stop receiving email notifications from the {1} <strong>{0}</strong>?"
+#~ msgstr "{1} <strong>{0}</strong> からのメール通知を停止しますか？"
+
+#~ msgid "Save"
+#~ msgstr "保存"
+
+#~ msgid "Profile"
+#~ msgstr "プロファイル"
+
 #~ msgid "The template \"%s\" does not exist."
 #~ msgstr "\"%s\" というテンプレートは存在しません。"
 
@@ -3367,7 +3404,3 @@ msgstr "PC 用の表示にする"
 #, fuzzy
 #~ msgid "visit {0}"
 #~ msgstr "アクセス数: {0}"
-
-#, fuzzy
-#~ msgid "Localizer Dashboard"
-#~ msgstr "個人用ダッシュボード"

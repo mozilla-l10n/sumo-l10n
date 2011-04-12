@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-18 07:47-0700\n"
+"POT-Creation-Date: 2011-04-12 15:29-0700\n"
 "PO-Revision-Date: 2011-03-21 11:04+0200\n"
 "Last-Translator: Pavel <jasnapaka@jasnapaka.com>\n"
 "Language-Team: Czech\n"
@@ -27,15 +27,13 @@ msgstr "Ukončit zobrazování"
 
 #: apps/announcements/models.py:24
 msgid "When this announcement will stop appearing. Leave blank for indefinite. (US/Pacific)"
-msgstr ""
-"Kdy se toto oznámení přestane zobrazovat. Pokud není určeno, ponechte "
-"prázdné. (US/Pacific)"
+msgstr "Kdy se toto oznámení přestane zobrazovat. Pokud není určeno, ponechte prázdné. (US/Pacific)"
 
 #: apps/announcements/models.py:28
 msgid "Use wiki syntax or HTML. It will display similar to a document's content."
 msgstr "Použijte wiki syntaxi či HTML. Zobrazí se podobně jako obsah dokumentu."
 
-#: apps/customercare/views.py:27 apps/dashboards/readouts.py:86
+#: apps/customercare/views.py:27 apps/dashboards/readouts.py:103
 msgid "Most Recent"
 msgstr "Nedávno aktualizované"
 
@@ -238,8 +236,8 @@ msgstr "Dříve, než se budete pomoci zapojit do Army of Awesome a začít odpo
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:87 apps/gallery/templates/gallery/includes/upload_media_form.html:117
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:134 apps/kbforums/templates/kbforums/confirm_post_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:30
 #: apps/kbforums/templates/kbforums/edit_post.html:29 apps/kbforums/templates/kbforums/edit_thread.html:27 apps/kbforums/templates/kbforums/new_thread.html:34
-#: apps/notifications/templates/notifications/remove.html:16 apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_revision_delete.html:25
-#: apps/wiki/templates/wiki/includes/review_form.html:35 apps/wiki/templates/wiki/includes/review_form.html:49 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
+#: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_revision_delete.html:25 apps/wiki/templates/wiki/includes/review_form.html:35
+#: apps/wiki/templates/wiki/includes/review_form.html:49 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "Zrušit"
 
@@ -251,121 +249,136 @@ msgstr "Tento týden"
 msgid "All Time"
 msgstr "Po celou dobu"
 
-#: apps/dashboards/readouts.py:58 apps/dashboards/readouts.py:155
+#: apps/dashboards/readouts.py:68 apps/dashboards/readouts.py:172
 msgid "Most-Visited Articles"
 msgstr "Nejnavštěvovanější články"
 
-#: apps/dashboards/readouts.py:62
+#: apps/dashboards/readouts.py:72
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "Tento seznam 20 nejčtenějších článků pokrývá více než 50 % shlédnutí stránek v databázi znalostí."
 
-#: apps/dashboards/readouts.py:65
+#: apps/dashboards/readouts.py:75 apps/dashboards/readouts.py:318 apps/wiki/models.py:46
+msgid "Templates"
+msgstr "Šablony"
+
+#: apps/dashboards/readouts.py:79
+#, fuzzy
+msgid "How many of the approved templates which allow translations have an approved translation into this language"
+msgstr "Množství schválených článků v angličtině, které mají schválený překlad do tohoto jazyka."
+
+#: apps/dashboards/readouts.py:82
 msgid "All Knowledge Base Articles"
 msgstr "Všechny články databáze podpory"
 
-#: apps/dashboards/readouts.py:68
+#: apps/dashboards/readouts.py:85
 msgid "How many of the approved English articles which allow translations have an approved translation into this language"
 msgstr "Množství schválených článků v angličtině, které mají schválený překlad do tohoto jazyka."
 
-#: apps/dashboards/readouts.py:83
+#: apps/dashboards/readouts.py:100
 msgid "Visits this week"
 msgstr "Návštěvy tento týden"
 
-#: apps/dashboards/readouts.py:84
+#: apps/dashboards/readouts.py:101
 msgid "Status"
 msgstr "Stav"
 
-#: apps/dashboards/readouts.py:85
+#: apps/dashboards/readouts.py:102
 msgid "Most Viewed"
 msgstr "Nejzobrazovanější"
 
-#: apps/dashboards/readouts.py:157
+#: apps/dashboards/readouts.py:174
 msgid "All knowledge base articles..."
 msgstr "Všechny články databáze znalostí..."
 
-#: apps/dashboards/readouts.py:159
+#: apps/dashboards/readouts.py:176
 msgid "Visits"
 msgstr "Návštěvy"
 
-#: apps/dashboards/readouts.py:162
+#: apps/dashboards/readouts.py:179
 msgid "Review Needed"
 msgstr "Vyžadována kontrola"
 
 #. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:210
+#: apps/dashboards/readouts.py:227
 msgid "All translations in English..."
 msgstr "Všechny překlady z angličtiny..."
 
-#: apps/dashboards/readouts.py:214
+#: apps/dashboards/readouts.py:231
 msgid "Update Needed"
 msgstr "Vyžadována aktualizace"
 
-#: apps/dashboards/readouts.py:216
+#: apps/dashboards/readouts.py:233
 msgid "Out of Date"
 msgstr "Neaktuální"
 
-#: apps/dashboards/readouts.py:272
+#: apps/dashboards/readouts.py:293
 msgid "Translation Needed"
 msgstr "Je potřeba překlad"
 
-#: apps/dashboards/readouts.py:288
+#. L10n: Replace "English" with your language.
+#: apps/dashboards/readouts.py:322
+#, fuzzy
+msgid "All templates in English..."
+msgstr "Všechny překlady z angličtiny..."
+
+#: apps/dashboards/readouts.py:330
 msgid "Untranslated Articles"
 msgstr "Nepřeložené články"
 
-#: apps/dashboards/readouts.py:289
+#: apps/dashboards/readouts.py:331
 msgid "Untranslated"
 msgstr "Nepřeloženo"
 
-#: apps/dashboards/readouts.py:290
+#: apps/dashboards/readouts.py:332
 msgid "All untranslated articles..."
 msgstr "Všechny nepřeložené články..."
 
-#: apps/dashboards/readouts.py:292
+#: apps/dashboards/readouts.py:334
 msgid "Updated"
 msgstr "Aktualizováno"
 
-#: apps/dashboards/readouts.py:332
+#: apps/dashboards/readouts.py:374
 msgid "Out-of-Date Translations"
 msgstr "Neaktuální překlady"
 
-#: apps/dashboards/readouts.py:333
+#: apps/dashboards/readouts.py:375
 msgid "Out-of-Date"
 msgstr "Neaktuální"
 
-#: apps/dashboards/readouts.py:334
+#: apps/dashboards/readouts.py:376
 msgid "All out-of-date translations..."
 msgstr "Všechny neaktuální překlady..."
 
-#: apps/dashboards/readouts.py:336
+#: apps/dashboards/readouts.py:378
 msgid "Out of date since"
 msgstr "Neaktuální od"
 
-#: apps/dashboards/readouts.py:411
+#: apps/dashboards/readouts.py:453
 msgid "Translations Needing Updates"
 msgstr "Překlady, které vyžadují aktualizaci"
 
-#: apps/dashboards/readouts.py:412
+#: apps/dashboards/readouts.py:454
 msgid "Needing Updates"
 msgstr "Potřebuje aktualizace"
 
-#: apps/dashboards/readouts.py:413
+#: apps/dashboards/readouts.py:455
 msgid "All translations needing updates..."
 msgstr "Všechny překlady, které vyžadují aktualizace..."
 
-#: apps/dashboards/readouts.py:420
+#: apps/dashboards/readouts.py:462
 msgid "Unreviewed Changes"
 msgstr "Nezkontrolované změny"
 
-#: apps/dashboards/readouts.py:424
+#: apps/dashboards/readouts.py:466
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "Nezkontrolované"
 
-#: apps/dashboards/readouts.py:425
+#: apps/dashboards/readouts.py:467
 msgid "All articles requiring review..."
 msgstr "Všechny články vyžadující kontrolu..."
 
-#: apps/dashboards/readouts.py:427
+#: apps/dashboards/readouts.py:469
 msgid "Changed"
 msgstr "Změněno"
 
@@ -376,14 +389,6 @@ msgstr "Nástěnka přispěvatele"
 #: apps/dashboards/views.py:59 apps/dashboards/templates/dashboards/localization.html:4
 msgid "Localization Dashboard"
 msgstr "Nástěnka lokalizátora"
-
-#: apps/dashboards/templates/dashboards/base.html:19 apps/wiki/templates/wiki/document_revisions.html:52
-msgid "Review"
-msgstr "Kontrola"
-
-#: apps/dashboards/templates/dashboards/base.html:22
-msgid "Forum"
-msgstr "Fórum"
 
 #: apps/dashboards/templates/dashboards/contributors.html:16 apps/dashboards/templates/dashboards/localization.html:42
 msgid "Show information for:"
@@ -397,15 +402,15 @@ msgstr "%(numerator)s <small>z %(denominator)s</small>"
 msgid "Overview"
 msgstr "Přehled"
 
-#: apps/dashboards/templates/dashboards/localization.html:61
+#: apps/dashboards/templates/dashboards/localization.html:62
 msgid "User Interface"
 msgstr "Uživatelské rozhraní"
 
-#: apps/dashboards/templates/dashboards/localization.html:65
+#: apps/dashboards/templates/dashboards/localization.html:66
 msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
 msgstr "Plně přeložené uživatelské rozhraní usnadní používání webu ve vašem jazyce. Pomozte <a href=\"%(url)s\">přeložit uživatelské rozhraní</a>."
 
-#: apps/dashboards/templates/dashboards/localization.html:74
+#: apps/dashboards/templates/dashboards/localization.html:75
 msgid "More options:"
 msgstr "Více možností:"
 
@@ -429,53 +434,67 @@ msgstr "Článek"
 msgid "changed by {users}"
 msgstr "změněno uživatelem {users}"
 
-#. Please localize 'English' here.
+#: apps/dashboards/templates/dashboards/includes/macros.html:26
+#, fuzzy
+msgctxt "dashboard"
+msgid "Review"
+msgstr "Kontrola"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:39
+msgid "My profile"
+msgstr "Můj profil"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:42
+msgid "Edit my profile"
+msgstr "Upravit můj profil"
+
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:9
-msgctxt "english"
+#, fuzzy
 msgid "Stop getting emailed when English revisions are approved"
 msgstr "Ukončit získávání e-mailů, když jsou revize v češtině schváleny"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:12
-msgctxt "locale"
-msgid "Stop getting emailed when English revisions are approved"
-msgstr "Ukončit získávání e-mailů, když jsou revize v češtině schváleny."
+#, fuzzy
+msgid "Stop getting emailed when YOUR_LOCALE revisions are approved"
+msgstr "Ukončit získávání e-mailů, když jsou revize v češtině schváleny"
 
-#. Please localize 'English' here.
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:21
-msgctxt "english"
+#, fuzzy
 msgid "Get emailed when English revisions are approved"
 msgstr "Poslat e-mail vždy, když jsou revize v češtině schváleny"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:24
-msgctxt "locale"
-msgid "Get emailed when English revisions are approved"
+#, fuzzy
+msgid "Get emailed when YOUR_LOCALE revisions are approved"
 msgstr "Poslat e-mail vždy, když jsou revize v češtině schváleny"
 
-#. Please localize 'English' here.
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:8
-msgctxt "english"
+#, fuzzy
 msgid "Stop getting emailed when English reviews are waiting"
 msgstr "Ukončit zasílání e-mailů, když čekají revize pro jazyk čeština"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:11
-msgctxt "locale"
-msgid "Stop getting emailed when English reviews are waiting"
+#, fuzzy
+msgid "Stop getting emailed when YOUR_LOCALE reviews are waiting"
 msgstr "Ukončit zasílání e-mailů, když čekají revize pro jazyk čeština"
 
-#. Please localize 'English' here.
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:19
-msgctxt "english"
+#, fuzzy
 msgid "Get emailed when English reviews are waiting"
 msgstr "Zaslat e-mail, když revize v češtině čeká na kontrolu"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:22
-msgctxt "locale"
-msgid "Get emailed when English reviews are waiting"
-msgstr "Zaslat e-mail, když revize v češtině čekají na kontrolu"
+#, fuzzy
+msgid "Get emailed when YOUR_LOCALE reviews are waiting"
+msgstr "Zaslat e-mail, když revize v češtině čeká na kontrolu"
 
 #: apps/flagit/models.py:23
 msgid "Spam or other unrelated content"
@@ -883,11 +902,11 @@ msgstr "Smazat náhled"
 msgid "Upload a thumbnail for your video. Suggested size: {width}x{height}px"
 msgstr "Nahrajte náhled pro své video. Doporučené rozlišení: {width}x{height}px"
 
-#: apps/kbforums/events.py:16
+#: apps/kbforums/events.py:20
 msgid "Reply to: %s"
 msgstr "Reakce na: %s"
 
-#: apps/kbforums/events.py:32
+#: apps/kbforums/events.py:29
 msgid "New thread in %s: %s"
 msgstr "Nové vlákno v %s: %s"
 
@@ -1203,7 +1222,7 @@ msgstr "Časté otázky"
 msgid "Firefox Help <span>for Firefox Home</span>"
 msgstr "Nápověda Firefoxu <span>k Firefox Home</span>"
 
-#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:128 templates/base.html:8 templates/base.html:17 templates/mobile/base.html:15
+#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:139 templates/base.html:8 templates/base.html:17 templates/mobile/base.html:15
 msgid "Firefox Help"
 msgstr "Nápověda k Firefoxu"
 
@@ -1214,23 +1233,6 @@ msgstr "Nápověda k Firefoxu <span>pro mobily</span>"
 #: apps/landings/templates/landings/mobile/sync.html:5
 msgid "Firefox Help <span>for Sync</span>"
 msgstr "Nápověda Firefoxu <span>k Sync</span>"
-
-#: apps/notifications/templates/notifications/gone.html:3
-msgid "Unsubscribed"
-msgstr "Odběr zrušen"
-
-#: apps/notifications/templates/notifications/gone.html:10
-msgid "You have been unsubscribed from this notification."
-msgstr "Provedl(a) jste odhlášení odběru tohoto upozornění."
-
-#: apps/notifications/templates/notifications/remove.html:3
-msgid "Unsubscribe"
-msgstr "Zrušit odběr"
-
-#. {0} is an object title, {1} is an object type.
-#: apps/notifications/templates/notifications/remove.html:11
-msgid "Do you want to stop receiving email notifications from the {1} <strong>{0}</strong>?"
-msgstr "Chcete ukončit přijímání upozornění e-mailem pro {1} <strong>{0}</strong>?"
 
 #: apps/search/__init__.py:17 apps/search/__init__.py:52 apps/search/__init__.py:58
 msgid "Don't filter"
@@ -1260,11 +1262,11 @@ msgstr "Datum původního příspěvku"
 msgid "Number of replies"
 msgstr "Počet odpovědí"
 
-#: apps/search/__init__.py:53 apps/sumo/helpers.py:298 apps/wiki/templates/wiki/includes/document_vote.html:8
+#: apps/search/__init__.py:53 apps/sumo/helpers.py:309 apps/wiki/templates/wiki/includes/document_vote.html:8
 msgid "Yes"
 msgstr "Ano"
 
-#: apps/search/__init__.py:54 apps/sumo/helpers.py:298 apps/wiki/templates/wiki/includes/document_vote.html:9
+#: apps/search/__init__.py:54 apps/sumo/helpers.py:309 apps/wiki/templates/wiki/includes/document_vote.html:9
 msgid "No"
 msgstr "Ne"
 
@@ -1478,60 +1480,60 @@ msgstr "Ujistěte se, že má tato hodnota nejméně %(limit_value)s znaků (akt
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr "Ujistěte se, že má tato hodnota nejvíce %(limit_value)s znaků (aktuálně má %(show_value)s)."
 
-#: apps/sumo/helpers.py:177
+#: apps/sumo/helpers.py:188
 msgid "Today at %s"
 msgstr "Dnes v %s"
 
-#: apps/sumo/helpers.py:255
+#: apps/sumo/helpers.py:266
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "Před %(number)d rokem"
 msgstr[1] "Před %(number)d roky"
 msgstr[2] "Před %(number)d roky"
 
-#: apps/sumo/helpers.py:257
+#: apps/sumo/helpers.py:268
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "Před %(number)d měsícem"
 msgstr[1] "Před %(number)d měsíci"
 msgstr[2] "Před %(number)d měsíci"
 
-#: apps/sumo/helpers.py:259
+#: apps/sumo/helpers.py:270
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "Před %(number)d týdnem"
 msgstr[1] "Před %(number)d týdny"
 msgstr[2] "Před %(number)d týdny"
 
-#: apps/sumo/helpers.py:261
+#: apps/sumo/helpers.py:272
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "Před %(number)d dnem"
 msgstr[1] "Před %(number)d dny"
 msgstr[2] "Před %(number)d dny"
 
-#: apps/sumo/helpers.py:263
+#: apps/sumo/helpers.py:274
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "Před %(number)d hodinou"
 msgstr[1] "Před %(number)d hodinami"
 msgstr[2] "Před %(number)d hodinami"
 
-#: apps/sumo/helpers.py:265
+#: apps/sumo/helpers.py:276
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "Před %(number)d minutou"
 msgstr[1] "Před %(number)d minutami"
 msgstr[2] "Před %(number)d minutami"
 
-#: apps/sumo/helpers.py:267
+#: apps/sumo/helpers.py:278
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] "Před %(number)d sekundou"
 msgstr[1] "Před %(number)d sekundami"
 msgstr[2] "Před %(number)d sekundami"
 
-#: apps/sumo/parser.py:228
+#: apps/sumo/parser.py:232
 msgid "The image \"%s\" does not exist."
 msgstr "Obrázek \"%s\" neexistuje."
 
@@ -1787,23 +1789,23 @@ msgstr "ID pro živou konverzaci"
 msgid "Preferred language for email"
 msgstr "Preferovaný jazyk pro e-mail"
 
-#: apps/users/models.py:178 apps/users/models.py:214
+#: apps/users/models.py:180 apps/users/models.py:216
 msgid "Please confirm your email address"
 msgstr "Potvrďte prosím svou e-mailovou adresu"
 
-#: apps/users/models.py:230 apps/users/models.py:272
+#: apps/users/models.py:232 apps/users/models.py:274
 msgid "user"
 msgstr "Uživatel"
 
-#: apps/users/models.py:231 apps/users/models.py:273
+#: apps/users/models.py:233 apps/users/models.py:275
 msgid "activation key"
 msgstr "aktivační klíč"
 
-#: apps/users/models.py:237
+#: apps/users/models.py:239
 msgid "registration profile"
 msgstr "registrační profil"
 
-#: apps/users/models.py:238
+#: apps/users/models.py:240
 msgid "registration profiles"
 msgstr "registrační profily"
 
@@ -1829,14 +1831,6 @@ msgstr[2] "Vaše otázky jsou nově viditelné na webu!"
 #: apps/users/templates/users/activate.html:31
 msgid "We could not activate your account. Please make sure that you have clicked the correct link in your email or typed in the correct address."
 msgstr "Nemůžeme váš účet aktivovat. Ujistěte se prosím, že jste klepnul(a) na správný odkaz v e-mailu nebo zadal(a) správnou adresu."
-
-#: apps/users/templates/users/base.html:16
-msgid "My profile"
-msgstr "Můj profil"
-
-#: apps/users/templates/users/base.html:24
-msgid "Edit my profile"
-msgstr "Upravit můj profil"
 
 #: apps/users/templates/users/change_email.html:4
 msgid "Change email address"
@@ -1917,7 +1911,7 @@ msgstr "Smazat"
 msgid "Change"
 msgstr "Změnit"
 
-#: apps/users/templates/users/edit_profile.html:31 apps/users/templates/users/profile.html:35
+#: apps/users/templates/users/edit_profile.html:31 apps/users/templates/users/profile.html:36
 msgid "Email:"
 msgstr "E-mail:"
 
@@ -1933,31 +1927,31 @@ msgstr "Přihlášení"
 msgid "{user} | Profile"
 msgstr "{user} | Profil"
 
-#: apps/users/templates/users/profile.html:19
+#: apps/users/templates/users/profile.html:20
 msgid "{city}, {country}"
 msgstr "{city}, {country}"
 
-#: apps/users/templates/users/profile.html:41
+#: apps/users/templates/users/profile.html:42
 msgid "Website:"
 msgstr "Webová stránka:"
 
-#: apps/users/templates/users/profile.html:47
+#: apps/users/templates/users/profile.html:48
 msgid "Twitter:"
 msgstr "Twitter:"
 
-#: apps/users/templates/users/profile.html:53
+#: apps/users/templates/users/profile.html:54
 msgid "Facebook:"
 msgstr "Facebook:"
 
-#: apps/users/templates/users/profile.html:59
+#: apps/users/templates/users/profile.html:60
 msgid "IRC:"
 msgstr "IRC:"
 
-#: apps/users/templates/users/profile.html:65
+#: apps/users/templates/users/profile.html:66
 msgid "Livechat ID: {livechat_id}"
 msgstr "ID pro živou konverzaci: {livechat_id}"
 
-#: apps/users/templates/users/profile.html:72
+#: apps/users/templates/users/profile.html:73
 msgid "About {user}"
 msgstr "O uživateli {user}"
 
@@ -1970,7 +1964,8 @@ msgid "Change my password"
 msgstr "Změna mého hesla"
 
 #: apps/users/templates/users/pw_change_complete.html:3
-msgid "Password changed successful!"
+#, fuzzy
+msgid "Password change successful!"
 msgstr "Heslo bylo úspěšně změněno!"
 
 #: apps/users/templates/users/pw_change_complete.html:9
@@ -2090,15 +2085,15 @@ msgstr "Nemám účet."
 msgid "My account is inactive."
 msgstr "Můj účet je neaktivní."
 
-#: apps/wiki/events.py:49
+#: apps/wiki/events.py:50
 msgid "{title} was edited by {creator}"
 msgstr "{title} byl upraven uživatelem {creator}"
 
-#: apps/wiki/events.py:85
+#: apps/wiki/events.py:86
 msgid "{title} is ready for review ({creator})"
 msgstr "{title} je připraven na kontrolu ({creator})"
 
-#: apps/wiki/events.py:104
+#: apps/wiki/events.py:105
 msgid "{title} ({locale}) has a new approved revision"
 msgstr "{title} v jazyce ({locale}) má novou schválenou revizi"
 
@@ -2190,7 +2185,7 @@ msgstr "Témata:"
 msgid "Popular articles in each topic are displayed on the front page"
 msgstr "Populární články z každé kategorie jsou zobrazeny na titulní stránce."
 
-#: apps/wiki/forms.py:151 apps/wiki/templates/wiki/review_revision.html:40 apps/wiki/templates/wiki/review_translation.html:56 apps/wiki/templates/wiki/translate.html:96
+#: apps/wiki/forms.py:151 apps/wiki/templates/wiki/review_revision.html:41 apps/wiki/templates/wiki/review_translation.html:56 apps/wiki/templates/wiki/translate.html:96
 #: apps/wiki/templates/wiki/includes/revision_diff.html:31
 msgid "Keywords:"
 msgstr "Klíčová slova:"
@@ -2247,21 +2242,17 @@ msgstr "Administrace"
 msgid "Navigation"
 msgstr "Navigace"
 
-#: apps/wiki/models.py:46
-msgid "Templates"
-msgstr "Šablony"
-
 #: apps/wiki/models.py:61
 msgid "Desktop:"
 msgstr "Desktop:"
 
-#: apps/wiki/models.py:64 apps/wiki/models.py:65
-msgid "Firefox 3.5-3.6"
-msgstr "Firefox 3.5 - 3.6"
-
-#: apps/wiki/models.py:66 apps/wiki/models.py:67 apps/wiki/models.py:71
+#: apps/wiki/models.py:64 apps/wiki/models.py:65 apps/wiki/models.py:71
 msgid "Firefox 4"
 msgstr "Firefox 4"
+
+#: apps/wiki/models.py:66 apps/wiki/models.py:67
+msgid "Firefox 3.5-3.6"
+msgstr "Firefox 3.5 - 3.6"
 
 #: apps/wiki/models.py:68 apps/wiki/models.py:69
 msgid "Firefox 3.0"
@@ -2336,27 +2327,27 @@ msgstr "Šablona \"%s\" neexistuje nebo nemá schválenou verzi."
 msgid "The video \"%s\" does not exist."
 msgstr "Video \"%s\" neexistuje."
 
-#: apps/wiki/tasks.py:35
+#: apps/wiki/tasks.py:34
 msgid "Your revision has been approved: {title}"
 msgstr "Vaše revize byla schválena: {title}"
 
-#: apps/wiki/tasks.py:37
+#: apps/wiki/tasks.py:36
 msgid "Your revision has been rejected: {title}"
 msgstr "Vaše revize byla zamítnuta: {title}"
 
-#: apps/wiki/views.py:412
+#: apps/wiki/views.py:408
 msgid "You cannot translate this document."
 msgstr "Tento dokument nemůžete přeložit."
 
-#: apps/wiki/views.py:602
+#: apps/wiki/views.py:598
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "Rádi to slyšíme &mdash; díky za reakci!"
 
-#: apps/wiki/views.py:604
+#: apps/wiki/views.py:600
 msgid "Sorry to hear that. Try searching for solutions below."
 msgstr "Je nám líto, že to slyšíme. Zkuste vyhledat řešení níže."
 
-#: apps/wiki/views.py:614
+#: apps/wiki/views.py:610
 msgid "You already voted on this Article."
 msgstr "Již jste pro tento článek hlasoval(a)."
 
@@ -2420,21 +2411,17 @@ msgstr "Pro podporu k Firefoxu jste na správném místě!"
 
 #: apps/wiki/templates/wiki/document.html:56
 msgid "This page should provide you with a solution to what you posted on Twitter.<br/> If not, our community volunteers are ready to help."
-msgstr ""
-"Tato stránka by vám měla poskytnout řešení k tomu, co jste napsal(a) na "
-"Twitter.<br/>Pokud ne, naše komunita dobrovolníku je připravena vám pomoci."
+msgstr "Tato stránka by vám měla poskytnout řešení k tomu, co jste napsal(a) na Twitter.<br/>Pokud ne, naše komunita dobrovolníku je připravena vám pomoci."
 
 #: apps/wiki/templates/wiki/document.html:64
 msgid "You were sent here by one of our <br/> volunteers from the <a href=\"%(url)s\">Army of Awesome</a>."
-msgstr ""
-"Byl(a) jste sem poslána jedním z našich <br/>dobrovolníků, kteří se účastní "
-"<a href=\"%(url)s\">Army of Awesome</a>."
+msgstr "Byl(a) jste sem poslána jedním z našich <br/>dobrovolníků, kteří se účastní <a href=\"%(url)s\">Army of Awesome</a>."
 
-#: apps/wiki/templates/wiki/document.html:86
+#: apps/wiki/templates/wiki/document.html:94
 msgid "Turn off emails."
 msgstr "Ukončit notifikace."
 
-#: apps/wiki/templates/wiki/document.html:91
+#: apps/wiki/templates/wiki/document.html:99
 msgid "Get emailed when this article changes."
 msgstr "Upozorňovat na změny v článku."
 
@@ -2461,6 +2448,10 @@ msgstr "Porovnání zvolených překladů"
 #: apps/wiki/templates/wiki/document_revisions.html:30 apps/wiki/templates/wiki/document_revisions.html:91
 msgid "Compare Selected Revisions"
 msgstr "Porovnání zvolených revizí"
+
+#: apps/wiki/templates/wiki/document_revisions.html:52
+msgid "Review"
+msgstr "Kontrola"
 
 #: apps/wiki/templates/wiki/document_revisions.html:54
 msgctxt "revision"
@@ -2499,9 +2490,10 @@ msgstr "Upravit popis"
 msgid "Relevant to:"
 msgstr "Relevantní k:"
 
-#: apps/wiki/templates/wiki/edit_document.html:40 apps/wiki/templates/wiki/translate.html:76
-msgid "Save"
-msgstr "Uložit"
+#: apps/wiki/templates/wiki/edit_document.html:40
+#, fuzzy
+msgid "Save description"
+msgstr "Popis"
 
 #: apps/wiki/templates/wiki/edit_document.html:49
 msgid "Edit Content"
@@ -2571,19 +2563,19 @@ msgstr "Zdroj revize"
 msgid "Revision Content"
 msgstr "Obsah revize"
 
-#: apps/wiki/templates/wiki/review_revision.html:39
+#: apps/wiki/templates/wiki/review_revision.html:40
 msgid "This document does not have a current revision."
 msgstr "Tento dokument nemá aktuální revizi."
 
-#: apps/wiki/templates/wiki/review_revision.html:44 apps/wiki/templates/wiki/review_translation.html:63 apps/wiki/templates/wiki/includes/revision_diff.html:38
+#: apps/wiki/templates/wiki/review_revision.html:45 apps/wiki/templates/wiki/review_translation.html:63 apps/wiki/templates/wiki/includes/revision_diff.html:38
 msgid "Search results summary:"
 msgstr "Souhrn výsledků vyhledávání:"
 
-#: apps/wiki/templates/wiki/review_revision.html:48
+#: apps/wiki/templates/wiki/review_revision.html:49
 msgid "Revision source:"
 msgstr "Zdroj revize:"
 
-#: apps/wiki/templates/wiki/review_revision.html:52
+#: apps/wiki/templates/wiki/review_revision.html:53
 msgid "Revision rendered html:"
 msgstr "Vykreslené HTML revize:"
 
@@ -2640,23 +2632,23 @@ msgstr "Revize {id} od uživatele {user} z data {date}"
 msgid "Submitted {locale} translation:"
 msgstr "Odeslaný překlad v jazyce {locale}:"
 
-#: apps/wiki/templates/wiki/review_translation.html:87
+#: apps/wiki/templates/wiki/review_translation.html:88
 msgid "This document does not have a current translation."
 msgstr "Tento dokument nemá aktuální překlad."
 
-#: apps/wiki/templates/wiki/review_translation.html:88
+#: apps/wiki/templates/wiki/review_translation.html:89
 msgid "Translation keywords:"
 msgstr "Překlad klíčových slov:"
 
-#: apps/wiki/templates/wiki/review_translation.html:92
+#: apps/wiki/templates/wiki/review_translation.html:93
 msgid "Translation search results summary:"
 msgstr "Přeložený souhrn výsledků vyhledávání:"
 
-#: apps/wiki/templates/wiki/review_translation.html:96
+#: apps/wiki/templates/wiki/review_translation.html:97
 msgid "Translation source:"
 msgstr "Překlad zdroje:"
 
-#: apps/wiki/templates/wiki/review_translation.html:100
+#: apps/wiki/templates/wiki/review_translation.html:101
 msgid "Translation rendered html:"
 msgstr "Vykreslené HTML překladu:"
 
@@ -2722,6 +2714,7 @@ msgid "Translate Article | {document}"
 msgstr "Překlad článku | {document}"
 
 #: apps/wiki/templates/wiki/translate.html:9 apps/wiki/templates/wiki/includes/sidebar_modules.html:36 apps/wiki/templates/wiki/includes/sidebar_modules.html:38
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:45 apps/wiki/templates/wiki/includes/sidebar_modules.html:47
 msgid "Translate Article"
 msgstr "Překlad článku"
 
@@ -2752,6 +2745,10 @@ msgstr "Nadpis v jazyce {locale}:"
 #: apps/wiki/templates/wiki/translate.html:69
 msgid "Slug in {locale}:"
 msgstr "URL pro jazyk {locale}:"
+
+#: apps/wiki/templates/wiki/translate.html:76
+msgid "Save title and slug"
+msgstr ""
 
 #: apps/wiki/templates/wiki/translate.html:85
 msgid "Translate Content"
@@ -2882,15 +2879,15 @@ msgstr "Revize {num}:"
 msgid "Discussion"
 msgstr "Diskuse"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:43
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:53
 msgid "Show History"
 msgstr "Zobrazit historii"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:55
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:66
 msgid "Unsubscribe from edit notifications"
 msgstr "Zrušit odběr upozornění na úpravy"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:60
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:71
 msgid "Subscribe to edit notifications"
 msgstr "Odebírat upozornění na úpravy"
 
@@ -3168,8 +3165,9 @@ msgid "Welcome, <span class=\"user\">{user}</span>."
 msgstr "Vítejte, <span class=\"user\">{user}</span>."
 
 #: templates/includes/common_macros.html:25
-msgid "Profile"
-msgstr "Profil"
+#, fuzzy
+msgid "Dashboard"
+msgstr "Nástěnka lokalizátora"
 
 #: templates/includes/common_macros.html:27
 msgid "Sign Out"
@@ -3298,6 +3296,43 @@ msgstr "Firefox Sync"
 msgid "View full site"
 msgstr "Zobrazit plnou verzi webu"
 
+#~ msgid "Forum"
+#~ msgstr "Fórum"
+
+#~ msgctxt "locale"
+#~ msgid "Stop getting emailed when English revisions are approved"
+#~ msgstr "Ukončit získávání e-mailů, když jsou revize v češtině schváleny."
+
+#~ msgctxt "locale"
+#~ msgid "Get emailed when English revisions are approved"
+#~ msgstr "Poslat e-mail vždy, když jsou revize v češtině schváleny"
+
+#~ msgctxt "locale"
+#~ msgid "Stop getting emailed when English reviews are waiting"
+#~ msgstr "Ukončit zasílání e-mailů, když čekají revize pro jazyk čeština"
+
+#~ msgctxt "locale"
+#~ msgid "Get emailed when English reviews are waiting"
+#~ msgstr "Zaslat e-mail, když revize v češtině čekají na kontrolu"
+
+#~ msgid "Unsubscribed"
+#~ msgstr "Odběr zrušen"
+
+#~ msgid "You have been unsubscribed from this notification."
+#~ msgstr "Provedl(a) jste odhlášení odběru tohoto upozornění."
+
+#~ msgid "Unsubscribe"
+#~ msgstr "Zrušit odběr"
+
+#~ msgid "Do you want to stop receiving email notifications from the {1} <strong>{0}</strong>?"
+#~ msgstr "Chcete ukončit přijímání upozornění e-mailem pro {1} <strong>{0}</strong>?"
+
+#~ msgid "Save"
+#~ msgstr "Uložit"
+
+#~ msgid "Profile"
+#~ msgstr "Profil"
+
 #~ msgid "The template \"%s\" does not exist."
 #~ msgstr "Šablona \"%s\" neexistuje."
 
@@ -3336,9 +3371,6 @@ msgstr "Zobrazit plnou verzi webu"
 
 #~ msgid "The password reset link was sent to your email address."
 #~ msgstr "Odkaz na obnovu hesla byl zaslán na vaši e-mailovou adresu."
-
-#~ msgid "Localizer Dashboard"
-#~ msgstr "Nástěnka lokalizátora"
 
 #~ msgid "This user has not mady any contact information public."
 #~ msgstr "Tento uživatel nemá žádné kontaktní údaje nastaveny jako veřejné."
