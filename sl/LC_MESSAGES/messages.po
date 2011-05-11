@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-12 15:29-0700\n"
+"POT-Creation-Date: 2011-05-11 06:33-0700\n"
 "PO-Revision-Date: 2011-03-20 16:30+0200\n"
 "Last-Translator: Vito <smolejv@gmx.net>\n"
 "Language-Team: Slovenian\n"
@@ -13,65 +13,69 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 "X-Generator: Pootle 2.1.5\n"
 
-#: apps/announcements/models.py:18
+#: apps/announcements/models.py:19
 msgid "Start displaying"
 msgstr "Začni opazovanje"
 
-#: apps/announcements/models.py:19
+#: apps/announcements/models.py:20
 msgid "When this announcement will start appearing. (US/Pacific)"
 msgstr "Kdaj se bo ta napoved začeti pojavljati. (ZDA / Pacifik)"
 
-#: apps/announcements/models.py:23
+#: apps/announcements/models.py:24
 msgid "Stop displaying"
 msgstr "Ustavi opazovanje"
 
-#: apps/announcements/models.py:24
+#: apps/announcements/models.py:25
 msgid "When this announcement will stop appearing. Leave blank for indefinite. (US/Pacific)"
 msgstr "Kdaj se bo ta napoved nehala prikazovati. Pustite prazno za nedoločen čas. (ZDA / Pacifik)"
 
-#: apps/announcements/models.py:28
+#: apps/announcements/models.py:29
 msgid "Use wiki syntax or HTML. It will display similar to a document's content."
 msgstr "Uporabljaj wiki sintakso ali HTML. Katalo se bo podobno kot vsebina dokumenta."
 
-#: apps/customercare/views.py:27 apps/dashboards/readouts.py:103
+#: apps/announcements/tasks.py:34
+msgid "New announcement for {group}"
+msgstr ""
+
+#: apps/customercare/views.py:28 apps/dashboards/readouts.py:106
 msgid "Most Recent"
 msgstr "Najnovejši"
 
-#: apps/customercare/views.py:28
+#: apps/customercare/views.py:29
 msgid "Unanswered"
 msgstr "Neodgovorjeni"
 
-#: apps/customercare/views.py:29
+#: apps/customercare/views.py:30
 msgid "Answered"
 msgstr "Odgovorjeni"
 
-#: apps/customercare/views.py:30
+#: apps/customercare/views.py:31
 msgid "All"
 msgstr "Vsi"
 
 #. L10n: the tweet needs to be a reply to another tweet.
-#: apps/customercare/views.py:168
+#: apps/customercare/views.py:171
 msgid "Reply-to is empty"
 msgstr "Odgovor je prazen"
 
 #. L10n: the tweet has no content.
-#: apps/customercare/views.py:173
+#: apps/customercare/views.py:176
 msgid "Message is empty"
 msgstr "Sporočilo je prazno"
 
-#: apps/customercare/views.py:176
+#: apps/customercare/views.py:179
 msgid "Message is too long"
 msgstr "Sporočilo je predolgo"
 
-#: apps/customercare/views.py:183 apps/customercare/views.py:251
+#: apps/customercare/views.py:186 apps/customercare/views.py:255
 msgid "An error occured: {message}"
 msgstr "Prišlo je do napake: {message}"
 
-#: apps/customercare/views.py:234 apps/customercare/views.py:239
+#: apps/customercare/views.py:238 apps/customercare/views.py:243
 msgid "Invalid ID."
 msgstr "Neveljaven ID."
 
-#: apps/customercare/views.py:243
+#: apps/customercare/views.py:247
 msgid "Tweets that are replies or have replies must not be hidden."
 msgstr "Ščebetov, ki so odgovori ali ki odgovore imajo, ni mogoče skriti."
 
@@ -171,7 +175,8 @@ msgstr "Dvignite se v <mark>naslednje nadstropje!</mark>"
 msgid "Want to go beyond 140 characters? <a href=\"%(join_url)s\">Join the support community</a> and help many more Firefox users."
 msgstr "Želite več kot 140 znakov? <a href=\"%(join_url)s\">Pridružite se skupnosti za podporo</a> in pomagajte veliko več uporabnikom Firefox."
 
-#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:93 apps/kbforums/templates/kbforums/includes/post.html:29
+#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:95 apps/kbforums/templates/kbforums/includes/post.html:29
+#: apps/messages/templates/messages/read.html:19
 msgid "Reply"
 msgstr "Odgovori"
 
@@ -195,11 +200,11 @@ msgstr "Pokažite osebnost"
 msgid "Tweak it and make it your own. Personalized messages go a long way in helping others."
 msgstr "Prilagodite svojemu slogu. Osebna sporočila so veliko bolj uspešna, kadar gre za pomoč."
 
-#: apps/customercare/templates/customercare/reply_modal.html:64
+#: apps/customercare/templates/customercare/reply_modal.html:65 apps/messages/views.py:74
 msgid "Your message was sent!"
 msgstr "Vaše sporočilo je bilo poslano!"
 
-#: apps/customercare/templates/customercare/reply_modal.html:66 apps/wiki/templates/wiki/includes/submit_revision_modal.html:18
+#: apps/customercare/templates/customercare/reply_modal.html:67 apps/wiki/templates/wiki/includes/submit_revision_modal.html:18
 msgid "Submit"
 msgstr "Predloži"
 
@@ -232,188 +237,186 @@ msgid "Before you join the Army of Awesome, you need to log in so you can respon
 msgstr "Preden se pridružiš drugim junakom, se moraš prijaviti, da se boš na čivke lahko odzval. Sedaj te bomo preusmerili na Twitter, da se prijaviš."
 
 #: apps/customercare/templates/customercare/twitter_modal.html:12 apps/gallery/templates/gallery/confirm_media_delete.html:60 apps/gallery/templates/gallery/edit_media.html:28
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:53
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:79 apps/gallery/templates/gallery/includes/upload_media_form.html:83
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:87 apps/gallery/templates/gallery/includes/upload_media_form.html:117
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:134 apps/kbforums/templates/kbforums/confirm_post_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:30
-#: apps/kbforums/templates/kbforums/edit_post.html:29 apps/kbforums/templates/kbforums/edit_thread.html:27 apps/kbforums/templates/kbforums/new_thread.html:34
-#: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_revision_delete.html:25 apps/wiki/templates/wiki/includes/review_form.html:35
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:58
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:132 apps/gallery/templates/gallery/includes/upload_media_form.html:138
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/kbforums/templates/kbforums/confirm_post_delete.html:30 apps/kbforums/templates/kbforums/confirm_thread_delete.html:32
+#: apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29 apps/kbforums/templates/kbforums/new_thread.html:36
+#: apps/messages/templates/messages/new.html:16 apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/includes/review_form.html:35
 #: apps/wiki/templates/wiki/includes/review_form.html:49 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: apps/dashboards/models.py:19
+#: apps/dashboards/__init__.py:8
 msgid "This Week"
 msgstr "Ta teden"
 
-#: apps/dashboards/models.py:20
+#: apps/dashboards/__init__.py:9
 msgid "All Time"
 msgstr "Ves čas"
 
-#: apps/dashboards/readouts.py:68 apps/dashboards/readouts.py:172
+#: apps/dashboards/models.py:168
+msgid "Parameters which will be passed to the dashboard. The dashboard determines the meaning and format of these."
+msgstr ""
+
+#: apps/dashboards/readouts.py:71 apps/dashboards/readouts.py:175
 msgid "Most-Visited Articles"
 msgstr "Najbolj obiskani članki"
 
-#: apps/dashboards/readouts.py:72
+#: apps/dashboards/readouts.py:75
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "To je 20 najbolj obiskanih člankov, ki predstavljajo več kot 50% prometa v Bazi znanja."
 
-#: apps/dashboards/readouts.py:75 apps/dashboards/readouts.py:318 apps/wiki/models.py:46
+#: apps/dashboards/readouts.py:78 apps/dashboards/readouts.py:323 apps/wiki/models.py:47
 msgid "Templates"
 msgstr "Predloge"
 
-#: apps/dashboards/readouts.py:79
+#: apps/dashboards/readouts.py:82
 #, fuzzy
 msgid "How many of the approved templates which allow translations have an approved translation into this language"
 msgstr "Koliko od odobrenih angleških člankov, ki se jih lahko prevede, ima odobren prevod v ta jezik"
 
-#: apps/dashboards/readouts.py:82
+#: apps/dashboards/readouts.py:85
 msgid "All Knowledge Base Articles"
 msgstr "Vsi članki v zbirki znanja"
 
-#: apps/dashboards/readouts.py:85
+#: apps/dashboards/readouts.py:88
 msgid "How many of the approved English articles which allow translations have an approved translation into this language"
 msgstr "Koliko od odobrenih angleških člankov, ki se jih lahko prevede, ima odobren prevod v ta jezik"
 
-#: apps/dashboards/readouts.py:100
+#: apps/dashboards/readouts.py:103
 msgid "Visits this week"
 msgstr "Obiskov ta teden"
 
-#: apps/dashboards/readouts.py:101
+#: apps/dashboards/readouts.py:104
 msgid "Status"
 msgstr "Status"
 
-#: apps/dashboards/readouts.py:102
+#: apps/dashboards/readouts.py:105
 msgid "Most Viewed"
 msgstr "Največkrat gledani"
 
-#: apps/dashboards/readouts.py:174
+#: apps/dashboards/readouts.py:177
 msgid "All knowledge base articles..."
 msgstr "Vsi članki v bazi znanja ..."
 
-#: apps/dashboards/readouts.py:176
+#: apps/dashboards/readouts.py:179
 msgid "Visits"
 msgstr "Obiski"
 
-#: apps/dashboards/readouts.py:179
+#: apps/dashboards/readouts.py:182
 msgid "Review Needed"
 msgstr "Potreben je pregled"
 
 #. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:227
-msgid "All translations in English..."
-msgstr "Vsi prevodi v angleškem jeziku ..."
-
 #: apps/dashboards/readouts.py:231
+#, fuzzy
+msgid "All translations..."
+msgstr "Dovoli prevode:"
+
+#: apps/dashboards/readouts.py:235
 msgid "Update Needed"
 msgstr "Potrebna posodobitev"
 
-#: apps/dashboards/readouts.py:233
+#: apps/dashboards/readouts.py:237
 msgid "Out of Date"
 msgstr "Zastarelo"
 
-#: apps/dashboards/readouts.py:293
+#: apps/dashboards/readouts.py:298
 msgid "Translation Needed"
 msgstr "Potreben je prevod"
 
 #. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:322
+#: apps/dashboards/readouts.py:327
 #, fuzzy
 msgid "All templates in English..."
 msgstr "Vsi prevodi v angleškem jeziku ..."
 
-#: apps/dashboards/readouts.py:330
+#: apps/dashboards/readouts.py:335
 msgid "Untranslated Articles"
 msgstr "Neprevedeni članki"
 
-#: apps/dashboards/readouts.py:331
+#: apps/dashboards/readouts.py:336
 msgid "Untranslated"
 msgstr "Neprevedeno"
 
-#: apps/dashboards/readouts.py:332
+#: apps/dashboards/readouts.py:337
 msgid "All untranslated articles..."
 msgstr "Vsi neprevedeni članki ..."
 
-#: apps/dashboards/readouts.py:334
+#: apps/dashboards/readouts.py:339
 msgid "Updated"
 msgstr "Posodobljeno"
 
-#: apps/dashboards/readouts.py:374
+#: apps/dashboards/readouts.py:379
 msgid "Out-of-Date Translations"
 msgstr "Zastareli prevodi"
 
-#: apps/dashboards/readouts.py:375
+#: apps/dashboards/readouts.py:380
 msgid "Out-of-Date"
 msgstr "Zastarelo"
 
-#: apps/dashboards/readouts.py:376
+#: apps/dashboards/readouts.py:381
 msgid "All out-of-date translations..."
 msgstr "Vsi zastareli prevodi ..."
 
-#: apps/dashboards/readouts.py:378
+#: apps/dashboards/readouts.py:383
 msgid "Out of date since"
 msgstr "Zastarelo od"
 
-#: apps/dashboards/readouts.py:453
+#: apps/dashboards/readouts.py:458
 msgid "Translations Needing Updates"
 msgstr "Prevodi, ki jih je treba posodobiti"
 
-#: apps/dashboards/readouts.py:454
+#: apps/dashboards/readouts.py:459
 msgid "Needing Updates"
 msgstr "Potrebna posodobitev"
 
-#: apps/dashboards/readouts.py:455
+#: apps/dashboards/readouts.py:460
 msgid "All translations needing updates..."
 msgstr "Vsi prevodi, ki jih je treba posodobiti ..."
 
-#: apps/dashboards/readouts.py:462
+#: apps/dashboards/readouts.py:467
 msgid "Unreviewed Changes"
 msgstr "Nepregledane spremembe"
 
-#: apps/dashboards/readouts.py:466
+#: apps/dashboards/readouts.py:471
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "Nepregledano"
 
-#: apps/dashboards/readouts.py:467
+#: apps/dashboards/readouts.py:472
 msgid "All articles requiring review..."
 msgstr "Vsi članki, ki potrebujejo pregled ..."
 
-#: apps/dashboards/readouts.py:469
+#: apps/dashboards/readouts.py:474
 msgid "Changed"
 msgstr "Spremenjeno"
 
-#: apps/dashboards/views.py:51 apps/dashboards/templates/dashboards/contributors.html:4
+#: apps/dashboards/views.py:47 apps/dashboards/templates/dashboards/contributors.html:4
 msgid "Contributor Dashboard"
 msgstr "Forum sodelavcev"
 
-#: apps/dashboards/views.py:59 apps/dashboards/templates/dashboards/localization.html:4
+#: apps/dashboards/views.py:55 apps/dashboards/templates/dashboards/localization.html:4
 msgid "Localization Dashboard"
 msgstr "Kontrolna tabla za lokalizacijo"
 
-#: apps/dashboards/templates/dashboards/contributors.html:16 apps/dashboards/templates/dashboards/localization.html:42
+#: apps/dashboards/templates/dashboards/contributors.html:16 apps/dashboards/templates/dashboards/localization.html:15
 msgid "Show information for:"
 msgstr "Prikaži podatke za:"
 
-#: apps/dashboards/templates/dashboards/localization.html:20
-msgid "%(numerator)s <small>of %(denominator)s</small>"
-msgstr "%(numerator)s <small>za %(denominator)s</small>"
+#: apps/dashboards/templates/dashboards/group_locale.html:4
+#, fuzzy
+msgid "{locale} | Group Dashboard"
+msgstr "Kontrolna tabla za lokalizacijo"
 
-#: apps/dashboards/templates/dashboards/localization.html:54
-msgid "Overview"
-msgstr "Pregled"
+#: apps/dashboards/templates/dashboards/group_locale.html:8
+#, fuzzy
+msgid "Group dashboard"
+msgstr "Kontrolna tabla prevajalca"
 
-#: apps/dashboards/templates/dashboards/localization.html:62
-msgid "User Interface"
-msgstr "Uporabniški vmesnik"
-
-#: apps/dashboards/templates/dashboards/localization.html:66
-msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
-msgstr "V celoti preveden uporabniški vmesnik bo izboljšal izkušnjo za obiskovalce spletišča v vašem jeziku. Pomagajte <a href=\"%(url)s\">prevesti vmesnik</a>."
-
-#: apps/dashboards/templates/dashboards/localization.html:75
-msgid "More options:"
-msgstr "Dodatne možnosti:"
+#: apps/dashboards/templates/dashboards/group_locale.html:25
+msgid "See full dashboard"
+msgstr ""
 
 #: apps/dashboards/templates/dashboards/questions.html:3
 msgid "Support Forum Dashboard"
@@ -435,17 +438,37 @@ msgstr "Članek"
 msgid "changed by {users}"
 msgstr "spremenili: {users}"
 
-#: apps/dashboards/templates/dashboards/includes/macros.html:26
+#: apps/dashboards/templates/dashboards/includes/macros.html:27
+msgid "Overview"
+msgstr "Pregled"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:39
+msgid "%(numerator)s <small>of %(denominator)s</small>"
+msgstr "%(numerator)s <small>za %(denominator)s</small>"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:56
+msgid "User Interface"
+msgstr "Uporabniški vmesnik"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:60
+msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
+msgstr "V celoti preveden uporabniški vmesnik bo izboljšal izkušnjo za obiskovalce spletišča v vašem jeziku. Pomagajte <a href=\"%(url)s\">prevesti vmesnik</a>."
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:69
+msgid "More options:"
+msgstr "Dodatne možnosti:"
+
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:5
 #, fuzzy
 msgctxt "dashboard"
 msgid "Review"
 msgstr "Recenzija"
 
-#: apps/dashboards/templates/dashboards/includes/macros.html:39
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:9
 msgid "My profile"
 msgstr "Moj profil"
 
-#: apps/dashboards/templates/dashboards/includes/macros.html:42
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:12
 msgid "Edit my profile"
 msgstr "Uredi moj profil"
 
@@ -521,7 +544,7 @@ msgstr "Na čakanju"
 msgid "Accepted and Fixed"
 msgstr "Sprejeto in popravljeno"
 
-#: apps/flagit/models.py:32 apps/wiki/templates/wiki/document_revisions.html:62
+#: apps/flagit/models.py:32 apps/wiki/templates/wiki/history.html:62
 msgid "Rejected"
 msgstr "Zavrnjeno"
 
@@ -570,7 +593,7 @@ msgid "There is no flagged content pending moderation."
 msgstr "Ni označen vsebine, ki čaka na preverjanje."
 
 #: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:3 apps/kbforums/forms.py:28 apps/kbforums/forms.py:50
-#: apps/kbforums/forms.py:76 apps/wiki/forms.py:171 apps/wiki/templates/wiki/review_translation.html:70 apps/wiki/templates/wiki/includes/revision_diff.html:45
+#: apps/kbforums/forms.py:76 apps/wiki/forms.py:184 apps/wiki/templates/wiki/review_translation.html:70 apps/wiki/templates/wiki/includes/revision_diff.html:45
 msgid "Content:"
 msgstr "Vsebina:"
 
@@ -591,88 +614,140 @@ msgstr "Posodobljeno"
 msgid "Take Action:"
 msgstr "Ukrepaj:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:35 apps/kbforums/templates/kbforums/includes/post.html:12
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:37 apps/kbforums/templates/kbforums/includes/post.html:12
+#: apps/wiki/templates/wiki/history.html:82
 msgid "Edit"
 msgstr "Uredi"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:27
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29 apps/kbforums/templates/kbforums/posts.html:39 apps/kbforums/templates/kbforums/includes/post.html:16
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:24 apps/wiki/templates/wiki/document_revisions.html:83
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:29
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:31 apps/kbforums/templates/kbforums/posts.html:41 apps/kbforums/templates/kbforums/includes/post.html:16
+#: apps/wiki/templates/wiki/confirm_document_delete.html:36 apps/wiki/templates/wiki/confirm_revision_delete.html:31 apps/wiki/templates/wiki/history.html:86
 msgid "Delete"
 msgstr "Izbriši"
 
-#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:60 apps/wiki/templates/wiki/translate.html:55
+#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:69 apps/wiki/templates/wiki/translate.html:57
 msgid "Title:"
 msgstr "Naslov:"
 
-#: apps/gallery/forms.py:14 apps/kbforums/forms.py:9 apps/wiki/forms.py:17
+#: apps/gallery/forms.py:13 apps/kbforums/forms.py:9 apps/wiki/forms.py:17
 msgid "Please provide a title."
 msgstr "Vnesite prosim naslov."
 
-#: apps/gallery/forms.py:15 apps/wiki/forms.py:18
+#: apps/gallery/forms.py:14 apps/wiki/forms.py:18
 msgid "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Naslov je prekratek (%(show_value)s znakov). Imeti mora vsaj %(limit_value)s znakov."
 
-#: apps/gallery/forms.py:18 apps/kbforums/forms.py:13
+#: apps/gallery/forms.py:17 apps/kbforums/forms.py:13
 msgid "Please keep the length of your title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Omejite prosim dolžino naslova na največ %(limit_value)s znakov. Trenutno znaša %(show_value)s znakov."
 
-#: apps/gallery/forms.py:21
+#: apps/gallery/forms.py:20
 msgid "Please provide a description."
 msgstr "Vnesite prosim opis."
 
-#: apps/gallery/forms.py:22
+#: apps/gallery/forms.py:21
 msgid "Please keep the length of your description to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Omejite prosim dolžino svojega opisa na največ %(limit_value)s znakov. Trenutno znaša %(show_value)s znakov."
 
-#: apps/gallery/forms.py:25 apps/upload/forms.py:7
+#: apps/gallery/forms.py:24 apps/upload/forms.py:7
 msgid "You have not selected an image to upload."
 msgstr "Niste izbrali sliko za nalaganje."
 
-#: apps/gallery/forms.py:26 apps/upload/forms.py:8
+#: apps/gallery/forms.py:25 apps/upload/forms.py:8
 msgid "Please keep the length of your image filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Omejite prosim dolžino imena za vašo sliko na največ %(max)s znakov. Trenutno znaša %(length)s znakov."
 
-#: apps/gallery/forms.py:29
+#: apps/gallery/forms.py:28
 msgid "Please keep the length of your webm filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Omejite prosim dolžino imena za vašo webm datoteko na največ %(max)s znakov. Trenutno znaša %(length)s znakov."
 
-#: apps/gallery/forms.py:32
+#: apps/gallery/forms.py:31
 msgid "Please keep the length of your ogv filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Omejite prosim dolžino imena za vašo ogv datoteko na največ %(max)s znakov. Trenutno znaša %(length)s znakov."
 
-#: apps/gallery/forms.py:35
+#: apps/gallery/forms.py:34
 msgid "Please keep the length of your flv filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Omejite prosim dolžino imena za vašo flv datoteko na največ %(max)s znakov. Trenutno znaša %(length)s znakov."
 
-#: apps/gallery/forms.py:38
+#: apps/gallery/forms.py:37
 msgid "The video has no files associated with it. You must upload one of the following extensions: webm, ogv, flv."
 msgstr "Video nima datotek, ki bile z njim povezane. Morate naložiti eno od naslednjih pripon: webm, OGV, flv."
 
-#: apps/gallery/forms.py:41
+#: apps/gallery/forms.py:40
 msgid "Please select a different title."
 msgstr "Izberite prosim drug naslov."
 
-#: apps/gallery/forms.py:43
+#: apps/gallery/forms.py:42
 msgid "Include this in wiki syntax with [[%(type)s:title]]"
 msgstr "Vključi to v wiki sintakso kot [[%(type)s:title]]"
 
-#: apps/gallery/forms.py:44
+#: apps/gallery/forms.py:43
 msgid "Provide a brief description of this media."
 msgstr "Navedite kratek opis tega medija."
 
-#: apps/gallery/forms.py:65 apps/gallery/forms.py:145 apps/gallery/templates/gallery/confirm_media_delete.html:24
+#: apps/gallery/forms.py:48 apps/upload/templates/upload/attachments.html:56
+msgid "Upload"
+msgstr "Prenesi"
+
+#: apps/gallery/forms.py:49 apps/gallery/forms.py:92 apps/gallery/templates/gallery/confirm_media_delete.html:52
+msgid "Image"
+msgstr "Slika"
+
+#: apps/gallery/forms.py:49 apps/gallery/templates/gallery/confirm_media_delete.html:47
+msgid "Video"
+msgstr "Video"
+
+#: apps/gallery/forms.py:56 apps/gallery/templates/gallery/confirm_media_delete.html:24 apps/wiki/templates/wiki/confirm_document_delete.html:24
 msgid "Locale"
 msgstr "Območna nastavitev"
 
-#: apps/gallery/forms.py:70 apps/gallery/forms.py:150 apps/gallery/templates/gallery/confirm_media_delete.html:22 apps/kbforums/templates/kbforums/confirm_thread_delete.html:15
-#: apps/kbforums/templates/kbforums/threads.html:33
+#: apps/gallery/forms.py:62 apps/gallery/templates/gallery/confirm_media_delete.html:22 apps/kbforums/templates/kbforums/confirm_thread_delete.html:17 apps/kbforums/templates/kbforums/threads.html:35
+#: apps/wiki/templates/wiki/confirm_document_delete.html:22
 msgid "Title"
 msgstr "Naslov"
 
-#: apps/gallery/forms.py:77 apps/gallery/forms.py:157 apps/gallery/templates/gallery/confirm_media_delete.html:26
+#: apps/gallery/forms.py:70 apps/gallery/templates/gallery/confirm_media_delete.html:26
 msgid "Description"
 msgstr "Opis"
+
+#: apps/gallery/forms.py:97
+msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
+msgstr "Sprejemljivi formati so: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Več o tem...</a>"
+
+#: apps/gallery/forms.py:117
+#, fuzzy
+msgid "Video (flv)"
+msgstr "Video"
+
+#: apps/gallery/forms.py:118
+#, fuzzy
+msgid "Video (ogv)"
+msgstr "Video"
+
+#: apps/gallery/forms.py:121
+msgid "Video (webm)"
+msgstr ""
+
+#: apps/gallery/forms.py:125
+msgid "Thumbnail"
+msgstr "Sličica"
+
+#: apps/gallery/forms.py:131
+msgid "Select a Flash video (FLV) to upload."
+msgstr "Izberite video Flash (FLV) za nalaganje."
+
+#: apps/gallery/forms.py:133
+msgid "Select an Ogv video to upload."
+msgstr "Izberite video Ogv za nalaganje."
+
+#: apps/gallery/forms.py:134
+msgid "Select a WebM video to upload."
+msgstr "Izberite video WebM za nalaganje."
+
+#: apps/gallery/forms.py:135
+#, fuzzy
+msgid "Suggested size: {width}x{height}px"
+msgstr "Prenesite sličico za svoj video. Predlagana velikost: {width} x {height} px"
 
 #: apps/gallery/views.py:26
 msgid "Could not upload your image."
@@ -720,26 +795,18 @@ msgstr "Izbriši video | {t} | galerija medijev"
 msgid "Media Gallery"
 msgstr "Galerija medijev"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:17 apps/wiki/templates/wiki/confirm_revision_delete.html:12
+#: apps/gallery/templates/gallery/confirm_media_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:19 apps/wiki/templates/wiki/confirm_revision_delete.html:19
 msgid "Creator"
 msgstr "Ustvarjalec"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:30 apps/kbforums/templates/kbforums/confirm_post_delete.html:17 apps/kbforums/templates/kbforums/confirm_thread_delete.html:19
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:14
+#: apps/gallery/templates/gallery/confirm_media_delete.html:30 apps/kbforums/templates/kbforums/confirm_post_delete.html:19 apps/kbforums/templates/kbforums/confirm_thread_delete.html:21
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:21
 msgid "Date"
 msgstr "Datum"
 
 #: apps/gallery/templates/gallery/confirm_media_delete.html:33 apps/gallery/templates/gallery/confirm_media_delete.html:50
 msgid "Available formats"
 msgstr "Razpoložljivi formati"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:47 apps/gallery/templates/gallery/includes/upload_media_form.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:62
-msgid "Video"
-msgstr "Video"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:52 apps/gallery/templates/gallery/includes/upload_media_form.html:12 apps/gallery/templates/gallery/includes/upload_media_form.html:22
-msgid "Image"
-msgstr "Slika"
 
 #: apps/gallery/templates/gallery/edit_media.html:5
 msgid "Edit image"
@@ -765,7 +832,7 @@ msgstr "Shrani video"
 msgid "Edit video | {t} | Media Gallery"
 msgstr "Uredi video | {t} | galerija medijev"
 
-#: apps/gallery/templates/gallery/gallery.html:13 apps/gallery/templates/gallery/media.html:24 apps/gallery/templates/gallery/includes/upload_media_form.html:8
+#: apps/gallery/templates/gallery/gallery.html:13 apps/gallery/templates/gallery/media.html:24 apps/gallery/templates/gallery/includes/upload_media_form.html:98
 msgid "Upload a New Media File"
 msgstr "Naloži novo medijsko datoteko"
 
@@ -802,7 +869,7 @@ msgstr "Iskalna galerija"
 msgid "{title} | Media Gallery"
 msgstr "{title} | galerija medijev"
 
-#: apps/gallery/templates/gallery/media.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:39 apps/upload/templates/upload/attachments.html:12
+#: apps/gallery/templates/gallery/media.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:47 apps/upload/templates/upload/attachments.html:12
 #: apps/upload/templates/upload/attachments.html:17 apps/upload/templates/upload/attachments.html:19
 msgid "Delete this image"
 msgstr "Izbriši to sliko"
@@ -840,68 +907,47 @@ msgstr "Iskanje"
 msgid "No media files found."
 msgstr "Datotek z mediji ni najti"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:8
-msgid "Continue Uploading Media"
-msgstr "Nadaljuj nalaganje medijev"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:10 apps/upload/templates/upload/attachments.html:56
-msgid "Upload"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:30
+#, fuzzy
+msgid "Upload file"
 msgstr "Prenesi"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:24
-msgid "Select an image file to upload."
-msgstr "Izberite datoteko s sliko za nalaganje."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:26
-msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
-msgstr "Sprejemljivi formati so: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Več o tem...</a>"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:28 apps/gallery/templates/gallery/includes/upload_media_form.html:76
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:114
-msgid "Progress"
-msgstr "Napredek"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:33 apps/gallery/templates/gallery/includes/upload_media_form.html:89 apps/kbforums/templates/kbforums/edit_post.html:27
-#: apps/kbforums/templates/kbforums/new_thread.html:32 apps/kbforums/templates/kbforums/posts.html:92
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:52 apps/kbforums/templates/kbforums/edit_post.html:29 apps/kbforums/templates/kbforums/new_thread.html:34
+#: apps/kbforums/templates/kbforums/posts.html:94
 msgid "Preview"
 msgstr "Predogled"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:52 apps/gallery/templates/gallery/includes/upload_media_form.html:131
-msgid "Submit file"
-msgstr "Predložite datoteko"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:60
+msgid "Progress"
+msgstr "Napredek"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:64
-msgid "Select a Flash video (FLV) to upload."
-msgstr "Izberite video Flash (FLV) za nalaganje."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:66
-msgid "Please no SWFs, only FLVs."
-msgstr "Prosim nobenih SWF. samo FLV."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:69
-msgid "Select an Ogv video to upload."
-msgstr "Izberite video Ogv za nalaganje."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:73
-msgid "Select a WebM video to upload."
-msgstr "Izberite video WebM za nalaganje."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:96 apps/gallery/templates/gallery/includes/upload_media_form.html:102
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:108
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:75
 msgid "Delete {format} file"
 msgstr "Izbriši {format} datoteko"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:119
-msgid "Thumbnail"
-msgstr "Sličica"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:80
+#, fuzzy
+msgid "Preview ({format})"
+msgstr "Predogled vsebine"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:125
-msgid "Delete thumbnail"
-msgstr "Izbriši sličico"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:98
+msgid "Continue Uploading Media"
+msgstr "Nadaljuj nalaganje medijev"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:127
-msgid "Upload a thumbnail for your video. Suggested size: {width}x{height}px"
-msgstr "Prenesite sličico za svoj video. Predlagana velikost: {width} x {height} px"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:133
+#, fuzzy
+msgid "Progress (flv)"
+msgstr "Napredek"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:139
+#, fuzzy
+msgid "Progress (ogv)"
+msgstr "Napredek"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:145
+#, fuzzy
+msgid "Progress (webm)"
+msgstr "Napredek"
 
 #: apps/kbforums/events.py:20
 msgid "Reply to: %s"
@@ -936,202 +982,220 @@ msgid "Please keep the length of your message to %(limit_value)s characters or l
 msgstr "Omejite prosim dolžino svojega sporočila na največ %(limit_value)s znakov. Trenutno znaša %(show_value)s znakov."
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:4
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:5
 msgid "Delete Post | {t} | {d} Discussion | Knowledge Base"
 msgstr "Izbriši prispevek {t} | {d} Pogovor | zbirka znanja"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:7 apps/kbforums/templates/kbforums/confirm_thread_delete.html:7 apps/kbforums/templates/kbforums/edit_post.html:9
-#: apps/kbforums/templates/kbforums/edit_thread.html:8 apps/kbforums/templates/kbforums/new_thread.html:9 apps/kbforums/templates/kbforums/posts.html:9 apps/kbforums/templates/kbforums/threads.html:7
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:8 apps/kbforums/templates/kbforums/confirm_thread_delete.html:8 apps/kbforums/templates/kbforums/edit_post.html:10
+#: apps/kbforums/templates/kbforums/edit_thread.html:9 apps/kbforums/templates/kbforums/new_thread.html:10 apps/kbforums/templates/kbforums/posts.html:10
+#: apps/kbforums/templates/kbforums/threads.html:8
 msgid "Discuss"
 msgstr "Diskutiraj"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:9
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:10
 msgid "Delete Post"
 msgstr "Izbriši prispevek"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:13
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:15
 msgid "Are you sure you want to delete this post?"
 msgstr "Res želite izbrisati ta sestavek?"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:15 apps/kbforums/templates/kbforums/posts.html:62 apps/kbforums/templates/kbforums/threads.html:34
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:17 apps/kbforums/templates/kbforums/posts.html:64 apps/kbforums/templates/kbforums/threads.html:36
 msgid "Author"
 msgstr "Avtor"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:19 apps/wiki/templates/wiki/confirm_revision_delete.html:16
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:21 apps/wiki/templates/wiki/confirm_revision_delete.html:23
 msgid "Content"
 msgstr "Vsebina"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:25
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:27
 msgid "You are about to permanently delete this post. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "Ste na tem, da ta prispevek za vselej izbrišete. <strong>Tega ni mogoče razveljaviti!</strong> Res želite nadaljevati?"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:4
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:5
 msgid "Delete Thread | {t} | {d} Discussion | Knowledge Base"
 msgstr "Izbriši nit | {t} | {d} Pogovor | zbirka znanja"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:9
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:10
 msgid "Delete Thread"
 msgstr "Izbriši nit"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:13
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:15
 msgid "Are you sure you want to delete this thread?"
 msgstr "Res želite izbrisati to temo?"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:21
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:23
 msgid "Number of Replies"
 msgstr "Število odgovorov"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:27
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29
 msgid "You are about to permanently delete this thread. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "Ste na tem, da trajno izbrisati to nit. <strong>Tega ni mogoče razveljaviti!</strong> Res želite nadaljevati?"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/edit_post.html:6
+#: apps/kbforums/templates/kbforums/edit_post.html:7
 msgid "Edit a post | {t} | {d} Discussion | Knowledge Base"
 msgstr "&gt; Uredi prispevek | {t} | {d} Pogovor | zbirka znanja"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:11 apps/kbforums/templates/kbforums/edit_post.html:15
+#: apps/kbforums/templates/kbforums/edit_post.html:12 apps/kbforums/templates/kbforums/edit_post.html:17
 msgid "Edit a post"
 msgstr "Uredi prispevek"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:28
+#: apps/kbforums/templates/kbforums/edit_post.html:30
 msgid "Update post"
 msgstr "Posodobi prispevek"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:35 apps/kbforums/templates/kbforums/new_thread.html:39
+#: apps/kbforums/templates/kbforums/edit_post.html:37 apps/kbforums/templates/kbforums/new_thread.html:41
 msgid "Post Preview:"
 msgstr "Objavi predogled:"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/edit_thread.html:5
+#: apps/kbforums/templates/kbforums/edit_thread.html:6
 msgid "Edit thread {t} | {d} Discussion | Knowledge Base"
 msgstr "Uredi nit {t} | {d} Pogovor | zbirka znanja"
 
-#: apps/kbforums/templates/kbforums/edit_thread.html:10
+#: apps/kbforums/templates/kbforums/edit_thread.html:11
 msgid "Edit thread"
 msgstr "Uredi nit"
 
-#: apps/kbforums/templates/kbforums/edit_thread.html:14
+#: apps/kbforums/templates/kbforums/edit_thread.html:16
 msgid "Edit thread \"{t}\""
 msgstr "Uredi nit \"{t}\""
 
-#: apps/kbforums/templates/kbforums/edit_thread.html:26
+#: apps/kbforums/templates/kbforums/edit_thread.html:28
 msgid "Update thread"
 msgstr "Posodobi nit"
 
 #. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/new_thread.html:6
+#: apps/kbforums/templates/kbforums/new_thread.html:7
 msgid "Create a new thread | {d} | Knowledge Base"
 msgstr "Ustvari novo nit | {d} | zbirka znanja"
 
-#: apps/kbforums/templates/kbforums/new_thread.html:10 apps/kbforums/templates/kbforums/new_thread.html:14
+#: apps/kbforums/templates/kbforums/new_thread.html:11 apps/kbforums/templates/kbforums/new_thread.html:16
 msgid "Create a new thread"
 msgstr "Ustvari novo temo"
 
-#: apps/kbforums/templates/kbforums/new_thread.html:33
+#: apps/kbforums/templates/kbforums/new_thread.html:35
 msgid "Post"
 msgstr "Objava"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/posts.html:6
+#: apps/kbforums/templates/kbforums/posts.html:7
 msgid "{t} | {d} Discussion | Knowledge Base"
 msgstr "{t} | {d} Pogovor | zbirka znanja"
 
-#: apps/kbforums/templates/kbforums/posts.html:16 apps/search/__init__.py:42
+#: apps/kbforums/templates/kbforums/posts.html:18 apps/search/__init__.py:42
 msgid "Sticky"
 msgstr "Lepljivo"
 
-#: apps/kbforums/templates/kbforums/posts.html:17 apps/search/__init__.py:43 apps/search/forms.py:129
+#: apps/kbforums/templates/kbforums/posts.html:19 apps/search/__init__.py:43 apps/search/forms.py:129
 msgid "Locked"
 msgstr "Zaklenjeno"
 
-#: apps/kbforums/templates/kbforums/posts.html:18 apps/kbforums/templates/kbforums/threads.html:13
+#: apps/kbforums/templates/kbforums/posts.html:20 apps/kbforums/templates/kbforums/threads.html:15
 msgid "Watching"
 msgstr "Opazovanje"
 
-#: apps/kbforums/templates/kbforums/posts.html:25 apps/kbforums/templates/kbforums/threads.html:20
+#: apps/kbforums/templates/kbforums/posts.html:27 apps/kbforums/templates/kbforums/threads.html:22
 msgid "Stop watching"
 msgstr "Ustavi opazovanje"
 
-#: apps/kbforums/templates/kbforums/posts.html:28
+#: apps/kbforums/templates/kbforums/posts.html:30
 msgid "Watch this thread"
 msgstr "Opazuj to nit"
 
-#: apps/kbforums/templates/kbforums/posts.html:45
+#: apps/kbforums/templates/kbforums/posts.html:47
 msgid "Change locked status"
 msgstr "Spremeni status za ključavnico"
 
-#: apps/kbforums/templates/kbforums/posts.html:51
+#: apps/kbforums/templates/kbforums/posts.html:53
 msgid "Change sticky status"
 msgstr "Spremeni status lepljivosti"
 
-#: apps/kbforums/templates/kbforums/posts.html:63
+#: apps/kbforums/templates/kbforums/posts.html:65
 msgid "Message"
 msgstr "Sporočilo"
 
-#: apps/kbforums/templates/kbforums/posts.html:78
+#: apps/kbforums/templates/kbforums/posts.html:80
 msgid "Oh, no! Looks like there are no posts!"
 msgstr "Oh, ne! Zgleda ni nobenih objav!"
 
-#: apps/kbforums/templates/kbforums/posts.html:83 apps/kbforums/templates/kbforums/posts.html:99
+#: apps/kbforums/templates/kbforums/posts.html:85 apps/kbforums/templates/kbforums/posts.html:101
 msgid "Post a reply"
 msgstr "Objavi nov odgovor"
 
-#: apps/kbforums/templates/kbforums/posts.html:101
+#: apps/kbforums/templates/kbforums/posts.html:103
 msgid "This thread has been locked. It is no longer possible to post new replies."
 msgstr "Ta nit je zaklenjena. Novih odgovorov ni več mogoče dodajati."
 
-#: apps/kbforums/templates/kbforums/posts.html:106
+#: apps/kbforums/templates/kbforums/posts.html:108
 msgid "Reply Preview:"
 msgstr "Predogled odgovora"
 
 #. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/threads.html:4
+#: apps/kbforums/templates/kbforums/threads.html:5
 msgid "{d} Discussion | Knowledge Base"
 msgstr "{d} Pogovor | zbirka znanja"
 
-#: apps/kbforums/templates/kbforums/threads.html:11
+#: apps/kbforums/templates/kbforums/threads.html:13
 msgid "{d} Discussion"
 msgstr "{d} Razgovor"
 
-#: apps/kbforums/templates/kbforums/threads.html:23
+#: apps/kbforums/templates/kbforums/threads.html:25
 msgid "Watch this forum"
 msgstr "Opazuj ta forum"
 
-#: apps/kbforums/templates/kbforums/threads.html:29
+#: apps/kbforums/templates/kbforums/threads.html:31
 msgid "Post a new thread"
 msgstr "Objavi novo nit"
 
-#: apps/kbforums/templates/kbforums/threads.html:32
+#: apps/kbforums/templates/kbforums/threads.html:34
 msgid "Type"
 msgstr "Vrsta"
 
-#: apps/kbforums/templates/kbforums/threads.html:35
+#: apps/kbforums/templates/kbforums/threads.html:37
 msgid "Replies"
 msgstr "Odgovori"
 
-#: apps/kbforums/templates/kbforums/threads.html:36
+#: apps/kbforums/templates/kbforums/threads.html:38
 msgid "Last Post"
 msgstr "Zadnja objava"
 
-#: apps/kbforums/templates/kbforums/threads.html:44
+#: apps/kbforums/templates/kbforums/threads.html:46
 msgctxt "thread_type"
 msgid "Locked"
 msgstr "Zaklenjeno"
 
-#: apps/kbforums/templates/kbforums/threads.html:47
+#: apps/kbforums/templates/kbforums/threads.html:49
 msgctxt "thread_type"
 msgid "Sticky"
 msgstr "Lepljivo"
 
-#: apps/kbforums/templates/kbforums/threads.html:57
+#: apps/kbforums/templates/kbforums/threads.html:59
 msgid "by <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 msgstr "od <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 
-#: apps/kbforums/templates/kbforums/threads.html:66
+#: apps/kbforums/templates/kbforums/threads.html:68
 msgid "There are no threads. Maybe you should create some!"
 msgstr "Ni nobene niti. Mogoče bi lahko sami začeli kakšno!"
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:7
+msgid "This forum is a discussion about improving the \"%(title)s\" article."
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:11
+msgid "This forum is a discussion about improving the \"%(title)s\" article. If you'd like to participate, please <a href=\"%(register_url)s\">register</a>."
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:19
+msgid ""
+"This forum is a discussion about improving the localization of the \"%(title)s\" article. If you want to improve the article content, go to the <a href=\"%(url)s\">English article discussion</a>."
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:28
+msgid "If you need help with Firefox, please <a href=\"%(aaq_url)s\">ask a question</a>."
+msgstr ""
 
 #. {0} is the number of posts.
 #: apps/kbforums/templates/kbforums/includes/post.html:8
@@ -1150,11 +1214,11 @@ msgstr "Povezava na ta prispevek"
 msgid "Modified by {name} on {datetime}"
 msgstr "Spremenjeno - {name} dne {datetime}"
 
-#: apps/kbforums/templates/kbforums/includes/watch_locale.html:5
+#: apps/kbforums/templates/kbforums/includes/watch_locale.html:6
 msgid "Turn off emails for discussion in my locale."
 msgstr "Izklopi e-pošto za razpravo v slovenščini."
 
-#: apps/kbforums/templates/kbforums/includes/watch_locale.html:8
+#: apps/kbforums/templates/kbforums/includes/watch_locale.html:9
 msgid "Get emailed when there is new discussion activity in my locale."
 msgstr "Obvestilo po e-pošti ob novi razpravi v slovenščini."
 
@@ -1226,7 +1290,7 @@ msgstr "Običajna vprašanja"
 msgid "Firefox Help <span>for Firefox Home</span>"
 msgstr "Pomoč za Firefox za <span>Firefox Home</span>"
 
-#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:139 templates/base.html:8 templates/base.html:17 templates/mobile/base.html:15
+#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:141 templates/base.html:8 templates/base.html:17 templates/mobile/base.html:15
 msgid "Firefox Help"
 msgstr "Pomoč za Firefox"
 
@@ -1237,6 +1301,62 @@ msgstr "Pomoč za Firefox za<span> mobilne naprave</span>"
 #: apps/landings/templates/landings/mobile/sync.html:5
 msgid "Firefox Help <span>for Sync</span>"
 msgstr "Pomoč za Firefox za <span>Sync</span>"
+
+#: apps/messages/forms.py:7
+#, fuzzy
+msgid "username1, username2,..."
+msgstr "Uporabniško ime: {username}"
+
+#: apps/messages/forms.py:15
+#, fuzzy
+msgid "To field is required."
+msgstr "Zahteva se geslo."
+
+#: apps/messages/forms.py:25
+msgid "{username} is not a valid username."
+msgstr ""
+
+#: apps/messages/templates/messages/inbox.html:3 apps/messages/templates/messages/new.html:3 apps/messages/templates/messages/outbox.html:4 apps/messages/templates/messages/read-outbox.html:4
+#: apps/messages/templates/messages/read.html:4 apps/messages/templates/messages/includes/macros.html:21
+#, fuzzy
+msgid "Messages"
+msgstr "Sporočilo"
+
+#: apps/messages/templates/messages/inbox.html:9 apps/messages/templates/messages/new.html:2 apps/messages/templates/messages/includes/macros.html:27
+#, fuzzy
+msgid "New Message"
+msgstr "Sporočilo"
+
+#: apps/messages/templates/messages/inbox.html:31 apps/messages/templates/messages/outbox.html:37
+#, fuzzy
+msgid "There are no messages here."
+msgstr "Ni člankov."
+
+#: apps/messages/templates/messages/new.html:15
+msgid "Send"
+msgstr ""
+
+#: apps/messages/templates/messages/outbox.html:3 apps/messages/templates/messages/read-outbox.html:5 apps/messages/templates/messages/includes/macros.html:24
+#, fuzzy
+msgid "Sent Messages"
+msgstr "Sporočilo"
+
+#: apps/messages/templates/messages/outbox.html:24
+msgid "You"
+msgstr ""
+
+#: apps/messages/templates/messages/read-outbox.html:3
+msgid "Read Sent Message"
+msgstr ""
+
+#: apps/messages/templates/messages/read.html:3
+#, fuzzy
+msgid "Read Message"
+msgstr "Sporočilo"
+
+#: apps/messages/templates/messages/includes/macros.html:5 apps/messages/templates/messages/includes/macros.html:13
+msgid "System"
+msgstr ""
 
 #: apps/search/__init__.py:17 apps/search/__init__.py:52 apps/search/__init__.py:58
 msgid "Don't filter"
@@ -1266,11 +1386,11 @@ msgstr "Prvotni poštni datum"
 msgid "Number of replies"
 msgstr "Število odgovorov"
 
-#: apps/search/__init__.py:53 apps/sumo/helpers.py:309 apps/wiki/templates/wiki/includes/document_vote.html:8
+#: apps/search/__init__.py:53 apps/sumo/helpers.py:311 apps/wiki/templates/wiki/includes/document_vote.html:7
 msgid "Yes"
 msgstr "Da"
 
-#: apps/search/__init__.py:54 apps/sumo/helpers.py:309 apps/wiki/templates/wiki/includes/document_vote.html:9
+#: apps/search/__init__.py:54 apps/sumo/helpers.py:311 apps/wiki/templates/wiki/includes/document_vote.html:8
 msgid "No"
 msgstr "Ne"
 
@@ -1485,11 +1605,11 @@ msgstr "Poskrbite, da ima ta vrednost vsaj %(limit_value)s znakov (ima %(show_va
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr "Poskrbite, da ima ta vrednost največ %(limit_value)s znakov (ima %(show_value)s)."
 
-#: apps/sumo/helpers.py:188
+#: apps/sumo/helpers.py:190
 msgid "Today at %s"
 msgstr "Danes ob %s"
 
-#: apps/sumo/helpers.py:266
+#: apps/sumo/helpers.py:268
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "Pred %(number)d letom"
@@ -1497,7 +1617,7 @@ msgstr[1] "Pred %(number)d leti"
 msgstr[2] "Pred %(number)d leti"
 msgstr[3] "Pred %(number)d leti"
 
-#: apps/sumo/helpers.py:268
+#: apps/sumo/helpers.py:270
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "pred %(number)d mescem"
@@ -1505,7 +1625,7 @@ msgstr[1] "pred %(number)d mescema"
 msgstr[2] "pred %(number)d mesci"
 msgstr[3] "pred %(number)d mesci"
 
-#: apps/sumo/helpers.py:270
+#: apps/sumo/helpers.py:272
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "Pred %(number)d tednom"
@@ -1513,7 +1633,7 @@ msgstr[1] "Pred %(number)d tednoma"
 msgstr[2] "Pred %(number)d tedni"
 msgstr[3] "Pred %(number)d tedni"
 
-#: apps/sumo/helpers.py:272
+#: apps/sumo/helpers.py:274
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "Pred %(number)d dnevom"
@@ -1521,7 +1641,7 @@ msgstr[1] "Pred %(number)d dnevi"
 msgstr[2] "Pred %(number)d dnevi"
 msgstr[3] "Pred %(number)d dnevi"
 
-#: apps/sumo/helpers.py:274
+#: apps/sumo/helpers.py:276
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "Pred %(number)d uro"
@@ -1529,7 +1649,7 @@ msgstr[1] "Pred %(number)d urama"
 msgstr[2] "Pred %(number)d urami"
 msgstr[3] "Pred %(number)d urami"
 
-#: apps/sumo/helpers.py:276
+#: apps/sumo/helpers.py:278
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "Pred %(number)d minuto"
@@ -1537,7 +1657,7 @@ msgstr[1] "Pred %(number)d minutami"
 msgstr[2] "Pred %(number)d minutami"
 msgstr[3] "Pred %(number)d minutami"
 
-#: apps/sumo/helpers.py:278
+#: apps/sumo/helpers.py:280
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] "Pred %(number)d sekundo"
@@ -1545,7 +1665,7 @@ msgstr[1] "Pred %(number)d sekundami"
 msgstr[2] "Pred %(number)d sekundami"
 msgstr[3] "Pred %(number)d sekundami"
 
-#: apps/sumo/parser.py:232
+#: apps/sumo/parser.py:236
 msgid "The image \"%s\" does not exist."
 msgstr "Slika \"%s\" ne obstaja."
 
@@ -1557,13 +1677,17 @@ msgstr "Opla, vaša zahteva ni uspela"
 msgid "We couldn't perform your request. Perhaps because the action is no longer applicable or you tried to perform an invalid action."
 msgstr "Vaše zahteve ni bilo mogoče izvesti. Morda zato, ker se ukrep ne uporablja več, ali pa ste poskusili izvesti ukrep, ki je neveljaven."
 
-#: apps/sumo/templates/handlers/403.html:3
+#: apps/sumo/templates/handlers/403.html:4
 msgid "Access denied"
 msgstr "Dostop zavrnjen"
 
-#: apps/sumo/templates/handlers/403.html:9
+#: apps/sumo/templates/handlers/403.html:11
 msgid "You do not have permission to access this page."
 msgstr "Nimate dovoljenja za dostop do te strani."
+
+#: apps/sumo/templates/handlers/403.html:14 apps/users/templates/users/includes/macros.html:23
+msgid "Log in"
+msgstr "Prijava"
 
 #: apps/sumo/templates/handlers/404.html:3
 msgid "Page Not Found"
@@ -1580,6 +1704,18 @@ msgstr "Prišlo je do napake"
 #: apps/sumo/templates/handlers/500.html:9
 msgid "Oh, no! It looks like an unexpected error occurred. We've already notified the site administrators. Please try again now, or in a few minutes."
 msgstr "Oh, ne! Zgleda, da je prišlo do nepričakovane napake. Skrbnike spletišča smo že obvestili. Poskusite znova zdaj, ali čez nekaj minut."
+
+#: apps/sumo/templates/sumo/deprecated.html:3
+msgid "Redirecting"
+msgstr ""
+
+#: apps/sumo/templates/sumo/deprecated.html:8
+msgid "The URL has changed!"
+msgstr ""
+
+#: apps/sumo/templates/sumo/deprecated.html:11
+msgid "It looks like you've bookmarked an old URL. The new URL for this page is below. You should update your bookmarks. We will forward you to the new URL in 10 seconds."
+msgstr ""
 
 #: apps/sumo/templates/sumo/read-only.html:3 apps/sumo/templates/sumo/read-only.html:7
 msgid "Maintenance in progress"
@@ -1685,7 +1821,7 @@ msgstr "Zahteva se geslo."
 msgid "Please enter your password twice."
 msgstr "Vnesite prosim dvakrat svoje geslo."
 
-#: apps/users/forms.py:42 apps/users/templates/users/includes/macros.html:13 templates/layout/login.html:8
+#: apps/users/forms.py:42 apps/users/templates/users/includes/macros.html:13
 msgid "Username:"
 msgstr "Uporabniško ime:"
 
@@ -1697,7 +1833,7 @@ msgstr "Obvezno. 30 znakov ali manj. Samo črke, številke in @/./+/-/_"
 msgid "Email address:"
 msgstr "E-poštni naslov:"
 
-#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:27 apps/users/templates/users/includes/macros.html:17 templates/layout/login.html:11
+#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/includes/macros.html:17
 msgid "Password:"
 msgstr "Geslo:"
 
@@ -1906,29 +2042,29 @@ msgstr "Prenesi"
 msgid "Edit Profile"
 msgstr "Urejanje profila"
 
-#: apps/users/templates/users/edit_profile.html:13
+#: apps/users/templates/users/edit_profile.html:14
 msgid "Avatar:"
 msgstr "Avatar:"
 
-#: apps/users/templates/users/edit_profile.html:17
+#: apps/users/templates/users/edit_profile.html:18
 msgctxt "avatar"
 msgid "Change"
 msgstr "Spremeni"
 
-#: apps/users/templates/users/edit_profile.html:21
+#: apps/users/templates/users/edit_profile.html:22
 msgctxt "avatar"
 msgid "Delete"
 msgstr "Izbriši"
 
-#: apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/edit_profile.html:33 apps/wiki/templates/wiki/translate.html:19
+#: apps/users/templates/users/edit_profile.html:29 apps/users/templates/users/edit_profile.html:34 apps/wiki/templates/wiki/translate.html:20
 msgid "Change"
 msgstr "Spremeni"
 
-#: apps/users/templates/users/edit_profile.html:31 apps/users/templates/users/profile.html:36
+#: apps/users/templates/users/edit_profile.html:32 apps/users/templates/users/profile.html:37
 msgid "Email:"
 msgstr "E-pošta:"
 
-#: apps/users/templates/users/edit_profile.html:38 apps/users/templates/users/pw_reset_confirm.html:27
+#: apps/users/templates/users/edit_profile.html:39 apps/users/templates/users/pw_reset_confirm.html:27
 msgid "Update"
 msgstr "Obnovi"
 
@@ -1940,31 +2076,31 @@ msgstr "Prijava"
 msgid "{user} | Profile"
 msgstr "{user} | profil"
 
-#: apps/users/templates/users/profile.html:20
+#: apps/users/templates/users/profile.html:21
 msgid "{city}, {country}"
 msgstr "{city}, {country}"
 
-#: apps/users/templates/users/profile.html:42
+#: apps/users/templates/users/profile.html:43
 msgid "Website:"
 msgstr "Spletna stran:"
 
-#: apps/users/templates/users/profile.html:48
+#: apps/users/templates/users/profile.html:49
 msgid "Twitter:"
 msgstr "Twitter:"
 
-#: apps/users/templates/users/profile.html:54
+#: apps/users/templates/users/profile.html:55
 msgid "Facebook:"
 msgstr "Facebook"
 
-#: apps/users/templates/users/profile.html:60
+#: apps/users/templates/users/profile.html:61
 msgid "IRC:"
 msgstr "IRC:"
 
-#: apps/users/templates/users/profile.html:66
+#: apps/users/templates/users/profile.html:67
 msgid "Livechat ID: {livechat_id}"
 msgstr "ID za Livechat: {livechat_id}"
 
-#: apps/users/templates/users/profile.html:73
+#: apps/users/templates/users/profile.html:74
 msgid "About {user}"
 msgstr "O {user}"
 
@@ -2029,7 +2165,7 @@ msgstr "Pošlji povezavo za ponastavitev gesla"
 msgid "We've sent an email to any account using this address. Please follow the link in the email to reset your password."
 msgstr "Potrdilo smo poslali na račun s tem naslovom. Sledite prosim povezavi v pošti, da ponastavite svoje geslo."
 
-#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:51 templates/layout/login.html:24
+#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:51
 msgid "Register"
 msgstr "Registriraj"
 
@@ -2069,10 +2205,6 @@ msgid ""
 msgstr ""
 "Preden se lahko prijavite, morate potrditi svoj e-naslov. Novo e-pošto za potrdilo smo poslali na račun z naslovom <strong>%(email)s</strong>.  Da potrdite e-poštni naslov, sledite povezavi v "
 "prejeti pošti."
-
-#: apps/users/templates/users/includes/macros.html:23 templates/layout/login.html:5 templates/layout/login.html:20
-msgid "Log in"
-msgstr "Prijava"
 
 #: apps/users/templates/users/includes/macros.html:23
 msgid "Logging in..."
@@ -2158,168 +2290,197 @@ msgstr "Omejite prosim dolžino vsebine na največ %(limit_value)s znakov. Trenu
 msgid "Please keep the length of the comment to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Omejite prosim dolžino komentarja na največ %(limit_value)s znakov. Trenutno znaša %(show_value)s znakov."
 
-#: apps/wiki/forms.py:61
+#: apps/wiki/forms.py:70
 msgid "Title of article"
 msgstr "Naslov članka"
 
-#: apps/wiki/forms.py:67 apps/wiki/templates/wiki/translate.html:65
+#: apps/wiki/forms.py:78 apps/wiki/templates/wiki/translate.html:67
 msgid "Slug:"
 msgstr "Rekleta:"
 
-#: apps/wiki/forms.py:68
+#: apps/wiki/forms.py:79
 msgid "Article URL"
 msgstr "URL za članek"
 
-#: apps/wiki/forms.py:74
+#: apps/wiki/forms.py:85
 msgid "Firefox version:"
 msgstr "Različica Firefox:"
 
-#: apps/wiki/forms.py:83
+#: apps/wiki/forms.py:92
 msgid "Operating systems:"
 msgstr "Operacijski sistemi:"
 
-#: apps/wiki/forms.py:93
+#: apps/wiki/forms.py:100
 msgid "Allow translations:"
 msgstr "Dovoli prevode:"
 
-#: apps/wiki/forms.py:100
+#: apps/wiki/forms.py:104
+msgid "Obsolete:"
+msgstr ""
+
+#: apps/wiki/forms.py:112
 msgid "Category:"
 msgstr "Kategorija"
 
-#: apps/wiki/forms.py:101
+#: apps/wiki/forms.py:113
 msgid "Type of article"
 msgstr "Vrsta članka"
 
-#: apps/wiki/forms.py:103
+#: apps/wiki/forms.py:117
 msgid "Topics:"
 msgstr "Teme:"
 
-#: apps/wiki/forms.py:104
+#: apps/wiki/forms.py:118
 msgid "Popular articles in each topic are displayed on the front page"
 msgstr "Popularni članki v vsaki temi so prikazani na prvi strani"
 
-#: apps/wiki/forms.py:151 apps/wiki/templates/wiki/review_revision.html:41 apps/wiki/templates/wiki/review_translation.html:56 apps/wiki/templates/wiki/translate.html:96
+#: apps/wiki/forms.py:164 apps/wiki/templates/wiki/review_revision.html:41 apps/wiki/templates/wiki/review_translation.html:56 apps/wiki/templates/wiki/translate.html:98
 #: apps/wiki/templates/wiki/includes/revision_diff.html:31
 msgid "Keywords:"
 msgstr "Ključne besede:"
 
-#: apps/wiki/forms.py:152
+#: apps/wiki/forms.py:165
 msgid "Affects search results"
 msgstr "Vpliva na rezultate iskanja"
 
-#: apps/wiki/forms.py:156 apps/wiki/templates/wiki/translate.html:106
+#: apps/wiki/forms.py:169 apps/wiki/templates/wiki/translate.html:108
 msgid "Search result summary:"
 msgstr "Povzetek rezultata iskanja:"
 
-#: apps/wiki/forms.py:157
+#: apps/wiki/forms.py:170
 msgid "Only displayed on search results page"
 msgstr "Prikazuje se samo na strani z rezultati iskanja"
 
-#: apps/wiki/forms.py:178 apps/wiki/forms.py:206
+#: apps/wiki/forms.py:191 apps/wiki/forms.py:219
 msgid "Comment:"
 msgstr "Komentar:"
 
-#: apps/wiki/forms.py:210
+#: apps/wiki/forms.py:223
 msgid "Significance:"
 msgstr "Pomembnost:"
 
-#: apps/wiki/models.py:32
+#: apps/wiki/models.py:33
 msgid "Minor details like punctuation and spelling errors"
 msgstr "Malenkosti, kot so napake v ločilih in pravopisne napake"
 
-#: apps/wiki/models.py:34
+#: apps/wiki/models.py:35
 msgid "Content changes that don't require immediate translation"
 msgstr "Vsebina sprememb, ki ne zahtevajo takojšnjega prevoda"
 
-#: apps/wiki/models.py:36
+#: apps/wiki/models.py:37
 msgid "Major content changes that will make older translations inaccurate"
 msgstr "Večje spremembe vsebine, zaradi katerih bodo starejši prevodi netočni"
 
-#: apps/wiki/models.py:41
+#: apps/wiki/models.py:42
 msgid "Troubleshooting"
 msgstr "Odpravljanje težav"
 
-#: apps/wiki/models.py:42
+#: apps/wiki/models.py:43
 msgid "How to"
 msgstr "Kako se ..."
 
-#: apps/wiki/models.py:43
+#: apps/wiki/models.py:44
 msgid "How to contribute"
 msgstr "Kako prispevati"
 
-#: apps/wiki/models.py:44
+#: apps/wiki/models.py:45
 msgid "Administration"
 msgstr "Upravljanje"
 
-#: apps/wiki/models.py:45
+#: apps/wiki/models.py:46
 msgid "Navigation"
 msgstr "Navigacija"
 
-#: apps/wiki/models.py:61
+#: apps/wiki/models.py:62
 msgid "Desktop:"
 msgstr "Namizje:"
 
-#: apps/wiki/models.py:64 apps/wiki/models.py:65 apps/wiki/models.py:71
+#: apps/wiki/models.py:65 apps/wiki/models.py:66 apps/wiki/models.py:76
+#, fuzzy
+msgid "Firefox 6"
+msgstr "Firefox 4"
+
+#: apps/wiki/models.py:67 apps/wiki/models.py:68 apps/wiki/models.py:78
+#, fuzzy
+msgid "Firefox 5"
+msgstr "Firefox 4"
+
+#: apps/wiki/models.py:69 apps/wiki/models.py:70 apps/wiki/models.py:80
 msgid "Firefox 4"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:66 apps/wiki/models.py:67
+#: apps/wiki/models.py:71 apps/wiki/models.py:72
 msgid "Firefox 3.5-3.6"
 msgstr "Firefox 3.5-3.6"
 
-#: apps/wiki/models.py:68 apps/wiki/models.py:69
+#: apps/wiki/models.py:73 apps/wiki/models.py:74
 msgid "Firefox 3.0"
 msgstr "Firefox 3.0"
 
-#: apps/wiki/models.py:70
+#: apps/wiki/models.py:75
 msgid "Mobile:"
 msgstr "Mobilna naprava:"
 
-#: apps/wiki/models.py:72
-msgid "Firefox 4 for Mobile"
+#: apps/wiki/models.py:77
+#, fuzzy
+msgid "Firefox 6 for Mobile"
+msgstr "Firefox 4 za mobilne naprave"
+
+#: apps/wiki/models.py:79
+#, fuzzy
+msgid "Firefox 5 for Mobile"
 msgstr "Firefox 4 za mobilne naprave"
 
 #: apps/wiki/models.py:81
+msgid "Firefox 4 for Mobile"
+msgstr "Firefox 4 za mobilne naprave"
+
+#: apps/wiki/models.py:90
 msgid "Desktop OS:"
 msgstr "Namizni OS:"
 
-#: apps/wiki/models.py:82
+#: apps/wiki/models.py:91
 msgid "Windows"
 msgstr "Windows"
 
-#: apps/wiki/models.py:83
+#: apps/wiki/models.py:92
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: apps/wiki/models.py:84
+#: apps/wiki/models.py:93
 msgid "Linux"
 msgstr "Linux"
 
-#: apps/wiki/models.py:85
+#: apps/wiki/models.py:94
 msgid "Mobile OS:"
 msgstr "OS mobilne naprave:"
 
-#: apps/wiki/models.py:86
+#: apps/wiki/models.py:95
 msgid "Android"
 msgstr "Android"
 
-#: apps/wiki/models.py:87
+#: apps/wiki/models.py:96
 msgid "Maemo"
 msgstr "Memo"
 
-#: apps/wiki/models.py:96
+#: apps/wiki/models.py:105
 msgid "%(old)s Redirect %(number)i"
 msgstr "%(old)s Preusmeri na %(number)i"
 
-#: apps/wiki/models.py:97
+#: apps/wiki/models.py:106
 msgid "%(old)s-redirect-%(number)i"
 msgstr "%(old)s-preusmeri-na-%(number)i"
 
-#: apps/wiki/models.py:237
+#: apps/wiki/models.py:187
+msgctxt "longer maintained."
+msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no "
+msgstr ""
+
+#: apps/wiki/models.py:277
 msgid "Please choose a category."
 msgstr "Izberite prosim kategorijo."
 
-#: apps/wiki/models.py:566
+#: apps/wiki/models.py:611
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr "Revizija mora temeljiti na reviziji %(locale)s dokumenta. Revizija ID %(id)s tem merilom ne ustreza."
 
@@ -2340,27 +2501,61 @@ msgstr "Predloga \"%s\" ne obstaja, ali pa je brez odobrenih sprememb."
 msgid "The video \"%s\" does not exist."
 msgstr "Video \"%s\" ne obstaja."
 
-#: apps/wiki/tasks.py:34
+#: apps/wiki/tasks.py:36
 msgid "Your revision has been approved: {title}"
 msgstr "Vaša redakcija je odobrena:{title}"
 
-#: apps/wiki/tasks.py:36
+#: apps/wiki/tasks.py:38
 msgid "Your revision has been rejected: {title}"
 msgstr "Vaša redakcija je zavrnjena: {title}"
 
-#: apps/wiki/views.py:408
+#: apps/wiki/topic_strings.py:6
+msgctxt "KB Topic"
+msgid "ui"
+msgstr ""
+
+#: apps/wiki/topic_strings.py:7
+#, fuzzy
+msgctxt "KB Topic"
+msgid "mobile"
+msgstr "Mobilna naprava"
+
+#: apps/wiki/topic_strings.py:8
+#, fuzzy
+msgctxt "KB Topic"
+msgid "Firefox 1.0"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/topic_strings.py:9
+msgctxt "KB Topic"
+msgid "addon"
+msgstr ""
+
+#: apps/wiki/topic_strings.py:10
+#, fuzzy
+msgctxt "KB Topic"
+msgid "Firefox 3.6.13"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/topic_strings.py:11
+#, fuzzy
+msgctxt "KB Topic"
+msgid "Firefox 4.0"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/views.py:426
 msgid "You cannot translate this document."
 msgstr "Ne morete prevesti tega dokumenta."
 
-#: apps/wiki/views.py:598
+#: apps/wiki/views.py:623
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "Me veseli - hvala za povratne informacije!"
 
-#: apps/wiki/views.py:600
+#: apps/wiki/views.py:625
 msgid "Sorry to hear that. Try searching for solutions below."
 msgstr "Žal nam je. Poizkusite z eno od rešitev spodaj."
 
-#: apps/wiki/views.py:610
+#: apps/wiki/views.py:635
 msgid "You already voted on this Article."
 msgstr "O tem članku ste že glasovali."
 
@@ -2377,6 +2572,49 @@ msgstr "Primerjaj revizije"
 msgid "Back to History"
 msgstr "Nazaj v zgodovini"
 
+#: apps/wiki/templates/wiki/confirm_document_delete.html:5
+#, fuzzy
+msgid "Document Deleted | {document}"
+msgstr "Izbriši revizijo | {document}"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:7
+#, fuzzy
+msgid "Delete Document | {document}"
+msgstr "Izbriši revizijo | {document}"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:10
+#, fuzzy
+msgid "Delete Document"
+msgstr "Izbriši prispevek"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:16
+#, fuzzy
+msgid "The document has been deleted."
+msgstr "Dokument \"%s\" ne obstaja."
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:18
+#, fuzzy
+msgid "Are you sure you want to delete this document?"
+msgstr "Res želite izbrisati ta sestavek?"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:20
+msgid "All translations of this document will also be deleted."
+msgstr ""
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:27
+#, fuzzy
+msgid "Current Content"
+msgstr "Prevedi vsebino"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:33
+#, fuzzy
+msgid "You are about to permanently delete this document. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
+msgstr "Ste na tem, da ta prispevek za vselej izbrišete. <strong>Tega ni mogoče razveljaviti!</strong> Res želite nadaljevati?"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:37 apps/wiki/templates/wiki/confirm_revision_delete.html:32
+msgid "Cancel and go back to document history"
+msgstr ""
+
 #: apps/wiki/templates/wiki/confirm_revision_delete.html:4
 msgid "Delete Revision | {document}"
 msgstr "Izbriši revizijo | {document}"
@@ -2385,11 +2623,25 @@ msgstr "Izbriši revizijo | {document}"
 msgid "Delete Revision"
 msgstr "Izbriši revizijo"
 
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:11
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:12
+#, fuzzy
+msgid "Unable to delete only revision of the document"
+msgstr "Izbriši revizijo | {document}"
+
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:13
+msgid "To delete the document, please notify an admin."
+msgstr ""
+
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:15
+#, fuzzy
+msgid "Go back to document history"
+msgstr "Nazaj v zgodovini"
+
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:18
 msgid "Are you sure you want to delete this revision?"
 msgstr "Res želite izbrisati to revizijo?"
 
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:21
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:28
 msgid "You are about to permanently delete this revision. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "Nameravate trajno izbrisati to revizijo. <strong>Tega ni mogoče razveljaviti!</strong> Res želite nadaljevati?"
 
@@ -2406,119 +2658,125 @@ msgstr "Ne najdete, kar ste iskali?"
 msgid "Here's a list of related articles that might help:"
 msgstr "Tukaj je seznam podobnih izdelkov, ki so lahko da v pomoč:"
 
-#: apps/wiki/templates/wiki/document.html:39
-msgid "Browse other articles about <a href=\"{url}\">{category}</a>"
+#: apps/wiki/templates/wiki/document.html:45
+#, fuzzy
+msgid "Browse other articles about %(topics)s"
 msgstr "Brskajte po drugih člankih o temi <a href=\"{url}\">{category}</a>"
 
-#: apps/wiki/templates/wiki/document.html:42
+#: apps/wiki/templates/wiki/document.html:51
 msgid "Ask our awesome support community for help"
 msgstr "Prosite našo super podporo za pomoč"
 
-#: apps/wiki/templates/wiki/document.html:45
+#: apps/wiki/templates/wiki/document.html:54
 msgid "Or try searching:"
 msgstr "ali pa poskusite z iskanjem:"
 
-#: apps/wiki/templates/wiki/document.html:54
+#: apps/wiki/templates/wiki/document.html:63
 msgid "You've come to the right place for Firefox help!"
 msgstr "Prišli ste na pravo mesto za pomoč za Firefox!"
 
-#: apps/wiki/templates/wiki/document.html:56
+#: apps/wiki/templates/wiki/document.html:65
 msgid "This page should provide you with a solution to what you posted on Twitter.<br/> If not, our community volunteers are ready to help."
 msgstr "Ta stran vam lahko da nudi rešitev za problem, ki ste ga objavili na Twitterju. <br/>Če ne, so vam naši prostovoljci iz skupnosti pripravljeni pomagati."
 
-#: apps/wiki/templates/wiki/document.html:64
+#: apps/wiki/templates/wiki/document.html:73
 msgid "You were sent here by one of our <br/> volunteers from the <a href=\"%(url)s\">Army of Awesome</a>."
 msgstr "Sem vas je poslal eden od naših <br/> prostovoljcev iz <a href=\"%(url)s\"> Armade superjunakov </a>."
 
-#: apps/wiki/templates/wiki/document.html:94
+#: apps/wiki/templates/wiki/document.html:103
 msgid "Turn off emails."
 msgstr "Izklopi e-pošto."
 
-#: apps/wiki/templates/wiki/document.html:99
+#: apps/wiki/templates/wiki/document.html:108
 msgid "Get emailed when this article changes."
 msgstr "Obvestilo po pošti, če se je članek spremenil"
 
-#: apps/wiki/templates/wiki/document_revisions.html:4
-msgid "Revision History | {document}"
-msgstr "Zgodovina revizij | {document}"
-
-#: apps/wiki/templates/wiki/document_revisions.html:7
-msgid "History"
-msgstr "Zgodovina"
-
-#: apps/wiki/templates/wiki/document_revisions.html:11
-msgid "History of {title}"
-msgstr "Zgodovina {title}"
-
-#: apps/wiki/templates/wiki/document_revisions.html:13
-msgid "Revision history for:"
-msgstr "Zgodovina revizij za:"
-
-#: apps/wiki/templates/wiki/document_revisions.html:30 apps/wiki/templates/wiki/document_revisions.html:91
-msgid "Compare Selected Translations"
-msgstr "Primerjaj izbrane prevode"
-
-#: apps/wiki/templates/wiki/document_revisions.html:30 apps/wiki/templates/wiki/document_revisions.html:91
-msgid "Compare Selected Revisions"
-msgstr "Primerjaj izbrane revizije"
-
-#: apps/wiki/templates/wiki/document_revisions.html:52
-msgid "Review"
-msgstr "Recenzija"
-
-#: apps/wiki/templates/wiki/document_revisions.html:54
-msgctxt "revision"
-msgid "Unreviewed"
-msgstr "Nepregledano"
-
-#: apps/wiki/templates/wiki/document_revisions.html:58
-msgid "Current"
-msgstr "Veljavno"
-
-#: apps/wiki/templates/wiki/document_revisions.html:60
-msgid "Approved"
-msgstr "Odobreno"
-
-#: apps/wiki/templates/wiki/document_revisions.html:96
-msgid "This document has no revisions."
-msgstr "Ta dokument nima nobene revizije."
-
-#: apps/wiki/templates/wiki/edit_document.html:6
+#: apps/wiki/templates/wiki/edit_document.html:7
 msgid "Edit Article | {document}"
 msgstr "Uredi članek | {document}"
 
-#: apps/wiki/templates/wiki/edit_document.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:27 apps/wiki/templates/wiki/includes/sidebar_modules.html:29
+#: apps/wiki/templates/wiki/edit_document.html:11 apps/wiki/templates/wiki/includes/sidebar_modules.html:27 apps/wiki/templates/wiki/includes/sidebar_modules.html:29
 msgid "Edit Article"
 msgstr "Uredi članek"
 
-#: apps/wiki/templates/wiki/edit_document.html:15
+#: apps/wiki/templates/wiki/edit_document.html:16
 msgid "<em>Editing</em> {title}"
 msgstr "<em>Ureja se</em> {title}"
 
-#: apps/wiki/templates/wiki/edit_document.html:19
+#: apps/wiki/templates/wiki/edit_document.html:21
 msgid "Edit Description"
 msgstr "Uredi opis"
 
-#: apps/wiki/templates/wiki/edit_document.html:32 apps/wiki/templates/wiki/new_document.html:24
+#: apps/wiki/templates/wiki/edit_document.html:37 apps/wiki/templates/wiki/new_document.html:24
 msgid "Relevant to:"
 msgstr "Pomembno za:"
 
-#: apps/wiki/templates/wiki/edit_document.html:40
+#: apps/wiki/templates/wiki/edit_document.html:45
 #, fuzzy
 msgid "Save description"
 msgstr "Opis"
 
-#: apps/wiki/templates/wiki/edit_document.html:49
+#: apps/wiki/templates/wiki/edit_document.html:54
 msgid "Edit Content"
 msgstr "Uredi vsebino"
 
-#: apps/wiki/templates/wiki/edit_document.html:51
+#: apps/wiki/templates/wiki/edit_document.html:56
 msgid "For help with writing articles, check out the <a href=\"%(url)s\">Support Document Guide</a>."
 msgstr "Za pomoč pri pisanju člankov, preverite <a href=\"%(url)s\">Vodič za dokumente za podporo</a>."
 
+#: apps/wiki/templates/wiki/history.html:4
+msgid "Revision History | {document}"
+msgstr "Zgodovina revizij | {document}"
+
+#: apps/wiki/templates/wiki/history.html:7
+msgid "History"
+msgstr "Zgodovina"
+
+#: apps/wiki/templates/wiki/history.html:11
+msgid "History of {title}"
+msgstr "Zgodovina {title}"
+
+#: apps/wiki/templates/wiki/history.html:13
+msgid "Revision history for:"
+msgstr "Zgodovina revizij za:"
+
+#: apps/wiki/templates/wiki/history.html:30 apps/wiki/templates/wiki/history.html:94
+msgid "Compare Selected Translations"
+msgstr "Primerjaj izbrane prevode"
+
+#: apps/wiki/templates/wiki/history.html:30 apps/wiki/templates/wiki/history.html:94
+msgid "Compare Selected Revisions"
+msgstr "Primerjaj izbrane revizije"
+
+#: apps/wiki/templates/wiki/history.html:52
+msgid "Review"
+msgstr "Recenzija"
+
+#: apps/wiki/templates/wiki/history.html:54
+msgctxt "revision"
+msgid "Unreviewed"
+msgstr "Nepregledano"
+
+#: apps/wiki/templates/wiki/history.html:58
+msgid "Current"
+msgstr "Veljavno"
+
+#: apps/wiki/templates/wiki/history.html:60
+msgid "Approved"
+msgstr "Odobreno"
+
+#: apps/wiki/templates/wiki/history.html:82 apps/wiki/templates/wiki/revision.html:54
+msgid "Edit article based on this revision"
+msgstr "Obdelaj članek na osnovi te revizije"
+
+#: apps/wiki/templates/wiki/history.html:99
+msgid "This document has no revisions."
+msgstr "Ta dokument nima nobene revizije."
+
 #: apps/wiki/templates/wiki/list_documents.html:6
-msgid "Articles tagged: {tag}"
-msgstr "Označeni članki: {tag}"
+#, fuzzy
+msgid "Topic: {topic}"
+msgstr "Teme v {locale}:"
 
 #: apps/wiki/templates/wiki/list_documents.html:8
 msgid "All Articles"
@@ -2632,7 +2890,7 @@ msgstr "Celotni viri članka"
 msgid "The {default_locale} version has no approved content to show."
 msgstr "Različica {Default_locale} ni odobrena za javnost."
 
-#: apps/wiki/templates/wiki/review_translation.html:49 apps/wiki/templates/wiki/translate.html:127
+#: apps/wiki/templates/wiki/review_translation.html:49 apps/wiki/templates/wiki/translate.html:129
 msgid "Approved {default_locale} version:"
 msgstr "Odobrena različica {default_locale}:"
 
@@ -2706,10 +2964,6 @@ msgstr "Je odobreno?"
 msgid "Is current revision?"
 msgstr "Ali je trenutna revizija?"
 
-#: apps/wiki/templates/wiki/revision.html:54
-msgid "Edit article based on this revision"
-msgstr "Obdelaj članek na osnovi te revizije"
-
 #: apps/wiki/templates/wiki/select_locale.html:4
 msgid "Select language | {document}"
 msgstr "Izberi jezik | {document}"
@@ -2722,64 +2976,64 @@ msgstr "Izberi jezik"
 msgid "Select a language to translate to:"
 msgstr "Izberi jezik za prevod v:"
 
-#: apps/wiki/templates/wiki/translate.html:6
+#: apps/wiki/templates/wiki/translate.html:7
 msgid "Translate Article | {document}"
 msgstr "Prevedi članek | {document}"
 
-#: apps/wiki/templates/wiki/translate.html:9 apps/wiki/templates/wiki/includes/sidebar_modules.html:36 apps/wiki/templates/wiki/includes/sidebar_modules.html:38
+#: apps/wiki/templates/wiki/translate.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:36 apps/wiki/templates/wiki/includes/sidebar_modules.html:38
 #: apps/wiki/templates/wiki/includes/sidebar_modules.html:45 apps/wiki/templates/wiki/includes/sidebar_modules.html:47
 msgid "Translate Article"
 msgstr "Prevedi članek"
 
-#: apps/wiki/templates/wiki/translate.html:15
+#: apps/wiki/templates/wiki/translate.html:16
 msgid "Translating {title}"
 msgstr "Prevajanje {title}"
 
-#: apps/wiki/templates/wiki/translate.html:18
+#: apps/wiki/templates/wiki/translate.html:19
 msgid "Translating article to {locale}"
 msgstr "Prevedi članek >> {locale}"
 
-#: apps/wiki/templates/wiki/translate.html:23
+#: apps/wiki/templates/wiki/translate.html:24
 msgid "You are translating an unreviewed or rejected English document."
 msgstr "Prevajaš nepregledan ali pa zavrnjen angleški dokument."
 
-#: apps/wiki/templates/wiki/translate.html:26
+#: apps/wiki/templates/wiki/translate.html:27
 msgid "Choose a locale:"
 msgstr "Izberi območno nastavitev:"
 
-#: apps/wiki/templates/wiki/translate.html:44
+#: apps/wiki/templates/wiki/translate.html:46
 msgid "Translate Description"
 msgstr "Prevedi opis"
 
-#: apps/wiki/templates/wiki/translate.html:59
+#: apps/wiki/templates/wiki/translate.html:61
 msgid "Title in {locale}:"
 msgstr "Naslov v {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:69
+#: apps/wiki/templates/wiki/translate.html:71
 msgid "Slug in {locale}:"
 msgstr "Rekleta v {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:76
+#: apps/wiki/templates/wiki/translate.html:78
 msgid "Save title and slug"
 msgstr ""
 
-#: apps/wiki/templates/wiki/translate.html:85
+#: apps/wiki/templates/wiki/translate.html:87
 msgid "Translate Content"
 msgstr "Prevedi vsebino"
 
-#: apps/wiki/templates/wiki/translate.html:100
+#: apps/wiki/templates/wiki/translate.html:102
 msgid "Keywords in {locale}:"
 msgstr "Ključne besede v {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:110
+#: apps/wiki/templates/wiki/translate.html:112
 msgid "Search result summary in {locale}:"
 msgstr "Povzetek rezultatov iskanja v {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:122
+#: apps/wiki/templates/wiki/translate.html:124
 msgid "Note: There are no approved translations for this article."
 msgstr "Opomba: za ta članek ni odobrenih prevodov."
 
-#: apps/wiki/templates/wiki/translate.html:131
+#: apps/wiki/templates/wiki/translate.html:133
 msgid "{locale} translation:"
 msgstr "{locale} prevod:"
 
@@ -2803,24 +3057,32 @@ msgstr ""
 "<p>Ta članek je lahko da zastarel.</p> <p> V angleškem članku, na katerem temelji, je prišlo do važnih sprememb. Dokler se te strani ne posodobi, si lahko pomagate s temle: <a href=\"%(url)s\">"
 "%(title)s</a> </p>"
 
-#: apps/wiki/templates/wiki/includes/document_macros.html:53
+#: apps/wiki/templates/wiki/includes/document_macros.html:48
+msgid "This article is no longer maintained, so its content might be out of date."
+msgstr ""
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:63
 msgid "Our volunteers haven't translated this article into %(locale)s yet. <a href=\"%(help_link)s\">Join us and help get the job done!</a>"
 msgstr "Naši prostovoljci tega članka še niso prevedli v slovenščino. <a href=\"%(help_link)s\">Pridružite se nam in nam pomagajte pri delu!</a>"
 
 #. This is shown for existing, never-approved translations
-#: apps/wiki/templates/wiki/includes/document_macros.html:63
+#: apps/wiki/templates/wiki/includes/document_macros.html:73
 msgid "Our volunteers are working on translating this article. Until it's ready, maybe the English version can be of some help."
 msgstr "Naši prostovoljci trenutno prevajajo ta članek. Dokler ne bo preveden, vam bo mogoče prišla prav angleška različica."
 
-#: apps/wiki/templates/wiki/includes/document_macros.html:75
+#: apps/wiki/templates/wiki/includes/document_macros.html:85
 msgid "This article doesn't have approved content yet."
 msgstr "Ta članek je še brez odobrene vsebine."
 
-#: apps/wiki/templates/wiki/includes/document_vote.html:7
+#: apps/wiki/templates/wiki/includes/document_macros.html:101
+msgid "Warning: There are newer unreviewed revisions of this article. See <a href=\"%(url)s\">the history</a> to base your edit on an existing unreviewed revision."
+msgstr ""
+
+#: apps/wiki/templates/wiki/includes/document_vote.html:6
 msgid "Was this article helpful?"
 msgstr "Vam je bil ta članek v pomoč?"
 
-#: apps/wiki/templates/wiki/includes/document_vote.html:10
+#: apps/wiki/templates/wiki/includes/document_vote.html:9
 msgid "Please wait..."
 msgstr "Prosimo počakajte…"
 
@@ -2937,27 +3199,27 @@ msgctxt "site_title"
 msgid "Firefox Help"
 msgstr "Pomoč za Firefox"
 
-#: templates/base.html:89
+#: templates/base.html:102
 msgid "Be <mark>Awesome</mark>"
 msgstr "Bodi <mark>mega</mark>"
 
-#: templates/base.html:94
+#: templates/base.html:107
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
 msgstr "Ali si vedel, da za Pomočjo za Firefox stoji armada prostovoljnih junakov korenjakov s celega sveta?"
 
-#: templates/base.html:97
+#: templates/base.html:110
 msgid "Grab your cape and join us &raquo;"
 msgstr "Zategni pas in se nam pridruži &raquo;"
 
-#: templates/base.html:101
+#: templates/base.html:114
 msgid "Check your <mark>plugins</mark>"
 msgstr "Preveri svoje <mark>vstavke</mark>"
 
-#: templates/base.html:106
+#: templates/base.html:119
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
 msgstr "Kaj je vstavek? Zakaj bi moral skrbeti za to, da so posodobljeni? Odgovori na ta vprašanja in opravi takojšni test, da vidite, ali ste na tekočem."
 
-#: templates/base.html:111
+#: templates/base.html:124
 msgid "Find out more &raquo;"
 msgstr "Izvedite več &raquo;"
 
@@ -3177,16 +3439,20 @@ msgstr "Iskanje po pomoči za Firefox"
 msgid "Welcome, <span class=\"user\">{user}</span>."
 msgstr "Dobrodošli, <span class=\"user\">{user}.</span>"
 
-#: templates/includes/common_macros.html:25
+#: templates/includes/common_macros.html:26
+msgid "Inbox"
+msgstr ""
+
+#: templates/includes/common_macros.html:32
 #, fuzzy
 msgid "Dashboard"
 msgstr "Kontrolna tabla prevajalca"
 
-#: templates/includes/common_macros.html:27
+#: templates/includes/common_macros.html:34
 msgid "Sign Out"
 msgstr "Odjava"
 
-#: templates/includes/common_macros.html:31
+#: templates/includes/common_macros.html:38
 msgid "Want to contribute?<br /> <a href=\"%(login_url)s\">Sign In</a> or <a href=\"%(register_url)s\">Register</a>"
 msgstr "Želite prispevati? <br /> <a href=\"%(login_url)s\">Prijava</a> ali <a href=\"%(register_url)s\">Registracija</a>"
 
@@ -3254,22 +3520,6 @@ msgstr[3] "Stran {n}"
 msgid "Next"
 msgstr "Naprej"
 
-#: templates/layout/login.html:16
-msgid "Remember me"
-msgstr "Zapomni si me"
-
-#: templates/layout/login.html:23
-msgid "Click here to register"
-msgstr "Kliknite tukaj, da se registrirate"
-
-#: templates/layout/login.html:26
-msgid "Click here if you've forgotten your password"
-msgstr "Kliknite tukaj, če ste pozabili svoje geslo"
-
-#: templates/layout/login.html:26
-msgid "I forgot my password"
-msgstr "Ne vem več svojega gesla"
-
 #: templates/layout/paginator.html:7
 msgid "Previous"
 msgstr "Nazaj"
@@ -3309,6 +3559,36 @@ msgstr "Firefox Sync"
 #: templates/mobile/base.html:91
 msgid "View full site"
 msgstr "Prikaži celo spletišče"
+
+#~ msgid "All translations in English..."
+#~ msgstr "Vsi prevodi v angleškem jeziku ..."
+
+#~ msgid "Select an image file to upload."
+#~ msgstr "Izberite datoteko s sliko za nalaganje."
+
+#~ msgid "Submit file"
+#~ msgstr "Predložite datoteko"
+
+#~ msgid "Please no SWFs, only FLVs."
+#~ msgstr "Prosim nobenih SWF. samo FLV."
+
+#~ msgid "Delete thumbnail"
+#~ msgstr "Izbriši sličico"
+
+#~ msgid "Articles tagged: {tag}"
+#~ msgstr "Označeni članki: {tag}"
+
+#~ msgid "Remember me"
+#~ msgstr "Zapomni si me"
+
+#~ msgid "Click here to register"
+#~ msgstr "Kliknite tukaj, da se registrirate"
+
+#~ msgid "Click here if you've forgotten your password"
+#~ msgstr "Kliknite tukaj, če ste pozabili svoje geslo"
+
+#~ msgid "I forgot my password"
+#~ msgstr "Ne vem več svojega gesla"
 
 #~ msgid "Forum"
 #~ msgstr "Forum"
@@ -3368,9 +3648,6 @@ msgstr "Prikaži celo spletišče"
 #~ msgid "Select Locale"
 #~ msgstr "Izberite Lokale"
 
-#~ msgid "Username: {username}"
-#~ msgstr "Uporabniško ime: {username}"
-
 #~ msgid "Contact"
 #~ msgstr "Stik"
 
@@ -3382,9 +3659,6 @@ msgstr "Prikaži celo spletišče"
 
 #~ msgid "You are about to permanently delete this {type}. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 #~ msgstr "Ste na tem, da trajno izbrišete to {type}. <strong>Tega ni mogoče razveljaviti!</strong> Res želite nadaljevati?"
-
-#~ msgid "Topics in {locale}:"
-#~ msgstr "Teme v {locale}:"
 
 #~ msgid "There is no approved revision to translate from."
 #~ msgstr "Ni odobrene revizije, na osnovi katere bi se lahko prevajalo. "

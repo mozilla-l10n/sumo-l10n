@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-12 15:29-0700\n"
+"POT-Creation-Date: 2011-05-11 06:33-0700\n"
 "PO-Revision-Date: 2011-04-14 14:40+0200\n"
 "Last-Translator: Ton <tonnes.mb@gmail.com>\n"
 "Language-Team: Dutch\n"
@@ -13,65 +13,69 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.1.5\n"
 
-#: apps/announcements/models.py:18
+#: apps/announcements/models.py:19
 msgid "Start displaying"
 msgstr "Weergeven starten"
 
-#: apps/announcements/models.py:19
+#: apps/announcements/models.py:20
 msgid "When this announcement will start appearing. (US/Pacific)"
 msgstr "Wanneer deze aankondiging gaat verschijnen. (US/Pacific)"
 
-#: apps/announcements/models.py:23
+#: apps/announcements/models.py:24
 msgid "Stop displaying"
 msgstr "Weergeven stoppen"
 
-#: apps/announcements/models.py:24
+#: apps/announcements/models.py:25
 msgid "When this announcement will stop appearing. Leave blank for indefinite. (US/Pacific)"
 msgstr "Wanneer deze aankondiging gaat verdwijnen. Laat dit leeg voor onbepaald. (US/Pacific)"
 
-#: apps/announcements/models.py:28
+#: apps/announcements/models.py:29
 msgid "Use wiki syntax or HTML. It will display similar to a document's content."
 msgstr "Gebruik wiki-syntaxis of HTML. De weergave is hetzelfde als van een documentinhoud."
 
-#: apps/customercare/views.py:27 apps/dashboards/readouts.py:103
+#: apps/announcements/tasks.py:34
+msgid "New announcement for {group}"
+msgstr ""
+
+#: apps/customercare/views.py:28 apps/dashboards/readouts.py:106
 msgid "Most Recent"
 msgstr "Meest recent"
 
-#: apps/customercare/views.py:28
+#: apps/customercare/views.py:29
 msgid "Unanswered"
 msgstr "Onbeantwoord"
 
-#: apps/customercare/views.py:29
+#: apps/customercare/views.py:30
 msgid "Answered"
 msgstr "Beantwoord"
 
-#: apps/customercare/views.py:30
+#: apps/customercare/views.py:31
 msgid "All"
 msgstr "Alle"
 
 #. L10n: the tweet needs to be a reply to another tweet.
-#: apps/customercare/views.py:168
+#: apps/customercare/views.py:171
 msgid "Reply-to is empty"
 msgstr "Antwoord-naar is leeg"
 
 #. L10n: the tweet has no content.
-#: apps/customercare/views.py:173
+#: apps/customercare/views.py:176
 msgid "Message is empty"
 msgstr "Bericht is leeg"
 
-#: apps/customercare/views.py:176
+#: apps/customercare/views.py:179
 msgid "Message is too long"
 msgstr "Bericht is te lang"
 
-#: apps/customercare/views.py:183 apps/customercare/views.py:251
+#: apps/customercare/views.py:186 apps/customercare/views.py:255
 msgid "An error occured: {message}"
 msgstr "Er is een fout opgetreden: {message}"
 
-#: apps/customercare/views.py:234 apps/customercare/views.py:239
+#: apps/customercare/views.py:238 apps/customercare/views.py:243
 msgid "Invalid ID."
 msgstr "Ongeldig ID."
 
-#: apps/customercare/views.py:243
+#: apps/customercare/views.py:247
 msgid "Tweets that are replies or have replies must not be hidden."
 msgstr "Tweets die antwoorden zijn of antwoorden bevatten mogen niet verborgen zijn."
 
@@ -171,7 +175,8 @@ msgstr "Ga een <mark>stapje verder!</mark>"
 msgid "Want to go beyond 140 characters? <a href=\"%(join_url)s\">Join the support community</a> and help many more Firefox users."
 msgstr "Meer dan 140 tekens nodig? <a href=\"%(join_url)s\">Kom bij de ondersteuningsgemeenschap</a> en help nog veel meer Firefox-gebruikers."
 
-#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:93 apps/kbforums/templates/kbforums/includes/post.html:29
+#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:95 apps/kbforums/templates/kbforums/includes/post.html:29
+#: apps/messages/templates/messages/read.html:19
 msgid "Reply"
 msgstr "Beantwoorden"
 
@@ -195,11 +200,11 @@ msgstr "Word persoonlijk"
 msgid "Tweak it and make it your own. Personalized messages go a long way in helping others."
 msgstr "Tweak het en maak het van uzelf. Gepersonaliseerde berichten gaan lang mee bij het helpen van anderen."
 
-#: apps/customercare/templates/customercare/reply_modal.html:64
+#: apps/customercare/templates/customercare/reply_modal.html:65 apps/messages/views.py:74
 msgid "Your message was sent!"
 msgstr "Uw bericht is verzonden!"
 
-#: apps/customercare/templates/customercare/reply_modal.html:66 apps/wiki/templates/wiki/includes/submit_revision_modal.html:18
+#: apps/customercare/templates/customercare/reply_modal.html:67 apps/wiki/templates/wiki/includes/submit_revision_modal.html:18
 msgid "Submit"
 msgstr "Indienen"
 
@@ -230,188 +235,184 @@ msgid "Before you join the Army of Awesome, you need to log in so you can respon
 msgstr "Voordat u meedoet dient u zich aan te melden, zodat u op tweets kunt antwoorden. U wordt nu doorgestuurd naar Twitter om u aan te melden."
 
 #: apps/customercare/templates/customercare/twitter_modal.html:12 apps/gallery/templates/gallery/confirm_media_delete.html:60 apps/gallery/templates/gallery/edit_media.html:28
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:53
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:79 apps/gallery/templates/gallery/includes/upload_media_form.html:83
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:87 apps/gallery/templates/gallery/includes/upload_media_form.html:117
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:134 apps/kbforums/templates/kbforums/confirm_post_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:30
-#: apps/kbforums/templates/kbforums/edit_post.html:29 apps/kbforums/templates/kbforums/edit_thread.html:27 apps/kbforums/templates/kbforums/new_thread.html:34
-#: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_revision_delete.html:25 apps/wiki/templates/wiki/includes/review_form.html:35
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:58
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:132 apps/gallery/templates/gallery/includes/upload_media_form.html:138
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/kbforums/templates/kbforums/confirm_post_delete.html:30 apps/kbforums/templates/kbforums/confirm_thread_delete.html:32
+#: apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29 apps/kbforums/templates/kbforums/new_thread.html:36
+#: apps/messages/templates/messages/new.html:16 apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/includes/review_form.html:35
 #: apps/wiki/templates/wiki/includes/review_form.html:49 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: apps/dashboards/models.py:19
+#: apps/dashboards/__init__.py:8
 msgid "This Week"
 msgstr "Deze week"
 
-#: apps/dashboards/models.py:20
+#: apps/dashboards/__init__.py:9
 msgid "All Time"
 msgstr "Altijd"
 
-#: apps/dashboards/readouts.py:68 apps/dashboards/readouts.py:172
+#: apps/dashboards/models.py:168
+msgid "Parameters which will be passed to the dashboard. The dashboard determines the meaning and format of these."
+msgstr ""
+
+#: apps/dashboards/readouts.py:71 apps/dashboards/readouts.py:175
 msgid "Most-Visited Articles"
 msgstr "Meest bezochte artikelen"
 
-#: apps/dashboards/readouts.py:72
+#: apps/dashboards/readouts.py:75
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "Dit zijn de 20 meest bezochte artikelen, die in totaal voor meer dan 50% van het totale verkeer naar de kennisbank zorgen."
 
-#: apps/dashboards/readouts.py:75 apps/dashboards/readouts.py:318 apps/wiki/models.py:46
+#: apps/dashboards/readouts.py:78 apps/dashboards/readouts.py:323 apps/wiki/models.py:47
 msgid "Templates"
 msgstr "Sjablonen"
 
-#: apps/dashboards/readouts.py:79
-msgid "How many of the approved templates which allow translations have an approved translation into this language"
-msgstr ""
-"Het aantal goedgekeurde sjablonen die vertalingen toestaan met een "
-"goedgekeurde vertaling in deze taal."
-
 #: apps/dashboards/readouts.py:82
+msgid "How many of the approved templates which allow translations have an approved translation into this language"
+msgstr "Het aantal goedgekeurde sjablonen die vertalingen toestaan met een goedgekeurde vertaling in deze taal."
+
+#: apps/dashboards/readouts.py:85
 msgid "All Knowledge Base Articles"
 msgstr "Alle kennisbankartikelen"
 
-#: apps/dashboards/readouts.py:85
+#: apps/dashboards/readouts.py:88
 msgid "How many of the approved English articles which allow translations have an approved translation into this language"
 msgstr "Het aantal goedgekeurde Engelse artikelen die vertalingen toestaan met een goedgekeurde vertaling in deze taal."
 
-#: apps/dashboards/readouts.py:100
+#: apps/dashboards/readouts.py:103
 msgid "Visits this week"
 msgstr "Bezoekers deze week"
 
-#: apps/dashboards/readouts.py:101
+#: apps/dashboards/readouts.py:104
 msgid "Status"
 msgstr "Status"
 
-#: apps/dashboards/readouts.py:102
+#: apps/dashboards/readouts.py:105
 msgid "Most Viewed"
 msgstr "Meest bekeken"
 
-#: apps/dashboards/readouts.py:174
+#: apps/dashboards/readouts.py:177
 msgid "All knowledge base articles..."
 msgstr "Alle kennisbankartikelen…"
 
-#: apps/dashboards/readouts.py:176
+#: apps/dashboards/readouts.py:179
 msgid "Visits"
 msgstr "Bezoekers"
 
-#: apps/dashboards/readouts.py:179
+#: apps/dashboards/readouts.py:182
 msgid "Review Needed"
 msgstr "Beoordeling nodig"
 
 #. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:227
-msgid "All translations in English..."
-msgstr "Alle vertalingen in het Nederlands…"
-
 #: apps/dashboards/readouts.py:231
+#, fuzzy
+msgid "All translations..."
+msgstr "Vertalingen toestaan:"
+
+#: apps/dashboards/readouts.py:235
 msgid "Update Needed"
 msgstr "Bijwerken nodig"
 
-#: apps/dashboards/readouts.py:233
+#: apps/dashboards/readouts.py:237
 msgid "Out of Date"
 msgstr "Verouderd"
 
-#: apps/dashboards/readouts.py:293
+#: apps/dashboards/readouts.py:298
 msgid "Translation Needed"
 msgstr "Vertaling nodig"
 
 #. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:322
+#: apps/dashboards/readouts.py:327
 msgid "All templates in English..."
 msgstr "Alle sjablonen in het Nederlands…"
 
-#: apps/dashboards/readouts.py:330
+#: apps/dashboards/readouts.py:335
 msgid "Untranslated Articles"
 msgstr "Niet-vertaalde artikelen"
 
-#: apps/dashboards/readouts.py:331
+#: apps/dashboards/readouts.py:336
 msgid "Untranslated"
 msgstr "Niet vertaald"
 
-#: apps/dashboards/readouts.py:332
+#: apps/dashboards/readouts.py:337
 msgid "All untranslated articles..."
 msgstr "Alle niet-vertaalde artikelen…"
 
-#: apps/dashboards/readouts.py:334
+#: apps/dashboards/readouts.py:339
 msgid "Updated"
 msgstr "Bijgewerkt"
 
-#: apps/dashboards/readouts.py:374
+#: apps/dashboards/readouts.py:379
 msgid "Out-of-Date Translations"
 msgstr "Verouderde vertalingen"
 
-#: apps/dashboards/readouts.py:375
+#: apps/dashboards/readouts.py:380
 msgid "Out-of-Date"
 msgstr "Verouderd"
 
-#: apps/dashboards/readouts.py:376
+#: apps/dashboards/readouts.py:381
 msgid "All out-of-date translations..."
 msgstr "Alle verouderde vertalingen…"
 
-#: apps/dashboards/readouts.py:378
+#: apps/dashboards/readouts.py:383
 msgid "Out of date since"
 msgstr "Verouderd sinds"
 
-#: apps/dashboards/readouts.py:453
+#: apps/dashboards/readouts.py:458
 msgid "Translations Needing Updates"
 msgstr "Vertalingen die moeten worden bijgewerkt"
 
-#: apps/dashboards/readouts.py:454
+#: apps/dashboards/readouts.py:459
 msgid "Needing Updates"
 msgstr "Bijwerken nodig"
 
-#: apps/dashboards/readouts.py:455
+#: apps/dashboards/readouts.py:460
 msgid "All translations needing updates..."
 msgstr "Alle vertalingen die moeten worden bijgewerkt…"
 
-#: apps/dashboards/readouts.py:462
+#: apps/dashboards/readouts.py:467
 msgid "Unreviewed Changes"
 msgstr "Niet-beoordeelde wijzigingen"
 
-#: apps/dashboards/readouts.py:466
+#: apps/dashboards/readouts.py:471
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "Niet beoordeeld"
 
-#: apps/dashboards/readouts.py:467
+#: apps/dashboards/readouts.py:472
 msgid "All articles requiring review..."
 msgstr "Alle artikelen die moeten worden beoordeeld…"
 
-#: apps/dashboards/readouts.py:469
+#: apps/dashboards/readouts.py:474
 msgid "Changed"
 msgstr "Gewijzigd"
 
-#: apps/dashboards/views.py:51 apps/dashboards/templates/dashboards/contributors.html:4
+#: apps/dashboards/views.py:47 apps/dashboards/templates/dashboards/contributors.html:4
 msgid "Contributor Dashboard"
 msgstr "Dashboard voor medewerkers"
 
-#: apps/dashboards/views.py:59 apps/dashboards/templates/dashboards/localization.html:4
+#: apps/dashboards/views.py:55 apps/dashboards/templates/dashboards/localization.html:4
 msgid "Localization Dashboard"
 msgstr "Dashboard voor vertaling"
 
-#: apps/dashboards/templates/dashboards/contributors.html:16 apps/dashboards/templates/dashboards/localization.html:42
+#: apps/dashboards/templates/dashboards/contributors.html:16 apps/dashboards/templates/dashboards/localization.html:15
 msgid "Show information for:"
 msgstr "Informatie tonen voor:"
 
-#: apps/dashboards/templates/dashboards/localization.html:20
-msgid "%(numerator)s <small>of %(denominator)s</small>"
-msgstr "%(numerator)s <small>van %(denominator)s</small>"
+#: apps/dashboards/templates/dashboards/group_locale.html:4
+#, fuzzy
+msgid "{locale} | Group Dashboard"
+msgstr "Dashboard voor vertaling"
 
-#: apps/dashboards/templates/dashboards/localization.html:54
-msgid "Overview"
-msgstr "Overzicht"
+#: apps/dashboards/templates/dashboards/group_locale.html:8
+#, fuzzy
+msgid "Group dashboard"
+msgstr "Dashboard"
 
-#: apps/dashboards/templates/dashboards/localization.html:62
-msgid "User Interface"
-msgstr "Gebruikersinterface"
-
-#: apps/dashboards/templates/dashboards/localization.html:66
-msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
-msgstr "Een volledig vertaalde gebruikersinterface verbetert de ervaring van websitebezoekers in uw taal. Help mee <a href=\"%(url)s\">de interface te vertalen</a>."
-
-#: apps/dashboards/templates/dashboards/localization.html:75
-msgid "More options:"
-msgstr "Meer opties:"
+#: apps/dashboards/templates/dashboards/group_locale.html:25
+msgid "See full dashboard"
+msgstr ""
 
 #: apps/dashboards/templates/dashboards/questions.html:3
 msgid "Support Forum Dashboard"
@@ -433,16 +434,36 @@ msgstr "Artikel"
 msgid "changed by {users}"
 msgstr "gewijzigd door {users}"
 
-#: apps/dashboards/templates/dashboards/includes/macros.html:26
+#: apps/dashboards/templates/dashboards/includes/macros.html:27
+msgid "Overview"
+msgstr "Overzicht"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:39
+msgid "%(numerator)s <small>of %(denominator)s</small>"
+msgstr "%(numerator)s <small>van %(denominator)s</small>"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:56
+msgid "User Interface"
+msgstr "Gebruikersinterface"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:60
+msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
+msgstr "Een volledig vertaalde gebruikersinterface verbetert de ervaring van websitebezoekers in uw taal. Help mee <a href=\"%(url)s\">de interface te vertalen</a>."
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:69
+msgid "More options:"
+msgstr "Meer opties:"
+
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:5
 msgctxt "dashboard"
 msgid "Review"
 msgstr "Beoordelen"
 
-#: apps/dashboards/templates/dashboards/includes/macros.html:39
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:9
 msgid "My profile"
 msgstr "Mijn profiel"
 
-#: apps/dashboards/templates/dashboards/includes/macros.html:42
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:12
 msgid "Edit my profile"
 msgstr "Mijn profiel bewerken"
 
@@ -510,7 +531,7 @@ msgstr "Openstaand"
 msgid "Accepted and Fixed"
 msgstr "Geaccepteerd en hersteld"
 
-#: apps/flagit/models.py:32 apps/wiki/templates/wiki/document_revisions.html:62
+#: apps/flagit/models.py:32 apps/wiki/templates/wiki/history.html:62
 msgid "Rejected"
 msgstr "Afgewezen"
 
@@ -559,7 +580,7 @@ msgid "There is no flagged content pending moderation."
 msgstr "Er is geen gemarkeerde inhoud die op moderatie wacht."
 
 #: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:3 apps/kbforums/forms.py:28 apps/kbforums/forms.py:50
-#: apps/kbforums/forms.py:76 apps/wiki/forms.py:171 apps/wiki/templates/wiki/review_translation.html:70 apps/wiki/templates/wiki/includes/revision_diff.html:45
+#: apps/kbforums/forms.py:76 apps/wiki/forms.py:184 apps/wiki/templates/wiki/review_translation.html:70 apps/wiki/templates/wiki/includes/revision_diff.html:45
 msgid "Content:"
 msgstr "Inhoud:"
 
@@ -580,88 +601,140 @@ msgstr "Bijgewerkt:"
 msgid "Take Action:"
 msgstr "Te ondernemen actie:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:35 apps/kbforums/templates/kbforums/includes/post.html:12
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:37 apps/kbforums/templates/kbforums/includes/post.html:12
+#: apps/wiki/templates/wiki/history.html:82
 msgid "Edit"
 msgstr "Bewerken"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:27
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29 apps/kbforums/templates/kbforums/posts.html:39 apps/kbforums/templates/kbforums/includes/post.html:16
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:24 apps/wiki/templates/wiki/document_revisions.html:83
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:29
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:31 apps/kbforums/templates/kbforums/posts.html:41 apps/kbforums/templates/kbforums/includes/post.html:16
+#: apps/wiki/templates/wiki/confirm_document_delete.html:36 apps/wiki/templates/wiki/confirm_revision_delete.html:31 apps/wiki/templates/wiki/history.html:86
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:60 apps/wiki/templates/wiki/translate.html:55
+#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:69 apps/wiki/templates/wiki/translate.html:57
 msgid "Title:"
 msgstr "Titel:"
 
-#: apps/gallery/forms.py:14 apps/kbforums/forms.py:9 apps/wiki/forms.py:17
+#: apps/gallery/forms.py:13 apps/kbforums/forms.py:9 apps/wiki/forms.py:17
 msgid "Please provide a title."
 msgstr "Geef een titel op."
 
-#: apps/gallery/forms.py:15 apps/wiki/forms.py:18
+#: apps/gallery/forms.py:14 apps/wiki/forms.py:18
 msgid "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "De titel is te kort (%(show_value)s tekens). Deze moet minstens %(limit_value)s tekens bevatten."
 
-#: apps/gallery/forms.py:18 apps/kbforums/forms.py:13
+#: apps/gallery/forms.py:17 apps/kbforums/forms.py:13
 msgid "Please keep the length of your title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Houd de lengte van uw titel op %(limit_value)s tekens of minder. Deze is nu %(show_value)s tekens."
 
-#: apps/gallery/forms.py:21
+#: apps/gallery/forms.py:20
 msgid "Please provide a description."
 msgstr "Geef een beschrijving."
 
-#: apps/gallery/forms.py:22
+#: apps/gallery/forms.py:21
 msgid "Please keep the length of your description to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Houd de lengte van uw beschrijving op %(limit_value)s tekens of minder. Deze is nu %(show_value)s tekens."
 
-#: apps/gallery/forms.py:25 apps/upload/forms.py:7
+#: apps/gallery/forms.py:24 apps/upload/forms.py:7
 msgid "You have not selected an image to upload."
 msgstr "U hebt geen bestand geselecteerd om te uploaden."
 
-#: apps/gallery/forms.py:26 apps/upload/forms.py:8
+#: apps/gallery/forms.py:25 apps/upload/forms.py:8
 msgid "Please keep the length of your image filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Houd de lengte van de bestandsnaam van uw afbeelding op %(max)s tekens of minder. Deze is nu %(length)s tekens."
 
-#: apps/gallery/forms.py:29
+#: apps/gallery/forms.py:28
 msgid "Please keep the length of your webm filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Houd de lengte van uw webm-bestandsnaam op %(max)s tekens of minder. Deze is nu %(length)s tekens."
 
-#: apps/gallery/forms.py:32
+#: apps/gallery/forms.py:31
 msgid "Please keep the length of your ogv filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Houd de lengte van uw ogv-bestandsnaam op %(max)s tekens of minder. Deze is nu %(length)s tekens."
 
-#: apps/gallery/forms.py:35
+#: apps/gallery/forms.py:34
 msgid "Please keep the length of your flv filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Houd de lengte van uw flv-bestandsnaam op %(max)s tekens of minder. Deze is nu %(length)s tekens."
 
-#: apps/gallery/forms.py:38
+#: apps/gallery/forms.py:37
 msgid "The video has no files associated with it. You must upload one of the following extensions: webm, ogv, flv."
 msgstr "De video heeft geen verbonden bestanden. U moet een van de volgende extensies uploaden: webm, ogv, flv."
 
-#: apps/gallery/forms.py:41
+#: apps/gallery/forms.py:40
 msgid "Please select a different title."
 msgstr "Selecteer een andere titel."
 
-#: apps/gallery/forms.py:43
+#: apps/gallery/forms.py:42
 msgid "Include this in wiki syntax with [[%(type)s:title]]"
 msgstr "Dit opnemen in wiki-syntax met [[{type}:title]]"
 
-#: apps/gallery/forms.py:44
+#: apps/gallery/forms.py:43
 msgid "Provide a brief description of this media."
 msgstr "Geef een korte omschrijving van deze media."
 
-#: apps/gallery/forms.py:65 apps/gallery/forms.py:145 apps/gallery/templates/gallery/confirm_media_delete.html:24
+#: apps/gallery/forms.py:48 apps/upload/templates/upload/attachments.html:56
+msgid "Upload"
+msgstr "Uploaden"
+
+#: apps/gallery/forms.py:49 apps/gallery/forms.py:92 apps/gallery/templates/gallery/confirm_media_delete.html:52
+msgid "Image"
+msgstr "Afbeelding"
+
+#: apps/gallery/forms.py:49 apps/gallery/templates/gallery/confirm_media_delete.html:47
+msgid "Video"
+msgstr "Video"
+
+#: apps/gallery/forms.py:56 apps/gallery/templates/gallery/confirm_media_delete.html:24 apps/wiki/templates/wiki/confirm_document_delete.html:24
 msgid "Locale"
 msgstr "Locale"
 
-#: apps/gallery/forms.py:70 apps/gallery/forms.py:150 apps/gallery/templates/gallery/confirm_media_delete.html:22 apps/kbforums/templates/kbforums/confirm_thread_delete.html:15
-#: apps/kbforums/templates/kbforums/threads.html:33
+#: apps/gallery/forms.py:62 apps/gallery/templates/gallery/confirm_media_delete.html:22 apps/kbforums/templates/kbforums/confirm_thread_delete.html:17 apps/kbforums/templates/kbforums/threads.html:35
+#: apps/wiki/templates/wiki/confirm_document_delete.html:22
 msgid "Title"
 msgstr "Titel"
 
-#: apps/gallery/forms.py:77 apps/gallery/forms.py:157 apps/gallery/templates/gallery/confirm_media_delete.html:26
+#: apps/gallery/forms.py:70 apps/gallery/templates/gallery/confirm_media_delete.html:26
 msgid "Description"
 msgstr "Beschrijving"
+
+#: apps/gallery/forms.py:97
+msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
+msgstr "Geaccepteerde formaten zijn PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Meer lezen…</a>"
+
+#: apps/gallery/forms.py:117
+#, fuzzy
+msgid "Video (flv)"
+msgstr "Video"
+
+#: apps/gallery/forms.py:118
+#, fuzzy
+msgid "Video (ogv)"
+msgstr "Video"
+
+#: apps/gallery/forms.py:121
+msgid "Video (webm)"
+msgstr ""
+
+#: apps/gallery/forms.py:125
+msgid "Thumbnail"
+msgstr "Miniatuur"
+
+#: apps/gallery/forms.py:131
+msgid "Select a Flash video (FLV) to upload."
+msgstr "Selecteer een Flash-video (FLV) om te uploaden."
+
+#: apps/gallery/forms.py:133
+msgid "Select an Ogv video to upload."
+msgstr "Selecteer een Ogv-video om te uploaden."
+
+#: apps/gallery/forms.py:134
+msgid "Select a WebM video to upload."
+msgstr "Selecteer een WebM-video om te uploaden."
+
+#: apps/gallery/forms.py:135
+#, fuzzy
+msgid "Suggested size: {width}x{height}px"
+msgstr "Upload een miniatuur voor uw video. Voorgestelde grootte: {width}x{height}px"
 
 #: apps/gallery/views.py:26
 msgid "Could not upload your image."
@@ -709,26 +782,18 @@ msgstr "Video verwijderen | {t} | Mediagalerij"
 msgid "Media Gallery"
 msgstr "Mediagalerij"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:17 apps/wiki/templates/wiki/confirm_revision_delete.html:12
+#: apps/gallery/templates/gallery/confirm_media_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:19 apps/wiki/templates/wiki/confirm_revision_delete.html:19
 msgid "Creator"
 msgstr "Auteur"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:30 apps/kbforums/templates/kbforums/confirm_post_delete.html:17 apps/kbforums/templates/kbforums/confirm_thread_delete.html:19
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:14
+#: apps/gallery/templates/gallery/confirm_media_delete.html:30 apps/kbforums/templates/kbforums/confirm_post_delete.html:19 apps/kbforums/templates/kbforums/confirm_thread_delete.html:21
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:21
 msgid "Date"
 msgstr "Datum"
 
 #: apps/gallery/templates/gallery/confirm_media_delete.html:33 apps/gallery/templates/gallery/confirm_media_delete.html:50
 msgid "Available formats"
 msgstr "Beschikbare formaten"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:47 apps/gallery/templates/gallery/includes/upload_media_form.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:62
-msgid "Video"
-msgstr "Video"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:52 apps/gallery/templates/gallery/includes/upload_media_form.html:12 apps/gallery/templates/gallery/includes/upload_media_form.html:22
-msgid "Image"
-msgstr "Afbeelding"
 
 #: apps/gallery/templates/gallery/edit_media.html:5
 msgid "Edit image"
@@ -754,7 +819,7 @@ msgstr "Video opslaan"
 msgid "Edit video | {t} | Media Gallery"
 msgstr "Video bewerken | {t} | Mediagalerij"
 
-#: apps/gallery/templates/gallery/gallery.html:13 apps/gallery/templates/gallery/media.html:24 apps/gallery/templates/gallery/includes/upload_media_form.html:8
+#: apps/gallery/templates/gallery/gallery.html:13 apps/gallery/templates/gallery/media.html:24 apps/gallery/templates/gallery/includes/upload_media_form.html:98
 msgid "Upload a New Media File"
 msgstr "Een nieuw mediabestand uploaden"
 
@@ -791,7 +856,7 @@ msgstr "Galerij doorzoeken"
 msgid "{title} | Media Gallery"
 msgstr "{title} | Mediagalerij"
 
-#: apps/gallery/templates/gallery/media.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:39 apps/upload/templates/upload/attachments.html:12
+#: apps/gallery/templates/gallery/media.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:47 apps/upload/templates/upload/attachments.html:12
 #: apps/upload/templates/upload/attachments.html:17 apps/upload/templates/upload/attachments.html:19
 msgid "Delete this image"
 msgstr "Deze afbeelding verwijderen"
@@ -829,68 +894,47 @@ msgstr "Zoeken"
 msgid "No media files found."
 msgstr "Geen mediabestanden gevonden."
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:8
-msgid "Continue Uploading Media"
-msgstr "Media uploaden voortzetten"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:10 apps/upload/templates/upload/attachments.html:56
-msgid "Upload"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:30
+#, fuzzy
+msgid "Upload file"
 msgstr "Uploaden"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:24
-msgid "Select an image file to upload."
-msgstr "Selecteer een bestand om te uploaden."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:26
-msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
-msgstr "Geaccepteerde formaten zijn PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Meer lezen…</a>"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:28 apps/gallery/templates/gallery/includes/upload_media_form.html:76
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:114
-msgid "Progress"
-msgstr "Voortgang"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:33 apps/gallery/templates/gallery/includes/upload_media_form.html:89 apps/kbforums/templates/kbforums/edit_post.html:27
-#: apps/kbforums/templates/kbforums/new_thread.html:32 apps/kbforums/templates/kbforums/posts.html:92
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:52 apps/kbforums/templates/kbforums/edit_post.html:29 apps/kbforums/templates/kbforums/new_thread.html:34
+#: apps/kbforums/templates/kbforums/posts.html:94
 msgid "Preview"
 msgstr "Voorbeeld"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:52 apps/gallery/templates/gallery/includes/upload_media_form.html:131
-msgid "Submit file"
-msgstr "Bestand indienen"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:60
+msgid "Progress"
+msgstr "Voortgang"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:64
-msgid "Select a Flash video (FLV) to upload."
-msgstr "Selecteer een Flash-video (FLV) om te uploaden."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:66
-msgid "Please no SWFs, only FLVs."
-msgstr "Liever geen SWF’s, alleen FLV’s."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:69
-msgid "Select an Ogv video to upload."
-msgstr "Selecteer een Ogv-video om te uploaden."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:73
-msgid "Select a WebM video to upload."
-msgstr "Selecteer een WebM-video om te uploaden."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:96 apps/gallery/templates/gallery/includes/upload_media_form.html:102
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:108
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:75
 msgid "Delete {format} file"
 msgstr "{format}-bestand verwijderen"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:119
-msgid "Thumbnail"
-msgstr "Miniatuur"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:80
+#, fuzzy
+msgid "Preview ({format})"
+msgstr "Voorbeeld van inhoud"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:125
-msgid "Delete thumbnail"
-msgstr "Miniatuur verwijderen"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:98
+msgid "Continue Uploading Media"
+msgstr "Media uploaden voortzetten"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:127
-msgid "Upload a thumbnail for your video. Suggested size: {width}x{height}px"
-msgstr "Upload een miniatuur voor uw video. Voorgestelde grootte: {width}x{height}px"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:133
+#, fuzzy
+msgid "Progress (flv)"
+msgstr "Voortgang"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:139
+#, fuzzy
+msgid "Progress (ogv)"
+msgstr "Voortgang"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:145
+#, fuzzy
+msgid "Progress (webm)"
+msgstr "Voortgang"
 
 #: apps/kbforums/events.py:20
 msgid "Reply to: %s"
@@ -925,202 +969,220 @@ msgid "Please keep the length of your message to %(limit_value)s characters or l
 msgstr "Beperk de lengte van uw bericht tot %(limit_value)s tekens of minder. Momenteel is dit %(show_value)s tekens."
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:4
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:5
 msgid "Delete Post | {t} | {d} Discussion | Knowledge Base"
 msgstr "Bericht verwijderen | {t} | {d}-discussie | Kennisbank"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:7 apps/kbforums/templates/kbforums/confirm_thread_delete.html:7 apps/kbforums/templates/kbforums/edit_post.html:9
-#: apps/kbforums/templates/kbforums/edit_thread.html:8 apps/kbforums/templates/kbforums/new_thread.html:9 apps/kbforums/templates/kbforums/posts.html:9 apps/kbforums/templates/kbforums/threads.html:7
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:8 apps/kbforums/templates/kbforums/confirm_thread_delete.html:8 apps/kbforums/templates/kbforums/edit_post.html:10
+#: apps/kbforums/templates/kbforums/edit_thread.html:9 apps/kbforums/templates/kbforums/new_thread.html:10 apps/kbforums/templates/kbforums/posts.html:10
+#: apps/kbforums/templates/kbforums/threads.html:8
 msgid "Discuss"
 msgstr "Bespreken"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:9
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:10
 msgid "Delete Post"
 msgstr "Bericht verwijderen"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:13
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:15
 msgid "Are you sure you want to delete this post?"
 msgstr "Weet u zeker dat u dit bericht wilt verwijderen?"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:15 apps/kbforums/templates/kbforums/posts.html:62 apps/kbforums/templates/kbforums/threads.html:34
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:17 apps/kbforums/templates/kbforums/posts.html:64 apps/kbforums/templates/kbforums/threads.html:36
 msgid "Author"
 msgstr "Auteur"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:19 apps/wiki/templates/wiki/confirm_revision_delete.html:16
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:21 apps/wiki/templates/wiki/confirm_revision_delete.html:23
 msgid "Content"
 msgstr "Inhoud"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:25
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:27
 msgid "You are about to permanently delete this post. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "U gaat dit bericht voorgoed verwijderen. <strong>Dit kan niet ongedaan worden gemaakt!</strong> Weet u zeker dat u wilt doorgaan?"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:4
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:5
 msgid "Delete Thread | {t} | {d} Discussion | Knowledge Base"
 msgstr "Conversatie verwijderen | {t} | {d}-discussie | Kennisbank"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:9
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:10
 msgid "Delete Thread"
 msgstr "Conversatie verwijderen"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:13
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:15
 msgid "Are you sure you want to delete this thread?"
 msgstr "Weer u zeker dat u deze conversatie wilt verwijderen?"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:21
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:23
 msgid "Number of Replies"
 msgstr "Aantal antwoorden"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:27
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29
 msgid "You are about to permanently delete this thread. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "U gaat deze conversatie voorgoed verwijderen. <strong>Dit kan niet ongedaan worden gemaakt!</strong> Weet u zeker dat u wilt doorgaan?"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/edit_post.html:6
+#: apps/kbforums/templates/kbforums/edit_post.html:7
 msgid "Edit a post | {t} | {d} Discussion | Knowledge Base"
 msgstr "Een bericht bewerken | {t} | {d}-discussie | Kennisbank"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:11 apps/kbforums/templates/kbforums/edit_post.html:15
+#: apps/kbforums/templates/kbforums/edit_post.html:12 apps/kbforums/templates/kbforums/edit_post.html:17
 msgid "Edit a post"
 msgstr "Een bericht bewerken"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:28
+#: apps/kbforums/templates/kbforums/edit_post.html:30
 msgid "Update post"
 msgstr "Bericht bijwerken"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:35 apps/kbforums/templates/kbforums/new_thread.html:39
+#: apps/kbforums/templates/kbforums/edit_post.html:37 apps/kbforums/templates/kbforums/new_thread.html:41
 msgid "Post Preview:"
 msgstr "Berichtvoorbeeld:"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/edit_thread.html:5
+#: apps/kbforums/templates/kbforums/edit_thread.html:6
 msgid "Edit thread {t} | {d} Discussion | Knowledge Base"
 msgstr "Conversatie {t} bewerken | {d}-discussie | Kennisbank"
 
-#: apps/kbforums/templates/kbforums/edit_thread.html:10
+#: apps/kbforums/templates/kbforums/edit_thread.html:11
 msgid "Edit thread"
 msgstr "Conversatie bewerken"
 
-#: apps/kbforums/templates/kbforums/edit_thread.html:14
+#: apps/kbforums/templates/kbforums/edit_thread.html:16
 msgid "Edit thread \"{t}\""
 msgstr "Conversatie “{t}” bewerken"
 
-#: apps/kbforums/templates/kbforums/edit_thread.html:26
+#: apps/kbforums/templates/kbforums/edit_thread.html:28
 msgid "Update thread"
 msgstr "Conversatie bijwerken"
 
 #. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/new_thread.html:6
+#: apps/kbforums/templates/kbforums/new_thread.html:7
 msgid "Create a new thread | {d} | Knowledge Base"
 msgstr "Nieuwe conversatie starten | {d} | Kennisbank"
 
-#: apps/kbforums/templates/kbforums/new_thread.html:10 apps/kbforums/templates/kbforums/new_thread.html:14
+#: apps/kbforums/templates/kbforums/new_thread.html:11 apps/kbforums/templates/kbforums/new_thread.html:16
 msgid "Create a new thread"
 msgstr "Nieuwe conversatie starten"
 
-#: apps/kbforums/templates/kbforums/new_thread.html:33
+#: apps/kbforums/templates/kbforums/new_thread.html:35
 msgid "Post"
 msgstr "Plaatsen"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/posts.html:6
+#: apps/kbforums/templates/kbforums/posts.html:7
 msgid "{t} | {d} Discussion | Knowledge Base"
 msgstr "{t} | {d}-discussie | Kennisbank"
 
-#: apps/kbforums/templates/kbforums/posts.html:16 apps/search/__init__.py:42
+#: apps/kbforums/templates/kbforums/posts.html:18 apps/search/__init__.py:42
 msgid "Sticky"
 msgstr "Klevend"
 
-#: apps/kbforums/templates/kbforums/posts.html:17 apps/search/__init__.py:43 apps/search/forms.py:129
+#: apps/kbforums/templates/kbforums/posts.html:19 apps/search/__init__.py:43 apps/search/forms.py:129
 msgid "Locked"
 msgstr "Vergrendeld"
 
-#: apps/kbforums/templates/kbforums/posts.html:18 apps/kbforums/templates/kbforums/threads.html:13
+#: apps/kbforums/templates/kbforums/posts.html:20 apps/kbforums/templates/kbforums/threads.html:15
 msgid "Watching"
 msgstr "Bewaken"
 
-#: apps/kbforums/templates/kbforums/posts.html:25 apps/kbforums/templates/kbforums/threads.html:20
+#: apps/kbforums/templates/kbforums/posts.html:27 apps/kbforums/templates/kbforums/threads.html:22
 msgid "Stop watching"
 msgstr "Bewaken stoppen"
 
-#: apps/kbforums/templates/kbforums/posts.html:28
+#: apps/kbforums/templates/kbforums/posts.html:30
 msgid "Watch this thread"
 msgstr "Deze conversatie bewaken"
 
-#: apps/kbforums/templates/kbforums/posts.html:45
+#: apps/kbforums/templates/kbforums/posts.html:47
 msgid "Change locked status"
 msgstr "Vergrendelstatus wijzigen"
 
-#: apps/kbforums/templates/kbforums/posts.html:51
+#: apps/kbforums/templates/kbforums/posts.html:53
 msgid "Change sticky status"
 msgstr "Kleefstatus wijzigen"
 
-#: apps/kbforums/templates/kbforums/posts.html:63
+#: apps/kbforums/templates/kbforums/posts.html:65
 msgid "Message"
 msgstr "Bericht"
 
-#: apps/kbforums/templates/kbforums/posts.html:78
+#: apps/kbforums/templates/kbforums/posts.html:80
 msgid "Oh, no! Looks like there are no posts!"
 msgstr "Oh nee! Er zijn blijkbaar geen berichten!"
 
-#: apps/kbforums/templates/kbforums/posts.html:83 apps/kbforums/templates/kbforums/posts.html:99
+#: apps/kbforums/templates/kbforums/posts.html:85 apps/kbforums/templates/kbforums/posts.html:101
 msgid "Post a reply"
 msgstr "Een antwoord plaatsen"
 
-#: apps/kbforums/templates/kbforums/posts.html:101
+#: apps/kbforums/templates/kbforums/posts.html:103
 msgid "This thread has been locked. It is no longer possible to post new replies."
 msgstr "Deze conversatie is gesloten. Er kunnen geen nieuwe antwoorden meer worden geplaatst."
 
-#: apps/kbforums/templates/kbforums/posts.html:106
+#: apps/kbforums/templates/kbforums/posts.html:108
 msgid "Reply Preview:"
 msgstr "Antwoordvoorbeeld:"
 
 #. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/threads.html:4
+#: apps/kbforums/templates/kbforums/threads.html:5
 msgid "{d} Discussion | Knowledge Base"
 msgstr "{d}-discussie | Kennisbank"
 
-#: apps/kbforums/templates/kbforums/threads.html:11
+#: apps/kbforums/templates/kbforums/threads.html:13
 msgid "{d} Discussion"
 msgstr "{d}-discussie"
 
-#: apps/kbforums/templates/kbforums/threads.html:23
+#: apps/kbforums/templates/kbforums/threads.html:25
 msgid "Watch this forum"
 msgstr "Dit forum bewaken"
 
-#: apps/kbforums/templates/kbforums/threads.html:29
+#: apps/kbforums/templates/kbforums/threads.html:31
 msgid "Post a new thread"
 msgstr "Nieuwe conversatie starten"
 
-#: apps/kbforums/templates/kbforums/threads.html:32
+#: apps/kbforums/templates/kbforums/threads.html:34
 msgid "Type"
 msgstr "Type"
 
-#: apps/kbforums/templates/kbforums/threads.html:35
+#: apps/kbforums/templates/kbforums/threads.html:37
 msgid "Replies"
 msgstr "Antwoorden"
 
-#: apps/kbforums/templates/kbforums/threads.html:36
+#: apps/kbforums/templates/kbforums/threads.html:38
 msgid "Last Post"
 msgstr "Laatste bericht"
 
-#: apps/kbforums/templates/kbforums/threads.html:44
+#: apps/kbforums/templates/kbforums/threads.html:46
 msgctxt "thread_type"
 msgid "Locked"
 msgstr "Vergrendeld"
 
-#: apps/kbforums/templates/kbforums/threads.html:47
+#: apps/kbforums/templates/kbforums/threads.html:49
 msgctxt "thread_type"
 msgid "Sticky"
 msgstr "Klevend"
 
-#: apps/kbforums/templates/kbforums/threads.html:57
+#: apps/kbforums/templates/kbforums/threads.html:59
 msgid "by <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 msgstr "door <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 
-#: apps/kbforums/templates/kbforums/threads.html:66
+#: apps/kbforums/templates/kbforums/threads.html:68
 msgid "There are no threads. Maybe you should create some!"
 msgstr "Er zijn geen conversaties. Misschien kunt u er een paar aanmaken!"
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:7
+msgid "This forum is a discussion about improving the \"%(title)s\" article."
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:11
+msgid "This forum is a discussion about improving the \"%(title)s\" article. If you'd like to participate, please <a href=\"%(register_url)s\">register</a>."
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:19
+msgid ""
+"This forum is a discussion about improving the localization of the \"%(title)s\" article. If you want to improve the article content, go to the <a href=\"%(url)s\">English article discussion</a>."
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:28
+msgid "If you need help with Firefox, please <a href=\"%(aaq_url)s\">ask a question</a>."
+msgstr ""
 
 #. {0} is the number of posts.
 #: apps/kbforums/templates/kbforums/includes/post.html:8
@@ -1137,11 +1199,11 @@ msgstr "Koppeling naar dit bericht."
 msgid "Modified by {name} on {datetime}"
 msgstr "Bewerkt door {name} op {datetime}"
 
-#: apps/kbforums/templates/kbforums/includes/watch_locale.html:5
+#: apps/kbforums/templates/kbforums/includes/watch_locale.html:6
 msgid "Turn off emails for discussion in my locale."
 msgstr "E-mail voor discussie in mijn taal uitschakelen"
 
-#: apps/kbforums/templates/kbforums/includes/watch_locale.html:8
+#: apps/kbforums/templates/kbforums/includes/watch_locale.html:9
 msgid "Get emailed when there is new discussion activity in my locale."
 msgstr "E-mail ontvangen bij nieuwe discussieactiviteit in mijn taal"
 
@@ -1213,7 +1275,7 @@ msgstr "Alledaagse vragen"
 msgid "Firefox Help <span>for Firefox Home</span>"
 msgstr "Firefox Help <span>voor Firefox Home</span>"
 
-#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:139 templates/base.html:8 templates/base.html:17 templates/mobile/base.html:15
+#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:141 templates/base.html:8 templates/base.html:17 templates/mobile/base.html:15
 msgid "Firefox Help"
 msgstr "Firefox Help"
 
@@ -1224,6 +1286,62 @@ msgstr "Firefox Help <span>voor Mobiel</span>"
 #: apps/landings/templates/landings/mobile/sync.html:5
 msgid "Firefox Help <span>for Sync</span>"
 msgstr "Firefox Help <span>voor Sync</span>"
+
+#: apps/messages/forms.py:7
+#, fuzzy
+msgid "username1, username2,..."
+msgstr "Gebruikersnaam: {username}"
+
+#: apps/messages/forms.py:15
+#, fuzzy
+msgid "To field is required."
+msgstr "Wachtwoord is vereist."
+
+#: apps/messages/forms.py:25
+msgid "{username} is not a valid username."
+msgstr ""
+
+#: apps/messages/templates/messages/inbox.html:3 apps/messages/templates/messages/new.html:3 apps/messages/templates/messages/outbox.html:4 apps/messages/templates/messages/read-outbox.html:4
+#: apps/messages/templates/messages/read.html:4 apps/messages/templates/messages/includes/macros.html:21
+#, fuzzy
+msgid "Messages"
+msgstr "Bericht"
+
+#: apps/messages/templates/messages/inbox.html:9 apps/messages/templates/messages/new.html:2 apps/messages/templates/messages/includes/macros.html:27
+#, fuzzy
+msgid "New Message"
+msgstr "Bericht"
+
+#: apps/messages/templates/messages/inbox.html:31 apps/messages/templates/messages/outbox.html:37
+#, fuzzy
+msgid "There are no messages here."
+msgstr "Er zijn geen artikelen."
+
+#: apps/messages/templates/messages/new.html:15
+msgid "Send"
+msgstr ""
+
+#: apps/messages/templates/messages/outbox.html:3 apps/messages/templates/messages/read-outbox.html:5 apps/messages/templates/messages/includes/macros.html:24
+#, fuzzy
+msgid "Sent Messages"
+msgstr "Bericht"
+
+#: apps/messages/templates/messages/outbox.html:24
+msgid "You"
+msgstr ""
+
+#: apps/messages/templates/messages/read-outbox.html:3
+msgid "Read Sent Message"
+msgstr ""
+
+#: apps/messages/templates/messages/read.html:3
+#, fuzzy
+msgid "Read Message"
+msgstr "Bericht"
+
+#: apps/messages/templates/messages/includes/macros.html:5 apps/messages/templates/messages/includes/macros.html:13
+msgid "System"
+msgstr ""
 
 #: apps/search/__init__.py:17 apps/search/__init__.py:52 apps/search/__init__.py:58
 msgid "Don't filter"
@@ -1253,11 +1371,11 @@ msgstr "Datum oorspronkelijk bericht"
 msgid "Number of replies"
 msgstr "Aantal antwoorden"
 
-#: apps/search/__init__.py:53 apps/sumo/helpers.py:309 apps/wiki/templates/wiki/includes/document_vote.html:8
+#: apps/search/__init__.py:53 apps/sumo/helpers.py:311 apps/wiki/templates/wiki/includes/document_vote.html:7
 msgid "Yes"
 msgstr "Ja"
 
-#: apps/search/__init__.py:54 apps/sumo/helpers.py:309 apps/wiki/templates/wiki/includes/document_vote.html:9
+#: apps/search/__init__.py:54 apps/sumo/helpers.py:311 apps/wiki/templates/wiki/includes/document_vote.html:8
 msgid "No"
 msgstr "Nee"
 
@@ -1470,53 +1588,53 @@ msgstr "Zorg ervoor dat deze waarde minstens %(limit_value)s tekens bevat (het z
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr "Zorg ervoor dat deze waarde maximaal %(limit_value)s tekens bevat (deze heeft er %(show_value)s)."
 
-#: apps/sumo/helpers.py:188
+#: apps/sumo/helpers.py:190
 msgid "Today at %s"
 msgstr "Vandaag om %s"
 
-#: apps/sumo/helpers.py:266
+#: apps/sumo/helpers.py:268
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "%(number)d jaar geleden"
 msgstr[1] "%(number)d jaar geleden"
 
-#: apps/sumo/helpers.py:268
+#: apps/sumo/helpers.py:270
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "%(number)d maand geleden"
 msgstr[1] "%(number)d maanden geleden"
 
-#: apps/sumo/helpers.py:270
+#: apps/sumo/helpers.py:272
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "%(number)d week geleden"
 msgstr[1] "%(number)d weken geleden"
 
-#: apps/sumo/helpers.py:272
+#: apps/sumo/helpers.py:274
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "%(number)d dag geleden"
 msgstr[1] "%(number)d dagen geleden"
 
-#: apps/sumo/helpers.py:274
+#: apps/sumo/helpers.py:276
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "%(number)d uur geleden"
 msgstr[1] "%(number)d uur geleden"
 
-#: apps/sumo/helpers.py:276
+#: apps/sumo/helpers.py:278
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "%(number)d minuut geleden"
 msgstr[1] "%(number)d minuten geleden"
 
-#: apps/sumo/helpers.py:278
+#: apps/sumo/helpers.py:280
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] "%(number)d seconde geleden"
 msgstr[1] "%(number)d seconden geleden"
 
-#: apps/sumo/parser.py:232
+#: apps/sumo/parser.py:236
 msgid "The image \"%s\" does not exist."
 msgstr "De afbeelding “%s” bestaat niet."
 
@@ -1528,13 +1646,17 @@ msgstr "Oeps, uw aanvraag had geen succes"
 msgid "We couldn't perform your request. Perhaps because the action is no longer applicable or you tried to perform an invalid action."
 msgstr "We konden uw aanvraag niet uitvoeren. Misschien is de actie niet langer van toepassing of probeerde u een ongeldige actie uit te voeren."
 
-#: apps/sumo/templates/handlers/403.html:3
+#: apps/sumo/templates/handlers/403.html:4
 msgid "Access denied"
 msgstr "Toegang geweigerd"
 
-#: apps/sumo/templates/handlers/403.html:9
+#: apps/sumo/templates/handlers/403.html:11
 msgid "You do not have permission to access this page."
 msgstr "U hebt geen rechten om deze pagina te bezoeken."
+
+#: apps/sumo/templates/handlers/403.html:14 apps/users/templates/users/includes/macros.html:23
+msgid "Log in"
+msgstr "Aanmelden"
 
 #: apps/sumo/templates/handlers/404.html:3
 msgid "Page Not Found"
@@ -1551,6 +1673,18 @@ msgstr "Er is een fout opgetreden"
 #: apps/sumo/templates/handlers/500.html:9
 msgid "Oh, no! It looks like an unexpected error occurred. We've already notified the site administrators. Please try again now, or in a few minutes."
 msgstr "Oh nee! Er lijkt een onverwachte fout te zijn opgetreden. De websitebeheerders zijn al op de hoogte gesteld. Probeer het nu of over enkele minuten nog eens."
+
+#: apps/sumo/templates/sumo/deprecated.html:3
+msgid "Redirecting"
+msgstr ""
+
+#: apps/sumo/templates/sumo/deprecated.html:8
+msgid "The URL has changed!"
+msgstr ""
+
+#: apps/sumo/templates/sumo/deprecated.html:11
+msgid "It looks like you've bookmarked an old URL. The new URL for this page is below. You should update your bookmarks. We will forward you to the new URL in 10 seconds."
+msgstr ""
 
 #: apps/sumo/templates/sumo/read-only.html:3 apps/sumo/templates/sumo/read-only.html:7
 msgid "Maintenance in progress"
@@ -1656,7 +1790,7 @@ msgstr "Wachtwoord is vereist."
 msgid "Please enter your password twice."
 msgstr "Voer uw wachtwoord tweemaal in."
 
-#: apps/users/forms.py:42 apps/users/templates/users/includes/macros.html:13 templates/layout/login.html:8
+#: apps/users/forms.py:42 apps/users/templates/users/includes/macros.html:13
 msgid "Username:"
 msgstr "Gebruikersnaam:"
 
@@ -1668,7 +1802,7 @@ msgstr "Vereist. 30 tekens of minder. Alleen letters, cijfers en @/./+/-/_."
 msgid "Email address:"
 msgstr "E-mailadres:"
 
-#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:27 apps/users/templates/users/includes/macros.html:17 templates/layout/login.html:11
+#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/includes/macros.html:17
 msgid "Password:"
 msgstr "Wachtwoord:"
 
@@ -1876,29 +2010,29 @@ msgstr "Uploaden"
 msgid "Edit Profile"
 msgstr "Profiel bewerken"
 
-#: apps/users/templates/users/edit_profile.html:13
+#: apps/users/templates/users/edit_profile.html:14
 msgid "Avatar:"
 msgstr "Avatar:"
 
-#: apps/users/templates/users/edit_profile.html:17
+#: apps/users/templates/users/edit_profile.html:18
 msgctxt "avatar"
 msgid "Change"
 msgstr "Wijzigen"
 
-#: apps/users/templates/users/edit_profile.html:21
+#: apps/users/templates/users/edit_profile.html:22
 msgctxt "avatar"
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/edit_profile.html:33 apps/wiki/templates/wiki/translate.html:19
+#: apps/users/templates/users/edit_profile.html:29 apps/users/templates/users/edit_profile.html:34 apps/wiki/templates/wiki/translate.html:20
 msgid "Change"
 msgstr "Wijzigen"
 
-#: apps/users/templates/users/edit_profile.html:31 apps/users/templates/users/profile.html:36
+#: apps/users/templates/users/edit_profile.html:32 apps/users/templates/users/profile.html:37
 msgid "Email:"
 msgstr "E-mail:"
 
-#: apps/users/templates/users/edit_profile.html:38 apps/users/templates/users/pw_reset_confirm.html:27
+#: apps/users/templates/users/edit_profile.html:39 apps/users/templates/users/pw_reset_confirm.html:27
 msgid "Update"
 msgstr "Bijwerken"
 
@@ -1910,31 +2044,31 @@ msgstr "Aanmelden"
 msgid "{user} | Profile"
 msgstr "{user} | Profiel"
 
-#: apps/users/templates/users/profile.html:20
+#: apps/users/templates/users/profile.html:21
 msgid "{city}, {country}"
 msgstr "{city}, {country}"
 
-#: apps/users/templates/users/profile.html:42
+#: apps/users/templates/users/profile.html:43
 msgid "Website:"
 msgstr "Website:"
 
-#: apps/users/templates/users/profile.html:48
+#: apps/users/templates/users/profile.html:49
 msgid "Twitter:"
 msgstr "Twitter:"
 
-#: apps/users/templates/users/profile.html:54
+#: apps/users/templates/users/profile.html:55
 msgid "Facebook:"
 msgstr "Facebook:"
 
-#: apps/users/templates/users/profile.html:60
+#: apps/users/templates/users/profile.html:61
 msgid "IRC:"
 msgstr "IRC:"
 
-#: apps/users/templates/users/profile.html:66
+#: apps/users/templates/users/profile.html:67
 msgid "Livechat ID: {livechat_id}"
 msgstr "Livechat-ID: {livechat_id}"
 
-#: apps/users/templates/users/profile.html:73
+#: apps/users/templates/users/profile.html:74
 msgid "About {user}"
 msgstr "Over {user}"
 
@@ -1998,7 +2132,7 @@ msgstr "Koppeling voor instellen van wachtwoord sturen"
 msgid "We've sent an email to any account using this address. Please follow the link in the email to reset your password."
 msgstr "We hebben een e-mailbericht gestuurd naar een account die dit adres gebruikt. Volg de koppeling in het e-mailbericht om uw wachtwoord opnieuw in te stellen."
 
-#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:51 templates/layout/login.html:24
+#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:51
 msgid "Register"
 msgstr "Registreren"
 
@@ -2038,10 +2172,6 @@ msgid ""
 msgstr ""
 "Voordat u zich kunt aanmelden, dient u uw e-mailadres te bevestigen. We hebben een nieuwe bevestigings-e-mail gestuurd naar een account die <strong>%(email)s</strong> gebruikt. Volg de koppeling in "
 "de e-mail om het e-mailadres te bevestigen."
-
-#: apps/users/templates/users/includes/macros.html:23 templates/layout/login.html:5 templates/layout/login.html:20
-msgid "Log in"
-msgstr "Aanmelden"
 
 #: apps/users/templates/users/includes/macros.html:23
 msgid "Logging in..."
@@ -2127,168 +2257,197 @@ msgstr "Houd de lengte van de inhoud op %(limit_value)s tekens of minder. Moment
 msgid "Please keep the length of the comment to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Houd de lengte van het commentaar op %(limit_value)s tekens of minder. Momenteel is dit %(show_value)s tekens."
 
-#: apps/wiki/forms.py:61
+#: apps/wiki/forms.py:70
 msgid "Title of article"
 msgstr "Titel van artikel"
 
-#: apps/wiki/forms.py:67 apps/wiki/templates/wiki/translate.html:65
+#: apps/wiki/forms.py:78 apps/wiki/templates/wiki/translate.html:67
 msgid "Slug:"
 msgstr "Identificator:"
 
-#: apps/wiki/forms.py:68
+#: apps/wiki/forms.py:79
 msgid "Article URL"
 msgstr "Artikel-URL"
 
-#: apps/wiki/forms.py:74
+#: apps/wiki/forms.py:85
 msgid "Firefox version:"
 msgstr "Firefox-versie:"
 
-#: apps/wiki/forms.py:83
+#: apps/wiki/forms.py:92
 msgid "Operating systems:"
 msgstr "Besturingssystemen:"
 
-#: apps/wiki/forms.py:93
+#: apps/wiki/forms.py:100
 msgid "Allow translations:"
 msgstr "Vertalingen toestaan:"
 
-#: apps/wiki/forms.py:100
+#: apps/wiki/forms.py:104
+msgid "Obsolete:"
+msgstr ""
+
+#: apps/wiki/forms.py:112
 msgid "Category:"
 msgstr "Categorie:"
 
-#: apps/wiki/forms.py:101
+#: apps/wiki/forms.py:113
 msgid "Type of article"
 msgstr "Type artikel"
 
-#: apps/wiki/forms.py:103
+#: apps/wiki/forms.py:117
 msgid "Topics:"
 msgstr "Onderwerpen:"
 
-#: apps/wiki/forms.py:104
+#: apps/wiki/forms.py:118
 msgid "Popular articles in each topic are displayed on the front page"
 msgstr "Populaire artikelen in elk onderwerp worden weergegeven op de voorpagina"
 
-#: apps/wiki/forms.py:151 apps/wiki/templates/wiki/review_revision.html:41 apps/wiki/templates/wiki/review_translation.html:56 apps/wiki/templates/wiki/translate.html:96
+#: apps/wiki/forms.py:164 apps/wiki/templates/wiki/review_revision.html:41 apps/wiki/templates/wiki/review_translation.html:56 apps/wiki/templates/wiki/translate.html:98
 #: apps/wiki/templates/wiki/includes/revision_diff.html:31
 msgid "Keywords:"
 msgstr "Trefwoorden:"
 
-#: apps/wiki/forms.py:152
+#: apps/wiki/forms.py:165
 msgid "Affects search results"
 msgstr "Heeft invloed op zoekresultaten"
 
-#: apps/wiki/forms.py:156 apps/wiki/templates/wiki/translate.html:106
+#: apps/wiki/forms.py:169 apps/wiki/templates/wiki/translate.html:108
 msgid "Search result summary:"
 msgstr "Samenvatting voor zoekresultaten:"
 
-#: apps/wiki/forms.py:157
+#: apps/wiki/forms.py:170
 msgid "Only displayed on search results page"
 msgstr "Alleen weergegeven op pagina met zoekresultaten"
 
-#: apps/wiki/forms.py:178 apps/wiki/forms.py:206
+#: apps/wiki/forms.py:191 apps/wiki/forms.py:219
 msgid "Comment:"
 msgstr "Commentaar:"
 
-#: apps/wiki/forms.py:210
+#: apps/wiki/forms.py:223
 msgid "Significance:"
 msgstr "Belang:"
 
-#: apps/wiki/models.py:32
+#: apps/wiki/models.py:33
 msgid "Minor details like punctuation and spelling errors"
 msgstr "Kleine details, zoals interpunctie en spelfouten"
 
-#: apps/wiki/models.py:34
+#: apps/wiki/models.py:35
 msgid "Content changes that don't require immediate translation"
 msgstr "Inhoudswijzigingen die geen directe vertaling vereisen"
 
-#: apps/wiki/models.py:36
+#: apps/wiki/models.py:37
 msgid "Major content changes that will make older translations inaccurate"
 msgstr "Grote inhoudswijzigingen die oudere vertalingen onnauwkeurig maken"
 
-#: apps/wiki/models.py:41
+#: apps/wiki/models.py:42
 msgid "Troubleshooting"
 msgstr "Probleemoplossing"
 
-#: apps/wiki/models.py:42
+#: apps/wiki/models.py:43
 msgid "How to"
 msgstr "Handleiding"
 
-#: apps/wiki/models.py:43
+#: apps/wiki/models.py:44
 msgid "How to contribute"
 msgstr "Meehelpen"
 
-#: apps/wiki/models.py:44
+#: apps/wiki/models.py:45
 msgid "Administration"
 msgstr "Beheer"
 
-#: apps/wiki/models.py:45
+#: apps/wiki/models.py:46
 msgid "Navigation"
 msgstr "Navigatie"
 
-#: apps/wiki/models.py:61
+#: apps/wiki/models.py:62
 msgid "Desktop:"
 msgstr "Desktop:"
 
-#: apps/wiki/models.py:64 apps/wiki/models.py:65 apps/wiki/models.py:71
+#: apps/wiki/models.py:65 apps/wiki/models.py:66 apps/wiki/models.py:76
+#, fuzzy
+msgid "Firefox 6"
+msgstr "Firefox 4"
+
+#: apps/wiki/models.py:67 apps/wiki/models.py:68 apps/wiki/models.py:78
+#, fuzzy
+msgid "Firefox 5"
+msgstr "Firefox 4"
+
+#: apps/wiki/models.py:69 apps/wiki/models.py:70 apps/wiki/models.py:80
 msgid "Firefox 4"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:66 apps/wiki/models.py:67
+#: apps/wiki/models.py:71 apps/wiki/models.py:72
 msgid "Firefox 3.5-3.6"
 msgstr "Firefox 3.5-3.6"
 
-#: apps/wiki/models.py:68 apps/wiki/models.py:69
+#: apps/wiki/models.py:73 apps/wiki/models.py:74
 msgid "Firefox 3.0"
 msgstr "Firefox 3.0"
 
-#: apps/wiki/models.py:70
+#: apps/wiki/models.py:75
 msgid "Mobile:"
 msgstr "Mobiel:"
 
-#: apps/wiki/models.py:72
-msgid "Firefox 4 for Mobile"
+#: apps/wiki/models.py:77
+#, fuzzy
+msgid "Firefox 6 for Mobile"
+msgstr "Firefox 4 voor Mobiel"
+
+#: apps/wiki/models.py:79
+#, fuzzy
+msgid "Firefox 5 for Mobile"
 msgstr "Firefox 4 voor Mobiel"
 
 #: apps/wiki/models.py:81
+msgid "Firefox 4 for Mobile"
+msgstr "Firefox 4 voor Mobiel"
+
+#: apps/wiki/models.py:90
 msgid "Desktop OS:"
 msgstr "Desktop-OS:"
 
-#: apps/wiki/models.py:82
+#: apps/wiki/models.py:91
 msgid "Windows"
 msgstr "Windows"
 
-#: apps/wiki/models.py:83
+#: apps/wiki/models.py:92
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: apps/wiki/models.py:84
+#: apps/wiki/models.py:93
 msgid "Linux"
 msgstr "Linux"
 
-#: apps/wiki/models.py:85
+#: apps/wiki/models.py:94
 msgid "Mobile OS:"
 msgstr "Mobiel-OS:"
 
-#: apps/wiki/models.py:86
+#: apps/wiki/models.py:95
 msgid "Android"
 msgstr "Android"
 
-#: apps/wiki/models.py:87
+#: apps/wiki/models.py:96
 msgid "Maemo"
 msgstr "Maemo"
 
-#: apps/wiki/models.py:96
+#: apps/wiki/models.py:105
 msgid "%(old)s Redirect %(number)i"
 msgstr "%(old)s Omleiding %(number)i"
 
-#: apps/wiki/models.py:97
+#: apps/wiki/models.py:106
 msgid "%(old)s-redirect-%(number)i"
 msgstr "%(old)s-omleiding-%(number)i"
 
-#: apps/wiki/models.py:237
+#: apps/wiki/models.py:187
+msgctxt "longer maintained."
+msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no "
+msgstr ""
+
+#: apps/wiki/models.py:277
 msgid "Please choose a category."
 msgstr "Kies een categorie."
 
-#: apps/wiki/models.py:566
+#: apps/wiki/models.py:611
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr "Een revisie moet zijn gebaseerd op een revisie van het %(locale)s-document. Revisie-ID %(id)s voldoet niet aan deze criteria."
 
@@ -2309,27 +2468,61 @@ msgstr "De sjabloon “%s” bestaat niet of heeft geen goedgekeurde revisie."
 msgid "The video \"%s\" does not exist."
 msgstr "De video “%s” bestaat niet."
 
-#: apps/wiki/tasks.py:34
+#: apps/wiki/tasks.py:36
 msgid "Your revision has been approved: {title}"
 msgstr "Uw revisie is goedgekeurd: {title}"
 
-#: apps/wiki/tasks.py:36
+#: apps/wiki/tasks.py:38
 msgid "Your revision has been rejected: {title}"
 msgstr "Uw revisie is afgewezen: {title}"
 
-#: apps/wiki/views.py:408
+#: apps/wiki/topic_strings.py:6
+msgctxt "KB Topic"
+msgid "ui"
+msgstr ""
+
+#: apps/wiki/topic_strings.py:7
+#, fuzzy
+msgctxt "KB Topic"
+msgid "mobile"
+msgstr "Mobiel"
+
+#: apps/wiki/topic_strings.py:8
+#, fuzzy
+msgctxt "KB Topic"
+msgid "Firefox 1.0"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/topic_strings.py:9
+msgctxt "KB Topic"
+msgid "addon"
+msgstr ""
+
+#: apps/wiki/topic_strings.py:10
+#, fuzzy
+msgctxt "KB Topic"
+msgid "Firefox 3.6.13"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/topic_strings.py:11
+#, fuzzy
+msgctxt "KB Topic"
+msgid "Firefox 4.0"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/views.py:426
 msgid "You cannot translate this document."
 msgstr "U kunt dit document niet vertalen."
 
-#: apps/wiki/views.py:598
+#: apps/wiki/views.py:623
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "Blij dit te horen &ndash; bedankt voor de terugkoppeling!"
 
-#: apps/wiki/views.py:600
+#: apps/wiki/views.py:625
 msgid "Sorry to hear that. Try searching for solutions below."
 msgstr "Dat is vervelend. Probeer hieronder een oplossing te vinden."
 
-#: apps/wiki/views.py:610
+#: apps/wiki/views.py:635
 msgid "You already voted on this Article."
 msgstr "U hebt al op dit artikel gestemd."
 
@@ -2346,6 +2539,49 @@ msgstr "Revisies vergelijken"
 msgid "Back to History"
 msgstr "Terug naar Geschiedenis"
 
+#: apps/wiki/templates/wiki/confirm_document_delete.html:5
+#, fuzzy
+msgid "Document Deleted | {document}"
+msgstr "Revisie verwijderen | {document}"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:7
+#, fuzzy
+msgid "Delete Document | {document}"
+msgstr "Revisie verwijderen | {document}"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:10
+#, fuzzy
+msgid "Delete Document"
+msgstr "Bericht verwijderen"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:16
+#, fuzzy
+msgid "The document has been deleted."
+msgstr "Het document “%s” bestaat niet."
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:18
+#, fuzzy
+msgid "Are you sure you want to delete this document?"
+msgstr "Weet u zeker dat u dit bericht wilt verwijderen?"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:20
+msgid "All translations of this document will also be deleted."
+msgstr ""
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:27
+#, fuzzy
+msgid "Current Content"
+msgstr "Inhoud vertalen"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:33
+#, fuzzy
+msgid "You are about to permanently delete this document. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
+msgstr "U gaat dit bericht voorgoed verwijderen. <strong>Dit kan niet ongedaan worden gemaakt!</strong> Weet u zeker dat u wilt doorgaan?"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:37 apps/wiki/templates/wiki/confirm_revision_delete.html:32
+msgid "Cancel and go back to document history"
+msgstr ""
+
 #: apps/wiki/templates/wiki/confirm_revision_delete.html:4
 msgid "Delete Revision | {document}"
 msgstr "Revisie verwijderen | {document}"
@@ -2354,11 +2590,25 @@ msgstr "Revisie verwijderen | {document}"
 msgid "Delete Revision"
 msgstr "Revisie verwijderen"
 
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:11
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:12
+#, fuzzy
+msgid "Unable to delete only revision of the document"
+msgstr "Revisie verwijderen | {document}"
+
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:13
+msgid "To delete the document, please notify an admin."
+msgstr ""
+
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:15
+#, fuzzy
+msgid "Go back to document history"
+msgstr "Terug naar Geschiedenis"
+
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:18
 msgid "Are you sure you want to delete this revision?"
 msgstr "Weet u zeker dat u deze revisie wilt verwijderen?"
 
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:21
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:28
 msgid "You are about to permanently delete this revision. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "U gaat deze revisie voorgoed verwijderen. <strong>Dit kan niet ongedaan worden gemaakt!</strong> Weet u zeker dat u wilt doorgaan?"
 
@@ -2375,118 +2625,124 @@ msgstr "Kunt u niet vinden wat u zoekt?"
 msgid "Here's a list of related articles that might help:"
 msgstr "Dit is een lijst van gerelateerde artikelen die mogelijk hulp bieden:"
 
-#: apps/wiki/templates/wiki/document.html:39
-msgid "Browse other articles about <a href=\"{url}\">{category}</a>"
+#: apps/wiki/templates/wiki/document.html:45
+#, fuzzy
+msgid "Browse other articles about %(topics)s"
 msgstr "Bekijk andere artikelen over <a href=\"{url}\">{category}</a>"
 
-#: apps/wiki/templates/wiki/document.html:42
+#: apps/wiki/templates/wiki/document.html:51
 msgid "Ask our awesome support community for help"
 msgstr "Vraag onze geweldige ondersteuningsgemeenschap om hulp"
 
-#: apps/wiki/templates/wiki/document.html:45
+#: apps/wiki/templates/wiki/document.html:54
 msgid "Or try searching:"
 msgstr "Of probeer te zoeken:"
 
-#: apps/wiki/templates/wiki/document.html:54
+#: apps/wiki/templates/wiki/document.html:63
 msgid "You've come to the right place for Firefox help!"
 msgstr "U bent op de juiste plaats voor hulp bij Firefox!"
 
-#: apps/wiki/templates/wiki/document.html:56
+#: apps/wiki/templates/wiki/document.html:65
 msgid "This page should provide you with a solution to what you posted on Twitter.<br/> If not, our community volunteers are ready to help."
 msgstr "Deze pagina zou een oplossing moeten bieden voor wat u via Twitter hebt gepost.<br/> Zo niet, dan zijn onze gemeenschapsvrijwilligers bereid te helpen."
 
-#: apps/wiki/templates/wiki/document.html:64
+#: apps/wiki/templates/wiki/document.html:73
 msgid "You were sent here by one of our <br/> volunteers from the <a href=\"%(url)s\">Army of Awesome</a>."
 msgstr "U bent hier naartoe verwezen door een van onze <br/> vrijwilligers van het <a href=\"%(url)s\">Army of Awesome</a>."
 
-#: apps/wiki/templates/wiki/document.html:94
+#: apps/wiki/templates/wiki/document.html:103
 msgid "Turn off emails."
 msgstr "E-mail uitschakelen"
 
-#: apps/wiki/templates/wiki/document.html:99
+#: apps/wiki/templates/wiki/document.html:108
 msgid "Get emailed when this article changes."
 msgstr "E-mail ontvangen als dit artikel wordt gewijzigd"
 
-#: apps/wiki/templates/wiki/document_revisions.html:4
+#: apps/wiki/templates/wiki/edit_document.html:7
+msgid "Edit Article | {document}"
+msgstr "Artikel bewerken | {document}"
+
+#: apps/wiki/templates/wiki/edit_document.html:11 apps/wiki/templates/wiki/includes/sidebar_modules.html:27 apps/wiki/templates/wiki/includes/sidebar_modules.html:29
+msgid "Edit Article"
+msgstr "Artikel bewerken"
+
+#: apps/wiki/templates/wiki/edit_document.html:16
+msgid "<em>Editing</em> {title}"
+msgstr "<em>Bewerken</em> {title}"
+
+#: apps/wiki/templates/wiki/edit_document.html:21
+msgid "Edit Description"
+msgstr "Beschrijving bewerken"
+
+#: apps/wiki/templates/wiki/edit_document.html:37 apps/wiki/templates/wiki/new_document.html:24
+msgid "Relevant to:"
+msgstr "Relevant voor:"
+
+#: apps/wiki/templates/wiki/edit_document.html:45
+msgid "Save description"
+msgstr "Beschrijving opslaan"
+
+#: apps/wiki/templates/wiki/edit_document.html:54
+msgid "Edit Content"
+msgstr "Inhoud bewerken"
+
+#: apps/wiki/templates/wiki/edit_document.html:56
+msgid "For help with writing articles, check out the <a href=\"%(url)s\">Support Document Guide</a>."
+msgstr "Bekijk de <a href=\"%(url)s\">Support Document Guide</a> voor hulp bij het schrijven van artikelen."
+
+#: apps/wiki/templates/wiki/history.html:4
 msgid "Revision History | {document}"
 msgstr "Revisiegeschiedenis | {document}"
 
-#: apps/wiki/templates/wiki/document_revisions.html:7
+#: apps/wiki/templates/wiki/history.html:7
 msgid "History"
 msgstr "Geschiedenis"
 
-#: apps/wiki/templates/wiki/document_revisions.html:11
+#: apps/wiki/templates/wiki/history.html:11
 msgid "History of {title}"
 msgstr "Geschiedenis van {title}"
 
-#: apps/wiki/templates/wiki/document_revisions.html:13
+#: apps/wiki/templates/wiki/history.html:13
 msgid "Revision history for:"
 msgstr "Revisiegeschiedenis voor:"
 
-#: apps/wiki/templates/wiki/document_revisions.html:30 apps/wiki/templates/wiki/document_revisions.html:91
+#: apps/wiki/templates/wiki/history.html:30 apps/wiki/templates/wiki/history.html:94
 msgid "Compare Selected Translations"
 msgstr "Geselecteerde vertalingen vergelijken"
 
-#: apps/wiki/templates/wiki/document_revisions.html:30 apps/wiki/templates/wiki/document_revisions.html:91
+#: apps/wiki/templates/wiki/history.html:30 apps/wiki/templates/wiki/history.html:94
 msgid "Compare Selected Revisions"
 msgstr "Geselecteerde revisies vergelijken"
 
-#: apps/wiki/templates/wiki/document_revisions.html:52
+#: apps/wiki/templates/wiki/history.html:52
 msgid "Review"
 msgstr "Beoordelen"
 
-#: apps/wiki/templates/wiki/document_revisions.html:54
+#: apps/wiki/templates/wiki/history.html:54
 msgctxt "revision"
 msgid "Unreviewed"
 msgstr "Niet beoordeeld"
 
-#: apps/wiki/templates/wiki/document_revisions.html:58
+#: apps/wiki/templates/wiki/history.html:58
 msgid "Current"
 msgstr "Actueel"
 
-#: apps/wiki/templates/wiki/document_revisions.html:60
+#: apps/wiki/templates/wiki/history.html:60
 msgid "Approved"
 msgstr "Goedgekeurd"
 
-#: apps/wiki/templates/wiki/document_revisions.html:96
+#: apps/wiki/templates/wiki/history.html:82 apps/wiki/templates/wiki/revision.html:54
+msgid "Edit article based on this revision"
+msgstr "Artikel bewerken op basis van deze revisie"
+
+#: apps/wiki/templates/wiki/history.html:99
 msgid "This document has no revisions."
 msgstr "Dit document heeft geen revisies."
 
-#: apps/wiki/templates/wiki/edit_document.html:6
-msgid "Edit Article | {document}"
-msgstr "Artikel bewerken | {document}"
-
-#: apps/wiki/templates/wiki/edit_document.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:27 apps/wiki/templates/wiki/includes/sidebar_modules.html:29
-msgid "Edit Article"
-msgstr "Artikel bewerken"
-
-#: apps/wiki/templates/wiki/edit_document.html:15
-msgid "<em>Editing</em> {title}"
-msgstr "<em>Bewerken</em> {title}"
-
-#: apps/wiki/templates/wiki/edit_document.html:19
-msgid "Edit Description"
-msgstr "Beschrijving bewerken"
-
-#: apps/wiki/templates/wiki/edit_document.html:32 apps/wiki/templates/wiki/new_document.html:24
-msgid "Relevant to:"
-msgstr "Relevant voor:"
-
-#: apps/wiki/templates/wiki/edit_document.html:40
-msgid "Save description"
-msgstr "Beschrijving opslaan"
-
-#: apps/wiki/templates/wiki/edit_document.html:49
-msgid "Edit Content"
-msgstr "Inhoud bewerken"
-
-#: apps/wiki/templates/wiki/edit_document.html:51
-msgid "For help with writing articles, check out the <a href=\"%(url)s\">Support Document Guide</a>."
-msgstr "Bekijk de <a href=\"%(url)s\">Support Document Guide</a> voor hulp bij het schrijven van artikelen."
-
 #: apps/wiki/templates/wiki/list_documents.html:6
-msgid "Articles tagged: {tag}"
-msgstr "Artikelen gelabeld met {tag}"
+#, fuzzy
+msgid "Topic: {topic}"
+msgstr "Alleen onderwerpen"
 
 #: apps/wiki/templates/wiki/list_documents.html:8
 msgid "All Articles"
@@ -2600,7 +2856,7 @@ msgstr "Bronnen van volledige artikelen"
 msgid "The {default_locale} version has no approved content to show."
 msgstr "De versie in het {default_locale} heeft geen goedgekeurde inhoud."
 
-#: apps/wiki/templates/wiki/review_translation.html:49 apps/wiki/templates/wiki/translate.html:127
+#: apps/wiki/templates/wiki/review_translation.html:49 apps/wiki/templates/wiki/translate.html:129
 msgid "Approved {default_locale} version:"
 msgstr "Goedgekeurde versie voor {default_locale}:"
 
@@ -2674,10 +2930,6 @@ msgstr "Is goedgekeurd?"
 msgid "Is current revision?"
 msgstr "Is actuele revisie?"
 
-#: apps/wiki/templates/wiki/revision.html:54
-msgid "Edit article based on this revision"
-msgstr "Artikel bewerken op basis van deze revisie"
-
 #: apps/wiki/templates/wiki/select_locale.html:4
 msgid "Select language | {document}"
 msgstr "Taal selecteren | {document}"
@@ -2690,64 +2942,64 @@ msgstr "Taal selecteren"
 msgid "Select a language to translate to:"
 msgstr "Selecteer een taal waarnaar te vertalen:"
 
-#: apps/wiki/templates/wiki/translate.html:6
+#: apps/wiki/templates/wiki/translate.html:7
 msgid "Translate Article | {document}"
 msgstr "Artikel vertalen | {document}"
 
-#: apps/wiki/templates/wiki/translate.html:9 apps/wiki/templates/wiki/includes/sidebar_modules.html:36 apps/wiki/templates/wiki/includes/sidebar_modules.html:38
+#: apps/wiki/templates/wiki/translate.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:36 apps/wiki/templates/wiki/includes/sidebar_modules.html:38
 #: apps/wiki/templates/wiki/includes/sidebar_modules.html:45 apps/wiki/templates/wiki/includes/sidebar_modules.html:47
 msgid "Translate Article"
 msgstr "Artikel vertalen"
 
-#: apps/wiki/templates/wiki/translate.html:15
+#: apps/wiki/templates/wiki/translate.html:16
 msgid "Translating {title}"
 msgstr "{title} vertalen"
 
-#: apps/wiki/templates/wiki/translate.html:18
+#: apps/wiki/templates/wiki/translate.html:19
 msgid "Translating article to {locale}"
 msgstr "Artikel vertalen naar het {locale}"
 
-#: apps/wiki/templates/wiki/translate.html:23
+#: apps/wiki/templates/wiki/translate.html:24
 msgid "You are translating an unreviewed or rejected English document."
 msgstr "U vertaalt een niet-beoordeeld of verworpen Engels document."
 
-#: apps/wiki/templates/wiki/translate.html:26
+#: apps/wiki/templates/wiki/translate.html:27
 msgid "Choose a locale:"
 msgstr "Kies een locale:"
 
-#: apps/wiki/templates/wiki/translate.html:44
+#: apps/wiki/templates/wiki/translate.html:46
 msgid "Translate Description"
 msgstr "Beschrijving vertalen"
 
-#: apps/wiki/templates/wiki/translate.html:59
+#: apps/wiki/templates/wiki/translate.html:61
 msgid "Title in {locale}:"
 msgstr "Titel in het {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:69
+#: apps/wiki/templates/wiki/translate.html:71
 msgid "Slug in {locale}:"
 msgstr "Identificator in het {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:76
+#: apps/wiki/templates/wiki/translate.html:78
 msgid "Save title and slug"
 msgstr "Titel en identificator opslaan"
 
-#: apps/wiki/templates/wiki/translate.html:85
+#: apps/wiki/templates/wiki/translate.html:87
 msgid "Translate Content"
 msgstr "Inhoud vertalen"
 
-#: apps/wiki/templates/wiki/translate.html:100
+#: apps/wiki/templates/wiki/translate.html:102
 msgid "Keywords in {locale}:"
 msgstr "Trefwoorden in het {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:110
+#: apps/wiki/templates/wiki/translate.html:112
 msgid "Search result summary in {locale}:"
 msgstr "Samenvatting voor zoekresultaten in het {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:122
+#: apps/wiki/templates/wiki/translate.html:124
 msgid "Note: There are no approved translations for this article."
 msgstr "Noot: er zijn geen goedgekeurde vertalingen voor dit artikel."
 
-#: apps/wiki/templates/wiki/translate.html:131
+#: apps/wiki/templates/wiki/translate.html:133
 msgid "{locale} translation:"
 msgstr "{locale}e vertaling:"
 
@@ -2771,24 +3023,32 @@ msgstr ""
 "<p>Dit artikel kan verouderd zijn.</p> <p>Er is een belangrijke wijziging aangebracht in het Engelse artikel waarop dit is gebaseerd. Totdat deze pagina is bijgewerkt, vindt u dit misschien handig: "
 "<a href=\"%(url)s\">%(title)s</a> </p>"
 
-#: apps/wiki/templates/wiki/includes/document_macros.html:53
+#: apps/wiki/templates/wiki/includes/document_macros.html:48
+msgid "This article is no longer maintained, so its content might be out of date."
+msgstr ""
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:63
 msgid "Our volunteers haven't translated this article into %(locale)s yet. <a href=\"%(help_link)s\">Join us and help get the job done!</a>"
 msgstr "Onze vrijwilligers hebben dit artikel nog niet naar het %(locale)s vertaald. <a href=\"%(help_link)s\">Doe mee en help de klus te klaren!</a>"
 
 #. This is shown for existing, never-approved translations
-#: apps/wiki/templates/wiki/includes/document_macros.html:63
+#: apps/wiki/templates/wiki/includes/document_macros.html:73
 msgid "Our volunteers are working on translating this article. Until it's ready, maybe the English version can be of some help."
 msgstr "Onze vrijwilligers werken aan een vertaling voor dit artikel. Totdat deze klaar is, kan de Engelse versie misschien hulp bieden."
 
-#: apps/wiki/templates/wiki/includes/document_macros.html:75
+#: apps/wiki/templates/wiki/includes/document_macros.html:85
 msgid "This article doesn't have approved content yet."
 msgstr "Dit artikel bevat nog geen goedgekeurde inhoud."
 
-#: apps/wiki/templates/wiki/includes/document_vote.html:7
+#: apps/wiki/templates/wiki/includes/document_macros.html:101
+msgid "Warning: There are newer unreviewed revisions of this article. See <a href=\"%(url)s\">the history</a> to base your edit on an existing unreviewed revision."
+msgstr ""
+
+#: apps/wiki/templates/wiki/includes/document_vote.html:6
 msgid "Was this article helpful?"
 msgstr "Was dit artikel nuttig?"
 
-#: apps/wiki/templates/wiki/includes/document_vote.html:10
+#: apps/wiki/templates/wiki/includes/document_vote.html:9
 msgid "Please wait..."
 msgstr "Een moment geduld…"
 
@@ -2905,27 +3165,27 @@ msgctxt "site_title"
 msgid "Firefox Help"
 msgstr "Firefox Help"
 
-#: templates/base.html:89
+#: templates/base.html:102
 msgid "Be <mark>Awesome</mark>"
 msgstr "Wees <mark>geweldig</mark>"
 
-#: templates/base.html:94
+#: templates/base.html:107
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
 msgstr "Wist u dat Firefox Help wordt mogelijk gemaakt door vrijwillige superhelden van over de hele wereld?"
 
-#: templates/base.html:97
+#: templates/base.html:110
 msgid "Grab your cape and join us &raquo;"
 msgstr "Grijp uw cape en doe met ons mee &raquo;"
 
-#: templates/base.html:101
+#: templates/base.html:114
 msgid "Check your <mark>plugins</mark>"
 msgstr "Controleer uw <mark>plug-ins</mark>"
 
-#: templates/base.html:106
+#: templates/base.html:119
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
 msgstr "Wat is een plug-in? Waarom moet ik ze bijgewerkt houden? Beantwoord deze vragen en voer direct een controle uit om te zien of u up-to-date bent."
 
-#: templates/base.html:111
+#: templates/base.html:124
 msgid "Find out more &raquo;"
 msgstr "Meer lezen &raquo;"
 
@@ -3146,15 +3406,19 @@ msgstr "Zoeken in Firefox Help"
 msgid "Welcome, <span class=\"user\">{user}</span>."
 msgstr "Welkom <span class=\"user\">{user}</span>."
 
-#: templates/includes/common_macros.html:25
+#: templates/includes/common_macros.html:26
+msgid "Inbox"
+msgstr ""
+
+#: templates/includes/common_macros.html:32
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: templates/includes/common_macros.html:27
+#: templates/includes/common_macros.html:34
 msgid "Sign Out"
 msgstr "Afmelden"
 
-#: templates/includes/common_macros.html:31
+#: templates/includes/common_macros.html:38
 msgid "Want to contribute?<br /> <a href=\"%(login_url)s\">Sign In</a> or <a href=\"%(register_url)s\">Register</a>"
 msgstr "Wilt u meehelpen?<br /> <a href=\"%(login_url)s\">Meld u aan</a> of <a href=\"%(register_url)s\">registreer</a>."
 
@@ -3220,22 +3484,6 @@ msgstr[1] "Pagina {n}"
 msgid "Next"
 msgstr "Volgende"
 
-#: templates/layout/login.html:16
-msgid "Remember me"
-msgstr "Mij onthouden"
-
-#: templates/layout/login.html:23
-msgid "Click here to register"
-msgstr "Klik hier om te registeren"
-
-#: templates/layout/login.html:26
-msgid "Click here if you've forgotten your password"
-msgstr "Klik hier als u uw wachtwoord bent vergeten"
-
-#: templates/layout/login.html:26
-msgid "I forgot my password"
-msgstr "Ik ben mijn wachtwoord vergeten"
-
 #: templates/layout/paginator.html:7
 msgid "Previous"
 msgstr "Vorige"
@@ -3275,6 +3523,36 @@ msgstr "Firefox Sync"
 #: templates/mobile/base.html:91
 msgid "View full site"
 msgstr "Volledige website bekijken"
+
+#~ msgid "All translations in English..."
+#~ msgstr "Alle vertalingen in het Nederlands…"
+
+#~ msgid "Select an image file to upload."
+#~ msgstr "Selecteer een bestand om te uploaden."
+
+#~ msgid "Submit file"
+#~ msgstr "Bestand indienen"
+
+#~ msgid "Please no SWFs, only FLVs."
+#~ msgstr "Liever geen SWF’s, alleen FLV’s."
+
+#~ msgid "Delete thumbnail"
+#~ msgstr "Miniatuur verwijderen"
+
+#~ msgid "Articles tagged: {tag}"
+#~ msgstr "Artikelen gelabeld met {tag}"
+
+#~ msgid "Remember me"
+#~ msgstr "Mij onthouden"
+
+#~ msgid "Click here to register"
+#~ msgstr "Klik hier om te registeren"
+
+#~ msgid "Click here if you've forgotten your password"
+#~ msgstr "Klik hier als u uw wachtwoord bent vergeten"
+
+#~ msgid "I forgot my password"
+#~ msgstr "Ik ben mijn wachtwoord vergeten"
 
 #~ msgid "Forum"
 #~ msgstr "Forum"
@@ -3336,9 +3614,6 @@ msgstr "Volledige website bekijken"
 
 #~ msgid "Select Locale"
 #~ msgstr "Locale selecteren"
-
-#~ msgid "Username: {username}"
-#~ msgstr "Gebruikersnaam: {username}"
 
 #~ msgid "Contact"
 #~ msgstr "Contact"
@@ -3421,9 +3696,6 @@ msgstr "Volledige website bekijken"
 
 #~ msgid "There is no approved revision to translate from."
 #~ msgstr "de goedgekeurde versie van deze pagina."
-
-#~ msgid "Topics in {locale}:"
-#~ msgstr "Alleen onderwerpen"
 
 #~ msgid "Bugzilla"
 #~ msgstr "Bugzilla"

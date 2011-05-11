@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-12 15:29-0700\n"
+"POT-Creation-Date: 2011-05-11 06:33-0700\n"
 "PO-Revision-Date: 2011-04-27 15:15+0200\n"
 "Last-Translator: Kristján Bjarni <kristjanbjarni@gmail.com>\n"
 "Language-Team: Icelandic\n"
@@ -14,69 +14,69 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.1.5\n"
 
-#: apps/announcements/models.py:18
+#: apps/announcements/models.py:19
 msgid "Start displaying"
 msgstr "Birta hvenær"
 
-#: apps/announcements/models.py:19
+#: apps/announcements/models.py:20
 msgid "When this announcement will start appearing. (US/Pacific)"
 msgstr "Hvenær þessi tilkynning birtist. (US/Pacific)"
 
-#: apps/announcements/models.py:23
+#: apps/announcements/models.py:24
 msgid "Stop displaying"
 msgstr "Hætta birtingu"
 
-#: apps/announcements/models.py:24
+#: apps/announcements/models.py:25
 msgid "When this announcement will stop appearing. Leave blank for indefinite. (US/Pacific)"
-msgstr ""
-"Hvenær þessi tilkynning hættir að birtast. Hafðu tómt fyrir ótilgreint. "
-"(US/Pacific)"
+msgstr "Hvenær þessi tilkynning hættir að birtast. Hafðu tómt fyrir ótilgreint. (US/Pacific)"
 
-#: apps/announcements/models.py:28
+#: apps/announcements/models.py:29
 msgid "Use wiki syntax or HTML. It will display similar to a document's content."
-msgstr ""
-"Notaðu wiki tákn eða HTML. Það birtist á sambærilegan hátt og efni "
-"skjalsins."
+msgstr "Notaðu wiki tákn eða HTML. Það birtist á sambærilegan hátt og efni skjalsins."
 
-#: apps/customercare/views.py:27 apps/dashboards/readouts.py:103
+#: apps/announcements/tasks.py:34
+msgid "New announcement for {group}"
+msgstr ""
+
+#: apps/customercare/views.py:28 apps/dashboards/readouts.py:106
 msgid "Most Recent"
 msgstr "Nýjasta"
 
-#: apps/customercare/views.py:28
+#: apps/customercare/views.py:29
 msgid "Unanswered"
 msgstr "Ósvarað"
 
-#: apps/customercare/views.py:29
+#: apps/customercare/views.py:30
 msgid "Answered"
 msgstr "Svarað"
 
-#: apps/customercare/views.py:30
+#: apps/customercare/views.py:31
 msgid "All"
 msgstr "Allt"
 
 #. L10n: the tweet needs to be a reply to another tweet.
-#: apps/customercare/views.py:168
+#: apps/customercare/views.py:171
 msgid "Reply-to is empty"
 msgstr "Svar-við er tómt"
 
 #. L10n: the tweet has no content.
-#: apps/customercare/views.py:173
+#: apps/customercare/views.py:176
 msgid "Message is empty"
 msgstr "Skilaboð er tóm"
 
-#: apps/customercare/views.py:176
+#: apps/customercare/views.py:179
 msgid "Message is too long"
 msgstr "Skilaboð er of löng"
 
-#: apps/customercare/views.py:183 apps/customercare/views.py:251
+#: apps/customercare/views.py:186 apps/customercare/views.py:255
 msgid "An error occured: {message}"
 msgstr "Villa kom upp: {message}"
 
-#: apps/customercare/views.py:234 apps/customercare/views.py:239
+#: apps/customercare/views.py:238 apps/customercare/views.py:243
 msgid "Invalid ID."
 msgstr "Ógilt auðkenni."
 
-#: apps/customercare/views.py:243
+#: apps/customercare/views.py:247
 msgid "Tweets that are replies or have replies must not be hidden."
 msgstr "Tweet sem eru svör eða hafa svör mega ekki vera falin."
 
@@ -90,9 +90,7 @@ msgstr "Vertu þátttakandi í <mark>hópi hinna æðislegu</mark>"
 
 #: apps/customercare/templates/customercare/landing.html:14
 msgid "Love Firefox and have a few moments to help?<br /> Help other Firefox users on Twitter. Good things will come to those who tweet!"
-msgstr ""
-"Ertu áhugasamur um Firefox og hefur smá tíma aflögu?<br /> Hjálpaðu öðrum "
-"Firefox notendum á Twitter. Góðir hlutir gerast fyrir þá sem Tweeta!"
+msgstr "Ertu áhugasamur um Firefox og hefur smá tíma aflögu?<br /> Hjálpaðu öðrum Firefox notendum á Twitter. Góðir hlutir gerast fyrir þá sem Tweeta!"
 
 #: apps/customercare/templates/customercare/landing.html:24
 msgid "Choose a <mark>tweet below</mark>"
@@ -127,9 +125,8 @@ msgid ""
 "We couldn't find any matching tweets for %(language)s at this time. Please check again later, choose a different tweet type from the menu above, or view tweets for other languages by using the "
 "language selector at the bottom of the page."
 msgstr ""
-"Ekki tókst að finna tweet sem pössuðu við %(language)s. Reyndu aftur seinna, "
-"veldu annað tweet frá valmyndinni fyrir ofan, eða skoðaðu tweet fyrir önnur "
-"tungumál með því að nota tungumála valmyndina neðst á síðunni."
+"Ekki tókst að finna tweet sem pössuðu við %(language)s. Reyndu aftur seinna, veldu annað tweet frá valmyndinni fyrir ofan, eða skoðaðu tweet fyrir önnur tungumál með því að nota tungumála "
+"valmyndina neðst á síðunni."
 
 #: apps/customercare/templates/customercare/landing.html:83
 msgid "Our army has responded to:"
@@ -177,11 +174,10 @@ msgstr "Farðu með það upp á <mark>næsta stig!</mark>"
 
 #: apps/customercare/templates/customercare/landing.html:149
 msgid "Want to go beyond 140 characters? <a href=\"%(join_url)s\">Join the support community</a> and help many more Firefox users."
-msgstr ""
-"Viltu skrifa meira en 140 stafi? <a href=\"%(join_url)s\">Taktu þátt í "
-"samfélaginu</a> og hjálpaðu fleiri Firefox notendum."
+msgstr "Viltu skrifa meira en 140 stafi? <a href=\"%(join_url)s\">Taktu þátt í samfélaginu</a> og hjálpaðu fleiri Firefox notendum."
 
-#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:93 apps/kbforums/templates/kbforums/includes/post.html:29
+#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:95 apps/kbforums/templates/kbforums/includes/post.html:29
+#: apps/messages/templates/messages/read.html:19
 msgid "Reply"
 msgstr "Svara"
 
@@ -194,10 +190,8 @@ msgid ""
 "We have created <a href=\"%(signpost_help_url)s\">signpost messages</a> for easily replying to top Firefox topics on Twitter. If you would like to have messages for your language appear here, "
 "contact Kadir Topal for more info: %(contact_email)s"
 msgstr ""
-"Búið er að búa til <a href=\"%(signpost_help_url)s\">birtingu skilaboða</a> "
-"til að geta auðveldlega svarað Firefox umræðum á Twitter. Ef þú vilt að "
-"skilaboð fyrir þitt tungumál birtist hér, hafðu samband við Kadir Topal "
-"fyrir meiri upplýsingar: %(contact_email)s"
+"Búið er að búa til <a href=\"%(signpost_help_url)s\">birtingu skilaboða</a> til að geta auðveldlega svarað Firefox umræðum á Twitter. Ef þú vilt að skilaboð fyrir þitt tungumál birtist hér, hafðu "
+"samband við Kadir Topal fyrir meiri upplýsingar: %(contact_email)s"
 
 #: apps/customercare/templates/customercare/reply_modal.html:49
 msgid "Get personal"
@@ -205,15 +199,13 @@ msgstr "Persónulegra"
 
 #: apps/customercare/templates/customercare/reply_modal.html:51
 msgid "Tweak it and make it your own. Personalized messages go a long way in helping others."
-msgstr ""
-"Hafðu það persónulegt og á þinn hátt. Persónuleg skilaboð eru góð fyrir það "
-"að hjálpa öðrum."
+msgstr "Hafðu það persónulegt og á þinn hátt. Persónuleg skilaboð eru góð fyrir það að hjálpa öðrum."
 
-#: apps/customercare/templates/customercare/reply_modal.html:64
+#: apps/customercare/templates/customercare/reply_modal.html:65 apps/messages/views.py:74
 msgid "Your message was sent!"
 msgstr "Skilaboðin voru send!"
 
-#: apps/customercare/templates/customercare/reply_modal.html:66 apps/wiki/templates/wiki/includes/submit_revision_modal.html:18
+#: apps/customercare/templates/customercare/reply_modal.html:67 apps/wiki/templates/wiki/includes/submit_revision_modal.html:18
 msgid "Submit"
 msgstr "Senda"
 
@@ -241,200 +233,187 @@ msgstr "Skráðu þig inn með þínum Twitter aðgangi"
 
 #: apps/customercare/templates/customercare/twitter_modal.html:5
 msgid "Before you join the Army of Awesome, you need to log in so you can respond to tweets. You will now be redirected to Twitter to log in."
-msgstr ""
-"Áður en þú verður þátttakandi í hópi hinna æðislegu, verður að skrá þig inn "
-"þannig að þú getir svarað tweetum. Þú verður sendur áfram á Twitter til að "
-"skrá þig inn."
+msgstr "Áður en þú verður þátttakandi í hópi hinna æðislegu, verður að skrá þig inn þannig að þú getir svarað tweetum. Þú verður sendur áfram á Twitter til að skrá þig inn."
 
 #: apps/customercare/templates/customercare/twitter_modal.html:12 apps/gallery/templates/gallery/confirm_media_delete.html:60 apps/gallery/templates/gallery/edit_media.html:28
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:53
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:79 apps/gallery/templates/gallery/includes/upload_media_form.html:83
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:87 apps/gallery/templates/gallery/includes/upload_media_form.html:117
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:134 apps/kbforums/templates/kbforums/confirm_post_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:30
-#: apps/kbforums/templates/kbforums/edit_post.html:29 apps/kbforums/templates/kbforums/edit_thread.html:27 apps/kbforums/templates/kbforums/new_thread.html:34
-#: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_revision_delete.html:25 apps/wiki/templates/wiki/includes/review_form.html:35
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:58
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:132 apps/gallery/templates/gallery/includes/upload_media_form.html:138
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/kbforums/templates/kbforums/confirm_post_delete.html:30 apps/kbforums/templates/kbforums/confirm_thread_delete.html:32
+#: apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29 apps/kbforums/templates/kbforums/new_thread.html:36
+#: apps/messages/templates/messages/new.html:16 apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/includes/review_form.html:35
 #: apps/wiki/templates/wiki/includes/review_form.html:49 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "Hætta við"
 
-#: apps/dashboards/models.py:19
+#: apps/dashboards/__init__.py:8
 msgid "This Week"
 msgstr "Þessa viku"
 
-#: apps/dashboards/models.py:20
+#: apps/dashboards/__init__.py:9
 msgid "All Time"
 msgstr "Alltaf"
 
-#: apps/dashboards/readouts.py:68 apps/dashboards/readouts.py:172
+#: apps/dashboards/models.py:168
+msgid "Parameters which will be passed to the dashboard. The dashboard determines the meaning and format of these."
+msgstr ""
+
+#: apps/dashboards/readouts.py:71 apps/dashboards/readouts.py:175
 msgid "Most-Visited Articles"
 msgstr "Oftast heimsótt"
 
-#: apps/dashboards/readouts.py:72
+#: apps/dashboards/readouts.py:75
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
-msgstr ""
-"Þessar 20 síður eru þær sem eru mest skoðaðar, sem telur yfir 50% af "
-"netumferð í þekkingargrunninum."
+msgstr "Þessar 20 síður eru þær sem eru mest skoðaðar, sem telur yfir 50% af netumferð í þekkingargrunninum."
 
-#: apps/dashboards/readouts.py:75 apps/dashboards/readouts.py:318 apps/wiki/models.py:46
+#: apps/dashboards/readouts.py:78 apps/dashboards/readouts.py:323 apps/wiki/models.py:47
 msgid "Templates"
 msgstr "Sniðmát"
 
-#: apps/dashboards/readouts.py:79
-msgid "How many of the approved templates which allow translations have an approved translation into this language"
-msgstr ""
-"Hve mörg samþykkt sniðmát sem leyfa þýðingar eru með samþykktar þýðingar á "
-"þessu tungumáli"
-
 #: apps/dashboards/readouts.py:82
+msgid "How many of the approved templates which allow translations have an approved translation into this language"
+msgstr "Hve mörg samþykkt sniðmát sem leyfa þýðingar eru með samþykktar þýðingar á þessu tungumáli"
+
+#: apps/dashboards/readouts.py:85
 msgid "All Knowledge Base Articles"
 msgstr "Allir síður í þekkingagrunni"
 
-#: apps/dashboards/readouts.py:85
+#: apps/dashboards/readouts.py:88
 msgid "How many of the approved English articles which allow translations have an approved translation into this language"
-msgstr ""
-"Hve margar samþykktar enskar síður sem leyfa þýðingar eru með samþykktar "
-"þýðingar á þessu tungumáli"
+msgstr "Hve margar samþykktar enskar síður sem leyfa þýðingar eru með samþykktar þýðingar á þessu tungumáli"
 
-#: apps/dashboards/readouts.py:100
+#: apps/dashboards/readouts.py:103
 msgid "Visits this week"
 msgstr "Heimsóknir þessa viku"
 
-#: apps/dashboards/readouts.py:101
+#: apps/dashboards/readouts.py:104
 msgid "Status"
 msgstr "Staða"
 
-#: apps/dashboards/readouts.py:102
+#: apps/dashboards/readouts.py:105
 msgid "Most Viewed"
 msgstr "Oftast skoðað"
 
-#: apps/dashboards/readouts.py:174
+#: apps/dashboards/readouts.py:177
 msgid "All knowledge base articles..."
 msgstr "Allar síður í þekkingagrunni..."
 
-#: apps/dashboards/readouts.py:176
+#: apps/dashboards/readouts.py:179
 msgid "Visits"
 msgstr "Heimsóknir"
 
-#: apps/dashboards/readouts.py:179
+#: apps/dashboards/readouts.py:182
 msgid "Review Needed"
 msgstr "Þarfnast samþykktar"
 
 #. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:227
-msgid "All translations in English..."
-msgstr "Allar þýðingar á ensku..."
-
 #: apps/dashboards/readouts.py:231
+#, fuzzy
+msgid "All translations..."
+msgstr "Leyfa þýðingar:"
+
+#: apps/dashboards/readouts.py:235
 msgid "Update Needed"
 msgstr "Nauðsynlegt að uppfæra"
 
-#: apps/dashboards/readouts.py:233
+#: apps/dashboards/readouts.py:237
 msgid "Out of Date"
 msgstr "Þarfnast uppfærslu"
 
-#: apps/dashboards/readouts.py:293
+#: apps/dashboards/readouts.py:298
 msgid "Translation Needed"
 msgstr "Þarfnast þýðingar"
 
 #. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:322
+#: apps/dashboards/readouts.py:327
 msgid "All templates in English..."
 msgstr "Öll sniðmát á íslensku..."
 
-#: apps/dashboards/readouts.py:330
+#: apps/dashboards/readouts.py:335
 msgid "Untranslated Articles"
 msgstr "Óþýddar síður"
 
-#: apps/dashboards/readouts.py:331
+#: apps/dashboards/readouts.py:336
 msgid "Untranslated"
 msgstr "Óþýddar"
 
-#: apps/dashboards/readouts.py:332
+#: apps/dashboards/readouts.py:337
 msgid "All untranslated articles..."
 msgstr "Allar óþýddar síður..."
 
-#: apps/dashboards/readouts.py:334
+#: apps/dashboards/readouts.py:339
 msgid "Updated"
 msgstr "Uppfært"
 
-#: apps/dashboards/readouts.py:374
+#: apps/dashboards/readouts.py:379
 msgid "Out-of-Date Translations"
 msgstr "Úreltar þýðingar"
 
-#: apps/dashboards/readouts.py:375
+#: apps/dashboards/readouts.py:380
 msgid "Out-of-Date"
 msgstr "Úrelt"
 
-#: apps/dashboards/readouts.py:376
+#: apps/dashboards/readouts.py:381
 msgid "All out-of-date translations..."
 msgstr "Allar úreltar þýðingar..."
 
-#: apps/dashboards/readouts.py:378
+#: apps/dashboards/readouts.py:383
 msgid "Out of date since"
 msgstr "Úrelt síðan"
 
-#: apps/dashboards/readouts.py:453
+#: apps/dashboards/readouts.py:458
 msgid "Translations Needing Updates"
 msgstr "Þýðingar sem þafnast uppfærslu"
 
-#: apps/dashboards/readouts.py:454
+#: apps/dashboards/readouts.py:459
 msgid "Needing Updates"
 msgstr "Þarfnast uppfærslu"
 
-#: apps/dashboards/readouts.py:455
+#: apps/dashboards/readouts.py:460
 msgid "All translations needing updates..."
 msgstr "Allar þýðingar sem þafnast uppfærslu..."
 
-#: apps/dashboards/readouts.py:462
+#: apps/dashboards/readouts.py:467
 msgid "Unreviewed Changes"
 msgstr "Ósamþykktar breytingar"
 
-#: apps/dashboards/readouts.py:466
+#: apps/dashboards/readouts.py:471
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "Ósamþykkt"
 
-#: apps/dashboards/readouts.py:467
+#: apps/dashboards/readouts.py:472
 msgid "All articles requiring review..."
 msgstr "Allar síður sem þarfnast samþykktar..."
 
-#: apps/dashboards/readouts.py:469
+#: apps/dashboards/readouts.py:474
 msgid "Changed"
 msgstr "Breytt"
 
-#: apps/dashboards/views.py:51 apps/dashboards/templates/dashboards/contributors.html:4
+#: apps/dashboards/views.py:47 apps/dashboards/templates/dashboards/contributors.html:4
 msgid "Contributor Dashboard"
 msgstr "Skjáborð þátttakanda"
 
-#: apps/dashboards/views.py:59 apps/dashboards/templates/dashboards/localization.html:4
+#: apps/dashboards/views.py:55 apps/dashboards/templates/dashboards/localization.html:4
 msgid "Localization Dashboard"
 msgstr "Þýðingarskjáborð"
 
-#: apps/dashboards/templates/dashboards/contributors.html:16 apps/dashboards/templates/dashboards/localization.html:42
+#: apps/dashboards/templates/dashboards/contributors.html:16 apps/dashboards/templates/dashboards/localization.html:15
 msgid "Show information for:"
 msgstr "Sýna upplýsingar fyrir:"
 
-#: apps/dashboards/templates/dashboards/localization.html:20
-msgid "%(numerator)s <small>of %(denominator)s</small>"
-msgstr "%(numerator)s <small>af %(denominator)s</small>"
+#: apps/dashboards/templates/dashboards/group_locale.html:4
+#, fuzzy
+msgid "{locale} | Group Dashboard"
+msgstr "Þýðingarskjáborð"
 
-#: apps/dashboards/templates/dashboards/localization.html:54
-msgid "Overview"
-msgstr "Yfirlit"
+#: apps/dashboards/templates/dashboards/group_locale.html:8
+#, fuzzy
+msgid "Group dashboard"
+msgstr "Skjáborð"
 
-#: apps/dashboards/templates/dashboards/localization.html:62
-msgid "User Interface"
-msgstr "Notandaviðmót"
-
-#: apps/dashboards/templates/dashboards/localization.html:66
-msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
+#: apps/dashboards/templates/dashboards/group_locale.html:25
+msgid "See full dashboard"
 msgstr ""
-"Fullþýtt notandaviðmót hjálpar notendum á þínu tungumáli að nota vefsvæðið. "
-"Hjálpaðu til við að <a href=\"%(url)s\">þýða viðmótið</a>."
-
-#: apps/dashboards/templates/dashboards/localization.html:75
-msgid "More options:"
-msgstr "Fleiri stillingar:"
 
 #: apps/dashboards/templates/dashboards/questions.html:3
 msgid "Support Forum Dashboard"
@@ -456,16 +435,36 @@ msgstr "Síða"
 msgid "changed by {users}"
 msgstr "breytt af {users}"
 
-#: apps/dashboards/templates/dashboards/includes/macros.html:26
+#: apps/dashboards/templates/dashboards/includes/macros.html:27
+msgid "Overview"
+msgstr "Yfirlit"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:39
+msgid "%(numerator)s <small>of %(denominator)s</small>"
+msgstr "%(numerator)s <small>af %(denominator)s</small>"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:56
+msgid "User Interface"
+msgstr "Notandaviðmót"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:60
+msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
+msgstr "Fullþýtt notandaviðmót hjálpar notendum á þínu tungumáli að nota vefsvæðið. Hjálpaðu til við að <a href=\"%(url)s\">þýða viðmótið</a>."
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:69
+msgid "More options:"
+msgstr "Fleiri stillingar:"
+
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:5
 msgctxt "dashboard"
 msgid "Review"
 msgstr "Yfirfara"
 
-#: apps/dashboards/templates/dashboards/includes/macros.html:39
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:9
 msgid "My profile"
 msgstr "Notandinn minn"
 
-#: apps/dashboards/templates/dashboards/includes/macros.html:42
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:12
 msgid "Edit my profile"
 msgstr "Breyta notanda"
 
@@ -533,7 +532,7 @@ msgstr "Í bið"
 msgid "Accepted and Fixed"
 msgstr "Samþykkt og lagað"
 
-#: apps/flagit/models.py:32 apps/wiki/templates/wiki/document_revisions.html:62
+#: apps/flagit/models.py:32 apps/wiki/templates/wiki/history.html:62
 msgid "Rejected"
 msgstr "Hafnað"
 
@@ -543,9 +542,7 @@ msgstr "Þú ert þegar búin að merkja þetta innihald."
 
 #: apps/flagit/views.py:41
 msgid "You have flagged this content. A moderator will review your submission shortly."
-msgstr ""
-"Þú ert búinn að merkja þetta innihald. Ritstjóri fer yfir efnið hjá þér "
-"fljótlega."
+msgstr "Þú ert búinn að merkja þetta innihald. Ritstjóri fer yfir efnið hjá þér fljótlega."
 
 #: apps/flagit/templates/flagit/queue.html:3 apps/flagit/templates/flagit/queue.html:8
 msgid "Flagged Content Pending Moderation"
@@ -584,7 +581,7 @@ msgid "There is no flagged content pending moderation."
 msgstr "Ekkert merkt innihald bíður yfirferðar."
 
 #: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:3 apps/kbforums/forms.py:28 apps/kbforums/forms.py:50
-#: apps/kbforums/forms.py:76 apps/wiki/forms.py:171 apps/wiki/templates/wiki/review_translation.html:70 apps/wiki/templates/wiki/includes/revision_diff.html:45
+#: apps/kbforums/forms.py:76 apps/wiki/forms.py:184 apps/wiki/templates/wiki/review_translation.html:70 apps/wiki/templates/wiki/includes/revision_diff.html:45
 msgid "Content:"
 msgstr "Innihald:"
 
@@ -605,104 +602,140 @@ msgstr "Uppfært:"
 msgid "Take Action:"
 msgstr "Aðgerð:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:35 apps/kbforums/templates/kbforums/includes/post.html:12
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:37 apps/kbforums/templates/kbforums/includes/post.html:12
+#: apps/wiki/templates/wiki/history.html:82
 msgid "Edit"
 msgstr "Breyta"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:27
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29 apps/kbforums/templates/kbforums/posts.html:39 apps/kbforums/templates/kbforums/includes/post.html:16
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:24 apps/wiki/templates/wiki/document_revisions.html:83
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:29
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:31 apps/kbforums/templates/kbforums/posts.html:41 apps/kbforums/templates/kbforums/includes/post.html:16
+#: apps/wiki/templates/wiki/confirm_document_delete.html:36 apps/wiki/templates/wiki/confirm_revision_delete.html:31 apps/wiki/templates/wiki/history.html:86
 msgid "Delete"
 msgstr "Eyða"
 
-#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:60 apps/wiki/templates/wiki/translate.html:55
+#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:69 apps/wiki/templates/wiki/translate.html:57
 msgid "Title:"
 msgstr "Titill:"
 
-#: apps/gallery/forms.py:14 apps/kbforums/forms.py:9 apps/wiki/forms.py:17
+#: apps/gallery/forms.py:13 apps/kbforums/forms.py:9 apps/wiki/forms.py:17
 msgid "Please provide a title."
 msgstr "Sláðu inn titil."
 
-#: apps/gallery/forms.py:15 apps/wiki/forms.py:18
+#: apps/gallery/forms.py:14 apps/wiki/forms.py:18
 msgid "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
-msgstr ""
-"Of stuttur titill (%(show_value)s stafir). Hann verður að vera að minnsta "
-"kosti %(limit_value)s stafir."
+msgstr "Of stuttur titill (%(show_value)s stafir). Hann verður að vera að minnsta kosti %(limit_value)s stafir."
 
-#: apps/gallery/forms.py:18 apps/kbforums/forms.py:13
+#: apps/gallery/forms.py:17 apps/kbforums/forms.py:13
 msgid "Please keep the length of your title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
-msgstr ""
-"Hafðu titil ekki lengri en %(limit_value)s stafir. Hann er núna %"
-"(show_value)s stafir."
+msgstr "Hafðu titil ekki lengri en %(limit_value)s stafir. Hann er núna %(show_value)s stafir."
 
-#: apps/gallery/forms.py:21
+#: apps/gallery/forms.py:20
 msgid "Please provide a description."
 msgstr "Sláðu inn lýsingu."
 
-#: apps/gallery/forms.py:22
+#: apps/gallery/forms.py:21
 msgid "Please keep the length of your description to %(limit_value)s characters or less. It is currently %(show_value)s characters."
-msgstr ""
-"Hafðu lýsingu ekki lengri en %(limit_value)s stafir. Hann er núna %"
-"(show_value)s stafir."
+msgstr "Hafðu lýsingu ekki lengri en %(limit_value)s stafir. Hann er núna %(show_value)s stafir."
 
-#: apps/gallery/forms.py:25 apps/upload/forms.py:7
+#: apps/gallery/forms.py:24 apps/upload/forms.py:7
 msgid "You have not selected an image to upload."
 msgstr "Þú valdi ekki neina mynd til að hlaða inn."
 
-#: apps/gallery/forms.py:26 apps/upload/forms.py:8
+#: apps/gallery/forms.py:25 apps/upload/forms.py:8
 msgid "Please keep the length of your image filename to %(max)s characters or less. It is currently %(length)s characters."
-msgstr ""
-"Hafðu skráarnafn myndar ekki lengri en %(max)s stafir. Það er núna %"
-"(length)s stafir."
+msgstr "Hafðu skráarnafn myndar ekki lengri en %(max)s stafir. Það er núna %(length)s stafir."
 
-#: apps/gallery/forms.py:29
+#: apps/gallery/forms.py:28
 msgid "Please keep the length of your webm filename to %(max)s characters or less. It is currently %(length)s characters."
-msgstr ""
-"Hafðu skráarnafn webm ekki lengri en %(max)s stafir. Það er núna %(length)s "
-"stafir."
+msgstr "Hafðu skráarnafn webm ekki lengri en %(max)s stafir. Það er núna %(length)s stafir."
 
-#: apps/gallery/forms.py:32
+#: apps/gallery/forms.py:31
 msgid "Please keep the length of your ogv filename to %(max)s characters or less. It is currently %(length)s characters."
-msgstr ""
-"Hafðu skráarnafn ogv ekki lengri en %(max)s stafir. Það er núna %(length)s "
-"stafir."
+msgstr "Hafðu skráarnafn ogv ekki lengri en %(max)s stafir. Það er núna %(length)s stafir."
 
-#: apps/gallery/forms.py:35
+#: apps/gallery/forms.py:34
 msgid "Please keep the length of your flv filename to %(max)s characters or less. It is currently %(length)s characters."
-msgstr ""
-"Hafðu skráarnafn flv ekki lengri en %(max)s stafir. Það er núna %(length)s "
-"stafir."
+msgstr "Hafðu skráarnafn flv ekki lengri en %(max)s stafir. Það er núna %(length)s stafir."
 
-#: apps/gallery/forms.py:38
+#: apps/gallery/forms.py:37
 msgid "The video has no files associated with it. You must upload one of the following extensions: webm, ogv, flv."
-msgstr ""
-"Engin myndbönd eru tengd. Þú verður að hlaða inn skrám með eftirfarandi "
-"endingum: webm, ogv, flv."
+msgstr "Engin myndbönd eru tengd. Þú verður að hlaða inn skrám með eftirfarandi endingum: webm, ogv, flv."
 
-#: apps/gallery/forms.py:41
+#: apps/gallery/forms.py:40
 msgid "Please select a different title."
 msgstr "Veldu annan titil."
 
-#: apps/gallery/forms.py:43
+#: apps/gallery/forms.py:42
 msgid "Include this in wiki syntax with [[%(type)s:title]]"
 msgstr "Notaðu með wiki sniði með [[%(type)s:title]]"
 
-#: apps/gallery/forms.py:44
+#: apps/gallery/forms.py:43
 msgid "Provide a brief description of this media."
 msgstr "Sláðu inn stutta lýsingu á þessu efni."
 
-#: apps/gallery/forms.py:65 apps/gallery/forms.py:145 apps/gallery/templates/gallery/confirm_media_delete.html:24
+#: apps/gallery/forms.py:48 apps/upload/templates/upload/attachments.html:56
+msgid "Upload"
+msgstr "Hlaða inn"
+
+#: apps/gallery/forms.py:49 apps/gallery/forms.py:92 apps/gallery/templates/gallery/confirm_media_delete.html:52
+msgid "Image"
+msgstr "Mynd"
+
+#: apps/gallery/forms.py:49 apps/gallery/templates/gallery/confirm_media_delete.html:47
+msgid "Video"
+msgstr "Myndband"
+
+#: apps/gallery/forms.py:56 apps/gallery/templates/gallery/confirm_media_delete.html:24 apps/wiki/templates/wiki/confirm_document_delete.html:24
 msgid "Locale"
 msgstr "Staðfærsla"
 
-#: apps/gallery/forms.py:70 apps/gallery/forms.py:150 apps/gallery/templates/gallery/confirm_media_delete.html:22 apps/kbforums/templates/kbforums/confirm_thread_delete.html:15
-#: apps/kbforums/templates/kbforums/threads.html:33
+#: apps/gallery/forms.py:62 apps/gallery/templates/gallery/confirm_media_delete.html:22 apps/kbforums/templates/kbforums/confirm_thread_delete.html:17 apps/kbforums/templates/kbforums/threads.html:35
+#: apps/wiki/templates/wiki/confirm_document_delete.html:22
 msgid "Title"
 msgstr "Titill"
 
-#: apps/gallery/forms.py:77 apps/gallery/forms.py:157 apps/gallery/templates/gallery/confirm_media_delete.html:26
+#: apps/gallery/forms.py:70 apps/gallery/templates/gallery/confirm_media_delete.html:26
 msgid "Description"
 msgstr "Lýsing"
+
+#: apps/gallery/forms.py:97
+msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
+msgstr "Eftirfarandi tegundir er hægt að nota: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Fræðast meira...</a>"
+
+#: apps/gallery/forms.py:117
+#, fuzzy
+msgid "Video (flv)"
+msgstr "Myndband"
+
+#: apps/gallery/forms.py:118
+#, fuzzy
+msgid "Video (ogv)"
+msgstr "Myndband"
+
+#: apps/gallery/forms.py:121
+msgid "Video (webm)"
+msgstr ""
+
+#: apps/gallery/forms.py:125
+msgid "Thumbnail"
+msgstr "Smámynd"
+
+#: apps/gallery/forms.py:131
+msgid "Select a Flash video (FLV) to upload."
+msgstr "Veldu flash myndband (FLV) til að hlaða inn."
+
+#: apps/gallery/forms.py:133
+msgid "Select an Ogv video to upload."
+msgstr "Veldu Ogv myndband til að hlaða inn."
+
+#: apps/gallery/forms.py:134
+msgid "Select a WebM video to upload."
+msgstr "Veldu WebM myndband til að hlaða inn."
+
+#: apps/gallery/forms.py:135
+#, fuzzy
+msgid "Suggested size: {width}x{height}px"
+msgstr "Hlaða inn smámynd fyrir myndband. Mælt er með eftifarandi stærð: {width}x{height}px"
 
 #: apps/gallery/views.py:26
 msgid "Could not upload your image."
@@ -722,9 +755,7 @@ msgstr "Ertu viss um að þú viljir eyða þessari mynd?"
 
 #: apps/gallery/templates/gallery/confirm_media_delete.html:6
 msgid "You are about to permanently delete this image. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
-msgstr ""
-"Þú ert að fara að eyða þessari mynd. <strong>Þessa aðgerð er ekki hægt að "
-"bakfæra!</strong> Ertu viss um að þú viljir halda áfram?"
+msgstr "Þú ert að fara að eyða þessari mynd. <strong>Þessa aðgerð er ekki hægt að bakfæra!</strong> Ertu viss um að þú viljir halda áfram?"
 
 #: apps/gallery/templates/gallery/confirm_media_delete.html:7
 msgid "Delete image | {t} | Media Gallery"
@@ -740,9 +771,7 @@ msgstr "Ertu viss um að þú viljir eyða þessu myndbandi?"
 
 #: apps/gallery/templates/gallery/confirm_media_delete.html:11
 msgid "You are about to permanently delete this video. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
-msgstr ""
-"Þú ert að fara að eyða þessu myndbandi. <strong>Þessa aðgerð er ekki hægt að "
-"bakfæra!</strong> Ertu viss um að þú viljir halda áfram?"
+msgstr "Þú ert að fara að eyða þessu myndbandi. <strong>Þessa aðgerð er ekki hægt að bakfæra!</strong> Ertu viss um að þú viljir halda áfram?"
 
 #: apps/gallery/templates/gallery/confirm_media_delete.html:12
 msgid "Delete video | {t} | Media Gallery"
@@ -754,26 +783,18 @@ msgstr "Eyða myndbandi | {t} | Myndasafn"
 msgid "Media Gallery"
 msgstr "Myndasafn"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:17 apps/wiki/templates/wiki/confirm_revision_delete.html:12
+#: apps/gallery/templates/gallery/confirm_media_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:19 apps/wiki/templates/wiki/confirm_revision_delete.html:19
 msgid "Creator"
 msgstr "Höfundur"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:30 apps/kbforums/templates/kbforums/confirm_post_delete.html:17 apps/kbforums/templates/kbforums/confirm_thread_delete.html:19
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:14
+#: apps/gallery/templates/gallery/confirm_media_delete.html:30 apps/kbforums/templates/kbforums/confirm_post_delete.html:19 apps/kbforums/templates/kbforums/confirm_thread_delete.html:21
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:21
 msgid "Date"
 msgstr "Dagsetning"
 
 #: apps/gallery/templates/gallery/confirm_media_delete.html:33 apps/gallery/templates/gallery/confirm_media_delete.html:50
 msgid "Available formats"
 msgstr "Tiltæk snið"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:47 apps/gallery/templates/gallery/includes/upload_media_form.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:62
-msgid "Video"
-msgstr "Myndband"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:52 apps/gallery/templates/gallery/includes/upload_media_form.html:12 apps/gallery/templates/gallery/includes/upload_media_form.html:22
-msgid "Image"
-msgstr "Mynd"
 
 #: apps/gallery/templates/gallery/edit_media.html:5
 msgid "Edit image"
@@ -799,7 +820,7 @@ msgstr "Vista myndband"
 msgid "Edit video | {t} | Media Gallery"
 msgstr "Breyta myndbandi | {t} | Myndasafn"
 
-#: apps/gallery/templates/gallery/gallery.html:13 apps/gallery/templates/gallery/media.html:24 apps/gallery/templates/gallery/includes/upload_media_form.html:8
+#: apps/gallery/templates/gallery/gallery.html:13 apps/gallery/templates/gallery/media.html:24 apps/gallery/templates/gallery/includes/upload_media_form.html:98
 msgid "Upload a New Media File"
 msgstr "Hlaða inn nýju efni"
 
@@ -813,8 +834,7 @@ msgstr "Áfram"
 
 #: apps/gallery/templates/gallery/gallery.html:25
 msgid "You have JavaScript disabled. Please enable JavaScript to upload files."
-msgstr ""
-"JavaScript er óvirkt hjá þér. Virkjaðu JavaScript til að hlaða inn skrám."
+msgstr "JavaScript er óvirkt hjá þér. Virkjaðu JavaScript til að hlaða inn skrám."
 
 #: apps/gallery/templates/gallery/gallery.html:32 apps/gallery/templates/gallery/search.html:27
 msgid "Show:"
@@ -837,7 +857,7 @@ msgstr "Leita í myndasafni"
 msgid "{title} | Media Gallery"
 msgstr "{title} | Myndasafn"
 
-#: apps/gallery/templates/gallery/media.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:39 apps/upload/templates/upload/attachments.html:12
+#: apps/gallery/templates/gallery/media.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:47 apps/upload/templates/upload/attachments.html:12
 #: apps/upload/templates/upload/attachments.html:17 apps/upload/templates/upload/attachments.html:19
 msgid "Delete this image"
 msgstr "Eyða þessari mynd"
@@ -875,72 +895,47 @@ msgstr "Leita"
 msgid "No media files found."
 msgstr "Engar skrár fundust."
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:8
-msgid "Continue Uploading Media"
-msgstr "Halda áfram að hlaða inn efni"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:10 apps/upload/templates/upload/attachments.html:56
-msgid "Upload"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:30
+#, fuzzy
+msgid "Upload file"
 msgstr "Hlaða inn"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:24
-msgid "Select an image file to upload."
-msgstr "Veldu mynd til að hlaða inn."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:26
-msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
-msgstr ""
-"Eftirfarandi tegundir er hægt að nota: PNG, JPEG, GIF. <a target=\"_blank\" "
-"href=\"{learn_more}\">Fræðast meira...</a>"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:28 apps/gallery/templates/gallery/includes/upload_media_form.html:76
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:114
-msgid "Progress"
-msgstr "Framvinda"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:33 apps/gallery/templates/gallery/includes/upload_media_form.html:89 apps/kbforums/templates/kbforums/edit_post.html:27
-#: apps/kbforums/templates/kbforums/new_thread.html:32 apps/kbforums/templates/kbforums/posts.html:92
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:52 apps/kbforums/templates/kbforums/edit_post.html:29 apps/kbforums/templates/kbforums/new_thread.html:34
+#: apps/kbforums/templates/kbforums/posts.html:94
 msgid "Preview"
 msgstr "Forskoða"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:52 apps/gallery/templates/gallery/includes/upload_media_form.html:131
-msgid "Submit file"
-msgstr "Senda skrá"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:60
+msgid "Progress"
+msgstr "Framvinda"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:64
-msgid "Select a Flash video (FLV) to upload."
-msgstr "Veldu flash myndband (FLV) til að hlaða inn."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:66
-msgid "Please no SWFs, only FLVs."
-msgstr "Vinsamlega ekki SWF, aðeins FLV."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:69
-msgid "Select an Ogv video to upload."
-msgstr "Veldu Ogv myndband til að hlaða inn."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:73
-msgid "Select a WebM video to upload."
-msgstr "Veldu WebM myndband til að hlaða inn."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:96 apps/gallery/templates/gallery/includes/upload_media_form.html:102
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:108
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:75
 msgid "Delete {format} file"
 msgstr "Eyða {format} skrá"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:119
-msgid "Thumbnail"
-msgstr "Smámynd"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:80
+#, fuzzy
+msgid "Preview ({format})"
+msgstr "Forskoða innihald"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:125
-msgid "Delete thumbnail"
-msgstr "Eyða smámynd"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:98
+msgid "Continue Uploading Media"
+msgstr "Halda áfram að hlaða inn efni"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:127
-msgid "Upload a thumbnail for your video. Suggested size: {width}x{height}px"
-msgstr ""
-"Hlaða inn smámynd fyrir myndband. Mælt er með eftifarandi stærð: "
-"{width}x{height}px"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:133
+#, fuzzy
+msgid "Progress (flv)"
+msgstr "Framvinda"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:139
+#, fuzzy
+msgid "Progress (ogv)"
+msgstr "Framvinda"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:145
+#, fuzzy
+msgid "Progress (webm)"
+msgstr "Framvinda"
 
 #: apps/kbforums/events.py:20
 msgid "Reply to: %s"
@@ -960,9 +955,7 @@ msgstr "Nýlegir póstar í %s"
 
 #: apps/kbforums/forms.py:10
 msgid "Your title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
-msgstr ""
-"Of stuttur titill (%(show_value)s stafir). Hann verður að vera að minnsta "
-"kosti %(limit_value)s stafir."
+msgstr "Of stuttur titill (%(show_value)s stafir). Hann verður að vera að minnsta kosti %(limit_value)s stafir."
 
 #: apps/kbforums/forms.py:16
 msgid "Please provide a message."
@@ -970,217 +963,227 @@ msgstr "Sláðu inn skilaboð."
 
 #: apps/kbforums/forms.py:17
 msgid "Your message is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
-msgstr ""
-"Of stutt skilaboð (%(show_value)s stafir). Þau verða að vera að minnsta "
-"kosti %(limit_value)s stafir."
+msgstr "Of stutt skilaboð (%(show_value)s stafir). Þau verða að vera að minnsta kosti %(limit_value)s stafir."
 
 #: apps/kbforums/forms.py:20
 msgid "Please keep the length of your message to %(limit_value)s characters or less. It is currently %(show_value)s characters."
-msgstr ""
-"Hafðu skilaboð ekki lengri en %(limit_value)s stafir. Þau er núna %"
-"(show_value)s stafir."
+msgstr "Hafðu skilaboð ekki lengri en %(limit_value)s stafir. Þau er núna %(show_value)s stafir."
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:4
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:5
 msgid "Delete Post | {t} | {d} Discussion | Knowledge Base"
 msgstr "Eyða pósti | {t} | {d} Umræður | Þekkingargrunnur"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:7 apps/kbforums/templates/kbforums/confirm_thread_delete.html:7 apps/kbforums/templates/kbforums/edit_post.html:9
-#: apps/kbforums/templates/kbforums/edit_thread.html:8 apps/kbforums/templates/kbforums/new_thread.html:9 apps/kbforums/templates/kbforums/posts.html:9 apps/kbforums/templates/kbforums/threads.html:7
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:8 apps/kbforums/templates/kbforums/confirm_thread_delete.html:8 apps/kbforums/templates/kbforums/edit_post.html:10
+#: apps/kbforums/templates/kbforums/edit_thread.html:9 apps/kbforums/templates/kbforums/new_thread.html:10 apps/kbforums/templates/kbforums/posts.html:10
+#: apps/kbforums/templates/kbforums/threads.html:8
 msgid "Discuss"
 msgstr "Umræða"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:9
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:10
 msgid "Delete Post"
 msgstr "Eyða póst"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:13
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:15
 msgid "Are you sure you want to delete this post?"
 msgstr "Ertu viss um að þú viljir eyða þessum pósti?"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:15 apps/kbforums/templates/kbforums/posts.html:62 apps/kbforums/templates/kbforums/threads.html:34
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:17 apps/kbforums/templates/kbforums/posts.html:64 apps/kbforums/templates/kbforums/threads.html:36
 msgid "Author"
 msgstr "Höfundur"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:19 apps/wiki/templates/wiki/confirm_revision_delete.html:16
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:21 apps/wiki/templates/wiki/confirm_revision_delete.html:23
 msgid "Content"
 msgstr "Innihald"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:25
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:27
 msgid "You are about to permanently delete this post. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
-msgstr ""
-"Þú ert að fara að eyða þessum pósti. <strong>Þessa aðgerð er ekki hægt að "
-"bakfæra!</strong> Ertu viss um að þú viljir halda áfram?"
+msgstr "Þú ert að fara að eyða þessum pósti. <strong>Þessa aðgerð er ekki hægt að bakfæra!</strong> Ertu viss um að þú viljir halda áfram?"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:4
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:5
 msgid "Delete Thread | {t} | {d} Discussion | Knowledge Base"
 msgstr "Eyða þræði | {t} | {d} Umræður | Þekkingargrunnur"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:9
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:10
 msgid "Delete Thread"
 msgstr "Eyða þræði"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:13
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:15
 msgid "Are you sure you want to delete this thread?"
 msgstr "Ertu viss um að þú viljir eyða þessum þræði?"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:21
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:23
 msgid "Number of Replies"
 msgstr "Fjöldi svara"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:27
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29
 msgid "You are about to permanently delete this thread. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
-msgstr ""
-"Þú ert að fara að eyða þessum þræði. <strong>Þessa aðgerð er ekki hægt að "
-"bakfæra!</strong> Ertu viss um að þú viljir halda áfram?"
+msgstr "Þú ert að fara að eyða þessum þræði. <strong>Þessa aðgerð er ekki hægt að bakfæra!</strong> Ertu viss um að þú viljir halda áfram?"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/edit_post.html:6
+#: apps/kbforums/templates/kbforums/edit_post.html:7
 msgid "Edit a post | {t} | {d} Discussion | Knowledge Base"
 msgstr "Breyta pósti | {t} | {d} Umræður | Þekkingargrunnur"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:11 apps/kbforums/templates/kbforums/edit_post.html:15
+#: apps/kbforums/templates/kbforums/edit_post.html:12 apps/kbforums/templates/kbforums/edit_post.html:17
 msgid "Edit a post"
 msgstr "Breyta póst"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:28
+#: apps/kbforums/templates/kbforums/edit_post.html:30
 msgid "Update post"
 msgstr "Uppfæra póst"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:35 apps/kbforums/templates/kbforums/new_thread.html:39
+#: apps/kbforums/templates/kbforums/edit_post.html:37 apps/kbforums/templates/kbforums/new_thread.html:41
 msgid "Post Preview:"
 msgstr "Forskoðun pósts:"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/edit_thread.html:5
+#: apps/kbforums/templates/kbforums/edit_thread.html:6
 msgid "Edit thread {t} | {d} Discussion | Knowledge Base"
 msgstr "Breyta þræði {t} | {d} Umræður | Þekkingargrunnur"
 
-#: apps/kbforums/templates/kbforums/edit_thread.html:10
+#: apps/kbforums/templates/kbforums/edit_thread.html:11
 msgid "Edit thread"
 msgstr "Breyta þræði"
 
-#: apps/kbforums/templates/kbforums/edit_thread.html:14
+#: apps/kbforums/templates/kbforums/edit_thread.html:16
 msgid "Edit thread \"{t}\""
 msgstr "Breyta þræði \"{t}\""
 
-#: apps/kbforums/templates/kbforums/edit_thread.html:26
+#: apps/kbforums/templates/kbforums/edit_thread.html:28
 msgid "Update thread"
 msgstr "Uppfæra þráð"
 
 #. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/new_thread.html:6
+#: apps/kbforums/templates/kbforums/new_thread.html:7
 msgid "Create a new thread | {d} | Knowledge Base"
 msgstr "Búa til nýjan þráð | {d} | Þekkingargrunnur"
 
-#: apps/kbforums/templates/kbforums/new_thread.html:10 apps/kbforums/templates/kbforums/new_thread.html:14
+#: apps/kbforums/templates/kbforums/new_thread.html:11 apps/kbforums/templates/kbforums/new_thread.html:16
 msgid "Create a new thread"
 msgstr "Búa til nýjan þráð"
 
-#: apps/kbforums/templates/kbforums/new_thread.html:33
+#: apps/kbforums/templates/kbforums/new_thread.html:35
 msgid "Post"
 msgstr "Senda"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/posts.html:6
+#: apps/kbforums/templates/kbforums/posts.html:7
 msgid "{t} | {d} Discussion | Knowledge Base"
 msgstr "{t} | {d} Umræður | Þekkingargrunnur"
 
-#: apps/kbforums/templates/kbforums/posts.html:16 apps/search/__init__.py:42
+#: apps/kbforums/templates/kbforums/posts.html:18 apps/search/__init__.py:42
 msgid "Sticky"
 msgstr "Límt"
 
-#: apps/kbforums/templates/kbforums/posts.html:17 apps/search/__init__.py:43 apps/search/forms.py:129
+#: apps/kbforums/templates/kbforums/posts.html:19 apps/search/__init__.py:43 apps/search/forms.py:129
 msgid "Locked"
 msgstr "Læst"
 
-#: apps/kbforums/templates/kbforums/posts.html:18 apps/kbforums/templates/kbforums/threads.html:13
+#: apps/kbforums/templates/kbforums/posts.html:20 apps/kbforums/templates/kbforums/threads.html:15
 msgid "Watching"
 msgstr "Fylgist með"
 
-#: apps/kbforums/templates/kbforums/posts.html:25 apps/kbforums/templates/kbforums/threads.html:20
+#: apps/kbforums/templates/kbforums/posts.html:27 apps/kbforums/templates/kbforums/threads.html:22
 msgid "Stop watching"
 msgstr "Stöðva vöktun"
 
-#: apps/kbforums/templates/kbforums/posts.html:28
+#: apps/kbforums/templates/kbforums/posts.html:30
 msgid "Watch this thread"
 msgstr "Fylgjast með þessum þræði"
 
-#: apps/kbforums/templates/kbforums/posts.html:45
+#: apps/kbforums/templates/kbforums/posts.html:47
 msgid "Change locked status"
 msgstr "Breyta læstri stöðu"
 
-#: apps/kbforums/templates/kbforums/posts.html:51
+#: apps/kbforums/templates/kbforums/posts.html:53
 msgid "Change sticky status"
 msgstr "Breyta lím stöðu"
 
-#: apps/kbforums/templates/kbforums/posts.html:63
+#: apps/kbforums/templates/kbforums/posts.html:65
 msgid "Message"
 msgstr "Skilaboð"
 
-#: apps/kbforums/templates/kbforums/posts.html:78
+#: apps/kbforums/templates/kbforums/posts.html:80
 msgid "Oh, no! Looks like there are no posts!"
 msgstr "Ó nei! Svo virðist sem engir póstar séu til!"
 
-#: apps/kbforums/templates/kbforums/posts.html:83 apps/kbforums/templates/kbforums/posts.html:99
+#: apps/kbforums/templates/kbforums/posts.html:85 apps/kbforums/templates/kbforums/posts.html:101
 msgid "Post a reply"
 msgstr "Senda svar"
 
-#: apps/kbforums/templates/kbforums/posts.html:101
+#: apps/kbforums/templates/kbforums/posts.html:103
 msgid "This thread has been locked. It is no longer possible to post new replies."
 msgstr "Búið er að læsa þessum þræði. Ekki er lengur hægt að senda inn ný svör."
 
-#: apps/kbforums/templates/kbforums/posts.html:106
+#: apps/kbforums/templates/kbforums/posts.html:108
 msgid "Reply Preview:"
 msgstr "Forskoða svar:"
 
 #. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/threads.html:4
+#: apps/kbforums/templates/kbforums/threads.html:5
 msgid "{d} Discussion | Knowledge Base"
 msgstr "{d} Umræður | Þekkingargrunnur"
 
-#: apps/kbforums/templates/kbforums/threads.html:11
+#: apps/kbforums/templates/kbforums/threads.html:13
 msgid "{d} Discussion"
 msgstr "{d} Spjall"
 
-#: apps/kbforums/templates/kbforums/threads.html:23
+#: apps/kbforums/templates/kbforums/threads.html:25
 msgid "Watch this forum"
 msgstr "Fylgjast með þessu spjallsvæði"
 
-#: apps/kbforums/templates/kbforums/threads.html:29
+#: apps/kbforums/templates/kbforums/threads.html:31
 msgid "Post a new thread"
 msgstr "Senda inn nýjan þráð"
 
-#: apps/kbforums/templates/kbforums/threads.html:32
+#: apps/kbforums/templates/kbforums/threads.html:34
 msgid "Type"
 msgstr "Tegund"
 
-#: apps/kbforums/templates/kbforums/threads.html:35
+#: apps/kbforums/templates/kbforums/threads.html:37
 msgid "Replies"
 msgstr "Svör"
 
-#: apps/kbforums/templates/kbforums/threads.html:36
+#: apps/kbforums/templates/kbforums/threads.html:38
 msgid "Last Post"
 msgstr "Seinasti póstur"
 
-#: apps/kbforums/templates/kbforums/threads.html:44
+#: apps/kbforums/templates/kbforums/threads.html:46
 msgctxt "thread_type"
 msgid "Locked"
 msgstr "Læst"
 
-#: apps/kbforums/templates/kbforums/threads.html:47
+#: apps/kbforums/templates/kbforums/threads.html:49
 msgctxt "thread_type"
 msgid "Sticky"
 msgstr "Límt"
 
-#: apps/kbforums/templates/kbforums/threads.html:57
+#: apps/kbforums/templates/kbforums/threads.html:59
 msgid "by <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 msgstr "eftir <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 
-#: apps/kbforums/templates/kbforums/threads.html:66
+#: apps/kbforums/templates/kbforums/threads.html:68
 msgid "There are no threads. Maybe you should create some!"
 msgstr "Engir þræðir eru til. Kannski ættir þú að búa til þráð!"
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:7
+msgid "This forum is a discussion about improving the \"%(title)s\" article."
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:11
+msgid "This forum is a discussion about improving the \"%(title)s\" article. If you'd like to participate, please <a href=\"%(register_url)s\">register</a>."
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:19
+msgid ""
+"This forum is a discussion about improving the localization of the \"%(title)s\" article. If you want to improve the article content, go to the <a href=\"%(url)s\">English article discussion</a>."
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:28
+msgid "If you need help with Firefox, please <a href=\"%(aaq_url)s\">ask a question</a>."
+msgstr ""
 
 #. {0} is the number of posts.
 #: apps/kbforums/templates/kbforums/includes/post.html:8
@@ -1197,11 +1200,11 @@ msgstr "Tengja við þennan póst."
 msgid "Modified by {name} on {datetime}"
 msgstr "Breytt af {name} þann {datetime}"
 
-#: apps/kbforums/templates/kbforums/includes/watch_locale.html:5
+#: apps/kbforums/templates/kbforums/includes/watch_locale.html:6
 msgid "Turn off emails for discussion in my locale."
 msgstr "Slökkva á tölvupóstum fyrir umræðu á mínu tungumáli."
 
-#: apps/kbforums/templates/kbforums/includes/watch_locale.html:8
+#: apps/kbforums/templates/kbforums/includes/watch_locale.html:9
 msgid "Get emailed when there is new discussion activity in my locale."
 msgstr "Fá sendan tölvupóst þegar ný umræða er í gangi á mínu tungumáli."
 
@@ -1210,9 +1213,8 @@ msgid ""
 "You've come to the right place! Start by searching for solutions, or by choosing one of our support articles below. If you can't find the answer you need, our community of volunteers are ready to "
 "help."
 msgstr ""
-"Þú ert á réttum stað! Byrjaðu á því að leita að svörum, eða með því að velja "
-"eina af hjálparsíðunum hérna fyrir neðan. Ef þú finnur ekki svarið sem þú "
-"ert að leita að, eru sjálfboðaliðar tilbúnir að hjálpa þér."
+"Þú ert á réttum stað! Byrjaðu á því að leita að svörum, eða með því að velja eina af hjálparsíðunum hérna fyrir neðan. Ef þú finnur ekki svarið sem þú ert að leita að, eru sjálfboðaliðar tilbúnir "
+"að hjálpa þér."
 
 #: apps/landings/templates/landings/fxhome.html:4 apps/landings/templates/landings/mobile/fxhome.html:3
 msgid "Firefox Home Support Home Page"
@@ -1239,9 +1241,8 @@ msgid ""
 "You've come to the right place! Start by searching our site below, or browse our list of popular support articles. If you can't find the answer you need, our community of volunteers are ready to "
 "help you find a solution."
 msgstr ""
-"Þú ert á réttum stað! Byrjaðu á því að leita á vefsvæðinu hér fyrir neðan, "
-"eða skoðaðu lista af vinsælum svörum. Ef þú finnur ekki svarið sem þú ert að "
-"leita að, eru sjálfboðaliðar hjá okkur tilbúnir til að hjálpa þér."
+"Þú ert á réttum stað! Byrjaðu á því að leita á vefsvæðinu hér fyrir neðan, eða skoðaðu lista af vinsælum svörum. Ef þú finnur ekki svarið sem þú ert að leita að, eru sjálfboðaliðar hjá okkur "
+"tilbúnir til að hjálpa þér."
 
 #: apps/landings/templates/landings/mobile.html:4 apps/landings/templates/landings/mobile/mobile.html:3
 msgid "Firefox for Mobile Support Home Page"
@@ -1275,7 +1276,7 @@ msgstr "Algengar spurningar"
 msgid "Firefox Help <span>for Firefox Home</span>"
 msgstr "Firefox hjálp <span>fyrir Firefox Home</span>"
 
-#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:139 templates/base.html:8 templates/base.html:17 templates/mobile/base.html:15
+#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:141 templates/base.html:8 templates/base.html:17 templates/mobile/base.html:15
 msgid "Firefox Help"
 msgstr "Firefox hjálp"
 
@@ -1286,6 +1287,61 @@ msgstr "Firefox hjálp <span>fyrir farsíma</span>"
 #: apps/landings/templates/landings/mobile/sync.html:5
 msgid "Firefox Help <span>for Sync</span>"
 msgstr "Firefox hjálp <span>fyrir Sync</span>"
+
+#: apps/messages/forms.py:7
+msgid "username1, username2,..."
+msgstr ""
+
+#: apps/messages/forms.py:15
+#, fuzzy
+msgid "To field is required."
+msgstr "Þarfnast lykilorðs."
+
+#: apps/messages/forms.py:25
+msgid "{username} is not a valid username."
+msgstr ""
+
+#: apps/messages/templates/messages/inbox.html:3 apps/messages/templates/messages/new.html:3 apps/messages/templates/messages/outbox.html:4 apps/messages/templates/messages/read-outbox.html:4
+#: apps/messages/templates/messages/read.html:4 apps/messages/templates/messages/includes/macros.html:21
+#, fuzzy
+msgid "Messages"
+msgstr "Skilaboð"
+
+#: apps/messages/templates/messages/inbox.html:9 apps/messages/templates/messages/new.html:2 apps/messages/templates/messages/includes/macros.html:27
+#, fuzzy
+msgid "New Message"
+msgstr "Skilaboð"
+
+#: apps/messages/templates/messages/inbox.html:31 apps/messages/templates/messages/outbox.html:37
+#, fuzzy
+msgid "There are no messages here."
+msgstr "Engar síður."
+
+#: apps/messages/templates/messages/new.html:15
+msgid "Send"
+msgstr ""
+
+#: apps/messages/templates/messages/outbox.html:3 apps/messages/templates/messages/read-outbox.html:5 apps/messages/templates/messages/includes/macros.html:24
+#, fuzzy
+msgid "Sent Messages"
+msgstr "Skilaboð"
+
+#: apps/messages/templates/messages/outbox.html:24
+msgid "You"
+msgstr ""
+
+#: apps/messages/templates/messages/read-outbox.html:3
+msgid "Read Sent Message"
+msgstr ""
+
+#: apps/messages/templates/messages/read.html:3
+#, fuzzy
+msgid "Read Message"
+msgstr "Skilaboð"
+
+#: apps/messages/templates/messages/includes/macros.html:5 apps/messages/templates/messages/includes/macros.html:13
+msgid "System"
+msgstr ""
 
 #: apps/search/__init__.py:17 apps/search/__init__.py:52 apps/search/__init__.py:58
 msgid "Don't filter"
@@ -1315,11 +1371,11 @@ msgstr "Upprunaleg dagsetning"
 msgid "Number of replies"
 msgstr "Fjöldi svara"
 
-#: apps/search/__init__.py:53 apps/sumo/helpers.py:309 apps/wiki/templates/wiki/includes/document_vote.html:8
+#: apps/search/__init__.py:53 apps/sumo/helpers.py:311 apps/wiki/templates/wiki/includes/document_vote.html:7
 msgid "Yes"
 msgstr "Já"
 
-#: apps/search/__init__.py:54 apps/sumo/helpers.py:309 apps/wiki/templates/wiki/includes/document_vote.html:9
+#: apps/search/__init__.py:54 apps/sumo/helpers.py:311 apps/wiki/templates/wiki/includes/document_vote.html:8
 msgid "No"
 msgstr "Nei"
 
@@ -1517,78 +1573,68 @@ msgstr "Breyta leitinni"
 #: apps/search/templates/search/results.html:24 apps/search/templates/search/mobile/results.html:14
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
-msgstr[0] ""
-"Fann <strong>{n}</strong> niðurstöðu fyrir <strong>{q}</strong> á "
-"<strong>{l}</strong>"
-msgstr[1] ""
-"Fann <strong>{n}</strong> niðurstöður fyrir <strong>{q}</strong> á "
-"<strong>{l}</strong>"
+msgstr[0] "Fann <strong>{n}</strong> niðurstöðu fyrir <strong>{q}</strong> á <strong>{l}</strong>"
+msgstr[1] "Fann <strong>{n}</strong> niðurstöður fyrir <strong>{q}</strong> á <strong>{l}</strong>"
 
 #: apps/search/templates/search/results.html:46
 msgid "Can't find what you're looking for? <a href='{0}'>Ask a support question instead!</a>"
-msgstr ""
-"Finnurðu ekki það sem þú ert að leita að? <a href='{0}'>Prófaðu spurningu í "
-"staðinn!</a>"
+msgstr "Finnurðu ekki það sem þú ert að leita að? <a href='{0}'>Prófaðu spurningu í staðinn!</a>"
 
 #: apps/sumo/form_fields.py:104
 msgid "Ensure this value has at least %(limit_value)s characters (it has %(show_value)s)."
-msgstr ""
-"Gakktu úr skugga um að þetta gildi sé að minnsta kosti %(limit_value)s "
-"stafir (er núna %(show_value)s)."
+msgstr "Gakktu úr skugga um að þetta gildi sé að minnsta kosti %(limit_value)s stafir (er núna %(show_value)s)."
 
 #: apps/sumo/form_fields.py:109
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
-msgstr ""
-"Gakktu úr skugga um að þetta gildi sé í mesta lagi %(limit_value)s stafir "
-"(er núna %(show_value)s)."
+msgstr "Gakktu úr skugga um að þetta gildi sé í mesta lagi %(limit_value)s stafir (er núna %(show_value)s)."
 
-#: apps/sumo/helpers.py:188
+#: apps/sumo/helpers.py:190
 msgid "Today at %s"
 msgstr "Í dag klukkan %s"
 
-#: apps/sumo/helpers.py:266
+#: apps/sumo/helpers.py:268
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "%(number)d ári síðan"
 msgstr[1] "%(number)d árum síðan"
 
-#: apps/sumo/helpers.py:268
+#: apps/sumo/helpers.py:270
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "%(number)d mánuði síðan"
 msgstr[1] "%(number)d mánuðum síðan"
 
-#: apps/sumo/helpers.py:270
+#: apps/sumo/helpers.py:272
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "%(number)d viku síðan"
 msgstr[1] "%(number)d vikum síðan"
 
-#: apps/sumo/helpers.py:272
+#: apps/sumo/helpers.py:274
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "%(number)d degi síðan"
 msgstr[1] "%(number)d dögum síðan"
 
-#: apps/sumo/helpers.py:274
+#: apps/sumo/helpers.py:276
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "%(number)d klukkustund síðan"
 msgstr[1] "%(number)d klukkustundum síðan"
 
-#: apps/sumo/helpers.py:276
+#: apps/sumo/helpers.py:278
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "%(number)d mínútu síðan"
 msgstr[1] "%(number)d mínútum síðan"
 
-#: apps/sumo/helpers.py:278
+#: apps/sumo/helpers.py:280
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] "%(number)d sekúndu síðan"
 msgstr[1] "%(number)d sekúndum síðan"
 
-#: apps/sumo/parser.py:232
+#: apps/sumo/parser.py:236
 msgid "The image \"%s\" does not exist."
 msgstr "Myndin \"%s\" er ekki til."
 
@@ -1598,17 +1644,19 @@ msgstr "Úps, beiðni tókst ekki"
 
 #: apps/sumo/templates/handlers/400.html:8
 msgid "We couldn't perform your request. Perhaps because the action is no longer applicable or you tried to perform an invalid action."
-msgstr ""
-"Ekki tókst að framkvæma aðgerðina. Kannski er ekki lengur hægt að framkvæma "
-"aðgerðina eða þú reyndir ólöglega aðgerð."
+msgstr "Ekki tókst að framkvæma aðgerðina. Kannski er ekki lengur hægt að framkvæma aðgerðina eða þú reyndir ólöglega aðgerð."
 
-#: apps/sumo/templates/handlers/403.html:3
+#: apps/sumo/templates/handlers/403.html:4
 msgid "Access denied"
 msgstr "Aðgangur ekki leyfður"
 
-#: apps/sumo/templates/handlers/403.html:9
+#: apps/sumo/templates/handlers/403.html:11
 msgid "You do not have permission to access this page."
 msgstr "Þú hefur ekki aðgangsheimild á þessa síðu."
+
+#: apps/sumo/templates/handlers/403.html:14 apps/users/templates/users/includes/macros.html:23
+msgid "Log in"
+msgstr "Innskráning"
 
 #: apps/sumo/templates/handlers/404.html:3
 msgid "Page Not Found"
@@ -1616,9 +1664,7 @@ msgstr "Síða finnst ekki"
 
 #: apps/sumo/templates/handlers/404.html:11
 msgid "Sorry, we couldn't find the page you were looking for. Please, try searching our site using the form below."
-msgstr ""
-"Því miður, þá fundum við ekki síðuna sem þú varst að leita að. Prófaðu að "
-"leita á vefsvæðinu með svæðunum hér fyrir neðan."
+msgstr "Því miður, þá fundum við ekki síðuna sem þú varst að leita að. Prófaðu að leita á vefsvæðinu með svæðunum hér fyrir neðan."
 
 #: apps/sumo/templates/handlers/500.html:3
 msgid "An Error Occurred"
@@ -1626,9 +1672,19 @@ msgstr "Villa kom upp"
 
 #: apps/sumo/templates/handlers/500.html:9
 msgid "Oh, no! It looks like an unexpected error occurred. We've already notified the site administrators. Please try again now, or in a few minutes."
+msgstr "Æ nei! Svo virðist sem óþekkt villa hafi komið upp. Þegar er búið að láta kerfisstjóra vefsvæðis vita. Reyndu aftur núna, eða eftir nokkrar mínutur."
+
+#: apps/sumo/templates/sumo/deprecated.html:3
+msgid "Redirecting"
 msgstr ""
-"Æ nei! Svo virðist sem óþekkt villa hafi komið upp. Þegar er búið að láta "
-"kerfisstjóra vefsvæðis vita. Reyndu aftur núna, eða eftir nokkrar mínutur."
+
+#: apps/sumo/templates/sumo/deprecated.html:8
+msgid "The URL has changed!"
+msgstr ""
+
+#: apps/sumo/templates/sumo/deprecated.html:11
+msgid "It looks like you've bookmarked an old URL. The new URL for this page is below. You should update your bookmarks. We will forward you to the new URL in 10 seconds."
+msgstr ""
 
 #: apps/sumo/templates/sumo/read-only.html:3 apps/sumo/templates/sumo/read-only.html:7
 msgid "Maintenance in progress"
@@ -1636,15 +1692,11 @@ msgstr "Viðhald í vinnslu"
 
 #: apps/sumo/templates/sumo/read-only.html:9
 msgid "This feature is temporarily disabled while we perform website maintenance. Please use your browser's Back button and try again a little later."
-msgstr ""
-"Þessi eiginleiki hefur verið gerður óvirkur tímabundið á meðan vefsvæði er í "
-"viðhaldi. Notaðu til baka hnapp vafra til að reyna aftur seinna."
+msgstr "Þessi eiginleiki hefur verið gerður óvirkur tímabundið á meðan vefsvæði er í viðhaldi. Notaðu til baka hnapp vafra til að reyna aftur seinna."
 
 #: apps/sumo/templates/sumo/read-only.html:14
 msgid "Some features on this page are temporarily disabled while we perform website maintenance. Please try again a little later."
-msgstr ""
-"Einhverjir eiginleikar á þessari síðu hafa verið gerðir óvirkir tímabundið á "
-"meðan viðhald vefsvæðis fer fram. Reyndu aftur seinna."
+msgstr "Einhverjir eiginleikar á þessari síðu hafa verið gerðir óvirkir tímabundið á meðan viðhald vefsvæðis fer fram. Reyndu aftur seinna."
 
 #: apps/tags/forms.py:122
 msgid "Add"
@@ -1700,9 +1752,7 @@ msgstr "Veldu mynd til að hlaða inn."
 
 #: apps/users/__init__.py:4
 msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
-msgstr ""
-"Vandamál komu upp viða að senda tölvupóst á þig. Reyndu annað netfang eða "
-"hafðu samband við kerfisstjóra."
+msgstr "Vandamál komu upp viða að senda tölvupóst á þig. Reyndu annað netfang eða hafðu samband við kerfisstjóra."
 
 #: apps/users/forms.py:17
 msgid "Username may contain only letters, numbers and @/./+/-/_ characters."
@@ -1714,15 +1764,11 @@ msgstr "Notandanafn er nauðsynlegt."
 
 #: apps/users/forms.py:20
 msgid "Username is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
-msgstr ""
-"Notandanafn er of stutt (%(show_value)s stafir). Verður að vera minnst %"
-"(limit_value)s stafir."
+msgstr "Notandanafn er of stutt (%(show_value)s stafir). Verður að vera minnst %(limit_value)s stafir."
 
 #: apps/users/forms.py:22
 msgid "Username is too long (%(show_value)s characters). It must be %(limit_value)s characters or less."
-msgstr ""
-"Notandanafn er of langt (%(show_value)s stafir). Verður að vera minna en %"
-"(limit_value)s stafir."
+msgstr "Notandanafn er of langt (%(show_value)s stafir). Verður að vera minna en %(limit_value)s stafir."
 
 #: apps/users/forms.py:24
 msgid "Email address is required."
@@ -1730,15 +1776,11 @@ msgstr "Tölvupóstfang er nauðsynlegt."
 
 #: apps/users/forms.py:25
 msgid "Email address is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
-msgstr ""
-"Tölvupóstfang er of stutt (%(show_value)s stafir). Verður að vera minnst %"
-"(limit_value)s stafir."
+msgstr "Tölvupóstfang er of stutt (%(show_value)s stafir). Verður að vera minnst %(limit_value)s stafir."
 
 #: apps/users/forms.py:27
 msgid "Email address is too long (%(show_value)s characters). It must be %(limit_value)s characters or less."
-msgstr ""
-"Tölvupóstfang er of langt (%(show_value)s stafir). Verður að vera minna en %"
-"(limit_value)s stafir."
+msgstr "Tölvupóstfang er of langt (%(show_value)s stafir). Verður að vera minna en %(limit_value)s stafir."
 
 #: apps/users/forms.py:29
 msgid "Password is required."
@@ -1748,20 +1790,19 @@ msgstr "Þarfnast lykilorðs."
 msgid "Please enter your password twice."
 msgstr "Sláðu inn lykilorðið tvisvar."
 
-#: apps/users/forms.py:42 apps/users/templates/users/includes/macros.html:13 templates/layout/login.html:8
+#: apps/users/forms.py:42 apps/users/templates/users/includes/macros.html:13
 msgid "Username:"
 msgstr "Notandanafn:"
 
 #: apps/users/forms.py:44
 msgid "Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only."
-msgstr ""
-"Nauðsynlegt. 30 stafir eða færri. Aðeins stafir, tölustafir og @/./+/-/_."
+msgstr "Nauðsynlegt. 30 stafir eða færri. Aðeins stafir, tölustafir og @/./+/-/_."
 
 #: apps/users/forms.py:50 apps/users/forms.py:179 apps/users/forms.py:185
 msgid "Email address:"
 msgstr "Tölvupóstfang:"
 
-#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:27 apps/users/templates/users/includes/macros.html:17 templates/layout/login.html:11
+#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/includes/macros.html:17
 msgid "Password:"
 msgstr "Lykilorð:"
 
@@ -1787,9 +1828,7 @@ msgstr "Lykilorð"
 
 #: apps/users/forms.py:113
 msgid "Please enter a correct username and password. Note that both fields are case-sensitive."
-msgstr ""
-"Sláðu inn rétt notandanafn og lykilorð. Athugaðu að báðir reitir eru háðir "
-"stafstöðu."
+msgstr "Sláðu inn rétt notandanafn og lykilorð. Athugaðu að báðir reitir eru háðir stafstöðu."
 
 #: apps/users/forms.py:116
 msgid "This account is inactive."
@@ -1797,9 +1836,7 @@ msgstr "Þessi aðgangur er óvirkur."
 
 #: apps/users/forms.py:121
 msgid "Your Web browser doesn't appear to have cookies enabled. Cookies are required for logging in."
-msgstr ""
-"Svo virðist sem vafrinn þinn styðji ekki smákökur (cookies). Smákökur eru "
-"nauðsynlegar fyrir innskráningu."
+msgstr "Svo virðist sem vafrinn þinn styðji ekki smákökur (cookies). Smákökur eru nauðsynlegar fyrir innskráningu."
 
 #: apps/users/forms.py:141
 msgid "Please enter a twitter.com URL."
@@ -1899,9 +1936,7 @@ msgstr "Eitthvað er að"
 
 #: apps/users/templates/users/activate.html:15
 msgid "You've confirmed your email address and activated your account! You can now log in, and go edit your profile."
-msgstr ""
-"Búið er að staðfesta tölvupóstfang og aðgangur hefur verið virkjaður! Þú "
-"getur skráð þig inn, og breytt aðgangi."
+msgstr "Búið er að staðfesta tölvupóstfang og aðgangur hefur verið virkjaður! Þú getur skráð þig inn, og breytt aðgangi."
 
 #: apps/users/templates/users/activate.html:20
 msgid "Your question is now visible on the site!"
@@ -1911,9 +1946,7 @@ msgstr[1] "Spurningarnar þínar eru nú sýnilegar á vefsvæðinu!"
 
 #: apps/users/templates/users/activate.html:31
 msgid "We could not activate your account. Please make sure that you have clicked the correct link in your email or typed in the correct address."
-msgstr ""
-"Ekki tókst að virkja aðganginn. Gakktu úr skugga um að þú hafir smellt á "
-"réttan tengil í póstinum eða slegið inn rétt netfang."
+msgstr "Ekki tókst að virkja aðganginn. Gakktu úr skugga um að þú hafir smellt á réttan tengil í póstinum eða slegið inn rétt netfang."
 
 #: apps/users/templates/users/change_email.html:4
 msgid "Change email address"
@@ -1937,9 +1970,7 @@ msgstr "Breytti tölvupóstfangi fyrir notanda {username}"
 
 #: apps/users/templates/users/change_email_complete.html:15
 msgid "The email you entered ({new_email}) already exists in the system. The current email for your account is still {old_email}."
-msgstr ""
-"Netfangið sem þú slóst inn ({new_email}) er þegar til í kerfinu. Núverandi "
-"netfang fyrir aðganginn þinn er {old_email}."
+msgstr "Netfangið sem þú slóst inn ({new_email}) er þegar til í kerfinu. Núverandi netfang fyrir aðganginn þinn er {old_email}."
 
 #: apps/users/templates/users/change_email_complete.html:18
 msgid "Your email has been changed from {old_email} to {new_email}."
@@ -1951,9 +1982,7 @@ msgstr "Búinn að senda staðfestingarpóst"
 
 #: apps/users/templates/users/change_email_done.html:11
 msgid "We've sent a confirmation to %(new_email)s. Please follow the link in the confirmation to change your account's email."
-msgstr ""
-"Búið er að senda staðfestingarpóst á %(new_email)s. Smelltu á tengilinn í "
-"staðfestingarpóstinum til að breyta tölvupóstfanginu þínu."
+msgstr "Búið er að senda staðfestingarpóst á %(new_email)s. Smelltu á tengilinn í staðfestingarpóstinum til að breyta tölvupóstfanginu þínu."
 
 #: apps/users/templates/users/confirm_avatar_delete.html:3 apps/users/templates/users/confirm_avatar_delete.html:24
 msgid "Delete avatar"
@@ -1966,9 +1995,8 @@ msgstr "Ertu viss um að þú viljir eyða myndinni þinni?"
 #: apps/users/templates/users/confirm_avatar_delete.html:16
 msgid "You are about to permanently delete your avatar. <strong>This cannot be undone!</strong> You can always <a href=\"%(upload_url)s\">upload another avatar</a> to replace your current one."
 msgstr ""
-"Þú ert að fara að eyða endanlega myndinni þinni. <strong>Ekki er hægt að "
-"bakfæra þessa aðgerð!</strong> Alltaf er hægt að <a href=\"%"
-"(upload_url)s\">hala upp aðra mynd</a> til að skipta fyrir núverandi mynd."
+"Þú ert að fara að eyða endanlega myndinni þinni. <strong>Ekki er hægt að bakfæra þessa aðgerð!</strong> Alltaf er hægt að <a href=\"%(upload_url)s\">hala upp aðra mynd</a> til að skipta fyrir "
+"núverandi mynd."
 
 #: apps/users/templates/users/edit_avatar.html:3
 msgid "Change Avatar"
@@ -1983,29 +2011,29 @@ msgstr "Hlaða inn"
 msgid "Edit Profile"
 msgstr "Breyta notanda"
 
-#: apps/users/templates/users/edit_profile.html:13
+#: apps/users/templates/users/edit_profile.html:14
 msgid "Avatar:"
 msgstr "Mynd:"
 
-#: apps/users/templates/users/edit_profile.html:17
+#: apps/users/templates/users/edit_profile.html:18
 msgctxt "avatar"
 msgid "Change"
 msgstr "Breyta"
 
-#: apps/users/templates/users/edit_profile.html:21
+#: apps/users/templates/users/edit_profile.html:22
 msgctxt "avatar"
 msgid "Delete"
 msgstr "Eyða"
 
-#: apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/edit_profile.html:33 apps/wiki/templates/wiki/translate.html:19
+#: apps/users/templates/users/edit_profile.html:29 apps/users/templates/users/edit_profile.html:34 apps/wiki/templates/wiki/translate.html:20
 msgid "Change"
 msgstr "Breyta"
 
-#: apps/users/templates/users/edit_profile.html:31 apps/users/templates/users/profile.html:36
+#: apps/users/templates/users/edit_profile.html:32 apps/users/templates/users/profile.html:37
 msgid "Email:"
 msgstr "Tölvupóstfang:"
 
-#: apps/users/templates/users/edit_profile.html:38 apps/users/templates/users/pw_reset_confirm.html:27
+#: apps/users/templates/users/edit_profile.html:39 apps/users/templates/users/pw_reset_confirm.html:27
 msgid "Update"
 msgstr "Uppfæra"
 
@@ -2017,31 +2045,31 @@ msgstr "Innskrá"
 msgid "{user} | Profile"
 msgstr "{user} | Notandi"
 
-#: apps/users/templates/users/profile.html:20
+#: apps/users/templates/users/profile.html:21
 msgid "{city}, {country}"
 msgstr "{city}, {country}"
 
-#: apps/users/templates/users/profile.html:42
+#: apps/users/templates/users/profile.html:43
 msgid "Website:"
 msgstr "Vefsvæði:"
 
-#: apps/users/templates/users/profile.html:48
+#: apps/users/templates/users/profile.html:49
 msgid "Twitter:"
 msgstr "Twitter:"
 
-#: apps/users/templates/users/profile.html:54
+#: apps/users/templates/users/profile.html:55
 msgid "Facebook:"
 msgstr "Facebook:"
 
-#: apps/users/templates/users/profile.html:60
+#: apps/users/templates/users/profile.html:61
 msgid "IRC:"
 msgstr "IRC:"
 
-#: apps/users/templates/users/profile.html:66
+#: apps/users/templates/users/profile.html:67
 msgid "Livechat ID: {livechat_id}"
 msgstr "Livechat auðkenni: {livechat_id}"
 
-#: apps/users/templates/users/profile.html:73
+#: apps/users/templates/users/profile.html:74
 msgid "About {user}"
 msgstr "Um {user}"
 
@@ -2059,9 +2087,7 @@ msgstr "Tókst að breyta lykilorði!"
 
 #: apps/users/templates/users/pw_change_complete.html:9
 msgid "You have successfully changed your password. <a href=\"%(profile_url)s\">Go back to edit profile page.</a>"
-msgstr ""
-"Tókst að breyta lykilorði. <a href=\"%(profile_url)s\">Farðu til baka á breyta "
-"notanda.</a>"
+msgstr "Tókst að breyta lykilorði. <a href=\"%(profile_url)s\">Farðu til baka á breyta notanda.</a>"
 
 #: apps/users/templates/users/pw_reset_complete.html:4
 msgid "Password successfully reset."
@@ -2089,16 +2115,11 @@ msgstr "Ekki tókst að endurstilla lykilorð"
 
 #: apps/users/templates/users/pw_reset_confirm.html:32
 msgid "The password reset link was invalid, possibly because it has already been used. Please request a new password reset."
-msgstr ""
-"Tengill fyrir að endurstilla lykilorð var ógildur, líklega vegna þess að "
-"þegar er búið að nota hann. Vinsamlega náðu þér í aðra beiðni um "
-"endurstillingu á lykilorði."
+msgstr "Tengill fyrir að endurstilla lykilorð var ógildur, líklega vegna þess að þegar er búið að nota hann. Vinsamlega náðu þér í aðra beiðni um endurstillingu á lykilorði."
 
 #: apps/users/templates/users/pw_reset_form.html:14
 msgid "Forgotten your password? Enter your email address below, and we'll send you instructions for setting a new one."
-msgstr ""
-"Gleymt lykilorð? Sláðu inn netfang fyrir neðan, og við sendum leiðbeiningar "
-"um hvernig á að fá nýtt lykilorð."
+msgstr "Gleymt lykilorð? Sláðu inn netfang fyrir neðan, og við sendum leiðbeiningar um hvernig á að fá nýtt lykilorð."
 
 #: apps/users/templates/users/pw_reset_form.html:21
 msgid "Email Address:"
@@ -2110,11 +2131,9 @@ msgstr "Senda tengil fyrir endurstillingu á lykilorði"
 
 #: apps/users/templates/users/pw_reset_sent.html:11
 msgid "We've sent an email to any account using this address. Please follow the link in the email to reset your password."
-msgstr ""
-"Búið er að senda tölvupóst á alla reikninga sem eru að nota þetta netfang. "
-"Smelltu á tengilinn í tölvupóstinum til að endurstilla lykilorðið þitt."
+msgstr "Búið er að senda tölvupóst á alla reikninga sem eru að nota þetta netfang. Smelltu á tengilinn í tölvupóstinum til að endurstilla lykilorðið þitt."
 
-#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:51 templates/layout/login.html:24
+#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:51
 msgid "Register"
 msgstr "Nýskráning"
 
@@ -2129,10 +2148,7 @@ msgstr "Takk fyrir að vera æðislegur!"
 
 #: apps/users/templates/users/register_done.html:12
 msgid "Before you can log in, you need to confirm your email address. We've sent you an email with a confirmation link in it. Just click the link and you'll be ready to go!"
-msgstr ""
-"Áður en þú getur skráð þig inn, þarftu að staðfesta netfangið þitt. Búið er "
-"að senda þér tölvupóst með staðfestingartengli. Smelltu einfaldlega á "
-"tengilinn og þú ert tilbúinn!"
+msgstr "Áður en þú getur skráð þig inn, þarftu að staðfesta netfangið þitt. Búið er að senda þér tölvupóst með staðfestingartengli. Smelltu einfaldlega á tengilinn og þú ert tilbúinn!"
 
 #: apps/users/templates/users/resend_confirmation.html:4
 msgid "Resend confirmation email"
@@ -2140,10 +2156,7 @@ msgstr "Endursenda staðfestingartölvupóst"
 
 #: apps/users/templates/users/resend_confirmation.html:14
 msgid "To activate your account you must first confirm your email address. Enter your email and submit the form below, and we will resend the confirmation email."
-msgstr ""
-"Til að virkja aðganginn þinn verður fyrst að staðfesta tölvupóstfangið þitt. "
-"Sláðu inn tölvupóstfangið og sendu inn upplýsingarnar, og "
-"staðfestingarpóstur verður sendur."
+msgstr "Til að virkja aðganginn þinn verður fyrst að staðfesta tölvupóstfangið þitt. Sláðu inn tölvupóstfangið og sendu inn upplýsingarnar, og staðfestingarpóstur verður sendur."
 
 #: apps/users/templates/users/resend_confirmation.html:24
 msgid "Resend account confirmation email"
@@ -2158,13 +2171,8 @@ msgid ""
 "Before you can log in, you need to confirm your email address. We've sent a new confirmation email to any account using <strong>%(email)s</strong>. To confirm the email address, just follow the "
 "link in the email."
 msgstr ""
-"Áður en þú getur skráð þig inn, þarftu að staðfesta netfangið þitt. Við erum "
-"búnir að senda staðfestingarpóst á reikninginn sem er að nota <strong>%"
-"(email)s</strong>. Til að staðfesta netfang, smelltu á tengilinn í póstinum."
-
-#: apps/users/templates/users/includes/macros.html:23 templates/layout/login.html:5 templates/layout/login.html:20
-msgid "Log in"
-msgstr "Innskráning"
+"Áður en þú getur skráð þig inn, þarftu að staðfesta netfangið þitt. Við erum búnir að senda staðfestingarpóst á reikninginn sem er að nota <strong>%(email)s</strong>. Til að staðfesta netfang, "
+"smelltu á tengilinn í póstinum."
 
 #: apps/users/templates/users/includes/macros.html:23
 msgid "Logging in..."
@@ -2204,9 +2212,7 @@ msgstr "{title} ({locale}) hefur samþykkt nýja útgáfu"
 
 #: apps/wiki/forms.py:20
 msgid "Please keep the length of the title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
-msgstr ""
-"Hafðu titil ekki lengri en %(limit_value)s stafir. Hann er núna %"
-"(show_value)s stafir."
+msgstr "Hafðu titil ekki lengri en %(limit_value)s stafir. Hann er núna %(show_value)s stafir."
 
 #: apps/wiki/forms.py:23
 msgid "Please provide a slug."
@@ -2218,15 +2224,11 @@ msgstr "Innslegið auðkenni er ekki gilt."
 
 #: apps/wiki/forms.py:25
 msgid "The slug is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
-msgstr ""
-"Auðkenni er of stutt (%(show_value)s stafir). Það verður að vera minnst %"
-"(limit_value)s stafir."
+msgstr "Auðkenni er of stutt (%(show_value)s stafir). Það verður að vera minnst %(limit_value)s stafir."
 
 #: apps/wiki/forms.py:27
 msgid "Please keep the length of the slug to %(limit_value)s characters or less. It is currently %(show_value)s characters."
-msgstr ""
-"Passaðu að lengd auðkennis sé minni en %(limit_value)s stafir. Það er núna %"
-"(show_value)s stafir."
+msgstr "Passaðu að lengd auðkennis sé minni en %(limit_value)s stafir. Það er núna %(show_value)s stafir."
 
 #: apps/wiki/forms.py:30
 msgid "Please provide a summary."
@@ -2234,15 +2236,11 @@ msgstr "Vantar yfirlit."
 
 #: apps/wiki/forms.py:31
 msgid "The summary is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
-msgstr ""
-"Yfirlit er of stutt (%(show_value)s stafir). Verður að vera minnst %"
-"(limit_value)s stafir."
+msgstr "Yfirlit er of stutt (%(show_value)s stafir). Verður að vera minnst %(limit_value)s stafir."
 
 #: apps/wiki/forms.py:33
 msgid "Please keep the length of the summary to %(limit_value)s characters or less. It is currently %(show_value)s characters."
-msgstr ""
-"Hafðu yfirlit ekki lengri en %(limit_value)s stafir. Það er núna %"
-"(show_value)s stafir."
+msgstr "Hafðu yfirlit ekki lengri en %(limit_value)s stafir. Það er núna %(show_value)s stafir."
 
 #: apps/wiki/forms.py:36
 msgid "Please provide content."
@@ -2250,188 +2248,209 @@ msgstr "Vantar innihald."
 
 #: apps/wiki/forms.py:37
 msgid "The content is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
-msgstr ""
-"Innihald er of stutt (%(show_value)s stafir). Innihald verðua ð vera minnst "
-"%(limit_value)s stafir."
+msgstr "Innihald er of stutt (%(show_value)s stafir). Innihald verðua ð vera minnst %(limit_value)s stafir."
 
 #: apps/wiki/forms.py:39
 msgid "Please keep the length of the content to %(limit_value)s characters or less. It is currently %(show_value)s characters."
-msgstr ""
-"Hafðu efni ekki lengri en %(limit_value)s stafir. Það er núna %(show_value)s "
-"stafir."
+msgstr "Hafðu efni ekki lengri en %(limit_value)s stafir. Það er núna %(show_value)s stafir."
 
 #: apps/wiki/forms.py:42
 msgid "Please keep the length of the comment to %(limit_value)s characters or less. It is currently %(show_value)s characters."
-msgstr ""
-"Hafðu athugasemd ekki lengri en %(limit_value)s stafir. Hún er núna %"
-"(show_value)s stafir."
+msgstr "Hafðu athugasemd ekki lengri en %(limit_value)s stafir. Hún er núna %(show_value)s stafir."
 
-#: apps/wiki/forms.py:61
+#: apps/wiki/forms.py:70
 msgid "Title of article"
 msgstr "Titill síðu"
 
-#: apps/wiki/forms.py:67 apps/wiki/templates/wiki/translate.html:65
+#: apps/wiki/forms.py:78 apps/wiki/templates/wiki/translate.html:67
 msgid "Slug:"
 msgstr "Auðkenni:"
 
-#: apps/wiki/forms.py:68
+#: apps/wiki/forms.py:79
 msgid "Article URL"
 msgstr "Slóð á síðu"
 
-#: apps/wiki/forms.py:74
+#: apps/wiki/forms.py:85
 msgid "Firefox version:"
 msgstr "Firefox útgáfa:"
 
-#: apps/wiki/forms.py:83
+#: apps/wiki/forms.py:92
 msgid "Operating systems:"
 msgstr "Stýrikerfi:"
 
-#: apps/wiki/forms.py:93
+#: apps/wiki/forms.py:100
 msgid "Allow translations:"
 msgstr "Leyfa þýðingar:"
 
-#: apps/wiki/forms.py:100
+#: apps/wiki/forms.py:104
+msgid "Obsolete:"
+msgstr ""
+
+#: apps/wiki/forms.py:112
 msgid "Category:"
 msgstr "Flokkur:"
 
-#: apps/wiki/forms.py:101
+#: apps/wiki/forms.py:113
 msgid "Type of article"
 msgstr "Tegund síðu"
 
-#: apps/wiki/forms.py:103
+#: apps/wiki/forms.py:117
 msgid "Topics:"
 msgstr "Umræðuefni:"
 
-#: apps/wiki/forms.py:104
+#: apps/wiki/forms.py:118
 msgid "Popular articles in each topic are displayed on the front page"
 msgstr "Vinsælar síður fyrir hvern flokk eru birtar á forsíðunni"
 
-#: apps/wiki/forms.py:151 apps/wiki/templates/wiki/review_revision.html:41 apps/wiki/templates/wiki/review_translation.html:56 apps/wiki/templates/wiki/translate.html:96
+#: apps/wiki/forms.py:164 apps/wiki/templates/wiki/review_revision.html:41 apps/wiki/templates/wiki/review_translation.html:56 apps/wiki/templates/wiki/translate.html:98
 #: apps/wiki/templates/wiki/includes/revision_diff.html:31
 msgid "Keywords:"
 msgstr "Stikkorð:"
 
-#: apps/wiki/forms.py:152
+#: apps/wiki/forms.py:165
 msgid "Affects search results"
 msgstr "Hefur áhrif á leitarniðurstöður"
 
-#: apps/wiki/forms.py:156 apps/wiki/templates/wiki/translate.html:106
+#: apps/wiki/forms.py:169 apps/wiki/templates/wiki/translate.html:108
 msgid "Search result summary:"
 msgstr "Niðurstöður leitar:"
 
-#: apps/wiki/forms.py:157
+#: apps/wiki/forms.py:170
 msgid "Only displayed on search results page"
 msgstr "Aðeins sýnt á leitarniðurstöðusíðu"
 
-#: apps/wiki/forms.py:178 apps/wiki/forms.py:206
+#: apps/wiki/forms.py:191 apps/wiki/forms.py:219
 msgid "Comment:"
 msgstr "Athugasemd:"
 
-#: apps/wiki/forms.py:210
+#: apps/wiki/forms.py:223
 msgid "Significance:"
 msgstr "Marktækir:"
 
-#: apps/wiki/models.py:32
+#: apps/wiki/models.py:33
 msgid "Minor details like punctuation and spelling errors"
 msgstr "Minniháttar atriði eins og greinamerki og stafsetningarvillur"
 
-#: apps/wiki/models.py:34
+#: apps/wiki/models.py:35
 msgid "Content changes that don't require immediate translation"
 msgstr "Breytingar á innihaldi sem þarfnast ekki þýðingar strax"
 
-#: apps/wiki/models.py:36
+#: apps/wiki/models.py:37
 msgid "Major content changes that will make older translations inaccurate"
 msgstr "Stórar breytingar á innihaldi sem gera fyrri þýðingar rangar"
 
-#: apps/wiki/models.py:41
+#: apps/wiki/models.py:42
 msgid "Troubleshooting"
 msgstr "Úrræðaleit"
 
-#: apps/wiki/models.py:42
+#: apps/wiki/models.py:43
 msgid "How to"
 msgstr "Leiðbeiningar"
 
-#: apps/wiki/models.py:43
+#: apps/wiki/models.py:44
 msgid "How to contribute"
 msgstr "Hvernig get ég lagt mitt af mörkum"
 
-#: apps/wiki/models.py:44
+#: apps/wiki/models.py:45
 msgid "Administration"
 msgstr "Stjórnun"
 
-#: apps/wiki/models.py:45
+#: apps/wiki/models.py:46
 msgid "Navigation"
 msgstr "Yfirlit"
 
-#: apps/wiki/models.py:61
+#: apps/wiki/models.py:62
 msgid "Desktop:"
 msgstr "Skjáborð:"
 
-#: apps/wiki/models.py:64 apps/wiki/models.py:65 apps/wiki/models.py:71
+#: apps/wiki/models.py:65 apps/wiki/models.py:66 apps/wiki/models.py:76
+#, fuzzy
+msgid "Firefox 6"
+msgstr "Firefox 4"
+
+#: apps/wiki/models.py:67 apps/wiki/models.py:68 apps/wiki/models.py:78
+#, fuzzy
+msgid "Firefox 5"
+msgstr "Firefox 4"
+
+#: apps/wiki/models.py:69 apps/wiki/models.py:70 apps/wiki/models.py:80
 msgid "Firefox 4"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:66 apps/wiki/models.py:67
+#: apps/wiki/models.py:71 apps/wiki/models.py:72
 msgid "Firefox 3.5-3.6"
 msgstr "Firefox 3.5-3.6"
 
-#: apps/wiki/models.py:68 apps/wiki/models.py:69
+#: apps/wiki/models.py:73 apps/wiki/models.py:74
 msgid "Firefox 3.0"
 msgstr "Firefox 3.0"
 
-#: apps/wiki/models.py:70
+#: apps/wiki/models.py:75
 msgid "Mobile:"
 msgstr "Farsími:"
 
-#: apps/wiki/models.py:72
-msgid "Firefox 4 for Mobile"
+#: apps/wiki/models.py:77
+#, fuzzy
+msgid "Firefox 6 for Mobile"
+msgstr "Firefox 4 fyrir farsíma"
+
+#: apps/wiki/models.py:79
+#, fuzzy
+msgid "Firefox 5 for Mobile"
 msgstr "Firefox 4 fyrir farsíma"
 
 #: apps/wiki/models.py:81
+msgid "Firefox 4 for Mobile"
+msgstr "Firefox 4 fyrir farsíma"
+
+#: apps/wiki/models.py:90
 msgid "Desktop OS:"
 msgstr "Stýrikerfi tölvu:"
 
-#: apps/wiki/models.py:82
+#: apps/wiki/models.py:91
 msgid "Windows"
 msgstr "Windows"
 
-#: apps/wiki/models.py:83
+#: apps/wiki/models.py:92
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: apps/wiki/models.py:84
+#: apps/wiki/models.py:93
 msgid "Linux"
 msgstr "Linux"
 
-#: apps/wiki/models.py:85
+#: apps/wiki/models.py:94
 msgid "Mobile OS:"
 msgstr "Stýrikerfi farsíma:"
 
-#: apps/wiki/models.py:86
+#: apps/wiki/models.py:95
 msgid "Android"
 msgstr "Android"
 
-#: apps/wiki/models.py:87
+#: apps/wiki/models.py:96
 msgid "Maemo"
 msgstr "Maemo"
 
-#: apps/wiki/models.py:96
+#: apps/wiki/models.py:105
 msgid "%(old)s Redirect %(number)i"
 msgstr "%(old)s Áframsenda %(number)i"
 
-#: apps/wiki/models.py:97
+#: apps/wiki/models.py:106
 msgid "%(old)s-redirect-%(number)i"
 msgstr "%(old)s-áframsenda-%(number)i"
 
-#: apps/wiki/models.py:237
+#: apps/wiki/models.py:187
+msgctxt "longer maintained."
+msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no "
+msgstr ""
+
+#: apps/wiki/models.py:277
 msgid "Please choose a category."
 msgstr "Veldu flokk."
 
-#: apps/wiki/models.py:566
+#: apps/wiki/models.py:611
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
-msgstr ""
-"Útgáfa verður að vera byggð á útgáfu skjals á tungumáli %(locale)s. Útgáfu "
-"auðkenni %(id)s passar ekki við þessi skilyrði."
+msgstr "Útgáfa verður að vera byggð á útgáfu skjals á tungumáli %(locale)s. Útgáfu auðkenni %(id)s passar ekki við þessi skilyrði."
 
 #. L10n: This error is displayed if a template is included into itself.
 #: apps/wiki/parser.py:324
@@ -2450,27 +2469,61 @@ msgstr "Sniðmátið \"%s\" er ekki til eða er ekki með samþykkta útgáfu."
 msgid "The video \"%s\" does not exist."
 msgstr "Myndbandið \"%s\" er ekki til."
 
-#: apps/wiki/tasks.py:34
+#: apps/wiki/tasks.py:36
 msgid "Your revision has been approved: {title}"
 msgstr "Útgáfan þín var samþykkt: {title}"
 
-#: apps/wiki/tasks.py:36
+#: apps/wiki/tasks.py:38
 msgid "Your revision has been rejected: {title}"
 msgstr "Þinni útgáfu var hafnað: {title}"
 
-#: apps/wiki/views.py:408
+#: apps/wiki/topic_strings.py:6
+msgctxt "KB Topic"
+msgid "ui"
+msgstr ""
+
+#: apps/wiki/topic_strings.py:7
+#, fuzzy
+msgctxt "KB Topic"
+msgid "mobile"
+msgstr "Farsími"
+
+#: apps/wiki/topic_strings.py:8
+#, fuzzy
+msgctxt "KB Topic"
+msgid "Firefox 1.0"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/topic_strings.py:9
+msgctxt "KB Topic"
+msgid "addon"
+msgstr ""
+
+#: apps/wiki/topic_strings.py:10
+#, fuzzy
+msgctxt "KB Topic"
+msgid "Firefox 3.6.13"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/topic_strings.py:11
+#, fuzzy
+msgctxt "KB Topic"
+msgid "Firefox 4.0"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/views.py:426
 msgid "You cannot translate this document."
 msgstr "Þú getur ekki þýtt þetta skjal."
 
-#: apps/wiki/views.py:598
+#: apps/wiki/views.py:623
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "Gott að heyra &mdash; takk fyrir að láta okkur vita!"
 
-#: apps/wiki/views.py:600
+#: apps/wiki/views.py:625
 msgid "Sorry to hear that. Try searching for solutions below."
 msgstr "Ekki gott að heyra. Prófaðu að leita að svörum hér fyrir neðan."
 
-#: apps/wiki/views.py:610
+#: apps/wiki/views.py:635
 msgid "You already voted on this Article."
 msgstr "Þú hefur þegar kosið þessa síðu."
 
@@ -2487,6 +2540,49 @@ msgstr "Bera saman breyttar útgáfur"
 msgid "Back to History"
 msgstr "Til baka á ferilsögu"
 
+#: apps/wiki/templates/wiki/confirm_document_delete.html:5
+#, fuzzy
+msgid "Document Deleted | {document}"
+msgstr "Eyða útgáfu | {document}"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:7
+#, fuzzy
+msgid "Delete Document | {document}"
+msgstr "Eyða útgáfu | {document}"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:10
+#, fuzzy
+msgid "Delete Document"
+msgstr "Eyða póst"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:16
+#, fuzzy
+msgid "The document has been deleted."
+msgstr "Skjalið \"%s\" er ekki til."
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:18
+#, fuzzy
+msgid "Are you sure you want to delete this document?"
+msgstr "Ertu viss um að þú viljir eyða þessum pósti?"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:20
+msgid "All translations of this document will also be deleted."
+msgstr ""
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:27
+#, fuzzy
+msgid "Current Content"
+msgstr "Þýða innihald"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:33
+#, fuzzy
+msgid "You are about to permanently delete this document. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
+msgstr "Þú ert að fara að eyða þessum pósti. <strong>Þessa aðgerð er ekki hægt að bakfæra!</strong> Ertu viss um að þú viljir halda áfram?"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:37 apps/wiki/templates/wiki/confirm_revision_delete.html:32
+msgid "Cancel and go back to document history"
+msgstr ""
+
 #: apps/wiki/templates/wiki/confirm_revision_delete.html:4
 msgid "Delete Revision | {document}"
 msgstr "Eyða útgáfu | {document}"
@@ -2495,15 +2591,27 @@ msgstr "Eyða útgáfu | {document}"
 msgid "Delete Revision"
 msgstr "Eyða útgáfu"
 
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:11
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:12
+#, fuzzy
+msgid "Unable to delete only revision of the document"
+msgstr "Eyða útgáfu | {document}"
+
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:13
+msgid "To delete the document, please notify an admin."
+msgstr ""
+
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:15
+#, fuzzy
+msgid "Go back to document history"
+msgstr "Til baka á ferilsögu"
+
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:18
 msgid "Are you sure you want to delete this revision?"
 msgstr "Ertu viss um að þú viljir eyða þessari útgáfu?"
 
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:21
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:28
 msgid "You are about to permanently delete this revision. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
-msgstr ""
-"Þú ert að fara að eyða þessari útgáfu. <strong>Ekki er hægt að bakfæra þessa "
-"aðgerð!</strong> Ertu viss um að þú viljir halda áfram?"
+msgstr "Þú ert að fara að eyða þessari útgáfu. <strong>Ekki er hægt að bakfæra þessa aðgerð!</strong> Ertu viss um að þú viljir halda áfram?"
 
 #. {t} is the title of the document. {c} is the category.
 #: apps/wiki/templates/wiki/document.html:6 apps/wiki/templates/wiki/mobile/document.html:5
@@ -2518,124 +2626,123 @@ msgstr "Fannstu ekki það sem þú leitaðir að?"
 msgid "Here's a list of related articles that might help:"
 msgstr "Hérna er listi af síðum sem gæti hjálpað:"
 
-#: apps/wiki/templates/wiki/document.html:39
-msgid "Browse other articles about <a href=\"{url}\">{category}</a>"
+#: apps/wiki/templates/wiki/document.html:45
+#, fuzzy
+msgid "Browse other articles about %(topics)s"
 msgstr "Fletta í öðrum síðum um <a href=\"{url}\">{category}</a>"
 
-#: apps/wiki/templates/wiki/document.html:42
+#: apps/wiki/templates/wiki/document.html:51
 msgid "Ask our awesome support community for help"
 msgstr "Spurðu sjálfboðaliðana hjá okkur um hjálp"
 
-#: apps/wiki/templates/wiki/document.html:45
+#: apps/wiki/templates/wiki/document.html:54
 msgid "Or try searching:"
 msgstr "Eða prófaðu að leita:"
 
-#: apps/wiki/templates/wiki/document.html:54
+#: apps/wiki/templates/wiki/document.html:63
 msgid "You've come to the right place for Firefox help!"
 msgstr "Þú ert á réttum stað til að fá hjálp með Firefox!"
 
-#: apps/wiki/templates/wiki/document.html:56
+#: apps/wiki/templates/wiki/document.html:65
 msgid "This page should provide you with a solution to what you posted on Twitter.<br/> If not, our community volunteers are ready to help."
-msgstr ""
-"Þessi síða ætti að geta fundið lausn á því sem þú sendir inn á Twitter.<br/> "
-"Ef ekki, eru sjálfboðaliðar tilbúnir að hjálpa þér."
+msgstr "Þessi síða ætti að geta fundið lausn á því sem þú sendir inn á Twitter.<br/> Ef ekki, eru sjálfboðaliðar tilbúnir að hjálpa þér."
 
-#: apps/wiki/templates/wiki/document.html:64
+#: apps/wiki/templates/wiki/document.html:73
 msgid "You were sent here by one of our <br/> volunteers from the <a href=\"%(url)s\">Army of Awesome</a>."
-msgstr ""
-"Þú varst sendur hingað af einum <br/> þátttakanda í <a href=\"%(url)s\">hópi "
-"hinna æðislegu</a>."
+msgstr "Þú varst sendur hingað af einum <br/> þátttakanda í <a href=\"%(url)s\">hópi hinna æðislegu</a>."
 
-#: apps/wiki/templates/wiki/document.html:94
+#: apps/wiki/templates/wiki/document.html:103
 msgid "Turn off emails."
 msgstr "Slökkva á tölvupósti."
 
-#: apps/wiki/templates/wiki/document.html:99
+#: apps/wiki/templates/wiki/document.html:108
 msgid "Get emailed when this article changes."
 msgstr "Fá póst þegar gerðar eru breytingar á þessari síðu."
 
-#: apps/wiki/templates/wiki/document_revisions.html:4
+#: apps/wiki/templates/wiki/edit_document.html:7
+msgid "Edit Article | {document}"
+msgstr "Breyta síðu | {document}"
+
+#: apps/wiki/templates/wiki/edit_document.html:11 apps/wiki/templates/wiki/includes/sidebar_modules.html:27 apps/wiki/templates/wiki/includes/sidebar_modules.html:29
+msgid "Edit Article"
+msgstr "Breyta síðu"
+
+#: apps/wiki/templates/wiki/edit_document.html:16
+msgid "<em>Editing</em> {title}"
+msgstr "<em>Breyta</em> {title}"
+
+#: apps/wiki/templates/wiki/edit_document.html:21
+msgid "Edit Description"
+msgstr "Breyta lýsingu"
+
+#: apps/wiki/templates/wiki/edit_document.html:37 apps/wiki/templates/wiki/new_document.html:24
+msgid "Relevant to:"
+msgstr "Tengsl við:"
+
+#: apps/wiki/templates/wiki/edit_document.html:45
+msgid "Save description"
+msgstr "Vista lýsingu"
+
+#: apps/wiki/templates/wiki/edit_document.html:54
+msgid "Edit Content"
+msgstr "Breyta innihaldi"
+
+#: apps/wiki/templates/wiki/edit_document.html:56
+msgid "For help with writing articles, check out the <a href=\"%(url)s\">Support Document Guide</a>."
+msgstr "Til að sjá hjálp með að skrifa síður, kíktu á <a href=\"%(url)s\">Hjálparskjal fyrir aðstoð</a>."
+
+#: apps/wiki/templates/wiki/history.html:4
 msgid "Revision History | {document}"
 msgstr "Útgáfusaga | {document}"
 
-#: apps/wiki/templates/wiki/document_revisions.html:7
+#: apps/wiki/templates/wiki/history.html:7
 msgid "History"
 msgstr "Útgáfur"
 
-#: apps/wiki/templates/wiki/document_revisions.html:11
+#: apps/wiki/templates/wiki/history.html:11
 msgid "History of {title}"
 msgstr "Útgáfur fyrir {title}"
 
-#: apps/wiki/templates/wiki/document_revisions.html:13
+#: apps/wiki/templates/wiki/history.html:13
 msgid "Revision history for:"
 msgstr "Útgáfusaga fyrir:"
 
-#: apps/wiki/templates/wiki/document_revisions.html:30 apps/wiki/templates/wiki/document_revisions.html:91
+#: apps/wiki/templates/wiki/history.html:30 apps/wiki/templates/wiki/history.html:94
 msgid "Compare Selected Translations"
 msgstr "Bera saman valdar þýðingar"
 
-#: apps/wiki/templates/wiki/document_revisions.html:30 apps/wiki/templates/wiki/document_revisions.html:91
+#: apps/wiki/templates/wiki/history.html:30 apps/wiki/templates/wiki/history.html:94
 msgid "Compare Selected Revisions"
 msgstr "Bera saman valdar útgáfur"
 
-#: apps/wiki/templates/wiki/document_revisions.html:52
+#: apps/wiki/templates/wiki/history.html:52
 msgid "Review"
 msgstr "Umsögn"
 
-#: apps/wiki/templates/wiki/document_revisions.html:54
+#: apps/wiki/templates/wiki/history.html:54
 msgctxt "revision"
 msgid "Unreviewed"
 msgstr "Ósamþykkt"
 
-#: apps/wiki/templates/wiki/document_revisions.html:58
+#: apps/wiki/templates/wiki/history.html:58
 msgid "Current"
 msgstr "Núverandi"
 
-#: apps/wiki/templates/wiki/document_revisions.html:60
+#: apps/wiki/templates/wiki/history.html:60
 msgid "Approved"
 msgstr "Samþykkt"
 
-#: apps/wiki/templates/wiki/document_revisions.html:96
+#: apps/wiki/templates/wiki/history.html:82 apps/wiki/templates/wiki/revision.html:54
+msgid "Edit article based on this revision"
+msgstr "Breyta síðu sem er byggð á þessari útgáfu"
+
+#: apps/wiki/templates/wiki/history.html:99
 msgid "This document has no revisions."
 msgstr "Þetta skjal hefur engar útgáfur."
 
-#: apps/wiki/templates/wiki/edit_document.html:6
-msgid "Edit Article | {document}"
-msgstr "Breyta síðu | {document}"
-
-#: apps/wiki/templates/wiki/edit_document.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:27 apps/wiki/templates/wiki/includes/sidebar_modules.html:29
-msgid "Edit Article"
-msgstr "Breyta síðu"
-
-#: apps/wiki/templates/wiki/edit_document.html:15
-msgid "<em>Editing</em> {title}"
-msgstr "<em>Breyta</em> {title}"
-
-#: apps/wiki/templates/wiki/edit_document.html:19
-msgid "Edit Description"
-msgstr "Breyta lýsingu"
-
-#: apps/wiki/templates/wiki/edit_document.html:32 apps/wiki/templates/wiki/new_document.html:24
-msgid "Relevant to:"
-msgstr "Tengsl við:"
-
-#: apps/wiki/templates/wiki/edit_document.html:40
-msgid "Save description"
-msgstr "Vista lýsingu"
-
-#: apps/wiki/templates/wiki/edit_document.html:49
-msgid "Edit Content"
-msgstr "Breyta innihaldi"
-
-#: apps/wiki/templates/wiki/edit_document.html:51
-msgid "For help with writing articles, check out the <a href=\"%(url)s\">Support Document Guide</a>."
-msgstr ""
-"Til að sjá hjálp með að skrifa síður, kíktu á <a href=\"%(url)s\">Hjálparskjal "
-"fyrir aðstoð</a>."
-
 #: apps/wiki/templates/wiki/list_documents.html:6
-msgid "Articles tagged: {tag}"
-msgstr "Síður merktar með: {tag}"
+msgid "Topic: {topic}"
+msgstr ""
 
 #: apps/wiki/templates/wiki/list_documents.html:8
 msgid "All Articles"
@@ -2747,11 +2854,9 @@ msgstr "Frumkóði síðu"
 
 #: apps/wiki/templates/wiki/review_translation.html:43
 msgid "The {default_locale} version has no approved content to show."
-msgstr ""
-"{default_locale} útgáfan inniheldur ekki neitt samþykkt innihald til að "
-"sýna."
+msgstr "{default_locale} útgáfan inniheldur ekki neitt samþykkt innihald til að sýna."
 
-#: apps/wiki/templates/wiki/review_translation.html:49 apps/wiki/templates/wiki/translate.html:127
+#: apps/wiki/templates/wiki/review_translation.html:49 apps/wiki/templates/wiki/translate.html:129
 msgid "Approved {default_locale} version:"
 msgstr "Samþykkt {default_locale} útgáfa:"
 
@@ -2825,10 +2930,6 @@ msgstr "Samþykkt?"
 msgid "Is current revision?"
 msgstr "Núverandi útgáfa?"
 
-#: apps/wiki/templates/wiki/revision.html:54
-msgid "Edit article based on this revision"
-msgstr "Breyta síðu sem er byggð á þessari útgáfu"
-
 #: apps/wiki/templates/wiki/select_locale.html:4
 msgid "Select language | {document}"
 msgstr "Veldu tungumál | {document}"
@@ -2841,64 +2942,64 @@ msgstr "Veldu tungumál"
 msgid "Select a language to translate to:"
 msgstr "Veldu tungumál til að þýða yfir á:"
 
-#: apps/wiki/templates/wiki/translate.html:6
+#: apps/wiki/templates/wiki/translate.html:7
 msgid "Translate Article | {document}"
 msgstr "Þýða síðu | {document}"
 
-#: apps/wiki/templates/wiki/translate.html:9 apps/wiki/templates/wiki/includes/sidebar_modules.html:36 apps/wiki/templates/wiki/includes/sidebar_modules.html:38
+#: apps/wiki/templates/wiki/translate.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:36 apps/wiki/templates/wiki/includes/sidebar_modules.html:38
 #: apps/wiki/templates/wiki/includes/sidebar_modules.html:45 apps/wiki/templates/wiki/includes/sidebar_modules.html:47
 msgid "Translate Article"
 msgstr "Þýða síðu"
 
-#: apps/wiki/templates/wiki/translate.html:15
+#: apps/wiki/templates/wiki/translate.html:16
 msgid "Translating {title}"
 msgstr "Þýði {title}"
 
-#: apps/wiki/templates/wiki/translate.html:18
+#: apps/wiki/templates/wiki/translate.html:19
 msgid "Translating article to {locale}"
 msgstr "Þýða síðu yfir á {locale}"
 
-#: apps/wiki/templates/wiki/translate.html:23
+#: apps/wiki/templates/wiki/translate.html:24
 msgid "You are translating an unreviewed or rejected English document."
 msgstr "Þú ert að þýða ósamþykkt eða enskt skjal sem hefur verið hafnað."
 
-#: apps/wiki/templates/wiki/translate.html:26
+#: apps/wiki/templates/wiki/translate.html:27
 msgid "Choose a locale:"
 msgstr "Veldu tungumál:"
 
-#: apps/wiki/templates/wiki/translate.html:44
+#: apps/wiki/templates/wiki/translate.html:46
 msgid "Translate Description"
 msgstr "Þýða lýsingu"
 
-#: apps/wiki/templates/wiki/translate.html:59
+#: apps/wiki/templates/wiki/translate.html:61
 msgid "Title in {locale}:"
 msgstr "Titill á {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:69
+#: apps/wiki/templates/wiki/translate.html:71
 msgid "Slug in {locale}:"
 msgstr "Auðkenni í {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:76
+#: apps/wiki/templates/wiki/translate.html:78
 msgid "Save title and slug"
 msgstr "Vista titil og auðkenni"
 
-#: apps/wiki/templates/wiki/translate.html:85
+#: apps/wiki/templates/wiki/translate.html:87
 msgid "Translate Content"
 msgstr "Þýða innihald"
 
-#: apps/wiki/templates/wiki/translate.html:100
+#: apps/wiki/templates/wiki/translate.html:102
 msgid "Keywords in {locale}:"
 msgstr "Stikkorð á {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:110
+#: apps/wiki/templates/wiki/translate.html:112
 msgid "Search result summary in {locale}:"
 msgstr "Niðurstöður leitar á {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:122
+#: apps/wiki/templates/wiki/translate.html:124
 msgid "Note: There are no approved translations for this article."
 msgstr "Athugið: Engar samþykktar þýðingar eru til fyrir þessa síðu."
 
-#: apps/wiki/templates/wiki/translate.html:131
+#: apps/wiki/templates/wiki/translate.html:133
 msgid "{locale} translation:"
 msgstr "{locale} þýðing:"
 
@@ -2919,33 +3020,35 @@ msgid ""
 "<p>This article may be out of date.</p> <p> An important change has been made to the English article on which this is based. Until this page is updated, you might find this helpful: <a href=\"%(url)"
 "s\">%(title)s</a> </p>"
 msgstr ""
-"<p>Þessi síða gæti verið úrelt.</p> <p> Búið er að bæta við mikilvægri "
-"breytingu í ensku útgáfuna sem þessi síða er byggð á. Þangað til þessi síða "
-"verður uppfærð, gæti þessi síða verið hjálplegri: <a href=\"%(url)s\">%"
-"(title)s</a> </p>"
+"<p>Þessi síða gæti verið úrelt.</p> <p> Búið er að bæta við mikilvægri breytingu í ensku útgáfuna sem þessi síða er byggð á. Þangað til þessi síða verður uppfærð, gæti þessi síða verið hjálplegri: "
+"<a href=\"%(url)s\">%(title)s</a> </p>"
 
-#: apps/wiki/templates/wiki/includes/document_macros.html:53
-msgid "Our volunteers haven't translated this article into %(locale)s yet. <a href=\"%(help_link)s\">Join us and help get the job done!</a>"
+#: apps/wiki/templates/wiki/includes/document_macros.html:48
+msgid "This article is no longer maintained, so its content might be out of date."
 msgstr ""
-"Sjálfboðaliðarnir okkar hafa ekki ennþá þýtt þessa síðu yfir á %(locale)s. "
-"<a href=\"%(help_link)s\">Taktu þátt og hjálpaðu okkur að klára verkið!</a>"
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:63
+msgid "Our volunteers haven't translated this article into %(locale)s yet. <a href=\"%(help_link)s\">Join us and help get the job done!</a>"
+msgstr "Sjálfboðaliðarnir okkar hafa ekki ennþá þýtt þessa síðu yfir á %(locale)s. <a href=\"%(help_link)s\">Taktu þátt og hjálpaðu okkur að klára verkið!</a>"
 
 #. This is shown for existing, never-approved translations
-#: apps/wiki/templates/wiki/includes/document_macros.html:63
+#: apps/wiki/templates/wiki/includes/document_macros.html:73
 msgid "Our volunteers are working on translating this article. Until it's ready, maybe the English version can be of some help."
-msgstr ""
-"Sjálfboðaliðarnir okkar eru að vinna í því að þýða þessa síðu. Á meðan hún "
-"er ekki tilbúinn, er best að nota ensku útgáfuna."
+msgstr "Sjálfboðaliðarnir okkar eru að vinna í því að þýða þessa síðu. Á meðan hún er ekki tilbúinn, er best að nota ensku útgáfuna."
 
-#: apps/wiki/templates/wiki/includes/document_macros.html:75
+#: apps/wiki/templates/wiki/includes/document_macros.html:85
 msgid "This article doesn't have approved content yet."
 msgstr "Þessi  síða inniheldur ekki ennþá neitt samþykkt innihald."
 
-#: apps/wiki/templates/wiki/includes/document_vote.html:7
+#: apps/wiki/templates/wiki/includes/document_macros.html:101
+msgid "Warning: There are newer unreviewed revisions of this article. See <a href=\"%(url)s\">the history</a> to base your edit on an existing unreviewed revision."
+msgstr ""
+
+#: apps/wiki/templates/wiki/includes/document_vote.html:6
 msgid "Was this article helpful?"
 msgstr "Var þessi síða hjálpleg?"
 
-#: apps/wiki/templates/wiki/includes/document_vote.html:10
+#: apps/wiki/templates/wiki/includes/document_vote.html:9
 msgid "Please wait..."
 msgstr "Bíddu andartak..."
 
@@ -2979,22 +3082,15 @@ msgstr "Samþykkja útgáfu"
 
 #: apps/wiki/templates/wiki/includes/review_form.html:19
 msgid "Thanks for taking the time to review these changes. Please consider sending a thank you to the person who submitted them."
-msgstr ""
-"Takk fyrir að taka frá tíma til að fara yfir þessar breytingar. Íhugaðu að "
-"þakka kannski viðkomandi fyrir að senda þær inn."
+msgstr "Takk fyrir að taka frá tíma til að fara yfir þessar breytingar. Íhugaðu að þakka kannski viðkomandi fyrir að senda þær inn."
 
 #: apps/wiki/templates/wiki/includes/review_form.html:22
 msgid "Clicking Accept will make this version of the article live! Please pick the appropriate revision level below and consider sending a thank you to the person who submitted this."
-msgstr ""
-"Með því að smella á samþykkja verður þessi útgáfa af síðunni birt! Veldu "
-"viðeigandi útgáfustig hér fyrir neðan og íhugaðu að þakka þeim sem sendi "
-"þetta inn."
+msgstr "Með því að smella á samþykkja verður þessi útgáfa af síðunni birt! Veldu viðeigandi útgáfustig hér fyrir neðan og íhugaðu að þakka þeim sem sendi þetta inn."
 
 #: apps/wiki/templates/wiki/includes/review_form.html:31 apps/wiki/templates/wiki/includes/review_form.html:45
 msgid "Leave a message for the contributor: <span class=\"optional\">(optional)</span>"
-msgstr ""
-"Skilja eftir skilaboð fyrir sendanda: <span "
-"class=\"optional\">(valkvæmt)</span>"
+msgstr "Skilja eftir skilaboð fyrir sendanda: <span class=\"optional\">(valkvæmt)</span>"
 
 #: apps/wiki/templates/wiki/includes/review_form.html:34
 msgid "Accept"
@@ -3010,10 +3106,7 @@ msgstr "Hafna útgáfu"
 
 #: apps/wiki/templates/wiki/includes/review_form.html:41
 msgid "Thanks for taking the time to review these changes. Please consider leaving a message for the person who submitted them explaining why they were rejected."
-msgstr ""
-"Takk fyrir að taka frá tíma til að fara yfir þessar breytingar. Íhugaðu að "
-"skilja kannski eftir skilaboð til viðkomandi til að skýra út af hverju þeim "
-"var hafnað."
+msgstr "Takk fyrir að taka frá tíma til að fara yfir þessar breytingar. Íhugaðu að skilja kannski eftir skilaboð til viðkomandi til að skýra út af hverju þeim var hafnað."
 
 #: apps/wiki/templates/wiki/includes/review_form.html:48
 msgid "Reject"
@@ -3053,10 +3146,7 @@ msgstr "Senda inn breytingar"
 
 #: apps/wiki/templates/wiki/includes/submit_revision_modal.html:5
 msgid "You rock! We'll send an email to let you know if your changes get approved. You can follow the discussion about this article by clicking the Discussion tab."
-msgstr ""
-"Þú rokkar! Við látum þig vita með tölvupósti ef breytingarnar þínar verða "
-"samþykktar. Þú getur fylgst með umræðum um þessa síðu með því að smella á "
-"umræðu flipann."
+msgstr "Þú rokkar! Við látum þig vita með tölvupósti ef breytingarnar þínar verða samþykktar. Þú getur fylgst með umræðum um þessa síðu með því að smella á umræðu flipann."
 
 #: apps/wiki/templates/wiki/includes/submit_revision_modal.html:9
 msgid "Briefly describe your changes:"
@@ -3075,32 +3165,27 @@ msgctxt "site_title"
 msgid "Firefox Help"
 msgstr "Firefox hjálp"
 
-#: templates/base.html:89
+#: templates/base.html:102
 msgid "Be <mark>Awesome</mark>"
 msgstr "Vertu <mark>æðislega flottur</mark>"
 
-#: templates/base.html:94
+#: templates/base.html:107
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
-msgstr ""
-"Vissir þú að Firefox hjálpin er aðeins möguleg vegna fjölda sjálfboðaliða "
-"allstaðar úr heiminum?"
+msgstr "Vissir þú að Firefox hjálpin er aðeins möguleg vegna fjölda sjálfboðaliða allstaðar úr heiminum?"
 
-#: templates/base.html:97
+#: templates/base.html:110
 msgid "Grab your cape and join us &raquo;"
 msgstr "Farðu í súpermann búninginn og taktu þátt &raquo;"
 
-#: templates/base.html:101
+#: templates/base.html:114
 msgid "Check your <mark>plugins</mark>"
 msgstr "Athugaðu <mark>tengiforrit</mark>"
 
-#: templates/base.html:106
+#: templates/base.html:119
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
-msgstr ""
-"Hvað eru tengiforrit? Af hverju ætti ég að passa upp á að þau séu uppfærð? "
-"Fáðu svar við þessum spurningum og keyrðu fljótlegt próf sem athugar hvort "
-"þú sért ekki með nýjustu uppfærslurnar."
+msgstr "Hvað eru tengiforrit? Af hverju ætti ég að passa upp á að þau séu uppfærð? Fáðu svar við þessum spurningum og keyrðu fljótlegt próf sem athugar hvort þú sért ekki með nýjustu uppfærslurnar."
 
-#: templates/base.html:111
+#: templates/base.html:124
 msgid "Find out more &raquo;"
 msgstr "Fá meiri upplýsingar &raquo;"
 
@@ -3129,11 +3214,8 @@ msgid ""
 "Except where otherwise <a href=\"http://mozilla.com/about/legal.html#site\">noted</a>, content on this site is licensed under the <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> "
 "Creative Commons Attribution Share-Alike License v3.0 </a> or any later version."
 msgstr ""
-"Á meðan annað er ekki tekið <a "
-"href=\"http://mozilla.com/about/legal.html#site\">fram</a>, er efni á þessu "
-"vefsvæði gefið út undir leyfi <br /> <a "
-"href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> Creative Commons "
-"Attribution Share-Alike License v3.0 </a> eða nýrri útgáfu."
+"Á meðan annað er ekki tekið <a href=\"http://mozilla.com/about/legal.html#site\">fram</a>, er efni á þessu vefsvæði gefið út undir leyfi <br /> <a href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\"> Creative Commons Attribution Share-Alike License v3.0 </a> eða nýrri útgáfu."
 
 #: templates/global/header.html:3
 msgid "skip to navigation"
@@ -3323,19 +3405,21 @@ msgstr "Leita í Firefox hjálpinni"
 msgid "Welcome, <span class=\"user\">{user}</span>."
 msgstr "Velkominn, <span class=\"user\">{user}</span>."
 
-#: templates/includes/common_macros.html:25
+#: templates/includes/common_macros.html:26
+msgid "Inbox"
+msgstr ""
+
+#: templates/includes/common_macros.html:32
 msgid "Dashboard"
 msgstr "Skjáborð"
 
-#: templates/includes/common_macros.html:27
+#: templates/includes/common_macros.html:34
 msgid "Sign Out"
 msgstr "Útskráning"
 
-#: templates/includes/common_macros.html:31
+#: templates/includes/common_macros.html:38
 msgid "Want to contribute?<br /> <a href=\"%(login_url)s\">Sign In</a> or <a href=\"%(register_url)s\">Register</a>"
-msgstr ""
-"Viltu taka þátt?<br /> <a href=\"%(login_url)s\">Skrá inn</a> eða <a href=\"%"
-"(register_url)s\">nýskrá</a>"
+msgstr "Viltu taka þátt?<br /> <a href=\"%(login_url)s\">Skrá inn</a> eða <a href=\"%(register_url)s\">nýskrá</a>"
 
 #: templates/includes/lang_form.html:4
 msgid "Other Languages"
@@ -3399,22 +3483,6 @@ msgstr[1] "Síða {n}"
 msgid "Next"
 msgstr "Næsta"
 
-#: templates/layout/login.html:16
-msgid "Remember me"
-msgstr "Mundu mig"
-
-#: templates/layout/login.html:23
-msgid "Click here to register"
-msgstr "Smelltu hér til nýskrá þig"
-
-#: templates/layout/login.html:26
-msgid "Click here if you've forgotten your password"
-msgstr "Smelltu hér ef þú hefur gleymt lykilorðinu þínu"
-
-#: templates/layout/login.html:26
-msgid "I forgot my password"
-msgstr "Ég gleymdi lykilorðinu mínu"
-
 #: templates/layout/paginator.html:7
 msgid "Previous"
 msgstr "Fyrra"
@@ -3454,6 +3522,36 @@ msgstr "Firefox Sync"
 #: templates/mobile/base.html:91
 msgid "View full site"
 msgstr "Skoða allt vefsvæðið"
+
+#~ msgid "All translations in English..."
+#~ msgstr "Allar þýðingar á ensku..."
+
+#~ msgid "Select an image file to upload."
+#~ msgstr "Veldu mynd til að hlaða inn."
+
+#~ msgid "Submit file"
+#~ msgstr "Senda skrá"
+
+#~ msgid "Please no SWFs, only FLVs."
+#~ msgstr "Vinsamlega ekki SWF, aðeins FLV."
+
+#~ msgid "Delete thumbnail"
+#~ msgstr "Eyða smámynd"
+
+#~ msgid "Articles tagged: {tag}"
+#~ msgstr "Síður merktar með: {tag}"
+
+#~ msgid "Remember me"
+#~ msgstr "Mundu mig"
+
+#~ msgid "Click here to register"
+#~ msgstr "Smelltu hér til nýskrá þig"
+
+#~ msgid "Click here if you've forgotten your password"
+#~ msgstr "Smelltu hér ef þú hefur gleymt lykilorðinu þínu"
+
+#~ msgid "I forgot my password"
+#~ msgstr "Ég gleymdi lykilorðinu mínu"
 
 #~ msgid "Forum"
 #~ msgstr "Spjallsvæði"

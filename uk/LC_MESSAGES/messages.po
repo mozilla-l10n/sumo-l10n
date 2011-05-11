@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-12 15:29-0700\n"
+"POT-Creation-Date: 2011-05-11 06:33-0700\n"
 "PO-Revision-Date: 2011-02-07 13:13+0200\n"
 "Last-Translator: Sergiy <sergiy.bogdancev@gmail.com>\n"
 "Language-Team: Ukrainian team\n"
@@ -14,66 +14,70 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Pootle 2.1.5\n"
 
-#: apps/announcements/models.py:18
+#: apps/announcements/models.py:19
 msgid "Start displaying"
 msgstr ""
 
-#: apps/announcements/models.py:19
+#: apps/announcements/models.py:20
 msgid "When this announcement will start appearing. (US/Pacific)"
 msgstr ""
 
-#: apps/announcements/models.py:23
+#: apps/announcements/models.py:24
 #, fuzzy
 msgid "Stop displaying"
 msgstr "Припинити слідкування"
 
-#: apps/announcements/models.py:24
+#: apps/announcements/models.py:25
 msgid "When this announcement will stop appearing. Leave blank for indefinite. (US/Pacific)"
 msgstr ""
 
-#: apps/announcements/models.py:28
+#: apps/announcements/models.py:29
 msgid "Use wiki syntax or HTML. It will display similar to a document's content."
 msgstr ""
 
-#: apps/customercare/views.py:27 apps/dashboards/readouts.py:103
+#: apps/announcements/tasks.py:34
+msgid "New announcement for {group}"
+msgstr ""
+
+#: apps/customercare/views.py:28 apps/dashboards/readouts.py:106
 msgid "Most Recent"
 msgstr "Найостанніші"
 
-#: apps/customercare/views.py:28
+#: apps/customercare/views.py:29
 msgid "Unanswered"
 msgstr ""
 
-#: apps/customercare/views.py:29
+#: apps/customercare/views.py:30
 msgid "Answered"
 msgstr ""
 
-#: apps/customercare/views.py:30
+#: apps/customercare/views.py:31
 msgid "All"
 msgstr ""
 
 #. L10n: the tweet needs to be a reply to another tweet.
-#: apps/customercare/views.py:168
+#: apps/customercare/views.py:171
 msgid "Reply-to is empty"
 msgstr "Немає відповіді"
 
 #. L10n: the tweet has no content.
-#: apps/customercare/views.py:173
+#: apps/customercare/views.py:176
 msgid "Message is empty"
 msgstr "Повідомлення порожнє"
 
-#: apps/customercare/views.py:176
+#: apps/customercare/views.py:179
 msgid "Message is too long"
 msgstr "Повідомлення занадто довге"
 
-#: apps/customercare/views.py:183 apps/customercare/views.py:251
+#: apps/customercare/views.py:186 apps/customercare/views.py:255
 msgid "An error occured: {message}"
 msgstr "Сталась помилка: {message}"
 
-#: apps/customercare/views.py:234 apps/customercare/views.py:239
+#: apps/customercare/views.py:238 apps/customercare/views.py:243
 msgid "Invalid ID."
 msgstr ""
 
-#: apps/customercare/views.py:243
+#: apps/customercare/views.py:247
 msgid "Tweets that are replies or have replies must not be hidden."
 msgstr ""
 
@@ -172,7 +176,8 @@ msgstr "<mark>Сягніть далі!</mark>"
 msgid "Want to go beyond 140 characters? <a href=\"%(join_url)s\">Join the support community</a> and help many more Firefox users."
 msgstr "Хочете друкувати більш ніж 140 символів? <a href=\"%(join_url)s\">Приєднуйтесь до спільноти підтримки</a> та допомагайте більшій кількості користувачів Firefox."
 
-#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:93 apps/kbforums/templates/kbforums/includes/post.html:29
+#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:95 apps/kbforums/templates/kbforums/includes/post.html:29
+#: apps/messages/templates/messages/read.html:19
 msgid "Reply"
 msgstr "Відповісти"
 
@@ -196,11 +201,11 @@ msgstr "Підправте відповідь"
 msgid "Tweak it and make it your own. Personalized messages go a long way in helping others."
 msgstr "Підправте допоміжне повідомлення для покращення відповіді."
 
-#: apps/customercare/templates/customercare/reply_modal.html:64
+#: apps/customercare/templates/customercare/reply_modal.html:65 apps/messages/views.py:74
 msgid "Your message was sent!"
 msgstr "Ваше повідомлення надіслано!"
 
-#: apps/customercare/templates/customercare/reply_modal.html:66 apps/wiki/templates/wiki/includes/submit_revision_modal.html:18
+#: apps/customercare/templates/customercare/reply_modal.html:67 apps/wiki/templates/wiki/includes/submit_revision_modal.html:18
 msgid "Submit"
 msgstr "Подати"
 
@@ -232,189 +237,187 @@ msgid "Before you join the Army of Awesome, you need to log in so you can respon
 msgstr "Перед приєднанням до Вражаючої армії, спочатку увійдіть для змоги надавати відповіді на твіти. Вас буде перенаправлено до Твітеру для входу."
 
 #: apps/customercare/templates/customercare/twitter_modal.html:12 apps/gallery/templates/gallery/confirm_media_delete.html:60 apps/gallery/templates/gallery/edit_media.html:28
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:53
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:79 apps/gallery/templates/gallery/includes/upload_media_form.html:83
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:87 apps/gallery/templates/gallery/includes/upload_media_form.html:117
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:134 apps/kbforums/templates/kbforums/confirm_post_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:30
-#: apps/kbforums/templates/kbforums/edit_post.html:29 apps/kbforums/templates/kbforums/edit_thread.html:27 apps/kbforums/templates/kbforums/new_thread.html:34
-#: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_revision_delete.html:25 apps/wiki/templates/wiki/includes/review_form.html:35
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:58
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:132 apps/gallery/templates/gallery/includes/upload_media_form.html:138
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/kbforums/templates/kbforums/confirm_post_delete.html:30 apps/kbforums/templates/kbforums/confirm_thread_delete.html:32
+#: apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29 apps/kbforums/templates/kbforums/new_thread.html:36
+#: apps/messages/templates/messages/new.html:16 apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/includes/review_form.html:35
 #: apps/wiki/templates/wiki/includes/review_form.html:49 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: apps/dashboards/models.py:19
+#: apps/dashboards/__init__.py:8
 msgid "This Week"
 msgstr "Цього тижня"
 
-#: apps/dashboards/models.py:20
+#: apps/dashboards/__init__.py:9
 msgid "All Time"
 msgstr "За увесь час"
 
-#: apps/dashboards/readouts.py:68 apps/dashboards/readouts.py:172
+#: apps/dashboards/models.py:168
+msgid "Parameters which will be passed to the dashboard. The dashboard determines the meaning and format of these."
+msgstr ""
+
+#: apps/dashboards/readouts.py:71 apps/dashboards/readouts.py:175
 msgid "Most-Visited Articles"
 msgstr "Найпопулярніші статті"
 
-#: apps/dashboards/readouts.py:72
+#: apps/dashboards/readouts.py:75
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "20 найпопулярніших статей, на які приходиться більше 50% трафіку всієї бази знань."
 
-#: apps/dashboards/readouts.py:75 apps/dashboards/readouts.py:318 apps/wiki/models.py:46
+#: apps/dashboards/readouts.py:78 apps/dashboards/readouts.py:323 apps/wiki/models.py:47
 msgid "Templates"
 msgstr "Шаблони"
 
-#: apps/dashboards/readouts.py:79
+#: apps/dashboards/readouts.py:82
 #, fuzzy
 msgid "How many of the approved templates which allow translations have an approved translation into this language"
 msgstr "Кількість затверджених англійських статей, що мають затверджений переклад на українську мову"
 
-#: apps/dashboards/readouts.py:82
+#: apps/dashboards/readouts.py:85
 msgid "All Knowledge Base Articles"
 msgstr "Всі статті бази знань"
 
-#: apps/dashboards/readouts.py:85
+#: apps/dashboards/readouts.py:88
 msgid "How many of the approved English articles which allow translations have an approved translation into this language"
 msgstr "Кількість затверджених англійських статей, що мають затверджений переклад на українську мову"
 
-#: apps/dashboards/readouts.py:100
+#: apps/dashboards/readouts.py:103
 msgid "Visits this week"
 msgstr "Відвідувань цей тиждень"
 
-#: apps/dashboards/readouts.py:101
+#: apps/dashboards/readouts.py:104
 msgid "Status"
 msgstr "Стан"
 
-#: apps/dashboards/readouts.py:102
+#: apps/dashboards/readouts.py:105
 msgid "Most Viewed"
 msgstr "Найпопулярніші"
 
-#: apps/dashboards/readouts.py:174
+#: apps/dashboards/readouts.py:177
 msgid "All knowledge base articles..."
 msgstr "Всі статті бази знань..."
 
-#: apps/dashboards/readouts.py:176
+#: apps/dashboards/readouts.py:179
 msgid "Visits"
 msgstr "Відвідувань"
 
-#: apps/dashboards/readouts.py:179
+#: apps/dashboards/readouts.py:182
 msgid "Review Needed"
 msgstr "Треба переглянути"
 
 #. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:227
-msgid "All translations in English..."
-msgstr "Всі переклади українською…"
-
 #: apps/dashboards/readouts.py:231
+#, fuzzy
+msgid "All translations..."
+msgstr "Дозволити переклади:"
+
+#: apps/dashboards/readouts.py:235
 msgid "Update Needed"
 msgstr "Потрібно оновити"
 
-#: apps/dashboards/readouts.py:233
+#: apps/dashboards/readouts.py:237
 msgid "Out of Date"
 msgstr "Застарілі"
 
-#: apps/dashboards/readouts.py:293
+#: apps/dashboards/readouts.py:298
 #, fuzzy
 msgid "Translation Needed"
 msgstr "Переклади, що потребують оновлення"
 
 #. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:322
+#: apps/dashboards/readouts.py:327
 #, fuzzy
 msgid "All templates in English..."
 msgstr "Всі переклади українською…"
 
-#: apps/dashboards/readouts.py:330
+#: apps/dashboards/readouts.py:335
 msgid "Untranslated Articles"
 msgstr "Неперекладені статті"
 
-#: apps/dashboards/readouts.py:331
+#: apps/dashboards/readouts.py:336
 msgid "Untranslated"
 msgstr "Неперекладені"
 
-#: apps/dashboards/readouts.py:332
+#: apps/dashboards/readouts.py:337
 msgid "All untranslated articles..."
 msgstr "Всі неперекладені статті…"
 
-#: apps/dashboards/readouts.py:334
+#: apps/dashboards/readouts.py:339
 msgid "Updated"
 msgstr "Оновлено"
 
-#: apps/dashboards/readouts.py:374
+#: apps/dashboards/readouts.py:379
 msgid "Out-of-Date Translations"
 msgstr "Застарілі переклади"
 
-#: apps/dashboards/readouts.py:375
+#: apps/dashboards/readouts.py:380
 msgid "Out-of-Date"
 msgstr "Застарілі"
 
-#: apps/dashboards/readouts.py:376
+#: apps/dashboards/readouts.py:381
 msgid "All out-of-date translations..."
 msgstr "Всі застарілі переклади…"
 
-#: apps/dashboards/readouts.py:378
+#: apps/dashboards/readouts.py:383
 msgid "Out of date since"
 msgstr "Застарілі з"
 
-#: apps/dashboards/readouts.py:453
+#: apps/dashboards/readouts.py:458
 msgid "Translations Needing Updates"
 msgstr "Переклади, що потребують оновлення"
 
-#: apps/dashboards/readouts.py:454
+#: apps/dashboards/readouts.py:459
 msgid "Needing Updates"
 msgstr "Потребують оновлення"
 
-#: apps/dashboards/readouts.py:455
+#: apps/dashboards/readouts.py:460
 msgid "All translations needing updates..."
 msgstr "Всі переклади, що потребують оновлення…"
 
-#: apps/dashboards/readouts.py:462
+#: apps/dashboards/readouts.py:467
 msgid "Unreviewed Changes"
 msgstr "Непереглянуті зміни"
 
-#: apps/dashboards/readouts.py:466
+#: apps/dashboards/readouts.py:471
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "Непереглянуті"
 
-#: apps/dashboards/readouts.py:467
+#: apps/dashboards/readouts.py:472
 msgid "All articles requiring review..."
 msgstr "Всі статті що, потребують перегляду…"
 
-#: apps/dashboards/readouts.py:469
+#: apps/dashboards/readouts.py:474
 msgid "Changed"
 msgstr "Змінено"
 
-#: apps/dashboards/views.py:51 apps/dashboards/templates/dashboards/contributors.html:4
+#: apps/dashboards/views.py:47 apps/dashboards/templates/dashboards/contributors.html:4
 msgid "Contributor Dashboard"
 msgstr "Панель помічника"
 
-#: apps/dashboards/views.py:59 apps/dashboards/templates/dashboards/localization.html:4
+#: apps/dashboards/views.py:55 apps/dashboards/templates/dashboards/localization.html:4
 msgid "Localization Dashboard"
 msgstr "Панель локалізації"
 
-#: apps/dashboards/templates/dashboards/contributors.html:16 apps/dashboards/templates/dashboards/localization.html:42
+#: apps/dashboards/templates/dashboards/contributors.html:16 apps/dashboards/templates/dashboards/localization.html:15
 msgid "Show information for:"
 msgstr "Показати інформацію для:"
 
-#: apps/dashboards/templates/dashboards/localization.html:20
-msgid "%(numerator)s <small>of %(denominator)s</small>"
+#: apps/dashboards/templates/dashboards/group_locale.html:4
+#, fuzzy
+msgid "{locale} | Group Dashboard"
+msgstr "Панель локалізації"
+
+#: apps/dashboards/templates/dashboards/group_locale.html:8
+#, fuzzy
+msgid "Group dashboard"
+msgstr "Панель перекладача"
+
+#: apps/dashboards/templates/dashboards/group_locale.html:25
+msgid "See full dashboard"
 msgstr ""
-
-#: apps/dashboards/templates/dashboards/localization.html:54
-msgid "Overview"
-msgstr "Огляд"
-
-#: apps/dashboards/templates/dashboards/localization.html:62
-msgid "User Interface"
-msgstr "Користувацький інтерфейс"
-
-#: apps/dashboards/templates/dashboards/localization.html:66
-msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
-msgstr "Повністю перекладений вашою мовою користувацький інтерфейс покращує враження відвідувачів сайту. Допоможіть <a href=\"%(url)s\">перекласти інтерфейс</a>."
-
-#: apps/dashboards/templates/dashboards/localization.html:75
-msgid "More options:"
-msgstr "Ще варіанти:"
 
 #: apps/dashboards/templates/dashboards/questions.html:3
 #, fuzzy
@@ -438,17 +441,37 @@ msgstr "Стаття"
 msgid "changed by {users}"
 msgstr "змінено: {users}"
 
-#: apps/dashboards/templates/dashboards/includes/macros.html:26
+#: apps/dashboards/templates/dashboards/includes/macros.html:27
+msgid "Overview"
+msgstr "Огляд"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:39
+msgid "%(numerator)s <small>of %(denominator)s</small>"
+msgstr ""
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:56
+msgid "User Interface"
+msgstr "Користувацький інтерфейс"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:60
+msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
+msgstr "Повністю перекладений вашою мовою користувацький інтерфейс покращує враження відвідувачів сайту. Допоможіть <a href=\"%(url)s\">перекласти інтерфейс</a>."
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:69
+msgid "More options:"
+msgstr "Ще варіанти:"
+
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:5
 #, fuzzy
 msgctxt "dashboard"
 msgid "Review"
 msgstr "Переглянути"
 
-#: apps/dashboards/templates/dashboards/includes/macros.html:39
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:9
 msgid "My profile"
 msgstr "Мій профіль"
 
-#: apps/dashboards/templates/dashboards/includes/macros.html:42
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:12
 msgid "Edit my profile"
 msgstr "Редагувати мій профіль"
 
@@ -524,7 +547,7 @@ msgstr "Очікування"
 msgid "Accepted and Fixed"
 msgstr "Прийнято та вирішено"
 
-#: apps/flagit/models.py:32 apps/wiki/templates/wiki/document_revisions.html:62
+#: apps/flagit/models.py:32 apps/wiki/templates/wiki/history.html:62
 msgid "Rejected"
 msgstr "Відмовлено"
 
@@ -573,7 +596,7 @@ msgid "There is no flagged content pending moderation."
 msgstr "Немає поміченого вмісту, що очікує модерування."
 
 #: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:3 apps/kbforums/forms.py:28 apps/kbforums/forms.py:50
-#: apps/kbforums/forms.py:76 apps/wiki/forms.py:171 apps/wiki/templates/wiki/review_translation.html:70 apps/wiki/templates/wiki/includes/revision_diff.html:45
+#: apps/kbforums/forms.py:76 apps/wiki/forms.py:184 apps/wiki/templates/wiki/review_translation.html:70 apps/wiki/templates/wiki/includes/revision_diff.html:45
 msgid "Content:"
 msgstr "Вміст:"
 
@@ -594,88 +617,140 @@ msgstr "Оновлено:"
 msgid "Take Action:"
 msgstr "Дія:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:35 apps/kbforums/templates/kbforums/includes/post.html:12
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:37 apps/kbforums/templates/kbforums/includes/post.html:12
+#: apps/wiki/templates/wiki/history.html:82
 msgid "Edit"
 msgstr "Редагувати"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:27
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29 apps/kbforums/templates/kbforums/posts.html:39 apps/kbforums/templates/kbforums/includes/post.html:16
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:24 apps/wiki/templates/wiki/document_revisions.html:83
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:29
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:31 apps/kbforums/templates/kbforums/posts.html:41 apps/kbforums/templates/kbforums/includes/post.html:16
+#: apps/wiki/templates/wiki/confirm_document_delete.html:36 apps/wiki/templates/wiki/confirm_revision_delete.html:31 apps/wiki/templates/wiki/history.html:86
 msgid "Delete"
 msgstr "Вилучити"
 
-#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:60 apps/wiki/templates/wiki/translate.html:55
+#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:69 apps/wiki/templates/wiki/translate.html:57
 msgid "Title:"
 msgstr "Назва:"
 
-#: apps/gallery/forms.py:14 apps/kbforums/forms.py:9 apps/wiki/forms.py:17
+#: apps/gallery/forms.py:13 apps/kbforums/forms.py:9 apps/wiki/forms.py:17
 msgid "Please provide a title."
 msgstr "Вкажіть назву."
 
-#: apps/gallery/forms.py:15 apps/wiki/forms.py:18
+#: apps/gallery/forms.py:14 apps/wiki/forms.py:18
 msgid "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Назва закоротка (%(show_value)s символів). Довжина повинна бути як мінімум %(limit_value)s символів."
 
-#: apps/gallery/forms.py:18 apps/kbforums/forms.py:13
+#: apps/gallery/forms.py:17 apps/kbforums/forms.py:13
 msgid "Please keep the length of your title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Будь-ласка, утримуйте довжину назви в межах %(limit_value)s символів чи менше. Зараз довжина є %(show_value)s символів."
 
-#: apps/gallery/forms.py:21
+#: apps/gallery/forms.py:20
 msgid "Please provide a description."
 msgstr "Впровадьте опис."
 
-#: apps/gallery/forms.py:22
+#: apps/gallery/forms.py:21
 msgid "Please keep the length of your description to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Будь-ласка, утримуйте довжину опису в межах %(limit_value)s символів чи менше. Зараз довжина є %(show_value)s символів."
 
-#: apps/gallery/forms.py:25 apps/upload/forms.py:7
+#: apps/gallery/forms.py:24 apps/upload/forms.py:7
 msgid "You have not selected an image to upload."
 msgstr "Ви не вибрали жодного зображення для завантаження."
 
-#: apps/gallery/forms.py:26 apps/upload/forms.py:8
+#: apps/gallery/forms.py:25 apps/upload/forms.py:8
 msgid "Please keep the length of your image filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Будь-ласка, утримуйте довжину назви файлу зображення в межах %(max)s символів чи менше. Зараз довжина є %(length)s символів."
 
-#: apps/gallery/forms.py:29
+#: apps/gallery/forms.py:28
 msgid "Please keep the length of your webm filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Будь-ласка, утримуйте довжину назви файлу webm в межах %(max)s символів чи менше. Зараз довжина є %(length)s символів."
 
-#: apps/gallery/forms.py:32
+#: apps/gallery/forms.py:31
 msgid "Please keep the length of your ogv filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Будь-ласка, утримуйте довжину назви файлу ogv в межах %(max)s символів чи менше. Зараз довжина є %(length)s символів."
 
-#: apps/gallery/forms.py:35
+#: apps/gallery/forms.py:34
 msgid "Please keep the length of your flv filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Будь-ласка, утримуйте довжину назви файлу flv в межах %(max)s символів чи менше. Зараз довжина є %(length)s символів."
 
-#: apps/gallery/forms.py:38
+#: apps/gallery/forms.py:37
 msgid "The video has no files associated with it. You must upload one of the following extensions: webm, ogv, flv."
 msgstr "Відео не має пов'язаних з ним файлів. Ви повинні вивантажити файл, що має одне з наступних закінчень: webm, ogv, flv."
 
-#: apps/gallery/forms.py:41
+#: apps/gallery/forms.py:40
 msgid "Please select a different title."
 msgstr "Виберіть іншу назву."
 
-#: apps/gallery/forms.py:43
+#: apps/gallery/forms.py:42
 msgid "Include this in wiki syntax with [[%(type)s:title]]"
 msgstr "Включити це в синтаксис wiki з [[%(type)s:title]]"
 
-#: apps/gallery/forms.py:44
+#: apps/gallery/forms.py:43
 msgid "Provide a brief description of this media."
 msgstr "Надайте короткий опис цьому медіа."
 
-#: apps/gallery/forms.py:65 apps/gallery/forms.py:145 apps/gallery/templates/gallery/confirm_media_delete.html:24
+#: apps/gallery/forms.py:48 apps/upload/templates/upload/attachments.html:56
+msgid "Upload"
+msgstr "Вивантажити"
+
+#: apps/gallery/forms.py:49 apps/gallery/forms.py:92 apps/gallery/templates/gallery/confirm_media_delete.html:52
+msgid "Image"
+msgstr "Зображення"
+
+#: apps/gallery/forms.py:49 apps/gallery/templates/gallery/confirm_media_delete.html:47
+msgid "Video"
+msgstr "Відео"
+
+#: apps/gallery/forms.py:56 apps/gallery/templates/gallery/confirm_media_delete.html:24 apps/wiki/templates/wiki/confirm_document_delete.html:24
 msgid "Locale"
 msgstr "Локаль"
 
-#: apps/gallery/forms.py:70 apps/gallery/forms.py:150 apps/gallery/templates/gallery/confirm_media_delete.html:22 apps/kbforums/templates/kbforums/confirm_thread_delete.html:15
-#: apps/kbforums/templates/kbforums/threads.html:33
+#: apps/gallery/forms.py:62 apps/gallery/templates/gallery/confirm_media_delete.html:22 apps/kbforums/templates/kbforums/confirm_thread_delete.html:17 apps/kbforums/templates/kbforums/threads.html:35
+#: apps/wiki/templates/wiki/confirm_document_delete.html:22
 msgid "Title"
 msgstr "Назва"
 
-#: apps/gallery/forms.py:77 apps/gallery/forms.py:157 apps/gallery/templates/gallery/confirm_media_delete.html:26
+#: apps/gallery/forms.py:70 apps/gallery/templates/gallery/confirm_media_delete.html:26
 msgid "Description"
 msgstr "Опис"
+
+#: apps/gallery/forms.py:97
+msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
+msgstr "Приймаються наступні формати: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Докладніше...</a>"
+
+#: apps/gallery/forms.py:117
+#, fuzzy
+msgid "Video (flv)"
+msgstr "Відео"
+
+#: apps/gallery/forms.py:118
+#, fuzzy
+msgid "Video (ogv)"
+msgstr "Відео"
+
+#: apps/gallery/forms.py:121
+msgid "Video (webm)"
+msgstr ""
+
+#: apps/gallery/forms.py:125
+msgid "Thumbnail"
+msgstr "Піктограма"
+
+#: apps/gallery/forms.py:131
+msgid "Select a Flash video (FLV) to upload."
+msgstr "Виберіть флеш-відео (FLV) для вивантаження."
+
+#: apps/gallery/forms.py:133
+msgid "Select an Ogv video to upload."
+msgstr "Виберіть Ogv-відео для вивантаження."
+
+#: apps/gallery/forms.py:134
+msgid "Select a WebM video to upload."
+msgstr "Виберіть WebM-відео для вивантаження."
+
+#: apps/gallery/forms.py:135
+#, fuzzy
+msgid "Suggested size: {width}x{height}px"
+msgstr "Вивантажити піктограму для вашого відео. Пропонований розмір в пікселях: {width}х{height}"
 
 #: apps/gallery/views.py:26
 msgid "Could not upload your image."
@@ -723,26 +798,18 @@ msgstr "Вилучити відео | {t} | Медіа галерея"
 msgid "Media Gallery"
 msgstr "Медіа галерея"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:17 apps/wiki/templates/wiki/confirm_revision_delete.html:12
+#: apps/gallery/templates/gallery/confirm_media_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:19 apps/wiki/templates/wiki/confirm_revision_delete.html:19
 msgid "Creator"
 msgstr "Створив"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:30 apps/kbforums/templates/kbforums/confirm_post_delete.html:17 apps/kbforums/templates/kbforums/confirm_thread_delete.html:19
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:14
+#: apps/gallery/templates/gallery/confirm_media_delete.html:30 apps/kbforums/templates/kbforums/confirm_post_delete.html:19 apps/kbforums/templates/kbforums/confirm_thread_delete.html:21
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:21
 msgid "Date"
 msgstr "Дата"
 
 #: apps/gallery/templates/gallery/confirm_media_delete.html:33 apps/gallery/templates/gallery/confirm_media_delete.html:50
 msgid "Available formats"
 msgstr "Можливі формати"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:47 apps/gallery/templates/gallery/includes/upload_media_form.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:62
-msgid "Video"
-msgstr "Відео"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:52 apps/gallery/templates/gallery/includes/upload_media_form.html:12 apps/gallery/templates/gallery/includes/upload_media_form.html:22
-msgid "Image"
-msgstr "Зображення"
 
 #: apps/gallery/templates/gallery/edit_media.html:5
 msgid "Edit image"
@@ -768,7 +835,7 @@ msgstr "Зберегти відео"
 msgid "Edit video | {t} | Media Gallery"
 msgstr "Редагувати відео | {t} | Медіа галерея"
 
-#: apps/gallery/templates/gallery/gallery.html:13 apps/gallery/templates/gallery/media.html:24 apps/gallery/templates/gallery/includes/upload_media_form.html:8
+#: apps/gallery/templates/gallery/gallery.html:13 apps/gallery/templates/gallery/media.html:24 apps/gallery/templates/gallery/includes/upload_media_form.html:98
 msgid "Upload a New Media File"
 msgstr "Вивантажити новий файл медіа"
 
@@ -805,7 +872,7 @@ msgstr "Галерея пошуку"
 msgid "{title} | Media Gallery"
 msgstr "{title} | Медіа галерея"
 
-#: apps/gallery/templates/gallery/media.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:39 apps/upload/templates/upload/attachments.html:12
+#: apps/gallery/templates/gallery/media.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:47 apps/upload/templates/upload/attachments.html:12
 #: apps/upload/templates/upload/attachments.html:17 apps/upload/templates/upload/attachments.html:19
 msgid "Delete this image"
 msgstr "Вилучити це зображення"
@@ -843,68 +910,47 @@ msgstr "Пошук"
 msgid "No media files found."
 msgstr "Не знайдено файлу медіа."
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:8
-msgid "Continue Uploading Media"
-msgstr "Продовжити вивантажувати медіа"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:10 apps/upload/templates/upload/attachments.html:56
-msgid "Upload"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:30
+#, fuzzy
+msgid "Upload file"
 msgstr "Вивантажити"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:24
-msgid "Select an image file to upload."
-msgstr "Виберіть файл зображення для вивантаження."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:26
-msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
-msgstr "Приймаються наступні формати: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Докладніше...</a>"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:28 apps/gallery/templates/gallery/includes/upload_media_form.html:76
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:114
-msgid "Progress"
-msgstr "Поступ"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:33 apps/gallery/templates/gallery/includes/upload_media_form.html:89 apps/kbforums/templates/kbforums/edit_post.html:27
-#: apps/kbforums/templates/kbforums/new_thread.html:32 apps/kbforums/templates/kbforums/posts.html:92
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:52 apps/kbforums/templates/kbforums/edit_post.html:29 apps/kbforums/templates/kbforums/new_thread.html:34
+#: apps/kbforums/templates/kbforums/posts.html:94
 msgid "Preview"
 msgstr "Перегляд"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:52 apps/gallery/templates/gallery/includes/upload_media_form.html:131
-msgid "Submit file"
-msgstr "Подати файл"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:60
+msgid "Progress"
+msgstr "Поступ"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:64
-msgid "Select a Flash video (FLV) to upload."
-msgstr "Виберіть флеш-відео (FLV) для вивантаження."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:66
-msgid "Please no SWFs, only FLVs."
-msgstr "Не SWF, тільки FLV."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:69
-msgid "Select an Ogv video to upload."
-msgstr "Виберіть Ogv-відео для вивантаження."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:73
-msgid "Select a WebM video to upload."
-msgstr "Виберіть WebM-відео для вивантаження."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:96 apps/gallery/templates/gallery/includes/upload_media_form.html:102
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:108
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:75
 msgid "Delete {format} file"
 msgstr "Вилучити файл {format}"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:119
-msgid "Thumbnail"
-msgstr "Піктограма"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:80
+#, fuzzy
+msgid "Preview ({format})"
+msgstr "Переглянути"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:125
-msgid "Delete thumbnail"
-msgstr "Вилучити піктограму"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:98
+msgid "Continue Uploading Media"
+msgstr "Продовжити вивантажувати медіа"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:127
-msgid "Upload a thumbnail for your video. Suggested size: {width}x{height}px"
-msgstr "Вивантажити піктограму для вашого відео. Пропонований розмір в пікселях: {width}х{height}"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:133
+#, fuzzy
+msgid "Progress (flv)"
+msgstr "Поступ"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:139
+#, fuzzy
+msgid "Progress (ogv)"
+msgstr "Поступ"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:145
+#, fuzzy
+msgid "Progress (webm)"
+msgstr "Поступ"
 
 #: apps/kbforums/events.py:20
 msgid "Reply to: %s"
@@ -940,202 +986,220 @@ msgid "Please keep the length of your message to %(limit_value)s characters or l
 msgstr "Будь-ласка, утримуйте довжину повідомлення в межах %(limit_value)s символів. Зараз довжина є %(show_value)s символів."
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:4
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:5
 msgid "Delete Post | {t} | {d} Discussion | Knowledge Base"
 msgstr "Вилучити допис | {t} | Обговорення: {d} | База знань"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:7 apps/kbforums/templates/kbforums/confirm_thread_delete.html:7 apps/kbforums/templates/kbforums/edit_post.html:9
-#: apps/kbforums/templates/kbforums/edit_thread.html:8 apps/kbforums/templates/kbforums/new_thread.html:9 apps/kbforums/templates/kbforums/posts.html:9 apps/kbforums/templates/kbforums/threads.html:7
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:8 apps/kbforums/templates/kbforums/confirm_thread_delete.html:8 apps/kbforums/templates/kbforums/edit_post.html:10
+#: apps/kbforums/templates/kbforums/edit_thread.html:9 apps/kbforums/templates/kbforums/new_thread.html:10 apps/kbforums/templates/kbforums/posts.html:10
+#: apps/kbforums/templates/kbforums/threads.html:8
 msgid "Discuss"
 msgstr "Обговорення"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:9
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:10
 msgid "Delete Post"
 msgstr "Вилучити допис"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:13
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:15
 msgid "Are you sure you want to delete this post?"
 msgstr "Ви дійсно бажаєте вилучити цей допис?"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:15 apps/kbforums/templates/kbforums/posts.html:62 apps/kbforums/templates/kbforums/threads.html:34
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:17 apps/kbforums/templates/kbforums/posts.html:64 apps/kbforums/templates/kbforums/threads.html:36
 msgid "Author"
 msgstr "Автор"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:19 apps/wiki/templates/wiki/confirm_revision_delete.html:16
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:21 apps/wiki/templates/wiki/confirm_revision_delete.html:23
 msgid "Content"
 msgstr "Вміст"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:25
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:27
 msgid "You are about to permanently delete this post. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "Ви збираєтесь вилучити цей допис назавжди. <strong>Це незворотна дія!</strong> Ви дійсно бажаєте продовжити?"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:4
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:5
 msgid "Delete Thread | {t} | {d} Discussion | Knowledge Base"
 msgstr "Вилучити тему | {t} | Обговорення: {d} | База знань"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:9
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:10
 msgid "Delete Thread"
 msgstr "Вилучити тему"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:13
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:15
 msgid "Are you sure you want to delete this thread?"
 msgstr "Ви дійсно хочете вилучити цю тему?"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:21
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:23
 msgid "Number of Replies"
 msgstr "Кількість відповідей"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:27
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29
 msgid "You are about to permanently delete this thread. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "Ви збираєтесь вилучити цю тему назавжди. <strong>Це незворотна дія!</strong> Ви дійсно бажаєте продовжити?"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/edit_post.html:6
+#: apps/kbforums/templates/kbforums/edit_post.html:7
 msgid "Edit a post | {t} | {d} Discussion | Knowledge Base"
 msgstr "Редагувати допис | {t} | Обговорення: {d} | База знань"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:11 apps/kbforums/templates/kbforums/edit_post.html:15
+#: apps/kbforums/templates/kbforums/edit_post.html:12 apps/kbforums/templates/kbforums/edit_post.html:17
 msgid "Edit a post"
 msgstr "Редагувати допис"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:28
+#: apps/kbforums/templates/kbforums/edit_post.html:30
 msgid "Update post"
 msgstr "Оновити допис"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:35 apps/kbforums/templates/kbforums/new_thread.html:39
+#: apps/kbforums/templates/kbforums/edit_post.html:37 apps/kbforums/templates/kbforums/new_thread.html:41
 msgid "Post Preview:"
 msgstr "Попередній перегляд допису:"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/edit_thread.html:5
+#: apps/kbforums/templates/kbforums/edit_thread.html:6
 msgid "Edit thread {t} | {d} Discussion | Knowledge Base"
 msgstr "Редагувати тему: {t} | Обговорення: {d} | База знань"
 
-#: apps/kbforums/templates/kbforums/edit_thread.html:10
+#: apps/kbforums/templates/kbforums/edit_thread.html:11
 msgid "Edit thread"
 msgstr "Редагувати тему"
 
-#: apps/kbforums/templates/kbforums/edit_thread.html:14
+#: apps/kbforums/templates/kbforums/edit_thread.html:16
 msgid "Edit thread \"{t}\""
 msgstr "Редагувати тему \"{t}\""
 
-#: apps/kbforums/templates/kbforums/edit_thread.html:26
+#: apps/kbforums/templates/kbforums/edit_thread.html:28
 msgid "Update thread"
 msgstr "Оновити тему"
 
 #. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/new_thread.html:6
+#: apps/kbforums/templates/kbforums/new_thread.html:7
 msgid "Create a new thread | {d} | Knowledge Base"
 msgstr "Створити нову тему | {d} | База знань"
 
-#: apps/kbforums/templates/kbforums/new_thread.html:10 apps/kbforums/templates/kbforums/new_thread.html:14
+#: apps/kbforums/templates/kbforums/new_thread.html:11 apps/kbforums/templates/kbforums/new_thread.html:16
 msgid "Create a new thread"
 msgstr "Створити нову тему"
 
-#: apps/kbforums/templates/kbforums/new_thread.html:33
+#: apps/kbforums/templates/kbforums/new_thread.html:35
 msgid "Post"
 msgstr "Допис"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/posts.html:6
+#: apps/kbforums/templates/kbforums/posts.html:7
 msgid "{t} | {d} Discussion | Knowledge Base"
 msgstr "{t} | Обговорення: {d} | База знань"
 
-#: apps/kbforums/templates/kbforums/posts.html:16 apps/search/__init__.py:42
+#: apps/kbforums/templates/kbforums/posts.html:18 apps/search/__init__.py:42
 msgid "Sticky"
 msgstr "Прикріплено"
 
-#: apps/kbforums/templates/kbforums/posts.html:17 apps/search/__init__.py:43 apps/search/forms.py:129
+#: apps/kbforums/templates/kbforums/posts.html:19 apps/search/__init__.py:43 apps/search/forms.py:129
 msgid "Locked"
 msgstr "Замкнено"
 
-#: apps/kbforums/templates/kbforums/posts.html:18 apps/kbforums/templates/kbforums/threads.html:13
+#: apps/kbforums/templates/kbforums/posts.html:20 apps/kbforums/templates/kbforums/threads.html:15
 msgid "Watching"
 msgstr "Слідкування"
 
-#: apps/kbforums/templates/kbforums/posts.html:25 apps/kbforums/templates/kbforums/threads.html:20
+#: apps/kbforums/templates/kbforums/posts.html:27 apps/kbforums/templates/kbforums/threads.html:22
 msgid "Stop watching"
 msgstr "Припинити слідкування"
 
-#: apps/kbforums/templates/kbforums/posts.html:28
+#: apps/kbforums/templates/kbforums/posts.html:30
 msgid "Watch this thread"
 msgstr "Слідкувати за темою"
 
-#: apps/kbforums/templates/kbforums/posts.html:45
+#: apps/kbforums/templates/kbforums/posts.html:47
 msgid "Change locked status"
 msgstr "Змінити стан замикання"
 
-#: apps/kbforums/templates/kbforums/posts.html:51
+#: apps/kbforums/templates/kbforums/posts.html:53
 msgid "Change sticky status"
 msgstr "Змінити стан прикріплення"
 
-#: apps/kbforums/templates/kbforums/posts.html:63
+#: apps/kbforums/templates/kbforums/posts.html:65
 msgid "Message"
 msgstr "Повідомлення"
 
-#: apps/kbforums/templates/kbforums/posts.html:78
+#: apps/kbforums/templates/kbforums/posts.html:80
 msgid "Oh, no! Looks like there are no posts!"
 msgstr "О, ні! Немає жодних дописів!"
 
-#: apps/kbforums/templates/kbforums/posts.html:83 apps/kbforums/templates/kbforums/posts.html:99
+#: apps/kbforums/templates/kbforums/posts.html:85 apps/kbforums/templates/kbforums/posts.html:101
 msgid "Post a reply"
 msgstr "Відповісти"
 
-#: apps/kbforums/templates/kbforums/posts.html:101
+#: apps/kbforums/templates/kbforums/posts.html:103
 msgid "This thread has been locked. It is no longer possible to post new replies."
 msgstr "Ця тема замкнута, тому більше неможливо надавати нові відповіді."
 
-#: apps/kbforums/templates/kbforums/posts.html:106
+#: apps/kbforums/templates/kbforums/posts.html:108
 msgid "Reply Preview:"
 msgstr "Попередній перегляд відповіді:"
 
 #. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/threads.html:4
+#: apps/kbforums/templates/kbforums/threads.html:5
 msgid "{d} Discussion | Knowledge Base"
 msgstr "Обговорення: {d} | База знань"
 
-#: apps/kbforums/templates/kbforums/threads.html:11
+#: apps/kbforums/templates/kbforums/threads.html:13
 msgid "{d} Discussion"
 msgstr "Обговорення: {d}"
 
-#: apps/kbforums/templates/kbforums/threads.html:23
+#: apps/kbforums/templates/kbforums/threads.html:25
 msgid "Watch this forum"
 msgstr "Слідкувати за форумом"
 
-#: apps/kbforums/templates/kbforums/threads.html:29
+#: apps/kbforums/templates/kbforums/threads.html:31
 msgid "Post a new thread"
 msgstr "Створити нову тему"
 
-#: apps/kbforums/templates/kbforums/threads.html:32
+#: apps/kbforums/templates/kbforums/threads.html:34
 msgid "Type"
 msgstr "Тип"
 
-#: apps/kbforums/templates/kbforums/threads.html:35
+#: apps/kbforums/templates/kbforums/threads.html:37
 msgid "Replies"
 msgstr "Відповіді"
 
-#: apps/kbforums/templates/kbforums/threads.html:36
+#: apps/kbforums/templates/kbforums/threads.html:38
 msgid "Last Post"
 msgstr "Останній допис"
 
-#: apps/kbforums/templates/kbforums/threads.html:44
+#: apps/kbforums/templates/kbforums/threads.html:46
 msgctxt "thread_type"
 msgid "Locked"
 msgstr "Замкнено"
 
-#: apps/kbforums/templates/kbforums/threads.html:47
+#: apps/kbforums/templates/kbforums/threads.html:49
 msgctxt "thread_type"
 msgid "Sticky"
 msgstr "Прикріплено"
 
-#: apps/kbforums/templates/kbforums/threads.html:57
+#: apps/kbforums/templates/kbforums/threads.html:59
 msgid "by <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 msgstr "від <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 
-#: apps/kbforums/templates/kbforums/threads.html:66
+#: apps/kbforums/templates/kbforums/threads.html:68
 msgid "There are no threads. Maybe you should create some!"
 msgstr "Немає тем. Можливо ви створите одну!"
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:7
+msgid "This forum is a discussion about improving the \"%(title)s\" article."
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:11
+msgid "This forum is a discussion about improving the \"%(title)s\" article. If you'd like to participate, please <a href=\"%(register_url)s\">register</a>."
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:19
+msgid ""
+"This forum is a discussion about improving the localization of the \"%(title)s\" article. If you want to improve the article content, go to the <a href=\"%(url)s\">English article discussion</a>."
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:28
+msgid "If you need help with Firefox, please <a href=\"%(aaq_url)s\">ask a question</a>."
+msgstr ""
 
 #. {0} is the number of posts.
 #: apps/kbforums/templates/kbforums/includes/post.html:8
@@ -1154,11 +1218,11 @@ msgstr "Посилання на цей допис."
 msgid "Modified by {name} on {datetime}"
 msgstr "Змінено {name}, {datetime}"
 
-#: apps/kbforums/templates/kbforums/includes/watch_locale.html:5
+#: apps/kbforums/templates/kbforums/includes/watch_locale.html:6
 msgid "Turn off emails for discussion in my locale."
 msgstr ""
 
-#: apps/kbforums/templates/kbforums/includes/watch_locale.html:8
+#: apps/kbforums/templates/kbforums/includes/watch_locale.html:9
 msgid "Get emailed when there is new discussion activity in my locale."
 msgstr ""
 
@@ -1237,7 +1301,7 @@ msgstr "Запитання підтримки"
 msgid "Firefox Help <span>for Firefox Home</span>"
 msgstr "Підтримка мобільного Firefox"
 
-#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:139 templates/base.html:8 templates/base.html:17 templates/mobile/base.html:15
+#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:141 templates/base.html:8 templates/base.html:17 templates/mobile/base.html:15
 msgid "Firefox Help"
 msgstr "Допомога Firefox"
 
@@ -1250,6 +1314,62 @@ msgstr "Підтримка мобільного Firefox"
 #, fuzzy
 msgid "Firefox Help <span>for Sync</span>"
 msgstr "Підтримка мобільного Firefox"
+
+#: apps/messages/forms.py:7
+#, fuzzy
+msgid "username1, username2,..."
+msgstr "список імен, розділених комами"
+
+#: apps/messages/forms.py:15
+#, fuzzy
+msgid "To field is required."
+msgstr "Пароль обов'язковий."
+
+#: apps/messages/forms.py:25
+msgid "{username} is not a valid username."
+msgstr ""
+
+#: apps/messages/templates/messages/inbox.html:3 apps/messages/templates/messages/new.html:3 apps/messages/templates/messages/outbox.html:4 apps/messages/templates/messages/read-outbox.html:4
+#: apps/messages/templates/messages/read.html:4 apps/messages/templates/messages/includes/macros.html:21
+#, fuzzy
+msgid "Messages"
+msgstr "Повідомлення"
+
+#: apps/messages/templates/messages/inbox.html:9 apps/messages/templates/messages/new.html:2 apps/messages/templates/messages/includes/macros.html:27
+#, fuzzy
+msgid "New Message"
+msgstr "Повідомлення"
+
+#: apps/messages/templates/messages/inbox.html:31 apps/messages/templates/messages/outbox.html:37
+#, fuzzy
+msgid "There are no messages here."
+msgstr "Немає статей."
+
+#: apps/messages/templates/messages/new.html:15
+msgid "Send"
+msgstr ""
+
+#: apps/messages/templates/messages/outbox.html:3 apps/messages/templates/messages/read-outbox.html:5 apps/messages/templates/messages/includes/macros.html:24
+#, fuzzy
+msgid "Sent Messages"
+msgstr "Повідомлення"
+
+#: apps/messages/templates/messages/outbox.html:24
+msgid "You"
+msgstr ""
+
+#: apps/messages/templates/messages/read-outbox.html:3
+msgid "Read Sent Message"
+msgstr ""
+
+#: apps/messages/templates/messages/read.html:3
+#, fuzzy
+msgid "Read Message"
+msgstr "Повідомлення"
+
+#: apps/messages/templates/messages/includes/macros.html:5 apps/messages/templates/messages/includes/macros.html:13
+msgid "System"
+msgstr ""
 
 #: apps/search/__init__.py:17 apps/search/__init__.py:52 apps/search/__init__.py:58
 msgid "Don't filter"
@@ -1279,11 +1399,11 @@ msgstr "Дата початкового допису"
 msgid "Number of replies"
 msgstr "Кількість відповідей"
 
-#: apps/search/__init__.py:53 apps/sumo/helpers.py:309 apps/wiki/templates/wiki/includes/document_vote.html:8
+#: apps/search/__init__.py:53 apps/sumo/helpers.py:311 apps/wiki/templates/wiki/includes/document_vote.html:7
 msgid "Yes"
 msgstr "Так"
 
-#: apps/search/__init__.py:54 apps/sumo/helpers.py:309 apps/wiki/templates/wiki/includes/document_vote.html:9
+#: apps/search/__init__.py:54 apps/sumo/helpers.py:311 apps/wiki/templates/wiki/includes/document_vote.html:8
 msgid "No"
 msgstr "Ні"
 
@@ -1497,60 +1617,60 @@ msgstr "Впевніться, що це значення має не менш н
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr "Впевніться, що це значення має не більш ніж %(limit_value)s символів (зараз %(show_value)s)."
 
-#: apps/sumo/helpers.py:188
+#: apps/sumo/helpers.py:190
 msgid "Today at %s"
 msgstr "Сьогодні в %s"
 
-#: apps/sumo/helpers.py:266
+#: apps/sumo/helpers.py:268
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "%(number)d рік тому"
 msgstr[1] "%(number)d роки(-ів) тому"
 msgstr[2] ""
 
-#: apps/sumo/helpers.py:268
+#: apps/sumo/helpers.py:270
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "%(number)d місяць тому"
 msgstr[1] "%(number)d місяця(-ів) тому"
 msgstr[2] ""
 
-#: apps/sumo/helpers.py:270
+#: apps/sumo/helpers.py:272
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "%(number)d рік тому"
 msgstr[1] "%(number)d роки(-ів) тому"
 msgstr[2] ""
 
-#: apps/sumo/helpers.py:272
+#: apps/sumo/helpers.py:274
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "%(number)d день тому"
 msgstr[1] "%(number)d дні(-в) тому"
 msgstr[2] ""
 
-#: apps/sumo/helpers.py:274
+#: apps/sumo/helpers.py:276
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "%(number)d година тому"
 msgstr[1] "%(number)d годин(-и) тому"
 msgstr[2] ""
 
-#: apps/sumo/helpers.py:276
+#: apps/sumo/helpers.py:278
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "%(number)d хвилина тому"
 msgstr[1] "%(number)d хвилин(-и) тому"
 msgstr[2] ""
 
-#: apps/sumo/helpers.py:278
+#: apps/sumo/helpers.py:280
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] "%(number)d секунда тому"
 msgstr[1] "%(number)d секунд(-и) тому"
 msgstr[2] ""
 
-#: apps/sumo/parser.py:232
+#: apps/sumo/parser.py:236
 msgid "The image \"%s\" does not exist."
 msgstr "Зображення \"%s\" не існує."
 
@@ -1562,13 +1682,17 @@ msgstr "Ой, ваш запит не вдалось виконати"
 msgid "We couldn't perform your request. Perhaps because the action is no longer applicable or you tried to perform an invalid action."
 msgstr "Ми не змогли виконати ваш запит. Можливо тому, що така дія нечинна або більше не застосовується."
 
-#: apps/sumo/templates/handlers/403.html:3
+#: apps/sumo/templates/handlers/403.html:4
 msgid "Access denied"
 msgstr "У доступі відмовлено"
 
-#: apps/sumo/templates/handlers/403.html:9
+#: apps/sumo/templates/handlers/403.html:11
 msgid "You do not have permission to access this page."
 msgstr "У вас немає дозволу на доступ до цієї сторінки."
+
+#: apps/sumo/templates/handlers/403.html:14 apps/users/templates/users/includes/macros.html:23
+msgid "Log in"
+msgstr "Увійти"
 
 #: apps/sumo/templates/handlers/404.html:3
 msgid "Page Not Found"
@@ -1585,6 +1709,18 @@ msgstr "Виникла помилка"
 #: apps/sumo/templates/handlers/500.html:9
 msgid "Oh, no! It looks like an unexpected error occurred. We've already notified the site administrators. Please try again now, or in a few minutes."
 msgstr "О, ні! Виникла несподівана помилка. Ми вже повідомили про це адміністраторів сайту. Спробуйте ще раз зараз чи через декілька хвилин."
+
+#: apps/sumo/templates/sumo/deprecated.html:3
+msgid "Redirecting"
+msgstr ""
+
+#: apps/sumo/templates/sumo/deprecated.html:8
+msgid "The URL has changed!"
+msgstr ""
+
+#: apps/sumo/templates/sumo/deprecated.html:11
+msgid "It looks like you've bookmarked an old URL. The new URL for this page is below. You should update your bookmarks. We will forward you to the new URL in 10 seconds."
+msgstr ""
 
 #: apps/sumo/templates/sumo/read-only.html:3 apps/sumo/templates/sumo/read-only.html:7
 msgid "Maintenance in progress"
@@ -1692,7 +1828,7 @@ msgstr "Пароль обов'язковий."
 msgid "Please enter your password twice."
 msgstr "Введіть свій пароль двічі."
 
-#: apps/users/forms.py:42 apps/users/templates/users/includes/macros.html:13 templates/layout/login.html:8
+#: apps/users/forms.py:42 apps/users/templates/users/includes/macros.html:13
 msgid "Username:"
 msgstr "Ім’я користувача:"
 
@@ -1704,7 +1840,7 @@ msgstr "Обов'язкове. 30 чи менше символів. Тільки
 msgid "Email address:"
 msgstr "Адреса електронної пошти:"
 
-#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:27 apps/users/templates/users/includes/macros.html:17 templates/layout/login.html:11
+#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/includes/macros.html:17
 msgid "Password:"
 msgstr "Пароль:"
 
@@ -1912,29 +2048,29 @@ msgstr "Вивантажити"
 msgid "Edit Profile"
 msgstr "Редагувати профіль"
 
-#: apps/users/templates/users/edit_profile.html:13
+#: apps/users/templates/users/edit_profile.html:14
 msgid "Avatar:"
 msgstr "Аватар:"
 
-#: apps/users/templates/users/edit_profile.html:17
+#: apps/users/templates/users/edit_profile.html:18
 msgctxt "avatar"
 msgid "Change"
 msgstr "Змінити"
 
-#: apps/users/templates/users/edit_profile.html:21
+#: apps/users/templates/users/edit_profile.html:22
 msgctxt "avatar"
 msgid "Delete"
 msgstr "Вилучити"
 
-#: apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/edit_profile.html:33 apps/wiki/templates/wiki/translate.html:19
+#: apps/users/templates/users/edit_profile.html:29 apps/users/templates/users/edit_profile.html:34 apps/wiki/templates/wiki/translate.html:20
 msgid "Change"
 msgstr "Змінити"
 
-#: apps/users/templates/users/edit_profile.html:31 apps/users/templates/users/profile.html:36
+#: apps/users/templates/users/edit_profile.html:32 apps/users/templates/users/profile.html:37
 msgid "Email:"
 msgstr "Електронна пошта:"
 
-#: apps/users/templates/users/edit_profile.html:38 apps/users/templates/users/pw_reset_confirm.html:27
+#: apps/users/templates/users/edit_profile.html:39 apps/users/templates/users/pw_reset_confirm.html:27
 msgid "Update"
 msgstr "Оновити"
 
@@ -1946,31 +2082,31 @@ msgstr "Увійти"
 msgid "{user} | Profile"
 msgstr "{user} | Профіль"
 
-#: apps/users/templates/users/profile.html:20
+#: apps/users/templates/users/profile.html:21
 msgid "{city}, {country}"
 msgstr "{city}, {country}"
 
-#: apps/users/templates/users/profile.html:42
+#: apps/users/templates/users/profile.html:43
 msgid "Website:"
 msgstr "Веб-сайт:"
 
-#: apps/users/templates/users/profile.html:48
+#: apps/users/templates/users/profile.html:49
 msgid "Twitter:"
 msgstr "Твітер:"
 
-#: apps/users/templates/users/profile.html:54
+#: apps/users/templates/users/profile.html:55
 msgid "Facebook:"
 msgstr "Facebook:"
 
-#: apps/users/templates/users/profile.html:60
+#: apps/users/templates/users/profile.html:61
 msgid "IRC:"
 msgstr "IRC:"
 
-#: apps/users/templates/users/profile.html:66
+#: apps/users/templates/users/profile.html:67
 msgid "Livechat ID: {livechat_id}"
 msgstr "Ідентифікатор живого чату: {livechat_id}"
 
-#: apps/users/templates/users/profile.html:73
+#: apps/users/templates/users/profile.html:74
 msgid "About {user}"
 msgstr "Про {user}"
 
@@ -2035,7 +2171,7 @@ msgstr "Надіслати листа скидання паролю"
 msgid "We've sent an email to any account using this address. Please follow the link in the email to reset your password."
 msgstr "Ми надіслали листа обліковому запису, використовуючи цю адресу. Перейдіть по посиланню в листі для скидання свого паролю."
 
-#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:51 templates/layout/login.html:24
+#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:51
 msgid "Register"
 msgstr "Зареєструватись"
 
@@ -2076,10 +2212,6 @@ msgid ""
 msgstr ""
 "Вам треба підтвердити свою адресу електронної пошти перед тим, як ви зможете увійти. Ми надіслали нового листа обліковому запису, використовуючи <strong>%(email)s</strong>. Щоб підтвердити адресу "
 "електронної пошти, перейдіть по посиланню в листі."
-
-#: apps/users/templates/users/includes/macros.html:23 templates/layout/login.html:5 templates/layout/login.html:20
-msgid "Log in"
-msgstr "Увійти"
 
 #: apps/users/templates/users/includes/macros.html:23
 #, fuzzy
@@ -2166,168 +2298,197 @@ msgstr "Будь-ласка, утримуйте довжину вмісту в �
 msgid "Please keep the length of the comment to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Будь-ласка, утримуйте довжину коментаря в межах %(limit_value)s символів чи менше. Зараз довжина складає %(show_value)s символів."
 
-#: apps/wiki/forms.py:61
+#: apps/wiki/forms.py:70
 msgid "Title of article"
 msgstr "Назва статті"
 
-#: apps/wiki/forms.py:67 apps/wiki/templates/wiki/translate.html:65
+#: apps/wiki/forms.py:78 apps/wiki/templates/wiki/translate.html:67
 msgid "Slug:"
 msgstr "Слаг:"
 
-#: apps/wiki/forms.py:68
+#: apps/wiki/forms.py:79
 msgid "Article URL"
 msgstr "Адреса статті"
 
-#: apps/wiki/forms.py:74
+#: apps/wiki/forms.py:85
 msgid "Firefox version:"
 msgstr "Версія Firefox:"
 
-#: apps/wiki/forms.py:83
+#: apps/wiki/forms.py:92
 msgid "Operating systems:"
 msgstr "Операційні системи:"
 
-#: apps/wiki/forms.py:93
+#: apps/wiki/forms.py:100
 msgid "Allow translations:"
 msgstr "Дозволити переклади:"
 
-#: apps/wiki/forms.py:100
+#: apps/wiki/forms.py:104
+msgid "Obsolete:"
+msgstr ""
+
+#: apps/wiki/forms.py:112
 msgid "Category:"
 msgstr "Категорія:"
 
-#: apps/wiki/forms.py:101
+#: apps/wiki/forms.py:113
 msgid "Type of article"
 msgstr "Тип статті"
 
-#: apps/wiki/forms.py:103
+#: apps/wiki/forms.py:117
 msgid "Topics:"
 msgstr "Теми:"
 
-#: apps/wiki/forms.py:104
+#: apps/wiki/forms.py:118
 msgid "Popular articles in each topic are displayed on the front page"
 msgstr "Популярні статті кожної теми приводяться на головній сторінці"
 
-#: apps/wiki/forms.py:151 apps/wiki/templates/wiki/review_revision.html:41 apps/wiki/templates/wiki/review_translation.html:56 apps/wiki/templates/wiki/translate.html:96
+#: apps/wiki/forms.py:164 apps/wiki/templates/wiki/review_revision.html:41 apps/wiki/templates/wiki/review_translation.html:56 apps/wiki/templates/wiki/translate.html:98
 #: apps/wiki/templates/wiki/includes/revision_diff.html:31
 msgid "Keywords:"
 msgstr "Ключові слова:"
 
-#: apps/wiki/forms.py:152
+#: apps/wiki/forms.py:165
 msgid "Affects search results"
 msgstr "Результати пошуку"
 
-#: apps/wiki/forms.py:156 apps/wiki/templates/wiki/translate.html:106
+#: apps/wiki/forms.py:169 apps/wiki/templates/wiki/translate.html:108
 msgid "Search result summary:"
 msgstr "Результати пошуку:"
 
-#: apps/wiki/forms.py:157
+#: apps/wiki/forms.py:170
 msgid "Only displayed on search results page"
 msgstr "Показано тільки на сторінці пошукових результатів"
 
-#: apps/wiki/forms.py:178 apps/wiki/forms.py:206
+#: apps/wiki/forms.py:191 apps/wiki/forms.py:219
 msgid "Comment:"
 msgstr "Коментар:"
 
-#: apps/wiki/forms.py:210
+#: apps/wiki/forms.py:223
 msgid "Significance:"
 msgstr "Значущість:"
 
-#: apps/wiki/models.py:32
+#: apps/wiki/models.py:33
 msgid "Minor details like punctuation and spelling errors"
 msgstr "Незначне, на кшталт знаків пунктуації чи граматичних помилок"
 
-#: apps/wiki/models.py:34
+#: apps/wiki/models.py:35
 msgid "Content changes that don't require immediate translation"
 msgstr "Зміни вмісту, що не вимагають термінового перекладу"
 
-#: apps/wiki/models.py:36
+#: apps/wiki/models.py:37
 msgid "Major content changes that will make older translations inaccurate"
 msgstr "Важливі зміни вмісту, що роблять старий переклад неактуальним"
 
-#: apps/wiki/models.py:41
+#: apps/wiki/models.py:42
 msgid "Troubleshooting"
 msgstr "Вирішення проблем"
 
-#: apps/wiki/models.py:42
+#: apps/wiki/models.py:43
 msgid "How to"
 msgstr "Як"
 
-#: apps/wiki/models.py:43
+#: apps/wiki/models.py:44
 msgid "How to contribute"
 msgstr "Як долучитись"
 
-#: apps/wiki/models.py:44
+#: apps/wiki/models.py:45
 msgid "Administration"
 msgstr "Адміністрування"
 
-#: apps/wiki/models.py:45
+#: apps/wiki/models.py:46
 msgid "Navigation"
 msgstr "Навігація"
 
-#: apps/wiki/models.py:61
+#: apps/wiki/models.py:62
 msgid "Desktop:"
 msgstr "Настільна:"
 
-#: apps/wiki/models.py:64 apps/wiki/models.py:65 apps/wiki/models.py:71
+#: apps/wiki/models.py:65 apps/wiki/models.py:66 apps/wiki/models.py:76
+#, fuzzy
+msgid "Firefox 6"
+msgstr "Firefox 4"
+
+#: apps/wiki/models.py:67 apps/wiki/models.py:68 apps/wiki/models.py:78
+#, fuzzy
+msgid "Firefox 5"
+msgstr "Firefox 4"
+
+#: apps/wiki/models.py:69 apps/wiki/models.py:70 apps/wiki/models.py:80
 msgid "Firefox 4"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:66 apps/wiki/models.py:67
+#: apps/wiki/models.py:71 apps/wiki/models.py:72
 msgid "Firefox 3.5-3.6"
 msgstr "Firefox 3.5-3.6"
 
-#: apps/wiki/models.py:68 apps/wiki/models.py:69
+#: apps/wiki/models.py:73 apps/wiki/models.py:74
 msgid "Firefox 3.0"
 msgstr "Firefox 3.0"
 
-#: apps/wiki/models.py:70
+#: apps/wiki/models.py:75
 msgid "Mobile:"
 msgstr "Мобільна:"
 
-#: apps/wiki/models.py:72
-msgid "Firefox 4 for Mobile"
+#: apps/wiki/models.py:77
+#, fuzzy
+msgid "Firefox 6 for Mobile"
+msgstr "Firefox 4 для мобілок"
+
+#: apps/wiki/models.py:79
+#, fuzzy
+msgid "Firefox 5 for Mobile"
 msgstr "Firefox 4 для мобілок"
 
 #: apps/wiki/models.py:81
+msgid "Firefox 4 for Mobile"
+msgstr "Firefox 4 для мобілок"
+
+#: apps/wiki/models.py:90
 msgid "Desktop OS:"
 msgstr "Настільна ОС:"
 
-#: apps/wiki/models.py:82
+#: apps/wiki/models.py:91
 msgid "Windows"
 msgstr "Windows"
 
-#: apps/wiki/models.py:83
+#: apps/wiki/models.py:92
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: apps/wiki/models.py:84
+#: apps/wiki/models.py:93
 msgid "Linux"
 msgstr "Linux"
 
-#: apps/wiki/models.py:85
+#: apps/wiki/models.py:94
 msgid "Mobile OS:"
 msgstr "Мобільна ОС:"
 
-#: apps/wiki/models.py:86
+#: apps/wiki/models.py:95
 msgid "Android"
 msgstr "Android"
 
-#: apps/wiki/models.py:87
+#: apps/wiki/models.py:96
 msgid "Maemo"
 msgstr "Maemo"
 
-#: apps/wiki/models.py:96
+#: apps/wiki/models.py:105
 msgid "%(old)s Redirect %(number)i"
 msgstr "%(old)s перенаправлення %(number)i"
 
-#: apps/wiki/models.py:97
+#: apps/wiki/models.py:106
 msgid "%(old)s-redirect-%(number)i"
 msgstr "%(old)s-перенаправлення-%(number)i"
 
-#: apps/wiki/models.py:237
+#: apps/wiki/models.py:187
+msgctxt "longer maintained."
+msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no "
+msgstr ""
+
+#: apps/wiki/models.py:277
 msgid "Please choose a category."
 msgstr "Оберіть категорію."
 
-#: apps/wiki/models.py:566
+#: apps/wiki/models.py:611
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr "Редакція повинна базуватись на редакції документу локалі: %(locale)s. Ідентифікатор редакції %(id)s не задовольняє цьому критерію."
 
@@ -2348,28 +2509,62 @@ msgstr "Шаблон \"%s\" не існує або не має затвердж�
 msgid "The video \"%s\" does not exist."
 msgstr "Відео \"%s\" не існує."
 
-#: apps/wiki/tasks.py:34
+#: apps/wiki/tasks.py:36
 msgid "Your revision has been approved: {title}"
 msgstr "Вашу редакцію затверджено: {title}"
 
-#: apps/wiki/tasks.py:36
+#: apps/wiki/tasks.py:38
 msgid "Your revision has been rejected: {title}"
 msgstr "Вашу редакцію відкинуто: {title}"
 
-#: apps/wiki/views.py:408
+#: apps/wiki/topic_strings.py:6
+msgctxt "KB Topic"
+msgid "ui"
+msgstr ""
+
+#: apps/wiki/topic_strings.py:7
+#, fuzzy
+msgctxt "KB Topic"
+msgid "mobile"
+msgstr "Мобільний"
+
+#: apps/wiki/topic_strings.py:8
+#, fuzzy
+msgctxt "KB Topic"
+msgid "Firefox 1.0"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/topic_strings.py:9
+msgctxt "KB Topic"
+msgid "addon"
+msgstr ""
+
+#: apps/wiki/topic_strings.py:10
+#, fuzzy
+msgctxt "KB Topic"
+msgid "Firefox 3.6.13"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/topic_strings.py:11
+#, fuzzy
+msgctxt "KB Topic"
+msgid "Firefox 4.0"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/views.py:426
 msgid "You cannot translate this document."
 msgstr "Ви не можете перекладати цей документ."
 
-#: apps/wiki/views.py:598
+#: apps/wiki/views.py:623
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "Раді чути — дякуємо за відгук!"
 
-#: apps/wiki/views.py:600
+#: apps/wiki/views.py:625
 #, fuzzy
 msgid "Sorry to hear that. Try searching for solutions below."
 msgstr "Шкода чути. Може, одне з рішень нижче допоможе."
 
-#: apps/wiki/views.py:610
+#: apps/wiki/views.py:635
 msgid "You already voted on this Article."
 msgstr "Ви вже голосували за цю статтю."
 
@@ -2386,6 +2581,49 @@ msgstr "Порівняти редакції"
 msgid "Back to History"
 msgstr "Назад до історії"
 
+#: apps/wiki/templates/wiki/confirm_document_delete.html:5
+#, fuzzy
+msgid "Document Deleted | {document}"
+msgstr "Вилучення редакції | {document}"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:7
+#, fuzzy
+msgid "Delete Document | {document}"
+msgstr "Вилучення редакції | {document}"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:10
+#, fuzzy
+msgid "Delete Document"
+msgstr "Вилучити допис"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:16
+#, fuzzy
+msgid "The document has been deleted."
+msgstr "Документ \"%s\" не існує."
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:18
+#, fuzzy
+msgid "Are you sure you want to delete this document?"
+msgstr "Ви дійсно бажаєте вилучити цей допис?"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:20
+msgid "All translations of this document will also be deleted."
+msgstr ""
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:27
+#, fuzzy
+msgid "Current Content"
+msgstr "Перекласти вміст"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:33
+#, fuzzy
+msgid "You are about to permanently delete this document. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
+msgstr "Ви збираєтесь вилучити цей допис назавжди. <strong>Це незворотна дія!</strong> Ви дійсно бажаєте продовжити?"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:37 apps/wiki/templates/wiki/confirm_revision_delete.html:32
+msgid "Cancel and go back to document history"
+msgstr ""
+
 #: apps/wiki/templates/wiki/confirm_revision_delete.html:4
 msgid "Delete Revision | {document}"
 msgstr "Вилучення редакції | {document}"
@@ -2394,11 +2632,25 @@ msgstr "Вилучення редакції | {document}"
 msgid "Delete Revision"
 msgstr "Вилучити редакцію"
 
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:11
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:12
+#, fuzzy
+msgid "Unable to delete only revision of the document"
+msgstr "Вилучення редакції | {document}"
+
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:13
+msgid "To delete the document, please notify an admin."
+msgstr ""
+
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:15
+#, fuzzy
+msgid "Go back to document history"
+msgstr "Назад до історії"
+
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:18
 msgid "Are you sure you want to delete this revision?"
 msgstr "Ви дійсно хочете вилучити цю редакцію?"
 
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:21
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:28
 msgid "You are about to permanently delete this revision. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "Ви збираєтесь вилучити цю редакцію назавжди. <strong>Це незворотна дія!</strong> Ви впевнені, що хочете продовжити?"
 
@@ -2415,119 +2667,124 @@ msgstr "Не змогли знайти необхідну інформацію?"
 msgid "Here's a list of related articles that might help:"
 msgstr "Ось перелік пов'язаних статей, що можуть допомогти:"
 
-#: apps/wiki/templates/wiki/document.html:39
-msgid "Browse other articles about <a href=\"{url}\">{category}</a>"
+#: apps/wiki/templates/wiki/document.html:45
+#, fuzzy
+msgid "Browse other articles about %(topics)s"
 msgstr "Перегляньте інші статті про: <a href=\"{url}\">{category}</a>"
 
-#: apps/wiki/templates/wiki/document.html:42
+#: apps/wiki/templates/wiki/document.html:51
 msgid "Ask our awesome support community for help"
 msgstr "Поставте запитання нашій спільноті підтримки"
 
-#: apps/wiki/templates/wiki/document.html:45
+#: apps/wiki/templates/wiki/document.html:54
 msgid "Or try searching:"
 msgstr "Чи спробуйте шукати:"
 
-#: apps/wiki/templates/wiki/document.html:54
+#: apps/wiki/templates/wiki/document.html:63
 msgid "You've come to the right place for Firefox help!"
 msgstr ""
 
-#: apps/wiki/templates/wiki/document.html:56
+#: apps/wiki/templates/wiki/document.html:65
 msgid "This page should provide you with a solution to what you posted on Twitter.<br/> If not, our community volunteers are ready to help."
 msgstr ""
 
-#: apps/wiki/templates/wiki/document.html:64
+#: apps/wiki/templates/wiki/document.html:73
 msgid "You were sent here by one of our <br/> volunteers from the <a href=\"%(url)s\">Army of Awesome</a>."
 msgstr ""
 
-#: apps/wiki/templates/wiki/document.html:94
+#: apps/wiki/templates/wiki/document.html:103
 msgid "Turn off emails."
 msgstr "Вимкнути сповіщення."
 
-#: apps/wiki/templates/wiki/document.html:99
+#: apps/wiki/templates/wiki/document.html:108
 msgid "Get emailed when this article changes."
 msgstr "Надіслати сповіщення коли цю статтю змінено."
 
-#: apps/wiki/templates/wiki/document_revisions.html:4
-msgid "Revision History | {document}"
-msgstr "Історія редакції | {document}"
-
-#: apps/wiki/templates/wiki/document_revisions.html:7
-msgid "History"
-msgstr "Історія"
-
-#: apps/wiki/templates/wiki/document_revisions.html:11
-msgid "History of {title}"
-msgstr "Історія {title}"
-
-#: apps/wiki/templates/wiki/document_revisions.html:13
-msgid "Revision history for:"
-msgstr "Історія редакцій для:"
-
-#: apps/wiki/templates/wiki/document_revisions.html:30 apps/wiki/templates/wiki/document_revisions.html:91
-msgid "Compare Selected Translations"
-msgstr "Порівняти обрані переклади"
-
-#: apps/wiki/templates/wiki/document_revisions.html:30 apps/wiki/templates/wiki/document_revisions.html:91
-msgid "Compare Selected Revisions"
-msgstr "Порівняти обрані редакції"
-
-#: apps/wiki/templates/wiki/document_revisions.html:52
-msgid "Review"
-msgstr "Переглянути"
-
-#: apps/wiki/templates/wiki/document_revisions.html:54
-msgctxt "revision"
-msgid "Unreviewed"
-msgstr "Не переглянуті"
-
-#: apps/wiki/templates/wiki/document_revisions.html:58
-msgid "Current"
-msgstr "Поточна"
-
-#: apps/wiki/templates/wiki/document_revisions.html:60
-msgid "Approved"
-msgstr "Затверджена"
-
-#: apps/wiki/templates/wiki/document_revisions.html:96
-msgid "This document has no revisions."
-msgstr "У цього документа немає редакцій."
-
-#: apps/wiki/templates/wiki/edit_document.html:6
+#: apps/wiki/templates/wiki/edit_document.html:7
 msgid "Edit Article | {document}"
 msgstr "Редагувати статтю | {document}"
 
-#: apps/wiki/templates/wiki/edit_document.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:27 apps/wiki/templates/wiki/includes/sidebar_modules.html:29
+#: apps/wiki/templates/wiki/edit_document.html:11 apps/wiki/templates/wiki/includes/sidebar_modules.html:27 apps/wiki/templates/wiki/includes/sidebar_modules.html:29
 msgid "Edit Article"
 msgstr "Редагувати статтю"
 
-#: apps/wiki/templates/wiki/edit_document.html:15
+#: apps/wiki/templates/wiki/edit_document.html:16
 msgid "<em>Editing</em> {title}"
 msgstr "{title} <em>редагується</em>"
 
-#: apps/wiki/templates/wiki/edit_document.html:19
+#: apps/wiki/templates/wiki/edit_document.html:21
 msgid "Edit Description"
 msgstr "Редагувати опис"
 
-#: apps/wiki/templates/wiki/edit_document.html:32 apps/wiki/templates/wiki/new_document.html:24
+#: apps/wiki/templates/wiki/edit_document.html:37 apps/wiki/templates/wiki/new_document.html:24
 msgid "Relevant to:"
 msgstr "Стосується:"
 
-#: apps/wiki/templates/wiki/edit_document.html:40
+#: apps/wiki/templates/wiki/edit_document.html:45
 #, fuzzy
 msgid "Save description"
 msgstr "Опис"
 
-#: apps/wiki/templates/wiki/edit_document.html:49
+#: apps/wiki/templates/wiki/edit_document.html:54
 msgid "Edit Content"
 msgstr "Редагувати вміст"
 
-#: apps/wiki/templates/wiki/edit_document.html:51
+#: apps/wiki/templates/wiki/edit_document.html:56
 msgid "For help with writing articles, check out the <a href=\"%(url)s\">Support Document Guide</a>."
 msgstr "Допомогу по написанню статей дивіться в <a href=\"%(url)s\">Настанові по документації підтримки</a>."
 
+#: apps/wiki/templates/wiki/history.html:4
+msgid "Revision History | {document}"
+msgstr "Історія редакції | {document}"
+
+#: apps/wiki/templates/wiki/history.html:7
+msgid "History"
+msgstr "Історія"
+
+#: apps/wiki/templates/wiki/history.html:11
+msgid "History of {title}"
+msgstr "Історія {title}"
+
+#: apps/wiki/templates/wiki/history.html:13
+msgid "Revision history for:"
+msgstr "Історія редакцій для:"
+
+#: apps/wiki/templates/wiki/history.html:30 apps/wiki/templates/wiki/history.html:94
+msgid "Compare Selected Translations"
+msgstr "Порівняти обрані переклади"
+
+#: apps/wiki/templates/wiki/history.html:30 apps/wiki/templates/wiki/history.html:94
+msgid "Compare Selected Revisions"
+msgstr "Порівняти обрані редакції"
+
+#: apps/wiki/templates/wiki/history.html:52
+msgid "Review"
+msgstr "Переглянути"
+
+#: apps/wiki/templates/wiki/history.html:54
+msgctxt "revision"
+msgid "Unreviewed"
+msgstr "Не переглянуті"
+
+#: apps/wiki/templates/wiki/history.html:58
+msgid "Current"
+msgstr "Поточна"
+
+#: apps/wiki/templates/wiki/history.html:60
+msgid "Approved"
+msgstr "Затверджена"
+
+#: apps/wiki/templates/wiki/history.html:82 apps/wiki/templates/wiki/revision.html:54
+msgid "Edit article based on this revision"
+msgstr "Редагувати статтю на основі цієї редакції"
+
+#: apps/wiki/templates/wiki/history.html:99
+msgid "This document has no revisions."
+msgstr "У цього документа немає редакцій."
+
 #: apps/wiki/templates/wiki/list_documents.html:6
-msgid "Articles tagged: {tag}"
-msgstr "Теги статті: {tag}"
+msgid "Topic: {topic}"
+msgstr ""
 
 #: apps/wiki/templates/wiki/list_documents.html:8
 msgid "All Articles"
@@ -2641,7 +2898,7 @@ msgstr "Повні джерела статті"
 msgid "The {default_locale} version has no approved content to show."
 msgstr "{default_locale} версія не має затвердженого вмісту для показу."
 
-#: apps/wiki/templates/wiki/review_translation.html:49 apps/wiki/templates/wiki/translate.html:127
+#: apps/wiki/templates/wiki/review_translation.html:49 apps/wiki/templates/wiki/translate.html:129
 msgid "Approved {default_locale} version:"
 msgstr "Затверджена {default_locale} версія:"
 
@@ -2715,10 +2972,6 @@ msgstr "Затверджено?"
 msgid "Is current revision?"
 msgstr "Це поточна редакція?"
 
-#: apps/wiki/templates/wiki/revision.html:54
-msgid "Edit article based on this revision"
-msgstr "Редагувати статтю на основі цієї редакції"
-
 #: apps/wiki/templates/wiki/select_locale.html:4
 msgid "Select language | {document}"
 msgstr "Вибір мови | {document}"
@@ -2731,64 +2984,64 @@ msgstr "Оберіть мову"
 msgid "Select a language to translate to:"
 msgstr "Виберіть мову на яку перекладатимете:"
 
-#: apps/wiki/templates/wiki/translate.html:6
+#: apps/wiki/templates/wiki/translate.html:7
 msgid "Translate Article | {document}"
 msgstr "Переклад статті | {document}"
 
-#: apps/wiki/templates/wiki/translate.html:9 apps/wiki/templates/wiki/includes/sidebar_modules.html:36 apps/wiki/templates/wiki/includes/sidebar_modules.html:38
+#: apps/wiki/templates/wiki/translate.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:36 apps/wiki/templates/wiki/includes/sidebar_modules.html:38
 #: apps/wiki/templates/wiki/includes/sidebar_modules.html:45 apps/wiki/templates/wiki/includes/sidebar_modules.html:47
 msgid "Translate Article"
 msgstr "Перекласти статтю"
 
-#: apps/wiki/templates/wiki/translate.html:15
+#: apps/wiki/templates/wiki/translate.html:16
 msgid "Translating {title}"
 msgstr "Перекладання {title}"
 
-#: apps/wiki/templates/wiki/translate.html:18
+#: apps/wiki/templates/wiki/translate.html:19
 msgid "Translating article to {locale}"
 msgstr "Перекладання статті мовою: {locale}"
 
-#: apps/wiki/templates/wiki/translate.html:23
+#: apps/wiki/templates/wiki/translate.html:24
 msgid "You are translating an unreviewed or rejected English document."
 msgstr "Ви перекладаєте не переглянутий або відкинутий англійський документ."
 
-#: apps/wiki/templates/wiki/translate.html:26
+#: apps/wiki/templates/wiki/translate.html:27
 msgid "Choose a locale:"
 msgstr "Виберіть локаль:"
 
-#: apps/wiki/templates/wiki/translate.html:44
+#: apps/wiki/templates/wiki/translate.html:46
 msgid "Translate Description"
 msgstr "Перекласти опис"
 
-#: apps/wiki/templates/wiki/translate.html:59
+#: apps/wiki/templates/wiki/translate.html:61
 msgid "Title in {locale}:"
 msgstr "{locale} назва:"
 
-#: apps/wiki/templates/wiki/translate.html:69
+#: apps/wiki/templates/wiki/translate.html:71
 msgid "Slug in {locale}:"
 msgstr "Слаг українською:"
 
-#: apps/wiki/templates/wiki/translate.html:76
+#: apps/wiki/templates/wiki/translate.html:78
 msgid "Save title and slug"
 msgstr ""
 
-#: apps/wiki/templates/wiki/translate.html:85
+#: apps/wiki/templates/wiki/translate.html:87
 msgid "Translate Content"
 msgstr "Перекласти вміст"
 
-#: apps/wiki/templates/wiki/translate.html:100
+#: apps/wiki/templates/wiki/translate.html:102
 msgid "Keywords in {locale}:"
 msgstr "Ключові слова:"
 
-#: apps/wiki/templates/wiki/translate.html:110
+#: apps/wiki/templates/wiki/translate.html:112
 msgid "Search result summary in {locale}:"
 msgstr "Підсумок по пошуку:"
 
-#: apps/wiki/templates/wiki/translate.html:122
+#: apps/wiki/templates/wiki/translate.html:124
 msgid "Note: There are no approved translations for this article."
 msgstr "Примітка: для цієї статті нема затверджених перекладів."
 
-#: apps/wiki/templates/wiki/translate.html:131
+#: apps/wiki/templates/wiki/translate.html:133
 msgid "{locale} translation:"
 msgstr "Переклад:"
 
@@ -2812,24 +3065,32 @@ msgstr ""
 "<p>Ця стаття можливо застаріла.</p> <p>Були внесені важливі зміни в англійську версію цієї сторінки. Якщо хочете, перегляньте її, доки триває переклад внесених змін: <a href=\"%(url)s\">%(title)s</"
 "a> </p>"
 
-#: apps/wiki/templates/wiki/includes/document_macros.html:53
+#: apps/wiki/templates/wiki/includes/document_macros.html:48
+msgid "This article is no longer maintained, so its content might be out of date."
+msgstr ""
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:63
 msgid "Our volunteers haven't translated this article into %(locale)s yet. <a href=\"%(help_link)s\">Join us and help get the job done!</a>"
 msgstr "Наші волонтери ще не переклали цю статтю українською. <a href=\"%(help_link)s\">Долучайтесь та зробіть цю роботу!</a>"
 
 #. This is shown for existing, never-approved translations
-#: apps/wiki/templates/wiki/includes/document_macros.html:63
+#: apps/wiki/templates/wiki/includes/document_macros.html:73
 msgid "Our volunteers are working on translating this article. Until it's ready, maybe the English version can be of some help."
 msgstr "Наші волонтери працюють над перекладом цієї статті. Поки це не зроблено, можливо англійська версія стана в нагоді."
 
-#: apps/wiki/templates/wiki/includes/document_macros.html:75
+#: apps/wiki/templates/wiki/includes/document_macros.html:85
 msgid "This article doesn't have approved content yet."
 msgstr "Ця стаття ще не має затвердженого вмісту."
 
-#: apps/wiki/templates/wiki/includes/document_vote.html:7
+#: apps/wiki/templates/wiki/includes/document_macros.html:101
+msgid "Warning: There are newer unreviewed revisions of this article. See <a href=\"%(url)s\">the history</a> to base your edit on an existing unreviewed revision."
+msgstr ""
+
+#: apps/wiki/templates/wiki/includes/document_vote.html:6
 msgid "Was this article helpful?"
 msgstr "Ця стаття допомогла?"
 
-#: apps/wiki/templates/wiki/includes/document_vote.html:10
+#: apps/wiki/templates/wiki/includes/document_vote.html:9
 msgid "Please wait..."
 msgstr "Зачекайте..."
 
@@ -2946,27 +3207,27 @@ msgctxt "site_title"
 msgid "Firefox Help"
 msgstr "Допомога Firefox"
 
-#: templates/base.html:89
+#: templates/base.html:102
 msgid "Be <mark>Awesome</mark>"
 msgstr "<mark>Очманіти</mark>"
 
-#: templates/base.html:94
+#: templates/base.html:107
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
 msgstr "А чи знаєте ви, що допомога Firefox наповнюється волонтерами зі всього світу?"
 
-#: templates/base.html:97
+#: templates/base.html:110
 msgid "Grab your cape and join us &raquo;"
 msgstr "Приєднуйтесь &raquo;"
 
-#: templates/base.html:101
+#: templates/base.html:114
 msgid "Check your <mark>plugins</mark>"
 msgstr "Перевірте свої <mark>модулі</mark>"
 
-#: templates/base.html:106
+#: templates/base.html:119
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
 msgstr "Що таке модуль? Чому я повинен утримувати їх оновленими? Віднайдіть відповіді на ці питання та одразу виконайте перевірку. "
 
-#: templates/base.html:111
+#: templates/base.html:124
 msgid "Find out more &raquo;"
 msgstr "Докладніше &raquo;"
 
@@ -3188,16 +3449,20 @@ msgstr "Шукати в допомозі Firefox"
 msgid "Welcome, <span class=\"user\">{user}</span>."
 msgstr "Вітаємо, <span class=\"user\">{user}</span>."
 
-#: templates/includes/common_macros.html:25
+#: templates/includes/common_macros.html:26
+msgid "Inbox"
+msgstr ""
+
+#: templates/includes/common_macros.html:32
 #, fuzzy
 msgid "Dashboard"
 msgstr "Панель перекладача"
 
-#: templates/includes/common_macros.html:27
+#: templates/includes/common_macros.html:34
 msgid "Sign Out"
 msgstr "Вийти"
 
-#: templates/includes/common_macros.html:31
+#: templates/includes/common_macros.html:38
 msgid "Want to contribute?<br /> <a href=\"%(login_url)s\">Sign In</a> or <a href=\"%(register_url)s\">Register</a>"
 msgstr "Хочете допомогти?<br /> <a href=\"%(login_url)s\">Увійдіть</a> або <a href=\"%(register_url)s\">Зареєструйтесь</a>"
 
@@ -3265,22 +3530,6 @@ msgstr[2] ""
 msgid "Next"
 msgstr "Далі"
 
-#: templates/layout/login.html:16
-msgid "Remember me"
-msgstr "Пам’ятати мене"
-
-#: templates/layout/login.html:23
-msgid "Click here to register"
-msgstr "Клацніть тут щоб зареєструватись"
-
-#: templates/layout/login.html:26
-msgid "Click here if you've forgotten your password"
-msgstr "Клацніть тут якщо ви забули свій пароль"
-
-#: templates/layout/login.html:26
-msgid "I forgot my password"
-msgstr "Я забув свій пароль"
-
 #: templates/layout/paginator.html:7
 msgid "Previous"
 msgstr "Назад"
@@ -3326,6 +3575,36 @@ msgstr "Firefox 4"
 #: templates/mobile/base.html:91
 msgid "View full site"
 msgstr ""
+
+#~ msgid "All translations in English..."
+#~ msgstr "Всі переклади українською…"
+
+#~ msgid "Select an image file to upload."
+#~ msgstr "Виберіть файл зображення для вивантаження."
+
+#~ msgid "Submit file"
+#~ msgstr "Подати файл"
+
+#~ msgid "Please no SWFs, only FLVs."
+#~ msgstr "Не SWF, тільки FLV."
+
+#~ msgid "Delete thumbnail"
+#~ msgstr "Вилучити піктограму"
+
+#~ msgid "Articles tagged: {tag}"
+#~ msgstr "Теги статті: {tag}"
+
+#~ msgid "Remember me"
+#~ msgstr "Пам’ятати мене"
+
+#~ msgid "Click here to register"
+#~ msgstr "Клацніть тут щоб зареєструватись"
+
+#~ msgid "Click here if you've forgotten your password"
+#~ msgstr "Клацніть тут якщо ви забули свій пароль"
+
+#~ msgid "I forgot my password"
+#~ msgstr "Я забув свій пароль"
 
 #~ msgctxt "locale"
 #~ msgid "Stop getting emailed when English revisions are approved"
@@ -3380,10 +3659,6 @@ msgstr ""
 
 #~ msgid "Select Locale"
 #~ msgstr "Виберіть локаль"
-
-#, fuzzy
-#~ msgid "Username: {username}"
-#~ msgstr "список імен, розділених комами"
 
 #~ msgid "Contact"
 #~ msgstr "Контакт"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-18 07:47-0700\n"
+"POT-Creation-Date: 2011-05-11 06:33-0700\n"
 "PO-Revision-Date: 2011-04-18 20:20+0200\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian\n"
@@ -13,68 +13,69 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.1.5\n"
 
-#: apps/announcements/models.py:18
+#: apps/announcements/models.py:19
 msgid "Start displaying"
 msgstr "Fillo të shfaqësh"
 
-#: apps/announcements/models.py:19
+#: apps/announcements/models.py:20
 msgid "When this announcement will start appearing. (US/Pacific)"
 msgstr "Kur do të fillojë të duket ky njoftim. (ShBA/Paqësori)"
 
-#: apps/announcements/models.py:23
+#: apps/announcements/models.py:24
 msgid "Stop displaying"
 msgstr "Resht së shfaquri"
 
-#: apps/announcements/models.py:24
+#: apps/announcements/models.py:25
 msgid "When this announcement will stop appearing. Leave blank for indefinite. (US/Pacific)"
 msgstr "Kur do të reshtë shfaqja e këtij lajmërimi. Për pambarimisht, lëreni të zbrazët. (ShBA/Paqësori)"
 
-#: apps/announcements/models.py:28
+#: apps/announcements/models.py:29
 msgid "Use wiki syntax or HTML. It will display similar to a document's content."
 msgstr "Përdorni shenja sintakse wiki ose HTML. Do të shfaqë diçka të ngjashme si lënda e dokumentit."
 
-#: apps/customercare/views.py:27
-#: apps/dashboards/readouts.py:86
+#: apps/announcements/tasks.py:34
+msgid "New announcement for {group}"
+msgstr ""
+
+#: apps/customercare/views.py:28 apps/dashboards/readouts.py:106
 msgid "Most Recent"
 msgstr "Më të Fundmet"
 
-#: apps/customercare/views.py:28
+#: apps/customercare/views.py:29
 msgid "Unanswered"
 msgstr "Të papërgjigje"
 
-#: apps/customercare/views.py:29
+#: apps/customercare/views.py:30
 msgid "Answered"
 msgstr "Me Përgjigje"
 
-#: apps/customercare/views.py:30
+#: apps/customercare/views.py:31
 msgid "All"
 msgstr "Krejt"
 
 #. L10n: the tweet needs to be a reply to another tweet.
-#: apps/customercare/views.py:168
+#: apps/customercare/views.py:171
 msgid "Reply-to is empty"
 msgstr "Reply-to është e zbrazët"
 
 #. L10n: the tweet has no content.
-#: apps/customercare/views.py:173
+#: apps/customercare/views.py:176
 msgid "Message is empty"
 msgstr "Mesazhi është i zbrazët"
 
-#: apps/customercare/views.py:176
+#: apps/customercare/views.py:179
 msgid "Message is too long"
 msgstr "Mesazhi është shumë i gjatë"
 
-#: apps/customercare/views.py:183
-#: apps/customercare/views.py:251
+#: apps/customercare/views.py:186 apps/customercare/views.py:255
 msgid "An error occured: {message}"
 msgstr "Ndodhi një gabim: {message}"
 
-#: apps/customercare/views.py:234
-#: apps/customercare/views.py:239
+#: apps/customercare/views.py:238 apps/customercare/views.py:243
 msgid "Invalid ID."
 msgstr "ID e Pavlefshme."
 
-#: apps/customercare/views.py:243
+#: apps/customercare/views.py:247
 msgid "Tweets that are replies or have replies must not be hidden."
 msgstr "Cicërimat që janë përgjigje ose që përmbajnë përgjigje nuk duhet të jenë të fshehura."
 
@@ -114,14 +115,17 @@ msgstr "Rifreskoje"
 msgid "Sign out"
 msgstr "Dilni"
 
-#: apps/customercare/templates/customercare/landing.html:46
-#: apps/customercare/templates/customercare/twitter_modal.html:13
+#: apps/customercare/templates/customercare/landing.html:46 apps/customercare/templates/customercare/twitter_modal.html:13
 msgid "Sign in"
 msgstr "Hyni"
 
 #: apps/customercare/templates/customercare/landing.html:57
-msgid "We couldn't find any matching tweets for %(language)s at this time. Please check again later, choose a different tweet type from the menu above, or view tweets for other languages by using the language selector at the bottom of the page."
-msgstr "Këtë herë nuk gjetëm dot cicërima me përputhje për %(language)s. Ju lutem, kontrolloni sërish më vonë, zgjidhni një lloj tjetër cicërimash prej menusë më sipër, ose shihni cicërima në gjuhë të tjera, duke përdorur përzgjedhësin e gjuhëve në fund të faqes."
+msgid ""
+"We couldn't find any matching tweets for %(language)s at this time. Please check again later, choose a different tweet type from the menu above, or view tweets for other languages by using the "
+"language selector at the bottom of the page."
+msgstr ""
+"Këtë herë nuk gjetëm dot cicërima me përputhje për %(language)s. Ju lutem, kontrolloni sërish më vonë, zgjidhni një lloj tjetër cicërimash prej menusë më sipër, ose shihni cicërima në gjuhë të "
+"tjera, duke përdorur përzgjedhësin e gjuhëve në fund të faqes."
 
 #: apps/customercare/templates/customercare/landing.html:83
 msgid "Our army has responded to:"
@@ -171,9 +175,8 @@ msgstr "Shpjereni te <mark>niveli pasues!</mark>"
 msgid "Want to go beyond 140 characters? <a href=\"%(join_url)s\">Join the support community</a> and help many more Firefox users."
 msgstr "Doni të kapërceni tej 140 shenjave? <a href=\"%(join_url)s\">Bëhuni pjesë e bashkësisë së asistencës</a> dhe ndihmoni më tepër përdoruesa të Firefox-it."
 
-#: apps/customercare/templates/customercare/reply_modal.html:2
-#: apps/kbforums/templates/kbforums/posts.html:93
-#: apps/kbforums/templates/kbforums/includes/post.html:29
+#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:95 apps/kbforums/templates/kbforums/includes/post.html:29
+#: apps/messages/templates/messages/read.html:19
 msgid "Reply"
 msgstr "Përgjigjjuni"
 
@@ -182,8 +185,12 @@ msgid "What is your reply about?"
 msgstr "Cila është përgjigja juaj për të?"
 
 #: apps/customercare/templates/customercare/reply_modal.html:21
-msgid "We have created <a href=\"%(signpost_help_url)s\">signpost messages</a> for easily replying to top Firefox topics on Twitter. If you would like to have messages for your language appear here, contact Kadir Topal for more info: %(contact_email)s"
-msgstr "Kemi krijuar <a href=\"%(signpost_help_url)s\">mesazhe orientuese</a> për përgjigje të shpejta lidhur me temat kryesuese mbi Firefox-in në Twitter. Nëse do të donit që të shfaqen këtu mesazhe për gjuhën tuaj, lidhuni me Kadir Topalin për më tepër të dhëna: %(contact_email)s"
+msgid ""
+"We have created <a href=\"%(signpost_help_url)s\">signpost messages</a> for easily replying to top Firefox topics on Twitter. If you would like to have messages for your language appear here, "
+"contact Kadir Topal for more info: %(contact_email)s"
+msgstr ""
+"Kemi krijuar <a href=\"%(signpost_help_url)s\">mesazhe orientuese</a> për përgjigje të shpejta lidhur me temat kryesuese mbi Firefox-in në Twitter. Nëse do të donit që të shfaqen këtu mesazhe për "
+"gjuhën tuaj, lidhuni me Kadir Topalin për më tepër të dhëna: %(contact_email)s"
 
 #: apps/customercare/templates/customercare/reply_modal.html:49
 msgid "Get personal"
@@ -193,12 +200,11 @@ msgstr "Bëhuni i veçantë"
 msgid "Tweak it and make it your own. Personalized messages go a long way in helping others."
 msgstr "Rregullojeni dhe bëjeni si e doni. Mesazhet e personalizuara vlejnë shumë si ndihmë për të tjerët."
 
-#: apps/customercare/templates/customercare/reply_modal.html:64
+#: apps/customercare/templates/customercare/reply_modal.html:65 apps/messages/views.py:74
 msgid "Your message was sent!"
 msgstr "Mesazhi juaj u dërgua!"
 
-#: apps/customercare/templates/customercare/reply_modal.html:66
-#: apps/wiki/templates/wiki/includes/submit_revision_modal.html:18
+#: apps/customercare/templates/customercare/reply_modal.html:67 apps/wiki/templates/wiki/includes/submit_revision_modal.html:18
 msgid "Submit"
 msgstr "Parashtroje"
 
@@ -228,200 +234,187 @@ msgstr "Hyni me llogarinë tuaj Twitter"
 msgid "Before you join the Army of Awesome, you need to log in so you can respond to tweets. You will now be redirected to Twitter to log in."
 msgstr "Përpara se të bëheni pjesë te Army of Awesome, lypset të bëni hyrjen, që kështu të mund t'u përgjigjeni cicërimave. Tani do të ridrejtoheni te Twitter që të bëni hyrjen."
 
-#: apps/customercare/templates/customercare/twitter_modal.html:12
-#: apps/gallery/templates/gallery/confirm_media_delete.html:60
-#: apps/gallery/templates/gallery/edit_media.html:28
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:31
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:53
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:79
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:83
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:87
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:117
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:134
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:28
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:30
-#: apps/kbforums/templates/kbforums/edit_post.html:29
-#: apps/kbforums/templates/kbforums/edit_thread.html:27
-#: apps/kbforums/templates/kbforums/new_thread.html:34
-#: apps/notifications/templates/notifications/remove.html:16
-#: apps/users/templates/users/confirm_avatar_delete.html:23
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:25
-#: apps/wiki/templates/wiki/includes/review_form.html:35
-#: apps/wiki/templates/wiki/includes/review_form.html:49
-#: apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
+#: apps/customercare/templates/customercare/twitter_modal.html:12 apps/gallery/templates/gallery/confirm_media_delete.html:60 apps/gallery/templates/gallery/edit_media.html:28
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:58
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:132 apps/gallery/templates/gallery/includes/upload_media_form.html:138
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/kbforums/templates/kbforums/confirm_post_delete.html:30 apps/kbforums/templates/kbforums/confirm_thread_delete.html:32
+#: apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29 apps/kbforums/templates/kbforums/new_thread.html:36
+#: apps/messages/templates/messages/new.html:16 apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/includes/review_form.html:35
+#: apps/wiki/templates/wiki/includes/review_form.html:49 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "Anuloje"
 
-#: apps/dashboards/models.py:19
+#: apps/dashboards/__init__.py:8
 msgid "This Week"
 msgstr "Këtë Javë"
 
-#: apps/dashboards/models.py:20
+#: apps/dashboards/__init__.py:9
 msgid "All Time"
 msgstr "Tërë Kohën"
 
-#: apps/dashboards/readouts.py:58
-#: apps/dashboards/readouts.py:155
+#: apps/dashboards/models.py:168
+msgid "Parameters which will be passed to the dashboard. The dashboard determines the meaning and format of these."
+msgstr ""
+
+#: apps/dashboards/readouts.py:71 apps/dashboards/readouts.py:175
 msgid "Most-Visited Articles"
 msgstr "Artikujt Më të Vizituar"
 
-#: apps/dashboards/readouts.py:62
+#: apps/dashboards/readouts.py:75
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "Këta janë 20 artikujt më të vizituar, që zënë më tepër se 50% të trafikut te Baza e Dijes."
 
-#: apps/dashboards/readouts.py:65
+#: apps/dashboards/readouts.py:78 apps/dashboards/readouts.py:323 apps/wiki/models.py:47
+msgid "Templates"
+msgstr "Gjedhe"
+
+#: apps/dashboards/readouts.py:82
+#, fuzzy
+msgid "How many of the approved templates which allow translations have an approved translation into this language"
+msgstr "Sa artikuj të miratuar në Anglisht, për të cilët lejohet përkthimi, kanë një përkthim të miratuar në këtë gjuhë"
+
+#: apps/dashboards/readouts.py:85
 msgid "All Knowledge Base Articles"
 msgstr "Krejt Artikujt e Bazës së Dijes"
 
-#: apps/dashboards/readouts.py:68
+#: apps/dashboards/readouts.py:88
 msgid "How many of the approved English articles which allow translations have an approved translation into this language"
 msgstr "Sa artikuj të miratuar në Anglisht, për të cilët lejohet përkthimi, kanë një përkthim të miratuar në këtë gjuhë"
 
-#: apps/dashboards/readouts.py:83
+#: apps/dashboards/readouts.py:103
 msgid "Visits this week"
 msgstr "Vizita këtë javë"
 
-#: apps/dashboards/readouts.py:84
+#: apps/dashboards/readouts.py:104
 msgid "Status"
 msgstr "Gjendje"
 
-#: apps/dashboards/readouts.py:85
+#: apps/dashboards/readouts.py:105
 msgid "Most Viewed"
 msgstr "Më të Shikuarit"
 
-#: apps/dashboards/readouts.py:157
+#: apps/dashboards/readouts.py:177
 msgid "All knowledge base articles..."
 msgstr "Krejt artikujt e bazës së dijes..."
 
-#: apps/dashboards/readouts.py:159
+#: apps/dashboards/readouts.py:179
 msgid "Visits"
 msgstr "Vizita"
 
-#: apps/dashboards/readouts.py:162
+#: apps/dashboards/readouts.py:182
 msgid "Review Needed"
 msgstr "Lyp Shqyrtim"
 
 #. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:210
-msgid "All translations in English..."
-msgstr "Krejt përkthimet në Shqip..."
+#: apps/dashboards/readouts.py:231
+#, fuzzy
+msgid "All translations..."
+msgstr "Lejo përkthime:"
 
-#: apps/dashboards/readouts.py:214
+#: apps/dashboards/readouts.py:235
 msgid "Update Needed"
 msgstr "Lyp Përditësim"
 
-#: apps/dashboards/readouts.py:216
+#: apps/dashboards/readouts.py:237
 msgid "Out of Date"
 msgstr "I vjetruar"
 
-#: apps/dashboards/readouts.py:272
+#: apps/dashboards/readouts.py:298
 msgid "Translation Needed"
 msgstr "Lyp Përkthim"
 
-#: apps/dashboards/readouts.py:288
+#. L10n: Replace "English" with your language.
+#: apps/dashboards/readouts.py:327
+#, fuzzy
+msgid "All templates in English..."
+msgstr "Krejt përkthimet në Shqip..."
+
+#: apps/dashboards/readouts.py:335
 msgid "Untranslated Articles"
 msgstr "Artikuj të Papërkthyer"
 
-#: apps/dashboards/readouts.py:289
+#: apps/dashboards/readouts.py:336
 msgid "Untranslated"
 msgstr "Të papërkthyer"
 
-#: apps/dashboards/readouts.py:290
+#: apps/dashboards/readouts.py:337
 msgid "All untranslated articles..."
 msgstr "Krejt artikujt e papërkthyer..."
 
-#: apps/dashboards/readouts.py:292
+#: apps/dashboards/readouts.py:339
 msgid "Updated"
 msgstr "U përditësua"
 
-#: apps/dashboards/readouts.py:332
+#: apps/dashboards/readouts.py:379
 msgid "Out-of-Date Translations"
 msgstr "Përkthime të Vjetruar"
 
-#: apps/dashboards/readouts.py:333
+#: apps/dashboards/readouts.py:380
 msgid "Out-of-Date"
 msgstr "Të vjetruar"
 
-#: apps/dashboards/readouts.py:334
+#: apps/dashboards/readouts.py:381
 msgid "All out-of-date translations..."
 msgstr "Krejt përkthimet e vjetruara..."
 
-#: apps/dashboards/readouts.py:336
+#: apps/dashboards/readouts.py:383
 msgid "Out of date since"
 msgstr "E vjetruar që prej"
 
-#: apps/dashboards/readouts.py:411
+#: apps/dashboards/readouts.py:458
 msgid "Translations Needing Updates"
 msgstr "Përkthime Që Lypin Përditësim"
 
-#: apps/dashboards/readouts.py:412
+#: apps/dashboards/readouts.py:459
 msgid "Needing Updates"
 msgstr "Lypin Përditësime"
 
-#: apps/dashboards/readouts.py:413
+#: apps/dashboards/readouts.py:460
 msgid "All translations needing updates..."
 msgstr "Krejt përkthimet që lypin përditësime..."
 
-#: apps/dashboards/readouts.py:420
+#: apps/dashboards/readouts.py:467
 msgid "Unreviewed Changes"
 msgstr "Ndryshime të Pashqyrtuara"
 
-#: apps/dashboards/readouts.py:424
+#: apps/dashboards/readouts.py:471
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "Të pashqyrtuar"
 
-#: apps/dashboards/readouts.py:425
+#: apps/dashboards/readouts.py:472
 msgid "All articles requiring review..."
 msgstr "Krejt artikujt që lypin shqyrtim..."
 
-#: apps/dashboards/readouts.py:427
+#: apps/dashboards/readouts.py:474
 msgid "Changed"
 msgstr "U ndryshua"
 
-#: apps/dashboards/views.py:51
-#: apps/dashboards/templates/dashboards/contributors.html:4
+#: apps/dashboards/views.py:47 apps/dashboards/templates/dashboards/contributors.html:4
 msgid "Contributor Dashboard"
 msgstr "Pult Kontribuesi"
 
-#: apps/dashboards/views.py:59
-#: apps/dashboards/templates/dashboards/localization.html:4
+#: apps/dashboards/views.py:55 apps/dashboards/templates/dashboards/localization.html:4
 msgid "Localization Dashboard"
 msgstr "Pult përkthimesh"
 
-#: apps/dashboards/templates/dashboards/base.html:19
-#: apps/wiki/templates/wiki/document_revisions.html:52
-msgid "Review"
-msgstr "Shqyrtim"
-
-#: apps/dashboards/templates/dashboards/base.html:22
-msgid "Forum"
-msgstr "Forum"
-
-#: apps/dashboards/templates/dashboards/contributors.html:16
-#: apps/dashboards/templates/dashboards/localization.html:42
+#: apps/dashboards/templates/dashboards/contributors.html:16 apps/dashboards/templates/dashboards/localization.html:15
 msgid "Show information for:"
 msgstr "Shfaq të dhëna për:"
 
-#: apps/dashboards/templates/dashboards/localization.html:20
-msgid "%(numerator)s <small>of %(denominator)s</small>"
-msgstr "%(numerator)s <small>nga %(denominator)s</small>"
+#: apps/dashboards/templates/dashboards/group_locale.html:4
+#, fuzzy
+msgid "{locale} | Group Dashboard"
+msgstr "Pult përkthimesh"
 
-#: apps/dashboards/templates/dashboards/localization.html:54
-msgid "Overview"
-msgstr "Përmbledhje"
+#: apps/dashboards/templates/dashboards/group_locale.html:8
+#, fuzzy
+msgid "Group dashboard"
+msgstr "Pulti Forumi Asistence"
 
-#: apps/dashboards/templates/dashboards/localization.html:61
-msgid "User Interface"
-msgstr "Ndërfaqe Përdoruesi "
-
-#: apps/dashboards/templates/dashboards/localization.html:65
-msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
-msgstr "Një ndërfaqe përdoruesi e përkthyer plotësisht përmirëson punën e vizitorëve të site-it në gjuhën tuaj. Ndihmoni në <a href=\"%(url)s\">përkthimin e ndërfaqes</a>."
-
-#: apps/dashboards/templates/dashboards/localization.html:74
-msgid "More options:"
-msgstr "Më tepër mundësi"
+#: apps/dashboards/templates/dashboards/group_locale.html:25
+msgid "See full dashboard"
+msgstr ""
 
 #: apps/dashboards/templates/dashboards/questions.html:3
 msgid "Support Forum Dashboard"
@@ -435,9 +428,7 @@ msgstr "Pult Forumesh Kontribuesish"
 msgid "No recent activity."
 msgstr "Pa veprimtari së fundi."
 
-#: apps/dashboards/templates/dashboards/includes/kb_readout.html:4
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:10
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:12
+#: apps/dashboards/templates/dashboards/includes/kb_readout.html:4 apps/wiki/templates/wiki/includes/sidebar_modules.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:12
 msgid "Article"
 msgstr "Artikull"
 
@@ -445,53 +436,87 @@ msgstr "Artikull"
 msgid "changed by {users}"
 msgstr "u ndryshua nga {users}"
 
-#. Please localize 'English' here.
+#: apps/dashboards/templates/dashboards/includes/macros.html:27
+msgid "Overview"
+msgstr "Përmbledhje"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:39
+msgid "%(numerator)s <small>of %(denominator)s</small>"
+msgstr "%(numerator)s <small>nga %(denominator)s</small>"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:56
+msgid "User Interface"
+msgstr "Ndërfaqe Përdoruesi "
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:60
+msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
+msgstr "Një ndërfaqe përdoruesi e përkthyer plotësisht përmirëson punën e vizitorëve të site-it në gjuhën tuaj. Ndihmoni në <a href=\"%(url)s\">përkthimin e ndërfaqes</a>."
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:69
+msgid "More options:"
+msgstr "Më tepër mundësi"
+
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:5
+#, fuzzy
+msgctxt "dashboard"
+msgid "Review"
+msgstr "Shqyrtim"
+
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:9
+msgid "My profile"
+msgstr "Profili im"
+
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:12
+msgid "Edit my profile"
+msgstr "Përpunim i profilin tim"
+
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:9
-msgctxt "english"
+#, fuzzy
 msgid "Stop getting emailed when English revisions are approved"
 msgstr "Ndërprisni marrjen e email-eve pasi miratohen rishikime në Anglisht"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:12
-msgctxt "locale"
-msgid "Stop getting emailed when English revisions are approved"
-msgstr "Ndërprisni marrjen e email-eve pasi miratohen rishikime në Shqip"
+#, fuzzy
+msgid "Stop getting emailed when YOUR_LOCALE revisions are approved"
+msgstr "Ndërprisni marrjen e email-eve pasi miratohen rishikime në Anglisht"
 
-#. Please localize 'English' here.
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:21
-msgctxt "english"
+#, fuzzy
 msgid "Get emailed when English revisions are approved"
 msgstr "Merrni email-e kur miratohen rishikime në Anglisht"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_approved.html:24
-msgctxt "locale"
-msgid "Get emailed when English revisions are approved"
-msgstr "Merrni email-e kur miratohen rishikime në Shqip"
+#, fuzzy
+msgid "Get emailed when YOUR_LOCALE revisions are approved"
+msgstr "Merrni email-e kur miratohen rishikime në Anglisht"
 
-#. Please localize 'English' here.
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:8
-msgctxt "english"
+#, fuzzy
 msgid "Stop getting emailed when English reviews are waiting"
 msgstr "Ndërprisni marrjen e email-eve kur rishikimet në Anglisht janë në pritje"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:11
-msgctxt "locale"
-msgid "Stop getting emailed when English reviews are waiting"
-msgstr "Ndërprisni marrjen e email-eve kur rishikimet në Shqip janë në pritje"
+#, fuzzy
+msgid "Stop getting emailed when YOUR_LOCALE reviews are waiting"
+msgstr "Ndërprisni marrjen e email-eve kur rishikimet në Anglisht janë në pritje"
 
-#. Please localize 'English' here.
+#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:19
-msgctxt "english"
+#, fuzzy
 msgid "Get emailed when English reviews are waiting"
 msgstr "Merrni email-e kur rishikimet në Anglisht janë në pritje"
 
-#. Please replace 'English' with your language.
+#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
 #: apps/dashboards/templates/dashboards/includes/watch_locale.html:22
-msgctxt "locale"
-msgid "Get emailed when English reviews are waiting"
-msgstr "Merrni email-e kur rishikimet në Shqip janë në pritje"
+#, fuzzy
+msgid "Get emailed when YOUR_LOCALE reviews are waiting"
+msgstr "Merrni email-e kur rishikimet në Anglisht janë në pritje"
 
 #: apps/flagit/models.py:23
 msgid "Spam or other unrelated content"
@@ -517,8 +542,7 @@ msgstr "Në pritje"
 msgid "Accepted and Fixed"
 msgstr "U pranua dhe u ndreq"
 
-#: apps/flagit/models.py:32
-#: apps/wiki/templates/wiki/document_revisions.html:62
+#: apps/flagit/models.py:32 apps/wiki/templates/wiki/history.html:62
 msgid "Rejected"
 msgstr "U hodh poshtë"
 
@@ -530,8 +554,7 @@ msgstr "E keni shënuar tashmë ,e falmurkë këtë lëndë."
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr "I keni vënë shenjë kësaj lënde. Parashtrimin tuaj do ta marrë në shqyrtim shumë shpejt një moderator."
 
-#: apps/flagit/templates/flagit/queue.html:3
-#: apps/flagit/templates/flagit/queue.html:8
+#: apps/flagit/templates/flagit/queue.html:3 apps/flagit/templates/flagit/queue.html:8
 msgid "Flagged Content Pending Moderation"
 msgstr "Lëndë e Shënuar Në Pritje të Moderimit"
 
@@ -567,146 +590,162 @@ msgstr "Oh! {t} {id} nuk ekziston më."
 msgid "There is no flagged content pending moderation."
 msgstr "Nuk ka lëndë të shënuar me flamurkë në pritje për miratim."
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:1
-#: apps/flagit/templates/flagit/includes/flagged_question.html:3
-#: apps/kbforums/forms.py:28
-#: apps/kbforums/forms.py:50
-#: apps/kbforums/forms.py:76
-#: apps/wiki/forms.py:171
-#: apps/wiki/templates/wiki/review_translation.html:70
-#: apps/wiki/templates/wiki/includes/revision_diff.html:45
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:3 apps/kbforums/forms.py:28 apps/kbforums/forms.py:50
+#: apps/kbforums/forms.py:76 apps/wiki/forms.py:184 apps/wiki/templates/wiki/review_translation.html:70 apps/wiki/templates/wiki/includes/revision_diff.html:45
 msgid "Content:"
 msgstr "Përmbajtje:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:3
-#: apps/flagit/templates/flagit/includes/flagged_question.html:5
-#: apps/wiki/templates/wiki/revision.html:24
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:3 apps/flagit/templates/flagit/includes/flagged_question.html:5 apps/wiki/templates/wiki/revision.html:24
 msgid "Created:"
 msgstr "Krijuar më:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:4
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:7
-#: apps/flagit/templates/flagit/includes/flagged_question.html:6
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:4 apps/flagit/templates/flagit/includes/flagged_answer.html:7 apps/flagit/templates/flagit/includes/flagged_question.html:6
 #: apps/flagit/templates/flagit/includes/flagged_question.html:9
 msgid "{date} by {user}"
 msgstr "{date} nga {user}"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:6
-#: apps/flagit/templates/flagit/includes/flagged_question.html:8
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:6 apps/flagit/templates/flagit/includes/flagged_question.html:8
 msgid "Updated:"
 msgstr "U përditësua:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:9
-#: apps/flagit/templates/flagit/includes/flagged_question.html:11
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:9 apps/flagit/templates/flagit/includes/flagged_question.html:11
 msgid "Take Action:"
 msgstr "Hidhuni Në Veprim:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:13
-#: apps/kbforums/templates/kbforums/posts.html:35
-#: apps/kbforums/templates/kbforums/includes/post.html:12
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:37 apps/kbforums/templates/kbforums/includes/post.html:12
+#: apps/wiki/templates/wiki/history.html:82
 msgid "Edit"
 msgstr "Përpunoni"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:16
-#: apps/flagit/templates/flagit/includes/flagged_question.html:16
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:27
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29
-#: apps/kbforums/templates/kbforums/posts.html:39
-#: apps/kbforums/templates/kbforums/includes/post.html:16
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:24
-#: apps/wiki/templates/wiki/document_revisions.html:83
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:29
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:31 apps/kbforums/templates/kbforums/posts.html:41 apps/kbforums/templates/kbforums/includes/post.html:16
+#: apps/wiki/templates/wiki/confirm_document_delete.html:36 apps/wiki/templates/wiki/confirm_revision_delete.html:31 apps/wiki/templates/wiki/history.html:86
 msgid "Delete"
 msgstr "Fshije"
 
-#: apps/flagit/templates/flagit/includes/flagged_question.html:1
-#: apps/kbforums/forms.py:44
-#: apps/kbforums/forms.py:62
-#: apps/wiki/forms.py:60
-#: apps/wiki/templates/wiki/translate.html:55
+#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:69 apps/wiki/templates/wiki/translate.html:57
 msgid "Title:"
 msgstr "Titull:"
 
-#: apps/gallery/forms.py:14
-#: apps/kbforums/forms.py:9
-#: apps/wiki/forms.py:17
+#: apps/gallery/forms.py:13 apps/kbforums/forms.py:9 apps/wiki/forms.py:17
 msgid "Please provide a title."
 msgstr "Ju lutem, jepni një titull."
 
-#: apps/gallery/forms.py:15
-#: apps/wiki/forms.py:18
+#: apps/gallery/forms.py:14 apps/wiki/forms.py:18
 msgid "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Titulli është shumë i shkurtër (%(show_value)s shenja). Duhet të jetë e pakta %(limit_value)s shenja."
 
-#: apps/gallery/forms.py:18
-#: apps/kbforums/forms.py:13
+#: apps/gallery/forms.py:17 apps/kbforums/forms.py:13
 msgid "Please keep the length of your title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Ju lutem, mbajeni gjatësinë e titullit tuaj në %(limit_value)s ose më pak shenja. Tani është %(show_value)s shenja."
 
-#: apps/gallery/forms.py:21
+#: apps/gallery/forms.py:20
 msgid "Please provide a description."
 msgstr "Ju lutem, jepni një përshkrim."
 
-#: apps/gallery/forms.py:22
+#: apps/gallery/forms.py:21
 msgid "Please keep the length of your description to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Ju lutem, mbajeni gjatësinë e përshkrimit tuaj në %(limit_value)s ose më pak shenja. Tani është %(show_value)s shenja."
 
-#: apps/gallery/forms.py:25
-#: apps/upload/forms.py:7
+#: apps/gallery/forms.py:24 apps/upload/forms.py:7
 msgid "You have not selected an image to upload."
 msgstr "Nuk keni përzgjedhur figurë që të ngarkohet."
 
-#: apps/gallery/forms.py:26
-#: apps/upload/forms.py:8
+#: apps/gallery/forms.py:25 apps/upload/forms.py:8
 msgid "Please keep the length of your image filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Ju lutem, mbajeni gjatësinë e emrit të kartelës suaj figurë në %(max)s ose më pak shenja. Tani është %(length)s shenja."
 
-#: apps/gallery/forms.py:29
+#: apps/gallery/forms.py:28
 msgid "Please keep the length of your webm filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Ju lutem, mbajeni gjatësinë e emrit të kartelës suaj webm në %(max)s ose më pak shenja. Tani është %(length)s shenja."
 
-#: apps/gallery/forms.py:32
+#: apps/gallery/forms.py:31
 msgid "Please keep the length of your ogv filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Ju lutem, mbajeni gjatësinë e emrit të kartelës suaj ogv në %(max)s ose më pak shenja. Tani është %(length)s shenja."
 
-#: apps/gallery/forms.py:35
+#: apps/gallery/forms.py:34
 msgid "Please keep the length of your flv filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "Ju lutem, mbajeni gjatësinë e emrit të kartelës suaj flv në %(max)s ose më pak shenja. Tani është %(length)s shenja."
 
-#: apps/gallery/forms.py:38
+#: apps/gallery/forms.py:37
 msgid "The video has no files associated with it. You must upload one of the following extensions: webm, ogv, flv."
 msgstr "Videoja nuk ka kartela përshoqëruar asaj. Duhet të ngarkoni një të tillë me zgjatimin vijues: webm, ogv, flv."
 
-#: apps/gallery/forms.py:41
+#: apps/gallery/forms.py:40
 msgid "Please select a different title."
 msgstr "Ju lutem, përzgjidhni një tjetër titull."
 
-#: apps/gallery/forms.py:43
+#: apps/gallery/forms.py:42
 msgid "Include this in wiki syntax with [[%(type)s:title]]"
 msgstr "Përfshije këtë në sintaksën wiki me [[%(type)s:title]]"
 
-#: apps/gallery/forms.py:44
+#: apps/gallery/forms.py:43
 msgid "Provide a brief description of this media."
 msgstr "Jepni një përshkrim të shkurtër mbi këtë media."
 
-#: apps/gallery/forms.py:65
-#: apps/gallery/forms.py:145
-#: apps/gallery/templates/gallery/confirm_media_delete.html:24
+#: apps/gallery/forms.py:48 apps/upload/templates/upload/attachments.html:56
+msgid "Upload"
+msgstr "Ngarkoje"
+
+#: apps/gallery/forms.py:49 apps/gallery/forms.py:92 apps/gallery/templates/gallery/confirm_media_delete.html:52
+msgid "Image"
+msgstr "Figurë"
+
+#: apps/gallery/forms.py:49 apps/gallery/templates/gallery/confirm_media_delete.html:47
+msgid "Video"
+msgstr "Video"
+
+#: apps/gallery/forms.py:56 apps/gallery/templates/gallery/confirm_media_delete.html:24 apps/wiki/templates/wiki/confirm_document_delete.html:24
 msgid "Locale"
 msgstr "Vendore"
 
-#: apps/gallery/forms.py:70
-#: apps/gallery/forms.py:150
-#: apps/gallery/templates/gallery/confirm_media_delete.html:22
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:15
-#: apps/kbforums/templates/kbforums/threads.html:33
+#: apps/gallery/forms.py:62 apps/gallery/templates/gallery/confirm_media_delete.html:22 apps/kbforums/templates/kbforums/confirm_thread_delete.html:17 apps/kbforums/templates/kbforums/threads.html:35
+#: apps/wiki/templates/wiki/confirm_document_delete.html:22
 msgid "Title"
 msgstr "Titull"
 
-#: apps/gallery/forms.py:77
-#: apps/gallery/forms.py:157
-#: apps/gallery/templates/gallery/confirm_media_delete.html:26
+#: apps/gallery/forms.py:70 apps/gallery/templates/gallery/confirm_media_delete.html:26
 msgid "Description"
 msgstr "Përshkrim"
+
+#: apps/gallery/forms.py:97
+msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
+msgstr "Në formatet e pranueshme përfshihen: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Mësoni më tepër...</a>"
+
+#: apps/gallery/forms.py:117
+#, fuzzy
+msgid "Video (flv)"
+msgstr "Video"
+
+#: apps/gallery/forms.py:118
+#, fuzzy
+msgid "Video (ogv)"
+msgstr "Video"
+
+#: apps/gallery/forms.py:121
+msgid "Video (webm)"
+msgstr ""
+
+#: apps/gallery/forms.py:125
+msgid "Thumbnail"
+msgstr "Miniaturë"
+
+#: apps/gallery/forms.py:131
+msgid "Select a Flash video (FLV) to upload."
+msgstr "Përzgjidhni për ngarkim një video Flash (FLV)."
+
+#: apps/gallery/forms.py:133
+msgid "Select an Ogv video to upload."
+msgstr "Përzgjidhni për ngarkim një video Ogv."
+
+#: apps/gallery/forms.py:134
+msgid "Select a WebM video to upload."
+msgstr "Përzgjidhni për ngarkim një video WebM."
+
+#: apps/gallery/forms.py:135
+#, fuzzy
+msgid "Suggested size: {width}x{height}px"
+msgstr "Ngarkoni një miniaturë për videon tuaj. Madhësi e këshillueshme: {width}x{height}px"
 
 #: apps/gallery/views.py:26
 msgid "Could not upload your image."
@@ -748,47 +787,24 @@ msgstr "Ju ndan një hap nga fshirja e kësaj videoje. <strong>Kjo nuk mund të 
 msgid "Delete video | {t} | Media Gallery"
 msgstr "Fshini videon | {t} | Galeri Media"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:14
-#: apps/gallery/templates/gallery/edit_media.html:13
-#: apps/gallery/templates/gallery/gallery.html:3
-#: apps/gallery/templates/gallery/gallery.html:6
-#: apps/gallery/templates/gallery/gallery.html:10
-#: apps/gallery/templates/gallery/media.html:9
-#: apps/gallery/templates/gallery/search.html:6
-#: apps/gallery/templates/gallery/search.html:11
-#: templates/includes/sidebar_modules.html:9
+#: apps/gallery/templates/gallery/confirm_media_delete.html:14 apps/gallery/templates/gallery/edit_media.html:13 apps/gallery/templates/gallery/gallery.html:3
+#: apps/gallery/templates/gallery/gallery.html:6 apps/gallery/templates/gallery/gallery.html:10 apps/gallery/templates/gallery/media.html:9 apps/gallery/templates/gallery/search.html:6
+#: apps/gallery/templates/gallery/search.html:11 templates/includes/sidebar_modules.html:9
 msgid "Media Gallery"
 msgstr "Galeri Media"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:28
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:17
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:12
+#: apps/gallery/templates/gallery/confirm_media_delete.html:28 apps/kbforums/templates/kbforums/confirm_thread_delete.html:19 apps/wiki/templates/wiki/confirm_revision_delete.html:19
 msgid "Creator"
 msgstr "Krijues"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:30
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:17
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:19
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:14
+#: apps/gallery/templates/gallery/confirm_media_delete.html:30 apps/kbforums/templates/kbforums/confirm_post_delete.html:19 apps/kbforums/templates/kbforums/confirm_thread_delete.html:21
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:21
 msgid "Date"
 msgstr "Datë"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:33
-#: apps/gallery/templates/gallery/confirm_media_delete.html:50
+#: apps/gallery/templates/gallery/confirm_media_delete.html:33 apps/gallery/templates/gallery/confirm_media_delete.html:50
 msgid "Available formats"
 msgstr "Formate të mundshëm"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:47
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:13
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:62
-msgid "Video"
-msgstr "Video"
-
-#: apps/gallery/templates/gallery/confirm_media_delete.html:52
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:12
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:22
-msgid "Image"
-msgstr "Figurë"
 
 #: apps/gallery/templates/gallery/edit_media.html:5
 msgid "Edit image"
@@ -814,20 +830,15 @@ msgstr "Ruaje videon"
 msgid "Edit video | {t} | Media Gallery"
 msgstr "Përpunoni video | {t} | Galeri Media"
 
-#: apps/gallery/templates/gallery/gallery.html:13
-#: apps/gallery/templates/gallery/media.html:24
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:8
+#: apps/gallery/templates/gallery/gallery.html:13 apps/gallery/templates/gallery/media.html:24 apps/gallery/templates/gallery/includes/upload_media_form.html:98
 msgid "Upload a New Media File"
 msgstr "Ngarkoni të Re Media"
 
-#: apps/gallery/templates/gallery/gallery.html:16
-#: apps/gallery/templates/gallery/search.html:14
+#: apps/gallery/templates/gallery/gallery.html:16 apps/gallery/templates/gallery/search.html:14
 msgid "Show media for:"
 msgstr "Shfaq media për:"
 
-#: apps/gallery/templates/gallery/gallery.html:23
-#: apps/gallery/templates/gallery/search.html:21
-#: templates/includes/lang_form.html:11
+#: apps/gallery/templates/gallery/gallery.html:23 apps/gallery/templates/gallery/search.html:21 templates/includes/lang_form.html:11
 msgid "Go"
 msgstr "Shko"
 
@@ -835,28 +846,20 @@ msgstr "Shko"
 msgid "You have JavaScript disabled. Please enable JavaScript to upload files."
 msgstr "JavaScript-in e keni të çaktivizuar. Ju lutem, aktivizoni JavaScript që të ngarkoni kartela."
 
-#: apps/gallery/templates/gallery/gallery.html:32
-#: apps/gallery/templates/gallery/search.html:27
+#: apps/gallery/templates/gallery/gallery.html:32 apps/gallery/templates/gallery/search.html:27
 msgid "Show:"
 msgstr "Mostra:"
 
-#: apps/gallery/templates/gallery/gallery.html:36
-#: apps/gallery/templates/gallery/gallery.html:38
-#: apps/gallery/templates/gallery/search.html:31
-#: apps/gallery/templates/gallery/search.html:33
+#: apps/gallery/templates/gallery/gallery.html:36 apps/gallery/templates/gallery/gallery.html:38 apps/gallery/templates/gallery/search.html:31 apps/gallery/templates/gallery/search.html:33
 msgid "Images"
 msgstr "Figura"
 
-#: apps/gallery/templates/gallery/gallery.html:43
-#: apps/gallery/templates/gallery/gallery.html:45
-#: apps/gallery/templates/gallery/search.html:38
-#: apps/gallery/templates/gallery/search.html:40
+#: apps/gallery/templates/gallery/gallery.html:43 apps/gallery/templates/gallery/gallery.html:45 apps/gallery/templates/gallery/search.html:38 apps/gallery/templates/gallery/search.html:40
 #: templates/global/menu_links.html:8
 msgid "Videos"
 msgstr "Video"
 
-#: apps/gallery/templates/gallery/gallery.html:53
-#: apps/gallery/templates/gallery/search.html:48
+#: apps/gallery/templates/gallery/gallery.html:53 apps/gallery/templates/gallery/search.html:48
 msgid "Search Gallery"
 msgstr "Kërkoni në Galeri"
 
@@ -864,11 +867,8 @@ msgstr "Kërkoni në Galeri"
 msgid "{title} | Media Gallery"
 msgstr "{title} | Galeri Media"
 
-#: apps/gallery/templates/gallery/media.html:13
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:39
-#: apps/upload/templates/upload/attachments.html:12
-#: apps/upload/templates/upload/attachments.html:17
-#: apps/upload/templates/upload/attachments.html:19
+#: apps/gallery/templates/gallery/media.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:47 apps/upload/templates/upload/attachments.html:12
+#: apps/upload/templates/upload/attachments.html:17 apps/upload/templates/upload/attachments.html:19
 msgid "Delete this image"
 msgstr "Fshije këtë figurë"
 
@@ -896,14 +896,8 @@ msgstr "Ngarkuar {date}"
 msgid "Media Gallery Search"
 msgstr "Kërkim te Galeria e Mediave"
 
-#: apps/gallery/templates/gallery/search.html:7
-#: apps/search/templates/search/base.html:3
-#: apps/search/templates/search/basic-form.html:14
-#: apps/search/templates/search/results.html:17
-#: apps/search/templates/search/mobile/down.html:3
-#: apps/search/templates/search/mobile/results.html:3
-#: templates/includes/common_macros.html:13
-#: templates/includes/common_macros.html:14
+#: apps/gallery/templates/gallery/search.html:7 apps/search/templates/search/base.html:3 apps/search/templates/search/basic-form.html:14 apps/search/templates/search/results.html:17
+#: apps/search/templates/search/mobile/down.html:3 apps/search/templates/search/mobile/results.html:3 templates/includes/common_macros.html:13 templates/includes/common_macros.html:14
 msgid "Search"
 msgstr "Kërkim"
 
@@ -911,81 +905,53 @@ msgstr "Kërkim"
 msgid "No media files found."
 msgstr "S'u gjetën kartela media."
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:8
-msgid "Continue Uploading Media"
-msgstr "Vazhdo me Ngarkim Mediash"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:10
-#: apps/upload/templates/upload/attachments.html:56
-msgid "Upload"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:30
+#, fuzzy
+msgid "Upload file"
 msgstr "Ngarkoje"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:24
-msgid "Select an image file to upload."
-msgstr "Përzgjidhni për ngarkim një figurë."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:26
-msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
-msgstr "Në formatet e pranueshme përfshihen: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Mësoni më tepër...</a>"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:28
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:76
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:114
-msgid "Progress"
-msgstr " Përparim"
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:33
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:89
-#: apps/kbforums/templates/kbforums/edit_post.html:27
-#: apps/kbforums/templates/kbforums/new_thread.html:32
-#: apps/kbforums/templates/kbforums/posts.html:92
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:52 apps/kbforums/templates/kbforums/edit_post.html:29 apps/kbforums/templates/kbforums/new_thread.html:34
+#: apps/kbforums/templates/kbforums/posts.html:94
 msgid "Preview"
 msgstr "Paraparje"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:52
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:131
-msgid "Submit file"
-msgstr "Parashtroje kartelën"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:60
+msgid "Progress"
+msgstr " Përparim"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:64
-msgid "Select a Flash video (FLV) to upload."
-msgstr "Përzgjidhni për ngarkim një video Flash (FLV)."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:66
-msgid "Please no SWFs, only FLVs."
-msgstr "Ju lutem, pa SWF-ra, vetëm FLVs."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:69
-msgid "Select an Ogv video to upload."
-msgstr "Përzgjidhni për ngarkim një video Ogv."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:73
-msgid "Select a WebM video to upload."
-msgstr "Përzgjidhni për ngarkim një video WebM."
-
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:96
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:102
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:108
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:75
 msgid "Delete {format} file"
 msgstr "Fshi kartelën {format}"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:119
-msgid "Thumbnail"
-msgstr "Miniaturë"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:80
+#, fuzzy
+msgid "Preview ({format})"
+msgstr "Parashihni Përmbajtjen"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:125
-msgid "Delete thumbnail"
-msgstr "Fshije miniaturën"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:98
+msgid "Continue Uploading Media"
+msgstr "Vazhdo me Ngarkim Mediash"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:127
-msgid "Upload a thumbnail for your video. Suggested size: {width}x{height}px"
-msgstr "Ngarkoni një miniaturë për videon tuaj. Madhësi e këshillueshme: {width}x{height}px"
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:133
+#, fuzzy
+msgid "Progress (flv)"
+msgstr " Përparim"
 
-#: apps/kbforums/events.py:16
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:139
+#, fuzzy
+msgid "Progress (ogv)"
+msgstr " Përparim"
+
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:145
+#, fuzzy
+msgid "Progress (webm)"
+msgstr " Përparim"
+
+#: apps/kbforums/events.py:20
 msgid "Reply to: %s"
 msgstr "Përgjigjuni te: %s"
 
-#: apps/kbforums/events.py:32
+#: apps/kbforums/events.py:29
 msgid "New thread in %s: %s"
 msgstr "Rrjedhë e re te %s: %s"
 
@@ -1014,219 +980,220 @@ msgid "Please keep the length of your message to %(limit_value)s characters or l
 msgstr "Ju lutem, mbajeni gjatësinë e mesazhit tuaj në %(limit_value)s ose më pak shenja. Tani është %(show_value)s shenja."
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:4
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:5
 msgid "Delete Post | {t} | {d} Discussion | Knowledge Base"
 msgstr "Fshini Postimin | {t} | Diskutim mbi {d} | Bazë Dijesh"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:7
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:7
-#: apps/kbforums/templates/kbforums/edit_post.html:9
-#: apps/kbforums/templates/kbforums/edit_thread.html:8
-#: apps/kbforums/templates/kbforums/new_thread.html:9
-#: apps/kbforums/templates/kbforums/posts.html:9
-#: apps/kbforums/templates/kbforums/threads.html:7
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:8 apps/kbforums/templates/kbforums/confirm_thread_delete.html:8 apps/kbforums/templates/kbforums/edit_post.html:10
+#: apps/kbforums/templates/kbforums/edit_thread.html:9 apps/kbforums/templates/kbforums/new_thread.html:10 apps/kbforums/templates/kbforums/posts.html:10
+#: apps/kbforums/templates/kbforums/threads.html:8
 msgid "Discuss"
 msgstr "Diskutojeni"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:9
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:10
 msgid "Delete Post"
 msgstr "Fshije Postimin"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:13
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:15
 msgid "Are you sure you want to delete this post?"
 msgstr "Jeni i sigurt se doni të fshihet ky postim?"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:15
-#: apps/kbforums/templates/kbforums/posts.html:62
-#: apps/kbforums/templates/kbforums/threads.html:34
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:17 apps/kbforums/templates/kbforums/posts.html:64 apps/kbforums/templates/kbforums/threads.html:36
 msgid "Author"
 msgstr "Autor"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:19
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:16
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:21 apps/wiki/templates/wiki/confirm_revision_delete.html:23
 msgid "Content"
 msgstr "Përmbajtje"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:25
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:27
 msgid "You are about to permanently delete this post. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "Ju ndan një hap nga fshirja përgjithmonë e këtij postimi. <strong>Kjo nuk mund të zhbëhet më pas!</strong> Jeni i sigurt se doni të vazhdohet?"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:4
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:5
 msgid "Delete Thread | {t} | {d} Discussion | Knowledge Base"
 msgstr "Fshini Rrjedhën | {t} | Diskutim mbi {d} | Bazë Dijesh"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:9
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:10
 msgid "Delete Thread"
 msgstr "Fshije Rrjedhën"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:13
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:15
 msgid "Are you sure you want to delete this thread?"
 msgstr "Jeni i sigurt se doni të fshihet kjo rrjedhë?"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:21
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:23
 msgid "Number of Replies"
 msgstr "Numër Përgjigjesh"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:27
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:29
 msgid "You are about to permanently delete this thread. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "Ju ndan një hap nga fshirja përgjithmonë e kësaj rrjedhe. <strong>Kjo nuk mund të zhbëhet më pas!</strong> Jeni i sigurt se doni të vazhdohet?"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/edit_post.html:6
+#: apps/kbforums/templates/kbforums/edit_post.html:7
 msgid "Edit a post | {t} | {d} Discussion | Knowledge Base"
 msgstr "Përpunoni postim | {t} | Diskutim mbi {d} | Bazë Dijesh"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:11
-#: apps/kbforums/templates/kbforums/edit_post.html:15
+#: apps/kbforums/templates/kbforums/edit_post.html:12 apps/kbforums/templates/kbforums/edit_post.html:17
 msgid "Edit a post"
 msgstr "Përpunoni një postim"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:28
+#: apps/kbforums/templates/kbforums/edit_post.html:30
 msgid "Update post"
 msgstr "Përditësoni postimin"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:35
-#: apps/kbforums/templates/kbforums/new_thread.html:39
+#: apps/kbforums/templates/kbforums/edit_post.html:37 apps/kbforums/templates/kbforums/new_thread.html:41
 msgid "Post Preview:"
 msgstr "Paraparje Postimi:"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/edit_thread.html:5
+#: apps/kbforums/templates/kbforums/edit_thread.html:6
 msgid "Edit thread {t} | {d} Discussion | Knowledge Base"
 msgstr "Përpunoni rrjedhë {t} | Diskutim mbi {d} | Bazë Dijesh"
 
-#: apps/kbforums/templates/kbforums/edit_thread.html:10
+#: apps/kbforums/templates/kbforums/edit_thread.html:11
 msgid "Edit thread"
 msgstr "Përpunoni rrjedhën"
 
-#: apps/kbforums/templates/kbforums/edit_thread.html:14
+#: apps/kbforums/templates/kbforums/edit_thread.html:16
 msgid "Edit thread \"{t}\""
 msgstr "Përpunoni rrjedhë \"{t}\""
 
-#: apps/kbforums/templates/kbforums/edit_thread.html:26
+#: apps/kbforums/templates/kbforums/edit_thread.html:28
 msgid "Update thread"
 msgstr "Përditësoni rrjedhën"
 
 #. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/new_thread.html:6
+#: apps/kbforums/templates/kbforums/new_thread.html:7
 msgid "Create a new thread | {d} | Knowledge Base"
 msgstr "Krijoni një rrjedhë të re | {d} | Bazë Dijesh"
 
-#: apps/kbforums/templates/kbforums/new_thread.html:10
-#: apps/kbforums/templates/kbforums/new_thread.html:14
+#: apps/kbforums/templates/kbforums/new_thread.html:11 apps/kbforums/templates/kbforums/new_thread.html:16
 msgid "Create a new thread"
 msgstr "Krijoni një rrjedhë të re"
 
-#: apps/kbforums/templates/kbforums/new_thread.html:33
+#: apps/kbforums/templates/kbforums/new_thread.html:35
 msgid "Post"
 msgstr "Postim"
 
 #. {t} is the title of the thread. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/posts.html:6
+#: apps/kbforums/templates/kbforums/posts.html:7
 msgid "{t} | {d} Discussion | Knowledge Base"
 msgstr "{t} | Diskutim mbi {d} | Bazë Dijesh"
 
-#: apps/kbforums/templates/kbforums/posts.html:16
-#: apps/search/__init__.py:42
+#: apps/kbforums/templates/kbforums/posts.html:18 apps/search/__init__.py:42
 msgid "Sticky"
 msgstr "I ngjitur"
 
-#: apps/kbforums/templates/kbforums/posts.html:17
-#: apps/search/__init__.py:43
-#: apps/search/forms.py:129
+#: apps/kbforums/templates/kbforums/posts.html:19 apps/search/__init__.py:43 apps/search/forms.py:129
 msgid "Locked"
 msgstr "I kyçur"
 
-#: apps/kbforums/templates/kbforums/posts.html:18
-#: apps/kbforums/templates/kbforums/threads.html:13
+#: apps/kbforums/templates/kbforums/posts.html:20 apps/kbforums/templates/kbforums/threads.html:15
 msgid "Watching"
 msgstr "Nën vëzhgim"
 
-#: apps/kbforums/templates/kbforums/posts.html:25
-#: apps/kbforums/templates/kbforums/threads.html:20
+#: apps/kbforums/templates/kbforums/posts.html:27 apps/kbforums/templates/kbforums/threads.html:22
 msgid "Stop watching"
 msgstr "Resht së mbikëqyruri"
 
-#: apps/kbforums/templates/kbforums/posts.html:28
+#: apps/kbforums/templates/kbforums/posts.html:30
 msgid "Watch this thread"
 msgstr "Vëzhgoje këtë rrjedhë"
 
-#: apps/kbforums/templates/kbforums/posts.html:45
+#: apps/kbforums/templates/kbforums/posts.html:47
 msgid "Change locked status"
 msgstr "Ndryshoji gjendjen e kyçjes"
 
-#: apps/kbforums/templates/kbforums/posts.html:51
+#: apps/kbforums/templates/kbforums/posts.html:53
 msgid "Change sticky status"
 msgstr "Ndryshoji gjendjen ngjitëse"
 
-#: apps/kbforums/templates/kbforums/posts.html:63
+#: apps/kbforums/templates/kbforums/posts.html:65
 msgid "Message"
 msgstr "Mesazh"
 
-#: apps/kbforums/templates/kbforums/posts.html:78
+#: apps/kbforums/templates/kbforums/posts.html:80
 msgid "Oh, no! Looks like there are no posts!"
 msgstr "Oh, jo! Duket se nuk ka postime!"
 
-#: apps/kbforums/templates/kbforums/posts.html:83
-#: apps/kbforums/templates/kbforums/posts.html:99
+#: apps/kbforums/templates/kbforums/posts.html:85 apps/kbforums/templates/kbforums/posts.html:101
 msgid "Post a reply"
 msgstr "Postoni përgjigje"
 
-#: apps/kbforums/templates/kbforums/posts.html:101
+#: apps/kbforums/templates/kbforums/posts.html:103
 msgid "This thread has been locked. It is no longer possible to post new replies."
 msgstr "Kjo rrjedhë është kyçur. Nuk është më e mundur të postohen përgjigje të reja."
 
-#: apps/kbforums/templates/kbforums/posts.html:106
+#: apps/kbforums/templates/kbforums/posts.html:108
 msgid "Reply Preview:"
 msgstr "Paraparje Përgjigjeje:"
 
 #. {d} is the name of the document.
-#: apps/kbforums/templates/kbforums/threads.html:4
+#: apps/kbforums/templates/kbforums/threads.html:5
 msgid "{d} Discussion | Knowledge Base"
 msgstr "Diskutim mbi {d} | Bazë Dijesh"
 
-#: apps/kbforums/templates/kbforums/threads.html:11
+#: apps/kbforums/templates/kbforums/threads.html:13
 msgid "{d} Discussion"
 msgstr "Diskutim mbi {d}"
 
-#: apps/kbforums/templates/kbforums/threads.html:23
+#: apps/kbforums/templates/kbforums/threads.html:25
 msgid "Watch this forum"
 msgstr "Vëzhgoje këtë forum"
 
-#: apps/kbforums/templates/kbforums/threads.html:29
+#: apps/kbforums/templates/kbforums/threads.html:31
 msgid "Post a new thread"
 msgstr "Postoni një rrjedhë të re"
 
-#: apps/kbforums/templates/kbforums/threads.html:32
+#: apps/kbforums/templates/kbforums/threads.html:34
 msgid "Type"
 msgstr "Lloj"
 
-#: apps/kbforums/templates/kbforums/threads.html:35
+#: apps/kbforums/templates/kbforums/threads.html:37
 msgid "Replies"
 msgstr "Përgjigje"
 
-#: apps/kbforums/templates/kbforums/threads.html:36
+#: apps/kbforums/templates/kbforums/threads.html:38
 msgid "Last Post"
 msgstr "Postimi i Fundit"
 
-#: apps/kbforums/templates/kbforums/threads.html:44
+#: apps/kbforums/templates/kbforums/threads.html:46
 msgctxt "thread_type"
 msgid "Locked"
 msgstr "E kyçur"
 
-#: apps/kbforums/templates/kbforums/threads.html:47
+#: apps/kbforums/templates/kbforums/threads.html:49
 msgctxt "thread_type"
 msgid "Sticky"
 msgstr "I ngjitur"
 
-#: apps/kbforums/templates/kbforums/threads.html:57
+#: apps/kbforums/templates/kbforums/threads.html:59
 msgid "by <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 msgstr "nga <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 
-#: apps/kbforums/templates/kbforums/threads.html:66
+#: apps/kbforums/templates/kbforums/threads.html:68
 msgid "There are no threads. Maybe you should create some!"
 msgstr "Nuk ka rrjedha. Ndoshta do të duhej të krijonit të tilla!"
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:7
+msgid "This forum is a discussion about improving the \"%(title)s\" article."
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:11
+msgid "This forum is a discussion about improving the \"%(title)s\" article. If you'd like to participate, please <a href=\"%(register_url)s\">register</a>."
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:19
+msgid ""
+"This forum is a discussion about improving the localization of the \"%(title)s\" article. If you want to improve the article content, go to the <a href=\"%(url)s\">English article discussion</a>."
+msgstr ""
+
+#: apps/kbforums/templates/kbforums/includes/macros.html:28
+msgid "If you need help with Firefox, please <a href=\"%(aaq_url)s\">ask a question</a>."
+msgstr ""
 
 #. {0} is the number of posts.
 #: apps/kbforums/templates/kbforums/includes/post.html:8
@@ -1243,20 +1210,23 @@ msgstr "Lidhje për te ky postim."
 msgid "Modified by {name} on {datetime}"
 msgstr "Ndryshuar nga {name} më {datetime}"
 
-#: apps/kbforums/templates/kbforums/includes/watch_locale.html:5
+#: apps/kbforums/templates/kbforums/includes/watch_locale.html:6
 msgid "Turn off emails for discussion in my locale."
 msgstr "Nxirri jashtë pune email-et për diskutim në vendoren time."
 
-#: apps/kbforums/templates/kbforums/includes/watch_locale.html:8
+#: apps/kbforums/templates/kbforums/includes/watch_locale.html:9
 msgid "Get emailed when there is new discussion activity in my locale."
 msgstr "Dërgomë email kur ka veprimtari të re diskutimi te vendorja ime."
 
 #: apps/landings/templates/landings/base.html:12
-msgid "You've come to the right place! Start by searching for solutions, or by choosing one of our support articles below. If you can't find the answer you need, our community of volunteers are ready to help."
-msgstr "Keni ardhur në vendin e duhur! Nisjani duke kërkuar zgjidhje, ose duke zgjedhur një nga artikujt më poshtë për asistencë. Nëse nuk e gjeni përgjigjen që ju duhet, bashkësia jonë e vullnetarëve është gati t'ju ndihmojë."
+msgid ""
+"You've come to the right place! Start by searching for solutions, or by choosing one of our support articles below. If you can't find the answer you need, our community of volunteers are ready to "
+"help."
+msgstr ""
+"Keni ardhur në vendin e duhur! Nisjani duke kërkuar zgjidhje, ose duke zgjedhur një nga artikujt më poshtë për asistencë. Nëse nuk e gjeni përgjigjen që ju duhet, bashkësia jonë e vullnetarëve "
+"është gati t'ju ndihmojë."
 
-#: apps/landings/templates/landings/fxhome.html:4
-#: apps/landings/templates/landings/mobile/fxhome.html:3
+#: apps/landings/templates/landings/fxhome.html:4 apps/landings/templates/landings/mobile/fxhome.html:3
 msgid "Firefox Home Support Home Page"
 msgstr "Faqe Hyrëse për Asistencë mbi Firefox Home"
 
@@ -1268,8 +1238,7 @@ msgstr "Ndihmë Firefox për Firefox Home"
 msgid "Need Help With <mark>Firefox Home?</mark>"
 msgstr "Ju Duhet Ndihmë Për <mark>Firefox Home?</mark>"
 
-#: apps/landings/templates/landings/home.html:4
-#: apps/landings/templates/landings/mobile/home.html:3
+#: apps/landings/templates/landings/home.html:4 apps/landings/templates/landings/mobile/home.html:3
 msgid "Firefox Support Home Page"
 msgstr "Faqe Hyrëse për Asistencë mbi Firefox-in"
 
@@ -1278,11 +1247,14 @@ msgid "Need Help With <mark>Firefox?</mark>"
 msgstr "Ju Duhet Ndihmë Për <mark>Firefox-in?</mark>"
 
 #: apps/landings/templates/landings/home.html:9
-msgid "You've come to the right place! Start by searching our site below, or browse our list of popular support articles. If you can't find the answer you need, our community of volunteers are ready to help you find a solution."
-msgstr "Keni ardhur në vendin e duhur! Nisjani duke kërkuar site-in tonë më poshtë, ose shfletoni listën tonë të artikujve popullorë të asistencës. Nëse nuk e gjeni përgjigjen që ju duhet, bashkësia jonë e vullnetarëve është gati t'ju ndihmojë."
+msgid ""
+"You've come to the right place! Start by searching our site below, or browse our list of popular support articles. If you can't find the answer you need, our community of volunteers are ready to "
+"help you find a solution."
+msgstr ""
+"Keni ardhur në vendin e duhur! Nisjani duke kërkuar site-in tonë më poshtë, ose shfletoni listën tonë të artikujve popullorë të asistencës. Nëse nuk e gjeni përgjigjen që ju duhet, bashkësia jonë e "
+"vullnetarëve është gati t'ju ndihmojë."
 
-#: apps/landings/templates/landings/mobile.html:4
-#: apps/landings/templates/landings/mobile/mobile.html:3
+#: apps/landings/templates/landings/mobile.html:4 apps/landings/templates/landings/mobile/mobile.html:3
 msgid "Firefox for Mobile Support Home Page"
 msgstr "Faqe Hyrëse për Asistencë mbi Firefox-in për Celular"
 
@@ -1294,8 +1266,7 @@ msgstr "Ndihmë Firefox-i për Celular"
 msgid "Need Help With <mark>Firefox for Mobile?</mark>"
 msgstr "Ju Duhet Ndihmë Për <mark>Firefox-in për Celular?</mark>"
 
-#: apps/landings/templates/landings/sync.html:4
-#: apps/landings/templates/landings/mobile/sync.html:3
+#: apps/landings/templates/landings/sync.html:4 apps/landings/templates/landings/mobile/sync.html:3
 msgid "Firefox Sync Support Home Page"
 msgstr "Faqja Hyrëse e Asistencës për Firefox Sync"
 
@@ -1315,17 +1286,11 @@ msgstr "Pyetje të Rëndomta"
 msgid "Firefox Help <span>for Firefox Home</span>"
 msgstr "Ndihmë e Firefox-it <span>për Firefox Home</span>"
 
-#: apps/landings/templates/landings/mobile/home.html:5
-#: apps/search/templates/search/plugin.html:3
-#: apps/sumo/helpers.py:128
-#: templates/base.html:8
-#: templates/base.html:17
-#: templates/mobile/base.html:15
+#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:141 templates/base.html:8 templates/base.html:17 templates/mobile/base.html:15
 msgid "Firefox Help"
 msgstr "Ndihmë për Firefox-in"
 
-#: apps/landings/templates/landings/mobile/mobile.html:5
-#: templates/mobile/base.html:5
+#: apps/landings/templates/landings/mobile/mobile.html:5 templates/mobile/base.html:5
 msgid "Firefox Help <span>for Mobile</span>"
 msgstr "Ndihmë e Firefox-it <span>për Celular</span>"
 
@@ -1333,26 +1298,63 @@ msgstr "Ndihmë e Firefox-it <span>për Celular</span>"
 msgid "Firefox Help <span>for Sync</span>"
 msgstr "Ndihmë e Firefox-it <span>për Sync-un</span>"
 
-#: apps/notifications/templates/notifications/gone.html:3
-msgid "Unsubscribed"
-msgstr "Çpajtuar"
+#: apps/messages/forms.py:7
+#, fuzzy
+msgid "username1, username2,..."
+msgstr "Riemërtojeni"
 
-#: apps/notifications/templates/notifications/gone.html:10
-msgid "You have been unsubscribed from this notification."
-msgstr "Jepni çpajtuar nga ky njoftim."
+#: apps/messages/forms.py:15
+#, fuzzy
+msgid "To field is required."
+msgstr "Lypset fjalëkalimi."
 
-#: apps/notifications/templates/notifications/remove.html:3
-msgid "Unsubscribe"
-msgstr "Çpajtohuni"
+#: apps/messages/forms.py:25
+msgid "{username} is not a valid username."
+msgstr ""
 
-#. {0} is an object title, {1} is an object type.
-#: apps/notifications/templates/notifications/remove.html:11
-msgid "Do you want to stop receiving email notifications from the {1} <strong>{0}</strong>?"
-msgstr "Dëshironi të reshtni së marruri njoftime me email prej {1} <strong>{0}</strong>?"
+#: apps/messages/templates/messages/inbox.html:3 apps/messages/templates/messages/new.html:3 apps/messages/templates/messages/outbox.html:4 apps/messages/templates/messages/read-outbox.html:4
+#: apps/messages/templates/messages/read.html:4 apps/messages/templates/messages/includes/macros.html:21
+#, fuzzy
+msgid "Messages"
+msgstr "Mesazh"
 
-#: apps/search/__init__.py:17
-#: apps/search/__init__.py:52
-#: apps/search/__init__.py:58
+#: apps/messages/templates/messages/inbox.html:9 apps/messages/templates/messages/new.html:2 apps/messages/templates/messages/includes/macros.html:27
+#, fuzzy
+msgid "New Message"
+msgstr "Mesazh"
+
+#: apps/messages/templates/messages/inbox.html:31 apps/messages/templates/messages/outbox.html:37
+#, fuzzy
+msgid "There are no messages here."
+msgstr "Nuk ka artikuj."
+
+#: apps/messages/templates/messages/new.html:15
+msgid "Send"
+msgstr ""
+
+#: apps/messages/templates/messages/outbox.html:3 apps/messages/templates/messages/read-outbox.html:5 apps/messages/templates/messages/includes/macros.html:24
+#, fuzzy
+msgid "Sent Messages"
+msgstr "Mesazh"
+
+#: apps/messages/templates/messages/outbox.html:24
+msgid "You"
+msgstr ""
+
+#: apps/messages/templates/messages/read-outbox.html:3
+msgid "Read Sent Message"
+msgstr ""
+
+#: apps/messages/templates/messages/read.html:3
+#, fuzzy
+msgid "Read Message"
+msgstr "Mesazh"
+
+#: apps/messages/templates/messages/includes/macros.html:5 apps/messages/templates/messages/includes/macros.html:13
+msgid "System"
+msgstr ""
+
+#: apps/search/__init__.py:17 apps/search/__init__.py:52 apps/search/__init__.py:58
 msgid "Don't filter"
 msgstr "Mos i filtro"
 
@@ -1364,8 +1366,7 @@ msgstr "Përpara"
 msgid "After"
 msgstr "Pas"
 
-#: apps/search/__init__.py:32
-#: apps/search/__init__.py:72
+#: apps/search/__init__.py:32 apps/search/__init__.py:72
 msgid "Relevance"
 msgstr "Rëndësi"
 
@@ -1381,15 +1382,11 @@ msgstr "Datë postimi origjinal"
 msgid "Number of replies"
 msgstr "Numër përgjigjesh"
 
-#: apps/search/__init__.py:53
-#: apps/sumo/helpers.py:298
-#: apps/wiki/templates/wiki/includes/document_vote.html:8
+#: apps/search/__init__.py:53 apps/sumo/helpers.py:311 apps/wiki/templates/wiki/includes/document_vote.html:7
 msgid "Yes"
 msgstr "Po"
 
-#: apps/search/__init__.py:54
-#: apps/sumo/helpers.py:298
-#: apps/wiki/templates/wiki/includes/document_vote.html:9
+#: apps/search/__init__.py:54 apps/sumo/helpers.py:311 apps/wiki/templates/wiki/includes/document_vote.html:8
 msgid "No"
 msgstr "Jo"
 
@@ -1417,8 +1414,7 @@ msgstr "Numër pyetjesh"
 msgid "tag1, tag2"
 msgstr "etiketë1, etiketë2"
 
-#: apps/search/forms.py:65
-#: apps/search/forms.py:148
+#: apps/search/forms.py:65 apps/search/forms.py:148
 msgid "Tags"
 msgstr "Etiketa"
 
@@ -1450,8 +1446,7 @@ msgstr "Përditësuar së fundmi"
 msgid "username"
 msgstr "Emër përdoruesi"
 
-#: apps/search/forms.py:107
-#: apps/search/forms.py:125
+#: apps/search/forms.py:107 apps/search/forms.py:125
 msgid "Sort results by"
 msgstr "Renditi përfundimet sipas"
 
@@ -1487,9 +1482,7 @@ msgstr "Funksion i pavlefshëm \"callback\""
 msgid "Invalid search data."
 msgstr "Të dhëna të pavlefshme kërkimi."
 
-#: apps/search/views.py:300
-#: apps/search/templates/search/down.html:6
-#: apps/search/templates/search/mobile/down.html:7
+#: apps/search/views.py:300 apps/search/templates/search/down.html:6 apps/search/templates/search/mobile/down.html:7
 msgid "Search Unavailable"
 msgstr "Kërkim i Pamundur Tani"
 
@@ -1501,16 +1494,12 @@ msgstr "Nuk pati faqe me përputhje kundrejt kushtit tuaj"
 msgid "Enter your terms in the form below and click <strong>Search</strong>"
 msgstr "Jepni termat tuaja në formularin më poshtë dhe klikoni <strong>Kërko</strong>"
 
-#: apps/search/templates/search/basic-form.html:7
-#: apps/search/templates/search/form.html:64
-#: apps/search/templates/search/form.html:150
-#: apps/search/templates/search/form.html:199
+#: apps/search/templates/search/basic-form.html:7 apps/search/templates/search/form.html:64 apps/search/templates/search/form.html:150 apps/search/templates/search/form.html:199
 msgctxt "button"
 msgid "Search"
 msgstr "Kërko"
 
-#: apps/search/templates/search/down.html:8
-#: apps/search/templates/search/mobile/down.html:9
+#: apps/search/templates/search/down.html:8 apps/search/templates/search/mobile/down.html:9
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
 msgstr "Kërkimi është përkohësisht i pamundur.  Ju lutem, riprovoni pas pak minutash."
 
@@ -1542,9 +1531,7 @@ msgstr "Forume Diskutimi"
 msgid "Article contains"
 msgstr "Artikulli përmban"
 
-#: apps/search/templates/search/form.html:21
-#: apps/search/templates/search/form.html:70
-#: apps/search/templates/search/form.html:156
+#: apps/search/templates/search/form.html:21 apps/search/templates/search/form.html:70 apps/search/templates/search/form.html:156
 msgid "crashes on youtube"
 msgstr "vithisje te Youtube"
 
@@ -1564,13 +1551,11 @@ msgstr "Numër votash. Duhet të jetë numër i plotë."
 msgid "Note: Searching for \"tag1, tag2\" returns questions tagged with both tag1 and tag2"
 msgstr "Shënim: Kërkimi për \"etiketë1, etiketë2\" sjell pyetje të etiketuara me të dyja, etiketë1 dhe etiketë2"
 
-#: apps/search/templates/search/form.html:130
-#: apps/search/templates/search/form.html:174
+#: apps/search/templates/search/form.html:130 apps/search/templates/search/form.html:174
 msgid "Created date. Format: mm/dd/yy"
 msgstr "Datë krijimi. Format: dd/mm/yy"
 
-#: apps/search/templates/search/form.html:136
-#: apps/search/templates/search/form.html:180
+#: apps/search/templates/search/form.html:136 apps/search/templates/search/form.html:180
 msgid "Updated date. Format: mm/dd/yy"
 msgstr "U përditësua data. Format: dd/mm/yy"
 
@@ -1596,8 +1581,7 @@ msgid "Refine your search"
 msgstr "Përimtësoni kërkimin tuaj"
 
 #. {n} is the number of search results, {q} is the search query, {l} is the language searched.
-#: apps/search/templates/search/results.html:24
-#: apps/search/templates/search/mobile/results.html:14
+#: apps/search/templates/search/results.html:24 apps/search/templates/search/mobile/results.html:14
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
 msgstr[0] "U gjet <strong>{n}</strong> përfundim për <strong>{q}</strong> në <strong>{l}</strong>"
@@ -1615,53 +1599,53 @@ msgstr "Sigurohuni që kjo vlerë ka të paktën %(limit_value)s shenja (ka %(sh
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr "Sigurohuni që kjo vlerë ka e shumta %(limit_value)s shenja (ka %(show_value)s)."
 
-#: apps/sumo/helpers.py:177
+#: apps/sumo/helpers.py:190
 msgid "Today at %s"
 msgstr "Sot më %s"
 
-#: apps/sumo/helpers.py:255
+#: apps/sumo/helpers.py:268
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "%(number)d vit më parë"
 msgstr[1] "%(number)d vjetë më parë"
 
-#: apps/sumo/helpers.py:257
+#: apps/sumo/helpers.py:270
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "%(number)d muaj më parë"
 msgstr[1] "%(number)d muaj më parë"
 
-#: apps/sumo/helpers.py:259
+#: apps/sumo/helpers.py:272
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "%(number)d javë më parë"
 msgstr[1] "%(number)d javë më parë"
 
-#: apps/sumo/helpers.py:261
+#: apps/sumo/helpers.py:274
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "%(number)d ditë më parë"
 msgstr[1] "%(number)d ditë më parë"
 
-#: apps/sumo/helpers.py:263
+#: apps/sumo/helpers.py:276
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "%(number)d orë më parë"
 msgstr[1] "%(number)d orë më parë"
 
-#: apps/sumo/helpers.py:265
+#: apps/sumo/helpers.py:278
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "%(number)d minutë më parë"
 msgstr[1] "%(number)d minuta më parë"
 
-#: apps/sumo/helpers.py:267
+#: apps/sumo/helpers.py:280
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] "%(number)d sekondë më parë"
 msgstr[1] "%(number)d sekonda më parë"
 
-#: apps/sumo/parser.py:228
+#: apps/sumo/parser.py:236
 msgid "The image \"%s\" does not exist."
 msgstr "Figura \"%s\" nuk ekziston."
 
@@ -1673,13 +1657,17 @@ msgstr "Ah, kërkesa juaj nuk pati sukses"
 msgid "We couldn't perform your request. Perhaps because the action is no longer applicable or you tried to perform an invalid action."
 msgstr "Nuk e plotësuam dot kërkesën tuaj. Ndoshta ngaqë veprimi nuk është më i mundshëm ose ngaqë provuat të kryeni një veprim të pavlefshëm."
 
-#: apps/sumo/templates/handlers/403.html:3
+#: apps/sumo/templates/handlers/403.html:4
 msgid "Access denied"
 msgstr "Hyrje e mohuar"
 
-#: apps/sumo/templates/handlers/403.html:9
+#: apps/sumo/templates/handlers/403.html:11
 msgid "You do not have permission to access this page."
 msgstr "Nuk keni leje të hyni në këtë faqe."
+
+#: apps/sumo/templates/handlers/403.html:14 apps/users/templates/users/includes/macros.html:23
+msgid "Log in"
+msgstr "Hyni"
 
 #: apps/sumo/templates/handlers/404.html:3
 msgid "Page Not Found"
@@ -1697,8 +1685,19 @@ msgstr "Ndodhi Një Gabim"
 msgid "Oh, no! It looks like an unexpected error occurred. We've already notified the site administrators. Please try again now, or in a few minutes."
 msgstr "Oh, jo! Duket sikur ndodhi një gabim i papritur. I kemi njoftuar tashmë përgjegjësit e site-it. Ju lutem, riprovoni tani, ose pas pak minutash."
 
-#: apps/sumo/templates/sumo/read-only.html:3
-#: apps/sumo/templates/sumo/read-only.html:7
+#: apps/sumo/templates/sumo/deprecated.html:3
+msgid "Redirecting"
+msgstr ""
+
+#: apps/sumo/templates/sumo/deprecated.html:8
+msgid "The URL has changed!"
+msgstr ""
+
+#: apps/sumo/templates/sumo/deprecated.html:11
+msgid "It looks like you've bookmarked an old URL. The new URL for this page is below. You should update your bookmarks. We will forward you to the new URL in 10 seconds."
+msgstr ""
+
+#: apps/sumo/templates/sumo/read-only.html:3 apps/sumo/templates/sumo/read-only.html:7
 msgid "Maintenance in progress"
 msgstr "Mirëmbajtje në kryerje e sipër"
 
@@ -1802,9 +1801,7 @@ msgstr "Lypset fjalëkalimi."
 msgid "Please enter your password twice."
 msgstr "Ju lutem, jepeni fjalëkalimin tuaj dy herë."
 
-#: apps/users/forms.py:42
-#: apps/users/templates/users/includes/macros.html:13
-#: templates/layout/login.html:8
+#: apps/users/forms.py:42 apps/users/templates/users/includes/macros.html:13
 msgid "Username:"
 msgstr "Emër përdoruesi:"
 
@@ -1812,16 +1809,11 @@ msgstr "Emër përdoruesi:"
 msgid "Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only."
 msgstr "E domosdoshme. 30 ose më pak shenja. Vetëm shkronja, shifra dhe @/./+/-/_ ."
 
-#: apps/users/forms.py:50
-#: apps/users/forms.py:179
-#: apps/users/forms.py:185
+#: apps/users/forms.py:50 apps/users/forms.py:179 apps/users/forms.py:185
 msgid "Email address:"
 msgstr "Adresë Email:"
 
-#: apps/users/forms.py:54
-#: apps/users/templates/users/edit_profile.html:27
-#: apps/users/templates/users/includes/macros.html:17
-#: templates/layout/login.html:11
+#: apps/users/forms.py:54 apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/includes/macros.html:17
 msgid "Password:"
 msgstr "Fjalëkalim:"
 
@@ -1837,8 +1829,7 @@ msgstr "Për verifikim, jepni të njëjtin fjalëkalim si më sipër."
 msgid "Passwords must match."
 msgstr "Fjalëkalimet duhet të përputhen."
 
-#: apps/users/forms.py:82
-#: apps/users/forms.py:196
+#: apps/users/forms.py:82 apps/users/forms.py:196
 msgid "A user with that email address already exists."
 msgstr "Ka tashmë një përdorues me atë adresë email."
 
@@ -1926,26 +1917,23 @@ msgstr "ID te Livechat"
 msgid "Preferred language for email"
 msgstr "Gjuhë e parapëlqyer për email"
 
-#: apps/users/models.py:178
-#: apps/users/models.py:214
+#: apps/users/models.py:180 apps/users/models.py:216
 msgid "Please confirm your email address"
 msgstr "Ju lutem, ripohoni adresën tuaj email"
 
-#: apps/users/models.py:230
-#: apps/users/models.py:272
+#: apps/users/models.py:232 apps/users/models.py:274
 msgid "user"
 msgstr "përdorues"
 
-#: apps/users/models.py:231
-#: apps/users/models.py:273
+#: apps/users/models.py:233 apps/users/models.py:275
 msgid "activation key"
 msgstr "kyç aktivizimi"
 
-#: apps/users/models.py:237
+#: apps/users/models.py:239
 msgid "registration profile"
 msgstr "profil regjistrimi"
 
-#: apps/users/models.py:238
+#: apps/users/models.py:240
 msgid "registration profiles"
 msgstr "profile regjistrimi"
 
@@ -1970,14 +1958,6 @@ msgstr[1] "Pyetjet tuaja tani duken te site-i!"
 #: apps/users/templates/users/activate.html:31
 msgid "We could not activate your account. Please make sure that you have clicked the correct link in your email or typed in the correct address."
 msgstr "Nuk aktivizuam dot llogarinë tuaj. Ju lutem, sigurohuni që keni klikuar lidhjen e duhur te email-i që morët, ose që adresën e keni shkruar saktë."
-
-#: apps/users/templates/users/base.html:16
-msgid "My profile"
-msgstr "Profili im"
-
-#: apps/users/templates/users/base.html:24
-msgid "Edit my profile"
-msgstr "Përpunim i profilin tim"
 
 #: apps/users/templates/users/change_email.html:4
 msgid "Change email address"
@@ -2015,8 +1995,7 @@ msgstr "Email-i për ripohim u dërgua"
 msgid "We've sent a confirmation to %(new_email)s. Please follow the link in the confirmation to change your account's email."
 msgstr "Ju dërguam një ripohim te %(new_email)s. Që të ndryshoni email-in e llogarisë suaj, ju lutem, ndiqni lidhjen te ripohimi."
 
-#: apps/users/templates/users/confirm_avatar_delete.html:3
-#: apps/users/templates/users/confirm_avatar_delete.html:24
+#: apps/users/templates/users/confirm_avatar_delete.html:3 apps/users/templates/users/confirm_avatar_delete.html:24
 msgid "Delete avatar"
 msgstr "Fshije avatarin"
 
@@ -2026,7 +2005,9 @@ msgstr "Jeni i sigurt se doni të fshihet avatari juaj?"
 
 #: apps/users/templates/users/confirm_avatar_delete.html:16
 msgid "You are about to permanently delete your avatar. <strong>This cannot be undone!</strong> You can always <a href=\"%(upload_url)s\">upload another avatar</a> to replace your current one."
-msgstr "Ju ndan një hap nga fshirja përgjithmonë e avatarit tuaj. <strong>Kjo nuk mund të zhbëhet!</strong> Mundeni përherë të <a href=\"%(upload_url)s\">ngarkoni një tjetër avatar</a> që të zëvendësoni të tanishmin."
+msgstr ""
+"Ju ndan një hap nga fshirja përgjithmonë e avatarit tuaj. <strong>Kjo nuk mund të zhbëhet!</strong> Mundeni përherë të <a href=\"%(upload_url)s\">ngarkoni një tjetër avatar</a> që të zëvendësoni të "
+"tanishmin."
 
 #: apps/users/templates/users/edit_avatar.html:3
 msgid "Change Avatar"
@@ -2041,38 +2022,33 @@ msgstr "Ngarkoje"
 msgid "Edit Profile"
 msgstr "Përpunoni Profil"
 
-#: apps/users/templates/users/edit_profile.html:13
+#: apps/users/templates/users/edit_profile.html:14
 msgid "Avatar:"
 msgstr "Avatar:"
 
-#: apps/users/templates/users/edit_profile.html:17
+#: apps/users/templates/users/edit_profile.html:18
 msgctxt "avatar"
 msgid "Change"
 msgstr "Ndërroje"
 
-#: apps/users/templates/users/edit_profile.html:21
+#: apps/users/templates/users/edit_profile.html:22
 msgctxt "avatar"
 msgid "Delete"
 msgstr "Fshije"
 
-#: apps/users/templates/users/edit_profile.html:28
-#: apps/users/templates/users/edit_profile.html:33
-#: apps/wiki/templates/wiki/translate.html:19
+#: apps/users/templates/users/edit_profile.html:29 apps/users/templates/users/edit_profile.html:34 apps/wiki/templates/wiki/translate.html:20
 msgid "Change"
 msgstr "Ndryshoje"
 
-#: apps/users/templates/users/edit_profile.html:31
-#: apps/users/templates/users/profile.html:35
+#: apps/users/templates/users/edit_profile.html:32 apps/users/templates/users/profile.html:37
 msgid "Email:"
 msgstr "Email:"
 
-#: apps/users/templates/users/edit_profile.html:38
-#: apps/users/templates/users/pw_reset_confirm.html:27
+#: apps/users/templates/users/edit_profile.html:39 apps/users/templates/users/pw_reset_confirm.html:27
 msgid "Update"
 msgstr "Përditësoje"
 
-#: apps/users/templates/users/login.html:4
-#: apps/users/templates/users/login.html:9
+#: apps/users/templates/users/login.html:4 apps/users/templates/users/login.html:9
 msgid "Log In"
 msgstr "Hyni"
 
@@ -2080,31 +2056,31 @@ msgstr "Hyni"
 msgid "{user} | Profile"
 msgstr "{user} | Profil"
 
-#: apps/users/templates/users/profile.html:19
+#: apps/users/templates/users/profile.html:21
 msgid "{city}, {country}"
 msgstr "{city}, {country}"
 
-#: apps/users/templates/users/profile.html:41
+#: apps/users/templates/users/profile.html:43
 msgid "Website:"
 msgstr "\"Website\":"
 
-#: apps/users/templates/users/profile.html:47
+#: apps/users/templates/users/profile.html:49
 msgid "Twitter:"
 msgstr "Twitter:"
 
-#: apps/users/templates/users/profile.html:53
+#: apps/users/templates/users/profile.html:55
 msgid "Facebook:"
 msgstr "Facebook:"
 
-#: apps/users/templates/users/profile.html:59
+#: apps/users/templates/users/profile.html:61
 msgid "IRC:"
 msgstr "IRC:"
 
-#: apps/users/templates/users/profile.html:65
+#: apps/users/templates/users/profile.html:67
 msgid "Livechat ID: {livechat_id}"
 msgstr "ID Livechat-i: {livechat_id}"
 
-#: apps/users/templates/users/profile.html:72
+#: apps/users/templates/users/profile.html:74
 msgid "About {user}"
 msgstr "Rreth {user}"
 
@@ -2117,7 +2093,8 @@ msgid "Change my password"
 msgstr "Ndryshim i fjalëkalimin tim"
 
 #: apps/users/templates/users/pw_change_complete.html:3
-msgid "Password changed successful!"
+#, fuzzy
+msgid "Password change successful!"
 msgstr "Fjalëkalimi u ndryshua me sukses!"
 
 #: apps/users/templates/users/pw_change_complete.html:9
@@ -2132,9 +2109,7 @@ msgstr "Fjalëkalimi u ricaktua me sukses!"
 msgid "You can now log in."
 msgstr "Tani mund të hyni."
 
-#: apps/users/templates/users/pw_reset_confirm.html:4
-#: apps/users/templates/users/pw_reset_form.html:4
-#: apps/users/templates/users/pw_reset_sent.html:4
+#: apps/users/templates/users/pw_reset_confirm.html:4 apps/users/templates/users/pw_reset_form.html:4 apps/users/templates/users/pw_reset_sent.html:4
 msgid "Password Reset"
 msgstr "Ricaktim Fjalëkalimi"
 
@@ -2170,15 +2145,11 @@ msgstr "Dërgo lidhje ricaktimi fjalëkalimi"
 msgid "We've sent an email to any account using this address. Please follow the link in the email to reset your password."
 msgstr "Kemi dërguar një email te cilado llogari që përdor këtë adresë. Që të ricaktoni fjalëkalimin tuaj, ju lutem, ndiqni lidhjen te email-i."
 
-#: apps/users/templates/users/register.html:5
-#: apps/users/templates/users/register.html:10
-#: apps/users/templates/users/includes/macros.html:51
-#: templates/layout/login.html:24
+#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:51
 msgid "Register"
 msgstr "Regjistrohuni"
 
-#: apps/users/templates/users/register_done.html:4
-#: apps/users/templates/users/register_done.html:9
+#: apps/users/templates/users/register_done.html:4 apps/users/templates/users/register_done.html:9
 msgid "Thank you for registering!"
 msgstr "Faleminderit për regjistrimin!"
 
@@ -2208,14 +2179,12 @@ msgid "Confirmation email sent successfully."
 msgstr "Email-i i ripohimit u dërgua me sukses."
 
 #: apps/users/templates/users/resend_confirmation_done.html:10
-msgid "Before you can log in, you need to confirm your email address. We've sent a new confirmation email to any account using <strong>%(email)s</strong>. To confirm the email address, just follow the link in the email."
-msgstr "Përpara se të mund të bëni hyrjen, lypset të ripohoni adresën tuaj email. Kemi dërguar një email të ri ripohimi te cilado llogari që përdor <strong>%(email)s</strong>. Për ripohimin e adresës email, thjesht ndiqni lidhjen te email-i."
-
-#: apps/users/templates/users/includes/macros.html:23
-#: templates/layout/login.html:5
-#: templates/layout/login.html:20
-msgid "Log in"
-msgstr "Hyni"
+msgid ""
+"Before you can log in, you need to confirm your email address. We've sent a new confirmation email to any account using <strong>%(email)s</strong>. To confirm the email address, just follow the "
+"link in the email."
+msgstr ""
+"Përpara se të mund të bëni hyrjen, lypset të ripohoni adresën tuaj email. Kemi dërguar një email të ri ripohimi te cilado llogari që përdor <strong>%(email)s</strong>. Për ripohimin e adresës "
+"email, thjesht ndiqni lidhjen te email-i."
 
 #: apps/users/templates/users/includes/macros.html:23
 msgid "Logging in..."
@@ -2225,8 +2194,7 @@ msgstr "Po hyhet..."
 msgid "Logged in!"
 msgstr "I Futur!"
 
-#: apps/users/templates/users/includes/macros.html:28
-#: apps/users/templates/users/includes/macros.html:33
+#: apps/users/templates/users/includes/macros.html:28 apps/users/templates/users/includes/macros.html:33
 msgid "I forgot my password."
 msgstr "Harrova fjalëkalimin tim."
 
@@ -2242,15 +2210,15 @@ msgstr "Nuk kam llogari."
 msgid "My account is inactive."
 msgstr "Llogaria ime është joaktive."
 
-#: apps/wiki/events.py:49
+#: apps/wiki/events.py:50
 msgid "{title} was edited by {creator}"
 msgstr "{title} është redaktuar nga {creator}"
 
-#: apps/wiki/events.py:85
+#: apps/wiki/events.py:86
 msgid "{title} is ready for review ({creator})"
 msgstr "{title} është gati për shqyrtim ({creator})"
 
-#: apps/wiki/events.py:104
+#: apps/wiki/events.py:105
 msgid "{title} ({locale}) has a new approved revision"
 msgstr "{title} ({locale}) ka një rishikim të ri të miratuar"
 
@@ -2302,182 +2270,197 @@ msgstr "Ju lutem, mbajeni gjatësinë e lëndës në %(limit_value)s ose më pak
 msgid "Please keep the length of the comment to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Ju lutem, mbajeni gjatësinë e komentit në %(limit_value)s ose më pak shenja. Tani është %(show_value)s shenja."
 
-#: apps/wiki/forms.py:61
+#: apps/wiki/forms.py:70
 msgid "Title of article"
 msgstr "Titulli i artikullit"
 
-#: apps/wiki/forms.py:67
-#: apps/wiki/templates/wiki/translate.html:65
+#: apps/wiki/forms.py:78 apps/wiki/templates/wiki/translate.html:67
 msgid "Slug:"
 msgstr "Identifikues:"
 
-#: apps/wiki/forms.py:68
+#: apps/wiki/forms.py:79
 msgid "Article URL"
 msgstr "URL Artikulli"
 
-#: apps/wiki/forms.py:74
+#: apps/wiki/forms.py:85
 msgid "Firefox version:"
 msgstr "Version Firefox-i:"
 
-#: apps/wiki/forms.py:83
+#: apps/wiki/forms.py:92
 msgid "Operating systems:"
 msgstr "Sisteme operativë:"
 
-#: apps/wiki/forms.py:93
+#: apps/wiki/forms.py:100
 msgid "Allow translations:"
 msgstr "Lejo përkthime:"
 
-#: apps/wiki/forms.py:100
+#: apps/wiki/forms.py:104
+msgid "Obsolete:"
+msgstr ""
+
+#: apps/wiki/forms.py:112
 msgid "Category:"
 msgstr "Kategori:"
 
-#: apps/wiki/forms.py:101
+#: apps/wiki/forms.py:113
 msgid "Type of article"
 msgstr "Lloj i artikullit"
 
-#: apps/wiki/forms.py:103
+#: apps/wiki/forms.py:117
 msgid "Topics:"
 msgstr "Tema:"
 
-#: apps/wiki/forms.py:104
+#: apps/wiki/forms.py:118
 msgid "Popular articles in each topic are displayed on the front page"
 msgstr "Artikujt popullorë të secilës temë paraqiten te ballina"
 
-#: apps/wiki/forms.py:151
-#: apps/wiki/templates/wiki/review_revision.html:40
-#: apps/wiki/templates/wiki/review_translation.html:56
-#: apps/wiki/templates/wiki/translate.html:96
+#: apps/wiki/forms.py:164 apps/wiki/templates/wiki/review_revision.html:41 apps/wiki/templates/wiki/review_translation.html:56 apps/wiki/templates/wiki/translate.html:98
 #: apps/wiki/templates/wiki/includes/revision_diff.html:31
 msgid "Keywords:"
 msgstr "Fjalëkyça:"
 
-#: apps/wiki/forms.py:152
+#: apps/wiki/forms.py:165
 msgid "Affects search results"
 msgstr "Prek përfundimet e kërkimit"
 
-#: apps/wiki/forms.py:156
-#: apps/wiki/templates/wiki/translate.html:106
+#: apps/wiki/forms.py:169 apps/wiki/templates/wiki/translate.html:108
 msgid "Search result summary:"
 msgstr "Përmbledhje përfundimi kërkimi:"
 
-#: apps/wiki/forms.py:157
+#: apps/wiki/forms.py:170
 msgid "Only displayed on search results page"
 msgstr "Shfaqur vetëm në faqe përfundimesh kërkimi"
 
-#: apps/wiki/forms.py:178
-#: apps/wiki/forms.py:206
+#: apps/wiki/forms.py:191 apps/wiki/forms.py:219
 msgid "Comment:"
 msgstr "Koment:"
 
-#: apps/wiki/forms.py:210
+#: apps/wiki/forms.py:223
 msgid "Significance:"
 msgstr "Domethënie:"
 
-#: apps/wiki/models.py:32
+#: apps/wiki/models.py:33
 msgid "Minor details like punctuation and spelling errors"
 msgstr "Hollësi të vogla, të tilla si shenja pikësimi dhe gabimi drejtshkrimi"
 
-#: apps/wiki/models.py:34
+#: apps/wiki/models.py:35
 msgid "Content changes that don't require immediate translation"
 msgstr "Ndryshime lënde që nuk kërkojnë medoemos përkthim të menjëhershëm"
 
-#: apps/wiki/models.py:36
+#: apps/wiki/models.py:37
 msgid "Major content changes that will make older translations inaccurate"
 msgstr "Ndryshime të mëdha të lëndës do t'i bëjnë të pasaktë përkthimet e vjetra"
 
-#: apps/wiki/models.py:41
+#: apps/wiki/models.py:42
 msgid "Troubleshooting"
 msgstr "Diagnostikim"
 
-#: apps/wiki/models.py:42
+#: apps/wiki/models.py:43
 msgid "How to"
 msgstr "Si të"
 
-#: apps/wiki/models.py:43
+#: apps/wiki/models.py:44
 msgid "How to contribute"
 msgstr "Si të kontribuoni"
 
-#: apps/wiki/models.py:44
+#: apps/wiki/models.py:45
 msgid "Administration"
 msgstr "Administrim"
 
-#: apps/wiki/models.py:45
+#: apps/wiki/models.py:46
 msgid "Navigation"
 msgstr "Lëvizje"
 
-#: apps/wiki/models.py:46
-msgid "Templates"
-msgstr "Gjedhe"
-
-#: apps/wiki/models.py:61
+#: apps/wiki/models.py:62
 msgid "Desktop:"
 msgstr "Desktop:"
 
-#: apps/wiki/models.py:64
-#: apps/wiki/models.py:65
-msgid "Firefox 3.5-3.6"
-msgstr "Firefox 3.5-3.6"
+#: apps/wiki/models.py:65 apps/wiki/models.py:66 apps/wiki/models.py:76
+#, fuzzy
+msgid "Firefox 6"
+msgstr "Firefox 4"
 
-#: apps/wiki/models.py:66
-#: apps/wiki/models.py:67
-#: apps/wiki/models.py:71
+#: apps/wiki/models.py:67 apps/wiki/models.py:68 apps/wiki/models.py:78
+#, fuzzy
+msgid "Firefox 5"
+msgstr "Firefox 4"
+
+#: apps/wiki/models.py:69 apps/wiki/models.py:70 apps/wiki/models.py:80
 msgid "Firefox 4"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:68
-#: apps/wiki/models.py:69
+#: apps/wiki/models.py:71 apps/wiki/models.py:72
+msgid "Firefox 3.5-3.6"
+msgstr "Firefox 3.5-3.6"
+
+#: apps/wiki/models.py:73 apps/wiki/models.py:74
 msgid "Firefox 3.0"
 msgstr "Firefox 3.0"
 
-#: apps/wiki/models.py:70
+#: apps/wiki/models.py:75
 msgid "Mobile:"
 msgstr "Celular:"
 
-#: apps/wiki/models.py:72
-msgid "Firefox 4 for Mobile"
+#: apps/wiki/models.py:77
+#, fuzzy
+msgid "Firefox 6 for Mobile"
+msgstr "Firefox 4 për Celular"
+
+#: apps/wiki/models.py:79
+#, fuzzy
+msgid "Firefox 5 for Mobile"
 msgstr "Firefox 4 për Celular"
 
 #: apps/wiki/models.py:81
+msgid "Firefox 4 for Mobile"
+msgstr "Firefox 4 për Celular"
+
+#: apps/wiki/models.py:90
 msgid "Desktop OS:"
 msgstr "OS Desktopi:"
 
-#: apps/wiki/models.py:82
+#: apps/wiki/models.py:91
 msgid "Windows"
 msgstr "Windows"
 
-#: apps/wiki/models.py:83
+#: apps/wiki/models.py:92
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: apps/wiki/models.py:84
+#: apps/wiki/models.py:93
 msgid "Linux"
 msgstr "Linux"
 
-#: apps/wiki/models.py:85
+#: apps/wiki/models.py:94
 msgid "Mobile OS:"
 msgstr "OS Celulari:"
 
-#: apps/wiki/models.py:86
+#: apps/wiki/models.py:95
 msgid "Android"
 msgstr "Android"
 
-#: apps/wiki/models.py:87
+#: apps/wiki/models.py:96
 msgid "Maemo"
 msgstr "Maemo"
 
-#: apps/wiki/models.py:96
+#: apps/wiki/models.py:105
 msgid "%(old)s Redirect %(number)i"
 msgstr "%(old)s Ridrejto %(number)i"
 
-#: apps/wiki/models.py:97
+#: apps/wiki/models.py:106
 msgid "%(old)s-redirect-%(number)i"
 msgstr "%(old)s-ridrejtim-%(number)i"
 
-#: apps/wiki/models.py:237
+#: apps/wiki/models.py:187
+msgctxt "longer maintained."
+msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no "
+msgstr ""
+
+#: apps/wiki/models.py:277
 msgid "Please choose a category."
 msgstr "Ju lutem, zgjidhni një kategori."
 
-#: apps/wiki/models.py:566
+#: apps/wiki/models.py:611
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr "Një rishikim duhet bazuar në një rishikim të dokumentit %(locale)s. ID-ja e rishikimit %(id)s nuk e përmbush këtë kriter."
 
@@ -2498,27 +2481,61 @@ msgstr "Gjedhja \"%s\" nuk ekziston ose nuk ka rishikim të miratuar."
 msgid "The video \"%s\" does not exist."
 msgstr "Videoja \"%s\" nuk ekziston."
 
-#: apps/wiki/tasks.py:35
+#: apps/wiki/tasks.py:36
 msgid "Your revision has been approved: {title}"
 msgstr "Rishikimi juaj është miratuar: {title}"
 
-#: apps/wiki/tasks.py:37
+#: apps/wiki/tasks.py:38
 msgid "Your revision has been rejected: {title}"
 msgstr "Rishikimi juaj është hedhur tej: {title}"
 
-#: apps/wiki/views.py:412
+#: apps/wiki/topic_strings.py:6
+msgctxt "KB Topic"
+msgid "ui"
+msgstr ""
+
+#: apps/wiki/topic_strings.py:7
+#, fuzzy
+msgctxt "KB Topic"
+msgid "mobile"
+msgstr "Celular"
+
+#: apps/wiki/topic_strings.py:8
+#, fuzzy
+msgctxt "KB Topic"
+msgid "Firefox 1.0"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/topic_strings.py:9
+msgctxt "KB Topic"
+msgid "addon"
+msgstr ""
+
+#: apps/wiki/topic_strings.py:10
+#, fuzzy
+msgctxt "KB Topic"
+msgid "Firefox 3.6.13"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/topic_strings.py:11
+#, fuzzy
+msgctxt "KB Topic"
+msgid "Firefox 4.0"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/views.py:426
 msgid "You cannot translate this document."
 msgstr "Nuk mund ta përktheni këtë dokument."
 
-#: apps/wiki/views.py:602
+#: apps/wiki/views.py:623
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "Këto fjalë na gëzojnë &mdash; faleminderit për përshtypjet!"
 
-#: apps/wiki/views.py:604
+#: apps/wiki/views.py:625
 msgid "Sorry to hear that. Try searching for solutions below."
 msgstr "Na vjen keq që e dëgjojmë këtë. Provoni të kontrolloni më poshtë për zgjidhje."
 
-#: apps/wiki/views.py:614
+#: apps/wiki/views.py:635
 msgid "You already voted on this Article."
 msgstr "Keni votuar tashmë për këtë Artikull."
 
@@ -2526,17 +2543,57 @@ msgstr "Keni votuar tashmë për këtë Artikull."
 msgid "Compare Revisions | {document}"
 msgstr "Krahaso Rishikimet | {document}"
 
-#: apps/wiki/templates/wiki/compare_revisions.html:7
-#: apps/wiki/templates/wiki/compare_revisions.html:13
+#: apps/wiki/templates/wiki/compare_revisions.html:7 apps/wiki/templates/wiki/compare_revisions.html:13
 msgid "Compare Revisions"
 msgstr "Krahaso Rishikimet"
 
-#: apps/wiki/templates/wiki/compare_revisions.html:17
-#: apps/wiki/templates/wiki/review_revision.html:13
-#: apps/wiki/templates/wiki/review_translation.html:13
+#: apps/wiki/templates/wiki/compare_revisions.html:17 apps/wiki/templates/wiki/review_revision.html:13 apps/wiki/templates/wiki/review_translation.html:13
 #: apps/wiki/templates/wiki/includes/review_form.html:4
 msgid "Back to History"
 msgstr "Mbrapsht te Historiku"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:5
+#, fuzzy
+msgid "Document Deleted | {document}"
+msgstr "Fshini Rishikimin | {document}"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:7
+#, fuzzy
+msgid "Delete Document | {document}"
+msgstr "Fshini Rishikimin | {document}"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:10
+#, fuzzy
+msgid "Delete Document"
+msgstr "Fshije Postimin"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:16
+#, fuzzy
+msgid "The document has been deleted."
+msgstr "Dokumenti \"%s\" nuk ekziston."
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:18
+#, fuzzy
+msgid "Are you sure you want to delete this document?"
+msgstr "Jeni i sigurt se doni të fshihet ky postim?"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:20
+msgid "All translations of this document will also be deleted."
+msgstr ""
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:27
+#, fuzzy
+msgid "Current Content"
+msgstr "Përktheni Përmbajtjen"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:33
+#, fuzzy
+msgid "You are about to permanently delete this document. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
+msgstr "Ju ndan një hap nga fshirja përgjithmonë e këtij postimi. <strong>Kjo nuk mund të zhbëhet më pas!</strong> Jeni i sigurt se doni të vazhdohet?"
+
+#: apps/wiki/templates/wiki/confirm_document_delete.html:37 apps/wiki/templates/wiki/confirm_revision_delete.html:32
+msgid "Cancel and go back to document history"
+msgstr ""
 
 #: apps/wiki/templates/wiki/confirm_revision_delete.html:4
 msgid "Delete Revision | {document}"
@@ -2546,22 +2603,34 @@ msgstr "Fshini Rishikimin | {document}"
 msgid "Delete Revision"
 msgstr "Fshije Rishikimin"
 
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:11
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:12
+#, fuzzy
+msgid "Unable to delete only revision of the document"
+msgstr "Fshini Rishikimin | {document}"
+
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:13
+msgid "To delete the document, please notify an admin."
+msgstr ""
+
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:15
+#, fuzzy
+msgid "Go back to document history"
+msgstr "Mbrapsht te Historiku"
+
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:18
 msgid "Are you sure you want to delete this revision?"
 msgstr "Jeni i sigurt se doni të fshihet ky rishikim?"
 
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:21
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:28
 msgid "You are about to permanently delete this revision. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "Ju ndan një hap nga fshirja përgjithmonë e këtij rishikimi. <strong>Kjo nuk mund të zhbëhet më pas!</strong> Jeni i sigurt se doni të vazhdohet?"
 
 #. {t} is the title of the document. {c} is the category.
-#: apps/wiki/templates/wiki/document.html:6
-#: apps/wiki/templates/wiki/mobile/document.html:5
+#: apps/wiki/templates/wiki/document.html:6 apps/wiki/templates/wiki/mobile/document.html:5
 msgid "{t} | {c}"
 msgstr "{t} | {c}"
 
-#: apps/wiki/templates/wiki/document.html:26
-#: templates/mobile/base.html:52
+#: apps/wiki/templates/wiki/document.html:26 templates/mobile/base.html:52
 msgid "Couldn't find what you were looking for?"
 msgstr "Nuk gjetët dot çka po kërkonit?"
 
@@ -2569,120 +2638,124 @@ msgstr "Nuk gjetët dot çka po kërkonit?"
 msgid "Here's a list of related articles that might help:"
 msgstr "Ja një listë artikujsh që lidhen me këtë e që mund t'ju ndihmojnë:"
 
-#: apps/wiki/templates/wiki/document.html:39
-msgid "Browse other articles about <a href=\"{url}\">{category}</a>"
+#: apps/wiki/templates/wiki/document.html:45
+#, fuzzy
+msgid "Browse other articles about %(topics)s"
 msgstr "Shfletoni artikuj të tjerë rreth <a href=\"{url}\">{category}</a>"
 
-#: apps/wiki/templates/wiki/document.html:42
+#: apps/wiki/templates/wiki/document.html:51
 msgid "Ask our awesome support community for help"
 msgstr "Kërkojini ndihmë për asistencë bashkësisë sonë të mrekullueshme"
 
-#: apps/wiki/templates/wiki/document.html:45
+#: apps/wiki/templates/wiki/document.html:54
 msgid "Or try searching:"
 msgstr "Ose provoni të kërkoni:"
 
-#: apps/wiki/templates/wiki/document.html:54
+#: apps/wiki/templates/wiki/document.html:63
 msgid "You've come to the right place for Firefox help!"
 msgstr "Për ndihmë lidhur me Firefox-in, keni ardhur aty ku duhet!"
 
-#: apps/wiki/templates/wiki/document.html:56
+#: apps/wiki/templates/wiki/document.html:65
 msgid "This page should provide you with a solution to what you posted on Twitter.<br/> If not, our community volunteers are ready to help."
 msgstr "Kjo faqe do të duhej t'ju jepte një zgjidhje për çka keni postuar në Twitter.<br/> Përndryshe, bashkësia jonë e vullnetarëve është gati t'ju ndihmojë."
 
-#: apps/wiki/templates/wiki/document.html:64
+#: apps/wiki/templates/wiki/document.html:73
 msgid "You were sent here by one of our <br/> volunteers from the <a href=\"%(url)s\">Army of Awesome</a>."
 msgstr "U dërguat këtu nga një prej <br/> vullnetarëve tanë të <a href=\"%(url)s\">Army of Awesome</a>."
 
-#: apps/wiki/templates/wiki/document.html:86
+#: apps/wiki/templates/wiki/document.html:103
 msgid "Turn off emails."
 msgstr "Nxirri email-et jashtë pune."
 
-#: apps/wiki/templates/wiki/document.html:91
+#: apps/wiki/templates/wiki/document.html:108
 msgid "Get emailed when this article changes."
 msgstr "Merrni email kur ky artikull ndryshon."
 
-#: apps/wiki/templates/wiki/document_revisions.html:4
+#: apps/wiki/templates/wiki/edit_document.html:7
+msgid "Edit Article | {document}"
+msgstr "Përpunoni Artikullin | {document}"
+
+#: apps/wiki/templates/wiki/edit_document.html:11 apps/wiki/templates/wiki/includes/sidebar_modules.html:27 apps/wiki/templates/wiki/includes/sidebar_modules.html:29
+msgid "Edit Article"
+msgstr "Përpunoni Artikullin"
+
+#: apps/wiki/templates/wiki/edit_document.html:16
+msgid "<em>Editing</em> {title}"
+msgstr "<em>Po përpunohet</em> {title}"
+
+#: apps/wiki/templates/wiki/edit_document.html:21
+msgid "Edit Description"
+msgstr "Përpunoni Përshkrimin"
+
+#: apps/wiki/templates/wiki/edit_document.html:37 apps/wiki/templates/wiki/new_document.html:24
+msgid "Relevant to:"
+msgstr "I rëndësishëm për:"
+
+#: apps/wiki/templates/wiki/edit_document.html:45
+#, fuzzy
+msgid "Save description"
+msgstr "Përshkrim"
+
+#: apps/wiki/templates/wiki/edit_document.html:54
+msgid "Edit Content"
+msgstr "Përpunoni Përmbajtjen"
+
+#: apps/wiki/templates/wiki/edit_document.html:56
+msgid "For help with writing articles, check out the <a href=\"%(url)s\">Support Document Guide</a>."
+msgstr "Për ndihmë me shkrimin e artikujve, hidhini një sy <a href=\"%(url)s\">Udhërrëfyesit të Dokumenteve të Asistencës</a>."
+
+#: apps/wiki/templates/wiki/history.html:4
 msgid "Revision History | {document}"
 msgstr "Historik Rishikimesh | {document}"
 
-#: apps/wiki/templates/wiki/document_revisions.html:7
+#: apps/wiki/templates/wiki/history.html:7
 msgid "History"
 msgstr "Historik"
 
-#: apps/wiki/templates/wiki/document_revisions.html:11
+#: apps/wiki/templates/wiki/history.html:11
 msgid "History of {title}"
 msgstr "Historik për {title}"
 
-#: apps/wiki/templates/wiki/document_revisions.html:13
+#: apps/wiki/templates/wiki/history.html:13
 msgid "Revision history for:"
 msgstr "Historik rishikimesh për:"
 
-#: apps/wiki/templates/wiki/document_revisions.html:30
-#: apps/wiki/templates/wiki/document_revisions.html:91
+#: apps/wiki/templates/wiki/history.html:30 apps/wiki/templates/wiki/history.html:94
 msgid "Compare Selected Translations"
 msgstr "Krahaso Përkthimet e Përzgjedhura"
 
-#: apps/wiki/templates/wiki/document_revisions.html:30
-#: apps/wiki/templates/wiki/document_revisions.html:91
+#: apps/wiki/templates/wiki/history.html:30 apps/wiki/templates/wiki/history.html:94
 msgid "Compare Selected Revisions"
 msgstr "Krahaso Rishikimet e Përzgjedhura"
 
-#: apps/wiki/templates/wiki/document_revisions.html:54
+#: apps/wiki/templates/wiki/history.html:52
+msgid "Review"
+msgstr "Shqyrtim"
+
+#: apps/wiki/templates/wiki/history.html:54
 msgctxt "revision"
 msgid "Unreviewed"
 msgstr "Të pashqyrtuara"
 
-#: apps/wiki/templates/wiki/document_revisions.html:58
+#: apps/wiki/templates/wiki/history.html:58
 msgid "Current"
 msgstr "I tanishmi"
 
-#: apps/wiki/templates/wiki/document_revisions.html:60
+#: apps/wiki/templates/wiki/history.html:60
 msgid "Approved"
 msgstr "Miratuar"
 
-#: apps/wiki/templates/wiki/document_revisions.html:96
+#: apps/wiki/templates/wiki/history.html:82 apps/wiki/templates/wiki/revision.html:54
+msgid "Edit article based on this revision"
+msgstr "Përpunojeni artikullin duke u bazuar në këtë rishikim"
+
+#: apps/wiki/templates/wiki/history.html:99
 msgid "This document has no revisions."
 msgstr "Ky dokument nuk ka rishikime."
 
-#: apps/wiki/templates/wiki/edit_document.html:6
-msgid "Edit Article | {document}"
-msgstr "Përpunoni Artikullin | {document}"
-
-#: apps/wiki/templates/wiki/edit_document.html:10
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:27
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:29
-msgid "Edit Article"
-msgstr "Përpunoni Artikullin"
-
-#: apps/wiki/templates/wiki/edit_document.html:15
-msgid "<em>Editing</em> {title}"
-msgstr "<em>Po përpunohet</em> {title}"
-
-#: apps/wiki/templates/wiki/edit_document.html:19
-msgid "Edit Description"
-msgstr "Përpunoni Përshkrimin"
-
-#: apps/wiki/templates/wiki/edit_document.html:32
-#: apps/wiki/templates/wiki/new_document.html:24
-msgid "Relevant to:"
-msgstr "I rëndësishëm për:"
-
-#: apps/wiki/templates/wiki/edit_document.html:40
-#: apps/wiki/templates/wiki/translate.html:76
-msgid "Save"
-msgstr "Ruaje"
-
-#: apps/wiki/templates/wiki/edit_document.html:49
-msgid "Edit Content"
-msgstr "Përpunoni Përmbajtjen"
-
-#: apps/wiki/templates/wiki/edit_document.html:51
-msgid "For help with writing articles, check out the <a href=\"%(url)s\">Support Document Guide</a>."
-msgstr "Për ndihmë me shkrimin e artikujve, hidhini një sy <a href=\"%(url)s\">Udhërrëfyesit të Dokumenteve të Asistencës</a>."
-
 #: apps/wiki/templates/wiki/list_documents.html:6
-msgid "Articles tagged: {tag}"
-msgstr "Artikujt të etiketuar me: {tag}"
+msgid "Topic: {topic}"
+msgstr ""
 
 #: apps/wiki/templates/wiki/list_documents.html:8
 msgid "All Articles"
@@ -2732,32 +2805,27 @@ msgstr "Versioni i tanishëm publik:"
 msgid "Submitted revision:"
 msgstr "Rishikim i parashtruar:"
 
-#: apps/wiki/templates/wiki/review_revision.html:27
-#: apps/wiki/templates/wiki/revision.html:60
+#: apps/wiki/templates/wiki/review_revision.html:27 apps/wiki/templates/wiki/revision.html:60
 msgid "Revision Source"
 msgstr "Burim Rishikimi"
 
-#: apps/wiki/templates/wiki/review_revision.html:33
-#: apps/wiki/templates/wiki/review_translation.html:81
-#: apps/wiki/templates/wiki/revision.html:66
+#: apps/wiki/templates/wiki/review_revision.html:33 apps/wiki/templates/wiki/review_translation.html:81 apps/wiki/templates/wiki/revision.html:66
 msgid "Revision Content"
 msgstr "Përmbajtjeje Rishikimi"
 
-#: apps/wiki/templates/wiki/review_revision.html:39
+#: apps/wiki/templates/wiki/review_revision.html:40
 msgid "This document does not have a current revision."
 msgstr "Ky dokument nuk ka rishikim të tanishëm."
 
-#: apps/wiki/templates/wiki/review_revision.html:44
-#: apps/wiki/templates/wiki/review_translation.html:63
-#: apps/wiki/templates/wiki/includes/revision_diff.html:38
+#: apps/wiki/templates/wiki/review_revision.html:45 apps/wiki/templates/wiki/review_translation.html:63 apps/wiki/templates/wiki/includes/revision_diff.html:38
 msgid "Search results summary:"
 msgstr "Përmbledhje përfundimesh kërkimi:"
 
-#: apps/wiki/templates/wiki/review_revision.html:48
+#: apps/wiki/templates/wiki/review_revision.html:49
 msgid "Revision source:"
 msgstr "Burim rishikimi:"
 
-#: apps/wiki/templates/wiki/review_revision.html:52
+#: apps/wiki/templates/wiki/review_revision.html:53
 msgid "Revision rendered html:"
 msgstr "Rikrijim html i rishikimit:"
 
@@ -2801,14 +2869,11 @@ msgstr "Burimet e Plota të Artikullit"
 msgid "The {default_locale} version has no approved content to show."
 msgstr "Versioni në {default_locale} nuk ka lëndë të miratuar për shfaqje."
 
-#: apps/wiki/templates/wiki/review_translation.html:49
-#: apps/wiki/templates/wiki/translate.html:127
+#: apps/wiki/templates/wiki/review_translation.html:49 apps/wiki/templates/wiki/translate.html:129
 msgid "Approved {default_locale} version:"
 msgstr "Versioni i miratuar në {default_locale}:"
 
-#: apps/wiki/templates/wiki/review_translation.html:50
-#: apps/wiki/templates/wiki/review_translation.html:54
-#: apps/wiki/templates/wiki/includes/revision_diff.html:16
+#: apps/wiki/templates/wiki/review_translation.html:50 apps/wiki/templates/wiki/review_translation.html:54 apps/wiki/templates/wiki/includes/revision_diff.html:16
 #: apps/wiki/templates/wiki/includes/revision_diff.html:28
 msgid "Revision {id} by {user} on {date}"
 msgstr "Rishikim {id} nga {user} më {date}"
@@ -2817,23 +2882,23 @@ msgstr "Rishikim {id} nga {user} më {date}"
 msgid "Submitted {locale} translation:"
 msgstr ""
 
-#: apps/wiki/templates/wiki/review_translation.html:87
+#: apps/wiki/templates/wiki/review_translation.html:88
 msgid "This document does not have a current translation."
 msgstr "Ky dokument nuk ka përkthim të tanishëm."
 
-#: apps/wiki/templates/wiki/review_translation.html:88
+#: apps/wiki/templates/wiki/review_translation.html:89
 msgid "Translation keywords:"
 msgstr "Fjalëkyça përkthimi:"
 
-#: apps/wiki/templates/wiki/review_translation.html:92
+#: apps/wiki/templates/wiki/review_translation.html:93
 msgid "Translation search results summary:"
 msgstr "Përmbledhje përfundimesh kërkimi përkthimi:"
 
-#: apps/wiki/templates/wiki/review_translation.html:96
+#: apps/wiki/templates/wiki/review_translation.html:97
 msgid "Translation source:"
 msgstr "Burim përkthimi:"
 
-#: apps/wiki/templates/wiki/review_translation.html:100
+#: apps/wiki/templates/wiki/review_translation.html:101
 msgid "Translation rendered html:"
 msgstr "Rikrijim html i përkthimit:"
 
@@ -2878,10 +2943,6 @@ msgstr "A është miratuar?"
 msgid "Is current revision?"
 msgstr "A është rishikimi i tanishëm?"
 
-#: apps/wiki/templates/wiki/revision.html:54
-msgid "Edit article based on this revision"
-msgstr "Përpunojeni artikullin duke u bazuar në këtë rishikim"
-
 #: apps/wiki/templates/wiki/select_locale.html:4
 msgid "Select language | {document}"
 msgstr "Përzgjidhni gjuhë | {document}"
@@ -2894,61 +2955,64 @@ msgstr "Përzgjidhni gjuhën"
 msgid "Select a language to translate to:"
 msgstr "Përzgjidhni gjuhën në të cilën të përkthehet:"
 
-#: apps/wiki/templates/wiki/translate.html:6
+#: apps/wiki/templates/wiki/translate.html:7
 msgid "Translate Article | {document}"
 msgstr "Përktheni Artikullin | {document}"
 
-#: apps/wiki/templates/wiki/translate.html:9
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:36
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:38
+#: apps/wiki/templates/wiki/translate.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:36 apps/wiki/templates/wiki/includes/sidebar_modules.html:38
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:45 apps/wiki/templates/wiki/includes/sidebar_modules.html:47
 msgid "Translate Article"
 msgstr "Përktheni Artikullin"
 
-#: apps/wiki/templates/wiki/translate.html:15
+#: apps/wiki/templates/wiki/translate.html:16
 msgid "Translating {title}"
 msgstr "Po përkthehet {title}"
 
-#: apps/wiki/templates/wiki/translate.html:18
+#: apps/wiki/templates/wiki/translate.html:19
 msgid "Translating article to {locale}"
 msgstr "Përkthim artikulli në {locale}"
 
-#: apps/wiki/templates/wiki/translate.html:23
+#: apps/wiki/templates/wiki/translate.html:24
 msgid "You are translating an unreviewed or rejected English document."
 msgstr "Po përktheni nga Anglishtja një dokument ose të hedhur tej, ose të pashqyrtuar."
 
-#: apps/wiki/templates/wiki/translate.html:26
+#: apps/wiki/templates/wiki/translate.html:27
 msgid "Choose a locale:"
 msgstr "Zgjidhni një vendore:"
 
-#: apps/wiki/templates/wiki/translate.html:44
+#: apps/wiki/templates/wiki/translate.html:46
 msgid "Translate Description"
 msgstr "Përktheni Përshkrimin"
 
-#: apps/wiki/templates/wiki/translate.html:59
+#: apps/wiki/templates/wiki/translate.html:61
 msgid "Title in {locale}:"
 msgstr "Titulli në {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:69
+#: apps/wiki/templates/wiki/translate.html:71
 msgid "Slug in {locale}:"
 msgstr "Identifikues në {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:85
+#: apps/wiki/templates/wiki/translate.html:78
+msgid "Save title and slug"
+msgstr ""
+
+#: apps/wiki/templates/wiki/translate.html:87
 msgid "Translate Content"
 msgstr "Përktheni Përmbajtjen"
 
-#: apps/wiki/templates/wiki/translate.html:100
+#: apps/wiki/templates/wiki/translate.html:102
 msgid "Keywords in {locale}:"
 msgstr "Fjalëkyça në {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:110
+#: apps/wiki/templates/wiki/translate.html:112
 msgid "Search result summary in {locale}:"
 msgstr "Përmbledhje përfundimi kërkimi në {locale}:"
 
-#: apps/wiki/templates/wiki/translate.html:122
+#: apps/wiki/templates/wiki/translate.html:124
 msgid "Note: There are no approved translations for this article."
 msgstr "Shënim: Nuk ka përkthime të miratuara për këtë artikull."
 
-#: apps/wiki/templates/wiki/translate.html:131
+#: apps/wiki/templates/wiki/translate.html:133
 msgid "{locale} translation:"
 msgstr "Përkthimi në {locale}:"
 
@@ -2965,27 +3029,39 @@ msgid "(Redirected from <a href=\"{href}\">{title}</a>)"
 msgstr "(Ridrejtuar nga <a href=\"{href}\">{title}</a>)"
 
 #: apps/wiki/templates/wiki/includes/document_macros.html:35
-msgid "<p>This article may be out of date.</p> <p> An important change has been made to the English article on which this is based. Until this page is updated, you might find this helpful: <a href=\"%(url)s\">%(title)s</a> </p>"
-msgstr "<p>Ky artikull mund të jetë i vjetruar.</p> <p> Te artikulli në Anglisht, te i cili ky bazohet, është bërë një ndryshim i rëndësishëm. Deri kur kjo faqe të përditësohet, mund të jetë e dobishme kjo këtu: <a href=\"%(url)s\">%(title)s</a> </p>"
+msgid ""
+"<p>This article may be out of date.</p> <p> An important change has been made to the English article on which this is based. Until this page is updated, you might find this helpful: <a href=\"%(url)"
+"s\">%(title)s</a> </p>"
+msgstr ""
+"<p>Ky artikull mund të jetë i vjetruar.</p> <p> Te artikulli në Anglisht, te i cili ky bazohet, është bërë një ndryshim i rëndësishëm. Deri kur kjo faqe të përditësohet, mund të jetë e dobishme kjo "
+"këtu: <a href=\"%(url)s\">%(title)s</a> </p>"
 
-#: apps/wiki/templates/wiki/includes/document_macros.html:53
+#: apps/wiki/templates/wiki/includes/document_macros.html:48
+msgid "This article is no longer maintained, so its content might be out of date."
+msgstr ""
+
+#: apps/wiki/templates/wiki/includes/document_macros.html:63
 msgid "Our volunteers haven't translated this article into %(locale)s yet. <a href=\"%(help_link)s\">Join us and help get the job done!</a>"
 msgstr "Vullnetarët tanë nuk e kanë përkthyer ende në %(locale)s këtë artikull. <a href=\"%(help_link)s\">Bashkohuni me ne dhe ndihmoni që të mbarojë kjo punë!</a>"
 
 #. This is shown for existing, never-approved translations
-#: apps/wiki/templates/wiki/includes/document_macros.html:63
+#: apps/wiki/templates/wiki/includes/document_macros.html:73
 msgid "Our volunteers are working on translating this article. Until it's ready, maybe the English version can be of some help."
 msgstr "Vullnetarët tanë po punojnë mbi përkthimin e këtij artikulli. Ndoshta versioni në Anglisht mund të ndihmonte ca, deri sa të jetë gati përkthimi. "
 
-#: apps/wiki/templates/wiki/includes/document_macros.html:75
+#: apps/wiki/templates/wiki/includes/document_macros.html:85
 msgid "This article doesn't have approved content yet."
 msgstr "Ky artikull nuk ka ende lëndë të miratuar."
 
-#: apps/wiki/templates/wiki/includes/document_vote.html:7
+#: apps/wiki/templates/wiki/includes/document_macros.html:101
+msgid "Warning: There are newer unreviewed revisions of this article. See <a href=\"%(url)s\">the history</a> to base your edit on an existing unreviewed revision."
+msgstr ""
+
+#: apps/wiki/templates/wiki/includes/document_vote.html:6
 msgid "Was this article helpful?"
 msgstr "Qe i dobishëm ky artikull?"
 
-#: apps/wiki/templates/wiki/includes/document_vote.html:10
+#: apps/wiki/templates/wiki/includes/document_vote.html:9
 msgid "Please wait..."
 msgstr "Ju lutem, prisni..."
 
@@ -3023,10 +3099,11 @@ msgstr "Faleminderit që shpenzuat kohë të shqyrtoni këto ndryshime. Ju lutem
 
 #: apps/wiki/templates/wiki/includes/review_form.html:22
 msgid "Clicking Accept will make this version of the article live! Please pick the appropriate revision level below and consider sending a thank you to the person who submitted this."
-msgstr "Klikimi mbi Pranoje do ta bëjë këtë version të artikullit të shfaqet publikisht! Ju lutem, zgjidhni më poshtë një shkallë të përshtatshme rishikimi dhe shihni mundësinë t'i dërgoni një falënderim personit që e parashtroi këtë."
+msgstr ""
+"Klikimi mbi Pranoje do ta bëjë këtë version të artikullit të shfaqet publikisht! Ju lutem, zgjidhni më poshtë një shkallë të përshtatshme rishikimi dhe shihni mundësinë t'i dërgoni një falënderim "
+"personit që e parashtroi këtë."
 
-#: apps/wiki/templates/wiki/includes/review_form.html:31
-#: apps/wiki/templates/wiki/includes/review_form.html:45
+#: apps/wiki/templates/wiki/includes/review_form.html:31 apps/wiki/templates/wiki/includes/review_form.html:45
 msgid "Leave a message for the contributor: <span class=\"optional\">(optional)</span>"
 msgstr "Lini një mesazh për kontributorin: <span class=\"optional\">(opsionale)</span>"
 
@@ -3050,25 +3127,23 @@ msgstr "Faleminderit që shpenzuat kohë të shqyrtoni këto ndryshime. Ju lutem
 msgid "Reject"
 msgstr "Hidhe tej"
 
-#: apps/wiki/templates/wiki/includes/revision_diff.html:12
-#: apps/wiki/templates/wiki/includes/revision_diff.html:24
+#: apps/wiki/templates/wiki/includes/revision_diff.html:12 apps/wiki/templates/wiki/includes/revision_diff.html:24
 msgid "Revision {num}:"
 msgstr "Shqyrtimi {num}:"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:18
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:20
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:18 apps/wiki/templates/wiki/includes/sidebar_modules.html:20
 msgid "Discussion"
 msgstr "Diskutim"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:43
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:53
 msgid "Show History"
 msgstr "Shfaq Historikun"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:55
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:66
 msgid "Unsubscribe from edit notifications"
 msgstr "Çpajtohuni nga njoftimet mbi përpunime"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:60
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:71
 msgid "Subscribe to edit notifications"
 msgstr "Që të përpunoni njoftimet, regjistrohuni"
 
@@ -3100,33 +3175,32 @@ msgstr "Njoftomëni për çfarëdo ndryshimi të ardhshëm të kësaj faqeje"
 msgid "Help with:"
 msgstr "Ndihmë për:"
 
-#: templates/base.html:14
-#: templates/mobile/base.html:12
+#: templates/base.html:14 templates/mobile/base.html:12
 msgctxt "site_title"
 msgid "Firefox Help"
 msgstr "Ndihmë për Firefox-in"
 
-#: templates/base.html:89
+#: templates/base.html:102
 msgid "Be <mark>Awesome</mark>"
 msgstr "Bëhuni <mark>i Mrekullueshëm</mark>"
 
-#: templates/base.html:94
+#: templates/base.html:107
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
 msgstr "E dinit që Ndihma e Firefox-it mbahet në këmbë nga superheronj vullnetarë nga anembanë bota?"
 
-#: templates/base.html:97
+#: templates/base.html:110
 msgid "Grab your cape and join us &raquo;"
 msgstr "Merrni kapelen dhe bashkohuni me ne &raquo;"
 
-#: templates/base.html:101
+#: templates/base.html:114
 msgid "Check your <mark>plugins</mark>"
 msgstr "Kontrolloni <mark>shtojcat</mark> tuaja"
 
-#: templates/base.html:106
+#: templates/base.html:119
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
 msgstr "Çfarë është një shtojcë? Pse duhet t'i mbaj përherë të përditësuara? Përgjigjjuni këtyre pyetjeve dhe bëni një kontroll të menjëhershëm që të shihni nëse janë të përditësuara."
 
-#: templates/base.html:111
+#: templates/base.html:124
 msgid "Find out more &raquo;"
 msgstr "Mësoni më tepër &raquo;"
 
@@ -3134,18 +3208,15 @@ msgstr "Mësoni më tepër &raquo;"
 msgid "Back to home page"
 msgstr "Mbrapsht te faqja e hyrjes"
 
-#: templates/global/footer.html:6
-#: templates/global/header.html:7
+#: templates/global/footer.html:6 templates/global/header.html:7
 msgid "Firefox"
 msgstr "Firefox"
 
-#: templates/global/footer.html:17
-#: templates/mobile/base.html:93
+#: templates/global/footer.html:17 templates/mobile/base.html:93
 msgid "Privacy Policy"
 msgstr "Rregulla Vetësie"
 
-#: templates/global/footer.html:18
-#: templates/mobile/base.html:94
+#: templates/global/footer.html:18 templates/mobile/base.html:94
 msgid "Legal Notices"
 msgstr "Shënime Ligjore"
 
@@ -3154,8 +3225,12 @@ msgid "Report Trademark Abuse"
 msgstr "Njoftoni Shpërdorim Shenjash Tregtare"
 
 #: templates/global/footer.html:22
-msgid "Except where otherwise <a href=\"http://mozilla.com/about/legal.html#site\">noted</a>, content on this site is licensed under the <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> Creative Commons Attribution Share-Alike License v3.0 </a> or any later version."
-msgstr "Hiq rastet kur <a href=\"http://mozilla.com/about/legal.html#site\">shënohet</a> ndryshe, lënda në këtë site lejohet sipas lejes <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> Creative Commons Attribution Share-Alike License v3.0 </a> ose çfarëdo versioni të mëvonshëm."
+msgid ""
+"Except where otherwise <a href=\"http://mozilla.com/about/legal.html#site\">noted</a>, content on this site is licensed under the <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> "
+"Creative Commons Attribution Share-Alike License v3.0 </a> or any later version."
+msgstr ""
+"Hiq rastet kur <a href=\"http://mozilla.com/about/legal.html#site\">shënohet</a> ndryshe, lënda në këtë site lejohet sipas lejes <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> "
+"Creative Commons Attribution Share-Alike License v3.0 </a> ose çfarëdo versioni të mëvonshëm."
 
 #: templates/global/header.html:3
 msgid "skip to navigation"
@@ -3169,15 +3244,11 @@ msgstr "këmbeni gjuhë"
 msgid "Back to Mozilla.com"
 msgstr "Mbrapsht te Mozilla.com"
 
-#: templates/global/header.html:8
-#: templates/global/minimal-header.html:2
+#: templates/global/header.html:8 templates/global/minimal-header.html:2
 msgid "visit <span>mozilla.org</span>"
 msgstr "vizitoni <span>mozilla.org</span>"
 
-#: templates/global/menu_links.html:2
-#: templates/global/menu_links.html:4
-#: templates/global/menu_links.html:16
-#: templates/global/mobile/header.html:4
+#: templates/global/menu_links.html:2 templates/global/menu_links.html:4 templates/global/menu_links.html:16 templates/global/mobile/header.html:4
 msgid "Features"
 msgstr "Veçori"
 
@@ -3229,13 +3300,11 @@ msgstr "Përfshihuni"
 msgid "FAQ"
 msgstr "FAQ"
 
-#: templates/global/menu_links.html:22
-#: templates/global/menu_links.html:59
+#: templates/global/menu_links.html:22 templates/global/menu_links.html:59
 msgid "Blog"
 msgstr "Blog"
 
-#: templates/global/menu_links.html:26
-#: templates/global/mobile/header.html:6
+#: templates/global/menu_links.html:26 templates/global/mobile/header.html:6
 msgid "Add-ons"
 msgstr "Shtesa"
 
@@ -3279,24 +3348,19 @@ msgstr "Shtesa për Celular"
 msgid "Developer Hub"
 msgstr "Qendër Zhvilluesish"
 
-#: templates/global/menu_links.html:42
-#: templates/global/mobile/header.html:7
-#: templates/layout/menu_links.html:5
+#: templates/global/menu_links.html:42 templates/global/mobile/header.html:7 templates/layout/menu_links.html:5
 msgid "Support"
 msgstr "Asistencë"
 
-#: templates/global/menu_links.html:44
-#: templates/layout/menu_links.html:7
+#: templates/global/menu_links.html:44 templates/layout/menu_links.html:7
 msgid "Firefox Support"
 msgstr "Asistencë për Firefox-in"
 
-#: templates/global/menu_links.html:45
-#: templates/layout/menu_links.html:8
+#: templates/global/menu_links.html:45 templates/layout/menu_links.html:8
 msgid "Mobile Support"
 msgstr "Asistencë për Celular"
 
-#: templates/global/menu_links.html:46
-#: templates/layout/menu_links.html:9
+#: templates/global/menu_links.html:46 templates/layout/menu_links.html:9
 msgid "Thunderbird Support"
 msgstr "Asistencë për Thunderbird-in"
 
@@ -3356,15 +3420,20 @@ msgstr "Kërkoni te Ndihma e Firefox-it"
 msgid "Welcome, <span class=\"user\">{user}</span>."
 msgstr "Mirë se vini, <span class=\"user\">{user}</span>."
 
-#: templates/includes/common_macros.html:25
-msgid "Profile"
-msgstr "Profil"
+#: templates/includes/common_macros.html:26
+msgid "Inbox"
+msgstr ""
 
-#: templates/includes/common_macros.html:27
+#: templates/includes/common_macros.html:32
+#, fuzzy
+msgid "Dashboard"
+msgstr "Pult përkthimesh"
+
+#: templates/includes/common_macros.html:34
 msgid "Sign Out"
 msgstr "Dilni"
 
-#: templates/includes/common_macros.html:31
+#: templates/includes/common_macros.html:38
 msgid "Want to contribute?<br /> <a href=\"%(login_url)s\">Sign In</a> or <a href=\"%(register_url)s\">Register</a>"
 msgstr "Doni të merrni pjesë?<br /> <a href=\"%(login_url)s\">Hyni</a> ose <a href=\"%(register_url)s\">Regjistrohuni</a>"
 
@@ -3408,19 +3477,15 @@ msgstr "Përktheni Artikuj"
 msgid "Contributors Forums"
 msgstr "Forume Kontribuesish"
 
-#: templates/includes/sidebar_modules.html:25
-#: templates/mobile/base.html:40
+#: templates/includes/sidebar_modules.html:25 templates/mobile/base.html:40
 msgid "Firefox Help Home"
 msgstr "Hyrja e Ndihmës për Firefox-in"
 
-#: templates/includes/sidebar_modules.html:28
-#: templates/mobile/base.html:55
-#: templates/mobile/base.html:60
+#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:55 templates/mobile/base.html:60
 msgid "Ask a Question"
 msgstr "Bëni një Pyetje"
 
-#: templates/includes/mobile/paginator.html:5
-#: templates/includes/mobile/paginator.html:7
+#: templates/includes/mobile/paginator.html:5 templates/includes/mobile/paginator.html:7
 msgid "Prev"
 msgstr "E mëp."
 
@@ -3430,27 +3495,9 @@ msgid_plural "Page {n}"
 msgstr[0] "Faqe {n}"
 msgstr[1] "Faqe {n}"
 
-#: templates/includes/mobile/paginator.html:15
-#: templates/includes/mobile/paginator.html:17
-#: templates/layout/paginator.html:31
+#: templates/includes/mobile/paginator.html:15 templates/includes/mobile/paginator.html:17 templates/layout/paginator.html:31
 msgid "Next"
 msgstr "Pasuesja"
-
-#: templates/layout/login.html:16
-msgid "Remember me"
-msgstr "Mbamë mend"
-
-#: templates/layout/login.html:23
-msgid "Click here to register"
-msgstr "Klikoni këtu për t'u regjistruar"
-
-#: templates/layout/login.html:26
-msgid "Click here if you've forgotten your password"
-msgstr "Nëse harruat fjalëkalimin tuaj, klikoni këtu"
-
-#: templates/layout/login.html:26
-msgid "I forgot my password"
-msgstr "Harrova fjalëkalimin tim"
 
 #: templates/layout/paginator.html:7
 msgid "Previous"
@@ -3492,27 +3539,86 @@ msgstr "Firefox Sync"
 msgid "View full site"
 msgstr "Shihni site-in e plotë"
 
-#, fuzzy
-#~ msgid "Username: {username}"
-#~ msgstr "Riemërtojeni"
+#~ msgid "Forum"
+#~ msgstr "Forum"
+
+#~ msgctxt "locale"
+#~ msgid "Stop getting emailed when English revisions are approved"
+#~ msgstr "Ndërprisni marrjen e email-eve pasi miratohen rishikime në Shqip"
+
+#~ msgctxt "locale"
+#~ msgid "Get emailed when English revisions are approved"
+#~ msgstr "Merrni email-e kur miratohen rishikime në Shqip"
+
+#~ msgctxt "locale"
+#~ msgid "Stop getting emailed when English reviews are waiting"
+#~ msgstr "Ndërprisni marrjen e email-eve kur rishikimet në Shqip janë në pritje"
+
+#~ msgctxt "locale"
+#~ msgid "Get emailed when English reviews are waiting"
+#~ msgstr "Merrni email-e kur rishikimet në Shqip janë në pritje"
+
+#~ msgid "Select an image file to upload."
+#~ msgstr "Përzgjidhni për ngarkim një figurë."
+
+#~ msgid "Submit file"
+#~ msgstr "Parashtroje kartelën"
+
+#~ msgid "Please no SWFs, only FLVs."
+#~ msgstr "Ju lutem, pa SWF-ra, vetëm FLVs."
+
+#~ msgid "Delete thumbnail"
+#~ msgstr "Fshije miniaturën"
+
+#~ msgid "Unsubscribed"
+#~ msgstr "Çpajtuar"
+
+#~ msgid "You have been unsubscribed from this notification."
+#~ msgstr "Jepni çpajtuar nga ky njoftim."
+
+#~ msgid "Unsubscribe"
+#~ msgstr "Çpajtohuni"
+
+#~ msgid "Do you want to stop receiving email notifications from the {1} <strong>{0}</strong>?"
+#~ msgstr "Dëshironi të reshtni së marruri njoftime me email prej {1} <strong>{0}</strong>?"
+
+#~ msgid "Save"
+#~ msgstr "Ruaje"
+
+#~ msgid "Articles tagged: {tag}"
+#~ msgstr "Artikujt të etiketuar me: {tag}"
+
+#~ msgid "Profile"
+#~ msgstr "Profil"
+
+#~ msgid "Remember me"
+#~ msgstr "Mbamë mend"
+
+#~ msgid "Click here to register"
+#~ msgstr "Klikoni këtu për t'u regjistruar"
+
+#~ msgid "Click here if you've forgotten your password"
+#~ msgstr "Nëse harruat fjalëkalimin tuaj, klikoni këtu"
+
+#~ msgid "I forgot my password"
+#~ msgstr "Harrova fjalëkalimin tim"
 
 #, fuzzy
 #~ msgid "Contact"
 #~ msgstr "ID-ra Lënde"
+
 #~ msgid "Log Out"
 #~ msgstr "Dilni"
+
 #~ msgid "My Account"
 #~ msgstr "Llogaria Ime"
+
 #~ msgid "How to Contribute"
 #~ msgstr "Si të Merrni Pjesë"
+
 #~ msgid "Other Firefox Support"
 #~ msgstr "Asistencë e Mëtejshme për Firefox-in"
 
 #, fuzzy
 #~ msgid "Delete this {type}"
 #~ msgstr "përpunoni këtë faqe"
-
-#, fuzzy
-#~ msgid "Localizer Dashboard"
-#~ msgstr "Pult përkthimesh"
-
