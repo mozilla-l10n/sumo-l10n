@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-08 07:54-0700\n"
+"POT-Creation-Date: 2011-06-16 14:31-0700\n"
 "PO-Revision-Date: 2011-06-10 20:25+0200\n"
 "Last-Translator: Merike <merike.sell@eesti.ee>\n"
 "Language-Team: Estonian <>\n"
@@ -18,7 +18,7 @@ msgstr ""
 msgid "New announcement for {group}"
 msgstr "Uus teade {group}'le"
 
-#: apps/customercare/views.py:28 apps/dashboards/readouts.py:121
+#: apps/customercare/views.py:28 apps/dashboards/readouts.py:128
 msgid "Most Recent"
 msgstr "Kõige värskemad"
 
@@ -214,10 +214,11 @@ msgstr "Enne Ägeda Väega liitumist tuleb sul säutsudele vastamiseks sisse log
 #: apps/customercare/templates/customercare/twitter_modal.html:12 apps/gallery/templates/gallery/confirm_media_delete.html:60 apps/gallery/templates/gallery/edit_media.html:28
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:58
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:132 apps/gallery/templates/gallery/includes/upload_media_form.html:138
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/kbforums/templates/kbforums/confirm_post_delete.html:30 apps/kbforums/templates/kbforums/confirm_thread_delete.html:32
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/groups/templates/groups/confirm_avatar_delete.html:23 apps/groups/templates/groups/confirm_remove_member.html:12
+#: apps/groups/templates/groups/edit_avatar.html:15 apps/kbforums/templates/kbforums/confirm_post_delete.html:30 apps/kbforums/templates/kbforums/confirm_thread_delete.html:32
 #: apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29 apps/kbforums/templates/kbforums/new_thread.html:36
 #: apps/messages/templates/messages/delete.html:20 apps/messages/templates/messages/new.html:16 apps/users/templates/users/confirm_avatar_delete.html:23
-#: apps/wiki/templates/wiki/includes/review_form.html:35 apps/wiki/templates/wiki/includes/review_form.html:49 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
+#: apps/wiki/templates/wiki/includes/review_form.html:43 apps/wiki/templates/wiki/includes/review_form.html:57 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "Katkesta"
 
@@ -233,144 +234,141 @@ msgstr "Läbi aegade"
 msgid "Parameters which will be passed to the dashboard. The dashboard determines the meaning and format of these."
 msgstr "Dashboardile saadetavad parameetrid. Dashboard määrab nende tähenduse ja vormingu."
 
-#: apps/dashboards/readouts.py:85
+#: apps/dashboards/readouts.py:92
 msgid "Most-Visited Articles"
 msgstr "Enim külastatud teemad"
 
-#: apps/dashboards/readouts.py:89
+#: apps/dashboards/readouts.py:96
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "Need 20 enimkülastatud teemat moodustavad enam kui 50% kogu teadmusbaasi liiklusest."
 
-#: apps/dashboards/readouts.py:92 apps/dashboards/readouts.py:329 apps/wiki/models.py:46
+#: apps/dashboards/readouts.py:99 apps/dashboards/readouts.py:332 apps/wiki/models.py:47
 msgid "Templates"
 msgstr "Mallid"
 
-#: apps/dashboards/readouts.py:96
+#: apps/dashboards/readouts.py:103
 msgid "How many of the approved templates which allow translations have an approved translation into this language"
 msgstr "Kui paljudel tõlkimist lubavatel aktsepteeritud mallidel on olemas aktsepteeritud tõlge sellesse keelde"
 
-#: apps/dashboards/readouts.py:99
+#: apps/dashboards/readouts.py:106
 msgid "All Knowledge Base Articles"
 msgstr "Kõik teadmusbaasi teemad"
 
-#: apps/dashboards/readouts.py:102
+#: apps/dashboards/readouts.py:109
 msgid "How many of the approved English articles which allow translations have an approved translation into this language"
 msgstr "Kui paljudel tõlkimist lubavatel aktsepteeritud ingliskeelsetel teemadel on aktsepteeritud tõlge sellesse keelde"
 
-#: apps/dashboards/readouts.py:118
+#: apps/dashboards/readouts.py:125
 msgid "Visits this week"
 msgstr "Külastusi sel nädalal"
 
-#: apps/dashboards/readouts.py:119 apps/wiki/templates/wiki/includes/revision_list.html:22
+#: apps/dashboards/readouts.py:126 apps/wiki/templates/wiki/includes/revision_list.html:22
 msgid "Status"
 msgstr "Olek"
 
-#: apps/dashboards/readouts.py:120
+#: apps/dashboards/readouts.py:127
 msgid "Most Viewed"
 msgstr "Enim külastatud"
 
-#: apps/dashboards/readouts.py:190
+#: apps/dashboards/readouts.py:197
 msgid "Most Visited"
 msgstr "Enim külastatud"
 
-#: apps/dashboards/readouts.py:192
+#: apps/dashboards/readouts.py:199
 msgid "All knowledge base articles..."
 msgstr "Kõik teadmusbaasi teemad..."
 
-#: apps/dashboards/readouts.py:194
+#: apps/dashboards/readouts.py:201
 msgid "Visits"
 msgstr "Külastusi"
 
-#: apps/dashboards/readouts.py:197
+#: apps/dashboards/readouts.py:204
 msgid "Review Needed"
 msgstr "Üle vaatamata"
 
-#. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:246
+#: apps/dashboards/readouts.py:251
 msgid "All translations..."
 msgstr "Kõik tõlked..."
 
-#: apps/dashboards/readouts.py:250
+#: apps/dashboards/readouts.py:255
 msgid "Update Needed"
 msgstr "Vajab uuendamist"
 
-#: apps/dashboards/readouts.py:252
+#: apps/dashboards/readouts.py:257
 msgid "Immediate Update Needed"
 msgstr "Vajab kohest uuendamist"
 
-#: apps/dashboards/readouts.py:304
+#: apps/dashboards/readouts.py:309
 msgid "Translation Needed"
 msgstr "Ootab tõlkimist"
 
-#. L10n: Replace "English" with your language.
-#: apps/dashboards/readouts.py:333
-msgid "All templates in English..."
+#: apps/dashboards/readouts.py:334
+#, fuzzy
+msgid "All templates..."
 msgstr "Kõik eestikeelsed mallid..."
 
-#: apps/dashboards/readouts.py:341 apps/dashboards/readouts.py:342
+#: apps/dashboards/readouts.py:342 apps/dashboards/readouts.py:343
 msgid "Untranslated"
 msgstr "Tõlkimata"
 
-#: apps/dashboards/readouts.py:343
+#: apps/dashboards/readouts.py:344
 msgid "All untranslated articles..."
 msgstr "Kõik tõlkimata teemad..."
 
-#: apps/dashboards/readouts.py:345
+#: apps/dashboards/readouts.py:346
 msgid "Updated"
 msgstr "Viimati uuendatud"
 
-#: apps/dashboards/readouts.py:385 apps/dashboards/readouts.py:391
+#: apps/dashboards/readouts.py:390 apps/dashboards/readouts.py:396
 msgid "Immediate Updates Needed"
 msgstr "Vajab kohest uuendamist"
 
-#: apps/dashboards/readouts.py:386
+#: apps/dashboards/readouts.py:391
 msgid ""
 "This indicates a major edit which changes the content of the article enough to hurt the value of the localization. Until it is updated, the localized page will warn users that it may be outdated. "
 "You should update these articles as soon as possible."
 msgstr ""
-"Tähistab suuremat muudatust, mis muudab sisu niivõrd, et tõlge kannatab. "
-"Kuni tõlget pole uuendatud, kuvatakse kasutajatele hoiatus, et info lehel "
-"võib olla aegunud. Neid teemasid tuleks uuendada nii pea kui võimalik."
+"Tähistab suuremat muudatust, mis muudab sisu niivõrd, et tõlge kannatab. Kuni tõlget pole uuendatud, kuvatakse kasutajatele hoiatus, et info lehel võib olla aegunud. Neid teemasid tuleks uuendada "
+"nii pea kui võimalik."
 
-#: apps/dashboards/readouts.py:392
+#: apps/dashboards/readouts.py:397
 msgid "All translations needing immediate updates..."
 msgstr "Kõik kohest uuendamist vajavad tõlked..."
 
-#: apps/dashboards/readouts.py:394
+#: apps/dashboards/readouts.py:399
 msgid "Out of date since"
 msgstr "Aegunud alates"
 
-#: apps/dashboards/readouts.py:469 apps/dashboards/readouts.py:475
+#: apps/dashboards/readouts.py:477 apps/dashboards/readouts.py:483
 msgid "Updates Needed"
 msgstr "Vajab uuendamist"
 
-#: apps/dashboards/readouts.py:470
+#: apps/dashboards/readouts.py:478
 msgid ""
 "This signifies an edit that doesn't diminish the value of the localized article: for example, rewording a paragraph. Localizers are notified of this edit, but no warning is shown on the localized "
 "page. You should update these articles soon."
-msgstr ""
-"Tähistab muudatust, mis ei kahanda tõlke väärtust: näiteks lõigu "
-"ümbersõnastus. Tõlkijaid teavitatakse sellisest muudatusest, kuid hoiatust "
-"lehel ei kuvata. Neid teemasid tuleks uuendada."
+msgstr "Tähistab muudatust, mis ei kahanda tõlke väärtust: näiteks lõigu ümbersõnastus. Tõlkijaid teavitatakse sellisest muudatusest, kuid hoiatust lehel ei kuvata. Neid teemasid tuleks uuendada."
 
-#: apps/dashboards/readouts.py:476
+#: apps/dashboards/readouts.py:484
 msgid "All translations needing updates..."
 msgstr "Kõik uuendamist vajavad tõlked..."
 
-#: apps/dashboards/readouts.py:483
+#. L10n: Not just changes to translations but also unreviewed changes to
+#. docs in this locale that are not translations
+#: apps/dashboards/readouts.py:493
 msgid "Unreviewed Changes"
 msgstr "Üle vaatamata muudatused"
 
-#: apps/dashboards/readouts.py:487
+#: apps/dashboards/readouts.py:495
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "Üle vaatamata"
 
-#: apps/dashboards/readouts.py:488
+#: apps/dashboards/readouts.py:496
 msgid "All articles requiring review..."
 msgstr "Kõik üle vaatamist vajavad teemad..."
 
-#: apps/dashboards/readouts.py:490
+#: apps/dashboards/readouts.py:498
 msgid "Changed"
 msgstr "Muudetud"
 
@@ -432,9 +430,7 @@ msgstr "Kasutajaliides"
 
 #: apps/dashboards/templates/dashboards/includes/macros.html:65
 msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
-msgstr ""
-"Täielikult tõlgitud kasutajaliides parandab külastajate kasutuskogemust. "
-"Aita <a href=\"%(url)s\">kasutajaliidest tõlkida</a>."
+msgstr "Täielikult tõlgitud kasutajaliides parandab külastajate kasutuskogemust. Aita <a href=\"%(url)s\">kasutajaliidest tõlkida</a>."
 
 #: apps/dashboards/templates/dashboards/includes/macros.html:74
 msgid "More options:"
@@ -566,7 +562,7 @@ msgid "There is no flagged content pending moderation."
 msgstr ""
 
 #: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:3 apps/kbforums/forms.py:28 apps/kbforums/forms.py:50
-#: apps/kbforums/forms.py:76 apps/wiki/forms.py:184 apps/wiki/templates/wiki/review_translation.html:66 apps/wiki/templates/wiki/includes/document_macros.html:158
+#: apps/kbforums/forms.py:76 apps/wiki/forms.py:190 apps/wiki/templates/wiki/review_translation.html:66 apps/wiki/templates/wiki/includes/document_macros.html:158
 msgid "Content:"
 msgstr "Sisu:"
 
@@ -591,9 +587,9 @@ msgstr ""
 msgid "Edit"
 msgstr "Toimeta"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:29
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:31 apps/kbforums/templates/kbforums/posts.html:41 apps/kbforums/templates/kbforums/includes/post.html:16
-#: apps/wiki/templates/wiki/confirm_document_delete.html:36 apps/wiki/templates/wiki/confirm_revision_delete.html:31
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/groups/templates/groups/profile.html:13
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:29 apps/kbforums/templates/kbforums/confirm_thread_delete.html:31 apps/kbforums/templates/kbforums/posts.html:41
+#: apps/kbforums/templates/kbforums/includes/post.html:16 apps/wiki/templates/wiki/confirm_document_delete.html:36 apps/wiki/templates/wiki/confirm_revision_delete.html:31
 msgid "Delete"
 msgstr "Kustuta"
 
@@ -913,6 +909,132 @@ msgstr "Edenemine (ogv)"
 msgid "Progress (webm)"
 msgstr "Edenemine (webm)"
 
+#: apps/groups/forms.py:27 apps/search/forms.py:103
+msgid "username"
+msgstr "kasutajanimi"
+
+#: apps/groups/models.py:22 apps/users/models.py:37
+msgid "Avatar"
+msgstr "Avatar"
+
+#: apps/groups/views.py:48
+#, fuzzy
+msgid "Group information updated successfully!"
+msgstr "Kinnituskirja saatmine õnnestus."
+
+#: apps/groups/views.py:123
+msgid "{users} added to the group successfully!"
+msgstr ""
+
+#: apps/groups/views.py:128
+msgid "There were errors adding members to the group, see below."
+msgstr ""
+
+#: apps/groups/views.py:145
+msgid "{user} removed from the group successfully!"
+msgstr ""
+
+#: apps/groups/templates/groups/confirm_avatar_delete.html:3
+#, fuzzy
+msgid "Delete {group} group avatar"
+msgstr "Kustuta avatar"
+
+#: apps/groups/templates/groups/confirm_avatar_delete.html:7
+#, fuzzy
+msgid "Are you sure you want to delete the {group} group avatar?"
+msgstr "Kas oled kindel, et soovid oma avatari kustutada?"
+
+#: apps/groups/templates/groups/confirm_avatar_delete.html:15
+#, fuzzy
+msgid "You are about to permanently delete the avatar. <strong>This cannot be undone!</strong> You can always upload another avatar to replace the current one."
+msgstr "Oled oma avatari jäädavalt kustutamas. <strong>Seda ei saa ennistada!</strong> Võid alati oma avatari asendamiseks <a href=\"%(upload_url)s\">uue avatari üles laadida</a>."
+
+#: apps/groups/templates/groups/confirm_avatar_delete.html:22 apps/groups/templates/groups/profile.html:13 apps/users/templates/users/confirm_avatar_delete.html:3
+#: apps/users/templates/users/confirm_avatar_delete.html:24
+msgid "Delete avatar"
+msgstr "Kustuta avatar"
+
+#: apps/groups/templates/groups/confirm_remove_member.html:3
+#, fuzzy
+msgid "Remove member"
+msgstr "Pea mind meeles"
+
+#: apps/groups/templates/groups/confirm_remove_member.html:7
+#, fuzzy
+msgid "Are you sure you want to remove {user} from {group}?"
+msgstr "Kas oled kindel, et soovid selle pildi kustutada?"
+
+#: apps/groups/templates/groups/confirm_remove_member.html:11
+#, fuzzy
+msgid "Remove user"
+msgstr "Eemalda"
+
+#: apps/groups/templates/groups/edit.html:4
+msgid "Edit | {group} | Groups"
+msgstr ""
+
+#: apps/groups/templates/groups/edit.html:8
+msgid "Edit {group} profile information"
+msgstr ""
+
+#: apps/groups/templates/groups/edit.html:13
+msgid "Save"
+msgstr "Salvesta"
+
+#: apps/groups/templates/groups/edit_avatar.html:3
+#, fuzzy
+msgid "Change {group} group avatar"
+msgstr "Muuda avatari"
+
+#: apps/groups/templates/groups/edit_avatar.html:14 apps/users/templates/users/edit_avatar.html:15
+msgctxt "avatar"
+msgid "Upload"
+msgstr "Laadi üles"
+
+#: apps/groups/templates/groups/list.html:3
+msgid "Groups"
+msgstr ""
+
+#: apps/groups/templates/groups/list.html:8
+#, fuzzy
+msgid "Add group profile"
+msgstr "Muuda minu profiili"
+
+#: apps/groups/templates/groups/profile.html:4
+msgid "{group} | Groups"
+msgstr ""
+
+#: apps/groups/templates/groups/profile.html:11
+#, fuzzy
+msgid "Change avatar"
+msgstr "Muuda avatari"
+
+#: apps/groups/templates/groups/profile.html:11 apps/users/templates/users/edit_profile.html:29 apps/users/templates/users/edit_profile.html:34 apps/wiki/templates/wiki/translate.html:20
+msgid "Change"
+msgstr "Muuda"
+
+#: apps/groups/templates/groups/profile.html:19
+#, fuzzy
+msgid "Edit in admin"
+msgstr "Toimeta pilti"
+
+#: apps/groups/templates/groups/profile.html:24
+#, fuzzy
+msgid "Edit group profile"
+msgstr "Muuda minu profiili"
+
+#: apps/groups/templates/groups/profile.html:30
+msgid "Group Leaders"
+msgstr ""
+
+#: apps/groups/templates/groups/profile.html:38
+msgid "Group Members"
+msgstr ""
+
+#: apps/groups/templates/groups/profile.html:70
+msgid "Remove user from group"
+msgstr ""
+
 #: apps/kbforums/events.py:20
 msgid "Reply to: %s"
 msgstr "Vasta: %s'le"
@@ -921,11 +1043,11 @@ msgstr "Vasta: %s'le"
 msgid "New thread in %s: %s"
 msgstr ""
 
-#: apps/kbforums/feeds.py:22
+#: apps/kbforums/feeds.py:23
 msgid "Recently updated threads about %s"
 msgstr "Hiljuti uuendatud lõimed %s kohta"
 
-#: apps/kbforums/feeds.py:51
+#: apps/kbforums/feeds.py:53
 msgid "Recent posts in %s"
 msgstr "Hiljutised postitused teema %s"
 
@@ -1260,17 +1382,9 @@ msgstr "Firefoxi abi <span>mobiilile</span>"
 msgid "Firefox Help <span>for Sync</span>"
 msgstr "Firefoxi abi <span>Syncile</span>"
 
-#: apps/messages/forms.py:7
+#: apps/messages/forms.py:8
 msgid "username1, username2,..."
 msgstr "kasutaja1, kasutaja2,..."
-
-#: apps/messages/forms.py:15
-msgid "To field is required."
-msgstr "Saaja sisestamine on kohustuslik."
-
-#: apps/messages/forms.py:25
-msgid "{username} is not a valid username."
-msgstr "{username} ei ole korrektne kasutajanimi."
 
 #: apps/messages/views.py:97
 msgid "The message was deleted!"
@@ -1422,10 +1536,6 @@ msgstr "Loodud"
 msgid "Last updated"
 msgstr "Viimati uuendatud"
 
-#: apps/search/forms.py:103
-msgid "username"
-msgstr "kasutajanimi"
-
 #: apps/search/forms.py:110 apps/search/forms.py:128
 msgid "Sort results by"
 msgstr "Sorteeri"
@@ -1571,11 +1681,19 @@ msgstr[1] "Päringule <strong>{q}</strong> leiti <strong>{l}es</strong> <strong>
 msgid "Can't find what you're looking for? <a href='{0}'>Ask a support question instead!</a>"
 msgstr "Ei leidnud, mida otsisid? <a href='{0}'>Postita oma küsimus!</a>"
 
-#: apps/sumo/form_fields.py:104
+#: apps/sumo/form_fields.py:95
+msgid "To field is required."
+msgstr "Saaja sisestamine on kohustuslik."
+
+#: apps/sumo/form_fields.py:105
+msgid "{username} is not a valid username."
+msgstr "{username} ei ole korrektne kasutajanimi."
+
+#: apps/sumo/form_fields.py:126
 msgid "Ensure this value has at least %(limit_value)s characters (it has %(show_value)s)."
 msgstr "Veendu, et välja pikkus on vähemalt %(limit_value)s märki (praegu on %(show_value)s märki)."
 
-#: apps/sumo/form_fields.py:109
+#: apps/sumo/form_fields.py:131
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr "Veendu, et välja pikkus on vähemalt %(limit_value)s märki (praegu on %(show_value)s märki)."
 
@@ -1857,10 +1975,6 @@ msgstr "Kuvatav nimi"
 msgid "Make my email public"
 msgstr "Avalda minu e-posti aadress kõigile"
 
-#: apps/users/models.py:37
-msgid "Avatar"
-msgstr "Avatar"
-
 #: apps/users/models.py:40
 msgid "Biography"
 msgstr "Tutvustus"
@@ -1979,10 +2093,6 @@ msgstr "Kinnituskiri on saadetud"
 msgid "We've sent a confirmation to %(new_email)s. Please follow the link in the confirmation to change your account's email."
 msgstr "Saatsime kinnituskirja aadressile %(new_email)s. Palun klõpsa kinnituskirjas oleval lingil oma kontoga seotud e-posti aadressi muutmiseks."
 
-#: apps/users/templates/users/confirm_avatar_delete.html:3 apps/users/templates/users/confirm_avatar_delete.html:24
-msgid "Delete avatar"
-msgstr "Kustuta avatar"
-
 #: apps/users/templates/users/confirm_avatar_delete.html:8
 msgid "Are you sure you want to delete your avatar?"
 msgstr "Kas oled kindel, et soovid oma avatari kustutada?"
@@ -1994,11 +2104,6 @@ msgstr "Oled oma avatari jäädavalt kustutamas. <strong>Seda ei saa ennistada!<
 #: apps/users/templates/users/edit_avatar.html:3
 msgid "Change Avatar"
 msgstr "Muuda avatari"
-
-#: apps/users/templates/users/edit_avatar.html:15
-msgctxt "avatar"
-msgid "Upload"
-msgstr "Laadi üles"
 
 #: apps/users/templates/users/edit_profile.html:3
 msgid "Edit Profile"
@@ -2017,10 +2122,6 @@ msgstr "Muuda"
 msgctxt "avatar"
 msgid "Delete"
 msgstr "Kustuta"
-
-#: apps/users/templates/users/edit_profile.html:29 apps/users/templates/users/edit_profile.html:34 apps/wiki/templates/wiki/translate.html:20
-msgid "Change"
-msgstr "Muuda"
 
 #: apps/users/templates/users/edit_profile.html:32 apps/users/templates/users/profile.html:42
 msgid "Email:"
@@ -2167,10 +2268,7 @@ msgstr "Kinnituskirja saatmine õnnestus."
 msgid ""
 "Before you can log in, you need to confirm your email address. We've sent a new confirmation email to any account using <strong>%(email)s</strong>. To confirm the email address, just follow the "
 "link in the email."
-msgstr ""
-"Enne, kui saad sisse logida, tuleb e-posti aadress kinnitada. Saatsime uue "
-"kinnituskirja aadressile <strong>%(email)s</strong>. Aadressi kinnitamiseks "
-"klõpsa lingil kirjas."
+msgstr "Enne, kui saad sisse logida, tuleb e-posti aadress kinnitada. Saatsime uue kinnituskirja aadressile <strong>%(email)s</strong>. Aadressi kinnitamiseks klõpsa lingil kirjas."
 
 #: apps/users/templates/users/includes/macros.html:23
 msgid "Logging in..."
@@ -2196,15 +2294,15 @@ msgstr "Mul ei ole kontot."
 msgid "I didn't get a confirmation email."
 msgstr "Kinnituskiri ei jõudnud kohale."
 
-#: apps/wiki/events.py:50
+#: apps/wiki/events.py:72
 msgid "{title} was edited by {creator}"
 msgstr "{title} muutis {creator}"
 
-#: apps/wiki/events.py:86
+#: apps/wiki/events.py:108
 msgid "{title} is ready for review ({creator})"
 msgstr "{title} on valmis üle vaatamiseks ({creator})"
 
-#: apps/wiki/events.py:105
+#: apps/wiki/events.py:127
 msgid "{title} ({locale}) has a new approved revision"
 msgstr "{title} ({locale}) on uus aktsepteeritud versioon"
 
@@ -2284,166 +2382,176 @@ msgstr "Tõlkimine on lubatud:"
 msgid "Obsolete:"
 msgstr "Iganenud:"
 
-#: apps/wiki/forms.py:112
+#: apps/wiki/forms.py:108
+msgid "Allow discussion on this article?"
+msgstr ""
+
+#: apps/wiki/forms.py:117
 msgid "Category:"
 msgstr "Kategooria:"
 
-#: apps/wiki/forms.py:113
+#: apps/wiki/forms.py:118
 msgid "Type of article"
 msgstr "Teema tüüp"
 
-#: apps/wiki/forms.py:117
+#: apps/wiki/forms.py:122
 msgid "Topics:"
 msgstr "Teemad:"
 
-#: apps/wiki/forms.py:118
+#: apps/wiki/forms.py:123
 msgid "Popular articles in each topic are displayed on the front page"
 msgstr ""
 
-#: apps/wiki/forms.py:164 apps/wiki/templates/wiki/review_revision.html:40 apps/wiki/templates/wiki/review_translation.html:52 apps/wiki/templates/wiki/translate.html:98
+#: apps/wiki/forms.py:170 apps/wiki/templates/wiki/review_revision.html:40 apps/wiki/templates/wiki/review_translation.html:52 apps/wiki/templates/wiki/translate.html:98
 #: apps/wiki/templates/wiki/includes/document_macros.html:144
 msgid "Keywords:"
 msgstr "Võtmesõnad:"
 
-#: apps/wiki/forms.py:165
+#: apps/wiki/forms.py:171
 msgid "Affects search results"
 msgstr "Mõjutab otsingutulemusi"
 
-#: apps/wiki/forms.py:169 apps/wiki/templates/wiki/translate.html:108
+#: apps/wiki/forms.py:175 apps/wiki/templates/wiki/translate.html:108
 msgid "Search result summary:"
 msgstr "Kokkuvõte otsingutulemustes:"
 
-#: apps/wiki/forms.py:170
+#: apps/wiki/forms.py:176
 msgid "Only displayed on search results page"
 msgstr ""
 
-#: apps/wiki/forms.py:191 apps/wiki/forms.py:219
+#: apps/wiki/forms.py:197 apps/wiki/forms.py:225
 msgid "Comment:"
 msgstr "Kommentaar:"
 
-#: apps/wiki/forms.py:223
+#: apps/wiki/forms.py:229
 msgid "Significance:"
 msgstr "Olulisus:"
 
-#: apps/wiki/models.py:32
+#: apps/wiki/forms.py:235
+msgid "Ready for localization"
+msgstr ""
+
+#: apps/wiki/models.py:33
 msgid "Minor details like punctuation and spelling errors"
 msgstr "Väiksed muudatused nagu kirjavahemärgid ja kirjavead"
 
-#: apps/wiki/models.py:34
+#: apps/wiki/models.py:35
 msgid "Content changes that don't require immediate translation"
 msgstr "Sisu muudatused, mis ei nõua kohest tõlkimist"
 
-#: apps/wiki/models.py:36
+#: apps/wiki/models.py:37
 msgid "Major content changes that will make older translations inaccurate"
 msgstr "Suuremad muudatused, mis muudavad vanemad tõlked ebatäpseks"
 
-#: apps/wiki/models.py:41
+#: apps/wiki/models.py:42
 msgid "Troubleshooting"
 msgstr "Probleemide lahendamine"
 
-#: apps/wiki/models.py:42
+#: apps/wiki/models.py:43
 msgid "How to"
 msgstr "Juhend"
 
-#: apps/wiki/models.py:43
+#: apps/wiki/models.py:44
 msgid "How to contribute"
 msgstr "Kuidas kaastööd teha"
 
-#: apps/wiki/models.py:44
+#: apps/wiki/models.py:45
 msgid "Administration"
 msgstr "Administreerimine"
 
-#: apps/wiki/models.py:45
+#: apps/wiki/models.py:46
 msgid "Navigation"
 msgstr "Navigatsioon"
 
-#: apps/wiki/models.py:68
+#: apps/wiki/models.py:69
 msgid "Desktop:"
 msgstr ""
 
-#: apps/wiki/models.py:71 apps/wiki/models.py:72 apps/wiki/models.py:83
+#: apps/wiki/models.py:72 apps/wiki/models.py:73 apps/wiki/models.py:84
 msgid "Firefox 6"
 msgstr "Firefox 6"
 
-#: apps/wiki/models.py:73 apps/wiki/models.py:74 apps/wiki/models.py:86
+#: apps/wiki/models.py:74 apps/wiki/models.py:75 apps/wiki/models.py:87
 msgid "Firefox 5"
 msgstr "Firefox 5"
 
-#: apps/wiki/models.py:75 apps/wiki/models.py:76 apps/wiki/models.py:89
+#: apps/wiki/models.py:76 apps/wiki/models.py:77 apps/wiki/models.py:90
 msgid "Firefox 4"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:77 apps/wiki/models.py:78
+#: apps/wiki/models.py:78 apps/wiki/models.py:79
 msgid "Firefox 3.5-3.6"
 msgstr "Firefox 3.5-3.6"
 
-#: apps/wiki/models.py:80 apps/wiki/models.py:81
+#: apps/wiki/models.py:81 apps/wiki/models.py:82
 msgid "Firefox 3.0"
 msgstr "Firefox 3.0"
 
-#: apps/wiki/models.py:82
+#: apps/wiki/models.py:83
 msgid "Mobile:"
 msgstr ""
 
-#: apps/wiki/models.py:84
+#: apps/wiki/models.py:85
 msgid "Firefox 6 for Mobile"
 msgstr "Firefox 6 mobiilile"
 
-#: apps/wiki/models.py:87
+#: apps/wiki/models.py:88
 msgid "Firefox 5 for Mobile"
 msgstr "Firefox 5 mobiilile"
 
-#: apps/wiki/models.py:90
+#: apps/wiki/models.py:91
 msgid "Firefox 4 for Mobile"
 msgstr "Firefox 4 mobiilile"
 
-#: apps/wiki/models.py:100
+#: apps/wiki/models.py:101
 msgid "Desktop OS:"
 msgstr "Töölaua OS:"
 
-#: apps/wiki/models.py:101
+#: apps/wiki/models.py:102
 msgid "Windows"
 msgstr "Windows"
 
-#: apps/wiki/models.py:102
+#: apps/wiki/models.py:103
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: apps/wiki/models.py:103
+#: apps/wiki/models.py:104
 msgid "Linux"
 msgstr "Linux"
 
-#: apps/wiki/models.py:104
+#: apps/wiki/models.py:105
 msgid "Mobile OS:"
 msgstr "Mobiilne OS:"
 
-#: apps/wiki/models.py:105
+#: apps/wiki/models.py:106
 msgid "Android"
 msgstr "Android"
 
-#: apps/wiki/models.py:106
+#: apps/wiki/models.py:107
 msgid "Maemo"
 msgstr "Maemo"
 
-#: apps/wiki/models.py:115
+#: apps/wiki/models.py:116
 msgid "%(old)s Redirect %(number)i"
 msgstr ""
 
-#: apps/wiki/models.py:116
+#: apps/wiki/models.py:117
 msgid "%(old)s-redirect-%(number)i"
 msgstr ""
 
-#: apps/wiki/models.py:197
+#: apps/wiki/models.py:202
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
-msgstr ""
-"Märgistamine peidab lehe põhilistes otsingutes ja dashboardil. Lehe "
-"vaatamisel kuvatakse hoiatus, et lehte ei hooldata."
+msgstr "Märgistamine peidab lehe põhilistes otsingutes ja dashboardil. Lehe vaatamisel kuvatakse hoiatus, et lehte ei hooldata."
 
-#: apps/wiki/models.py:286
+#: apps/wiki/models.py:209
+msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
+msgstr ""
+
+#: apps/wiki/models.py:297
 msgid "Please choose a category."
 msgstr "Palun vali kategooria."
 
-#: apps/wiki/models.py:620
+#: apps/wiki/models.py:650
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr ""
 
@@ -2502,19 +2610,19 @@ msgctxt "KB Topic"
 msgid "Firefox 4.0"
 msgstr "Firefox 4.0"
 
-#: apps/wiki/views.py:451
+#: apps/wiki/views.py:459
 msgid "You cannot translate this document."
 msgstr "Sa ei saa seda dokumenti tõlkida."
 
-#: apps/wiki/views.py:651
+#: apps/wiki/views.py:659
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "Tore kuulda &mdash; täname tagasiside eest!"
 
-#: apps/wiki/views.py:653
+#: apps/wiki/views.py:661
 msgid "Sorry to hear that. Try searching for solutions below."
 msgstr "Sellest on kahju. Proovi allpool lahendusi otsida."
 
-#: apps/wiki/views.py:664
+#: apps/wiki/views.py:672
 msgid "You already voted on this Article."
 msgstr "Sa oled selles teemas juba hääletanud."
 
@@ -2593,9 +2701,7 @@ msgstr "Kas oled kindel, et soovid selle versiooni kustutada?"
 
 #: apps/wiki/templates/wiki/confirm_revision_delete.html:28
 msgid "You are about to permanently delete this revision. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
-msgstr ""
-"Oled seda versiooni lõplikult kustutamas. <strong>Seda tegevust ei saa "
-"ennistada!</strong> Kas oled jätkamises kindel?"
+msgstr "Oled seda versiooni lõplikult kustutamas. <strong>Seda tegevust ei saa ennistada!</strong> Kas oled jätkamises kindel?"
 
 #. {t} is the title of the document. {c} is the category.
 #: apps/wiki/templates/wiki/document.html:6 apps/wiki/templates/wiki/mobile/document.html:5
@@ -2742,11 +2848,11 @@ msgstr "Avalik versioon:"
 msgid "Submitted revision:"
 msgstr ""
 
-#: apps/wiki/templates/wiki/review_revision.html:26 apps/wiki/templates/wiki/revision.html:60
+#: apps/wiki/templates/wiki/review_revision.html:26 apps/wiki/templates/wiki/revision.html:64
 msgid "Revision Source"
 msgstr "Versiooni lähtetekst"
 
-#: apps/wiki/templates/wiki/review_revision.html:32 apps/wiki/templates/wiki/review_translation.html:77 apps/wiki/templates/wiki/revision.html:66
+#: apps/wiki/templates/wiki/review_revision.html:32 apps/wiki/templates/wiki/review_translation.html:77 apps/wiki/templates/wiki/revision.html:70
 msgid "Revision Content"
 msgstr "Versiooni sisu"
 
@@ -2806,7 +2912,7 @@ msgstr ""
 msgid "The {default_locale} version has no approved content to show."
 msgstr ""
 
-#: apps/wiki/templates/wiki/review_translation.html:45 apps/wiki/templates/wiki/translate.html:126
+#: apps/wiki/templates/wiki/review_translation.html:45 apps/wiki/templates/wiki/translate.html:128
 msgid "Approved {default_locale} version:"
 msgstr "Heakskiidetud {default_locale} versioon:"
 
@@ -2860,27 +2966,27 @@ msgstr "Versiooni id:"
 msgid "Creator:"
 msgstr "Looja:"
 
-#: apps/wiki/templates/wiki/revision.html:32
-msgid "Is reviewed?"
-msgstr "Üle vaadatud?"
-
-#: apps/wiki/templates/wiki/revision.html:37
+#: apps/wiki/templates/wiki/revision.html:32 apps/wiki/templates/wiki/revision.html:41
 msgid "Reviewed:"
 msgstr "Üle vaadatud:"
 
-#: apps/wiki/templates/wiki/revision.html:41
+#: apps/wiki/templates/wiki/revision.html:36
+msgid "Ready for localization:"
+msgstr ""
+
+#: apps/wiki/templates/wiki/revision.html:45
 msgid "Reviewed by:"
 msgstr "Ülevaataja:"
 
-#: apps/wiki/templates/wiki/revision.html:45
+#: apps/wiki/templates/wiki/revision.html:49
 msgid "Is approved?"
 msgstr "Heakskiidetud?"
 
-#: apps/wiki/templates/wiki/revision.html:49
+#: apps/wiki/templates/wiki/revision.html:53
 msgid "Is current revision?"
 msgstr ""
 
-#: apps/wiki/templates/wiki/revision.html:54 apps/wiki/templates/wiki/includes/revision_list.html:75
+#: apps/wiki/templates/wiki/revision.html:58 apps/wiki/templates/wiki/includes/revision_list.html:75
 msgid "Edit article based on this revision"
 msgstr ""
 
@@ -2914,7 +3020,7 @@ msgid "Translating article to {locale}"
 msgstr "Oled teemat {locale}de tõlkimas"
 
 #: apps/wiki/templates/wiki/translate.html:24
-msgid "You are translating an unreviewed or rejected English document."
+msgid "You are translating an English document which is not yet ready for localization."
 msgstr ""
 
 #: apps/wiki/templates/wiki/translate.html:27
@@ -2950,10 +3056,14 @@ msgid "Search result summary in {locale}:"
 msgstr "Kokkuvõte {locale}setes otsingutulemustes:"
 
 #: apps/wiki/templates/wiki/translate.html:121
+msgid "Note: This article has no revisions ready for localization."
+msgstr ""
+
+#: apps/wiki/templates/wiki/translate.html:123
 msgid "Note: There are no approved translations for this article."
 msgstr "Märkus: sellel teemal ei ole heakskiidetud tõlget."
 
-#: apps/wiki/templates/wiki/translate.html:130
+#: apps/wiki/templates/wiki/translate.html:132
 msgid "{locale} translation:"
 msgstr "Tõlge {locale}de:"
 
@@ -3051,27 +3161,27 @@ msgstr ""
 msgid "Thanks for taking the time to review these changes. Please consider sending a thank you to the person who submitted them."
 msgstr "Täname, et leidsid aega nende muudatuste üle vaatamiseks. Palun kaalu tõlkija tänamist."
 
-#: apps/wiki/templates/wiki/includes/review_form.html:31 apps/wiki/templates/wiki/includes/review_form.html:45
+#: apps/wiki/templates/wiki/includes/review_form.html:31 apps/wiki/templates/wiki/includes/review_form.html:53
 msgid "Leave a message for the contributor: <span class=\"optional\">(optional)</span>"
 msgstr "Jäta kaastöötajale sõnum: <span class=\"optional\">(valikuline)</span>"
 
-#: apps/wiki/templates/wiki/includes/review_form.html:34
+#: apps/wiki/templates/wiki/includes/review_form.html:42
 msgid "Accept"
 msgstr "Aktsepteeri"
 
-#: apps/wiki/templates/wiki/includes/review_form.html:38
+#: apps/wiki/templates/wiki/includes/review_form.html:46
 msgid "Reject this Translation"
 msgstr "Lükka see tõlge tagasi"
 
-#: apps/wiki/templates/wiki/includes/review_form.html:38
+#: apps/wiki/templates/wiki/includes/review_form.html:46
 msgid "Reject this Revision"
 msgstr "Lükka see versioon tagasi"
 
-#: apps/wiki/templates/wiki/includes/review_form.html:41
+#: apps/wiki/templates/wiki/includes/review_form.html:49
 msgid "Thanks for taking the time to review these changes. Please consider leaving a message for the person who submitted them explaining why they were rejected."
 msgstr ""
 
-#: apps/wiki/templates/wiki/includes/review_form.html:48
+#: apps/wiki/templates/wiki/includes/review_form.html:56
 msgid "Reject"
 msgstr "Lükka tagasi"
 
@@ -3541,6 +3651,9 @@ msgstr "Firefox Sync"
 msgid "View full site"
 msgstr "Vaata lehe täisversiooni"
 
+#~ msgid "Is reviewed?"
+#~ msgstr "Üle vaadatud?"
+
 #~ msgid "My account is inactive."
 #~ msgstr "Mu konto pole aktiivne."
 
@@ -3587,9 +3700,6 @@ msgstr "Vaata lehe täisversiooni"
 #~ msgid "Recent stats not available."
 #~ msgstr "Hiljutine statistika ei ole saadaval."
 
-#~ msgid "Remember me"
-#~ msgstr "Pea mind meeles"
-
 #~ msgid "Forum"
 #~ msgstr "Foorum"
 
@@ -3612,9 +3722,6 @@ msgstr "Vaata lehe täisversiooni"
 #~ msgctxt "locale"
 #~ msgid "Get emailed when English reviews are waiting"
 #~ msgstr "Saada e-postiga teavitusi üle vaatamist vajavate teemade kohta"
-
-#~ msgid "Save"
-#~ msgstr "Salvesta"
 
 #~ msgid "Profile"
 #~ msgstr "Profiil"
