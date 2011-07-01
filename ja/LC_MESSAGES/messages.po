@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-16 14:31-0700\n"
+"POT-Creation-Date: 2011-07-01 11:00-0700\n"
 "PO-Revision-Date: 2011-06-18 04:39+0200\n"
 "Last-Translator: marsf <chimantaea_mirabilis@yahoo.co.jp>\n"
 "Language-Team: Japanese\n"
@@ -218,11 +218,12 @@ msgstr "Army of Awesome に参加する前に、ログインする必要があ�
 #: apps/customercare/templates/customercare/twitter_modal.html:12 apps/gallery/templates/gallery/confirm_media_delete.html:60 apps/gallery/templates/gallery/edit_media.html:28
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:58
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:132 apps/gallery/templates/gallery/includes/upload_media_form.html:138
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/groups/templates/groups/confirm_avatar_delete.html:23 apps/groups/templates/groups/confirm_remove_member.html:12
-#: apps/groups/templates/groups/edit_avatar.html:15 apps/kbforums/templates/kbforums/confirm_post_delete.html:30 apps/kbforums/templates/kbforums/confirm_thread_delete.html:32
-#: apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29 apps/kbforums/templates/kbforums/new_thread.html:36
-#: apps/messages/templates/messages/delete.html:20 apps/messages/templates/messages/new.html:16 apps/users/templates/users/confirm_avatar_delete.html:23
-#: apps/wiki/templates/wiki/includes/review_form.html:43 apps/wiki/templates/wiki/includes/review_form.html:57 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/groups/templates/groups/confirm_avatar_delete.html:23 apps/groups/templates/groups/confirm_remove_leader.html:12
+#: apps/groups/templates/groups/confirm_remove_member.html:12 apps/groups/templates/groups/edit_avatar.html:15 apps/kbforums/templates/kbforums/confirm_post_delete.html:30
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:32 apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29
+#: apps/kbforums/templates/kbforums/new_thread.html:36 apps/messages/templates/messages/delete.html:20 apps/messages/templates/messages/new.html:16
+#: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/includes/review_form.html:43 apps/wiki/templates/wiki/includes/review_form.html:57
+#: apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -245,8 +246,7 @@ msgstr "アクセス数の最も多い記事"
 
 #: apps/dashboards/readouts.py:96
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
-msgstr ""
-"これらは、英語版でアクセス数が最も多いトップ 20 の記事です。これらの合計は、英語版ナレッジベースの全トラフィックの 50% 以上を占めます。"
+msgstr "これらは、英語版でアクセス数が最も多いトップ 20 の記事です。これらの合計は、英語版ナレッジベースの全トラフィックの 50% 以上を占めます。"
 
 #: apps/dashboards/readouts.py:99 apps/dashboards/readouts.py:332 apps/wiki/models.py:47
 msgid "Templates"
@@ -926,20 +926,35 @@ msgstr "ユーザ名"
 msgid "Avatar"
 msgstr "アバター"
 
-#: apps/groups/views.py:48
+#: apps/groups/views.py:51
 msgid "Group information updated successfully!"
 msgstr "グループ情報の更新が完了しました！"
 
-#: apps/groups/views.py:123
+#: apps/groups/views.py:126
 msgid "{users} added to the group successfully!"
 msgstr "{users} をグループに追加しました。"
 
-#: apps/groups/views.py:128
+#: apps/groups/views.py:131
 msgid "There were errors adding members to the group, see below."
 msgstr "グループにメンバーを追加する時にエラーが発生しました。以下を参照してください。"
 
-#: apps/groups/views.py:145
+#: apps/groups/views.py:151
 msgid "{user} removed from the group successfully!"
+msgstr "{user} をグループから削除しました。"
+
+#: apps/groups/views.py:176
+#, fuzzy
+msgid "{users} added to the group leaders successfully!"
+msgstr "{users} をグループに追加しました。"
+
+#: apps/groups/views.py:181
+#, fuzzy
+msgid "There were errors adding leaders to the group, see below."
+msgstr "グループにメンバーを追加する時にエラーが発生しました。以下を参照してください。"
+
+#: apps/groups/views.py:198
+#, fuzzy
+msgid "{user} removed from the group leaders successfully!"
 msgstr "{user} をグループから削除しました。"
 
 #: apps/groups/templates/groups/confirm_avatar_delete.html:3
@@ -952,26 +967,30 @@ msgstr "本当に {group} のグループアバターを削除してもよろし
 
 #: apps/groups/templates/groups/confirm_avatar_delete.html:15
 msgid "You are about to permanently delete the avatar. <strong>This cannot be undone!</strong> You can always upload another avatar to replace the current one."
-msgstr ""
-"アバターを完全に削除しようとしています。<strong>この操作は元に戻せません！</strong> "
-"現在のものと置き換えるには、別のアバターをアップロードしてください。"
+msgstr "アバターを完全に削除しようとしています。<strong>この操作は元に戻せません！</strong> 現在のものと置き換えるには、別のアバターをアップロードしてください。"
 
 #: apps/groups/templates/groups/confirm_avatar_delete.html:22 apps/groups/templates/groups/profile.html:13 apps/users/templates/users/confirm_avatar_delete.html:3
 #: apps/users/templates/users/confirm_avatar_delete.html:24
 msgid "Delete avatar"
 msgstr "アバターを削除"
 
-#: apps/groups/templates/groups/confirm_remove_member.html:3
+#: apps/groups/templates/groups/confirm_remove_leader.html:3 apps/groups/templates/groups/confirm_remove_leader.html:11
+#, fuzzy
+msgid "Remove leader"
+msgstr "メンバーを削除"
+
+#: apps/groups/templates/groups/confirm_remove_leader.html:7
+#, fuzzy
+msgid "Are you sure you want to remove {user} from {group} leaders?"
+msgstr "本当に {user} を {group} グループから削除してもよろしいですか？"
+
+#: apps/groups/templates/groups/confirm_remove_member.html:3 apps/groups/templates/groups/confirm_remove_member.html:11
 msgid "Remove member"
 msgstr "メンバーを削除"
 
 #: apps/groups/templates/groups/confirm_remove_member.html:7
 msgid "Are you sure you want to remove {user} from {group}?"
 msgstr "本当に {user} を {group} グループから削除してもよろしいですか？"
-
-#: apps/groups/templates/groups/confirm_remove_member.html:11
-msgid "Remove user"
-msgstr "ユーザを削除"
 
 #: apps/groups/templates/groups/edit.html:4
 msgid "Edit | {group} | Groups"
@@ -1022,15 +1041,30 @@ msgstr "管理者権限で編集"
 msgid "Edit group profile"
 msgstr "グループプロファイルを編集"
 
-#: apps/groups/templates/groups/profile.html:30
+#: apps/groups/templates/groups/profile.html:32
+#, fuzzy
+msgid "Edit group leaders"
+msgstr "グループプロファイルを編集"
+
+#: apps/groups/templates/groups/profile.html:34
 msgid "Group Leaders"
 msgstr "グループリーダー"
 
-#: apps/groups/templates/groups/profile.html:38
+#: apps/groups/templates/groups/profile.html:41
+#, fuzzy
+msgid "Remove user from leaders"
+msgstr "グループからユーザを削除"
+
+#: apps/groups/templates/groups/profile.html:59
+#, fuzzy
+msgid "Edit group members"
+msgstr "グループメンバー"
+
+#: apps/groups/templates/groups/profile.html:61
 msgid "Group Members"
 msgstr "グループメンバー"
 
-#: apps/groups/templates/groups/profile.html:70
+#: apps/groups/templates/groups/profile.html:68
 msgid "Remove user from group"
 msgstr "グループからユーザを削除"
 
@@ -3319,11 +3353,11 @@ msgstr "トップページへ戻る"
 msgid "Firefox"
 msgstr "Firefox"
 
-#: templates/global/footer.html:17 templates/mobile/base.html:93
+#: templates/global/footer.html:17 templates/mobile/base.html:92
 msgid "Privacy Policy"
 msgstr "プライバシーポリシー"
 
-#: templates/global/footer.html:18 templates/mobile/base.html:94
+#: templates/global/footer.html:18 templates/mobile/base.html:93
 msgid "Legal Notices"
 msgstr "法的事項"
 
@@ -3585,11 +3619,16 @@ msgstr "記事を翻訳する"
 msgid "Contributors Forums"
 msgstr "貢献者フォーラム"
 
-#: templates/includes/sidebar_modules.html:25 templates/mobile/base.html:40
+#: templates/includes/sidebar_modules.html:17
+#, fuzzy
+msgid "Support Forum"
+msgstr "サポートフォーラム用ダッシュボード"
+
+#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:40
 msgid "Firefox Help Home"
 msgstr "Firefox ヘルプ"
 
-#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:55 templates/mobile/base.html:60
+#: templates/includes/sidebar_modules.html:31 templates/mobile/base.html:55 templates/mobile/base.html:60
 msgid "Ask a Question"
 msgstr "フォーラムで質問する"
 
@@ -3618,33 +3657,35 @@ msgstr "Firefox サポートのホームページへ戻る"
 msgid "Need More Personal Help?"
 msgstr "個別の助けが必要ですか？"
 
-#: templates/mobile/base.html:61
-msgid "Browse our Support Forum"
-msgstr "サポートフォーラムを見る"
-
-#: templates/mobile/base.html:65
+#: templates/mobile/base.html:64
 msgid "Other Products"
 msgstr "他の製品"
 
-#: templates/mobile/base.html:68
+#: templates/mobile/base.html:67
 msgid "Firefox for Desktop"
 msgstr "デスクトップ版 Firefox"
 
-#: templates/mobile/base.html:71
+#: templates/mobile/base.html:70
 msgid "Firefox for Mobile"
 msgstr "モバイル版 Firefox"
 
-#: templates/mobile/base.html:74
+#: templates/mobile/base.html:73
 msgid "Firefox Home"
 msgstr "Firefox Home"
 
-#: templates/mobile/base.html:77
+#: templates/mobile/base.html:76
 msgid "Firefox Sync"
 msgstr "Firefox Sync"
 
-#: templates/mobile/base.html:91
+#: templates/mobile/base.html:90
 msgid "View full site"
 msgstr "PC 用の表示にする"
+
+#~ msgid "Remove user"
+#~ msgstr "ユーザを削除"
+
+#~ msgid "Browse our Support Forum"
+#~ msgstr "サポートフォーラムを見る"
 
 #~ msgid "Is reviewed?"
 #~ msgstr "レビュー済み？"

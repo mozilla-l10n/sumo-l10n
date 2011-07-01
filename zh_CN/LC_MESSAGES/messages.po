@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-16 14:31-0700\n"
+"POT-Creation-Date: 2011-07-01 11:00-0700\n"
 "PO-Revision-Date: 2011-03-20 16:58+0200\n"
 "Last-Translator: Kemcy <kmcreg@gmail.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -211,11 +211,12 @@ msgstr "在加入了不起大军之前，您需要登录才能回复tweet。现�
 #: apps/customercare/templates/customercare/twitter_modal.html:12 apps/gallery/templates/gallery/confirm_media_delete.html:60 apps/gallery/templates/gallery/edit_media.html:28
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:58
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:132 apps/gallery/templates/gallery/includes/upload_media_form.html:138
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/groups/templates/groups/confirm_avatar_delete.html:23 apps/groups/templates/groups/confirm_remove_member.html:12
-#: apps/groups/templates/groups/edit_avatar.html:15 apps/kbforums/templates/kbforums/confirm_post_delete.html:30 apps/kbforums/templates/kbforums/confirm_thread_delete.html:32
-#: apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29 apps/kbforums/templates/kbforums/new_thread.html:36
-#: apps/messages/templates/messages/delete.html:20 apps/messages/templates/messages/new.html:16 apps/users/templates/users/confirm_avatar_delete.html:23
-#: apps/wiki/templates/wiki/includes/review_form.html:43 apps/wiki/templates/wiki/includes/review_form.html:57 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/groups/templates/groups/confirm_avatar_delete.html:23 apps/groups/templates/groups/confirm_remove_leader.html:12
+#: apps/groups/templates/groups/confirm_remove_member.html:12 apps/groups/templates/groups/edit_avatar.html:15 apps/kbforums/templates/kbforums/confirm_post_delete.html:30
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:32 apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29
+#: apps/kbforums/templates/kbforums/new_thread.html:36 apps/messages/templates/messages/delete.html:20 apps/messages/templates/messages/new.html:16
+#: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/includes/review_form.html:43 apps/wiki/templates/wiki/includes/review_form.html:57
+#: apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "取消"
 
@@ -938,21 +939,33 @@ msgstr "用户名"
 msgid "Avatar"
 msgstr "头像"
 
-#: apps/groups/views.py:48
+#: apps/groups/views.py:51
 #, fuzzy
 msgid "Group information updated successfully!"
 msgstr "确认邮件成功发送。"
 
-#: apps/groups/views.py:123
+#: apps/groups/views.py:126
 msgid "{users} added to the group successfully!"
 msgstr ""
 
-#: apps/groups/views.py:128
+#: apps/groups/views.py:131
 msgid "There were errors adding members to the group, see below."
 msgstr ""
 
-#: apps/groups/views.py:145
+#: apps/groups/views.py:151
 msgid "{user} removed from the group successfully!"
+msgstr ""
+
+#: apps/groups/views.py:176
+msgid "{users} added to the group leaders successfully!"
+msgstr ""
+
+#: apps/groups/views.py:181
+msgid "There were errors adding leaders to the group, see below."
+msgstr ""
+
+#: apps/groups/views.py:198
+msgid "{user} removed from the group leaders successfully!"
 msgstr ""
 
 #: apps/groups/templates/groups/confirm_avatar_delete.html:3
@@ -975,7 +988,17 @@ msgstr "您将要永久删除您的头像。<strong>此操作无法还原！</st
 msgid "Delete avatar"
 msgstr "删除头像"
 
-#: apps/groups/templates/groups/confirm_remove_member.html:3
+#: apps/groups/templates/groups/confirm_remove_leader.html:3 apps/groups/templates/groups/confirm_remove_leader.html:11
+#, fuzzy
+msgid "Remove leader"
+msgstr "记住我的登录信息"
+
+#: apps/groups/templates/groups/confirm_remove_leader.html:7
+#, fuzzy
+msgid "Are you sure you want to remove {user} from {group} leaders?"
+msgstr "您确定要删除这个 {type} 吗？"
+
+#: apps/groups/templates/groups/confirm_remove_member.html:3 apps/groups/templates/groups/confirm_remove_member.html:11
 #, fuzzy
 msgid "Remove member"
 msgstr "记住我的登录信息"
@@ -984,11 +1007,6 @@ msgstr "记住我的登录信息"
 #, fuzzy
 msgid "Are you sure you want to remove {user} from {group}?"
 msgstr "您确定要删除这个 {type} 吗？"
-
-#: apps/groups/templates/groups/confirm_remove_member.html:11
-#, fuzzy
-msgid "Remove user"
-msgstr "移除"
 
 #: apps/groups/templates/groups/edit.html:4
 msgid "Edit | {group} | Groups"
@@ -1044,15 +1062,30 @@ msgstr "编辑图像"
 msgid "Edit group profile"
 msgstr "编辑个人信息"
 
-#: apps/groups/templates/groups/profile.html:30
+#: apps/groups/templates/groups/profile.html:32
+#, fuzzy
+msgid "Edit group leaders"
+msgstr "编辑个人信息"
+
+#: apps/groups/templates/groups/profile.html:34
 msgid "Group Leaders"
 msgstr ""
 
-#: apps/groups/templates/groups/profile.html:38
+#: apps/groups/templates/groups/profile.html:41
+#, fuzzy
+msgid "Remove user from leaders"
+msgstr "移除"
+
+#: apps/groups/templates/groups/profile.html:59
+#, fuzzy
+msgid "Edit group members"
+msgstr "编辑个人信息"
+
+#: apps/groups/templates/groups/profile.html:61
 msgid "Group Members"
 msgstr ""
 
-#: apps/groups/templates/groups/profile.html:70
+#: apps/groups/templates/groups/profile.html:68
 msgid "Remove user from group"
 msgstr ""
 
@@ -3370,11 +3403,11 @@ msgstr "返回首页"
 msgid "Firefox"
 msgstr "Firefox"
 
-#: templates/global/footer.html:17 templates/mobile/base.html:93
+#: templates/global/footer.html:17 templates/mobile/base.html:92
 msgid "Privacy Policy"
 msgstr "隐私政策"
 
-#: templates/global/footer.html:18 templates/mobile/base.html:94
+#: templates/global/footer.html:18 templates/mobile/base.html:93
 msgid "Legal Notices"
 msgstr "法律条款"
 
@@ -3636,11 +3669,16 @@ msgstr "进行文档翻译"
 msgid "Contributors Forums"
 msgstr "贡献者论坛"
 
-#: templates/includes/sidebar_modules.html:25 templates/mobile/base.html:40
+#: templates/includes/sidebar_modules.html:17
+#, fuzzy
+msgid "Support Forum"
+msgstr "技术支持论坛控制面板"
+
+#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:40
 msgid "Firefox Help Home"
 msgstr "Firefox帮助首页"
 
-#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:55 templates/mobile/base.html:60
+#: templates/includes/sidebar_modules.html:31 templates/mobile/base.html:55 templates/mobile/base.html:60
 msgid "Ask a Question"
 msgstr "向网友求救"
 
@@ -3669,33 +3707,32 @@ msgstr "返回 Firefox 技术支持首页"
 msgid "Need More Personal Help?"
 msgstr "需要更多个人的帮助？"
 
-#: templates/mobile/base.html:61
-msgid "Browse our Support Forum"
-msgstr "浏览我们的技术支持论坛"
-
-#: templates/mobile/base.html:65
+#: templates/mobile/base.html:64
 msgid "Other Products"
 msgstr "其他产品"
 
-#: templates/mobile/base.html:68
+#: templates/mobile/base.html:67
 msgid "Firefox for Desktop"
 msgstr "Firefox 桌面版"
 
-#: templates/mobile/base.html:71
+#: templates/mobile/base.html:70
 msgid "Firefox for Mobile"
 msgstr "Firefox 移动版"
 
-#: templates/mobile/base.html:74
+#: templates/mobile/base.html:73
 msgid "Firefox Home"
 msgstr "Firefox Home"
 
-#: templates/mobile/base.html:77
+#: templates/mobile/base.html:76
 msgid "Firefox Sync"
 msgstr "Firefox Sync"
 
-#: templates/mobile/base.html:91
+#: templates/mobile/base.html:90
 msgid "View full site"
 msgstr "查看全站"
+
+#~ msgid "Browse our Support Forum"
+#~ msgstr "浏览我们的技术支持论坛"
 
 #~ msgid "Is reviewed?"
 #~ msgstr "被审核过？"

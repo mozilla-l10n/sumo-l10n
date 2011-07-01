@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-16 14:31-0700\n"
+"POT-Creation-Date: 2011-07-01 11:00-0700\n"
 "PO-Revision-Date: 2011-06-29 02:07+0200\n"
 "Last-Translator: Abdulkadir <atopal@mozilla.com>\n"
 "Language-Team: Mozilla SUMO Korean Team\n"
@@ -208,11 +208,12 @@ msgstr "Army of Awesome에 가입하기 전에, 트윗을 보낼 수 있게 로�
 #: apps/customercare/templates/customercare/twitter_modal.html:12 apps/gallery/templates/gallery/confirm_media_delete.html:60 apps/gallery/templates/gallery/edit_media.html:28
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:58
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:132 apps/gallery/templates/gallery/includes/upload_media_form.html:138
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/groups/templates/groups/confirm_avatar_delete.html:23 apps/groups/templates/groups/confirm_remove_member.html:12
-#: apps/groups/templates/groups/edit_avatar.html:15 apps/kbforums/templates/kbforums/confirm_post_delete.html:30 apps/kbforums/templates/kbforums/confirm_thread_delete.html:32
-#: apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29 apps/kbforums/templates/kbforums/new_thread.html:36
-#: apps/messages/templates/messages/delete.html:20 apps/messages/templates/messages/new.html:16 apps/users/templates/users/confirm_avatar_delete.html:23
-#: apps/wiki/templates/wiki/includes/review_form.html:43 apps/wiki/templates/wiki/includes/review_form.html:57 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/groups/templates/groups/confirm_avatar_delete.html:23 apps/groups/templates/groups/confirm_remove_leader.html:12
+#: apps/groups/templates/groups/confirm_remove_member.html:12 apps/groups/templates/groups/edit_avatar.html:15 apps/kbforums/templates/kbforums/confirm_post_delete.html:30
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:32 apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29
+#: apps/kbforums/templates/kbforums/new_thread.html:36 apps/messages/templates/messages/delete.html:20 apps/messages/templates/messages/new.html:16
+#: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/includes/review_form.html:43 apps/wiki/templates/wiki/includes/review_form.html:57
+#: apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "취소"
 
@@ -338,9 +339,7 @@ msgstr "수정 필요"
 msgid ""
 "This signifies an edit that doesn't diminish the value of the localized article: for example, rewording a paragraph. Localizers are notified of this edit, but no warning is shown on the localized "
 "page. You should update these articles soon."
-msgstr ""
-"지역 문서의 값을 축소하지 않는 편집입니다. 예로: 단락을 적절하게 바꾸다. 이 편집을 관리자에게 알려야하지만 경고를 보여주지는 "
-"않습니다. 이 문서를 바로 업데이트 해야합니다."
+msgstr "지역 문서의 값을 축소하지 않는 편집입니다. 예로: 단락을 적절하게 바꾸다. 이 편집을 관리자에게 알려야하지만 경고를 보여주지는 않습니다. 이 문서를 바로 업데이트 해야합니다."
 
 #: apps/dashboards/readouts.py:484
 msgid "All translations needing updates..."
@@ -910,20 +909,35 @@ msgstr "계정이름"
 msgid "Avatar"
 msgstr "아바타"
 
-#: apps/groups/views.py:48
+#: apps/groups/views.py:51
 msgid "Group information updated successfully!"
 msgstr "그룹 정보 업데이트를 완료하였습니다."
 
-#: apps/groups/views.py:123
+#: apps/groups/views.py:126
 msgid "{users} added to the group successfully!"
 msgstr "그룹에 {users} 사용자 추가 성공!"
 
-#: apps/groups/views.py:128
+#: apps/groups/views.py:131
 msgid "There were errors adding members to the group, see below."
 msgstr "그룹에 멤버를 추가하는데 오류가 있었습니다. 아래를 참고 하세요."
 
-#: apps/groups/views.py:145
+#: apps/groups/views.py:151
 msgid "{user} removed from the group successfully!"
+msgstr "그룹에 {users} 사용자 제거 성공!"
+
+#: apps/groups/views.py:176
+#, fuzzy
+msgid "{users} added to the group leaders successfully!"
+msgstr "그룹에 {users} 사용자 추가 성공!"
+
+#: apps/groups/views.py:181
+#, fuzzy
+msgid "There were errors adding leaders to the group, see below."
+msgstr "그룹에 멤버를 추가하는데 오류가 있었습니다. 아래를 참고 하세요."
+
+#: apps/groups/views.py:198
+#, fuzzy
+msgid "{user} removed from the group leaders successfully!"
 msgstr "그룹에 {users} 사용자 제거 성공!"
 
 #: apps/groups/templates/groups/confirm_avatar_delete.html:3
@@ -943,17 +957,23 @@ msgstr "아바타를 완전히 삭제하고자 합니다. <strong>현재 작업�
 msgid "Delete avatar"
 msgstr "아바타 삭제"
 
-#: apps/groups/templates/groups/confirm_remove_member.html:3
+#: apps/groups/templates/groups/confirm_remove_leader.html:3 apps/groups/templates/groups/confirm_remove_leader.html:11
+#, fuzzy
+msgid "Remove leader"
+msgstr "아이디 저장"
+
+#: apps/groups/templates/groups/confirm_remove_leader.html:7
+#, fuzzy
+msgid "Are you sure you want to remove {user} from {group} leaders?"
+msgstr "현재 {user} ({group})을 삭제하시겠습니까?"
+
+#: apps/groups/templates/groups/confirm_remove_member.html:3 apps/groups/templates/groups/confirm_remove_member.html:11
 msgid "Remove member"
 msgstr "아이디 저장"
 
 #: apps/groups/templates/groups/confirm_remove_member.html:7
 msgid "Are you sure you want to remove {user} from {group}?"
 msgstr "현재 {user} ({group})을 삭제하시겠습니까?"
-
-#: apps/groups/templates/groups/confirm_remove_member.html:11
-msgid "Remove user"
-msgstr "사용자 삭제"
 
 #: apps/groups/templates/groups/edit.html:4
 msgid "Edit | {group} | Groups"
@@ -1004,15 +1024,30 @@ msgstr "관리자로 편집"
 msgid "Edit group profile"
 msgstr "그룹 프로필 수정"
 
-#: apps/groups/templates/groups/profile.html:30
+#: apps/groups/templates/groups/profile.html:32
+#, fuzzy
+msgid "Edit group leaders"
+msgstr "그룹 프로필 수정"
+
+#: apps/groups/templates/groups/profile.html:34
 msgid "Group Leaders"
 msgstr "그룹 리더"
 
-#: apps/groups/templates/groups/profile.html:38
+#: apps/groups/templates/groups/profile.html:41
+#, fuzzy
+msgid "Remove user from leaders"
+msgstr "그룹에서 사용자 제거"
+
+#: apps/groups/templates/groups/profile.html:59
+#, fuzzy
+msgid "Edit group members"
+msgstr "그룹 멤버"
+
+#: apps/groups/templates/groups/profile.html:61
 msgid "Group Members"
 msgstr "그룹 멤버"
 
-#: apps/groups/templates/groups/profile.html:70
+#: apps/groups/templates/groups/profile.html:68
 msgid "Remove user from group"
 msgstr "그룹에서 사용자 제거"
 
@@ -1253,16 +1288,12 @@ msgstr "이 포럼은 \"%(title)s\" 문서의 개선을 토론하는 것입니�
 
 #: apps/kbforums/templates/kbforums/includes/macros.html:11
 msgid "This forum is a discussion about improving the \"%(title)s\" article. If you'd like to participate, please <a href=\"%(register_url)s\">register</a>."
-msgstr ""
-"이 포럼은 \"%(title)s\"문서를 개선하는 토론입니다. 참여를 원하시면 <a href=\"%(register_url)s\">등록 "
-"하세요</a>."
+msgstr "이 포럼은 \"%(title)s\"문서를 개선하는 토론입니다. 참여를 원하시면 <a href=\"%(register_url)s\">등록 하세요</a>."
 
 #: apps/kbforums/templates/kbforums/includes/macros.html:19
 msgid ""
 "This forum is a discussion about improving the localization of the \"%(title)s\" article. If you want to improve the article content, go to the <a href=\"%(url)s\">English article discussion</a>."
-msgstr ""
-"이 포럼은 \"%(title)s \"문서의 지역화를 개선하는 토론입니다. 참여를 원하시면 .<a href=\"%(url)s\"> 영문 문서 \" "
-"\"토론으로 이동합니다</a>."
+msgstr "이 포럼은 \"%(title)s \"문서의 지역화를 개선하는 토론입니다. 참여를 원하시면 .<a href=\"%(url)s\"> 영문 문서 \" \"토론으로 이동합니다</a>."
 
 #: apps/kbforums/templates/kbforums/includes/macros.html:28
 msgid "If you need help with Firefox, please <a href=\"%(aaq_url)s\">ask a question</a>."
@@ -3296,11 +3327,11 @@ msgstr "홈페이지로 가기"
 msgid "Firefox"
 msgstr "Firefox"
 
-#: templates/global/footer.html:17 templates/mobile/base.html:93
+#: templates/global/footer.html:17 templates/mobile/base.html:92
 msgid "Privacy Policy"
 msgstr "개인 정보 정책"
 
-#: templates/global/footer.html:18 templates/mobile/base.html:94
+#: templates/global/footer.html:18 templates/mobile/base.html:93
 msgid "Legal Notices"
 msgstr "법적 고지"
 
@@ -3561,11 +3592,16 @@ msgstr "문서 번역"
 msgid "Contributors Forums"
 msgstr "참여 현황판"
 
-#: templates/includes/sidebar_modules.html:25 templates/mobile/base.html:40
+#: templates/includes/sidebar_modules.html:17
+#, fuzzy
+msgid "Support Forum"
+msgstr "참여 현황판"
+
+#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:40
 msgid "Firefox Help Home"
 msgstr "Firefox 도움말"
 
-#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:55 templates/mobile/base.html:60
+#: templates/includes/sidebar_modules.html:31 templates/mobile/base.html:55 templates/mobile/base.html:60
 msgid "Ask a Question"
 msgstr "질문하기"
 
@@ -3594,33 +3630,35 @@ msgstr "홈페이지 가기"
 msgid "Need More Personal Help?"
 msgstr "더 자세한 도움이 필요하세요?"
 
-#: templates/mobile/base.html:61
-msgid "Browse our Support Forum"
-msgstr "도움말 포럼 보기"
-
-#: templates/mobile/base.html:65
+#: templates/mobile/base.html:64
 msgid "Other Products"
 msgstr "기타 제품"
 
-#: templates/mobile/base.html:68
+#: templates/mobile/base.html:67
 msgid "Firefox for Desktop"
 msgstr "Firefox 데스크탑"
 
-#: templates/mobile/base.html:71
+#: templates/mobile/base.html:70
 msgid "Firefox for Mobile"
 msgstr "Firefox 모바일"
 
-#: templates/mobile/base.html:74
+#: templates/mobile/base.html:73
 msgid "Firefox Home"
 msgstr "Firefox Home"
 
-#: templates/mobile/base.html:77
+#: templates/mobile/base.html:76
 msgid "Firefox Sync"
 msgstr "Firefox 동기화"
 
-#: templates/mobile/base.html:91
+#: templates/mobile/base.html:90
 msgid "View full site"
 msgstr "전체 사이트 보기"
+
+#~ msgid "Remove user"
+#~ msgstr "사용자 삭제"
+
+#~ msgid "Browse our Support Forum"
+#~ msgstr "도움말 포럼 보기"
 
 #~ msgid "Is reviewed?"
 #~ msgstr "검토되었습니까?"

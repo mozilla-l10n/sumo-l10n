@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-16 14:31-0700\n"
+"POT-Creation-Date: 2011-07-01 11:00-0700\n"
 "PO-Revision-Date: 2011-06-22 20:59+0200\n"
 "Last-Translator: Gion-Andri <gion-andri@gmx.ch>\n"
 "Language-Team: Rhaeto-Roman\n"
@@ -213,11 +213,12 @@ msgstr "Avant che ti pos far part da l'«Army of Awesome» stos ti t'annunziar c
 #: apps/customercare/templates/customercare/twitter_modal.html:12 apps/gallery/templates/gallery/confirm_media_delete.html:60 apps/gallery/templates/gallery/edit_media.html:28
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:58
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:132 apps/gallery/templates/gallery/includes/upload_media_form.html:138
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/groups/templates/groups/confirm_avatar_delete.html:23 apps/groups/templates/groups/confirm_remove_member.html:12
-#: apps/groups/templates/groups/edit_avatar.html:15 apps/kbforums/templates/kbforums/confirm_post_delete.html:30 apps/kbforums/templates/kbforums/confirm_thread_delete.html:32
-#: apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29 apps/kbforums/templates/kbforums/new_thread.html:36
-#: apps/messages/templates/messages/delete.html:20 apps/messages/templates/messages/new.html:16 apps/users/templates/users/confirm_avatar_delete.html:23
-#: apps/wiki/templates/wiki/includes/review_form.html:43 apps/wiki/templates/wiki/includes/review_form.html:57 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/groups/templates/groups/confirm_avatar_delete.html:23 apps/groups/templates/groups/confirm_remove_leader.html:12
+#: apps/groups/templates/groups/confirm_remove_member.html:12 apps/groups/templates/groups/edit_avatar.html:15 apps/kbforums/templates/kbforums/confirm_post_delete.html:30
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:32 apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29
+#: apps/kbforums/templates/kbforums/new_thread.html:36 apps/messages/templates/messages/delete.html:20 apps/messages/templates/messages/new.html:16
+#: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/includes/review_form.html:43 apps/wiki/templates/wiki/includes/review_form.html:57
+#: apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "Interrumper"
 
@@ -917,22 +918,35 @@ msgstr "num d'utilisader"
 msgid "Avatar"
 msgstr "Avatar"
 
-#: apps/groups/views.py:48
+#: apps/groups/views.py:51
 msgid "Group information updated successfully!"
 msgstr "Actualisà cun success las infurmaziuns da la gruppa!"
 
-#: apps/groups/views.py:123
+#: apps/groups/views.py:126
 msgid "{users} added to the group successfully!"
 msgstr "Agiuntà {users} cun success a la gruppa!"
 
-#: apps/groups/views.py:128
+#: apps/groups/views.py:131
 msgid "There were errors adding members to the group, see below."
-msgstr ""
-"Ina errur è cumparida durant agiuntar utilisaders a la gruppa, guarda "
-"sutvart."
+msgstr "Ina errur è cumparida durant agiuntar utilisaders a la gruppa, guarda sutvart."
 
-#: apps/groups/views.py:145
+#: apps/groups/views.py:151
 msgid "{user} removed from the group successfully!"
+msgstr "Allontanà cun success {user} da la gruppa!"
+
+#: apps/groups/views.py:176
+#, fuzzy
+msgid "{users} added to the group leaders successfully!"
+msgstr "Agiuntà {users} cun success a la gruppa!"
+
+#: apps/groups/views.py:181
+#, fuzzy
+msgid "There were errors adding leaders to the group, see below."
+msgstr "Ina errur è cumparida durant agiuntar utilisaders a la gruppa, guarda sutvart."
+
+#: apps/groups/views.py:198
+#, fuzzy
+msgid "{user} removed from the group leaders successfully!"
 msgstr "Allontanà cun success {user} da la gruppa!"
 
 #: apps/groups/templates/groups/confirm_avatar_delete.html:3
@@ -945,27 +959,30 @@ msgstr "Duai l'avatar da la gruppa {group} propi vegnir stizzà?"
 
 #: apps/groups/templates/groups/confirm_avatar_delete.html:15
 msgid "You are about to permanently delete the avatar. <strong>This cannot be undone!</strong> You can always upload another avatar to replace the current one."
-msgstr ""
-"Vuls ti stizzar permanentamain l'avatar? <strong>Quai na po betg vegnir "
-"revocà!</strong> Ti pos adina chargiar si in auter avatar per remplazzar "
-"l'actual."
+msgstr "Vuls ti stizzar permanentamain l'avatar? <strong>Quai na po betg vegnir revocà!</strong> Ti pos adina chargiar si in auter avatar per remplazzar l'actual."
 
 #: apps/groups/templates/groups/confirm_avatar_delete.html:22 apps/groups/templates/groups/profile.html:13 apps/users/templates/users/confirm_avatar_delete.html:3
 #: apps/users/templates/users/confirm_avatar_delete.html:24
 msgid "Delete avatar"
 msgstr "Stizzar l'avatar"
 
-#: apps/groups/templates/groups/confirm_remove_member.html:3
+#: apps/groups/templates/groups/confirm_remove_leader.html:3 apps/groups/templates/groups/confirm_remove_leader.html:11
+#, fuzzy
+msgid "Remove leader"
+msgstr "Allontanar l'utilisader"
+
+#: apps/groups/templates/groups/confirm_remove_leader.html:7
+#, fuzzy
+msgid "Are you sure you want to remove {user} from {group} leaders?"
+msgstr "Vuls ti propi allontanar {user} da la gruppa {group}?"
+
+#: apps/groups/templates/groups/confirm_remove_member.html:3 apps/groups/templates/groups/confirm_remove_member.html:11
 msgid "Remove member"
 msgstr "Allontanar l'utilisader"
 
 #: apps/groups/templates/groups/confirm_remove_member.html:7
 msgid "Are you sure you want to remove {user} from {group}?"
 msgstr "Vuls ti propi allontanar {user} da la gruppa {group}?"
-
-#: apps/groups/templates/groups/confirm_remove_member.html:11
-msgid "Remove user"
-msgstr "Allontanar l'utilisader"
 
 #: apps/groups/templates/groups/edit.html:4
 msgid "Edit | {group} | Groups"
@@ -1016,15 +1033,30 @@ msgstr "Modifitgar en la vista d'administratur"
 msgid "Edit group profile"
 msgstr "Modifitgar il profil da la gruppa"
 
-#: apps/groups/templates/groups/profile.html:30
+#: apps/groups/templates/groups/profile.html:32
+#, fuzzy
+msgid "Edit group leaders"
+msgstr "Modifitgar il profil da la gruppa"
+
+#: apps/groups/templates/groups/profile.html:34
 msgid "Group Leaders"
 msgstr "Manaders da la gruppa"
 
-#: apps/groups/templates/groups/profile.html:38
+#: apps/groups/templates/groups/profile.html:41
+#, fuzzy
+msgid "Remove user from leaders"
+msgstr "Allontanar l'utilisader da la gruppa"
+
+#: apps/groups/templates/groups/profile.html:59
+#, fuzzy
+msgid "Edit group members"
+msgstr "Commembers da la gruppa"
+
+#: apps/groups/templates/groups/profile.html:61
 msgid "Group Members"
 msgstr "Commembers da la gruppa"
 
-#: apps/groups/templates/groups/profile.html:70
+#: apps/groups/templates/groups/profile.html:68
 msgid "Remove user from group"
 msgstr "Allontanar l'utilisader da la gruppa"
 
@@ -2548,10 +2580,7 @@ msgstr ""
 
 #: apps/wiki/models.py:209
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
-msgstr ""
-"Sche ti activeschas questa funcziun, vegn averta la discussiun davart quest "
-"document en in forum associà. Deactivescha ella per zuppentar/deactivar il "
-"forum."
+msgstr "Sche ti activeschas questa funcziun, vegn averta la discussiun davart quest document en in forum associà. Deactivescha ella per zuppentar/deactivar il forum."
 
 #: apps/wiki/models.py:297
 msgid "Please choose a category."
@@ -3027,9 +3056,7 @@ msgstr "Translatar l'artitgel per {locale}"
 
 #: apps/wiki/templates/wiki/translate.html:24
 msgid "You are translating an English document which is not yet ready for localization."
-msgstr ""
-"Ti translateschas in document englais che n'è betg pront per la "
-"localisaziun."
+msgstr "Ti translateschas in document englais che n'è betg pront per la localisaziun."
 
 #: apps/wiki/templates/wiki/translate.html:27
 msgid "Choose a locale:"
@@ -3065,9 +3092,7 @@ msgstr "Resumaziun per ils resultats da tschertgar per {locale}:"
 
 #: apps/wiki/templates/wiki/translate.html:121
 msgid "Note: This article has no revisions ready for localization."
-msgstr ""
-"Remartga: Questa artitgel n'ha naginas versiuns ch'èn prontas per la "
-"localisaziun."
+msgstr "Remartga: Questa artitgel n'ha naginas versiuns ch'èn prontas per la localisaziun."
 
 #: apps/wiki/templates/wiki/translate.html:123
 msgid "Note: There are no approved translations for this article."
@@ -3330,11 +3355,11 @@ msgstr "Turnar a la pagina da partenza"
 msgid "Firefox"
 msgstr "Firefox"
 
-#: templates/global/footer.html:17 templates/mobile/base.html:93
+#: templates/global/footer.html:17 templates/mobile/base.html:92
 msgid "Privacy Policy"
 msgstr "Directivas per la protecziun da datas"
 
-#: templates/global/footer.html:18 templates/mobile/base.html:94
+#: templates/global/footer.html:18 templates/mobile/base.html:93
 msgid "Legal Notices"
 msgstr "Notizias legalas"
 
@@ -3595,11 +3620,16 @@ msgstr "Translatar artitgels"
 msgid "Contributors Forums"
 msgstr "Forums dals collavuraturs"
 
-#: templates/includes/sidebar_modules.html:25 templates/mobile/base.html:40
+#: templates/includes/sidebar_modules.html:17
+#, fuzzy
+msgid "Support Forum"
+msgstr "Survista dal forum d'agid"
+
+#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:40
 msgid "Firefox Help Home"
 msgstr "Partenza da l'agid da Firefox"
 
-#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:55 templates/mobile/base.html:60
+#: templates/includes/sidebar_modules.html:31 templates/mobile/base.html:55 templates/mobile/base.html:60
 msgid "Ask a Question"
 msgstr "Tschentar ina dumonda"
 
@@ -3629,33 +3659,35 @@ msgstr "Turnar a la pagina da partenza da l'agid da Firefox"
 msgid "Need More Personal Help?"
 msgstr "Dovras agid persunal?"
 
-#: templates/mobile/base.html:61
-msgid "Browse our Support Forum"
-msgstr "Consultar il forum d'agid"
-
-#: templates/mobile/base.html:65
+#: templates/mobile/base.html:64
 msgid "Other Products"
 msgstr "Auters products"
 
-#: templates/mobile/base.html:68
+#: templates/mobile/base.html:67
 msgid "Firefox for Desktop"
 msgstr "Firefox per Desktop"
 
-#: templates/mobile/base.html:71
+#: templates/mobile/base.html:70
 msgid "Firefox for Mobile"
 msgstr "Firefox per Mobil"
 
-#: templates/mobile/base.html:74
+#: templates/mobile/base.html:73
 msgid "Firefox Home"
 msgstr "Firefox Home"
 
-#: templates/mobile/base.html:77
+#: templates/mobile/base.html:76
 msgid "Firefox Sync"
 msgstr "Firefox Sync"
 
-#: templates/mobile/base.html:91
+#: templates/mobile/base.html:90
 msgid "View full site"
 msgstr "Pagina da standard"
+
+#~ msgid "Remove user"
+#~ msgstr "Allontanar l'utilisader"
+
+#~ msgid "Browse our Support Forum"
+#~ msgstr "Consultar il forum d'agid"
 
 #~ msgid "Is reviewed?"
 #~ msgstr "Repassà?"

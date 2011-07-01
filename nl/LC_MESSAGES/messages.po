@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-16 14:31-0700\n"
+"POT-Creation-Date: 2011-07-01 11:00-0700\n"
 "PO-Revision-Date: 2011-06-17 18:08+0200\n"
 "Last-Translator: Ton <tonnes.mb@gmail.com>\n"
 "Language-Team: Dutch\n"
@@ -213,11 +213,12 @@ msgstr "Voordat u meedoet dient u zich aan te melden, zodat u op tweets kunt ant
 #: apps/customercare/templates/customercare/twitter_modal.html:12 apps/gallery/templates/gallery/confirm_media_delete.html:60 apps/gallery/templates/gallery/edit_media.html:28
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:58
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:132 apps/gallery/templates/gallery/includes/upload_media_form.html:138
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/groups/templates/groups/confirm_avatar_delete.html:23 apps/groups/templates/groups/confirm_remove_member.html:12
-#: apps/groups/templates/groups/edit_avatar.html:15 apps/kbforums/templates/kbforums/confirm_post_delete.html:30 apps/kbforums/templates/kbforums/confirm_thread_delete.html:32
-#: apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29 apps/kbforums/templates/kbforums/new_thread.html:36
-#: apps/messages/templates/messages/delete.html:20 apps/messages/templates/messages/new.html:16 apps/users/templates/users/confirm_avatar_delete.html:23
-#: apps/wiki/templates/wiki/includes/review_form.html:43 apps/wiki/templates/wiki/includes/review_form.html:57 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/groups/templates/groups/confirm_avatar_delete.html:23 apps/groups/templates/groups/confirm_remove_leader.html:12
+#: apps/groups/templates/groups/confirm_remove_member.html:12 apps/groups/templates/groups/edit_avatar.html:15 apps/kbforums/templates/kbforums/confirm_post_delete.html:30
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:32 apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29
+#: apps/kbforums/templates/kbforums/new_thread.html:36 apps/messages/templates/messages/delete.html:20 apps/messages/templates/messages/new.html:16
+#: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/includes/review_form.html:43 apps/wiki/templates/wiki/includes/review_form.html:57
+#: apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "Annuleren"
 
@@ -917,22 +918,35 @@ msgstr "gebruikersnaam"
 msgid "Avatar"
 msgstr "Avatar"
 
-#: apps/groups/views.py:48
+#: apps/groups/views.py:51
 msgid "Group information updated successfully!"
 msgstr "Groepsinformatie met succes bijgewerkt!"
 
-#: apps/groups/views.py:123
+#: apps/groups/views.py:126
 msgid "{users} added to the group successfully!"
 msgstr "{users} met succes aan de groep toegevoegd!"
 
-#: apps/groups/views.py:128
+#: apps/groups/views.py:131
 msgid "There were errors adding members to the group, see below."
-msgstr ""
-"Er zijn fouten opgetreden bij het toevoegen van leden aan de groep, zie "
-"hieronder."
+msgstr "Er zijn fouten opgetreden bij het toevoegen van leden aan de groep, zie hieronder."
 
-#: apps/groups/views.py:145
+#: apps/groups/views.py:151
 msgid "{user} removed from the group successfully!"
+msgstr "{user} met succes uit de groep verwijderd!"
+
+#: apps/groups/views.py:176
+#, fuzzy
+msgid "{users} added to the group leaders successfully!"
+msgstr "{users} met succes aan de groep toegevoegd!"
+
+#: apps/groups/views.py:181
+#, fuzzy
+msgid "There were errors adding leaders to the group, see below."
+msgstr "Er zijn fouten opgetreden bij het toevoegen van leden aan de groep, zie hieronder."
+
+#: apps/groups/views.py:198
+#, fuzzy
+msgid "{user} removed from the group leaders successfully!"
 msgstr "{user} met succes uit de groep verwijderd!"
 
 #: apps/groups/templates/groups/confirm_avatar_delete.html:3
@@ -945,27 +959,30 @@ msgstr "Weet u zeker dat u de groepsavatar van {group} wilt verwijderen?"
 
 #: apps/groups/templates/groups/confirm_avatar_delete.html:15
 msgid "You are about to permanently delete the avatar. <strong>This cannot be undone!</strong> You can always upload another avatar to replace the current one."
-msgstr ""
-"U gaat de avatar voorgoed verwijderen. <strong>Dit kan niet ongedaan worden "
-"gemaakt!</strong> U kunt altijd een andere avatar uploaden om de huidige te "
-"vervangen."
+msgstr "U gaat de avatar voorgoed verwijderen. <strong>Dit kan niet ongedaan worden gemaakt!</strong> U kunt altijd een andere avatar uploaden om de huidige te vervangen."
 
 #: apps/groups/templates/groups/confirm_avatar_delete.html:22 apps/groups/templates/groups/profile.html:13 apps/users/templates/users/confirm_avatar_delete.html:3
 #: apps/users/templates/users/confirm_avatar_delete.html:24
 msgid "Delete avatar"
 msgstr "Avatar verwijderen"
 
-#: apps/groups/templates/groups/confirm_remove_member.html:3
+#: apps/groups/templates/groups/confirm_remove_leader.html:3 apps/groups/templates/groups/confirm_remove_leader.html:11
+#, fuzzy
+msgid "Remove leader"
+msgstr "Lid verwijderen"
+
+#: apps/groups/templates/groups/confirm_remove_leader.html:7
+#, fuzzy
+msgid "Are you sure you want to remove {user} from {group} leaders?"
+msgstr "Weet u zeker dat u {user} uit groep {group} wilt verwijderen?"
+
+#: apps/groups/templates/groups/confirm_remove_member.html:3 apps/groups/templates/groups/confirm_remove_member.html:11
 msgid "Remove member"
 msgstr "Lid verwijderen"
 
 #: apps/groups/templates/groups/confirm_remove_member.html:7
 msgid "Are you sure you want to remove {user} from {group}?"
 msgstr "Weet u zeker dat u {user} uit groep {group} wilt verwijderen?"
-
-#: apps/groups/templates/groups/confirm_remove_member.html:11
-msgid "Remove user"
-msgstr "Gebruiker verwijderen"
 
 #: apps/groups/templates/groups/edit.html:4
 msgid "Edit | {group} | Groups"
@@ -1016,15 +1033,30 @@ msgstr "Bewerken in beheer"
 msgid "Edit group profile"
 msgstr "Groepsprofiel bewerken"
 
-#: apps/groups/templates/groups/profile.html:30
+#: apps/groups/templates/groups/profile.html:32
+#, fuzzy
+msgid "Edit group leaders"
+msgstr "Groepsprofiel bewerken"
+
+#: apps/groups/templates/groups/profile.html:34
 msgid "Group Leaders"
 msgstr "Groepsleiders"
 
-#: apps/groups/templates/groups/profile.html:38
+#: apps/groups/templates/groups/profile.html:41
+#, fuzzy
+msgid "Remove user from leaders"
+msgstr "Gebruiker uit groep verwijderen"
+
+#: apps/groups/templates/groups/profile.html:59
+#, fuzzy
+msgid "Edit group members"
+msgstr "Groepsleden"
+
+#: apps/groups/templates/groups/profile.html:61
 msgid "Group Members"
 msgstr "Groepsleden"
 
-#: apps/groups/templates/groups/profile.html:70
+#: apps/groups/templates/groups/profile.html:68
 msgid "Remove user from group"
 msgstr "Gebruiker uit groep verwijderen"
 
@@ -2547,9 +2579,7 @@ msgstr "Indien aangevinkt, blijft deze wiki-pagina in normale zoekopdrachten en 
 
 #: apps/wiki/models.py:209
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
-msgstr ""
-"Indien aangevinkt,  is discussie over dit document in een verbonden forum "
-"mogelijk. Haal het vinkje weg om het forum te verbergen / uit te schakelen."
+msgstr "Indien aangevinkt,  is discussie over dit document in een verbonden forum mogelijk. Haal het vinkje weg om het forum te verbergen / uit te schakelen."
 
 #: apps/wiki/models.py:297
 msgid "Please choose a category."
@@ -3025,8 +3055,7 @@ msgstr "Artikel vertalen naar het {locale}"
 
 #: apps/wiki/templates/wiki/translate.html:24
 msgid "You are translating an English document which is not yet ready for localization."
-msgstr ""
-"U vertaalt een Engelstalig document dat nog niet gereed is voor vertaling."
+msgstr "U vertaalt een Engelstalig document dat nog niet gereed is voor vertaling."
 
 #: apps/wiki/templates/wiki/translate.html:27
 msgid "Choose a locale:"
@@ -3203,9 +3232,7 @@ msgstr "Revisie"
 
 #: apps/wiki/templates/wiki/includes/revision_list.html:23
 msgid "Significance - MT: Major Content Changes. M: Content Changes. Empty: Minor Changes."
-msgstr ""
-"Betekenis - MT: grote inhoudswijzigingen. M: inhoudswijzigingen. Leeg: "
-"kleine wijzigingen."
+msgstr "Betekenis - MT: grote inhoudswijzigingen. M: inhoudswijzigingen. Leeg: kleine wijzigingen."
 
 #: apps/wiki/templates/wiki/includes/revision_list.html:23
 msgctxt "First letter of 'Significance'"
@@ -3326,11 +3353,11 @@ msgstr "Terug naar startpagina"
 msgid "Firefox"
 msgstr "Firefox"
 
-#: templates/global/footer.html:17 templates/mobile/base.html:93
+#: templates/global/footer.html:17 templates/mobile/base.html:92
 msgid "Privacy Policy"
 msgstr "Privacybeleid"
 
-#: templates/global/footer.html:18 templates/mobile/base.html:94
+#: templates/global/footer.html:18 templates/mobile/base.html:93
 msgid "Legal Notices"
 msgstr "Juridische kennisgevingen"
 
@@ -3592,11 +3619,16 @@ msgstr "Artikelen vertalen"
 msgid "Contributors Forums"
 msgstr "Medewerkersfora"
 
-#: templates/includes/sidebar_modules.html:25 templates/mobile/base.html:40
+#: templates/includes/sidebar_modules.html:17
+#, fuzzy
+msgid "Support Forum"
+msgstr "Dashboard voor ondersteuningsforum"
+
+#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:40
 msgid "Firefox Help Home"
 msgstr "Firefox Help Home"
 
-#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:55 templates/mobile/base.html:60
+#: templates/includes/sidebar_modules.html:31 templates/mobile/base.html:55 templates/mobile/base.html:60
 msgid "Ask a Question"
 msgstr "Een vraag stellen"
 
@@ -3626,33 +3658,35 @@ msgstr "Terug naar Startpagina Firefox-ondersteuning"
 msgid "Need More Personal Help?"
 msgstr "Meer persoonlijke hulp nodig?"
 
-#: templates/mobile/base.html:61
-msgid "Browse our Support Forum"
-msgstr "Doorzoek ons ondersteuningsforum"
-
-#: templates/mobile/base.html:65
+#: templates/mobile/base.html:64
 msgid "Other Products"
 msgstr "Overige producten"
 
-#: templates/mobile/base.html:68
+#: templates/mobile/base.html:67
 msgid "Firefox for Desktop"
 msgstr "Firefox voor Desktop"
 
-#: templates/mobile/base.html:71
+#: templates/mobile/base.html:70
 msgid "Firefox for Mobile"
 msgstr "Firefox voor Mobiel"
 
-#: templates/mobile/base.html:74
+#: templates/mobile/base.html:73
 msgid "Firefox Home"
 msgstr "Firefox Home"
 
-#: templates/mobile/base.html:77
+#: templates/mobile/base.html:76
 msgid "Firefox Sync"
 msgstr "Firefox Sync"
 
-#: templates/mobile/base.html:91
+#: templates/mobile/base.html:90
 msgid "View full site"
 msgstr "Volledige website bekijken"
+
+#~ msgid "Remove user"
+#~ msgstr "Gebruiker verwijderen"
+
+#~ msgid "Browse our Support Forum"
+#~ msgstr "Doorzoek ons ondersteuningsforum"
 
 #~ msgid "Is reviewed?"
 #~ msgstr "Is beoordeeld?"

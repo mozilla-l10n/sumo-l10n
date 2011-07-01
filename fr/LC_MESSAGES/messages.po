@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-16 14:31-0700\n"
+"POT-Creation-Date: 2011-07-01 11:00-0700\n"
 "PO-Revision-Date: 2011-06-12 19:01+0200\n"
 "Last-Translator: Benoit <benoit.leseul@gmail.com>\n"
 "Language-Team: French\n"
@@ -213,11 +213,12 @@ msgstr "Avant de rejoindre l'« Army of Awesome », vous devez vous connecter 
 #: apps/customercare/templates/customercare/twitter_modal.html:12 apps/gallery/templates/gallery/confirm_media_delete.html:60 apps/gallery/templates/gallery/edit_media.html:28
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:31 apps/gallery/templates/gallery/includes/upload_media_form.html:58
 #: apps/gallery/templates/gallery/includes/upload_media_form.html:132 apps/gallery/templates/gallery/includes/upload_media_form.html:138
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/groups/templates/groups/confirm_avatar_delete.html:23 apps/groups/templates/groups/confirm_remove_member.html:12
-#: apps/groups/templates/groups/edit_avatar.html:15 apps/kbforums/templates/kbforums/confirm_post_delete.html:30 apps/kbforums/templates/kbforums/confirm_thread_delete.html:32
-#: apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29 apps/kbforums/templates/kbforums/new_thread.html:36
-#: apps/messages/templates/messages/delete.html:20 apps/messages/templates/messages/new.html:16 apps/users/templates/users/confirm_avatar_delete.html:23
-#: apps/wiki/templates/wiki/includes/review_form.html:43 apps/wiki/templates/wiki/includes/review_form.html:57 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/groups/templates/groups/confirm_avatar_delete.html:23 apps/groups/templates/groups/confirm_remove_leader.html:12
+#: apps/groups/templates/groups/confirm_remove_member.html:12 apps/groups/templates/groups/edit_avatar.html:15 apps/kbforums/templates/kbforums/confirm_post_delete.html:30
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:32 apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29
+#: apps/kbforums/templates/kbforums/new_thread.html:36 apps/messages/templates/messages/delete.html:20 apps/messages/templates/messages/new.html:16
+#: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/includes/review_form.html:43 apps/wiki/templates/wiki/includes/review_form.html:57
+#: apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -918,21 +919,33 @@ msgstr "nom d'utilisateur"
 msgid "Avatar"
 msgstr "Avatar"
 
-#: apps/groups/views.py:48
+#: apps/groups/views.py:51
 #, fuzzy
 msgid "Group information updated successfully!"
 msgstr "Courriel de confirmation envoyé avec succès."
 
-#: apps/groups/views.py:123
+#: apps/groups/views.py:126
 msgid "{users} added to the group successfully!"
 msgstr ""
 
-#: apps/groups/views.py:128
+#: apps/groups/views.py:131
 msgid "There were errors adding members to the group, see below."
 msgstr ""
 
-#: apps/groups/views.py:145
+#: apps/groups/views.py:151
 msgid "{user} removed from the group successfully!"
+msgstr ""
+
+#: apps/groups/views.py:176
+msgid "{users} added to the group leaders successfully!"
+msgstr ""
+
+#: apps/groups/views.py:181
+msgid "There were errors adding leaders to the group, see below."
+msgstr ""
+
+#: apps/groups/views.py:198
+msgid "{user} removed from the group leaders successfully!"
 msgstr ""
 
 #: apps/groups/templates/groups/confirm_avatar_delete.html:3
@@ -957,7 +970,17 @@ msgstr ""
 msgid "Delete avatar"
 msgstr "Supprimer l'avatar"
 
-#: apps/groups/templates/groups/confirm_remove_member.html:3
+#: apps/groups/templates/groups/confirm_remove_leader.html:3 apps/groups/templates/groups/confirm_remove_leader.html:11
+#, fuzzy
+msgid "Remove leader"
+msgstr "Se souvenir de moi"
+
+#: apps/groups/templates/groups/confirm_remove_leader.html:7
+#, fuzzy
+msgid "Are you sure you want to remove {user} from {group} leaders?"
+msgstr "Voulez-vous vraiment supprimer cette {type} ?"
+
+#: apps/groups/templates/groups/confirm_remove_member.html:3 apps/groups/templates/groups/confirm_remove_member.html:11
 #, fuzzy
 msgid "Remove member"
 msgstr "Se souvenir de moi"
@@ -966,11 +989,6 @@ msgstr "Se souvenir de moi"
 #, fuzzy
 msgid "Are you sure you want to remove {user} from {group}?"
 msgstr "Voulez-vous vraiment supprimer cette {type} ?"
-
-#: apps/groups/templates/groups/confirm_remove_member.html:11
-#, fuzzy
-msgid "Remove user"
-msgstr "Retirer"
 
 #: apps/groups/templates/groups/edit.html:4
 msgid "Edit | {group} | Groups"
@@ -1026,15 +1044,30 @@ msgstr "Modifier l'image"
 msgid "Edit group profile"
 msgstr "Modifier le profil utilisateur"
 
-#: apps/groups/templates/groups/profile.html:30
+#: apps/groups/templates/groups/profile.html:32
+#, fuzzy
+msgid "Edit group leaders"
+msgstr "Modifier le profil utilisateur"
+
+#: apps/groups/templates/groups/profile.html:34
 msgid "Group Leaders"
 msgstr ""
 
-#: apps/groups/templates/groups/profile.html:38
+#: apps/groups/templates/groups/profile.html:41
+#, fuzzy
+msgid "Remove user from leaders"
+msgstr "Retirer"
+
+#: apps/groups/templates/groups/profile.html:59
+#, fuzzy
+msgid "Edit group members"
+msgstr "Modifier le profil utilisateur"
+
+#: apps/groups/templates/groups/profile.html:61
 msgid "Group Members"
 msgstr ""
 
-#: apps/groups/templates/groups/profile.html:70
+#: apps/groups/templates/groups/profile.html:68
 msgid "Remove user from group"
 msgstr ""
 
@@ -3340,11 +3373,11 @@ msgstr "Retourner à la page d'accueil"
 msgid "Firefox"
 msgstr "Firefox"
 
-#: templates/global/footer.html:17 templates/mobile/base.html:93
+#: templates/global/footer.html:17 templates/mobile/base.html:92
 msgid "Privacy Policy"
 msgstr "Politique de confidentialité"
 
-#: templates/global/footer.html:18 templates/mobile/base.html:94
+#: templates/global/footer.html:18 templates/mobile/base.html:93
 msgid "Legal Notices"
 msgstr "Mentions légales"
 
@@ -3605,11 +3638,16 @@ msgstr "Traduire des articles"
 msgid "Contributors Forums"
 msgstr "Forums des contributeurs"
 
-#: templates/includes/sidebar_modules.html:25 templates/mobile/base.html:40
+#: templates/includes/sidebar_modules.html:17
+#, fuzzy
+msgid "Support Forum"
+msgstr "Tableau de bord du forum d'assistance"
+
+#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:40
 msgid "Firefox Help Home"
 msgstr "Accueil de l'aide de Firefox"
 
-#: templates/includes/sidebar_modules.html:28 templates/mobile/base.html:55 templates/mobile/base.html:60
+#: templates/includes/sidebar_modules.html:31 templates/mobile/base.html:55 templates/mobile/base.html:60
 msgid "Ask a Question"
 msgstr "Poser une question"
 
@@ -3639,33 +3677,32 @@ msgstr "Retour à la page d’accueil de l'assistance de Firefox"
 msgid "Need More Personal Help?"
 msgstr "Besoin d'aide personnalisée ?"
 
-#: templates/mobile/base.html:61
-msgid "Browse our Support Forum"
-msgstr "Parcourir notre forum d'assistance"
-
-#: templates/mobile/base.html:65
+#: templates/mobile/base.html:64
 msgid "Other Products"
 msgstr "Autres produits"
 
-#: templates/mobile/base.html:68
+#: templates/mobile/base.html:67
 msgid "Firefox for Desktop"
 msgstr "Firefox 4 pour ordinateur"
 
-#: templates/mobile/base.html:71
+#: templates/mobile/base.html:70
 msgid "Firefox for Mobile"
 msgstr "Firefox pour mobile"
 
-#: templates/mobile/base.html:74
+#: templates/mobile/base.html:73
 msgid "Firefox Home"
 msgstr "Firefox Home"
 
-#: templates/mobile/base.html:77
+#: templates/mobile/base.html:76
 msgid "Firefox Sync"
 msgstr "Firefox Sync"
 
-#: templates/mobile/base.html:91
+#: templates/mobile/base.html:90
 msgid "View full site"
 msgstr "Afficher le site complet"
+
+#~ msgid "Browse our Support Forum"
+#~ msgstr "Parcourir notre forum d'assistance"
 
 #~ msgid "Is reviewed?"
 #~ msgstr "Est vérifiée ?"
