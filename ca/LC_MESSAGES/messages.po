@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-01 11:00-0700\n"
+"POT-Creation-Date: 2011-07-14 04:41-0700\n"
 "PO-Revision-Date: 2011-03-15 00:11+0200\n"
 "Last-Translator: Toni <toniher@softcatala.org>\n"
 "Language-Team: Catalan\n"
@@ -154,7 +154,7 @@ msgstr ""
 msgid "Want to go beyond 140 characters? <a href=\"%(join_url)s\">Join the support community</a> and help many more Firefox users."
 msgstr ""
 
-#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:95 apps/kbforums/templates/kbforums/includes/post.html:29
+#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:95 apps/kbforums/templates/kbforums/includes/post.html:33
 #: apps/messages/templates/messages/read.html:17
 msgid "Reply"
 msgstr "Respon"
@@ -178,11 +178,11 @@ msgstr "Persa"
 msgid "Tweak it and make it your own. Personalized messages go a long way in helping others."
 msgstr ""
 
-#: apps/customercare/templates/customercare/reply_modal.html:65 apps/messages/views.py:80
+#: apps/customercare/templates/customercare/reply_modal.html:65 apps/messages/views.py:92
 msgid "Your message was sent!"
 msgstr "S'ha enviat el vostre missatge!"
 
-#: apps/customercare/templates/customercare/reply_modal.html:67 apps/wiki/templates/wiki/includes/submit_revision_modal.html:18
+#: apps/customercare/templates/customercare/reply_modal.html:67 apps/wiki/templates/wiki/includes/ready_for_l10n_modal.html:11 apps/wiki/templates/wiki/includes/submit_revision_modal.html:18
 msgid "Submit"
 msgstr "Envia"
 
@@ -220,8 +220,8 @@ msgstr "Abans d'unir-vos a l'«armada fantàstica», cal que inicieu una sessió
 #: apps/groups/templates/groups/confirm_remove_member.html:12 apps/groups/templates/groups/edit_avatar.html:15 apps/kbforums/templates/kbforums/confirm_post_delete.html:30
 #: apps/kbforums/templates/kbforums/confirm_thread_delete.html:32 apps/kbforums/templates/kbforums/edit_post.html:31 apps/kbforums/templates/kbforums/edit_thread.html:29
 #: apps/kbforums/templates/kbforums/new_thread.html:36 apps/messages/templates/messages/delete.html:20 apps/messages/templates/messages/new.html:16
-#: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/includes/review_form.html:43 apps/wiki/templates/wiki/includes/review_form.html:57
-#: apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
+#: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_remove_contributor.html:16 apps/wiki/templates/wiki/includes/ready_for_l10n_modal.html:12
+#: apps/wiki/templates/wiki/includes/review_form.html:53 apps/wiki/templates/wiki/includes/review_form.html:67 apps/wiki/templates/wiki/includes/submit_revision_modal.html:19
 msgid "Cancel"
 msgstr "Cancel·la"
 
@@ -247,7 +247,7 @@ msgstr "Articles més visitats"
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "Aquests són els 20 articles amb més visitats, que representen més del 50% del trànsit de la base de coneixement."
 
-#: apps/dashboards/readouts.py:99 apps/dashboards/readouts.py:332 apps/wiki/models.py:47
+#: apps/dashboards/readouts.py:99 apps/dashboards/readouts.py:332 apps/wiki/models.py:66
 msgid "Templates"
 msgstr "Plantilles"
 
@@ -268,7 +268,7 @@ msgstr "Quants dels articles aprovats en anglès que permeten traduccions tenen 
 msgid "Visits this week"
 msgstr "Visites aquesta setmana"
 
-#: apps/dashboards/readouts.py:126 apps/wiki/templates/wiki/includes/revision_list.html:22
+#: apps/dashboards/readouts.py:126 apps/wiki/templates/wiki/includes/revision_list.html:23
 msgid "Status"
 msgstr "Estat"
 
@@ -388,12 +388,12 @@ msgstr "Articles editats pendents per revisar"
 msgid "Changed"
 msgstr "Canvis"
 
-#: apps/dashboards/views.py:47 apps/dashboards/templates/dashboards/contributors.html:4
+#: apps/dashboards/views.py:48 apps/dashboards/templates/dashboards/contributors.html:4
 #, fuzzy
 msgid "Contributor Dashboard"
 msgstr "Fòrum de col·laboradors"
 
-#: apps/dashboards/views.py:55 apps/dashboards/templates/dashboards/localization.html:4
+#: apps/dashboards/views.py:56 apps/dashboards/templates/dashboards/localization.html:4
 #, fuzzy
 msgid "Localization Dashboard"
 msgstr "El meu tauler personal"
@@ -422,14 +422,64 @@ msgstr ""
 msgid "Support Forum Dashboard"
 msgstr "Fòrum de col·laboradors"
 
-#: apps/dashboards/templates/dashboards/review.html:3
+#: apps/dashboards/templates/dashboards/review.html:4
 #, fuzzy
 msgid "Contributor Forums Dashboard"
 msgstr "Fòrum de col·laboradors"
 
+#: apps/dashboards/templates/dashboards/review.html:13 apps/kbforums/templates/kbforums/threads.html:34
+msgid "Type"
+msgstr "Tipus"
+
+#: apps/dashboards/templates/dashboards/review.html:14 apps/gallery/forms.py:62 apps/gallery/templates/gallery/confirm_media_delete.html:22
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:17 apps/kbforums/templates/kbforums/threads.html:35 apps/wiki/templates/wiki/confirm_document_delete.html:22
+msgid "Title"
+msgstr "Títol"
+
+#: apps/dashboards/templates/dashboards/review.html:15 apps/kbforums/templates/kbforums/confirm_post_delete.html:17 apps/kbforums/templates/kbforums/posts.html:64
+#: apps/kbforums/templates/kbforums/threads.html:36
+msgid "Author"
+msgstr "Autor"
+
+#: apps/dashboards/templates/dashboards/review.html:16 apps/kbforums/templates/kbforums/threads.html:37
+msgid "Replies"
+msgstr "Respostes"
+
+#: apps/dashboards/templates/dashboards/review.html:17 apps/kbforums/templates/kbforums/threads.html:38
+msgid "Last Post"
+msgstr "Darrer missatge"
+
+#: apps/dashboards/templates/dashboards/review.html:21
+msgid "You haven't participated in any contributor forum threads yet."
+msgstr ""
+
+#: apps/dashboards/templates/dashboards/welcome.html:3
+msgid "Hello"
+msgstr ""
+
+#: apps/dashboards/templates/dashboards/welcome.html:9
+msgid ""
+"<p> We've got this nifty dashboard to help volunteers keep track of contributions such as questions answered, forum discussions and article edits. In order to enable it, just click <span class="
+"\"button\">Join!</span> below. </p> <p> This will add you to our contributor group and subscribe you to announcements from the Firefox Help team. </p> <p> Joining isn't required in order to help "
+"other users or to get help for yourself. </p>"
+msgstr ""
+
+#: apps/dashboards/templates/dashboards/welcome.html:28
+msgid "Join!"
+msgstr ""
+
 #: apps/dashboards/templates/dashboards/includes/action_list.html:14
 msgid "No recent activity."
 msgstr ""
+
+#: apps/dashboards/templates/dashboards/includes/announcement_list.html:3
+msgid "Add announcement"
+msgstr ""
+
+#: apps/dashboards/templates/dashboards/includes/announcement_list.html:10 apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:37
+#: apps/kbforums/templates/kbforums/includes/post.html:15
+msgid "Edit"
+msgstr "Edita"
 
 #: apps/dashboards/templates/dashboards/includes/kb_readout.html:4 apps/wiki/templates/wiki/includes/sidebar_modules.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:12
 msgid "Article"
@@ -462,69 +512,44 @@ msgstr "Una interfície d'usuari traduïda millora l'experiència dels visitants
 msgid "More options:"
 msgstr "Opcions del menú"
 
-#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:5
+#: apps/dashboards/templates/dashboards/includes/macros.html:125
+#, fuzzy
+msgid "Email me when revisions are..."
+msgstr "Envia notificacions email quan aquesta pàgina canvii a"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:136
+#, fuzzy
+msgid "Waiting for review"
+msgstr "Envia per a revisió"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:137 apps/wiki/templates/wiki/includes/revision_list.html:55
+msgid "Approved"
+msgstr "Aprovada"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:138 apps/wiki/forms.py:261 apps/wiki/templates/wiki/includes/revision_list.html:26
+msgid "Ready for localization"
+msgstr ""
+
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:6
 #, fuzzy
 msgctxt "dashboard"
 msgid "Review"
 msgstr "Revisa"
 
-#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:9
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:10
+msgctxt "dashboard"
+msgid "Welcome"
+msgstr ""
+
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:15
 #, fuzzy
 msgid "My profile"
 msgstr "Cap arxiu"
 
-#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:12
+#: apps/dashboards/templates/dashboards/includes/personal_tabs.html:18
 #, fuzzy
 msgid "Edit my profile"
 msgstr "edita mapa d'arxius"
-
-#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
-#: apps/dashboards/templates/dashboards/includes/watch_approved.html:9
-#, fuzzy
-msgid "Stop getting emailed when English revisions are approved"
-msgstr "Deixa de rebre correu quan s'aprovin les revisions en anglès"
-
-#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
-#: apps/dashboards/templates/dashboards/includes/watch_approved.html:12
-#, fuzzy
-msgid "Stop getting emailed when YOUR_LOCALE revisions are approved"
-msgstr "Deixa de rebre correu quan s'aprovin les revisions en anglès"
-
-#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
-#: apps/dashboards/templates/dashboards/includes/watch_approved.html:21
-#, fuzzy
-msgid "Get emailed when English revisions are approved"
-msgstr "Envia notificacions email quan aquesta pàgina canvii a"
-
-#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
-#: apps/dashboards/templates/dashboards/includes/watch_approved.html:24
-#, fuzzy
-msgid "Get emailed when YOUR_LOCALE revisions are approved"
-msgstr "Envia notificacions email quan aquesta pàgina canvii a"
-
-#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
-#: apps/dashboards/templates/dashboards/includes/watch_locale.html:8
-#, fuzzy
-msgid "Stop getting emailed when English reviews are waiting"
-msgstr "Envia notificacions email quan aquesta pàgina canvii a"
-
-#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
-#: apps/dashboards/templates/dashboards/includes/watch_locale.html:11
-#, fuzzy
-msgid "Stop getting emailed when YOUR_LOCALE reviews are waiting"
-msgstr "Envia notificacions email quan aquesta pàgina canvii a"
-
-#. Please localize 'English' here. For example: 'inglés' in es, 'anglais' in fr, etc.
-#: apps/dashboards/templates/dashboards/includes/watch_locale.html:19
-#, fuzzy
-msgid "Get emailed when English reviews are waiting"
-msgstr "Envia notificacions email quan aquesta pàgina canvii a"
-
-#. Please replace 'YOUR_LOCALE' with your language. For example: 'español' in es, 'française' in fr, etc.
-#: apps/dashboards/templates/dashboards/includes/watch_locale.html:22
-#, fuzzy
-msgid "Get emailed when YOUR_LOCALE reviews are waiting"
-msgstr "Envia notificacions email quan aquesta pàgina canvii a"
 
 #: apps/flagit/models.py:23
 #, fuzzy
@@ -553,7 +578,7 @@ msgstr "pendent"
 msgid "Accepted and Fixed"
 msgstr "ususari i creador acceptat"
 
-#: apps/flagit/models.py:32 apps/wiki/templates/wiki/includes/revision_list.html:55
+#: apps/flagit/models.py:32 apps/wiki/templates/wiki/includes/revision_list.html:57
 #, fuzzy
 msgid "Rejected"
 msgstr "Rebutja"
@@ -632,26 +657,22 @@ msgstr "S'ha actualitzat"
 msgid "Take Action:"
 msgstr "Acció"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/kbforums/templates/kbforums/posts.html:37 apps/kbforums/templates/kbforums/includes/post.html:12
-msgid "Edit"
-msgstr "Edita"
-
 #: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/groups/templates/groups/profile.html:13
 #: apps/kbforums/templates/kbforums/confirm_post_delete.html:29 apps/kbforums/templates/kbforums/confirm_thread_delete.html:31 apps/kbforums/templates/kbforums/posts.html:41
-#: apps/kbforums/templates/kbforums/includes/post.html:16 apps/wiki/templates/wiki/confirm_document_delete.html:36 apps/wiki/templates/wiki/confirm_revision_delete.html:31
+#: apps/kbforums/templates/kbforums/includes/post.html:19 apps/wiki/templates/wiki/confirm_document_delete.html:36 apps/wiki/templates/wiki/confirm_revision_delete.html:31
 msgid "Delete"
 msgstr "Elimina"
 
-#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:69 apps/wiki/templates/wiki/translate.html:57
+#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:70 apps/wiki/templates/wiki/translate.html:57
 msgid "Title:"
 msgstr "Títol:"
 
-#: apps/gallery/forms.py:13 apps/kbforums/forms.py:9 apps/wiki/forms.py:17
+#: apps/gallery/forms.py:13 apps/kbforums/forms.py:9 apps/wiki/forms.py:19
 #, fuzzy
 msgid "Please provide a title."
 msgstr "Si us plau, proveïu una Id"
 
-#: apps/gallery/forms.py:14 apps/wiki/forms.py:18
+#: apps/gallery/forms.py:14 apps/wiki/forms.py:20
 msgid "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr ""
 
@@ -723,11 +744,6 @@ msgstr ""
 #, fuzzy
 msgid "Locale"
 msgstr "Escala"
-
-#: apps/gallery/forms.py:62 apps/gallery/templates/gallery/confirm_media_delete.html:22 apps/kbforums/templates/kbforums/confirm_thread_delete.html:17 apps/kbforums/templates/kbforums/threads.html:35
-#: apps/wiki/templates/wiki/confirm_document_delete.html:22
-msgid "Title"
-msgstr "Títol"
 
 #: apps/gallery/forms.py:70 apps/gallery/templates/gallery/confirm_media_delete.html:26
 msgid "Description"
@@ -1000,7 +1016,7 @@ msgstr "Programar"
 msgid "Progress (webm)"
 msgstr "Programar"
 
-#: apps/groups/forms.py:27 apps/search/forms.py:103
+#: apps/groups/forms.py:27 apps/search/forms.py:103 apps/wiki/forms.py:268
 msgid "username"
 msgstr "usuari"
 
@@ -1009,33 +1025,37 @@ msgstr "usuari"
 msgid "Avatar"
 msgstr "Imatge Avatar"
 
-#: apps/groups/views.py:51
+#: apps/groups/views.py:53
 #, fuzzy
 msgid "Group information updated successfully!"
 msgstr "Les operacions d'impressió s'han executat amb èxit"
 
-#: apps/groups/views.py:126
+#: apps/groups/views.py:128
 msgid "{users} added to the group successfully!"
 msgstr ""
 
-#: apps/groups/views.py:131
+#: apps/groups/views.py:133
 msgid "There were errors adding members to the group, see below."
 msgstr ""
 
-#: apps/groups/views.py:151
+#: apps/groups/views.py:153
 msgid "{user} removed from the group successfully!"
 msgstr ""
 
-#: apps/groups/views.py:176
+#: apps/groups/views.py:178
 msgid "{users} added to the group leaders successfully!"
 msgstr ""
 
-#: apps/groups/views.py:181
+#: apps/groups/views.py:183
 msgid "There were errors adding leaders to the group, see below."
 msgstr ""
 
-#: apps/groups/views.py:198
+#: apps/groups/views.py:200
 msgid "{user} removed from the group leaders successfully!"
+msgstr ""
+
+#: apps/groups/views.py:217
+msgid "You are now part of the Contributors group!"
 msgstr ""
 
 #: apps/groups/templates/groups/confirm_avatar_delete.html:3
@@ -1147,6 +1167,10 @@ msgstr ""
 msgid "Remove user from leaders"
 msgstr ""
 
+#: apps/groups/templates/groups/profile.html:52
+msgid "Add Leader"
+msgstr ""
+
 #: apps/groups/templates/groups/profile.html:59
 #, fuzzy
 msgid "Edit group members"
@@ -1160,13 +1184,20 @@ msgstr ""
 msgid "Remove user from group"
 msgstr ""
 
-#: apps/kbforums/events.py:20
-#, fuzzy
-msgid "Reply to: %s"
-msgstr "respondre"
+#: apps/groups/templates/groups/profile.html:79
+msgid "Add Member"
+msgstr ""
 
-#: apps/kbforums/events.py:29
+#: apps/kbforums/events.py:20
+msgid "Re: {forum} - {thread}"
+msgstr ""
+
+#: apps/kbforums/events.py:30
 msgid "New thread in %s: %s"
+msgstr ""
+
+#: apps/kbforums/events.py:38
+msgid "{forum} - {thread}"
 msgstr ""
 
 #: apps/kbforums/feeds.py:23
@@ -1214,10 +1245,6 @@ msgstr "Elimina"
 #, fuzzy
 msgid "Are you sure you want to delete this post?"
 msgstr "Segur que vols esborrar aquest dipòsit?"
-
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:17 apps/kbforums/templates/kbforums/posts.html:64 apps/kbforums/templates/kbforums/threads.html:36
-msgid "Author"
-msgstr "Autor"
 
 #: apps/kbforums/templates/kbforums/confirm_post_delete.html:21 apps/wiki/templates/wiki/confirm_revision_delete.html:23
 msgid "Content"
@@ -1384,18 +1411,6 @@ msgstr "tòpics en aquest fòrum"
 msgid "Post a new thread"
 msgstr "Publica una resposta nova"
 
-#: apps/kbforums/templates/kbforums/threads.html:34
-msgid "Type"
-msgstr "Tipus"
-
-#: apps/kbforums/templates/kbforums/threads.html:37
-msgid "Replies"
-msgstr "Respostes"
-
-#: apps/kbforums/templates/kbforums/threads.html:38
-msgid "Last Post"
-msgstr "Darrer missatge"
-
 #: apps/kbforums/templates/kbforums/threads.html:46
 #, fuzzy
 msgctxt "thread_type"
@@ -1434,19 +1449,19 @@ msgid "If you need help with Firefox, please <a href=\"%(aaq_url)s\">ask a quest
 msgstr ""
 
 #. {0} is the number of posts.
-#: apps/kbforums/templates/kbforums/includes/post.html:8
+#: apps/kbforums/templates/kbforums/includes/post.html:11
 #, fuzzy
 msgid "1 post"
 msgid_plural "{0} posts"
 msgstr[0] "noves publicacions"
 msgstr[1] "noves publicacions"
 
-#: apps/kbforums/templates/kbforums/includes/post.html:26
+#: apps/kbforums/templates/kbforums/includes/post.html:30
 #, fuzzy
 msgid "Link to this post."
 msgstr "envia per correu electrònic aquest enviament"
 
-#: apps/kbforums/templates/kbforums/includes/post.html:34
+#: apps/kbforums/templates/kbforums/includes/post.html:38
 msgid "Modified by {name} on {datetime}"
 msgstr ""
 
@@ -1555,7 +1570,11 @@ msgstr "Ajuda del Firefox per a mòbils"
 msgid "username1, username2,..."
 msgstr "nom d'usuari separat per comes"
 
-#: apps/messages/views.py:97
+#: apps/messages/views.py:76
+msgid "Invalid username provided. Enter a new username below."
+msgstr ""
+
+#: apps/messages/views.py:109
 #, fuzzy
 msgid "The message was deleted!"
 msgstr "S'ha enviat el vostre missatge!"
@@ -2188,6 +2207,11 @@ msgstr "Aquest usuari és el teu amic"
 msgid "The password entered is known to be commonly used and is not allowed."
 msgstr ""
 
+#: apps/users/helpers.py:62
+#, fuzzy
+msgid "Private message"
+msgstr "Crear aquest pàgina"
+
 #: apps/users/models.py:31
 msgid "User"
 msgstr "Usuari"
@@ -2559,122 +2583,126 @@ msgstr ""
 msgid "I didn't get a confirmation email."
 msgstr "configuració de nivells"
 
-#: apps/wiki/events.py:72
+#: apps/wiki/events.py:79
 #, fuzzy
 msgid "{title} was edited by {creator}"
 msgstr "acceptada pel creador"
 
-#: apps/wiki/events.py:108
+#: apps/wiki/events.py:120
 #, fuzzy
 msgid "{title} is ready for review ({creator})"
 msgstr "Articles editats pendents per revisar"
 
-#: apps/wiki/events.py:127
-msgid "{title} ({locale}) has a new approved revision"
+#: apps/wiki/events.py:147 apps/wiki/events.py:212
+msgid "{title} has a revision ready for localization"
 msgstr ""
 
-#: apps/wiki/forms.py:20
+#: apps/wiki/events.py:213
+msgid "{title} ({locale}) has a new approved revision ({reviewer})"
+msgstr ""
+
+#: apps/wiki/forms.py:22
 msgid "Please keep the length of the title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:23
+#: apps/wiki/forms.py:25
 #, fuzzy
 msgid "Please provide a slug."
 msgstr "Si us plau, proveïu una Id"
 
-#: apps/wiki/forms.py:24
+#: apps/wiki/forms.py:26
 #, fuzzy
 msgid "The slug provided is not valid."
 msgstr "Aquest procés és invàlid"
 
-#: apps/wiki/forms.py:25
+#: apps/wiki/forms.py:27
 msgid "The slug is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:27
+#: apps/wiki/forms.py:29
 msgid "Please keep the length of the slug to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:30
+#: apps/wiki/forms.py:32
 msgid "Please provide a summary."
 msgstr "Proporcioneu un resum."
 
-#: apps/wiki/forms.py:31
+#: apps/wiki/forms.py:33
 msgid "The summary is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:33
+#: apps/wiki/forms.py:35
 msgid "Please keep the length of the summary to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:36
+#: apps/wiki/forms.py:38
 msgid "Please provide content."
 msgstr "Proporcioneu un contingut."
 
-#: apps/wiki/forms.py:37
+#: apps/wiki/forms.py:39
 msgid "The content is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:39
+#: apps/wiki/forms.py:41
 msgid "Please keep the length of the content to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:42
+#: apps/wiki/forms.py:44
 msgid "Please keep the length of the comment to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr ""
 
-#: apps/wiki/forms.py:70
+#: apps/wiki/forms.py:71
 #, fuzzy
 msgid "Title of article"
 msgstr "Nom de l'article"
 
-#: apps/wiki/forms.py:78 apps/wiki/templates/wiki/translate.html:67
+#: apps/wiki/forms.py:79 apps/wiki/templates/wiki/translate.html:67
 msgid "Slug:"
 msgstr ""
 
-#: apps/wiki/forms.py:79
+#: apps/wiki/forms.py:80
 #, fuzzy
 msgid "Article URL"
 msgstr "Imatge de l'article"
 
-#: apps/wiki/forms.py:85
+#: apps/wiki/forms.py:86
 #, fuzzy
 msgid "Firefox version:"
 msgstr "Propera versió"
 
-#: apps/wiki/forms.py:92
+#: apps/wiki/forms.py:93
 #, fuzzy
 msgid "Operating systems:"
 msgstr "Sistema de votació"
 
-#: apps/wiki/forms.py:100
+#: apps/wiki/forms.py:101
 #, fuzzy
 msgid "Allow translations:"
 msgstr "traducció"
 
-#: apps/wiki/forms.py:104
+#: apps/wiki/forms.py:105
 msgid "Obsolete:"
 msgstr ""
 
-#: apps/wiki/forms.py:108
+#: apps/wiki/forms.py:109
 msgid "Allow discussion on this article?"
 msgstr ""
 
-#: apps/wiki/forms.py:117
+#: apps/wiki/forms.py:118
 msgid "Category:"
 msgstr "Categoria:"
 
-#: apps/wiki/forms.py:118
+#: apps/wiki/forms.py:119
 #, fuzzy
 msgid "Type of article"
 msgstr "Nom de l'article"
 
-#: apps/wiki/forms.py:122
+#: apps/wiki/forms.py:123
 #, fuzzy
 msgid "Topics:"
 msgstr "Temes"
 
-#: apps/wiki/forms.py:123
+#: apps/wiki/forms.py:124
 msgid "Popular articles in each topic are displayed on the front page"
 msgstr ""
 
@@ -2699,152 +2727,164 @@ msgstr "Resultats de la cerca"
 msgid "Only displayed on search results page"
 msgstr "resultats de cerca per a"
 
-#: apps/wiki/forms.py:197 apps/wiki/forms.py:225
+#: apps/wiki/forms.py:197 apps/wiki/forms.py:249
 msgid "Comment:"
 msgstr "Comentari:"
 
-#: apps/wiki/forms.py:229
+#: apps/wiki/forms.py:254
 msgid "Significance:"
 msgstr ""
 
-#: apps/wiki/forms.py:235
-msgid "Ready for localization"
-msgstr ""
-
-#: apps/wiki/models.py:33
+#: apps/wiki/models.py:34
 msgid "Minor details like punctuation and spelling errors"
 msgstr ""
 
-#: apps/wiki/models.py:35
+#: apps/wiki/models.py:36
 #, fuzzy
 msgid "Content changes that don't require immediate translation"
 msgstr "Visualitza els canvis i actualitza la traducció"
 
-#: apps/wiki/models.py:37
+#: apps/wiki/models.py:38
 msgid "Major content changes that will make older translations inaccurate"
 msgstr ""
 
-#: apps/wiki/models.py:42
+#: apps/wiki/models.py:44
+msgid "These changes are inconsequential to localizers: they will not be notified of the change and it will not affect translations of the article."
+msgstr ""
+
+#: apps/wiki/models.py:48
+msgid ""
+"This will notify localizers and translations will be marked as \"needing updates\" on dashboards. Most changes&mdash;updating an image, fixing {for} markup, adding or removing non-critical "
+"sections&mdash;should use this."
+msgstr ""
+
+#: apps/wiki/models.py:53
+msgid ""
+"This will notify localizers and translations will be marked \"out of date\" on dashboards. Translations will show a warning to users that they are out of date and that the English version is the "
+"most accurate. Use this when the old instructions are completely unusable."
+msgstr ""
+
+#: apps/wiki/models.py:61
 msgid "Troubleshooting"
 msgstr ""
 
-#: apps/wiki/models.py:43
+#: apps/wiki/models.py:62
 msgid "How to"
 msgstr ""
 
-#: apps/wiki/models.py:44
+#: apps/wiki/models.py:63
 #, fuzzy
 msgid "How to contribute"
 msgstr "Com col·laborar-hi"
 
-#: apps/wiki/models.py:45
+#: apps/wiki/models.py:64
 msgid "Administration"
 msgstr "Administració"
 
-#: apps/wiki/models.py:46
+#: apps/wiki/models.py:65
 #, fuzzy
 msgid "Navigation"
 msgstr "Funcionaliats de navegació"
 
-#: apps/wiki/models.py:69
+#: apps/wiki/models.py:88
 #, fuzzy
 msgid "Desktop:"
 msgstr "Escriptori"
 
-#: apps/wiki/models.py:72 apps/wiki/models.py:73 apps/wiki/models.py:84
+#: apps/wiki/models.py:91 apps/wiki/models.py:92 apps/wiki/models.py:103
 #, fuzzy
 msgid "Firefox 6"
 msgstr "Assistència per al Firefox"
 
-#: apps/wiki/models.py:74 apps/wiki/models.py:75 apps/wiki/models.py:87
+#: apps/wiki/models.py:93 apps/wiki/models.py:94 apps/wiki/models.py:106
 #, fuzzy
 msgid "Firefox 5"
 msgstr "Assistència per al Firefox"
 
-#: apps/wiki/models.py:76 apps/wiki/models.py:77 apps/wiki/models.py:90
+#: apps/wiki/models.py:95 apps/wiki/models.py:96 apps/wiki/models.py:109
 #, fuzzy
 msgid "Firefox 4"
 msgstr "Assistència per al Firefox"
 
-#: apps/wiki/models.py:78 apps/wiki/models.py:79
+#: apps/wiki/models.py:97 apps/wiki/models.py:98
 msgid "Firefox 3.5-3.6"
 msgstr ""
 
-#: apps/wiki/models.py:81 apps/wiki/models.py:82
+#: apps/wiki/models.py:100 apps/wiki/models.py:101
 #, fuzzy
 msgid "Firefox 3.0"
 msgstr "Assistència per al Firefox"
 
-#: apps/wiki/models.py:83
+#: apps/wiki/models.py:102
 #, fuzzy
 msgid "Mobile:"
 msgstr "Mòbil"
 
-#: apps/wiki/models.py:85
+#: apps/wiki/models.py:104
 #, fuzzy
 msgid "Firefox 6 for Mobile"
 msgstr "Firefox 4 per a mòbils"
 
-#: apps/wiki/models.py:88
+#: apps/wiki/models.py:107
 #, fuzzy
 msgid "Firefox 5 for Mobile"
 msgstr "Firefox 4 per a mòbils"
 
-#: apps/wiki/models.py:91
+#: apps/wiki/models.py:110
 msgid "Firefox 4 for Mobile"
 msgstr "Firefox 4 per a mòbils"
 
-#: apps/wiki/models.py:101
+#: apps/wiki/models.py:120
 msgid "Desktop OS:"
 msgstr "SO d'escriptori:"
 
-#: apps/wiki/models.py:102
+#: apps/wiki/models.py:121
 msgid "Windows"
 msgstr "Windows"
 
-#: apps/wiki/models.py:103
+#: apps/wiki/models.py:122
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: apps/wiki/models.py:104
+#: apps/wiki/models.py:123
 msgid "Linux"
 msgstr ""
 
-#: apps/wiki/models.py:105
+#: apps/wiki/models.py:124
 #, fuzzy
 msgid "Mobile OS:"
 msgstr "Mòbil"
 
-#: apps/wiki/models.py:106
+#: apps/wiki/models.py:125
 msgid "Android"
 msgstr ""
 
-#: apps/wiki/models.py:107
+#: apps/wiki/models.py:126
 msgid "Maemo"
 msgstr ""
 
-#: apps/wiki/models.py:116
+#: apps/wiki/models.py:135
 msgid "%(old)s Redirect %(number)i"
 msgstr ""
 
-#: apps/wiki/models.py:117
+#: apps/wiki/models.py:136
 msgid "%(old)s-redirect-%(number)i"
 msgstr ""
 
-#: apps/wiki/models.py:202
+#: apps/wiki/models.py:221
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr ""
 
-#: apps/wiki/models.py:209
+#: apps/wiki/models.py:228
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr ""
 
-#: apps/wiki/models.py:297
+#: apps/wiki/models.py:319
 #, fuzzy
 msgid "Please choose a category."
 msgstr "Si us plau, primer creeu una categoria"
 
-#: apps/wiki/models.py:650
+#: apps/wiki/models.py:672
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr ""
 
@@ -2911,21 +2951,33 @@ msgctxt "KB Topic"
 msgid "Firefox 4.0"
 msgstr "Assistència per al Firefox"
 
-#: apps/wiki/views.py:459
+#: apps/wiki/views.py:465
 #, fuzzy
 msgid "You cannot translate this document."
 msgstr "No pots fer aquesta enquesta dues vegades"
 
-#: apps/wiki/views.py:659
+#: apps/wiki/views.py:682
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr ""
 
-#: apps/wiki/views.py:661
+#: apps/wiki/views.py:684
 msgid "Sorry to hear that. Try searching for solutions below."
 msgstr ""
 
-#: apps/wiki/views.py:672
+#: apps/wiki/views.py:695
 msgid "You already voted on this Article."
+msgstr ""
+
+#: apps/wiki/views.py:782
+msgid "{users} added to the contributors successfully!"
+msgstr ""
+
+#: apps/wiki/views.py:789
+msgid "There were errors adding new contributors, see below."
+msgstr ""
+
+#: apps/wiki/views.py:805
+msgid "{user} removed from the contributors successfully!"
 msgstr ""
 
 #: apps/wiki/templates/wiki/compare_revisions.html:5
@@ -2983,6 +3035,26 @@ msgstr ""
 #: apps/wiki/templates/wiki/confirm_document_delete.html:37 apps/wiki/templates/wiki/confirm_revision_delete.html:32
 msgid "Cancel and go back to document history"
 msgstr ""
+
+#: apps/wiki/templates/wiki/confirm_remove_contributor.html:4
+#, fuzzy
+msgid "Remove contributor | {document}"
+msgstr "Historial de revisions | {document}"
+
+#: apps/wiki/templates/wiki/confirm_remove_contributor.html:7
+#, fuzzy
+msgid "Remove Contributor"
+msgstr "Per a col·laboradors"
+
+#: apps/wiki/templates/wiki/confirm_remove_contributor.html:11
+#, fuzzy
+msgid "Are you sure you want to remove {user} from the document contributors?"
+msgstr "Segur que vols eliminar aquest comentari?"
+
+#: apps/wiki/templates/wiki/confirm_remove_contributor.html:15
+#, fuzzy
+msgid "Remove contributor"
+msgstr "Per a col·laboradors"
 
 #: apps/wiki/templates/wiki/confirm_revision_delete.html:4
 msgid "Delete Revision | {document}"
@@ -3100,23 +3172,43 @@ msgstr "Contingut"
 msgid "For help with writing articles, check out the <a href=\"%(url)s\">Support Document Guide</a>."
 msgstr "Per obtenir ajudar en la redacció d'articles, consulteu la <a href=\"%(url)s\">guia de documents d'assistència</a>."
 
-#: apps/wiki/templates/wiki/history.html:4
+#: apps/wiki/templates/wiki/history.html:5
 msgid "Revision History | {document}"
 msgstr "Historial de revisions | {document}"
 
-#: apps/wiki/templates/wiki/history.html:7
+#: apps/wiki/templates/wiki/history.html:8
 #, fuzzy
 msgid "History"
 msgstr "Historial"
 
-#: apps/wiki/templates/wiki/history.html:11
+#: apps/wiki/templates/wiki/history.html:12
 #, fuzzy
 msgid "History of {title}"
 msgstr "Historial de"
 
-#: apps/wiki/templates/wiki/history.html:13
+#: apps/wiki/templates/wiki/history.html:14
 msgid "Revision history for:"
 msgstr "Historial de revisions de:"
+
+#: apps/wiki/templates/wiki/history.html:32
+#, fuzzy
+msgid "Edit contributors"
+msgstr "Per a col·laboradors"
+
+#: apps/wiki/templates/wiki/history.html:34
+#, fuzzy
+msgid "Document contributors"
+msgstr "Per a col·laboradors"
+
+#: apps/wiki/templates/wiki/history.html:50
+#, fuzzy
+msgid "Remove user from contributors"
+msgstr "Per a col·laboradors"
+
+#: apps/wiki/templates/wiki/history.html:61
+#, fuzzy
+msgid "Add Contributor"
+msgstr "Per a col·laboradors"
 
 #: apps/wiki/templates/wiki/list_documents.html:6
 #, fuzzy
@@ -3336,7 +3428,7 @@ msgstr "aprova"
 msgid "Is current revision?"
 msgstr "versió actual"
 
-#: apps/wiki/templates/wiki/revision.html:58 apps/wiki/templates/wiki/includes/revision_list.html:75
+#: apps/wiki/templates/wiki/revision.html:58 apps/wiki/templates/wiki/includes/revision_list.html:92
 #, fuzzy
 msgid "Edit article based on this revision"
 msgstr "Articles editats pendents per revisar"
@@ -3481,6 +3573,14 @@ msgstr "L'article us ha semblat útil?"
 msgid "Please wait..."
 msgstr "Si us plau, registreu-vos."
 
+#: apps/wiki/templates/wiki/includes/ready_for_l10n_modal.html:3
+msgid "Mark as Ready for Localization"
+msgstr ""
+
+#: apps/wiki/templates/wiki/includes/ready_for_l10n_modal.html:7
+msgid "You are about to mark this revision <span class=\"revtime\"></span> as Ready for Localization. Are you sure you wish to proceed?"
+msgstr ""
+
 #: apps/wiki/templates/wiki/includes/review_form.html:10
 #, fuzzy
 msgid "Approve Translation"
@@ -3516,97 +3616,110 @@ msgstr "Conjunt de Tranduccions"
 msgid "Accept this Revision"
 msgstr "Veure aquest dipòsit"
 
-#: apps/wiki/templates/wiki/includes/review_form.html:19
+#: apps/wiki/templates/wiki/includes/review_form.html:20
+msgid "You are about to approve your own edit. Please consider asking our <a href=\"%(url)s\">reviewers</a> instead."
+msgstr ""
+
+#: apps/wiki/templates/wiki/includes/review_form.html:26
 msgid "Clicking Accept will make this version of the article live! Please pick the appropriate revision level below and consider sending a thank you to the person who submitted this."
 msgstr ""
 
-#: apps/wiki/templates/wiki/includes/review_form.html:23
+#: apps/wiki/templates/wiki/includes/review_form.html:34
 msgid "Thanks for taking the time to review these changes. Please consider sending a thank you to the person who submitted them."
 msgstr ""
 
-#: apps/wiki/templates/wiki/includes/review_form.html:31 apps/wiki/templates/wiki/includes/review_form.html:53
+#: apps/wiki/templates/wiki/includes/review_form.html:40 apps/wiki/templates/wiki/includes/review_form.html:63
 msgid "Leave a message for the contributor: <span class=\"optional\">(optional)</span>"
 msgstr ""
 
-#: apps/wiki/templates/wiki/includes/review_form.html:42
+#: apps/wiki/templates/wiki/includes/review_form.html:52
 msgid "Accept"
 msgstr "Accepta"
 
-#: apps/wiki/templates/wiki/includes/review_form.html:46
+#: apps/wiki/templates/wiki/includes/review_form.html:56
 #, fuzzy
 msgid "Reject this Translation"
 msgstr "Conjunt de Tranduccions"
 
-#: apps/wiki/templates/wiki/includes/review_form.html:46
+#: apps/wiki/templates/wiki/includes/review_form.html:56
 #, fuzzy
 msgid "Reject this Revision"
 msgstr "Veure aquest dipòsit"
 
-#: apps/wiki/templates/wiki/includes/review_form.html:49
+#: apps/wiki/templates/wiki/includes/review_form.html:59
 msgid "Thanks for taking the time to review these changes. Please consider leaving a message for the person who submitted them explaining why they were rejected."
 msgstr ""
 
-#: apps/wiki/templates/wiki/includes/review_form.html:56
+#: apps/wiki/templates/wiki/includes/review_form.html:66
 msgid "Reject"
 msgstr "Rebutja"
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:8 apps/wiki/templates/wiki/includes/revision_list.html:87
+#: apps/wiki/templates/wiki/includes/revision_list.html:8 apps/wiki/templates/wiki/includes/revision_list.html:105
 #, fuzzy
 msgid "Compare Selected Translations"
 msgstr "Actualitza la traducció"
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:8 apps/wiki/templates/wiki/includes/revision_list.html:87
+#: apps/wiki/templates/wiki/includes/revision_list.html:8 apps/wiki/templates/wiki/includes/revision_list.html:105
 msgid "Compare Selected Revisions"
 msgstr "Compara les revisions seleccionades"
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:21
+#: apps/wiki/templates/wiki/includes/revision_list.html:22
 #, fuzzy
 msgid "Revision"
 msgstr "permisos"
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:23
+#: apps/wiki/templates/wiki/includes/revision_list.html:24
 msgid "Significance - MT: Major Content Changes. M: Content Changes. Empty: Minor Changes."
 msgstr ""
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:23
+#: apps/wiki/templates/wiki/includes/revision_list.html:24
 msgctxt "First letter of 'Significance'"
 msgid "S"
 msgstr ""
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:24
+#: apps/wiki/templates/wiki/includes/revision_list.html:25
 #, fuzzy
 msgid "Editor"
 msgstr "Edita"
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:25
+#: apps/wiki/templates/wiki/includes/revision_list.html:26
+msgctxt "First letter of 'Localizable'"
+msgid "L"
+msgstr ""
+
+#: apps/wiki/templates/wiki/includes/revision_list.html:27
 #, fuzzy
 msgid "Comment"
 msgstr "Comentari:"
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:45
+#: apps/wiki/templates/wiki/includes/revision_list.html:47
 msgid "Review"
 msgstr "Revisa"
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:47
+#: apps/wiki/templates/wiki/includes/revision_list.html:49
 #, fuzzy
 msgctxt "revision"
 msgid "Unreviewed"
 msgstr "vist"
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:51
+#: apps/wiki/templates/wiki/includes/revision_list.html:53
 msgid "Current"
 msgstr "Actual"
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:53
-msgid "Approved"
-msgstr "Aprovada"
+#: apps/wiki/templates/wiki/includes/revision_list.html:77
+msgid "This revision is ready for localization."
+msgstr ""
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:79
+#: apps/wiki/templates/wiki/includes/revision_list.html:80 apps/wiki/templates/wiki/includes/revision_list.html:82
+msgid "This revision is not ready for localization."
+msgstr ""
+
+#: apps/wiki/templates/wiki/includes/revision_list.html:97
 #, fuzzy
 msgid "Delete this revision"
 msgstr "Crear aquest pàgina"
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:92
+#: apps/wiki/templates/wiki/includes/revision_list.html:110
 msgid "This document has no revisions."
 msgstr "El document no té cap revisió."
 
@@ -4029,6 +4142,38 @@ msgstr "Assistència per al Firefox"
 #: templates/mobile/base.html:90
 msgid "View full site"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Stop getting emailed when English revisions are approved"
+#~ msgstr "Deixa de rebre correu quan s'aprovin les revisions en anglès"
+
+#, fuzzy
+#~ msgid "Stop getting emailed when YOUR_LOCALE revisions are approved"
+#~ msgstr "Deixa de rebre correu quan s'aprovin les revisions en anglès"
+
+#, fuzzy
+#~ msgid "Get emailed when YOUR_LOCALE revisions are approved"
+#~ msgstr "Envia notificacions email quan aquesta pàgina canvii a"
+
+#, fuzzy
+#~ msgid "Stop getting emailed when English reviews are waiting"
+#~ msgstr "Envia notificacions email quan aquesta pàgina canvii a"
+
+#, fuzzy
+#~ msgid "Stop getting emailed when YOUR_LOCALE reviews are waiting"
+#~ msgstr "Envia notificacions email quan aquesta pàgina canvii a"
+
+#, fuzzy
+#~ msgid "Get emailed when English reviews are waiting"
+#~ msgstr "Envia notificacions email quan aquesta pàgina canvii a"
+
+#, fuzzy
+#~ msgid "Get emailed when YOUR_LOCALE reviews are waiting"
+#~ msgstr "Envia notificacions email quan aquesta pàgina canvii a"
+
+#, fuzzy
+#~ msgid "Reply to: %s"
+#~ msgstr "respondre"
 
 #, fuzzy
 #~ msgid "Browse our Support Forum"
