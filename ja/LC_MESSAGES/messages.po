@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-12 13:07-0700\n"
+"POT-Creation-Date: 2011-10-19 12:45-0700\n"
 "PO-Revision-Date: 2011-10-14 12:39+0200\n"
 "Last-Translator: marsf <chimantaea_mirabilis@yahoo.co.jp>\n"
 "Language-Team: Japanese\n"
@@ -157,7 +157,7 @@ msgstr "<mark>次のレベル</mark> へ導いてください！"
 msgid "Want to go beyond 140 characters? <a href=\"%(join_url)s\">Join the support community</a> and help many more Firefox users."
 msgstr "140 文字を超えて手助けしませんか？ <a href=\"%(join_url)s\">サポートコミュニティ</a> に参加して、さらに多くの Firefox ユーザを助けましょう。"
 
-#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:94 apps/kbforums/templates/kbforums/includes/post.html:31
+#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:94 apps/kbforums/templates/kbforums/includes/post.html:36
 #: apps/messages/templates/messages/read.html:17
 msgid "Reply"
 msgstr "返信"
@@ -570,15 +570,15 @@ msgstr "マイ プロファイル"
 msgid "Edit my profile"
 msgstr "プロファイルを編集"
 
-#: apps/flagit/models.py:23
+#: apps/flagit/models.py:23 apps/wiki/templates/wiki/includes/flag_form.html:3
 msgid "Spam or other unrelated content"
 msgstr "スパムまたは無関係のコンテンツ"
 
-#: apps/flagit/models.py:24
+#: apps/flagit/models.py:24 apps/wiki/templates/wiki/includes/flag_form.html:4
 msgid "Inappropriate language/dialog"
 msgstr "不適当な言語または会話"
 
-#: apps/flagit/models.py:25
+#: apps/flagit/models.py:25 apps/wiki/templates/wiki/includes/flag_form.html:5
 msgid "Misplaced bug report or support request"
 msgstr "見当違いのバグレポートまたはサポート要求"
 
@@ -586,7 +586,7 @@ msgstr "見当違いのバグレポートまたはサポート要求"
 msgid "Abusive content"
 msgstr "罵倒や悪口を含む内容"
 
-#: apps/flagit/models.py:27
+#: apps/flagit/models.py:27 apps/wiki/templates/wiki/includes/flag_form.html:6
 msgid "Other (please specify)"
 msgstr "その他 (具体的にお書きください)"
 
@@ -834,7 +834,7 @@ msgstr "動画削除 | {t} | メディアギャラリー"
 
 #: apps/gallery/templates/gallery/confirm_media_delete.html:14 apps/gallery/templates/gallery/edit_media.html:13 apps/gallery/templates/gallery/gallery.html:3
 #: apps/gallery/templates/gallery/gallery.html:6 apps/gallery/templates/gallery/gallery.html:10 apps/gallery/templates/gallery/media.html:9 apps/gallery/templates/gallery/search.html:6
-#: apps/gallery/templates/gallery/search.html:11 templates/includes/sidebar_modules.html:9
+#: apps/gallery/templates/gallery/search.html:11 templates/includes/sidebar_modules.html:16
 msgid "Media Gallery"
 msgstr "メディアギャラリー"
 
@@ -1375,11 +1375,11 @@ msgid "1 post"
 msgid_plural "{0} posts"
 msgstr[0] "{0} 件の投稿"
 
-#: apps/kbforums/templates/kbforums/includes/post.html:28
+#: apps/kbforums/templates/kbforums/includes/post.html:33
 msgid "Link to this post."
 msgstr "この投稿へのリンク。"
 
-#: apps/kbforums/templates/kbforums/includes/post.html:36
+#: apps/kbforums/templates/kbforums/includes/post.html:41
 msgid "Modified by {name} on {datetime}"
 msgstr "この投稿は {name} により {datetime} に変更されました"
 
@@ -1675,19 +1675,19 @@ msgstr "役立つ回答あり"
 msgid "Votes"
 msgstr "投票"
 
-#: apps/search/views.py:51
+#: apps/search/views.py:52
 msgid "Invalid callback function."
 msgstr "無効なコールバック関数です。"
 
-#: apps/search/views.py:85
+#: apps/search/views.py:86
 msgid "Invalid search data."
 msgstr "無効な検索データです。"
 
-#: apps/search/views.py:292 apps/search/templates/search/down.html:6 apps/search/templates/search/mobile/down.html:7
+#: apps/search/views.py:293 apps/search/templates/search/down.html:6 apps/search/templates/search/mobile/down.html:7
 msgid "Search Unavailable"
 msgstr "検索システムは現在利用できません"
 
-#: apps/search/views.py:369
+#: apps/search/views.py:368
 msgid "No pages matched the search criteria"
 msgstr "検索条件に一致するページはありません"
 
@@ -1777,17 +1777,13 @@ msgstr "詳細検索を利用"
 msgid "Search the Firefox Support Knowledge Base and Support Forum."
 msgstr "Firefox サポートナレッジベース記事とサポートフォーラムを検索します。"
 
-#: apps/search/templates/search/results.html:20
-msgid "Refine your search"
-msgstr "検索条件を見直す"
-
 #. {n} is the number of search results, {q} is the search query, {l} is the language searched.
-#: apps/search/templates/search/results.html:25 apps/search/templates/search/mobile/results.html:14
+#: apps/search/templates/search/results.html:24 apps/search/templates/search/mobile/results.html:14
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
 msgstr[0] "<strong>{q}</strong> についての検索結果が <strong>{n}</strong> 件見つかりました。(<strong>{l}</strong> の記事)"
 
-#: apps/search/templates/search/results.html:40
+#: apps/search/templates/search/results.html:39
 msgid "Can't find what you're looking for? <a href='{0}'>Ask a support question instead!</a>"
 msgstr "求める答えが見つけられないときは、<a href='{0}'>フォーラムで質問してください</a>。"
 
@@ -2662,124 +2658,134 @@ msgstr "ナビゲーション"
 msgid "Desktop:"
 msgstr "デスクトップ版:"
 
-#: apps/wiki/models.py:90 apps/wiki/models.py:91 apps/wiki/models.py:106
+#: apps/wiki/models.py:90 apps/wiki/models.py:91 apps/wiki/models.py:108
+#, fuzzy
+msgid "Firefox 9"
+msgstr "Firefox 8"
+
+#: apps/wiki/models.py:92 apps/wiki/models.py:93 apps/wiki/models.py:111
 msgid "Firefox 8"
 msgstr "Firefox 8"
 
-#: apps/wiki/models.py:92 apps/wiki/models.py:93 apps/wiki/models.py:109
+#: apps/wiki/models.py:94 apps/wiki/models.py:95 apps/wiki/models.py:114
 msgid "Firefox 7"
 msgstr "Firefox 7"
 
-#: apps/wiki/models.py:94 apps/wiki/models.py:95 apps/wiki/models.py:112
+#: apps/wiki/models.py:96 apps/wiki/models.py:97 apps/wiki/models.py:117
 msgid "Firefox 6"
 msgstr "Firefox 6"
 
-#: apps/wiki/models.py:96 apps/wiki/models.py:97 apps/wiki/models.py:115
+#: apps/wiki/models.py:98 apps/wiki/models.py:99 apps/wiki/models.py:120
 msgid "Firefox 5"
 msgstr "Firefox 5"
 
-#: apps/wiki/models.py:98 apps/wiki/models.py:99 apps/wiki/models.py:118
+#: apps/wiki/models.py:100 apps/wiki/models.py:101 apps/wiki/models.py:123
 msgid "Firefox 4"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:100 apps/wiki/models.py:101
+#: apps/wiki/models.py:102 apps/wiki/models.py:103
 msgid "Firefox 3.5-3.6"
 msgstr "Firefox 3.5-3.6"
 
-#: apps/wiki/models.py:103 apps/wiki/models.py:104
+#: apps/wiki/models.py:105 apps/wiki/models.py:106
 msgid "Firefox 3.0"
 msgstr "Firefox 3.0"
 
-#: apps/wiki/models.py:105
+#: apps/wiki/models.py:107
 msgid "Mobile:"
 msgstr "モバイル版:"
 
-#: apps/wiki/models.py:107
+#: apps/wiki/models.py:109
+#, fuzzy
+msgid "Firefox 9 for Mobile"
+msgstr "Firefox 8 for Mobile"
+
+#: apps/wiki/models.py:112
 msgid "Firefox 8 for Mobile"
 msgstr "Firefox 8 for Mobile"
 
-#: apps/wiki/models.py:110
+#: apps/wiki/models.py:115
 msgid "Firefox 7 for Mobile"
 msgstr "Firefox 7 for Mobile"
 
-#: apps/wiki/models.py:113
+#: apps/wiki/models.py:118
 msgid "Firefox 6 for Mobile"
 msgstr "Firefox 6 for Mobile"
 
-#: apps/wiki/models.py:116
+#: apps/wiki/models.py:121
 msgid "Firefox 5 for Mobile"
 msgstr "Firefox 5 for Mobile"
 
-#: apps/wiki/models.py:119
+#: apps/wiki/models.py:124
 msgid "Firefox 4 for Mobile"
 msgstr "Firefox 4 for Mobile"
 
-#: apps/wiki/models.py:129
+#: apps/wiki/models.py:135
 msgid "Desktop OS:"
 msgstr "デスクトップ OS:"
 
-#: apps/wiki/models.py:130
+#: apps/wiki/models.py:136
 msgid "Windows"
 msgstr "Windows"
 
-#: apps/wiki/models.py:131
+#: apps/wiki/models.py:137
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: apps/wiki/models.py:132
+#: apps/wiki/models.py:138
 msgid "Linux"
 msgstr "Linux"
 
-#: apps/wiki/models.py:133
+#: apps/wiki/models.py:139
 msgid "Mobile OS:"
 msgstr "モバイル OS:"
 
-#: apps/wiki/models.py:134
+#: apps/wiki/models.py:140
 msgid "Android"
 msgstr "Android"
 
-#: apps/wiki/models.py:135
+#: apps/wiki/models.py:141
 msgid "Maemo"
 msgstr "Maemo"
 
-#: apps/wiki/models.py:144 templates/base.html:96 templates/global/mobile/header.html:5
+#: apps/wiki/models.py:150 templates/base.html:96 templates/global/mobile/header.html:5
 msgid "Desktop"
 msgstr "デスクトップ"
 
-#: apps/wiki/models.py:145 templates/base.html:97 templates/global/menu_links.html:15
+#: apps/wiki/models.py:151 templates/base.html:97 templates/global/menu_links.html:15
 msgid "Mobile"
 msgstr "モバイル"
 
-#: apps/wiki/models.py:146 templates/global/menu_links.html:21
+#: apps/wiki/models.py:152 templates/global/menu_links.html:21
 msgid "Sync"
 msgstr "Firefox Sync"
 
-#: apps/wiki/models.py:147
+#: apps/wiki/models.py:153
 msgid "Home"
 msgstr "ホーム"
 
-#: apps/wiki/models.py:153
+#: apps/wiki/models.py:159
 msgid "%(old)s Redirect %(number)i"
 msgstr "%(old)s Redirect %(number)i"
 
-#: apps/wiki/models.py:154
+#: apps/wiki/models.py:160
 msgid "%(old)s-redirect-%(number)i"
 msgstr "%(old)s-redirect-%(number)i"
 
 # これの続きは？
-#: apps/wiki/models.py:218
+#: apps/wiki/models.py:224
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "チェックを入れると、この Wiki ページが検索対象とダッシュボードから外され、ページの閲覧時に今後更新されないことを示す注意書きが表示されます。"
 
-#: apps/wiki/models.py:225
+#: apps/wiki/models.py:231
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "チェックを入れると、このドキュメントに関連付けられたフォーラムでの議論を許可します。チェックを外すと、議論フォーラムを隠し、無効にします。"
 
-#: apps/wiki/models.py:320
+#: apps/wiki/models.py:326
 msgid "Please choose a category."
 msgstr "カテゴリを選択してください。"
 
-#: apps/wiki/models.py:676
+#: apps/wiki/models.py:682
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr "%(locale)sドキュメントのリビジョンをベースに編集してください。リビジョン ID %(id)s はこの基準に合いません。"
 
@@ -3396,6 +3402,11 @@ msgstr "この記事は役に立ちましたか？"
 msgid "Please wait..."
 msgstr "しばらくお待ちください..."
 
+#: apps/wiki/templates/wiki/includes/flag_form.html:9
+#, fuzzy
+msgid "Report Abuse"
+msgstr "商標の不正使用を報告"
+
 #: apps/wiki/templates/wiki/includes/ready_for_l10n_modal.html:3
 msgid "Mark as Ready for Localization"
 msgstr "翻訳準備完了のマークを付ける"
@@ -3613,23 +3624,23 @@ msgstr "Thunderbird"
 msgid "Be <mark>Awesome</mark>"
 msgstr "<mark>すてきなこと</mark>、<br>はじめよう"
 
-#: templates/base.html:140
+#: templates/base.html:142
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
 msgstr "Firefox ヘルプが世界中のボランティアによって運営されていることをご存知でしたか？"
 
-#: templates/base.html:143
+#: templates/base.html:145
 msgid "Grab your cape and join us &raquo;"
 msgstr "あなたもぜひ参加してください！ &raquo;"
 
-#: templates/base.html:147
+#: templates/base.html:149
 msgid "Check your <mark>plugins</mark>"
 msgstr "<mark>プラグイン</mark>は最新ですか？"
 
-#: templates/base.html:152
+#: templates/base.html:156
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
 msgstr "プラグインって何？ なぜ更新しないといけないの？ これらの質問に答え、インストールされたプラグインが最新バージョンか確認します。"
 
-#: templates/base.html:157
+#: templates/base.html:161
 msgid "Find out more &raquo;"
 msgstr "詳しくはこちら &raquo;"
 
@@ -3864,46 +3875,44 @@ msgid "For Contributors"
 msgstr "貢献者メニュー"
 
 #: templates/includes/sidebar_modules.html:7
-msgid "Contributor Home Page"
-msgstr "貢献者ホームページ"
+#, fuzzy
+msgid "Contributor Quickstart Guide"
+msgstr "貢献者ダッシュボード"
 
 #: templates/includes/sidebar_modules.html:8
+#, fuzzy
+msgid "Contributor News &amp; Resources"
+msgstr "貢献者フォーラム"
+
+#: templates/includes/sidebar_modules.html:9
+#, fuzzy
+msgid "Contributor Forums"
+msgstr "貢献者フォーラム"
+
+#: templates/includes/sidebar_modules.html:10
 msgid "Knowledge Base Dashboard"
 msgstr "ナレッジベースダッシュボード"
 
-#: templates/includes/sidebar_modules.html:10
+#: templates/includes/sidebar_modules.html:11
 msgid "Help on Twitter"
 msgstr "Twitter で助ける"
 
-#: templates/includes/sidebar_modules.html:11
-msgid "Answer Support Questions"
-msgstr "フォーラムで質問に答える"
-
 #: templates/includes/sidebar_modules.html:12
-msgid "Help with Live Chat"
-msgstr "ライブチャットで助ける"
-
-#: templates/includes/sidebar_modules.html:13
-msgid "Improve the Knowledge Base"
-msgstr "ナレッジベース記事を改善する"
-
-#: templates/includes/sidebar_modules.html:14
-msgid "Translate Articles"
-msgstr "記事を翻訳する"
-
-#: templates/includes/sidebar_modules.html:15
-msgid "Contributors Forums"
-msgstr "貢献者フォーラム"
-
-#: templates/includes/sidebar_modules.html:17
-msgid "Support Forum"
+#, fuzzy
+msgid "Support Forum Home"
 msgstr "サポートフォーラム"
 
-#: templates/includes/sidebar_modules.html:20
-msgid "Moderate Flagged Content"
+#: templates/includes/sidebar_modules.html:14
+#, fuzzy
+msgid "Moderate Forum Content"
 msgstr "フラグ付きコンテンツの整理"
 
-#: templates/includes/sidebar_modules.html:31 templates/mobile/base.html:63 templates/mobile/base.html:68
+#: templates/includes/sidebar_modules.html:17
+#, fuzzy
+msgid "Advanced Search"
+msgstr "詳細検索を利用"
+
+#: templates/includes/sidebar_modules.html:27 templates/mobile/base.html:63 templates/mobile/base.html:68
 msgid "Ask a Question"
 msgstr "フォーラムで質問する"
 
@@ -3955,6 +3964,24 @@ msgstr "モバイル版 Firefox"
 #: templates/mobile/base.html:98
 msgid "View full site"
 msgstr "PC 用の表示にする"
+
+#~ msgid "Refine your search"
+#~ msgstr "検索条件を見直す"
+
+#~ msgid "Contributor Home Page"
+#~ msgstr "貢献者ホームページ"
+
+#~ msgid "Answer Support Questions"
+#~ msgstr "フォーラムで質問に答える"
+
+#~ msgid "Help with Live Chat"
+#~ msgstr "ライブチャットで助ける"
+
+#~ msgid "Improve the Knowledge Base"
+#~ msgstr "ナレッジベース記事を改善する"
+
+#~ msgid "Translate Articles"
+#~ msgstr "記事を翻訳する"
 
 #~ msgid "Reply Preview:"
 #~ msgstr "返信プレビュー:"

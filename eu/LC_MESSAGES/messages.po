@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-12 13:07-0700\n"
+"POT-Creation-Date: 2011-10-19 12:45-0700\n"
 "PO-Revision-Date: 2011-02-14 17:10+0200\n"
 "Last-Translator: Julen Ruiz Aizpuru <julenx@gmail.com>\n"
 "Language-Team: librezale@librezale.org\n"
@@ -151,7 +151,7 @@ msgstr ""
 msgid "Want to go beyond 140 characters? <a href=\"%(join_url)s\">Join the support community</a> and help many more Firefox users."
 msgstr ""
 
-#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:94 apps/kbforums/templates/kbforums/includes/post.html:31
+#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:94 apps/kbforums/templates/kbforums/includes/post.html:36
 #: apps/messages/templates/messages/read.html:17
 msgid "Reply"
 msgstr "Erantzun"
@@ -579,15 +579,15 @@ msgstr "Nire profila"
 msgid "Edit my profile"
 msgstr "Editatu nire profila"
 
-#: apps/flagit/models.py:23
+#: apps/flagit/models.py:23 apps/wiki/templates/wiki/includes/flag_form.html:3
 msgid "Spam or other unrelated content"
 msgstr "Spama edo erlaziorik gabeko edukia"
 
-#: apps/flagit/models.py:24
+#: apps/flagit/models.py:24 apps/wiki/templates/wiki/includes/flag_form.html:4
 msgid "Inappropriate language/dialog"
 msgstr "Hizkuntza/elkarrizketa-koadro desegokia"
 
-#: apps/flagit/models.py:25
+#: apps/flagit/models.py:25 apps/wiki/templates/wiki/includes/flag_form.html:5
 msgid "Misplaced bug report or support request"
 msgstr "Tokiz kanpoko errore-txosten edo laguntza-eskaera"
 
@@ -596,7 +596,7 @@ msgstr "Tokiz kanpoko errore-txosten edo laguntza-eskaera"
 msgid "Abusive content"
 msgstr "Itzuli edukia"
 
-#: apps/flagit/models.py:27
+#: apps/flagit/models.py:27 apps/wiki/templates/wiki/includes/flag_form.html:6
 msgid "Other (please specify)"
 msgstr "Bestelakoa (zehaztu mesedez)"
 
@@ -847,7 +847,7 @@ msgstr "Ezabatu bideoa | {t} | Media galeria"
 
 #: apps/gallery/templates/gallery/confirm_media_delete.html:14 apps/gallery/templates/gallery/edit_media.html:13 apps/gallery/templates/gallery/gallery.html:3
 #: apps/gallery/templates/gallery/gallery.html:6 apps/gallery/templates/gallery/gallery.html:10 apps/gallery/templates/gallery/media.html:9 apps/gallery/templates/gallery/search.html:6
-#: apps/gallery/templates/gallery/search.html:11 templates/includes/sidebar_modules.html:9
+#: apps/gallery/templates/gallery/search.html:11 templates/includes/sidebar_modules.html:16
 msgid "Media Gallery"
 msgstr "Media galeria"
 
@@ -1411,11 +1411,11 @@ msgid_plural "{0} posts"
 msgstr[0] "{0} bidalketa"
 msgstr[1] "{0} bidalketa"
 
-#: apps/kbforums/templates/kbforums/includes/post.html:28
+#: apps/kbforums/templates/kbforums/includes/post.html:33
 msgid "Link to this post."
 msgstr "Bidalketa honetarako lotura."
 
-#: apps/kbforums/templates/kbforums/includes/post.html:36
+#: apps/kbforums/templates/kbforums/includes/post.html:41
 msgid "Modified by {name} on {datetime}"
 msgstr "{name}(e)k aldatua {datetime}(e)an"
 
@@ -1738,19 +1738,19 @@ msgstr "Erantzun lagungarriak ditu"
 msgid "Votes"
 msgstr "Boto-kopurua"
 
-#: apps/search/views.py:51
+#: apps/search/views.py:52
 msgid "Invalid callback function."
 msgstr "Callback funtzio okerra."
 
-#: apps/search/views.py:85
+#: apps/search/views.py:86
 msgid "Invalid search data."
 msgstr "Bilaketa-datu baliogabeak."
 
-#: apps/search/views.py:292 apps/search/templates/search/down.html:6 apps/search/templates/search/mobile/down.html:7
+#: apps/search/views.py:293 apps/search/templates/search/down.html:6 apps/search/templates/search/mobile/down.html:7
 msgid "Search Unavailable"
 msgstr "Bilaketa ez dago erabilgarri"
 
-#: apps/search/views.py:369
+#: apps/search/views.py:368
 msgid "No pages matched the search criteria"
 msgstr "Ez dago bilaketarekin bat datorren orririk."
 
@@ -1840,18 +1840,14 @@ msgstr "Erabili bilaketa aurreratua"
 msgid "Search the Firefox Support Knowledge Base and Support Forum."
 msgstr "Bilatu Firefoxen laguntzaren ezagutza-zentroan eta laguntza-foroan."
 
-#: apps/search/templates/search/results.html:20
-msgid "Refine your search"
-msgstr "Findu zure bilaketa"
-
 #. {n} is the number of search results, {q} is the search query, {l} is the language searched.
-#: apps/search/templates/search/results.html:25 apps/search/templates/search/mobile/results.html:14
+#: apps/search/templates/search/results.html:24 apps/search/templates/search/mobile/results.html:14
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
 msgstr[0] "Emaitza <strong>bat</strong> aurkitu da <strong>{q}</strong> bilaketarako <strong>{l}</strong> hizkuntzan"
 msgstr[1] "<strong>{n}</strong> emaitza aurkitu dira <strong>{q}</strong> bilaketarako <strong>{l}</strong> hizkuntzan"
 
-#: apps/search/templates/search/results.html:40
+#: apps/search/templates/search/results.html:39
 msgid "Can't find what you're looking for? <a href='{0}'>Ask a support question instead!</a>"
 msgstr "Ez duzu bila zabiltzana aurkitzen? <a href='{0}'>Eskatu laguntza!</a>"
 
@@ -2742,132 +2738,142 @@ msgstr "Nabigazioa"
 msgid "Desktop:"
 msgstr "Mahaigaina:"
 
-#: apps/wiki/models.py:90 apps/wiki/models.py:91 apps/wiki/models.py:106
+#: apps/wiki/models.py:90 apps/wiki/models.py:91 apps/wiki/models.py:108
+#, fuzzy
+msgid "Firefox 9"
+msgstr "Firefox 4"
+
+#: apps/wiki/models.py:92 apps/wiki/models.py:93 apps/wiki/models.py:111
 #, fuzzy
 msgid "Firefox 8"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:92 apps/wiki/models.py:93 apps/wiki/models.py:109
+#: apps/wiki/models.py:94 apps/wiki/models.py:95 apps/wiki/models.py:114
 #, fuzzy
 msgid "Firefox 7"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:94 apps/wiki/models.py:95 apps/wiki/models.py:112
+#: apps/wiki/models.py:96 apps/wiki/models.py:97 apps/wiki/models.py:117
 #, fuzzy
 msgid "Firefox 6"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:96 apps/wiki/models.py:97 apps/wiki/models.py:115
+#: apps/wiki/models.py:98 apps/wiki/models.py:99 apps/wiki/models.py:120
 #, fuzzy
 msgid "Firefox 5"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:98 apps/wiki/models.py:99 apps/wiki/models.py:118
+#: apps/wiki/models.py:100 apps/wiki/models.py:101 apps/wiki/models.py:123
 msgid "Firefox 4"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:100 apps/wiki/models.py:101
+#: apps/wiki/models.py:102 apps/wiki/models.py:103
 msgid "Firefox 3.5-3.6"
 msgstr "Firefox 3.5-3.6"
 
-#: apps/wiki/models.py:103 apps/wiki/models.py:104
+#: apps/wiki/models.py:105 apps/wiki/models.py:106
 msgid "Firefox 3.0"
 msgstr "Firefox 3.0"
 
-#: apps/wiki/models.py:105
+#: apps/wiki/models.py:107
 msgid "Mobile:"
 msgstr "Mugikorra:"
 
-#: apps/wiki/models.py:107
+#: apps/wiki/models.py:109
+#, fuzzy
+msgid "Firefox 9 for Mobile"
+msgstr "Mugikorrerako Firefox 4"
+
+#: apps/wiki/models.py:112
 #, fuzzy
 msgid "Firefox 8 for Mobile"
 msgstr "Mugikorrerako Firefox 4"
 
-#: apps/wiki/models.py:110
+#: apps/wiki/models.py:115
 #, fuzzy
 msgid "Firefox 7 for Mobile"
 msgstr "Mugikorrerako Firefox 4"
 
-#: apps/wiki/models.py:113
+#: apps/wiki/models.py:118
 #, fuzzy
 msgid "Firefox 6 for Mobile"
 msgstr "Mugikorrerako Firefox 4"
 
-#: apps/wiki/models.py:116
+#: apps/wiki/models.py:121
 #, fuzzy
 msgid "Firefox 5 for Mobile"
 msgstr "Mugikorrerako Firefox 4"
 
-#: apps/wiki/models.py:119
+#: apps/wiki/models.py:124
 msgid "Firefox 4 for Mobile"
 msgstr "Mugikorrerako Firefox 4"
 
-#: apps/wiki/models.py:129
+#: apps/wiki/models.py:135
 msgid "Desktop OS:"
 msgstr "Mahaigaineko SEa:"
 
-#: apps/wiki/models.py:130
+#: apps/wiki/models.py:136
 msgid "Windows"
 msgstr "Windows"
 
-#: apps/wiki/models.py:131
+#: apps/wiki/models.py:137
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: apps/wiki/models.py:132
+#: apps/wiki/models.py:138
 msgid "Linux"
 msgstr "Linux"
 
-#: apps/wiki/models.py:133
+#: apps/wiki/models.py:139
 msgid "Mobile OS:"
 msgstr "Mugikorraren SEa:"
 
-#: apps/wiki/models.py:134
+#: apps/wiki/models.py:140
 msgid "Android"
 msgstr "Android"
 
-#: apps/wiki/models.py:135
+#: apps/wiki/models.py:141
 msgid "Maemo"
 msgstr "Maemo"
 
-#: apps/wiki/models.py:144 templates/base.html:96 templates/global/mobile/header.html:5
+#: apps/wiki/models.py:150 templates/base.html:96 templates/global/mobile/header.html:5
 #, fuzzy
 msgid "Desktop"
 msgstr "Mahaigaina:"
 
-#: apps/wiki/models.py:145 templates/base.html:97 templates/global/menu_links.html:15
+#: apps/wiki/models.py:151 templates/base.html:97 templates/global/menu_links.html:15
 msgid "Mobile"
 msgstr "Mugikorra"
 
-#: apps/wiki/models.py:146 templates/global/menu_links.html:21
+#: apps/wiki/models.py:152 templates/global/menu_links.html:21
 msgid "Sync"
 msgstr "Sync"
 
-#: apps/wiki/models.py:147
+#: apps/wiki/models.py:153
 msgid "Home"
 msgstr ""
 
-#: apps/wiki/models.py:153
+#: apps/wiki/models.py:159
 msgid "%(old)s Redirect %(number)i"
 msgstr "%(old)s berbideraketa %(number)i"
 
-#: apps/wiki/models.py:154
+#: apps/wiki/models.py:160
 msgid "%(old)s-redirect-%(number)i"
 msgstr "%(old)s-berbideraketa-%(number)i"
 
-#: apps/wiki/models.py:218
+#: apps/wiki/models.py:224
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr ""
 
-#: apps/wiki/models.py:225
+#: apps/wiki/models.py:231
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr ""
 
-#: apps/wiki/models.py:320
+#: apps/wiki/models.py:326
 msgid "Please choose a category."
 msgstr "Aukeratu kategoria."
 
-#: apps/wiki/models.py:676
+#: apps/wiki/models.py:682
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr "Berrikuspenak %(locale)s hizkuntzako dokumentuaren berrikuspenean oinarritu behar du. %(id)s berrikuspen-IDak ez du irizpide hori betetzen."
 
@@ -3507,6 +3513,11 @@ msgstr "Artikulua lagungarria izan da?"
 msgid "Please wait..."
 msgstr "Itxaron mesedez..."
 
+#: apps/wiki/templates/wiki/includes/flag_form.html:9
+#, fuzzy
+msgid "Report Abuse"
+msgstr "Salatu markaren erabilera okerra"
+
 #: apps/wiki/templates/wiki/includes/ready_for_l10n_modal.html:3
 msgid "Mark as Ready for Localization"
 msgstr ""
@@ -3737,23 +3748,23 @@ msgstr "Thunderbirden laguntza"
 msgid "Be <mark>Awesome</mark>"
 msgstr "Izan <mark>tumatxa</mark>"
 
-#: templates/base.html:140
+#: templates/base.html:142
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
 msgstr "Bazenekien Firefoxen laguntza mundu osoko bolondres superheroiek mantentzen dutela?"
 
-#: templates/base.html:143
+#: templates/base.html:145
 msgid "Grab your cape and join us &raquo;"
 msgstr "Hartu zure kapa eta egizu bat &raquo;"
 
-#: templates/base.html:147
+#: templates/base.html:149
 msgid "Check your <mark>plugins</mark>"
 msgstr "Egiaztatu zure <mark>plugin</mark>ak"
 
-#: templates/base.html:152
+#: templates/base.html:156
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
 msgstr "Zer da plugin bat? Zergatik mantendu behar ditut eguneratuta? Erantzun galdera hauek eta exekutatu berehalako proba bat egunean zauden egiaztatzeko."
 
-#: templates/base.html:157
+#: templates/base.html:161
 msgid "Find out more &raquo;"
 msgstr "Argibide gehiago &raquo;"
 
@@ -3992,48 +4003,44 @@ msgid "For Contributors"
 msgstr "Laguntzaileentzat"
 
 #: templates/includes/sidebar_modules.html:7
-msgid "Contributor Home Page"
-msgstr "Laguntzailearen hasiera-orria"
+#, fuzzy
+msgid "Contributor Quickstart Guide"
+msgstr "Laguntzailearen arbela"
 
 #: templates/includes/sidebar_modules.html:8
+#, fuzzy
+msgid "Contributor News &amp; Resources"
+msgstr "Laguntzaileen foroak"
+
+#: templates/includes/sidebar_modules.html:9
+#, fuzzy
+msgid "Contributor Forums"
+msgstr "Laguntzaileen foroak"
+
+#: templates/includes/sidebar_modules.html:10
 msgid "Knowledge Base Dashboard"
 msgstr "Ezagutza-basearen arbela"
 
-#: templates/includes/sidebar_modules.html:10
+#: templates/includes/sidebar_modules.html:11
 msgid "Help on Twitter"
 msgstr "Laguntza Twitter-en"
 
-#: templates/includes/sidebar_modules.html:11
-msgid "Answer Support Questions"
-msgstr "Erantzun laguntza-galderak"
-
 #: templates/includes/sidebar_modules.html:12
-msgid "Help with Live Chat"
-msgstr "Zuzeneko txatean laguntzea"
-
-#: templates/includes/sidebar_modules.html:13
-msgid "Improve the Knowledge Base"
-msgstr "Hobetu ezagutza-basea"
+#, fuzzy
+msgid "Support Forum Home"
+msgstr "Laguntzailearen arbela"
 
 #: templates/includes/sidebar_modules.html:14
-msgid "Translate Articles"
-msgstr "Itzuli artikuluak"
-
-#: templates/includes/sidebar_modules.html:15
-msgid "Contributors Forums"
-msgstr "Laguntzaileen foroak"
+#, fuzzy
+msgid "Moderate Forum Content"
+msgstr "Itzuli edukia"
 
 #: templates/includes/sidebar_modules.html:17
 #, fuzzy
-msgid "Support Forum"
-msgstr "Laguntzailearen arbela"
+msgid "Advanced Search"
+msgstr "Erabili bilaketa aurreratua"
 
-#: templates/includes/sidebar_modules.html:20
-#, fuzzy
-msgid "Moderate Flagged Content"
-msgstr "Itzuli edukia"
-
-#: templates/includes/sidebar_modules.html:31 templates/mobile/base.html:63 templates/mobile/base.html:68
+#: templates/includes/sidebar_modules.html:27 templates/mobile/base.html:63 templates/mobile/base.html:68
 msgid "Ask a Question"
 msgstr "Egin galdera bat"
 
@@ -4090,6 +4097,24 @@ msgstr "Mugikorrerako Firefox 4"
 #: templates/mobile/base.html:98
 msgid "View full site"
 msgstr ""
+
+#~ msgid "Refine your search"
+#~ msgstr "Findu zure bilaketa"
+
+#~ msgid "Contributor Home Page"
+#~ msgstr "Laguntzailearen hasiera-orria"
+
+#~ msgid "Answer Support Questions"
+#~ msgstr "Erantzun laguntza-galderak"
+
+#~ msgid "Help with Live Chat"
+#~ msgstr "Zuzeneko txatean laguntzea"
+
+#~ msgid "Improve the Knowledge Base"
+#~ msgstr "Hobetu ezagutza-basea"
+
+#~ msgid "Translate Articles"
+#~ msgstr "Itzuli artikuluak"
 
 #~ msgid "Reply Preview:"
 #~ msgstr "Erantzuaren aurreikuspena:"

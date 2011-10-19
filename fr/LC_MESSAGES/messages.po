@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-12 13:07-0700\n"
+"POT-Creation-Date: 2011-10-19 12:45-0700\n"
 "PO-Revision-Date: 2011-10-18 10:54+0200\n"
 "Last-Translator: Benoit <benoit.leseul@gmail.com>\n"
 "Language-Team: French\n"
@@ -151,7 +151,7 @@ msgstr "Passez au <mark>niveau supérieur</mark> !"
 msgid "Want to go beyond 140 characters? <a href=\"%(join_url)s\">Join the support community</a> and help many more Firefox users."
 msgstr "Vous voulez aller au-delà des 140 caractères ? <a href=\"%(join_url)s\">Rejoignez la communauté d'assistance</a> et aidez beaucoup plus d'utilisateurs de Firefox."
 
-#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:94 apps/kbforums/templates/kbforums/includes/post.html:31
+#: apps/customercare/templates/customercare/reply_modal.html:2 apps/kbforums/templates/kbforums/posts.html:94 apps/kbforums/templates/kbforums/includes/post.html:36
 #: apps/messages/templates/messages/read.html:17
 msgid "Reply"
 msgstr "Répondre"
@@ -562,15 +562,15 @@ msgstr "Mon profil"
 msgid "Edit my profile"
 msgstr "Modifier mon profil"
 
-#: apps/flagit/models.py:23
+#: apps/flagit/models.py:23 apps/wiki/templates/wiki/includes/flag_form.html:3
 msgid "Spam or other unrelated content"
 msgstr "Spam ou autre contenu sans rapport avec le sujet"
 
-#: apps/flagit/models.py:24
+#: apps/flagit/models.py:24 apps/wiki/templates/wiki/includes/flag_form.html:4
 msgid "Inappropriate language/dialog"
 msgstr "Langue/dialogue non approprié"
 
-#: apps/flagit/models.py:25
+#: apps/flagit/models.py:25 apps/wiki/templates/wiki/includes/flag_form.html:5
 msgid "Misplaced bug report or support request"
 msgstr "Rapport d'erreur ou requête d'assistance placé au mauvais endroit"
 
@@ -578,7 +578,7 @@ msgstr "Rapport d'erreur ou requête d'assistance placé au mauvais endroit"
 msgid "Abusive content"
 msgstr "Contenu abusif"
 
-#: apps/flagit/models.py:27
+#: apps/flagit/models.py:27 apps/wiki/templates/wiki/includes/flag_form.html:6
 msgid "Other (please specify)"
 msgstr "Autre (veuillez préciser)"
 
@@ -826,7 +826,7 @@ msgstr "Supprimer la vidéo | {t} | Galerie de médias"
 
 #: apps/gallery/templates/gallery/confirm_media_delete.html:14 apps/gallery/templates/gallery/edit_media.html:13 apps/gallery/templates/gallery/gallery.html:3
 #: apps/gallery/templates/gallery/gallery.html:6 apps/gallery/templates/gallery/gallery.html:10 apps/gallery/templates/gallery/media.html:9 apps/gallery/templates/gallery/search.html:6
-#: apps/gallery/templates/gallery/search.html:11 templates/includes/sidebar_modules.html:9
+#: apps/gallery/templates/gallery/search.html:11 templates/includes/sidebar_modules.html:16
 msgid "Media Gallery"
 msgstr "Galerie de médias"
 
@@ -1370,11 +1370,11 @@ msgid_plural "{0} posts"
 msgstr[0] "1 message"
 msgstr[1] "{0} messages"
 
-#: apps/kbforums/templates/kbforums/includes/post.html:28
+#: apps/kbforums/templates/kbforums/includes/post.html:33
 msgid "Link to this post."
 msgstr "Lien vers ce message."
 
-#: apps/kbforums/templates/kbforums/includes/post.html:36
+#: apps/kbforums/templates/kbforums/includes/post.html:41
 msgid "Modified by {name} on {datetime}"
 msgstr "Modifié par {name} le {datetime}"
 
@@ -1669,19 +1669,19 @@ msgstr "A des réponses pertinentes"
 msgid "Votes"
 msgstr "Votes"
 
-#: apps/search/views.py:51
+#: apps/search/views.py:52
 msgid "Invalid callback function."
 msgstr "Fonction de rappel invalide."
 
-#: apps/search/views.py:85
+#: apps/search/views.py:86
 msgid "Invalid search data."
 msgstr "Données de recherche invalides."
 
-#: apps/search/views.py:292 apps/search/templates/search/down.html:6 apps/search/templates/search/mobile/down.html:7
+#: apps/search/views.py:293 apps/search/templates/search/down.html:6 apps/search/templates/search/mobile/down.html:7
 msgid "Search Unavailable"
 msgstr "Recherche indisponible"
 
-#: apps/search/views.py:369
+#: apps/search/views.py:368
 msgid "No pages matched the search criteria"
 msgstr "Aucune page ne correspond aux critères de recherche"
 
@@ -1771,18 +1771,14 @@ msgstr "Utiliser la recherche avancée"
 msgid "Search the Firefox Support Knowledge Base and Support Forum."
 msgstr "Rechercher dans la base de connaissances et le forum d'assistance de Firefox."
 
-#: apps/search/templates/search/results.html:20
-msgid "Refine your search"
-msgstr "Affiner votre recherche"
-
 #. {n} is the number of search results, {q} is the search query, {l} is the language searched.
-#: apps/search/templates/search/results.html:25 apps/search/templates/search/mobile/results.html:14
+#: apps/search/templates/search/results.html:24 apps/search/templates/search/mobile/results.html:14
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
 msgstr[0] "<strong>{n}</strong> résultat trouvé pour <strong>{q}</strong> en <strong>{l}</strong>"
 msgstr[1] "<strong>{n}</strong> résultats trouvés pour <strong>{q}</strong> en <strong>{l}</strong>"
 
-#: apps/search/templates/search/results.html:40
+#: apps/search/templates/search/results.html:39
 msgid "Can't find what you're looking for? <a href='{0}'>Ask a support question instead!</a>"
 msgstr "Impossible de trouver ce que vous recherchez ? <a href='{0}'>Posez plutôt une question d'assistance !</a>"
 
@@ -2044,8 +2040,7 @@ msgstr "Surveiller les sujets de discussion de forum que j'ai démarrés"
 
 #: apps/users/forms.py:40
 msgid "Watch forum threads I comment in"
-msgstr ""
-"Surveiller les sujets de discussion de forum dans lesquels j'ai commenté"
+msgstr "Surveiller les sujets de discussion de forum dans lesquels j'ai commenté"
 
 #: apps/users/forms.py:43
 msgid "Watch KB discussion threads I start"
@@ -2053,8 +2048,7 @@ msgstr "Surveiller les sujets de discussion d'articles que j'ai démarrés"
 
 #: apps/users/forms.py:46
 msgid "Watch KB discussion threads I comment in"
-msgstr ""
-"Surveiller les sujets de discussion d'articles dans lesquels j'ai commenté"
+msgstr "Surveiller les sujets de discussion d'articles dans lesquels j'ai commenté"
 
 #: apps/users/forms.py:67 apps/users/templates/users/includes/macros.html:13
 msgid "Username:"
@@ -2672,124 +2666,134 @@ msgstr "Navigation"
 msgid "Desktop:"
 msgstr "Ordinateur :"
 
-#: apps/wiki/models.py:90 apps/wiki/models.py:91 apps/wiki/models.py:106
+#: apps/wiki/models.py:90 apps/wiki/models.py:91 apps/wiki/models.py:108
+#, fuzzy
+msgid "Firefox 9"
+msgstr "Firefox 8"
+
+#: apps/wiki/models.py:92 apps/wiki/models.py:93 apps/wiki/models.py:111
 msgid "Firefox 8"
 msgstr "Firefox 8"
 
-#: apps/wiki/models.py:92 apps/wiki/models.py:93 apps/wiki/models.py:109
+#: apps/wiki/models.py:94 apps/wiki/models.py:95 apps/wiki/models.py:114
 msgid "Firefox 7"
 msgstr "Firefox 7"
 
-#: apps/wiki/models.py:94 apps/wiki/models.py:95 apps/wiki/models.py:112
+#: apps/wiki/models.py:96 apps/wiki/models.py:97 apps/wiki/models.py:117
 msgid "Firefox 6"
 msgstr "Firefox 6"
 
-#: apps/wiki/models.py:96 apps/wiki/models.py:97 apps/wiki/models.py:115
+#: apps/wiki/models.py:98 apps/wiki/models.py:99 apps/wiki/models.py:120
 msgid "Firefox 5"
 msgstr "Firefox 5"
 
-#: apps/wiki/models.py:98 apps/wiki/models.py:99 apps/wiki/models.py:118
+#: apps/wiki/models.py:100 apps/wiki/models.py:101 apps/wiki/models.py:123
 msgid "Firefox 4"
 msgstr "Firefox 4"
 
-#: apps/wiki/models.py:100 apps/wiki/models.py:101
+#: apps/wiki/models.py:102 apps/wiki/models.py:103
 msgid "Firefox 3.5-3.6"
 msgstr "Firefox 3.5-3.6"
 
-#: apps/wiki/models.py:103 apps/wiki/models.py:104
+#: apps/wiki/models.py:105 apps/wiki/models.py:106
 msgid "Firefox 3.0"
 msgstr "Firefox 3.0"
 
-#: apps/wiki/models.py:105
+#: apps/wiki/models.py:107
 msgid "Mobile:"
 msgstr "Mobile :"
 
-#: apps/wiki/models.py:107
+#: apps/wiki/models.py:109
+#, fuzzy
+msgid "Firefox 9 for Mobile"
+msgstr "Firefox 8 pour mobile"
+
+#: apps/wiki/models.py:112
 msgid "Firefox 8 for Mobile"
 msgstr "Firefox 8 pour mobile"
 
-#: apps/wiki/models.py:110
+#: apps/wiki/models.py:115
 msgid "Firefox 7 for Mobile"
 msgstr "Firefox 7 pour mobile"
 
-#: apps/wiki/models.py:113
+#: apps/wiki/models.py:118
 msgid "Firefox 6 for Mobile"
 msgstr "Firefox 6 pour mobile"
 
-#: apps/wiki/models.py:116
+#: apps/wiki/models.py:121
 msgid "Firefox 5 for Mobile"
 msgstr "Firefox 5 pour mobile"
 
-#: apps/wiki/models.py:119
+#: apps/wiki/models.py:124
 msgid "Firefox 4 for Mobile"
 msgstr "Firefox 4 pour mobile"
 
-#: apps/wiki/models.py:129
+#: apps/wiki/models.py:135
 msgid "Desktop OS:"
 msgstr "Système d'exploitation :"
 
-#: apps/wiki/models.py:130
+#: apps/wiki/models.py:136
 msgid "Windows"
 msgstr "Windows"
 
-#: apps/wiki/models.py:131
+#: apps/wiki/models.py:137
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: apps/wiki/models.py:132
+#: apps/wiki/models.py:138
 msgid "Linux"
 msgstr "Linux"
 
-#: apps/wiki/models.py:133
+#: apps/wiki/models.py:139
 msgid "Mobile OS:"
 msgstr "Système d'exploitation mobile :"
 
-#: apps/wiki/models.py:134
+#: apps/wiki/models.py:140
 msgid "Android"
 msgstr "Android"
 
-#: apps/wiki/models.py:135
+#: apps/wiki/models.py:141
 msgid "Maemo"
 msgstr "Maemo"
 
-#: apps/wiki/models.py:144 templates/base.html:96 templates/global/mobile/header.html:5
+#: apps/wiki/models.py:150 templates/base.html:96 templates/global/mobile/header.html:5
 msgid "Desktop"
 msgstr "Ordinateur"
 
-#: apps/wiki/models.py:145 templates/base.html:97 templates/global/menu_links.html:15
+#: apps/wiki/models.py:151 templates/base.html:97 templates/global/menu_links.html:15
 msgid "Mobile"
 msgstr "Mobile"
 
-#: apps/wiki/models.py:146 templates/global/menu_links.html:21
+#: apps/wiki/models.py:152 templates/global/menu_links.html:21
 msgid "Sync"
 msgstr "Sync"
 
 # Firefox Home
-#: apps/wiki/models.py:147
+#: apps/wiki/models.py:153
 msgid "Home"
 msgstr "Home"
 
-#: apps/wiki/models.py:153
+#: apps/wiki/models.py:159
 msgid "%(old)s Redirect %(number)i"
 msgstr "%(old)s Redirection %(number)i"
 
-#: apps/wiki/models.py:154
+#: apps/wiki/models.py:160
 msgid "%(old)s-redirect-%(number)i"
 msgstr "%(old)s-redirection-%(number)i"
 
-#: apps/wiki/models.py:218
+#: apps/wiki/models.py:224
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "Si coché, cette page Wiki n'apparaîtra pas dans les recherches basiques et les tableaux de bord. Lors de l'affichage, la page avertira qu'elle n'est plus tenue à jour."
 
-#: apps/wiki/models.py:225
+#: apps/wiki/models.py:231
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "Si la case est cochée, ce document autorise la discussion dans un forum associé. Décochez pour masquer/désactiver le forum."
 
-#: apps/wiki/models.py:320
+#: apps/wiki/models.py:326
 msgid "Please choose a category."
 msgstr "Veuillez choisir une catégorie."
 
-#: apps/wiki/models.py:676
+#: apps/wiki/models.py:682
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr "Une révision doit être basée sur une révision du document %(locale)s. L'identifiant de la révision %(id)s ne correspond pas à ces critères."
 
@@ -3401,6 +3405,11 @@ msgstr "Cet article vous a-t-il été utile ?"
 msgid "Please wait..."
 msgstr "Veuillez patienter…"
 
+#: apps/wiki/templates/wiki/includes/flag_form.html:9
+#, fuzzy
+msgid "Report Abuse"
+msgstr "Signaler une violation de marque déposée"
+
 #: apps/wiki/templates/wiki/includes/ready_for_l10n_modal.html:3
 msgid "Mark as Ready for Localization"
 msgstr "Marquer comme prêt pour la localisation"
@@ -3618,23 +3627,23 @@ msgstr "Thunderbird"
 msgid "Be <mark>Awesome</mark>"
 msgstr "Soyez <mark>formidable</mark>"
 
-#: templates/base.html:140
+#: templates/base.html:142
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
 msgstr "Saviez-vous que l'aide de Firefox est réalisée par des bénévoles du monde entier ?"
 
-#: templates/base.html:143
+#: templates/base.html:145
 msgid "Grab your cape and join us &raquo;"
 msgstr "Rejoignez-nous &raquo;"
 
-#: templates/base.html:147
+#: templates/base.html:149
 msgid "Check your <mark>plugins</mark>"
 msgstr "Vérifiez vos <mark>plugins</mark>"
 
-#: templates/base.html:152
+#: templates/base.html:156
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
 msgstr "Qu'est-ce qu'un plugin ? Pourquoi doivent-ils être à jour ? Trouvez la réponse à ces questions et faites directement le test pour voir si vous êtes à jour."
 
-#: templates/base.html:157
+#: templates/base.html:161
 msgid "Find out more &raquo;"
 msgstr "En savoir plus &raquo;"
 
@@ -3655,10 +3664,8 @@ msgid ""
 "Except where otherwise <a href=\"http://www.mozilla.org/about/legal.html#site\">noted</a>, content on this site is licensed under the <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/"
 "\"> Creative Commons Attribution Share-Alike License v3.0 </a> or any later version."
 msgstr ""
-"Sauf <a href=\"http://www.mozilla.org/about/legal.html#site\">indication</a> "
-"contraire, le contenu de ce site est sous la licence <br /> <a "
-"href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> Creative Commons "
-"Attribution Share-Alike License v3.0 </a> ou toute version ultérieure."
+"Sauf <a href=\"http://www.mozilla.org/about/legal.html#site\">indication</a> contraire, le contenu de ce site est sous la licence <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> "
+"Creative Commons Attribution Share-Alike License v3.0 </a> ou toute version ultérieure."
 
 #: templates/global/footer.html:6
 msgid "Back to home page"
@@ -3870,46 +3877,44 @@ msgid "For Contributors"
 msgstr "Pour les contributeurs"
 
 #: templates/includes/sidebar_modules.html:7
-msgid "Contributor Home Page"
-msgstr "Page d'accueil du contributeur"
+#, fuzzy
+msgid "Contributor Quickstart Guide"
+msgstr "Tableau de bord du contributeur"
 
 #: templates/includes/sidebar_modules.html:8
+#, fuzzy
+msgid "Contributor News &amp; Resources"
+msgstr "Forums des contributeurs"
+
+#: templates/includes/sidebar_modules.html:9
+#, fuzzy
+msgid "Contributor Forums"
+msgstr "Forums des contributeurs"
+
+#: templates/includes/sidebar_modules.html:10
 msgid "Knowledge Base Dashboard"
 msgstr "Tableau de bord de la base de connaissances"
 
-#: templates/includes/sidebar_modules.html:10
+#: templates/includes/sidebar_modules.html:11
 msgid "Help on Twitter"
 msgstr "Aider sur Twitter"
 
-#: templates/includes/sidebar_modules.html:11
-msgid "Answer Support Questions"
-msgstr "Répondre aux questions d'assistance"
-
 #: templates/includes/sidebar_modules.html:12
-msgid "Help with Live Chat"
-msgstr "Aider dans la discussion en direct"
-
-#: templates/includes/sidebar_modules.html:13
-msgid "Improve the Knowledge Base"
-msgstr "Améliorer la base de connaissances"
-
-#: templates/includes/sidebar_modules.html:14
-msgid "Translate Articles"
-msgstr "Traduire des articles"
-
-#: templates/includes/sidebar_modules.html:15
-msgid "Contributors Forums"
-msgstr "Forums des contributeurs"
-
-#: templates/includes/sidebar_modules.html:17
-msgid "Support Forum"
+#, fuzzy
+msgid "Support Forum Home"
 msgstr "Forum d'assistance"
 
-#: templates/includes/sidebar_modules.html:20
-msgid "Moderate Flagged Content"
+#: templates/includes/sidebar_modules.html:14
+#, fuzzy
+msgid "Moderate Forum Content"
 msgstr "Modérer le contenu signalé"
 
-#: templates/includes/sidebar_modules.html:31 templates/mobile/base.html:63 templates/mobile/base.html:68
+#: templates/includes/sidebar_modules.html:17
+#, fuzzy
+msgid "Advanced Search"
+msgstr "Utiliser la recherche avancée"
+
+#: templates/includes/sidebar_modules.html:27 templates/mobile/base.html:63 templates/mobile/base.html:68
 msgid "Ask a Question"
 msgstr "Poser une question"
 
@@ -3962,6 +3967,24 @@ msgstr "Firefox pour mobile"
 #: templates/mobile/base.html:98
 msgid "View full site"
 msgstr "Afficher le site complet"
+
+#~ msgid "Refine your search"
+#~ msgstr "Affiner votre recherche"
+
+#~ msgid "Contributor Home Page"
+#~ msgstr "Page d'accueil du contributeur"
+
+#~ msgid "Answer Support Questions"
+#~ msgstr "Répondre aux questions d'assistance"
+
+#~ msgid "Help with Live Chat"
+#~ msgstr "Aider dans la discussion en direct"
+
+#~ msgid "Improve the Knowledge Base"
+#~ msgstr "Améliorer la base de connaissances"
+
+#~ msgid "Translate Articles"
+#~ msgstr "Traduire des articles"
 
 #~ msgid "Reply Preview:"
 #~ msgstr "Aperçu de la réponse :"
