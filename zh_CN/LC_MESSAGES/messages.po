@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-19 12:45-0700\n"
+"POT-Creation-Date: 2011-10-28 08:02-0700\n"
 "PO-Revision-Date: 2011-09-30 14:52+0200\n"
 "Last-Translator: Kemcy Best <kmc.best@gmail.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -490,8 +490,8 @@ msgstr "近期没有活动。"
 msgid "Add announcement"
 msgstr "添加公告"
 
-#: apps/dashboards/templates/dashboards/includes/announcement_list.html:10 apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/flagit/templates/flagit/includes/flagged_profile.html:10
-#: apps/kbforums/templates/kbforums/posts.html:37 apps/kbforums/templates/kbforums/includes/post.html:13
+#: apps/dashboards/templates/dashboards/includes/announcement_list.html:10 apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/flagit/templates/flagit/includes/flagged_post.html:16
+#: apps/flagit/templates/flagit/includes/flagged_profile.html:10 apps/kbforums/templates/kbforums/posts.html:37 apps/kbforums/templates/kbforums/includes/post.html:13
 msgid "Edit"
 msgstr "编辑"
 
@@ -598,69 +598,73 @@ msgstr "您已经报告了此内容。管理员会尽快审核您的建议。"
 msgid "Flagged Content Pending Moderation"
 msgstr "已报告待管理员审核的内容"
 
-#: apps/flagit/templates/flagit/queue.html:14
+#: apps/flagit/templates/flagit/queue.html:13
 msgid "Flagged {t} (Reason: {r})"
 msgstr "已报告 {t}（原因：{r}）"
 
-#: apps/flagit/templates/flagit/queue.html:16
+#: apps/flagit/templates/flagit/queue.html:15
 msgid "Other reason:"
 msgstr "其他原因"
 
-#: apps/flagit/templates/flagit/queue.html:21
+#: apps/flagit/templates/flagit/queue.html:22
+#, fuzzy
+msgid "{t} with id={id} no longer exists."
+msgstr "糟糕！{t} {id} 已经不存在。"
+
+#: apps/flagit/templates/flagit/queue.html:24
 msgid "Update Status:"
 msgstr "更新状态："
 
-#: apps/flagit/templates/flagit/queue.html:25
+#: apps/flagit/templates/flagit/queue.html:28
 msgid "Please select..."
 msgstr "请选择..."
 
-#: apps/flagit/templates/flagit/queue.html:26
+#: apps/flagit/templates/flagit/queue.html:29
 msgid "The flag is valid and I fixed the issue."
 msgstr "标记有效且我已修正该问题。"
 
-#: apps/flagit/templates/flagit/queue.html:27
+#: apps/flagit/templates/flagit/queue.html:30
 msgid "The flag is invalid."
 msgstr "标记无效。"
-
-#: apps/flagit/templates/flagit/queue.html:33
-msgid "Oops! {t} {id} no longer exists."
-msgstr "糟糕！{t} {id} 已经不存在。"
 
 #: apps/flagit/templates/flagit/queue.html:38
 msgid "There is no flagged content pending moderation."
 msgstr "目前没有已标记等待管理员审核的内容。"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_profile.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:3
-#: apps/kbforums/forms.py:28 apps/kbforums/forms.py:50 apps/kbforums/forms.py:76 apps/wiki/forms.py:176 apps/wiki/templates/wiki/review_translation.html:66
-#: apps/wiki/templates/wiki/includes/document_macros.html:158
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_post.html:3 apps/flagit/templates/flagit/includes/flagged_profile.html:1
+#: apps/flagit/templates/flagit/includes/flagged_question.html:3 apps/kbforums/forms.py:28 apps/kbforums/forms.py:50 apps/kbforums/forms.py:76 apps/wiki/forms.py:176
+#: apps/wiki/templates/wiki/review_translation.html:66 apps/wiki/templates/wiki/includes/document_macros.html:158
 msgid "Content:"
 msgstr "内容："
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:3 apps/flagit/templates/flagit/includes/flagged_question.html:5 apps/wiki/templates/wiki/revision.html:24
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:3 apps/flagit/templates/flagit/includes/flagged_post.html:5 apps/flagit/templates/flagit/includes/flagged_question.html:5
+#: apps/wiki/templates/wiki/revision.html:24
 msgid "Created:"
 msgstr "建立于"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:4 apps/flagit/templates/flagit/includes/flagged_answer.html:7 apps/flagit/templates/flagit/includes/flagged_question.html:6
-#: apps/flagit/templates/flagit/includes/flagged_question.html:9
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:4 apps/flagit/templates/flagit/includes/flagged_answer.html:7 apps/flagit/templates/flagit/includes/flagged_post.html:6
+#: apps/flagit/templates/flagit/includes/flagged_post.html:9 apps/flagit/templates/flagit/includes/flagged_question.html:6 apps/flagit/templates/flagit/includes/flagged_question.html:9
 msgid "{date} by {user}"
 msgstr "{date} 由 {user}"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:6 apps/flagit/templates/flagit/includes/flagged_question.html:8
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:6 apps/flagit/templates/flagit/includes/flagged_post.html:8 apps/flagit/templates/flagit/includes/flagged_question.html:8
 msgid "Updated:"
 msgstr "更新于"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:9 apps/flagit/templates/flagit/includes/flagged_profile.html:6 apps/flagit/templates/flagit/includes/flagged_question.html:11
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:9 apps/flagit/templates/flagit/includes/flagged_post.html:11 apps/flagit/templates/flagit/includes/flagged_profile.html:6
+#: apps/flagit/templates/flagit/includes/flagged_question.html:11
 msgid "Take Action:"
 msgstr "进行操作："
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/groups/templates/groups/profile.html:13
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:29 apps/kbforums/templates/kbforums/confirm_thread_delete.html:31 apps/kbforums/templates/kbforums/posts.html:41
-#: apps/kbforums/templates/kbforums/includes/post.html:17 apps/messages/templates/messages/delete.html:27 apps/wiki/templates/wiki/confirm_document_delete.html:36
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:34
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_post.html:19 apps/flagit/templates/flagit/includes/flagged_question.html:16
+#: apps/groups/templates/groups/profile.html:13 apps/kbforums/templates/kbforums/confirm_post_delete.html:29 apps/kbforums/templates/kbforums/confirm_thread_delete.html:31
+#: apps/kbforums/templates/kbforums/posts.html:41 apps/kbforums/templates/kbforums/includes/post.html:17 apps/messages/templates/messages/delete.html:27
+#: apps/wiki/templates/wiki/confirm_document_delete.html:36 apps/wiki/templates/wiki/confirm_revision_delete.html:34
 msgid "Delete"
 msgstr "删除"
 
-#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:68 apps/wiki/templates/wiki/translate.html:57
+#: apps/flagit/templates/flagit/includes/flagged_post.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:68
+#: apps/wiki/templates/wiki/translate.html:57
 msgid "Title:"
 msgstr "标题："
 
@@ -1441,7 +1445,7 @@ msgstr "常见问题"
 msgid "Firefox Help <span>for Firefox Home</span>"
 msgstr "<span>Firefox Home</span> 帮助"
 
-#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:141 templates/base.html:8 templates/base.html:17 templates/base.html:90
+#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:141 templates/base.html:8 templates/base.html:17 templates/base.html:100
 #: templates/mobile/base.html:15
 msgid "Firefox Help"
 msgstr "Firefox 帮助"
@@ -2728,11 +2732,11 @@ msgstr "Android"
 msgid "Maemo"
 msgstr "Maemo"
 
-#: apps/wiki/models.py:150 templates/base.html:96 templates/global/mobile/header.html:5
+#: apps/wiki/models.py:150 templates/base.html:106 templates/global/mobile/header.html:5
 msgid "Desktop"
 msgstr "桌面版"
 
-#: apps/wiki/models.py:151 templates/base.html:97 templates/global/menu_links.html:15
+#: apps/wiki/models.py:151 templates/base.html:107 templates/global/menu_links.html:15
 msgid "Mobile"
 msgstr "移动版"
 
@@ -3574,43 +3578,52 @@ msgstr "Firefox 帮助"
 msgid "This is a staging site. The production site is <a href=\"http://support.mozilla.com\">here</a>."
 msgstr "这里是一个临时站点。真正的站点是在<a href=\"http://support.mozilla.com\">这里</a>。"
 
-#: templates/base.html:86 templates/global/footer.html:6 templates/global/header.html:7
-msgid "Firefox"
-msgstr "Firefox"
+#: templates/base.html:79
+msgid "Find help for other applications"
+msgstr "寻找其他应用程序的帮助"
 
-#: templates/base.html:98 templates/mobile/base.html:81
-msgid "Firefox Home"
-msgstr "Firefox Home"
+#: templates/base.html:80
+msgid "Other Applications"
+msgstr "其他应用程序"
 
-#: templates/base.html:99 templates/mobile/base.html:84
-msgid "Firefox Sync"
-msgstr "Firefox Sync"
-
-#: templates/base.html:100
+#: templates/base.html:83
 msgid "Thunderbird"
 msgstr "Thunderbird"
 
-#: templates/base.html:135
+#: templates/base.html:84
+msgid "SeaMonkey"
+msgstr ""
+
+#: templates/base.html:85
+#, fuzzy
+msgid "Sunbird"
+msgstr "Thunderbird"
+
+#: templates/base.html:96 templates/global/footer.html:6 templates/global/header.html:7
+msgid "Firefox"
+msgstr "Firefox"
+
+#: templates/base.html:142
 msgid "Be <mark>Awesome</mark>"
 msgstr "变得 <mark>了不起</mark>"
 
-#: templates/base.html:142
+#: templates/base.html:149
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
 msgstr "您知道 Firefox 帮助是由全世界的超人志愿者一起协作而成的吗？"
 
-#: templates/base.html:145
+#: templates/base.html:152
 msgid "Grab your cape and join us &raquo;"
 msgstr "披上披风，加入我们吧 &raquo;"
 
-#: templates/base.html:149
+#: templates/base.html:156
 msgid "Check your <mark>plugins</mark>"
 msgstr "检查您的 <mark>插件</mark>"
 
-#: templates/base.html:156
+#: templates/base.html:163
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
 msgstr "插件是什么？为什么我要把它们保持在最新状态？请回答这些问题并做一个简短的检查，看看您的插件是不是都在最新状态。"
 
-#: templates/base.html:161
+#: templates/base.html:168
 msgid "Find out more &raquo;"
 msgstr "了解更多信息 &raquo;"
 
@@ -3931,6 +3944,14 @@ msgstr "Firefox 桌面版"
 msgid "Firefox for Mobile"
 msgstr "Firefox 移动版"
 
+#: templates/mobile/base.html:81
+msgid "Firefox Home"
+msgstr "Firefox Home"
+
+#: templates/mobile/base.html:84
+msgid "Firefox Sync"
+msgstr "Firefox Sync"
+
 #: templates/mobile/base.html:98
 msgid "View full site"
 msgstr "查看全站"
@@ -4002,12 +4023,6 @@ msgstr "查看全站"
 
 #~ msgid "Operating systems:"
 #~ msgstr "操作系统："
-
-#~ msgid "Find help for other applications"
-#~ msgstr "寻找其他应用程序的帮助"
-
-#~ msgid "Other Applications"
-#~ msgstr "其他应用程序"
 
 #~ msgctxt "First letter of 'Localizable'"
 #~ msgid "L"

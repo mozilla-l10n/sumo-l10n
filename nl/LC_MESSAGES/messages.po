@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-19 12:45-0700\n"
+"POT-Creation-Date: 2011-10-28 08:02-0700\n"
 "PO-Revision-Date: 2011-10-21 14:44+0200\n"
 "Last-Translator: Ton <tonnes.mb@gmail.com>\n"
 "Language-Team: Dutch\n"
@@ -498,8 +498,8 @@ msgstr "Geen recente activiteit."
 msgid "Add announcement"
 msgstr "Aankondiging toevoegen"
 
-#: apps/dashboards/templates/dashboards/includes/announcement_list.html:10 apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/flagit/templates/flagit/includes/flagged_profile.html:10
-#: apps/kbforums/templates/kbforums/posts.html:37 apps/kbforums/templates/kbforums/includes/post.html:13
+#: apps/dashboards/templates/dashboards/includes/announcement_list.html:10 apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/flagit/templates/flagit/includes/flagged_post.html:16
+#: apps/flagit/templates/flagit/includes/flagged_profile.html:10 apps/kbforums/templates/kbforums/posts.html:37 apps/kbforums/templates/kbforums/includes/post.html:13
 msgid "Edit"
 msgstr "Bewerken"
 
@@ -606,69 +606,73 @@ msgstr "U hebt deze inhoud gemarkeerd. Een moderator zal uw inzending spoedig be
 msgid "Flagged Content Pending Moderation"
 msgstr "Gemarkeerde inhoud die wacht op moderatie"
 
-#: apps/flagit/templates/flagit/queue.html:14
+#: apps/flagit/templates/flagit/queue.html:13
 msgid "Flagged {t} (Reason: {r})"
 msgstr "Gemarkeerd {t} (Reden: {r})"
 
-#: apps/flagit/templates/flagit/queue.html:16
+#: apps/flagit/templates/flagit/queue.html:15
 msgid "Other reason:"
 msgstr "Andere reden:"
 
-#: apps/flagit/templates/flagit/queue.html:21
+#: apps/flagit/templates/flagit/queue.html:22
+#, fuzzy
+msgid "{t} with id={id} no longer exists."
+msgstr "Oeps! {t} {id} bestaat niet meer."
+
+#: apps/flagit/templates/flagit/queue.html:24
 msgid "Update Status:"
 msgstr "Updatestatus:"
 
-#: apps/flagit/templates/flagit/queue.html:25
+#: apps/flagit/templates/flagit/queue.html:28
 msgid "Please select..."
 msgstr "Selecteer…"
 
-#: apps/flagit/templates/flagit/queue.html:26
+#: apps/flagit/templates/flagit/queue.html:29
 msgid "The flag is valid and I fixed the issue."
 msgstr "De markering is geldig en ik heb het probleem hersteld."
 
-#: apps/flagit/templates/flagit/queue.html:27
+#: apps/flagit/templates/flagit/queue.html:30
 msgid "The flag is invalid."
 msgstr "De markering is ongeldig."
-
-#: apps/flagit/templates/flagit/queue.html:33
-msgid "Oops! {t} {id} no longer exists."
-msgstr "Oeps! {t} {id} bestaat niet meer."
 
 #: apps/flagit/templates/flagit/queue.html:38
 msgid "There is no flagged content pending moderation."
 msgstr "Er is geen gemarkeerde inhoud die op moderatie wacht."
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_profile.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:3
-#: apps/kbforums/forms.py:28 apps/kbforums/forms.py:50 apps/kbforums/forms.py:76 apps/wiki/forms.py:176 apps/wiki/templates/wiki/review_translation.html:66
-#: apps/wiki/templates/wiki/includes/document_macros.html:158
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_post.html:3 apps/flagit/templates/flagit/includes/flagged_profile.html:1
+#: apps/flagit/templates/flagit/includes/flagged_question.html:3 apps/kbforums/forms.py:28 apps/kbforums/forms.py:50 apps/kbforums/forms.py:76 apps/wiki/forms.py:176
+#: apps/wiki/templates/wiki/review_translation.html:66 apps/wiki/templates/wiki/includes/document_macros.html:158
 msgid "Content:"
 msgstr "Inhoud:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:3 apps/flagit/templates/flagit/includes/flagged_question.html:5 apps/wiki/templates/wiki/revision.html:24
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:3 apps/flagit/templates/flagit/includes/flagged_post.html:5 apps/flagit/templates/flagit/includes/flagged_question.html:5
+#: apps/wiki/templates/wiki/revision.html:24
 msgid "Created:"
 msgstr "Gemaakt:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:4 apps/flagit/templates/flagit/includes/flagged_answer.html:7 apps/flagit/templates/flagit/includes/flagged_question.html:6
-#: apps/flagit/templates/flagit/includes/flagged_question.html:9
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:4 apps/flagit/templates/flagit/includes/flagged_answer.html:7 apps/flagit/templates/flagit/includes/flagged_post.html:6
+#: apps/flagit/templates/flagit/includes/flagged_post.html:9 apps/flagit/templates/flagit/includes/flagged_question.html:6 apps/flagit/templates/flagit/includes/flagged_question.html:9
 msgid "{date} by {user}"
 msgstr "{date} door {user}"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:6 apps/flagit/templates/flagit/includes/flagged_question.html:8
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:6 apps/flagit/templates/flagit/includes/flagged_post.html:8 apps/flagit/templates/flagit/includes/flagged_question.html:8
 msgid "Updated:"
 msgstr "Bijgewerkt:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:9 apps/flagit/templates/flagit/includes/flagged_profile.html:6 apps/flagit/templates/flagit/includes/flagged_question.html:11
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:9 apps/flagit/templates/flagit/includes/flagged_post.html:11 apps/flagit/templates/flagit/includes/flagged_profile.html:6
+#: apps/flagit/templates/flagit/includes/flagged_question.html:11
 msgid "Take Action:"
 msgstr "Te ondernemen actie:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/groups/templates/groups/profile.html:13
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:29 apps/kbforums/templates/kbforums/confirm_thread_delete.html:31 apps/kbforums/templates/kbforums/posts.html:41
-#: apps/kbforums/templates/kbforums/includes/post.html:17 apps/messages/templates/messages/delete.html:27 apps/wiki/templates/wiki/confirm_document_delete.html:36
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:34
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_post.html:19 apps/flagit/templates/flagit/includes/flagged_question.html:16
+#: apps/groups/templates/groups/profile.html:13 apps/kbforums/templates/kbforums/confirm_post_delete.html:29 apps/kbforums/templates/kbforums/confirm_thread_delete.html:31
+#: apps/kbforums/templates/kbforums/posts.html:41 apps/kbforums/templates/kbforums/includes/post.html:17 apps/messages/templates/messages/delete.html:27
+#: apps/wiki/templates/wiki/confirm_document_delete.html:36 apps/wiki/templates/wiki/confirm_revision_delete.html:34
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:68 apps/wiki/templates/wiki/translate.html:57
+#: apps/flagit/templates/flagit/includes/flagged_post.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:68
+#: apps/wiki/templates/wiki/translate.html:57
 msgid "Title:"
 msgstr "Titel:"
 
@@ -1454,7 +1458,7 @@ msgstr "Alledaagse vragen"
 msgid "Firefox Help <span>for Firefox Home</span>"
 msgstr "Firefox Help <span>voor Firefox Home</span>"
 
-#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:141 templates/base.html:8 templates/base.html:17 templates/base.html:90
+#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:141 templates/base.html:8 templates/base.html:17 templates/base.html:100
 #: templates/mobile/base.html:15
 msgid "Firefox Help"
 msgstr "Firefox Help"
@@ -2747,11 +2751,11 @@ msgstr "Android"
 msgid "Maemo"
 msgstr "Maemo"
 
-#: apps/wiki/models.py:150 templates/base.html:96 templates/global/mobile/header.html:5
+#: apps/wiki/models.py:150 templates/base.html:106 templates/global/mobile/header.html:5
 msgid "Desktop"
 msgstr "Desktop"
 
-#: apps/wiki/models.py:151 templates/base.html:97 templates/global/menu_links.html:15
+#: apps/wiki/models.py:151 templates/base.html:107 templates/global/menu_links.html:15
 msgid "Mobile"
 msgstr "Mobiel"
 
@@ -3594,43 +3598,52 @@ msgstr "Firefox Help"
 msgid "This is a staging site. The production site is <a href=\"http://support.mozilla.com\">here</a>."
 msgstr "Dit is een staging-website. De productiewebsite bevindt zich <a href=\"http://support.mozilla.com\">hier</a>."
 
-#: templates/base.html:86 templates/global/footer.html:6 templates/global/header.html:7
-msgid "Firefox"
-msgstr "Firefox"
+#: templates/base.html:79
+msgid "Find help for other applications"
+msgstr "Hulp voor andere toepassingen vinden"
 
-#: templates/base.html:98 templates/mobile/base.html:81
-msgid "Firefox Home"
-msgstr "Firefox Home"
+#: templates/base.html:80
+msgid "Other Applications"
+msgstr "Andere toepassingen"
 
-#: templates/base.html:99 templates/mobile/base.html:84
-msgid "Firefox Sync"
-msgstr "Firefox Sync"
-
-#: templates/base.html:100
+#: templates/base.html:83
 msgid "Thunderbird"
 msgstr "Thunderbird"
 
-#: templates/base.html:135
+#: templates/base.html:84
+msgid "SeaMonkey"
+msgstr ""
+
+#: templates/base.html:85
+#, fuzzy
+msgid "Sunbird"
+msgstr "Thunderbird"
+
+#: templates/base.html:96 templates/global/footer.html:6 templates/global/header.html:7
+msgid "Firefox"
+msgstr "Firefox"
+
+#: templates/base.html:142
 msgid "Be <mark>Awesome</mark>"
 msgstr "Wees <mark>geweldig</mark>"
 
-#: templates/base.html:142
+#: templates/base.html:149
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
 msgstr "Wist u dat Firefox Help wordt mogelijk gemaakt door vrijwillige superhelden van over de hele wereld?"
 
-#: templates/base.html:145
+#: templates/base.html:152
 msgid "Grab your cape and join us &raquo;"
 msgstr "Grijp uw cape en doe met ons mee &raquo;"
 
-#: templates/base.html:149
+#: templates/base.html:156
 msgid "Check your <mark>plugins</mark>"
 msgstr "Controleer uw <mark>plug-ins</mark>"
 
-#: templates/base.html:156
+#: templates/base.html:163
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
 msgstr "Wat is een plug-in? Waarom moet ik ze bijgewerkt houden? Lees de antwoorden op deze vragen en voer direct een controle uit om te zien of u up-to-date bent."
 
-#: templates/base.html:161
+#: templates/base.html:168
 msgid "Find out more &raquo;"
 msgstr "Meer lezen &raquo;"
 
@@ -3946,6 +3959,14 @@ msgstr "Firefox voor Desktop"
 msgid "Firefox for Mobile"
 msgstr "Firefox voor Mobiel"
 
+#: templates/mobile/base.html:81
+msgid "Firefox Home"
+msgstr "Firefox Home"
+
+#: templates/mobile/base.html:84
+msgid "Firefox Sync"
+msgstr "Firefox Sync"
+
 #: templates/mobile/base.html:98
 msgid "View full site"
 msgstr "Volledige website bekijken"
@@ -4019,12 +4040,6 @@ msgstr "Volledige website bekijken"
 
 #~ msgid "Operating systems:"
 #~ msgstr "Besturingssystemen:"
-
-#~ msgid "Find help for other applications"
-#~ msgstr "Hulp voor andere toepassingen vinden"
-
-#~ msgid "Other Applications"
-#~ msgstr "Andere toepassingen"
 
 #~ msgctxt "First letter of 'Localizable'"
 #~ msgid "L"

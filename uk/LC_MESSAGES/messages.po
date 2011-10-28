@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-19 12:45-0700\n"
+"POT-Creation-Date: 2011-10-28 08:02-0700\n"
 "PO-Revision-Date: 2011-02-07 13:13+0200\n"
 "Last-Translator: Sergiy <sergiy.bogdancev@gmail.com>\n"
 "Language-Team: Ukrainian team\n"
@@ -511,8 +511,8 @@ msgstr ""
 msgid "Add announcement"
 msgstr ""
 
-#: apps/dashboards/templates/dashboards/includes/announcement_list.html:10 apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/flagit/templates/flagit/includes/flagged_profile.html:10
-#: apps/kbforums/templates/kbforums/posts.html:37 apps/kbforums/templates/kbforums/includes/post.html:13
+#: apps/dashboards/templates/dashboards/includes/announcement_list.html:10 apps/flagit/templates/flagit/includes/flagged_answer.html:13 apps/flagit/templates/flagit/includes/flagged_post.html:16
+#: apps/flagit/templates/flagit/includes/flagged_profile.html:10 apps/kbforums/templates/kbforums/posts.html:37 apps/kbforums/templates/kbforums/includes/post.html:13
 msgid "Edit"
 msgstr "Редагувати"
 
@@ -623,69 +623,73 @@ msgstr "Ви вже відзвітували про цей вміст. Моде�
 msgid "Flagged Content Pending Moderation"
 msgstr "Відзвітований вміст очікує модерування"
 
-#: apps/flagit/templates/flagit/queue.html:14
+#: apps/flagit/templates/flagit/queue.html:13
 msgid "Flagged {t} (Reason: {r})"
 msgstr "Відзвітовано {t} (Причина: {r})"
 
-#: apps/flagit/templates/flagit/queue.html:16
+#: apps/flagit/templates/flagit/queue.html:15
 msgid "Other reason:"
 msgstr "Інша причина:"
 
-#: apps/flagit/templates/flagit/queue.html:21
+#: apps/flagit/templates/flagit/queue.html:22
+#, fuzzy
+msgid "{t} with id={id} no longer exists."
+msgstr "Ой! {t} {id} більше не існує."
+
+#: apps/flagit/templates/flagit/queue.html:24
 msgid "Update Status:"
 msgstr "Стан оновлення:"
 
-#: apps/flagit/templates/flagit/queue.html:25
+#: apps/flagit/templates/flagit/queue.html:28
 msgid "Please select..."
 msgstr "Виберіть..."
 
-#: apps/flagit/templates/flagit/queue.html:26
+#: apps/flagit/templates/flagit/queue.html:29
 msgid "The flag is valid and I fixed the issue."
 msgstr "Прапорець чинний і я вирішив проблему."
 
-#: apps/flagit/templates/flagit/queue.html:27
+#: apps/flagit/templates/flagit/queue.html:30
 msgid "The flag is invalid."
 msgstr "Прапорець нечинний."
-
-#: apps/flagit/templates/flagit/queue.html:33
-msgid "Oops! {t} {id} no longer exists."
-msgstr "Ой! {t} {id} більше не існує."
 
 #: apps/flagit/templates/flagit/queue.html:38
 msgid "There is no flagged content pending moderation."
 msgstr "Немає поміченого вмісту, що очікує модерування."
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_profile.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:3
-#: apps/kbforums/forms.py:28 apps/kbforums/forms.py:50 apps/kbforums/forms.py:76 apps/wiki/forms.py:176 apps/wiki/templates/wiki/review_translation.html:66
-#: apps/wiki/templates/wiki/includes/document_macros.html:158
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:1 apps/flagit/templates/flagit/includes/flagged_post.html:3 apps/flagit/templates/flagit/includes/flagged_profile.html:1
+#: apps/flagit/templates/flagit/includes/flagged_question.html:3 apps/kbforums/forms.py:28 apps/kbforums/forms.py:50 apps/kbforums/forms.py:76 apps/wiki/forms.py:176
+#: apps/wiki/templates/wiki/review_translation.html:66 apps/wiki/templates/wiki/includes/document_macros.html:158
 msgid "Content:"
 msgstr "Вміст:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:3 apps/flagit/templates/flagit/includes/flagged_question.html:5 apps/wiki/templates/wiki/revision.html:24
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:3 apps/flagit/templates/flagit/includes/flagged_post.html:5 apps/flagit/templates/flagit/includes/flagged_question.html:5
+#: apps/wiki/templates/wiki/revision.html:24
 msgid "Created:"
 msgstr "Створено:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:4 apps/flagit/templates/flagit/includes/flagged_answer.html:7 apps/flagit/templates/flagit/includes/flagged_question.html:6
-#: apps/flagit/templates/flagit/includes/flagged_question.html:9
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:4 apps/flagit/templates/flagit/includes/flagged_answer.html:7 apps/flagit/templates/flagit/includes/flagged_post.html:6
+#: apps/flagit/templates/flagit/includes/flagged_post.html:9 apps/flagit/templates/flagit/includes/flagged_question.html:6 apps/flagit/templates/flagit/includes/flagged_question.html:9
 msgid "{date} by {user}"
 msgstr "{date} {user}"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:6 apps/flagit/templates/flagit/includes/flagged_question.html:8
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:6 apps/flagit/templates/flagit/includes/flagged_post.html:8 apps/flagit/templates/flagit/includes/flagged_question.html:8
 msgid "Updated:"
 msgstr "Оновлено:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:9 apps/flagit/templates/flagit/includes/flagged_profile.html:6 apps/flagit/templates/flagit/includes/flagged_question.html:11
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:9 apps/flagit/templates/flagit/includes/flagged_post.html:11 apps/flagit/templates/flagit/includes/flagged_profile.html:6
+#: apps/flagit/templates/flagit/includes/flagged_question.html:11
 msgid "Take Action:"
 msgstr "Дія:"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_question.html:16 apps/groups/templates/groups/profile.html:13
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:29 apps/kbforums/templates/kbforums/confirm_thread_delete.html:31 apps/kbforums/templates/kbforums/posts.html:41
-#: apps/kbforums/templates/kbforums/includes/post.html:17 apps/messages/templates/messages/delete.html:27 apps/wiki/templates/wiki/confirm_document_delete.html:36
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:34
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:16 apps/flagit/templates/flagit/includes/flagged_post.html:19 apps/flagit/templates/flagit/includes/flagged_question.html:16
+#: apps/groups/templates/groups/profile.html:13 apps/kbforums/templates/kbforums/confirm_post_delete.html:29 apps/kbforums/templates/kbforums/confirm_thread_delete.html:31
+#: apps/kbforums/templates/kbforums/posts.html:41 apps/kbforums/templates/kbforums/includes/post.html:17 apps/messages/templates/messages/delete.html:27
+#: apps/wiki/templates/wiki/confirm_document_delete.html:36 apps/wiki/templates/wiki/confirm_revision_delete.html:34
 msgid "Delete"
 msgstr "Вилучити"
 
-#: apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:68 apps/wiki/templates/wiki/translate.html:57
+#: apps/flagit/templates/flagit/includes/flagged_post.html:1 apps/flagit/templates/flagit/includes/flagged_question.html:1 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:68
+#: apps/wiki/templates/wiki/translate.html:57
 msgid "Title:"
 msgstr "Назва:"
 
@@ -1503,7 +1507,7 @@ msgstr "Запитання підтримки"
 msgid "Firefox Help <span>for Firefox Home</span>"
 msgstr "Підтримка мобільного Firefox"
 
-#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:141 templates/base.html:8 templates/base.html:17 templates/base.html:90
+#: apps/landings/templates/landings/mobile/home.html:5 apps/search/templates/search/plugin.html:3 apps/sumo/helpers.py:141 templates/base.html:8 templates/base.html:17 templates/base.html:100
 #: templates/mobile/base.html:15
 msgid "Firefox Help"
 msgstr "Допомога Firefox"
@@ -2851,12 +2855,12 @@ msgstr "Android"
 msgid "Maemo"
 msgstr "Maemo"
 
-#: apps/wiki/models.py:150 templates/base.html:96 templates/global/mobile/header.html:5
+#: apps/wiki/models.py:150 templates/base.html:106 templates/global/mobile/header.html:5
 #, fuzzy
 msgid "Desktop"
 msgstr "Настільна:"
 
-#: apps/wiki/models.py:151 templates/base.html:97 templates/global/menu_links.html:15
+#: apps/wiki/models.py:151 templates/base.html:107 templates/global/menu_links.html:15
 msgid "Mobile"
 msgstr "Мобільний"
 
@@ -3737,46 +3741,53 @@ msgstr "Допомога Firefox"
 msgid "This is a staging site. The production site is <a href=\"http://support.mozilla.com\">here</a>."
 msgstr ""
 
-#: templates/base.html:86 templates/global/footer.html:6 templates/global/header.html:7
-msgid "Firefox"
-msgstr "Firefox"
+#: templates/base.html:79
+msgid "Find help for other applications"
+msgstr ""
 
-#: templates/base.html:98 templates/mobile/base.html:81
-#, fuzzy
-msgid "Firefox Home"
-msgstr "Допомога Firefox"
+#: templates/base.html:80
+msgid "Other Applications"
+msgstr ""
 
-#: templates/base.html:99 templates/mobile/base.html:84
-#, fuzzy
-msgid "Firefox Sync"
-msgstr "Firefox 4"
-
-#: templates/base.html:100
+#: templates/base.html:83
 #, fuzzy
 msgid "Thunderbird"
 msgstr "Підтримка Thunderbird"
 
-#: templates/base.html:135
+#: templates/base.html:84
+msgid "SeaMonkey"
+msgstr ""
+
+#: templates/base.html:85
+#, fuzzy
+msgid "Sunbird"
+msgstr "Підтримка Thunderbird"
+
+#: templates/base.html:96 templates/global/footer.html:6 templates/global/header.html:7
+msgid "Firefox"
+msgstr "Firefox"
+
+#: templates/base.html:142
 msgid "Be <mark>Awesome</mark>"
 msgstr "<mark>Очманіти</mark>"
 
-#: templates/base.html:142
+#: templates/base.html:149
 msgid "Did you know that Firefox Help is powered by volunteer superheroes all around the world?"
 msgstr "А чи знаєте ви, що допомога Firefox наповнюється волонтерами зі всього світу?"
 
-#: templates/base.html:145
+#: templates/base.html:152
 msgid "Grab your cape and join us &raquo;"
 msgstr "Приєднуйтесь &raquo;"
 
-#: templates/base.html:149
+#: templates/base.html:156
 msgid "Check your <mark>plugins</mark>"
 msgstr "Перевірте свої <mark>модулі</mark>"
 
-#: templates/base.html:156
+#: templates/base.html:163
 msgid "What is a plugin? Why should I keep them updated? Answer these questions and run an instant check to see if you're up to date."
 msgstr "Що таке модуль? Чому я повинен утримувати їх оновленими? Віднайдіть відповіді на ці питання та одразу виконайте перевірку. "
 
-#: templates/base.html:161
+#: templates/base.html:168
 msgid "Find out more &raquo;"
 msgstr "Докладніше &raquo;"
 
@@ -4106,6 +4117,16 @@ msgstr "Firefox 4 для мобілок"
 #, fuzzy
 msgid "Firefox for Mobile"
 msgstr "Firefox 4 для мобілок"
+
+#: templates/mobile/base.html:81
+#, fuzzy
+msgid "Firefox Home"
+msgstr "Допомога Firefox"
+
+#: templates/mobile/base.html:84
+#, fuzzy
+msgid "Firefox Sync"
+msgstr "Firefox 4"
 
 #: templates/mobile/base.html:98
 msgid "View full site"
