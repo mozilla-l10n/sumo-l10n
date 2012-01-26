@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-18 12:43-0700\n"
+"POT-Creation-Date: 2012-01-26 08:49-0700\n"
 "PO-Revision-Date: 2011-02-07 13:13+0200\n"
 "Last-Translator: Sergiy <sergiy.bogdancev@gmail.com>\n"
 "Language-Team: Ukrainian team\n"
@@ -221,7 +221,7 @@ msgstr "Перед приєднанням до Вражаючої армії, с
 #: apps/kbforums/templates/kbforums/confirm_thread_delete.html:32 apps/kbforums/templates/kbforums/edit_post.html:34 apps/kbforums/templates/kbforums/edit_thread.html:29
 #: apps/kbforums/templates/kbforums/new_thread.html:39 apps/messages/templates/messages/delete.html:28 apps/messages/templates/messages/new.html:20
 #: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_remove_contributor.html:16 apps/wiki/templates/wiki/includes/document_macros.html:205
-#: apps/wiki/templates/wiki/includes/ready_for_l10n_modal.html:12 apps/wiki/templates/wiki/includes/review_form.html:68 apps/wiki/templates/wiki/includes/review_form.html:82
+#: apps/wiki/templates/wiki/includes/ready_for_l10n_modal.html:12 apps/wiki/templates/wiki/includes/review_form.html:68 apps/wiki/templates/wiki/includes/review_form.html:86
 msgid "Cancel"
 msgstr "Скасувати"
 
@@ -263,7 +263,7 @@ msgstr "Найпопулярніші статті"
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "20 найпопулярніших статей, на які приходиться більше 50% трафіку всієї бази знань."
 
-#: apps/dashboards/readouts.py:218 apps/dashboards/readouts.py:413 apps/wiki/models.py:70
+#: apps/dashboards/readouts.py:218 apps/dashboards/readouts.py:413 apps/wiki/config.py:149
 msgid "Templates"
 msgstr "Шаблони"
 
@@ -1570,7 +1570,7 @@ msgstr ""
 msgid "Get emailed when there is new discussion activity in my locale."
 msgstr ""
 
-#: apps/kpi/templates/kpi/dashboard.html:4
+#: apps/kpi/templates/kpi/dashboard.html:4 templates/includes/sidebar_modules.html:23
 #, fuzzy
 msgid "KPI Dashboard"
 msgstr "Панель перекладача"
@@ -2262,129 +2262,141 @@ msgstr "Перейдіть до зображення для вивантажен
 msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
 msgstr ""
 
-#: apps/users/forms.py:18
+#: apps/users/forms.py:22
 #, fuzzy
 msgid "Username may contain only letters, numbers and ./+/-/_ characters."
 msgstr "Ім'я користувача може складатись тільки з літер, цифр та символів: @/./+/-/_."
 
-#: apps/users/forms.py:20
+#: apps/users/forms.py:24
 msgid "Username is required."
 msgstr "Ім'я користувача обов'язкове."
 
-#: apps/users/forms.py:21
+#: apps/users/forms.py:25
 msgid "Username is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Ім'я користувача закоротке (%(show_value)s символів). Його довжина повинна бути не менш ніж %(limit_value)s символів."
 
-#: apps/users/forms.py:23
+#: apps/users/forms.py:27
 msgid "Username is too long (%(show_value)s characters). It must be %(limit_value)s characters or less."
 msgstr "Ім'я користувача задовге (%(show_value)s символів). Його довжина повинна бути %(limit_value)s символів чи менше."
 
-#: apps/users/forms.py:25
+#: apps/users/forms.py:29
 msgid "Email address is required."
 msgstr "Адреса електронної пошти обов'язкова."
 
-#: apps/users/forms.py:26
+#: apps/users/forms.py:30
 msgid "Email address is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Адреса електронної пошти закоротка (%(show_value)s символів). Її довжина повинна бути не менш ніж %(limit_value)s символів."
 
-#: apps/users/forms.py:28
+#: apps/users/forms.py:32
 msgid "Email address is too long (%(show_value)s characters). It must be %(limit_value)s characters or less."
 msgstr "Адреса електронної пошти задовга (%(show_value)s символів). Її довжина повинна бути %(limit_value)s символів чи менше."
 
-#: apps/users/forms.py:30
+#: apps/users/forms.py:34
 msgid "Password is required."
 msgstr "Пароль обов'язковий."
 
-#: apps/users/forms.py:31
+#: apps/users/forms.py:35
 msgid "Please enter your password twice."
 msgstr "Введіть свій пароль двічі."
 
-#: apps/users/forms.py:37
+#: apps/users/forms.py:41
 msgid "Watch forum threads I start"
 msgstr ""
 
-#: apps/users/forms.py:40
+#: apps/users/forms.py:44
 msgid "Watch forum threads I comment in"
 msgstr ""
 
-#: apps/users/forms.py:43
+#: apps/users/forms.py:47
 msgid "Watch KB discussion threads I start"
 msgstr ""
 
-#: apps/users/forms.py:46
+#: apps/users/forms.py:50
 msgid "Watch KB discussion threads I comment in"
 msgstr ""
 
-#: apps/users/forms.py:49
+#: apps/users/forms.py:53
+msgid "Watch Question threads I comment in"
+msgstr ""
+
+#: apps/users/forms.py:56
 msgid "Send emails for private messages"
 msgstr ""
 
-#: apps/users/forms.py:70 apps/users/templates/users/includes/macros.html:13
+#: apps/users/forms.py:77 apps/users/templates/users/includes/macros.html:13
 msgid "Username:"
 msgstr "Ім’я користувача:"
 
-#: apps/users/forms.py:72
+#: apps/users/forms.py:79
 #, fuzzy
 msgid "Required. 30 characters or fewer. Letters, digits and ./+/-/_ only."
 msgstr "Обов'язкове. 30 чи менше символів. Тільки літери, цифри та @/./+/-/_."
 
-#: apps/users/forms.py:78 apps/users/forms.py:211 apps/users/forms.py:217
+#: apps/users/forms.py:85 apps/users/forms.py:218 apps/users/forms.py:224 apps/users/forms.py:258
 msgid "Email address:"
 msgstr "Адреса електронної пошти:"
 
-#: apps/users/forms.py:82 apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/includes/macros.html:17
+#: apps/users/forms.py:89 apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/includes/macros.html:17
 msgid "Password:"
 msgstr "Пароль:"
 
-#: apps/users/forms.py:86
+#: apps/users/forms.py:93
 msgid "Repeat password:"
 msgstr "Пароль ще раз:"
 
-#: apps/users/forms.py:90
+#: apps/users/forms.py:97
 msgid "Enter the same password as above, for verification."
 msgstr "Введіть пароль ще раз для підтвердження."
 
-#: apps/users/forms.py:104
+#: apps/users/forms.py:111
 msgid "Passwords must match."
 msgstr "Паролі повинні бути однаковими."
 
-#: apps/users/forms.py:114 apps/users/forms.py:228
+#: apps/users/forms.py:121 apps/users/forms.py:235
 msgid "A user with that email address already exists."
 msgstr "Користувач з такою електронною адресою вже існує."
 
-#: apps/users/forms.py:129
+#: apps/users/forms.py:136
 msgid "Password"
 msgstr "Пароль"
 
-#: apps/users/forms.py:145
+#: apps/users/forms.py:152
 msgid "Please enter a correct username and password. Note that both fields are case-sensitive."
 msgstr "Будь-ласка, введіть правильні ім'я користувача та пароль. Візьміть до уваги, що обидва поля чутливі до регістру."
 
-#: apps/users/forms.py:148
+#: apps/users/forms.py:155
 msgid "This account is inactive."
 msgstr "Цей обліковий запис неактивний."
 
-#: apps/users/forms.py:153
+#: apps/users/forms.py:160
 msgid "Your Web browser doesn't appear to have cookies enabled. Cookies are required for logging in."
 msgstr "У вашого браузеру не увімкнуті куки. Куки необхідні для можливості входу."
 
-#: apps/users/forms.py:173
+#: apps/users/forms.py:180
 msgid "Please enter a twitter.com URL."
 msgstr "Введіть адресу twitter.com."
 
-#: apps/users/forms.py:179
+#: apps/users/forms.py:186
 msgid "Please enter a facebook.com URL."
 msgstr "Введіть адресу facebook.com."
 
-#: apps/users/forms.py:226
+#: apps/users/forms.py:233
 msgid "This is your current email."
 msgstr "Це ваша поточна електронна пошта."
 
-#: apps/users/forms.py:249
+#: apps/users/forms.py:269
+msgid "That e-mail address doesn't have an associated user account. Are you sure you've registered?"
+msgstr ""
+
+#: apps/users/forms.py:289
+msgid "Your username on %s"
+msgstr ""
+
+#: apps/users/forms.py:295
 msgid "The password entered is known to be commonly used and is not allowed."
 msgstr ""
 
-#: apps/users/forms.py:256
+#: apps/users/forms.py:302
 msgid "The user name you entered is inappropriate. Please pick another and consider that our helpers are other Firefox users just like you."
 msgstr ""
 
@@ -2477,6 +2489,10 @@ msgstr ""
 #, fuzzy
 msgid "Your settings have been saved."
 msgstr "Вашу редакцію затверджено: {title}"
+
+#: apps/users/views.py:447
+msgid "We've sent an email with the username to any account using {email}."
+msgstr ""
 
 #: apps/users/templates/users/activate.html:5
 msgid "Account successfully verified!"
@@ -2579,6 +2595,21 @@ msgstr "Оновити"
 #, fuzzy
 msgid "Edit Settings"
 msgstr "Редагувати опис"
+
+#: apps/users/templates/users/forgot_username.html:4
+#, fuzzy
+msgid "Retrieve Username"
+msgstr "Ім’я користувача:"
+
+#: apps/users/templates/users/forgot_username.html:14
+#, fuzzy
+msgid "Forgotten your username? Enter your email address below, and we'll send it to you."
+msgstr "Забули свій пароль? Нижче введіть адресу своєї електронної пошти і ми надішлемо вам інструкції по налаштуванню нового паролю."
+
+#: apps/users/templates/users/forgot_username.html:24
+#, fuzzy
+msgid "Send username"
+msgstr "Ім'я користувача"
 
 #: apps/users/templates/users/login.html:4 apps/users/templates/users/login.html:9
 msgid "Log In"
@@ -2690,7 +2721,7 @@ msgstr "Надіслати листа скидання паролю"
 msgid "We've sent an email to any account using this address. Please follow the link in the email to reset your password."
 msgstr "Ми надіслали листа обліковому запису, використовуючи цю адресу. Перейдіть по посиланню в листі для скидання свого паролю."
 
-#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:51
+#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:52
 msgid "Register"
 msgstr "Зареєструватись"
 
@@ -2751,27 +2782,231 @@ msgid "Login Problems?"
 msgstr "Проблеми з входом?"
 
 #: apps/users/templates/users/includes/macros.html:33
+#, fuzzy
+msgid "I forgot my username."
+msgstr "Я забув свій пароль."
+
+#: apps/users/templates/users/includes/macros.html:34
 msgid "I don't have an account."
 msgstr "У мене немає облікового запису."
 
-#: apps/users/templates/users/includes/macros.html:34
+#: apps/users/templates/users/includes/macros.html:35
 #, fuzzy
 msgid "I didn't get a confirmation email."
 msgstr "Надіслати ще раз листа з підтвердженням"
 
-#: apps/wiki/events.py:80
+#: apps/wiki/config.py:29
+msgid "Desktop:"
+msgstr "Настільна:"
+
+#: apps/wiki/config.py:30 apps/wiki/config.py:31 apps/wiki/config.py:52
+#, fuzzy
+msgid "Firefox 11"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/config.py:32 apps/wiki/config.py:33 apps/wiki/config.py:55
+#, fuzzy
+msgid "Firefox 10"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/config.py:34 apps/wiki/config.py:35 apps/wiki/config.py:58
+#, fuzzy
+msgid "Firefox 9"
+msgstr "Firefox 4"
+
+#: apps/wiki/config.py:36 apps/wiki/config.py:37 apps/wiki/config.py:61
+#, fuzzy
+msgid "Firefox 8"
+msgstr "Firefox 4"
+
+#: apps/wiki/config.py:38 apps/wiki/config.py:39 apps/wiki/config.py:64
+#, fuzzy
+msgid "Firefox 7"
+msgstr "Firefox 4"
+
+#: apps/wiki/config.py:40 apps/wiki/config.py:41 apps/wiki/config.py:67
+#, fuzzy
+msgid "Firefox 6"
+msgstr "Firefox 4"
+
+#: apps/wiki/config.py:42 apps/wiki/config.py:43 apps/wiki/config.py:70
+#, fuzzy
+msgid "Firefox 5"
+msgstr "Firefox 4"
+
+#: apps/wiki/config.py:44 apps/wiki/config.py:45 apps/wiki/config.py:73
+msgid "Firefox 4"
+msgstr "Firefox 4"
+
+#: apps/wiki/config.py:46 apps/wiki/config.py:47
+msgid "Firefox 3.5-3.6"
+msgstr "Firefox 3.5-3.6"
+
+#: apps/wiki/config.py:49 apps/wiki/config.py:50
+msgid "Firefox 3.0"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/config.py:51
+msgid "Mobile:"
+msgstr "Мобільна:"
+
+#: apps/wiki/config.py:53
+#, fuzzy
+msgid "Firefox 11 for Mobile"
+msgstr "Firefox 4 для мобілок"
+
+#: apps/wiki/config.py:56
+#, fuzzy
+msgid "Firefox 10 for Mobile"
+msgstr "Firefox 4 для мобілок"
+
+#: apps/wiki/config.py:59
+#, fuzzy
+msgid "Firefox 9 for Mobile"
+msgstr "Firefox 4 для мобілок"
+
+#: apps/wiki/config.py:62
+#, fuzzy
+msgid "Firefox 8 for Mobile"
+msgstr "Firefox 4 для мобілок"
+
+#: apps/wiki/config.py:65
+#, fuzzy
+msgid "Firefox 7 for Mobile"
+msgstr "Firefox 4 для мобілок"
+
+#: apps/wiki/config.py:68
+#, fuzzy
+msgid "Firefox 6 for Mobile"
+msgstr "Firefox 4 для мобілок"
+
+#: apps/wiki/config.py:71
+#, fuzzy
+msgid "Firefox 5 for Mobile"
+msgstr "Firefox 4 для мобілок"
+
+#: apps/wiki/config.py:74
+msgid "Firefox 4 for Mobile"
+msgstr "Firefox 4 для мобілок"
+
+#: apps/wiki/config.py:86
+msgid "Desktop OS:"
+msgstr "Настільна ОС:"
+
+#: apps/wiki/config.py:87
+msgid "Windows"
+msgstr "Windows"
+
+#: apps/wiki/config.py:88
+msgid "Mac OS X"
+msgstr "Mac OS X"
+
+#: apps/wiki/config.py:89
+msgid "Linux"
+msgstr "Linux"
+
+#: apps/wiki/config.py:90
+msgid "Mobile OS:"
+msgstr "Мобільна ОС:"
+
+#: apps/wiki/config.py:91
+msgid "Android"
+msgstr "Android"
+
+#: apps/wiki/config.py:92
+msgid "Maemo"
+msgstr "Maemo"
+
+#: apps/wiki/config.py:101 templates/base.html:106 templates/global/mobile/header.html:5
+#, fuzzy
+msgid "Desktop"
+msgstr "Настільна:"
+
+#: apps/wiki/config.py:102 templates/base.html:107 templates/global/menu_links.html:15
+msgid "Mobile"
+msgstr "Мобільний"
+
+#: apps/wiki/config.py:103 templates/global/menu_links.html:21
+msgid "Sync"
+msgstr "Синхронізація"
+
+#: apps/wiki/config.py:104
+msgid "Home"
+msgstr ""
+
+#: apps/wiki/config.py:105
+msgid "Marketplace"
+msgstr ""
+
+#: apps/wiki/config.py:117
+msgid "Minor details like punctuation and spelling errors"
+msgstr "Незначне, на кшталт знаків пунктуації чи граматичних помилок"
+
+#: apps/wiki/config.py:119
+msgid "Content changes that don't require immediate translation"
+msgstr "Зміни вмісту, що не вимагають термінового перекладу"
+
+#: apps/wiki/config.py:121
+msgid "Major content changes that will make older translations inaccurate"
+msgstr "Важливі зміни вмісту, що роблять старий переклад неактуальним"
+
+#: apps/wiki/config.py:127
+msgid "These changes are inconsequential to localizers: they will not be notified of the change and it will not affect translations of the article."
+msgstr ""
+
+#: apps/wiki/config.py:131
+msgid ""
+"This will notify localizers and translations will be marked as \"needing updates\" on dashboards. Most changes&mdash;updating an image, fixing {for} markup, adding or removing non-critical "
+"sections&mdash;should use this."
+msgstr ""
+
+#: apps/wiki/config.py:136
+msgid ""
+"This will notify localizers and translations will be marked \"out of date\" on dashboards. Translations will show a warning to users that they are out of date and that the English version is the "
+"most accurate. Use this when the old instructions are completely unusable."
+msgstr ""
+
+#: apps/wiki/config.py:144
+msgid "Troubleshooting"
+msgstr "Вирішення проблем"
+
+#: apps/wiki/config.py:145
+msgid "How to"
+msgstr "Як"
+
+#: apps/wiki/config.py:146
+msgid "How to contribute"
+msgstr "Як долучитись"
+
+#: apps/wiki/config.py:147
+msgid "Administration"
+msgstr "Адміністрування"
+
+#: apps/wiki/config.py:148
+msgid "Navigation"
+msgstr "Навігація"
+
+#: apps/wiki/config.py:154
+msgid "%(old)s Redirect %(number)i"
+msgstr "%(old)s перенаправлення %(number)i"
+
+#: apps/wiki/config.py:155
+msgid "%(old)s-redirect-%(number)i"
+msgstr "%(old)s-перенаправлення-%(number)i"
+
+#: apps/wiki/events.py:114
 msgid "{title} was edited by {creator}"
 msgstr "{title} відредагована {creator}"
 
-#: apps/wiki/events.py:121
+#: apps/wiki/events.py:155
 msgid "{title} is ready for review ({creator})"
 msgstr "{title} готова для перегляду ({creator})"
 
-#: apps/wiki/events.py:144 apps/wiki/events.py:210
+#: apps/wiki/events.py:178 apps/wiki/events.py:244
 msgid "{title} has a revision ready for localization"
 msgstr ""
 
-#: apps/wiki/events.py:211
+#: apps/wiki/events.py:245
 #, fuzzy
 msgid "{title} ({locale}) has a new approved revision ({reviewer})"
 msgstr "{title} ({locale}) має нову затверджену редакцію"
@@ -2902,222 +3137,23 @@ msgstr "Значущість:"
 msgid "Needs change"
 msgstr "Непереглянуті зміни"
 
-#: apps/wiki/models.py:38
-msgid "Minor details like punctuation and spelling errors"
-msgstr "Незначне, на кшталт знаків пунктуації чи граматичних помилок"
-
-#: apps/wiki/models.py:40
-msgid "Content changes that don't require immediate translation"
-msgstr "Зміни вмісту, що не вимагають термінового перекладу"
-
-#: apps/wiki/models.py:42
-msgid "Major content changes that will make older translations inaccurate"
-msgstr "Важливі зміни вмісту, що роблять старий переклад неактуальним"
-
-#: apps/wiki/models.py:48
-msgid "These changes are inconsequential to localizers: they will not be notified of the change and it will not affect translations of the article."
-msgstr ""
-
-#: apps/wiki/models.py:52
-msgid ""
-"This will notify localizers and translations will be marked as \"needing updates\" on dashboards. Most changes&mdash;updating an image, fixing {for} markup, adding or removing non-critical "
-"sections&mdash;should use this."
-msgstr ""
-
-#: apps/wiki/models.py:57
-msgid ""
-"This will notify localizers and translations will be marked \"out of date\" on dashboards. Translations will show a warning to users that they are out of date and that the English version is the "
-"most accurate. Use this when the old instructions are completely unusable."
-msgstr ""
-
-#: apps/wiki/models.py:65
-msgid "Troubleshooting"
-msgstr "Вирішення проблем"
-
-#: apps/wiki/models.py:66
-msgid "How to"
-msgstr "Як"
-
-#: apps/wiki/models.py:67
-msgid "How to contribute"
-msgstr "Як долучитись"
-
-#: apps/wiki/models.py:68
-msgid "Administration"
-msgstr "Адміністрування"
-
-#: apps/wiki/models.py:69
-msgid "Navigation"
-msgstr "Навігація"
-
-#: apps/wiki/models.py:91
-msgid "Desktop:"
-msgstr "Настільна:"
-
-#: apps/wiki/models.py:92 apps/wiki/models.py:93 apps/wiki/models.py:114
-#, fuzzy
-msgid "Firefox 11"
-msgstr "Firefox 3.0"
-
-#: apps/wiki/models.py:94 apps/wiki/models.py:95 apps/wiki/models.py:117
-#, fuzzy
-msgid "Firefox 10"
-msgstr "Firefox 3.0"
-
-#: apps/wiki/models.py:96 apps/wiki/models.py:97 apps/wiki/models.py:120
-#, fuzzy
-msgid "Firefox 9"
-msgstr "Firefox 4"
-
-#: apps/wiki/models.py:98 apps/wiki/models.py:99 apps/wiki/models.py:123
-#, fuzzy
-msgid "Firefox 8"
-msgstr "Firefox 4"
-
-#: apps/wiki/models.py:100 apps/wiki/models.py:101 apps/wiki/models.py:126
-#, fuzzy
-msgid "Firefox 7"
-msgstr "Firefox 4"
-
-#: apps/wiki/models.py:102 apps/wiki/models.py:103 apps/wiki/models.py:129
-#, fuzzy
-msgid "Firefox 6"
-msgstr "Firefox 4"
-
-#: apps/wiki/models.py:104 apps/wiki/models.py:105 apps/wiki/models.py:132
-#, fuzzy
-msgid "Firefox 5"
-msgstr "Firefox 4"
-
-#: apps/wiki/models.py:106 apps/wiki/models.py:107 apps/wiki/models.py:135
-msgid "Firefox 4"
-msgstr "Firefox 4"
-
-#: apps/wiki/models.py:108 apps/wiki/models.py:109
-msgid "Firefox 3.5-3.6"
-msgstr "Firefox 3.5-3.6"
-
-#: apps/wiki/models.py:111 apps/wiki/models.py:112
-msgid "Firefox 3.0"
-msgstr "Firefox 3.0"
-
-#: apps/wiki/models.py:113
-msgid "Mobile:"
-msgstr "Мобільна:"
-
-#: apps/wiki/models.py:115
-#, fuzzy
-msgid "Firefox 11 for Mobile"
-msgstr "Firefox 4 для мобілок"
-
-#: apps/wiki/models.py:118
-#, fuzzy
-msgid "Firefox 10 for Mobile"
-msgstr "Firefox 4 для мобілок"
-
-#: apps/wiki/models.py:121
-#, fuzzy
-msgid "Firefox 9 for Mobile"
-msgstr "Firefox 4 для мобілок"
-
-#: apps/wiki/models.py:124
-#, fuzzy
-msgid "Firefox 8 for Mobile"
-msgstr "Firefox 4 для мобілок"
-
-#: apps/wiki/models.py:127
-#, fuzzy
-msgid "Firefox 7 for Mobile"
-msgstr "Firefox 4 для мобілок"
-
-#: apps/wiki/models.py:130
-#, fuzzy
-msgid "Firefox 6 for Mobile"
-msgstr "Firefox 4 для мобілок"
-
-#: apps/wiki/models.py:133
-#, fuzzy
-msgid "Firefox 5 for Mobile"
-msgstr "Firefox 4 для мобілок"
-
-#: apps/wiki/models.py:136
-msgid "Firefox 4 for Mobile"
-msgstr "Firefox 4 для мобілок"
-
-#: apps/wiki/models.py:148
-msgid "Desktop OS:"
-msgstr "Настільна ОС:"
-
-#: apps/wiki/models.py:149
-msgid "Windows"
-msgstr "Windows"
-
-#: apps/wiki/models.py:150
-msgid "Mac OS X"
-msgstr "Mac OS X"
-
-#: apps/wiki/models.py:151
-msgid "Linux"
-msgstr "Linux"
-
-#: apps/wiki/models.py:152
-msgid "Mobile OS:"
-msgstr "Мобільна ОС:"
-
-#: apps/wiki/models.py:153
-msgid "Android"
-msgstr "Android"
-
-#: apps/wiki/models.py:154
-msgid "Maemo"
-msgstr "Maemo"
-
-#: apps/wiki/models.py:163 templates/base.html:106 templates/global/mobile/header.html:5
-#, fuzzy
-msgid "Desktop"
-msgstr "Настільна:"
-
-#: apps/wiki/models.py:164 templates/base.html:107 templates/global/menu_links.html:15
-msgid "Mobile"
-msgstr "Мобільний"
-
-#: apps/wiki/models.py:165 templates/global/menu_links.html:21
-msgid "Sync"
-msgstr "Синхронізація"
-
-#: apps/wiki/models.py:166
-msgid "Home"
-msgstr ""
-
-#: apps/wiki/models.py:167
-msgid "Marketplace"
-msgstr ""
-
-#: apps/wiki/models.py:173
-msgid "%(old)s Redirect %(number)i"
-msgstr "%(old)s перенаправлення %(number)i"
-
-#: apps/wiki/models.py:174
-msgid "%(old)s-redirect-%(number)i"
-msgstr "%(old)s-перенаправлення-%(number)i"
-
-#: apps/wiki/models.py:239
+#: apps/wiki/models.py:98
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr ""
 
-#: apps/wiki/models.py:246
+#: apps/wiki/models.py:105
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr ""
 
-#: apps/wiki/models.py:254
+#: apps/wiki/models.py:113
 msgid "If checked, this document needs updates."
 msgstr ""
 
-#: apps/wiki/models.py:349
+#: apps/wiki/models.py:208
 msgid "Please choose a category."
 msgstr "Оберіть категорію."
 
-#: apps/wiki/models.py:763
+#: apps/wiki/models.py:627
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr "Редакція повинна базуватись на редакції документу локалі: %(locale)s. Ідентифікатор редакції %(id)s не задовольняє цьому критерію."
 
@@ -3924,16 +3960,19 @@ msgstr "Відкинути цей переклад"
 msgid "Defer this Revision"
 msgstr "Відкинути цю редакцію"
 
-#: apps/wiki/templates/wiki/includes/review_form.html:74
+#: apps/wiki/templates/wiki/includes/review_form.html:75
 #, fuzzy
-msgid "Thanks for taking the time to review these changes. Please consider leaving a message for the person who submitted them explaining why they were deferred."
-msgstr "Дякуємо вам за розгляд цих змін. Також, залиште людині, що подала дані зміни, причину, чому зміни відкинуто."
-
-#: apps/wiki/templates/wiki/includes/review_form.html:78
-msgid "Leave a message for the contributor: <span class=\"optional\">(optional)</span>"
-msgstr "Залиште повідомлення помічнику: <span class=\"optional\">(необов'язково)</span>"
+msgid ""
+"Thanks for taking the time to review these changes. Please thank the editor and then give specific, constructive feedback about what you feel needs to change in order for the revision to be "
+"acceptable."
+msgstr "Дякуємо вам за розгляд цих змін. Також, подякуйте людині, що подала дані зміни."
 
 #: apps/wiki/templates/wiki/includes/review_form.html:81
+#, fuzzy
+msgid "Leave a message for the contributor:"
+msgstr "Помічникам"
+
+#: apps/wiki/templates/wiki/includes/review_form.html:85
 msgid "Defer"
 msgstr ""
 
@@ -4465,8 +4504,12 @@ msgstr "Firefox 4"
 msgid "View full site"
 msgstr ""
 
-#~ msgid "Thanks for taking the time to review these changes. Please consider sending a thank you to the person who submitted them."
-#~ msgstr "Дякуємо вам за розгляд цих змін. Також, подякуйте людині, що подала дані зміни."
+#, fuzzy
+#~ msgid "Thanks for taking the time to review these changes. Please consider leaving a message for the person who submitted them explaining why they were deferred."
+#~ msgstr "Дякуємо вам за розгляд цих змін. Також, залиште людині, що подала дані зміни, причину, чому зміни відкинуто."
+
+#~ msgid "Leave a message for the contributor: <span class=\"optional\">(optional)</span>"
+#~ msgstr "Залиште повідомлення помічнику: <span class=\"optional\">(необов'язково)</span>"
 
 #, fuzzy
 #~ msgid "Leave a message for {contributor}: <span class=\"optional\">(optional)</span>"
@@ -4598,9 +4641,6 @@ msgstr ""
 
 #~ msgid "You are translating an unreviewed or rejected English document."
 #~ msgstr "Ви перекладаєте не переглянутий або відкинутий англійський документ."
-
-#~ msgid "I forgot my password."
-#~ msgstr "Я забув свій пароль."
 
 #~ msgid "My account is inactive."
 #~ msgstr "Мій обліковий запис неактивний."

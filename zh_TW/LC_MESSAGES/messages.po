@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-18 12:43-0700\n"
+"POT-Creation-Date: 2012-01-26 08:49-0700\n"
 "PO-Revision-Date: 2012-01-23 15:31+0200\n"
 "Last-Translator: Peter <petercpg@mail.moztw.org>\n"
 "Language-Team: Chinese (traditional)\n"
@@ -215,7 +215,7 @@ msgstr "在您加入 Army of Awesome 之前，您需要回應才能回覆 tweets
 #: apps/kbforums/templates/kbforums/confirm_thread_delete.html:32 apps/kbforums/templates/kbforums/edit_post.html:34 apps/kbforums/templates/kbforums/edit_thread.html:29
 #: apps/kbforums/templates/kbforums/new_thread.html:39 apps/messages/templates/messages/delete.html:28 apps/messages/templates/messages/new.html:20
 #: apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_remove_contributor.html:16 apps/wiki/templates/wiki/includes/document_macros.html:205
-#: apps/wiki/templates/wiki/includes/ready_for_l10n_modal.html:12 apps/wiki/templates/wiki/includes/review_form.html:68 apps/wiki/templates/wiki/includes/review_form.html:82
+#: apps/wiki/templates/wiki/includes/ready_for_l10n_modal.html:12 apps/wiki/templates/wiki/includes/review_form.html:68 apps/wiki/templates/wiki/includes/review_form.html:86
 msgid "Cancel"
 msgstr "取消"
 
@@ -255,7 +255,7 @@ msgstr "最多瀏覽次數文章"
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "這些是前 20 篇最多瀏覽次數的文章，佔了超過所有知識庫 50%% 以上的流量。"
 
-#: apps/dashboards/readouts.py:218 apps/dashboards/readouts.py:413 apps/wiki/models.py:70
+#: apps/dashboards/readouts.py:218 apps/dashboards/readouts.py:413 apps/wiki/config.py:149
 msgid "Templates"
 msgstr "模板"
 
@@ -1496,7 +1496,7 @@ msgstr "關閉我的語系的討論電子郵件。"
 msgid "Get emailed when there is new discussion activity in my locale."
 msgstr "在我的語系有新的討論時請用電子郵件通知我"
 
-#: apps/kpi/templates/kpi/dashboard.html:4
+#: apps/kpi/templates/kpi/dashboard.html:4 templates/includes/sidebar_modules.html:23
 msgid "KPI Dashboard"
 msgstr "KPI 主控台"
 
@@ -2123,127 +2123,140 @@ msgstr "選擇要上傳的圖片檔案。"
 msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
 msgstr "我們在發信給您的時候遇到問題。請嘗試使用另一個地址，或是聯絡管理員。"
 
-#: apps/users/forms.py:18
+#: apps/users/forms.py:22
 msgid "Username may contain only letters, numbers and ./+/-/_ characters."
 msgstr "使用者名稱僅能由英文字母、數字以及 ./+/-/_ 等字元組成。"
 
-#: apps/users/forms.py:20
+#: apps/users/forms.py:24
 msgid "Username is required."
 msgstr "使用者名稱是必要的。"
 
-#: apps/users/forms.py:21
+#: apps/users/forms.py:25
 msgid "Username is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "內容資訊太短 (%(show_value)s 個字元)，必須超過 %(limit_value)s 個字元。"
 
-#: apps/users/forms.py:23
+#: apps/users/forms.py:27
 msgid "Username is too long (%(show_value)s characters). It must be %(limit_value)s characters or less."
 msgstr "內容資訊太短 (%(show_value)s 個字元)，必須超過 %(limit_value)s 個字元。"
 
-#: apps/users/forms.py:25
+#: apps/users/forms.py:29
 msgid "Email address is required."
 msgstr "Email 地址是必要的。"
 
-#: apps/users/forms.py:26
+#: apps/users/forms.py:30
 msgid "Email address is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "這個標題 (%(show_value)s 個字) 太短。它必須至少有 %(limit_value)s 個字以上。"
 
-#: apps/users/forms.py:28
+#: apps/users/forms.py:32
 msgid "Email address is too long (%(show_value)s characters). It must be %(limit_value)s characters or less."
 msgstr "這個標題 (%(show_value)s 個字) 太短。它必須至少有 %(limit_value)s 個字以上。"
 
-#: apps/users/forms.py:30
+#: apps/users/forms.py:34
 msgid "Password is required."
 msgstr "必須輸入密碼。"
 
-#: apps/users/forms.py:31
+#: apps/users/forms.py:35
 msgid "Please enter your password twice."
 msgstr "請輸入您的密碼兩次。"
 
-#: apps/users/forms.py:37
+#: apps/users/forms.py:41
 msgid "Watch forum threads I start"
 msgstr "訂閱我發出的討論串"
 
-#: apps/users/forms.py:40
+#: apps/users/forms.py:44
 msgid "Watch forum threads I comment in"
 msgstr "訂閱我留言過的討論串"
 
-#: apps/users/forms.py:43
+#: apps/users/forms.py:47
 msgid "Watch KB discussion threads I start"
 msgstr "訂閱我發出的知識庫討論串"
 
-#: apps/users/forms.py:46
+#: apps/users/forms.py:50
 msgid "Watch KB discussion threads I comment in"
 msgstr "訂閱我留言過的知識庫討論串"
 
-#: apps/users/forms.py:49
+#: apps/users/forms.py:53
+#, fuzzy
+msgid "Watch Question threads I comment in"
+msgstr "訂閱我留言過的知識庫討論串"
+
+#: apps/users/forms.py:56
 msgid "Send emails for private messages"
 msgstr "在收到私人訊息時寄送電子郵件"
 
-#: apps/users/forms.py:70 apps/users/templates/users/includes/macros.html:13
+#: apps/users/forms.py:77 apps/users/templates/users/includes/macros.html:13
 msgid "Username:"
 msgstr "帳號:"
 
-#: apps/users/forms.py:72
+#: apps/users/forms.py:79
 msgid "Required. 30 characters or fewer. Letters, digits and ./+/-/_ only."
 msgstr "必須要小於 30 個字元。只接受英文字母、數字，以及 ./+/-/_ 這些符號。"
 
-#: apps/users/forms.py:78 apps/users/forms.py:211 apps/users/forms.py:217
+#: apps/users/forms.py:85 apps/users/forms.py:218 apps/users/forms.py:224 apps/users/forms.py:258
 msgid "Email address:"
 msgstr "電子郵件地址:"
 
-#: apps/users/forms.py:82 apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/includes/macros.html:17
+#: apps/users/forms.py:89 apps/users/templates/users/edit_profile.html:28 apps/users/templates/users/includes/macros.html:17
 msgid "Password:"
 msgstr "密碼:"
 
-#: apps/users/forms.py:86
+#: apps/users/forms.py:93
 msgid "Repeat password:"
 msgstr "重複輸入密碼:"
 
-#: apps/users/forms.py:90
+#: apps/users/forms.py:97
 msgid "Enter the same password as above, for verification."
 msgstr "再輸入跟上面欄位一樣的密碼一次，避免您不小心打錯。"
 
-#: apps/users/forms.py:104
+#: apps/users/forms.py:111
 msgid "Passwords must match."
 msgstr "密碼必須相同。"
 
-#: apps/users/forms.py:114 apps/users/forms.py:228
+#: apps/users/forms.py:121 apps/users/forms.py:235
 msgid "A user with that email address already exists."
 msgstr "已有一位使用該電子郵件地址的使用者。"
 
-#: apps/users/forms.py:129
+#: apps/users/forms.py:136
 msgid "Password"
 msgstr "密碼"
 
-#: apps/users/forms.py:145
+#: apps/users/forms.py:152
 msgid "Please enter a correct username and password. Note that both fields are case-sensitive."
 msgstr "請輸入正確的使用者名稱和密碼。請注意，這兩個欄位都會區分大小寫。"
 
-#: apps/users/forms.py:148
+#: apps/users/forms.py:155
 msgid "This account is inactive."
 msgstr "此帳號尚未啟用。"
 
-#: apps/users/forms.py:153
+#: apps/users/forms.py:160
 msgid "Your Web browser doesn't appear to have cookies enabled. Cookies are required for logging in."
 msgstr "你的網頁瀏覽器似乎沒啟用 Cookie，Cookie 在登入時系統會需要用到。"
 
-#: apps/users/forms.py:173
+#: apps/users/forms.py:180
 msgid "Please enter a twitter.com URL."
 msgstr "請輸入一個 twitter.com 的網址。"
 
-#: apps/users/forms.py:179
+#: apps/users/forms.py:186
 msgid "Please enter a facebook.com URL."
 msgstr "請輸入一個 facebook.com 的網址。"
 
-#: apps/users/forms.py:226
+#: apps/users/forms.py:233
 msgid "This is your current email."
 msgstr "這是你目前使用的 Email。"
 
-#: apps/users/forms.py:249
+#: apps/users/forms.py:269
+msgid "That e-mail address doesn't have an associated user account. Are you sure you've registered?"
+msgstr ""
+
+#: apps/users/forms.py:289
+msgid "Your username on %s"
+msgstr ""
+
+#: apps/users/forms.py:295
 msgid "The password entered is known to be commonly used and is not allowed."
 msgstr "您輸入的密碼是已知的常用密碼，我們不允許您使用。"
 
-#: apps/users/forms.py:256
+#: apps/users/forms.py:302
 msgid "The user name you entered is inappropriate. Please pick another and consider that our helpers are other Firefox users just like you."
 msgstr "您所輸入的使用者名稱並不恰當。請再挑一個，並考慮到我們的幫手都是其他像您一樣的 Firefox 使用者。"
 
@@ -2334,6 +2347,10 @@ msgstr "您的帳號已被啟用，請在下面登入。"
 #: apps/users/views.py:210
 msgid "Your settings have been saved."
 msgstr "已儲存您的設定。"
+
+#: apps/users/views.py:447
+msgid "We've sent an email with the username to any account using {email}."
+msgstr ""
 
 #: apps/users/templates/users/activate.html:5
 msgid "Account successfully verified!"
@@ -2433,6 +2450,21 @@ msgstr "更新"
 #: apps/users/templates/users/edit_settings.html:2
 msgid "Edit Settings"
 msgstr "編輯設定值"
+
+#: apps/users/templates/users/forgot_username.html:4
+#, fuzzy
+msgid "Retrieve Username"
+msgstr "帳號"
+
+#: apps/users/templates/users/forgot_username.html:14
+#, fuzzy
+msgid "Forgotten your username? Enter your email address below, and we'll send it to you."
+msgstr "把密碼給忘了？在下面輸入你的 email 位址，我們會寄給你重設密碼的指示。"
+
+#: apps/users/templates/users/forgot_username.html:24
+#, fuzzy
+msgid "Send username"
+msgstr "使用者名稱"
 
 #: apps/users/templates/users/login.html:4 apps/users/templates/users/login.html:9
 msgid "Log In"
@@ -2542,7 +2574,7 @@ msgstr "寄送密碼重設連結"
 msgid "We've sent an email to any account using this address. Please follow the link in the email to reset your password."
 msgstr "我們已經將 email 寄至此帳號所使用的信箱地址。請使用 email 中的網址連結重設你的密碼。"
 
-#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:51
+#: apps/users/templates/users/register.html:5 apps/users/templates/users/register.html:10 apps/users/templates/users/includes/macros.html:52
 msgid "Register"
 msgstr "註冊"
 
@@ -2598,26 +2630,215 @@ msgid "Login Problems?"
 msgstr "登入時遇到問題？"
 
 #: apps/users/templates/users/includes/macros.html:33
+#, fuzzy
+msgid "I forgot my username."
+msgstr "我忘記密碼了。"
+
+#: apps/users/templates/users/includes/macros.html:34
 msgid "I don't have an account."
 msgstr "我沒有帳號。"
 
-#: apps/users/templates/users/includes/macros.html:34
+#: apps/users/templates/users/includes/macros.html:35
 msgid "I didn't get a confirmation email."
 msgstr "我沒收到確認信。"
 
-#: apps/wiki/events.py:80
+#: apps/wiki/config.py:29
+msgid "Desktop:"
+msgstr "桌面版:"
+
+#: apps/wiki/config.py:30 apps/wiki/config.py:31 apps/wiki/config.py:52
+msgid "Firefox 11"
+msgstr "Firefox 11"
+
+#: apps/wiki/config.py:32 apps/wiki/config.py:33 apps/wiki/config.py:55
+msgid "Firefox 10"
+msgstr "Firefox 10"
+
+#: apps/wiki/config.py:34 apps/wiki/config.py:35 apps/wiki/config.py:58
+msgid "Firefox 9"
+msgstr "Firefox 9"
+
+#: apps/wiki/config.py:36 apps/wiki/config.py:37 apps/wiki/config.py:61
+msgid "Firefox 8"
+msgstr "Firefox 8"
+
+#: apps/wiki/config.py:38 apps/wiki/config.py:39 apps/wiki/config.py:64
+msgid "Firefox 7"
+msgstr "Firefox 7"
+
+#: apps/wiki/config.py:40 apps/wiki/config.py:41 apps/wiki/config.py:67
+msgid "Firefox 6"
+msgstr "Firefox 6"
+
+#: apps/wiki/config.py:42 apps/wiki/config.py:43 apps/wiki/config.py:70
+msgid "Firefox 5"
+msgstr "Firefox 5"
+
+#: apps/wiki/config.py:44 apps/wiki/config.py:45 apps/wiki/config.py:73
+msgid "Firefox 4"
+msgstr "Firefox 4"
+
+#: apps/wiki/config.py:46 apps/wiki/config.py:47
+msgid "Firefox 3.5-3.6"
+msgstr "Firefox 3.5-3.6"
+
+#: apps/wiki/config.py:49 apps/wiki/config.py:50
+msgid "Firefox 3.0"
+msgstr "Firefox 3.0"
+
+#: apps/wiki/config.py:51
+msgid "Mobile:"
+msgstr "行動版︰"
+
+#: apps/wiki/config.py:53
+msgid "Firefox 11 for Mobile"
+msgstr "Firefox 11 行動版"
+
+#: apps/wiki/config.py:56
+msgid "Firefox 10 for Mobile"
+msgstr "Firefox 10 行動版"
+
+#: apps/wiki/config.py:59
+msgid "Firefox 9 for Mobile"
+msgstr "Firefox 9 行動版"
+
+#: apps/wiki/config.py:62
+msgid "Firefox 8 for Mobile"
+msgstr "Firefox 8 行動版"
+
+#: apps/wiki/config.py:65
+msgid "Firefox 7 for Mobile"
+msgstr "Firefox 7 行動版"
+
+#: apps/wiki/config.py:68
+msgid "Firefox 6 for Mobile"
+msgstr "Firefox 6 行動版"
+
+#: apps/wiki/config.py:71
+msgid "Firefox 5 for Mobile"
+msgstr "Firefox 5 行動版"
+
+#: apps/wiki/config.py:74
+msgid "Firefox 4 for Mobile"
+msgstr "Firefox 4 行動版"
+
+#: apps/wiki/config.py:86
+msgid "Desktop OS:"
+msgstr "桌面作業系統︰"
+
+#: apps/wiki/config.py:87
+msgid "Windows"
+msgstr "Windows"
+
+#: apps/wiki/config.py:88
+msgid "Mac OS X"
+msgstr "Mac OS X"
+
+#: apps/wiki/config.py:89
+msgid "Linux"
+msgstr "Linux"
+
+#: apps/wiki/config.py:90
+msgid "Mobile OS:"
+msgstr "行動裝置作業系統"
+
+#: apps/wiki/config.py:91
+msgid "Android"
+msgstr "Android"
+
+#: apps/wiki/config.py:92
+msgid "Maemo"
+msgstr "Maemo"
+
+#: apps/wiki/config.py:101 templates/base.html:106 templates/global/mobile/header.html:5
+msgid "Desktop"
+msgstr "桌面版"
+
+#: apps/wiki/config.py:102 templates/base.html:107 templates/global/menu_links.html:15
+msgid "Mobile"
+msgstr "行動裝置"
+
+#: apps/wiki/config.py:103 templates/global/menu_links.html:21
+msgid "Sync"
+msgstr "同步"
+
+#: apps/wiki/config.py:104
+msgid "Home"
+msgstr "首頁"
+
+#: apps/wiki/config.py:105
+msgid "Marketplace"
+msgstr "商城"
+
+#: apps/wiki/config.py:117
+msgid "Minor details like punctuation and spelling errors"
+msgstr "較小的細節如錯別字等"
+
+#: apps/wiki/config.py:119
+msgid "Content changes that don't require immediate translation"
+msgstr "不需要立刻翻譯的內容修改"
+
+#: apps/wiki/config.py:121
+msgid "Major content changes that will make older translations inaccurate"
+msgstr "大量的更動，將造成原有翻譯不準確"
+
+#: apps/wiki/config.py:127
+msgid "These changes are inconsequential to localizers: they will not be notified of the change and it will not affect translations of the article."
+msgstr "這些修改將與在地化無關: 將不會影響聞此篇文章的翻譯，亦不會通知翻譯者此次修改。"
+
+#: apps/wiki/config.py:131
+msgid ""
+"This will notify localizers and translations will be marked as \"needing updates\" on dashboards. Most changes&mdash;updating an image, fixing {for} markup, adding or removing non-critical "
+"sections&mdash;should use this."
+msgstr "這將會通知翻譯者，且譯文將會在主控台被標示為「需要更新」。多數的修改（更新圖片、修正 {for} 標示、新增或刪除不重要的文章段落）應該使用這個。"
+
+#: apps/wiki/config.py:136
+msgid ""
+"This will notify localizers and translations will be marked \"out of date\" on dashboards. Translations will show a warning to users that they are out of date and that the English version is the "
+"most accurate. Use this when the old instructions are completely unusable."
+msgstr "這將會通知翻譯者，且譯文將會在主控台被標示為「過時」。譯文當中將會出現警告，警告使用者這些文件已經過時，英文版才有最準確的文章。當舊的步驟已經完全無法使用時請使用這個。"
+
+#: apps/wiki/config.py:144
+msgid "Troubleshooting"
+msgstr "疑難排解"
+
+#: apps/wiki/config.py:145
+msgid "How to"
+msgstr "如何做"
+
+#: apps/wiki/config.py:146
+msgid "How to contribute"
+msgstr "如何貢獻"
+
+#: apps/wiki/config.py:147
+msgid "Administration"
+msgstr "管理"
+
+#: apps/wiki/config.py:148
+msgid "Navigation"
+msgstr "跳到導覽列"
+
+#: apps/wiki/config.py:154
+msgid "%(old)s Redirect %(number)i"
+msgstr "%(old)s 重導 %(number)i"
+
+#: apps/wiki/config.py:155
+msgid "%(old)s-redirect-%(number)i"
+msgstr "%(old)s-redirect-%(number)i"
+
+#: apps/wiki/events.py:114
 msgid "{title} was edited by {creator}"
 msgstr "由 {creator} 所編輯的 {title}"
 
-#: apps/wiki/events.py:121
+#: apps/wiki/events.py:155
 msgid "{title} is ready for review ({creator})"
 msgstr "{title} 已經準備好可被審核 ({creator})"
 
-#: apps/wiki/events.py:144 apps/wiki/events.py:210
+#: apps/wiki/events.py:178 apps/wiki/events.py:244
 msgid "{title} has a revision ready for localization"
 msgstr "{title} 已有準備好可供翻譯的修改版本"
 
-#: apps/wiki/events.py:211
+#: apps/wiki/events.py:245
 msgid "{title} ({locale}) has a new approved revision ({reviewer})"
 msgstr "{title} ({locale}) 有一個新的被審核過的版本 ({reviewer})"
 
@@ -2746,207 +2967,23 @@ msgstr "重要性:"
 msgid "Needs change"
 msgstr "需要修改"
 
-#: apps/wiki/models.py:38
-msgid "Minor details like punctuation and spelling errors"
-msgstr "較小的細節如錯別字等"
-
-#: apps/wiki/models.py:40
-msgid "Content changes that don't require immediate translation"
-msgstr "不需要立刻翻譯的內容修改"
-
-#: apps/wiki/models.py:42
-msgid "Major content changes that will make older translations inaccurate"
-msgstr "大量的更動，將造成原有翻譯不準確"
-
-#: apps/wiki/models.py:48
-msgid "These changes are inconsequential to localizers: they will not be notified of the change and it will not affect translations of the article."
-msgstr "這些修改將與在地化無關: 將不會影響聞此篇文章的翻譯，亦不會通知翻譯者此次修改。"
-
-#: apps/wiki/models.py:52
-msgid ""
-"This will notify localizers and translations will be marked as \"needing updates\" on dashboards. Most changes&mdash;updating an image, fixing {for} markup, adding or removing non-critical "
-"sections&mdash;should use this."
-msgstr "這將會通知翻譯者，且譯文將會在主控台被標示為「需要更新」。多數的修改（更新圖片、修正 {for} 標示、新增或刪除不重要的文章段落）應該使用這個。"
-
-#: apps/wiki/models.py:57
-msgid ""
-"This will notify localizers and translations will be marked \"out of date\" on dashboards. Translations will show a warning to users that they are out of date and that the English version is the "
-"most accurate. Use this when the old instructions are completely unusable."
-msgstr "這將會通知翻譯者，且譯文將會在主控台被標示為「過時」。譯文當中將會出現警告，警告使用者這些文件已經過時，英文版才有最準確的文章。當舊的步驟已經完全無法使用時請使用這個。"
-
-#: apps/wiki/models.py:65
-msgid "Troubleshooting"
-msgstr "疑難排解"
-
-#: apps/wiki/models.py:66
-msgid "How to"
-msgstr "如何做"
-
-#: apps/wiki/models.py:67
-msgid "How to contribute"
-msgstr "如何貢獻"
-
-#: apps/wiki/models.py:68
-msgid "Administration"
-msgstr "管理"
-
-#: apps/wiki/models.py:69
-msgid "Navigation"
-msgstr "跳到導覽列"
-
-#: apps/wiki/models.py:91
-msgid "Desktop:"
-msgstr "桌面版:"
-
-#: apps/wiki/models.py:92 apps/wiki/models.py:93 apps/wiki/models.py:114
-msgid "Firefox 11"
-msgstr "Firefox 11"
-
-#: apps/wiki/models.py:94 apps/wiki/models.py:95 apps/wiki/models.py:117
-msgid "Firefox 10"
-msgstr "Firefox 10"
-
-#: apps/wiki/models.py:96 apps/wiki/models.py:97 apps/wiki/models.py:120
-msgid "Firefox 9"
-msgstr "Firefox 9"
-
-#: apps/wiki/models.py:98 apps/wiki/models.py:99 apps/wiki/models.py:123
-msgid "Firefox 8"
-msgstr "Firefox 8"
-
-#: apps/wiki/models.py:100 apps/wiki/models.py:101 apps/wiki/models.py:126
-msgid "Firefox 7"
-msgstr "Firefox 7"
-
-#: apps/wiki/models.py:102 apps/wiki/models.py:103 apps/wiki/models.py:129
-msgid "Firefox 6"
-msgstr "Firefox 6"
-
-#: apps/wiki/models.py:104 apps/wiki/models.py:105 apps/wiki/models.py:132
-msgid "Firefox 5"
-msgstr "Firefox 5"
-
-#: apps/wiki/models.py:106 apps/wiki/models.py:107 apps/wiki/models.py:135
-msgid "Firefox 4"
-msgstr "Firefox 4"
-
-#: apps/wiki/models.py:108 apps/wiki/models.py:109
-msgid "Firefox 3.5-3.6"
-msgstr "Firefox 3.5-3.6"
-
-#: apps/wiki/models.py:111 apps/wiki/models.py:112
-msgid "Firefox 3.0"
-msgstr "Firefox 3.0"
-
-#: apps/wiki/models.py:113
-msgid "Mobile:"
-msgstr "行動版︰"
-
-#: apps/wiki/models.py:115
-msgid "Firefox 11 for Mobile"
-msgstr "Firefox 11 行動版"
-
-#: apps/wiki/models.py:118
-msgid "Firefox 10 for Mobile"
-msgstr "Firefox 10 行動版"
-
-#: apps/wiki/models.py:121
-msgid "Firefox 9 for Mobile"
-msgstr "Firefox 9 行動版"
-
-#: apps/wiki/models.py:124
-msgid "Firefox 8 for Mobile"
-msgstr "Firefox 8 行動版"
-
-#: apps/wiki/models.py:127
-msgid "Firefox 7 for Mobile"
-msgstr "Firefox 7 行動版"
-
-#: apps/wiki/models.py:130
-msgid "Firefox 6 for Mobile"
-msgstr "Firefox 6 行動版"
-
-#: apps/wiki/models.py:133
-msgid "Firefox 5 for Mobile"
-msgstr "Firefox 5 行動版"
-
-#: apps/wiki/models.py:136
-msgid "Firefox 4 for Mobile"
-msgstr "Firefox 4 行動版"
-
-#: apps/wiki/models.py:148
-msgid "Desktop OS:"
-msgstr "桌面作業系統︰"
-
-#: apps/wiki/models.py:149
-msgid "Windows"
-msgstr "Windows"
-
-#: apps/wiki/models.py:150
-msgid "Mac OS X"
-msgstr "Mac OS X"
-
-#: apps/wiki/models.py:151
-msgid "Linux"
-msgstr "Linux"
-
-#: apps/wiki/models.py:152
-msgid "Mobile OS:"
-msgstr "行動裝置作業系統"
-
-#: apps/wiki/models.py:153
-msgid "Android"
-msgstr "Android"
-
-#: apps/wiki/models.py:154
-msgid "Maemo"
-msgstr "Maemo"
-
-#: apps/wiki/models.py:163 templates/base.html:106 templates/global/mobile/header.html:5
-msgid "Desktop"
-msgstr "桌面版"
-
-#: apps/wiki/models.py:164 templates/base.html:107 templates/global/menu_links.html:15
-msgid "Mobile"
-msgstr "行動裝置"
-
-#: apps/wiki/models.py:165 templates/global/menu_links.html:21
-msgid "Sync"
-msgstr "同步"
-
-#: apps/wiki/models.py:166
-msgid "Home"
-msgstr "首頁"
-
-#: apps/wiki/models.py:167
-msgid "Marketplace"
-msgstr "商城"
-
-#: apps/wiki/models.py:173
-msgid "%(old)s Redirect %(number)i"
-msgstr "%(old)s 重導 %(number)i"
-
-#: apps/wiki/models.py:174
-msgid "%(old)s-redirect-%(number)i"
-msgstr "%(old)s-redirect-%(number)i"
-
-#: apps/wiki/models.py:239
+#: apps/wiki/models.py:98
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "若打勾，這個維基頁面將會自基礎搜尋與主控台當中被隱藏。被檢視時，頁面上也會警告此頁不再受維護。"
 
-#: apps/wiki/models.py:246
+#: apps/wiki/models.py:105
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "若打勾，這份文件將會被允許在相關聯的討論區當中進行討論。取消勾選以隱藏或停用討論區。"
 
-#: apps/wiki/models.py:254
+#: apps/wiki/models.py:113
 msgid "If checked, this document needs updates."
 msgstr "若打勾，代表這份文件需要更新。"
 
-#: apps/wiki/models.py:349
+#: apps/wiki/models.py:208
 msgid "Please choose a category."
 msgstr "請選擇一個分類。"
 
-#: apps/wiki/models.py:763
+#: apps/wiki/models.py:627
 msgid "A revision must be based on a revision of the %(locale)s document. Revision ID %(id)s does not fit those criteria."
 msgstr "頁面更動必須基於 %(locale)s 文件的更動。更動 ID %(id)s 並不符合此條件。"
 
@@ -3707,15 +3744,19 @@ msgstr "推遲此翻譯"
 msgid "Defer this Revision"
 msgstr "推遲此編修"
 
-#: apps/wiki/templates/wiki/includes/review_form.html:74
-msgid "Thanks for taking the time to review these changes. Please consider leaving a message for the person who submitted them explaining why they were deferred."
-msgstr "感謝您花時間審核這些更動。並請留言給送出這些內容的人告訴他們為什麼被推遲了。"
-
-#: apps/wiki/templates/wiki/includes/review_form.html:78
-msgid "Leave a message for the contributor: <span class=\"optional\">(optional)</span>"
-msgstr "留言給貢獻者: <span class=\"optional\">(optional)</span>"
+#: apps/wiki/templates/wiki/includes/review_form.html:75
+#, fuzzy
+msgid ""
+"Thanks for taking the time to review these changes. Please thank the editor and then give specific, constructive feedback about what you feel needs to change in order for the revision to be "
+"acceptable."
+msgstr "感謝您花時間審核這些修改。也請您向送出這些內容的人說聲謝謝！"
 
 #: apps/wiki/templates/wiki/includes/review_form.html:81
+#, fuzzy
+msgid "Leave a message for the contributor:"
+msgstr "留言給 {contributor}:"
+
+#: apps/wiki/templates/wiki/includes/review_form.html:85
 msgid "Defer"
 msgstr "推遲"
 
@@ -4221,8 +4262,11 @@ msgstr "Firefox Sync"
 msgid "View full site"
 msgstr "檢視完整網站"
 
-#~ msgid "Thanks for taking the time to review these changes. Please consider sending a thank you to the person who submitted them."
-#~ msgstr "感謝您花時間審核這些修改。也請您向送出這些內容的人說聲謝謝！"
+#~ msgid "Thanks for taking the time to review these changes. Please consider leaving a message for the person who submitted them explaining why they were deferred."
+#~ msgstr "感謝您花時間審核這些更動。並請留言給送出這些內容的人告訴他們為什麼被推遲了。"
+
+#~ msgid "Leave a message for the contributor: <span class=\"optional\">(optional)</span>"
+#~ msgstr "留言給貢獻者: <span class=\"optional\">(optional)</span>"
 
 #~ msgid "Leave a message for {contributor}: <span class=\"optional\">(optional)</span>"
 #~ msgstr "留言給 {contributor}: <span class=\"optional\">(optional)</span>"
@@ -4355,9 +4399,6 @@ msgstr "檢視完整網站"
 
 #~ msgid "You are translating an unreviewed or rejected English document."
 #~ msgstr "您正在翻譯一篇尚未審核或被退稿的英文文件。"
-
-#~ msgid "I forgot my password."
-#~ msgstr "我忘記密碼了。"
 
 #~ msgid "My account is inactive."
 #~ msgstr "我的帳號尚未啟用。"
