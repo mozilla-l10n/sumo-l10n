@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-17 07:16-0700\n"
+"POT-Creation-Date: 2013-01-09 10:03-0700\n"
 "PO-Revision-Date: 2012-12-29 02:15+0800\n"
 "Last-Translator: YFdyh000 <yfdyh000@gmail.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -13,12 +13,24 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.1.6\n"
 
+#: apps/announcements/forms.py:17 apps/kbforums/templates/kbforums/confirm_post_delete.html:21 apps/wiki/templates/wiki/confirm_revision_delete.html:26
+msgid "Content"
+msgstr "内容"
+
+#: apps/announcements/forms.py:19
+#, fuzzy
+msgid "Show after"
+msgstr "显示媒体库："
+
+#: apps/announcements/forms.py:21
+msgid "Show until"
+msgstr ""
+
 #: apps/announcements/tasks.py:34
 msgid "New announcement for {group}"
 msgstr "{group} 的新公告"
 
-#: apps/customercare/views.py:30
-#: apps/dashboards/readouts.py:270
+#: apps/customercare/views.py:30 apps/dashboards/readouts.py:290
 msgid "Most Recent"
 msgstr "最新"
 
@@ -30,42 +42,37 @@ msgstr "未答复"
 msgid "Answered"
 msgstr "已答复"
 
-#: apps/customercare/views.py:33
-#: apps/products/templates/products/documents.html:31
-#: apps/products/templates/products/mobile/documents.html:47
+#: apps/customercare/views.py:33 apps/products/templates/products/documents.html:31 apps/products/templates/products/mobile/documents.html:47
 msgid "All"
 msgstr "所有"
 
 #. L10n: the tweet needs to be a reply to another tweet.
-#: apps/customercare/views.py:237
+#: apps/customercare/views.py:183
 msgid "Reply-to is empty"
 msgstr "接收者是空的"
 
 #. L10n: the tweet has no content.
-#: apps/customercare/views.py:242
+#: apps/customercare/views.py:188
 msgid "Message is empty"
 msgstr "消息是空的"
 
-#: apps/customercare/views.py:245
+#: apps/customercare/views.py:191
 msgid "Message is too long"
 msgstr "消息太长了"
 
-#: apps/customercare/views.py:256
-#: apps/customercare/views.py:339
+#: apps/customercare/views.py:202 apps/customercare/views.py:285
 msgid "An error occured: {message}"
 msgstr "发生错误：{message}"
 
-#: apps/customercare/views.py:322
-#: apps/customercare/views.py:327
+#: apps/customercare/views.py:268 apps/customercare/views.py:273
 msgid "Invalid ID."
 msgstr "无效 ID。"
 
-#: apps/customercare/views.py:331
+#: apps/customercare/views.py:277
 msgid "Tweets that are replies or have replies must not be hidden."
 msgstr "作为回复或包含回复的推文不能被隐藏。"
 
-#: apps/customercare/templates/customercare/landing.html:5
-#: apps/customercare/templates/customercare/landing.html:15
+#: apps/customercare/templates/customercare/landing.html:5 apps/customercare/templates/customercare/landing.html:15
 msgid "Join our Army of Awesome"
 msgstr "加入小狐狸的了不起大军"
 
@@ -109,25 +116,28 @@ msgstr "刷新"
 msgid "Sign out"
 msgstr "注销"
 
-#: apps/customercare/templates/customercare/landing.html:64
-#: apps/customercare/templates/customercare/twitter_modal.html:15
-#: apps/users/templates/users/mobile/login.html:7
-#: apps/users/templates/users/mobile/includes/macros.html:19
-#: templates/mobile/base-new.html:72
+#: apps/customercare/templates/customercare/landing.html:64 apps/customercare/templates/customercare/twitter_modal.html:15 apps/users/templates/users/mobile/login.html:7
+#: apps/users/templates/users/mobile/includes/macros.html:19 templates/mobile/base-new.html:72
 msgid "Sign in"
 msgstr "登录"
 
 #: apps/customercare/templates/customercare/landing.html:74
-msgid "We couldn't find any matching tweets for %(language)s at this time. Please check again later, choose a different tweet type from the menu above, or view tweets for other languages by using the language selector at the bottom of the page."
+msgid ""
+"We couldn't find any matching tweets for %(language)s at this time. Please check again later, choose a different tweet type from the menu above, or view tweets for other languages by using the "
+"language selector at the bottom of the page."
 msgstr "最近 %(language)s 中没有推文。请以后再来看看，或者使用页面下方的语言切换工具去看看其他语言的推文。"
 
-#: apps/customercare/templates/customercare/landing.html:94
-msgid "Top Contributors This Week"
+#: apps/customercare/templates/customercare/landing.html:95
+#, fuzzy
+msgid "Top Contributors Last Week"
 msgstr "本周顶尖贡献者"
 
-#: apps/customercare/templates/customercare/reply_modal.html:2
-#: apps/customercare/templates/customercare/tweets.html:19
-#: apps/kbforums/templates/kbforums/includes/post.html:38
+#: apps/customercare/templates/customercare/landing.html:101
+#, fuzzy
+msgid "No recent contributions"
+msgstr "文章贡献者"
+
+#: apps/customercare/templates/customercare/reply_modal.html:2 apps/customercare/templates/customercare/tweets.html:19 apps/kbforums/templates/kbforums/includes/post.html:38
 #: apps/messages/templates/messages/read.html:19
 msgid "Reply"
 msgstr "回复"
@@ -146,16 +156,12 @@ msgstr "自定义"
 msgid "Tweak it and make it your own. Personalized messages go a long way in helping others."
 msgstr "修改成您喜欢的样式。这样的信息在帮助人的时候非常有用。"
 
-#: apps/customercare/templates/customercare/reply_modal.html:55
-#: apps/messages/views.py:88
+#: apps/customercare/templates/customercare/reply_modal.html:55 apps/messages/views.py:88
 msgid "Your message was sent!"
 msgstr "您的消息已发送！"
 
-#: apps/customercare/templates/customercare/reply_modal.html:57
-#: apps/wiki/templates/wiki/includes/document_macros.html:220
-#: apps/wiki/templates/wiki/includes/flag_form.html:28
-#: apps/wiki/templates/wiki/includes/ready_for_l10n_modal.html:11
-#: apps/wiki/templates/wiki/includes/unhelpful_survey.html:18
+#: apps/customercare/templates/customercare/reply_modal.html:57 apps/wiki/templates/wiki/includes/document_macros.html:220 apps/wiki/templates/wiki/includes/flag_form.html:28
+#: apps/wiki/templates/wiki/includes/ready_for_l10n_modal.html:11 apps/wiki/templates/wiki/includes/unhelpful_survey.html:18
 msgid "Submit"
 msgstr "提交"
 
@@ -213,16 +219,16 @@ msgid "Click to register."
 msgstr "点击注册"
 
 #: apps/customercare/templates/customercare/includes/aoa_macros.html:11
-msgid "Overall"
-msgstr "全部"
+msgid "Last Week"
+msgstr "上周"
 
 #: apps/customercare/templates/customercare/includes/aoa_macros.html:12
 msgid "Yesterday"
 msgstr "昨天"
 
 #: apps/customercare/templates/customercare/includes/aoa_macros.html:13
-msgid "Last Week"
-msgstr "上周"
+msgid "Overall"
+msgstr "全部"
 
 #: apps/dashboards/__init__.py:10
 msgid "Last 7 days"
@@ -244,245 +250,231 @@ msgstr "全部时间"
 msgid "Parameters which will be passed to the dashboard. The dashboard determines the meaning and format of these."
 msgstr "将被传送到状态面板的参数。状态面板决定着这些参数的意义和格式。"
 
-#: apps/dashboards/readouts.py:64
+#: apps/dashboards/readouts.py:65
 msgid "Review Needed"
 msgstr "需要审核"
 
-#: apps/dashboards/readouts.py:68
+#: apps/dashboards/readouts.py:69
 msgid "Update Needed"
 msgstr "需要更新"
 
-#: apps/dashboards/readouts.py:70
+#: apps/dashboards/readouts.py:71
 msgid "Immediate Update Needed"
 msgstr "需要立即更新"
 
-#: apps/dashboards/readouts.py:128
+#: apps/dashboards/readouts.py:135
 msgid "Translation Needed"
 msgstr "需要翻译"
 
-#: apps/dashboards/readouts.py:224
+#: apps/dashboards/readouts.py:244
 msgid "Most-Visited Articles"
 msgstr "浏览最多的文章"
 
-#: apps/dashboards/readouts.py:228
+#: apps/dashboards/readouts.py:248
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "这些是访问量排名前20的文章，占了知识库文章总访问量的50%以上。"
 
-#: apps/dashboards/readouts.py:232
-#: apps/dashboards/readouts.py:456
-#: apps/wiki/config.py:171
+#: apps/dashboards/readouts.py:252 apps/dashboards/readouts.py:503 apps/wiki/config.py:175
 msgid "Templates"
 msgstr "模板"
 
-#: apps/dashboards/readouts.py:236
+#: apps/dashboards/readouts.py:256
 msgid "Templates are a way of reusing pieces of content across KB articles. You can create and update a set of instructions in one place, and then refer to it in other pages."
 msgstr "模板是一种让您能在不同的知识库文章中重复使用同一内容片段的方式。您可以在一个地方创建和更新一组操作步骤，然后在其他页面中引用。"
 
-#: apps/dashboards/readouts.py:241
-#: apps/dashboards/readouts.py:508
+#: apps/dashboards/readouts.py:261 apps/dashboards/readouts.py:566
 msgid "Navigation Articles"
 msgstr "导航文章"
 
-#: apps/dashboards/readouts.py:245
+#: apps/dashboards/readouts.py:265
 msgid "How many of the approved navigation articles which allow translations have an approved translation into this language"
 msgstr "在已通过审核并可被翻译的英文导航文章中，有多少已经被翻译成简体中文并被审核通过"
 
-#: apps/dashboards/readouts.py:249
+#: apps/dashboards/readouts.py:269
 msgid "All Knowledge Base Articles"
 msgstr "所有的知识库文章"
 
-#: apps/dashboards/readouts.py:252
+#: apps/dashboards/readouts.py:272
 msgid "This is the number of all Knowledge Base articles that are ready to be localized."
 msgstr "这是已准备好进行本地化的所有知识库文章的数量。"
 
-#: apps/dashboards/readouts.py:267
+#: apps/dashboards/readouts.py:287
 msgid "Visits in last 30 days"
 msgstr "最近30天的访问量"
 
-#: apps/dashboards/readouts.py:268
-#: apps/wiki/templates/wiki/includes/revision_list.html:24
+#: apps/dashboards/readouts.py:288 apps/wiki/templates/wiki/includes/revision_list.html:24
 msgid "Status"
 msgstr "状态"
 
-#: apps/dashboards/readouts.py:269
-#: apps/dashboards/readouts.py:857
+#: apps/dashboards/readouts.py:289 apps/dashboards/readouts.py:975
 msgid "Most Viewed"
 msgstr "最受欢迎"
 
-#: apps/dashboards/readouts.py:368
+#: apps/dashboards/readouts.py:394
 msgid "Most Visited"
 msgstr "最受欢迎"
 
-#: apps/dashboards/readouts.py:370
+#: apps/dashboards/readouts.py:396
 msgid "All knowledge base articles..."
 msgstr "所有的知识库文章..."
 
-#: apps/dashboards/readouts.py:372
+#: apps/dashboards/readouts.py:398
 msgid "Visits"
 msgstr "访问量"
 
-#: apps/dashboards/readouts.py:425
+#: apps/dashboards/readouts.py:463
 msgid "All translations..."
 msgstr "所有翻译..."
 
-#: apps/dashboards/readouts.py:458
+#: apps/dashboards/readouts.py:505
 msgid "All templates..."
 msgstr "所有模板..."
 
-#: apps/dashboards/readouts.py:510
+#: apps/dashboards/readouts.py:568
 msgid "All navigation articles..."
 msgstr "所有导航文章..."
 
-#: apps/dashboards/readouts.py:544
-#: apps/dashboards/readouts.py:545
+#: apps/dashboards/readouts.py:613 apps/dashboards/readouts.py:614
 msgid "Untranslated"
 msgstr "未翻译"
 
-#: apps/dashboards/readouts.py:546
+#: apps/dashboards/readouts.py:615
 msgid "All untranslated articles..."
 msgstr "所有未翻译的文章..."
 
-#: apps/dashboards/readouts.py:548
+#: apps/dashboards/readouts.py:617
 msgid "Updated"
 msgstr "最后更新于"
 
-#: apps/dashboards/readouts.py:594
-#: apps/dashboards/readouts.py:600
+#: apps/dashboards/readouts.py:675 apps/dashboards/readouts.py:681
 msgid "Immediate Updates Needed"
 msgstr "需要立即更新"
 
-#: apps/dashboards/readouts.py:595
-msgid "This indicates a major edit which changes the content of the article enough to hurt the value of the localization. Until it is updated, the localized page will warn users that it may be outdated. You should update these articles as soon as possible."
+#: apps/dashboards/readouts.py:676
+msgid ""
+"This indicates a major edit which changes the content of the article enough to hurt the value of the localization. Until it is updated, the localized page will warn users that it may be outdated. "
+"You should update these articles as soon as possible."
 msgstr "这表明文章的主体内容已经变更，可能会影响本地化的价值。在完成更新前，本地化的页面会警告用户，这篇文章可能已经过时。您应该尽快更新这些文章。"
 
-#: apps/dashboards/readouts.py:601
+#: apps/dashboards/readouts.py:682
 msgid "All translations needing immediate updates..."
 msgstr "所有需要立即更新的翻译..."
 
-#: apps/dashboards/readouts.py:603
+#: apps/dashboards/readouts.py:684
 msgid "Out of date since"
 msgstr "自从这个时间点后有新版本原文"
 
-#: apps/dashboards/readouts.py:684
-#: apps/dashboards/readouts.py:690
+#: apps/dashboards/readouts.py:776 apps/dashboards/readouts.py:782
 msgid "Updates Needed"
 msgstr "需要更新"
 
-#: apps/dashboards/readouts.py:685
-msgid "This signifies an edit that doesn't diminish the value of the localized article: for example, rewording a paragraph. Localizers are notified of this edit, but no warning is shown on the localized page. You should update these articles soon."
+#: apps/dashboards/readouts.py:777
+msgid ""
+"This signifies an edit that doesn't diminish the value of the localized article: for example, rewording a paragraph. Localizers are notified of this edit, but no warning is shown on the localized "
+"page. You should update these articles soon."
 msgstr "这表明它们有一些不太影响本地化文章的价值的编辑：例如，对某个段落的措辞重述。此次编辑会通知本地化人员，但不会在已本地化的页面上显示警告。您应该尽快更新这些文章。"
 
-#: apps/dashboards/readouts.py:691
+#: apps/dashboards/readouts.py:783
 msgid "All translations needing updates..."
 msgstr "所有需要更新的翻译..."
 
 #. L10n: Not just changes to translations but also unreviewed changes to
 #. docs in this locale that are not translations
-#: apps/dashboards/readouts.py:700
+#: apps/dashboards/readouts.py:792
 msgid "Unreviewed Changes"
 msgstr "未审核的更新"
 
-#: apps/dashboards/readouts.py:702
+#: apps/dashboards/readouts.py:794
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "未审核"
 
-#: apps/dashboards/readouts.py:703
+#: apps/dashboards/readouts.py:795
 msgid "All articles requiring review..."
 msgstr "所有需要审核的文章..."
 
-#: apps/dashboards/readouts.py:705
+#: apps/dashboards/readouts.py:797
 msgid "Changed"
 msgstr "已变更"
 
-#: apps/dashboards/readouts.py:747
+#: apps/dashboards/readouts.py:853
 msgid "Unhelpful Documents"
 msgstr "没有帮助的文章"
 
-#: apps/dashboards/readouts.py:749
+#: apps/dashboards/readouts.py:855
 msgctxt "document"
 msgid "Unhelpful"
 msgstr "没有帮助"
 
-#: apps/dashboards/readouts.py:750
+#: apps/dashboards/readouts.py:856
 msgid "All unhelpful articles..."
 msgstr "所有没有帮助的文章..."
 
-#: apps/dashboards/readouts.py:752
+#: apps/dashboards/readouts.py:858
 msgid "Total Votes"
 msgstr "总票数"
 
-#: apps/dashboards/readouts.py:753
+#: apps/dashboards/readouts.py:859
 msgid "Helpfulness"
 msgstr "有所帮助"
 
-#: apps/dashboards/readouts.py:794
+#: apps/dashboards/readouts.py:900
 msgid "Changes Not Ready For Localization"
 msgstr "更改尚未准备好本地化的翻译"
 
-#: apps/dashboards/readouts.py:795
+#: apps/dashboards/readouts.py:901
 msgid "Articles which have approved revisions newer than the latest ready-for-localization one"
 msgstr "已通过审核的比已准备好本地化更新的文章"
 
-#: apps/dashboards/readouts.py:798
+#: apps/dashboards/readouts.py:904
 msgid "All articles with changes not ready for localization..."
 msgstr "所有尚未准备好进行本地化的文章修订..."
 
-#: apps/dashboards/readouts.py:801
-#: apps/dashboards/templates/dashboards/includes/macros.html:142
-#: apps/wiki/templates/wiki/includes/revision_list.html:58
+#: apps/dashboards/readouts.py:907 apps/dashboards/templates/dashboards/includes/macros.html:142 apps/wiki/templates/wiki/includes/revision_list.html:58
 msgid "Approved"
 msgstr "已审核"
 
-#: apps/dashboards/readouts.py:851
+#: apps/dashboards/readouts.py:969
 msgid "Need Changes"
 msgstr "需要修改"
 
-#: apps/dashboards/readouts.py:852
+#: apps/dashboards/readouts.py:970
 msgid "Articles that require changes."
 msgstr "需要修改的文章。"
 
-#: apps/dashboards/readouts.py:854
+#: apps/dashboards/readouts.py:972
 msgid "All articles that require changes..."
 msgstr "所有需要修改的文章..."
 
-#: apps/dashboards/readouts.py:856
-#: apps/wiki/templates/wiki/includes/revision_list.html:30
+#: apps/dashboards/readouts.py:974 apps/wiki/templates/wiki/includes/revision_list.html:30
 msgid "Comment"
 msgstr "备注"
 
-#: apps/dashboards/views.py:56
-#: apps/dashboards/templates/dashboards/contributors.html:5
-#: templates/includes/common_macros.html:111
+#: apps/dashboards/views.py:66 apps/dashboards/templates/dashboards/contributors.html:5 templates/includes/common_macros.html:111
 msgid "Knowledge Base Dashboard"
 msgstr "知识库状态面板"
 
-#: apps/dashboards/views.py:64
-#: apps/dashboards/templates/dashboards/localization.html:5
+#: apps/dashboards/views.py:76 apps/dashboards/templates/dashboards/localization.html:5
 msgid "Localization Dashboard"
 msgstr "本地化状态面板"
 
-#: apps/dashboards/views.py:187
+#: apps/dashboards/views.py:216
 msgid "Document"
 msgstr "文章"
 
-#: apps/dashboards/templates/dashboards/contributors.html:18
-#: apps/dashboards/templates/dashboards/localization.html:18
+#: apps/dashboards/templates/dashboards/contributors.html:21 apps/dashboards/templates/dashboards/localization.html:61
 msgid "Show information for:"
 msgstr "显示相关信息："
 
-#: apps/dashboards/templates/dashboards/contributors.html:51
-#: apps/kpi/templates/kpi/dashboard.html:149
+#: apps/dashboards/templates/dashboards/contributors.html:54 apps/kpi/templates/kpi/dashboard.html:149
 msgid "Daily"
 msgstr "每天"
 
-#: apps/dashboards/templates/dashboards/contributors.html:52
-#: apps/kpi/templates/kpi/dashboard.html:150
+#: apps/dashboards/templates/dashboards/contributors.html:55 apps/kpi/templates/kpi/dashboard.html:150
 msgid "Weekly"
 msgstr "每周"
 
-#: apps/dashboards/templates/dashboards/contributors.html:53
-#: apps/kpi/templates/kpi/dashboard.html:151
+#: apps/dashboards/templates/dashboards/contributors.html:56 apps/kpi/templates/kpi/dashboard.html:151
 msgid "Monthly"
 msgstr "每月"
 
@@ -498,6 +490,28 @@ msgstr "群组状态面板"
 msgid "See full dashboard"
 msgstr "查看完整的状态面板"
 
+#: apps/dashboards/templates/dashboards/localization.html:27 apps/flagit/templates/flagit/includes/flagged_answer.html:25 apps/flagit/templates/flagit/includes/flagged_post.html:28
+#: apps/flagit/templates/flagit/includes/flagged_question.html:25 apps/groups/templates/groups/profile.html:13 apps/kbforums/templates/kbforums/confirm_post_delete.html:29
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:31 apps/messages/templates/messages/delete.html:28 apps/wiki/templates/wiki/confirm_document_delete.html:36
+#: apps/wiki/templates/wiki/confirm_revision_delete.html:34
+msgid "Delete"
+msgstr "删除"
+
+#: apps/dashboards/templates/dashboards/localization.html:40
+#, fuzzy
+msgid "Create announcement"
+msgstr "添加公告"
+
+#: apps/dashboards/templates/dashboards/localization.html:42
+#, fuzzy
+msgid "Created successfully"
+msgstr "添加 {users} 成功！"
+
+#: apps/dashboards/templates/dashboards/localization.html:50
+#, fuzzy
+msgid "Create"
+msgstr "建立于"
+
 #: apps/dashboards/templates/dashboards/questions.html:3
 msgid "Support Forum Dashboard"
 msgstr "技术支持论坛状态面板"
@@ -506,37 +520,26 @@ msgstr "技术支持论坛状态面板"
 msgid "Contributor Forums Dashboard"
 msgstr "贡献者论坛状态面板"
 
-#: apps/dashboards/templates/dashboards/review.html:14
-#: apps/kbforums/templates/kbforums/threads.html:31
+#: apps/dashboards/templates/dashboards/review.html:14 apps/kbforums/templates/kbforums/threads.html:31
 msgid "Type"
 msgstr "类别"
 
-#: apps/dashboards/templates/dashboards/review.html:15
-#: apps/gallery/forms.py:62
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:17
-#: apps/kbforums/templates/kbforums/discussions.html:28
-#: apps/kbforums/templates/kbforums/threads.html:32
-#: apps/wiki/templates/wiki/confirm_document_delete.html:22
+#: apps/dashboards/templates/dashboards/review.html:15 apps/gallery/forms.py:62 apps/kbforums/templates/kbforums/confirm_thread_delete.html:17 apps/kbforums/templates/kbforums/discussions.html:28
+#: apps/kbforums/templates/kbforums/threads.html:32 apps/wiki/templates/wiki/confirm_document_delete.html:22
 msgid "Title"
 msgstr "标题"
 
-#: apps/dashboards/templates/dashboards/review.html:16
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:17
-#: apps/kbforums/templates/kbforums/discussions.html:29
+#: apps/dashboards/templates/dashboards/review.html:16 apps/kbforums/templates/kbforums/confirm_post_delete.html:17 apps/kbforums/templates/kbforums/discussions.html:29
 #: apps/kbforums/templates/kbforums/threads.html:33
 msgid "Author"
 msgstr "作者"
 
-#: apps/dashboards/templates/dashboards/review.html:17
-#: apps/kbforums/templates/kbforums/discussions.html:30
-#: apps/kbforums/templates/kbforums/posts.html:45
+#: apps/dashboards/templates/dashboards/review.html:17 apps/kbforums/templates/kbforums/discussions.html:30 apps/kbforums/templates/kbforums/posts.html:45
 #: apps/kbforums/templates/kbforums/threads.html:34
 msgid "Replies"
 msgstr "回复"
 
-#: apps/dashboards/templates/dashboards/review.html:18
-#: apps/kbforums/templates/kbforums/discussions.html:31
-#: apps/kbforums/templates/kbforums/threads.html:35
+#: apps/dashboards/templates/dashboards/review.html:18 apps/kbforums/templates/kbforums/discussions.html:31 apps/kbforums/templates/kbforums/threads.html:35
 msgid "Last Post"
 msgstr "最后回帖"
 
@@ -549,8 +552,13 @@ msgid "Hello"
 msgstr "您好"
 
 #: apps/dashboards/templates/dashboards/welcome.html:9
-msgid "<p> We've got this nifty dashboard to help volunteers keep track of contributions such as questions answered, forum discussions and article edits. In order to enable it, just click <span class=\"button\">Join!</span> below. </p> <p> This will add you to our contributor group and subscribe you to announcements from the Firefox Help team. </p> <p> Joining isn't required in order to help other users or to get help for yourself. </p>"
-msgstr "<p> 我们有了这个漂亮的状态面板来帮助志愿者们保持像是回答的问题、论坛讨论以及文章编辑的追踪。要想启用它，只需点击下方的 <span class=\"button\">加入！</span>。</p> <p> 这将添加您到我们的贡献者群组，并且让您订阅来自 Firefox 帮助团队的公告。</p> <p> 对于帮助其他用户或者为自己获得帮助的人来说，加入不是必须的。 </p>"
+msgid ""
+"<p> We've got this nifty dashboard to help volunteers keep track of contributions such as questions answered, forum discussions and article edits. In order to enable it, just click <span class="
+"\"button\">Join!</span> below. </p> <p> This will add you to our contributor group and subscribe you to announcements from the Firefox Help team. </p> <p> Joining isn't required in order to help "
+"other users or to get help for yourself. </p>"
+msgstr ""
+"<p> 我们有了这个漂亮的状态面板来帮助志愿者们保持像是回答的问题、论坛讨论以及文章编辑的追踪。要想启用它，只需点击下方的 <span class=\"button\">加入！</span>。</p> <p> 这将添加您到我们的贡献者群组，并"
+"且让您订阅来自 Firefox 帮助团队的公告。</p> <p> 对于帮助其他用户或者为自己获得帮助的人来说，加入不是必须的。 </p>"
 
 #: apps/dashboards/templates/dashboards/welcome.html:28
 msgid "Join!"
@@ -564,16 +572,12 @@ msgstr "近期没有活动。"
 msgid "Add announcement"
 msgstr "添加公告"
 
-#: apps/dashboards/templates/dashboards/includes/announcement_list.html:10
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:22
-#: apps/flagit/templates/flagit/includes/flagged_post.html:25
+#: apps/dashboards/templates/dashboards/includes/announcement_list.html:10 apps/flagit/templates/flagit/includes/flagged_answer.html:22 apps/flagit/templates/flagit/includes/flagged_post.html:25
 #: apps/flagit/templates/flagit/includes/flagged_profile.html:15
 msgid "Edit"
 msgstr "编辑"
 
-#: apps/dashboards/templates/dashboards/includes/kb_readout.html:4
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:13
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:15
+#: apps/dashboards/templates/dashboards/includes/kb_readout.html:4 apps/wiki/templates/wiki/includes/sidebar_modules.html:13 apps/wiki/templates/wiki/includes/sidebar_modules.html:15
 #: apps/wiki/templates/wiki/includes/sidebar_modules.html:70
 msgid "Article"
 msgstr "文章"
@@ -611,11 +615,23 @@ msgstr "发电子邮件通知我，当修订..."
 msgid "Waiting for review"
 msgstr "正在等待审核"
 
-#: apps/dashboards/templates/dashboards/includes/macros.html:143
-#: apps/wiki/forms.py:291
-#: apps/wiki/templates/wiki/includes/revision_list.html:28
+#: apps/dashboards/templates/dashboards/includes/macros.html:143 apps/wiki/forms.py:291 apps/wiki/templates/wiki/includes/revision_list.html:28
 msgid "Ready for localization"
 msgstr "可进行本地化"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:152 apps/search/templates/search/results.html:58
+#, fuzzy
+msgid "All Products"
+msgstr "其他产品"
+
+#: apps/dashboards/templates/dashboards/includes/macros.html:155 apps/products/templates/products/documents.html:6 apps/products/templates/products/documents.html:10
+#: apps/products/templates/products/documents.html:14 apps/products/templates/products/product.html:6 apps/products/templates/products/product.html:9 apps/products/templates/products/product.html:16
+#: apps/products/templates/products/includes/product_macros.html:12 apps/products/templates/products/includes/product_macros.html:36 apps/products/templates/products/mobile/documents.html:8
+#: apps/products/templates/products/mobile/product.html:3 apps/products/templates/products/mobile/product.html:8 apps/products/templates/products/mobile/products.html:13
+#: apps/search/templates/search/results.html:64 apps/wiki/templates/wiki/document.html:12
+msgctxt "DB: products.Product.title"
+msgid "None"
+msgstr "无"
 
 #: apps/dashboards/templates/dashboards/includes/personal_tabs.html:5
 msgctxt "dashboard"
@@ -639,18 +655,15 @@ msgstr "编辑个人信息"
 msgid "Edit settings"
 msgstr "编辑设置"
 
-#: apps/flagit/models.py:23
-#: apps/wiki/templates/wiki/includes/flag_form.html:12
+#: apps/flagit/models.py:23 apps/wiki/templates/wiki/includes/flag_form.html:12
 msgid "Spam or other unrelated content"
 msgstr "垃圾讯息或其他无关内容"
 
-#: apps/flagit/models.py:24
-#: apps/wiki/templates/wiki/includes/flag_form.html:15
+#: apps/flagit/models.py:24 apps/wiki/templates/wiki/includes/flag_form.html:15
 msgid "Inappropriate language/dialog"
 msgstr "不适宜的语句/对话"
 
-#: apps/flagit/models.py:25
-#: apps/wiki/templates/wiki/includes/flag_form.html:19
+#: apps/flagit/models.py:25 apps/wiki/templates/wiki/includes/flag_form.html:19
 msgid "Misplaced bug report or support request"
 msgstr "发错地方的错误报告或支持请求"
 
@@ -658,8 +671,7 @@ msgstr "发错地方的错误报告或支持请求"
 msgid "Abusive content"
 msgstr "侮辱性内容"
 
-#: apps/flagit/models.py:27
-#: apps/wiki/templates/wiki/includes/flag_form.html:23
+#: apps/flagit/models.py:27 apps/wiki/templates/wiki/includes/flag_form.html:23
 msgid "Other (please specify)"
 msgstr "其他（请注明）"
 
@@ -683,8 +695,7 @@ msgstr "您已经报告了此内容。"
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr "您已经报告了此内容。管理员会尽快审核您的建议。"
 
-#: apps/flagit/templates/flagit/queue.html:3
-#: apps/flagit/templates/flagit/queue.html:8
+#: apps/flagit/templates/flagit/queue.html:3 apps/flagit/templates/flagit/queue.html:8
 msgid "Flagged Content Pending Moderation"
 msgstr "已报告待管理员审核的内容"
 
@@ -720,63 +731,32 @@ msgstr "标记无效。"
 msgid "There is no flagged content pending moderation."
 msgstr "目前没有已标记等待管理员审核的内容。"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:2
-#: apps/flagit/templates/flagit/includes/flagged_post.html:4
-#: apps/flagit/templates/flagit/includes/flagged_profile.html:2
-#: apps/flagit/templates/flagit/includes/flagged_question.html:4
-#: apps/kbforums/forms.py:28
-#: apps/kbforums/forms.py:50
-#: apps/kbforums/forms.py:76
-#: apps/wiki/forms.py:216
-#: apps/wiki/templates/wiki/review_translation.html:67
-#: apps/wiki/templates/wiki/includes/document_macros.html:159
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:2 apps/flagit/templates/flagit/includes/flagged_post.html:4 apps/flagit/templates/flagit/includes/flagged_profile.html:2
+#: apps/flagit/templates/flagit/includes/flagged_question.html:4 apps/kbforums/forms.py:28 apps/kbforums/forms.py:50 apps/kbforums/forms.py:76 apps/wiki/forms.py:216
+#: apps/wiki/templates/wiki/review_translation.html:67 apps/wiki/templates/wiki/includes/document_macros.html:159
 msgid "Content:"
 msgstr "内容："
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:4
-#: apps/flagit/templates/flagit/includes/flagged_post.html:6
-#: apps/flagit/templates/flagit/includes/flagged_question.html:6
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:4 apps/flagit/templates/flagit/includes/flagged_post.html:6 apps/flagit/templates/flagit/includes/flagged_question.html:6
 #: apps/wiki/templates/wiki/revision.html:25
 msgid "Created:"
 msgstr "建立于"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:9
-#: apps/flagit/templates/flagit/includes/flagged_post.html:11
-#: apps/flagit/templates/flagit/includes/flagged_question.html:11
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:9 apps/flagit/templates/flagit/includes/flagged_post.html:11 apps/flagit/templates/flagit/includes/flagged_question.html:11
 msgid "Updated:"
 msgstr "更新于"
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:14
-#: apps/flagit/templates/flagit/includes/flagged_post.html:16
-#: apps/flagit/templates/flagit/includes/flagged_profile.html:7
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:14 apps/flagit/templates/flagit/includes/flagged_post.html:16 apps/flagit/templates/flagit/includes/flagged_profile.html:7
 #: apps/flagit/templates/flagit/includes/flagged_question.html:16
 msgid "Flagged:"
 msgstr "已标记："
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:18
-#: apps/flagit/templates/flagit/includes/flagged_post.html:20
-#: apps/flagit/templates/flagit/includes/flagged_profile.html:11
+#: apps/flagit/templates/flagit/includes/flagged_answer.html:18 apps/flagit/templates/flagit/includes/flagged_post.html:20 apps/flagit/templates/flagit/includes/flagged_profile.html:11
 #: apps/flagit/templates/flagit/includes/flagged_question.html:20
 msgid "Take Action:"
 msgstr "进行操作："
 
-#: apps/flagit/templates/flagit/includes/flagged_answer.html:25
-#: apps/flagit/templates/flagit/includes/flagged_post.html:28
-#: apps/flagit/templates/flagit/includes/flagged_question.html:25
-#: apps/groups/templates/groups/profile.html:13
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:29
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:31
-#: apps/messages/templates/messages/delete.html:28
-#: apps/wiki/templates/wiki/confirm_document_delete.html:36
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:34
-msgid "Delete"
-msgstr "删除"
-
-#: apps/flagit/templates/flagit/includes/flagged_post.html:2
-#: apps/flagit/templates/flagit/includes/flagged_question.html:2
-#: apps/kbforums/forms.py:44
-#: apps/kbforums/forms.py:62
-#: apps/wiki/forms.py:81
+#: apps/flagit/templates/flagit/includes/flagged_post.html:2 apps/flagit/templates/flagit/includes/flagged_question.html:2 apps/kbforums/forms.py:44 apps/kbforums/forms.py:62 apps/wiki/forms.py:81
 #: apps/wiki/templates/wiki/translate.html:53
 msgid "Title:"
 msgstr "标题："
@@ -785,19 +765,15 @@ msgstr "标题："
 msgid "%(date)s by <a href=\"%(url)s\">%(user)s</a>"
 msgstr "%(date)s 由 <a href=\"%(url)s\">%(user)s</a>"
 
-#: apps/gallery/forms.py:13
-#: apps/kbforums/forms.py:9
-#: apps/wiki/forms.py:20
+#: apps/gallery/forms.py:13 apps/kbforums/forms.py:9 apps/wiki/forms.py:20
 msgid "Please provide a title."
 msgstr "请输入一个标题。"
 
-#: apps/gallery/forms.py:14
-#: apps/wiki/forms.py:21
+#: apps/gallery/forms.py:14 apps/wiki/forms.py:21
 msgid "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "这个标题（%(show_value)s个字符）太短。它至少要有%(limit_value)s个字符。"
 
-#: apps/gallery/forms.py:17
-#: apps/kbforums/forms.py:13
+#: apps/gallery/forms.py:17 apps/kbforums/forms.py:13
 msgid "Please keep the length of your title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "请将标题限制于%(limit_value)s个字符之内。目前共%(show_value)s个字符。"
 
@@ -809,13 +785,11 @@ msgstr "请提供叙述说明。"
 msgid "Please keep the length of your description to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "请将叙述说明限制于%(limit_value)s个字符之内。目前共%(show_value)s个字符。"
 
-#: apps/gallery/forms.py:24
-#: apps/upload/forms.py:7
+#: apps/gallery/forms.py:24 apps/upload/forms.py:7
 msgid "You have not selected an image to upload."
 msgstr "您尚未选择一个图像以供上传。"
 
-#: apps/gallery/forms.py:25
-#: apps/upload/forms.py:8
+#: apps/gallery/forms.py:25 apps/upload/forms.py:8
 msgid "Please keep the length of your image filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "请将图像文件名限制于%(max)s个字符之内。目前为%(length)s个字符。"
 
@@ -847,13 +821,11 @@ msgstr "在 Wiki 语法当中引入[[%(type)s:title]]"
 msgid "Provide a brief description of this media."
 msgstr "请为这个媒体文件提供简短的描述。"
 
-#: apps/gallery/forms.py:48
-#: apps/upload/templates/upload/attachments.html:56
+#: apps/gallery/forms.py:48 apps/upload/templates/upload/attachments.html:56
 msgid "Upload"
 msgstr "上传"
 
-#: apps/gallery/forms.py:49
-#: apps/gallery/forms.py:92
+#: apps/gallery/forms.py:49 apps/gallery/forms.py:92
 msgid "Image"
 msgstr "图像"
 
@@ -861,8 +833,7 @@ msgstr "图像"
 msgid "Video"
 msgstr "视频"
 
-#: apps/gallery/forms.py:56
-#: apps/wiki/templates/wiki/confirm_document_delete.html:24
+#: apps/gallery/forms.py:56 apps/wiki/templates/wiki/confirm_document_delete.html:24
 msgid "Locale"
 msgstr "语系"
 
@@ -946,53 +917,29 @@ msgstr "您将要永久地删除此视频。<strong>此操作无法撤销！</st
 msgid "Delete video | {t} | Media Gallery"
 msgstr "删除视频 | {t} | 媒体文件库"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:14
-#: apps/gallery/templates/gallery/edit_media.html:13
-#: apps/gallery/templates/gallery/gallery.html:3
-#: apps/gallery/templates/gallery/gallery.html:6
-#: apps/gallery/templates/gallery/gallery.html:12
-#: apps/gallery/templates/gallery/media.html:9
-#: apps/gallery/templates/gallery/search.html:6
-#: apps/gallery/templates/gallery/search.html:10
-#: templates/includes/common_macros.html:117
+#: apps/gallery/templates/gallery/confirm_media_delete.html:14 apps/gallery/templates/gallery/edit_media.html:13 apps/gallery/templates/gallery/gallery.html:3
+#: apps/gallery/templates/gallery/gallery.html:6 apps/gallery/templates/gallery/gallery.html:12 apps/gallery/templates/gallery/media.html:9 apps/gallery/templates/gallery/search.html:6
+#: apps/gallery/templates/gallery/search.html:10 templates/includes/common_macros.html:117
 msgid "Media Gallery"
 msgstr "媒体文件库"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:53
-#: apps/gallery/templates/gallery/media.html:61
+#: apps/gallery/templates/gallery/confirm_media_delete.html:53 apps/gallery/templates/gallery/media.html:61
 msgid "by {user}"
 msgstr "由 {user}"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:54
-#: apps/gallery/templates/gallery/media.html:62
+#: apps/gallery/templates/gallery/confirm_media_delete.html:54 apps/gallery/templates/gallery/media.html:62
 msgid "Uploaded {date}"
 msgstr "上传于 {date}"
 
-#: apps/gallery/templates/gallery/confirm_media_delete.html:86
-#: apps/gallery/templates/gallery/edit_media.html:28
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:31
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:58
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:132
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:138
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:144
-#: apps/groups/templates/groups/confirm_avatar_delete.html:23
-#: apps/groups/templates/groups/confirm_remove_leader.html:12
-#: apps/groups/templates/groups/confirm_remove_member.html:12
-#: apps/groups/templates/groups/edit_avatar.html:15
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:30
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:32
-#: apps/kbforums/templates/kbforums/edit_post.html:36
-#: apps/kbforums/templates/kbforums/edit_thread.html:28
-#: apps/kbforums/templates/kbforums/new_thread.html:41
-#: apps/messages/templates/messages/delete.html:29
-#: apps/messages/templates/messages/new.html:21
-#: apps/users/templates/users/confirm_avatar_delete.html:23
-#: apps/wiki/templates/wiki/confirm_remove_contributor.html:16
-#: apps/wiki/templates/wiki/confirm_remove_from_locale.html:15
-#: apps/wiki/templates/wiki/includes/document_macros.html:221
-#: apps/wiki/templates/wiki/includes/ready_for_l10n_modal.html:12
-#: apps/wiki/templates/wiki/includes/review_form.html:68
-#: apps/wiki/templates/wiki/includes/review_form.html:90
+#: apps/gallery/templates/gallery/confirm_media_delete.html:86 apps/gallery/templates/gallery/edit_media.html:28 apps/gallery/templates/gallery/includes/upload_media_form.html:31
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:58 apps/gallery/templates/gallery/includes/upload_media_form.html:132
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:138 apps/gallery/templates/gallery/includes/upload_media_form.html:144 apps/groups/templates/groups/confirm_avatar_delete.html:23
+#: apps/groups/templates/groups/confirm_remove_leader.html:12 apps/groups/templates/groups/confirm_remove_member.html:12 apps/groups/templates/groups/edit_avatar.html:15
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:30 apps/kbforums/templates/kbforums/confirm_thread_delete.html:32 apps/kbforums/templates/kbforums/edit_post.html:36
+#: apps/kbforums/templates/kbforums/edit_thread.html:28 apps/kbforums/templates/kbforums/new_thread.html:41 apps/messages/templates/messages/delete.html:29
+#: apps/messages/templates/messages/new.html:21 apps/users/templates/users/confirm_avatar_delete.html:23 apps/wiki/templates/wiki/confirm_remove_contributor.html:16
+#: apps/wiki/templates/wiki/confirm_remove_from_locale.html:15 apps/wiki/templates/wiki/includes/document_macros.html:221 apps/wiki/templates/wiki/includes/ready_for_l10n_modal.html:12
+#: apps/wiki/templates/wiki/includes/review_form.html:68 apps/wiki/templates/wiki/includes/review_form.html:90
 msgid "Cancel"
 msgstr "取消"
 
@@ -1020,44 +967,31 @@ msgstr "保存视频"
 msgid "Edit video | {t} | Media Gallery"
 msgstr "编辑视频 | {t} | 媒体文件库"
 
-#: apps/gallery/templates/gallery/gallery.html:10
-#: apps/gallery/templates/gallery/media.html:22
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:98
+#: apps/gallery/templates/gallery/gallery.html:10 apps/gallery/templates/gallery/media.html:22 apps/gallery/templates/gallery/includes/upload_media_form.html:98
 msgid "Upload a New Media File"
 msgstr "上传新的媒体文件"
 
-#: apps/gallery/templates/gallery/gallery.html:20
-#: apps/gallery/templates/gallery/search.html:19
+#: apps/gallery/templates/gallery/gallery.html:20 apps/gallery/templates/gallery/search.html:19
 msgid "Search Gallery"
 msgstr "搜索媒体文件库"
 
-#: apps/gallery/templates/gallery/gallery.html:27
-#: apps/gallery/templates/gallery/search.html:26
+#: apps/gallery/templates/gallery/gallery.html:27 apps/gallery/templates/gallery/search.html:26
 msgid "Show media for:"
 msgstr "显示媒体库："
 
-#: apps/gallery/templates/gallery/gallery.html:34
-#: apps/gallery/templates/gallery/search.html:33
-#: templates/includes/lang_form.html:11
+#: apps/gallery/templates/gallery/gallery.html:34 apps/gallery/templates/gallery/search.html:33 templates/includes/lang_form.html:11
 msgid "Go"
 msgstr "前往"
 
-#: apps/gallery/templates/gallery/gallery.html:40
-#: apps/gallery/templates/gallery/search.html:38
+#: apps/gallery/templates/gallery/gallery.html:40 apps/gallery/templates/gallery/search.html:38
 msgid "Show:"
 msgstr "显示："
 
-#: apps/gallery/templates/gallery/gallery.html:42
-#: apps/gallery/templates/gallery/gallery.html:46
-#: apps/gallery/templates/gallery/search.html:40
-#: apps/gallery/templates/gallery/search.html:44
+#: apps/gallery/templates/gallery/gallery.html:42 apps/gallery/templates/gallery/gallery.html:46 apps/gallery/templates/gallery/search.html:40 apps/gallery/templates/gallery/search.html:44
 msgid "Images"
 msgstr "图像"
 
-#: apps/gallery/templates/gallery/gallery.html:43
-#: apps/gallery/templates/gallery/gallery.html:47
-#: apps/gallery/templates/gallery/search.html:41
-#: apps/gallery/templates/gallery/search.html:45
+#: apps/gallery/templates/gallery/gallery.html:43 apps/gallery/templates/gallery/gallery.html:47 apps/gallery/templates/gallery/search.html:41 apps/gallery/templates/gallery/search.html:45
 #: templates/global/menu_links.html:9
 msgid "Videos"
 msgstr "视频"
@@ -1066,11 +1000,8 @@ msgstr "视频"
 msgid "{title} | Media Gallery"
 msgstr "{title} | 媒体文件库"
 
-#: apps/gallery/templates/gallery/media.html:13
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:47
-#: apps/upload/templates/upload/attachments.html:12
-#: apps/upload/templates/upload/attachments.html:17
-#: apps/upload/templates/upload/attachments.html:19
+#: apps/gallery/templates/gallery/media.html:13 apps/gallery/templates/gallery/includes/upload_media_form.html:47 apps/upload/templates/upload/attachments.html:12
+#: apps/upload/templates/upload/attachments.html:17 apps/upload/templates/upload/attachments.html:19
 msgid "Delete this image"
 msgstr "删除此图像"
 
@@ -1090,15 +1021,9 @@ msgstr "编辑此视频"
 msgid "Media Gallery Search"
 msgstr "搜索媒体文件库"
 
-#: apps/gallery/templates/gallery/search.html:7
-#: apps/search/templates/search/base.html:4
-#: apps/search/templates/search/basic-form.html:22
-#: apps/search/templates/search/basic-form.html:38
-#: apps/search/templates/search/basic-form.html:51
-#: apps/search/templates/search/mobile/down.html:3
-#: apps/search/templates/search/mobile/results-new.html:3
-#: apps/search/templates/search/mobile/results-old.html:3
-#: templates/includes/common_macros.html:18
+#: apps/gallery/templates/gallery/search.html:7 apps/search/templates/search/base.html:4 apps/search/templates/search/basic-form.html:22 apps/search/templates/search/basic-form.html:38
+#: apps/search/templates/search/basic-form.html:51 apps/search/templates/search/mobile/down.html:3 apps/search/templates/search/mobile/results-new.html:3
+#: apps/search/templates/search/mobile/results-old.html:3 templates/includes/common_macros.html:18
 msgid "Search"
 msgstr "搜索"
 
@@ -1110,11 +1035,8 @@ msgstr "找不到媒体文件。"
 msgid "Upload file"
 msgstr "上传文件"
 
-#: apps/gallery/templates/gallery/includes/upload_media_form.html:52
-#: apps/kbforums/templates/kbforums/edit_post.html:34
-#: apps/kbforums/templates/kbforums/new_thread.html:39
-#: apps/messages/templates/messages/new.html:17
-#: apps/messages/templates/messages/read.html:20
+#: apps/gallery/templates/gallery/includes/upload_media_form.html:52 apps/kbforums/templates/kbforums/edit_post.html:34 apps/kbforums/templates/kbforums/new_thread.html:39
+#: apps/messages/templates/messages/new.html:17 apps/messages/templates/messages/read.html:20
 msgid "Preview"
 msgstr "预览"
 
@@ -1146,14 +1068,11 @@ msgstr "进度 (ogv)"
 msgid "Progress (webm)"
 msgstr "进度 (webm)"
 
-#: apps/groups/forms.py:27
-#: apps/search/forms.py:111
-#: apps/wiki/forms.py:308
+#: apps/groups/forms.py:27 apps/search/forms.py:111 apps/wiki/forms.py:308
 msgid "username"
 msgstr "用户名"
 
-#: apps/groups/models.py:22
-#: apps/users/models.py:44
+#: apps/groups/models.py:22 apps/users/models.py:44
 msgid "Avatar"
 msgstr "头像"
 
@@ -1201,15 +1120,12 @@ msgstr "您确定要删除 {group} 的群组头像吗？"
 msgid "You are about to permanently delete the avatar. <strong>This cannot be undone!</strong> You can always upload another avatar to replace the current one."
 msgstr "您即将永久删除该头像。<strong>此操作无法撤销！</strong>您依然可以随时上传一个新的头像来替代当前的头像。"
 
-#: apps/groups/templates/groups/confirm_avatar_delete.html:22
-#: apps/groups/templates/groups/profile.html:13
-#: apps/users/templates/users/confirm_avatar_delete.html:3
+#: apps/groups/templates/groups/confirm_avatar_delete.html:22 apps/groups/templates/groups/profile.html:13 apps/users/templates/users/confirm_avatar_delete.html:3
 #: apps/users/templates/users/confirm_avatar_delete.html:24
 msgid "Delete avatar"
 msgstr "删除头像"
 
-#: apps/groups/templates/groups/confirm_remove_leader.html:3
-#: apps/groups/templates/groups/confirm_remove_leader.html:11
+#: apps/groups/templates/groups/confirm_remove_leader.html:3 apps/groups/templates/groups/confirm_remove_leader.html:11
 msgid "Remove leader"
 msgstr "移除组长"
 
@@ -1217,8 +1133,7 @@ msgstr "移除组长"
 msgid "Are you sure you want to remove {user} from {group} leaders?"
 msgstr "您确定要移除 {group} 群组的 {user} 组长吗？"
 
-#: apps/groups/templates/groups/confirm_remove_member.html:3
-#: apps/groups/templates/groups/confirm_remove_member.html:11
+#: apps/groups/templates/groups/confirm_remove_member.html:3 apps/groups/templates/groups/confirm_remove_member.html:11
 msgid "Remove member"
 msgstr "移除成员"
 
@@ -1242,8 +1157,7 @@ msgstr "保存"
 msgid "Change {group} group avatar"
 msgstr "更改 {group} 群组头像"
 
-#: apps/groups/templates/groups/edit_avatar.html:14
-#: apps/users/templates/users/edit_avatar.html:18
+#: apps/groups/templates/groups/edit_avatar.html:14 apps/users/templates/users/edit_avatar.html:18
 msgctxt "avatar"
 msgid "Upload"
 msgstr "上传"
@@ -1264,9 +1178,7 @@ msgstr "{group} | 群组"
 msgid "Change avatar"
 msgstr "更改头像"
 
-#: apps/groups/templates/groups/profile.html:11
-#: apps/users/templates/users/edit_profile.html:32
-#: apps/users/templates/users/edit_profile.html:37
+#: apps/groups/templates/groups/profile.html:11 apps/users/templates/users/edit_profile.html:32 apps/users/templates/users/edit_profile.html:37
 msgid "Change"
 msgstr "更改"
 
@@ -1290,8 +1202,7 @@ msgstr "群组组长"
 msgid "Remove user from leaders"
 msgstr "从组长中移除用户"
 
-#: apps/groups/templates/groups/profile.html:52
-#: apps/wiki/templates/wiki/locale_details.html:23
+#: apps/groups/templates/groups/profile.html:52 apps/wiki/templates/wiki/locale_details.html:23
 msgid "Add Leader"
 msgstr "添加组长"
 
@@ -1319,38 +1230,31 @@ msgstr "技术支持论坛 Karma 状态面板"
 msgid "Period Total"
 msgstr "期间总共"
 
-#: apps/karma/templates/karma/dashboards/questions.html:30
-#: apps/search/templates/search/mobile/results-new.html:17
+#: apps/karma/templates/karma/dashboards/questions.html:30 apps/search/templates/search/mobile/results-new.html:17
 msgid "Questions"
 msgstr "问题"
 
-#: apps/karma/templates/karma/dashboards/questions.html:37
-#: apps/karma/templates/karma/dashboards/questions.html:98
+#: apps/karma/templates/karma/dashboards/questions.html:37 apps/karma/templates/karma/dashboards/questions.html:98
 msgid "First Answers"
 msgstr "首个回答"
 
-#: apps/karma/templates/karma/dashboards/questions.html:46
-#: apps/karma/templates/karma/dashboards/questions.html:101
+#: apps/karma/templates/karma/dashboards/questions.html:46 apps/karma/templates/karma/dashboards/questions.html:101
 msgid "Solutions"
 msgstr "解决方法"
 
-#: apps/karma/templates/karma/dashboards/questions.html:55
-#: apps/karma/templates/karma/dashboards/questions.html:95
+#: apps/karma/templates/karma/dashboards/questions.html:55 apps/karma/templates/karma/dashboards/questions.html:95
 msgid "Answers"
 msgstr "回答"
 
-#: apps/karma/templates/karma/dashboards/questions.html:62
-#: apps/karma/templates/karma/dashboards/questions.html:104
+#: apps/karma/templates/karma/dashboards/questions.html:62 apps/karma/templates/karma/dashboards/questions.html:104
 msgid "Helpful Votes"
 msgstr "投有所帮助的投票"
 
-#: apps/karma/templates/karma/dashboards/questions.html:71
-#: apps/karma/templates/karma/dashboards/questions.html:107
+#: apps/karma/templates/karma/dashboards/questions.html:71 apps/karma/templates/karma/dashboards/questions.html:107
 msgid "Unhelpful Votes"
 msgstr "投没有帮助的投票"
 
-#: apps/karma/templates/karma/dashboards/questions.html:89
-#: apps/users/templates/users/mobile/includes/macros.html:10
+#: apps/karma/templates/karma/dashboards/questions.html:89 apps/users/templates/users/mobile/includes/macros.html:10
 msgid "Username"
 msgstr "用户名"
 
@@ -1427,13 +1331,8 @@ msgstr "请将消息长度限制于%(limit_value)s个字符之内。目前共有
 msgid "Delete Post | {t} | {d} Discussion | Knowledge Base"
 msgstr "删除帖子 | {t} | {d} 讨论 | 知识库"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:7
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:7
-#: apps/kbforums/templates/kbforums/edit_post.html:9
-#: apps/kbforums/templates/kbforums/edit_thread.html:8
-#: apps/kbforums/templates/kbforums/new_thread.html:9
-#: apps/kbforums/templates/kbforums/posts.html:9
-#: apps/kbforums/templates/kbforums/threads.html:7
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:7 apps/kbforums/templates/kbforums/confirm_thread_delete.html:7 apps/kbforums/templates/kbforums/edit_post.html:9
+#: apps/kbforums/templates/kbforums/edit_thread.html:8 apps/kbforums/templates/kbforums/new_thread.html:9 apps/kbforums/templates/kbforums/posts.html:9 apps/kbforums/templates/kbforums/threads.html:7
 msgid "Discuss"
 msgstr "讨论"
 
@@ -1445,16 +1344,9 @@ msgstr "删除帖子"
 msgid "Are you sure you want to delete this post?"
 msgstr "您确定要删除这篇帖子吗？"
 
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:19
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:21
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:24
+#: apps/kbforums/templates/kbforums/confirm_post_delete.html:19 apps/kbforums/templates/kbforums/confirm_thread_delete.html:21 apps/wiki/templates/wiki/confirm_revision_delete.html:24
 msgid "Date"
 msgstr "日期"
-
-#: apps/kbforums/templates/kbforums/confirm_post_delete.html:21
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:26
-msgid "Content"
-msgstr "内容"
 
 #: apps/kbforums/templates/kbforums/confirm_post_delete.html:27
 msgid "You are about to permanently delete this post. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
@@ -1473,8 +1365,7 @@ msgstr "删除主题"
 msgid "Are you sure you want to delete this thread?"
 msgstr "您确定要删除此主题吗？"
 
-#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:19
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:22
+#: apps/kbforums/templates/kbforums/confirm_thread_delete.html:19 apps/wiki/templates/wiki/confirm_revision_delete.html:22
 msgid "Creator"
 msgstr "创建者"
 
@@ -1519,13 +1410,11 @@ msgstr "您并未关注此主题"
 msgid "<a href=\"%(thread_url)s\">%(thread_title)s</a><br> in <a href=\"%(document_discussion_url)s\">%(document)s</a>"
 msgstr "<a href=\"%(thread_url)s\">%(thread_title)s</a><br> 中的 <a href=\"%(document_discussion_url)s\">%(document)s</a>"
 
-#: apps/kbforums/templates/kbforums/discussions.html:68
-#: apps/kbforums/templates/kbforums/threads.html:56
+#: apps/kbforums/templates/kbforums/discussions.html:68 apps/kbforums/templates/kbforums/threads.html:56
 msgid "by <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 msgstr "由 <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 
-#: apps/kbforums/templates/kbforums/discussions.html:75
-#: apps/kbforums/templates/kbforums/threads.html:63
+#: apps/kbforums/templates/kbforums/discussions.html:75 apps/kbforums/templates/kbforums/threads.html:63
 msgid "There are no threads. Maybe you should create some!"
 msgstr "这里没有主题。也许您应该创建一些！"
 
@@ -1534,8 +1423,7 @@ msgstr "这里没有主题。也许您应该创建一些！"
 msgid "Edit a post | {t} | {d} Discussion | Knowledge Base"
 msgstr "编辑帖子 | {t} | {d} 讨论 | 知识库"
 
-#: apps/kbforums/templates/kbforums/edit_post.html:11
-#: apps/kbforums/templates/kbforums/edit_post.html:16
+#: apps/kbforums/templates/kbforums/edit_post.html:11 apps/kbforums/templates/kbforums/edit_post.html:16
 msgid "Edit a post"
 msgstr "编辑帖子"
 
@@ -1565,8 +1453,7 @@ msgstr "更新主题"
 msgid "Create a new thread | {d} | Knowledge Base"
 msgstr "建立新主题 | {d} | 知识库"
 
-#: apps/kbforums/templates/kbforums/new_thread.html:10
-#: apps/kbforums/templates/kbforums/new_thread.html:15
+#: apps/kbforums/templates/kbforums/new_thread.html:10 apps/kbforums/templates/kbforums/new_thread.html:15
 msgid "Create a new thread"
 msgstr "建立新讨论"
 
@@ -1607,14 +1494,11 @@ msgstr "置顶此主题"
 msgid "Last reply by"
 msgstr "最后回复者为"
 
-#: apps/kbforums/templates/kbforums/posts.html:47
-#: apps/search/__init__.py:32
+#: apps/kbforums/templates/kbforums/posts.html:47 apps/search/__init__.py:32
 msgid "Sticky"
 msgstr "置顶"
 
-#: apps/kbforums/templates/kbforums/posts.html:48
-#: apps/search/__init__.py:33
-#: apps/search/forms.py:140
+#: apps/kbforums/templates/kbforums/posts.html:48 apps/search/__init__.py:33 apps/search/forms.py:140
 msgid "Locked"
 msgstr "已锁定"
 
@@ -1686,7 +1570,8 @@ msgid "This forum is a discussion about improving the \"%(title)s\" article. If 
 msgstr "这个讨论区主要讨论有关如何改善“%(title)s”这篇文章。如果您想要参与，请 <a href=\"%(register_url)s\">注册</a>。"
 
 #: apps/kbforums/templates/kbforums/includes/macros.html:19
-msgid "This forum is a discussion about improving the localization of the \"%(title)s\" article. If you want to improve the article content, go to the <a href=\"%(url)s\">English article discussion</a>."
+msgid ""
+"This forum is a discussion about improving the localization of the \"%(title)s\" article. If you want to improve the article content, go to the <a href=\"%(url)s\">English article discussion</a>."
 msgstr "这个讨论区主要讨论有关如何改善“%(title)s”这篇文章的本地化。如果您想要改善文章内容，请到 <a href=\"%(url)s\">英语版文章进行讨论</a>。"
 
 #: apps/kbforums/templates/kbforums/includes/macros.html:28
@@ -1727,8 +1612,7 @@ msgstr "不再发邮件通知我的语言中的讨论。"
 msgid "Get emailed when there is new discussion activity in my locale."
 msgstr "在我的语言中有新讨论时，发电子邮件通知我。"
 
-#: apps/kpi/templates/kpi/dashboard.html:4
-#: templates/includes/common_macros.html:122
+#: apps/kpi/templates/kpi/dashboard.html:4 templates/includes/common_macros.html:122
 msgid "KPI Dashboard"
 msgstr "效绩指标面板"
 
@@ -1817,7 +1701,9 @@ msgid "L10n coverage"
 msgstr "本地化覆盖率"
 
 #: apps/kpi/templates/kpi/dashboard.html:119
-msgid "Definition: L10n coverage is a measure of the percentage of our visitor base that get served with KB articles in their own language. It's calculated by taking into account the English top 50 weighted by the localization status of an article and the the number of visits for each locale."
+msgid ""
+"Definition: L10n coverage is a measure of the percentage of our visitor base that get served with KB articles in their own language. It's calculated by taking into account the English top 50 "
+"weighted by the localization status of an article and the the number of visits for each locale."
 msgstr "定义：本地化覆盖率是指该语言版本的知识库文档在所有阅览数中所占的比例。此比例的算法为将英语版本中阅览数最多的前50篇，依照该文章在每个语言中的本地化状态与阅览数加权后的文章数量。"
 
 #: apps/kpi/templates/kpi/dashboard.html:126
@@ -1860,26 +1746,20 @@ msgstr "当德语没跟上某次2级修改时，覆盖率就会跌落到50%，�
 msgid "<b>Important:</b> Currently we are using a simplified model, where each article accounts for 1/50=2% of visits per language"
 msgstr "<b>重要：</b>我们目前正在使用一个简化的模式，每篇文章都定为占各语言版本的1/50=2%访问量"
 
-#: apps/landings/templates/landings/home.html:14
-#: apps/products/templates/products/product.html:39
+#: apps/landings/templates/landings/home.html:14 apps/products/templates/products/product.html:39
 msgid "Help Topics"
 msgstr "帮助主题"
 
-#: apps/landings/templates/landings/home.html:19
-#: apps/products/templates/products/documents.html:5
-#: apps/products/templates/products/product.html:6
-#: apps/products/templates/products/products.html:4
+#: apps/landings/templates/landings/home.html:19 apps/products/templates/products/documents.html:5 apps/products/templates/products/product.html:6 apps/products/templates/products/products.html:4
 #: apps/products/templates/products/mobile/products.html:3
 msgid "Products and Services"
 msgstr "产品与服务"
 
-#: apps/landings/templates/landings/home.html:25
-#: templates/base.html:135
+#: apps/landings/templates/landings/home.html:25 templates/base.html:135
 msgid "Mozilla News"
 msgstr "Mozilla 新闻"
 
-#: apps/landings/templates/landings/home.html:31
-#: templates/base.html:136
+#: apps/landings/templates/landings/home.html:31 templates/base.html:136
 msgid "Help Other Users"
 msgstr "帮助其他用户"
 
@@ -1887,8 +1767,7 @@ msgstr "帮助其他用户"
 msgid "Participate and help other users – <a href=\"%(url)s\"> get started </a>"
 msgstr "参与并帮助其他用户 – <a href=\"%(url)s\"> 开始 </a>"
 
-#: apps/landings/templates/landings/home.html:40
-#: templates/base.html:137
+#: apps/landings/templates/landings/home.html:40 templates/base.html:137
 msgid "Suggestion Box"
 msgstr "意见箱"
 
@@ -1928,9 +1807,7 @@ msgstr "<span>市场</span> 帮助"
 msgid "Firefox for Mobile Support Home Page"
 msgstr "Firefox 移动版支持首页"
 
-#: apps/landings/templates/landings/mobile/mobile.html:5
-#: templates/mobile/base-new.html:6
-#: templates/mobile/base-old.html:6
+#: apps/landings/templates/landings/mobile/mobile.html:5 templates/mobile/base-new.html:6 templates/mobile/base-old.html:6
 msgid "Firefox Help <span>for Mobile</span>"
 msgstr "Firefox <span>移动版</span> 帮助"
 
@@ -1938,16 +1815,11 @@ msgstr "Firefox <span>移动版</span> 帮助"
 msgid "Firefox Support Home Page"
 msgstr "Firefox 技术支持首页"
 
-#: apps/landings/templates/landings/mobile/old-home.html:5
-#: apps/search/templates/search/plugin.html:3
-#: templates/base.html:18
-#: templates/mobile/base-new.html:19
-#: templates/mobile/base-old.html:16
+#: apps/landings/templates/landings/mobile/old-home.html:5 apps/search/templates/search/plugin.html:3 templates/base.html:18 templates/mobile/base-new.html:19 templates/mobile/base-old.html:16
 msgid "Firefox Help"
 msgstr "Firefox 帮助"
 
-#: apps/landings/templates/landings/mobile/participate.html:3
-#: templates/global/menu_links.html:58
+#: apps/landings/templates/landings/mobile/participate.html:3 templates/global/menu_links.html:58
 msgid "Participate"
 msgstr "参与"
 
@@ -1995,20 +1867,13 @@ msgstr "该消息已被删除！"
 msgid "Delete Message"
 msgstr "删除消息"
 
-#: apps/messages/templates/messages/delete.html:4
-#: apps/messages/templates/messages/new.html:4
-#: apps/messages/templates/messages/outbox.html:4
-#: apps/messages/templates/messages/read-outbox.html:4
-#: apps/messages/templates/messages/read.html:4
-#: apps/messages/templates/messages/includes/macros.html:37
+#: apps/messages/templates/messages/delete.html:4 apps/messages/templates/messages/new.html:4 apps/messages/templates/messages/outbox.html:4 apps/messages/templates/messages/read-outbox.html:4
+#: apps/messages/templates/messages/read.html:4 apps/messages/templates/messages/includes/macros.html:37
 msgid "Messages"
 msgstr "消息"
 
-#: apps/messages/templates/messages/delete.html:8
-#: apps/messages/templates/messages/outbox.html:3
-#: apps/messages/templates/messages/read-outbox.html:5
-#: apps/messages/templates/messages/includes/macros.html:25
-#: apps/messages/templates/messages/includes/macros.html:40
+#: apps/messages/templates/messages/delete.html:8 apps/messages/templates/messages/outbox.html:3 apps/messages/templates/messages/read-outbox.html:5
+#: apps/messages/templates/messages/includes/macros.html:25 apps/messages/templates/messages/includes/macros.html:40
 msgid "Sent Messages"
 msgstr "已发消息"
 
@@ -2020,16 +1885,11 @@ msgstr "您确定要删除这些消息吗？"
 msgid "Are you sure you want to delete this message?"
 msgstr "您确定要删除此消息吗？"
 
-#: apps/messages/templates/messages/inbox.html:3
-#: apps/messages/templates/messages/includes/macros.html:22
-#: templates/includes/common_macros.html:42
-#: templates/mobile/base-new.html:63
+#: apps/messages/templates/messages/inbox.html:3 apps/messages/templates/messages/includes/macros.html:22 templates/includes/common_macros.html:42 templates/mobile/base-new.html:63
 msgid "Inbox"
 msgstr "收件箱"
 
-#: apps/messages/templates/messages/inbox.html:10
-#: apps/messages/templates/messages/new.html:3
-#: apps/messages/templates/messages/includes/macros.html:28
+#: apps/messages/templates/messages/inbox.html:10 apps/messages/templates/messages/new.html:3 apps/messages/templates/messages/includes/macros.html:28
 #: apps/messages/templates/messages/includes/macros.html:43
 msgid "New Message"
 msgstr "新消息"
@@ -2038,8 +1898,7 @@ msgstr "新消息"
 msgid "Mark Selected as Read"
 msgstr "标记所选的项目为已读"
 
-#: apps/messages/templates/messages/inbox.html:17
-#: apps/messages/templates/messages/outbox.html:14
+#: apps/messages/templates/messages/inbox.html:17 apps/messages/templates/messages/outbox.html:14
 msgid "Delete Selected"
 msgstr "删除所选的项目"
 
@@ -2047,13 +1906,11 @@ msgstr "删除所选的项目"
 msgid "Read message"
 msgstr "阅读消息"
 
-#: apps/messages/templates/messages/inbox.html:32
-#: apps/messages/templates/messages/outbox.html:37
+#: apps/messages/templates/messages/inbox.html:32 apps/messages/templates/messages/outbox.html:37
 msgid "Delete message"
 msgstr "删除消息"
 
-#: apps/messages/templates/messages/inbox.html:39
-#: apps/messages/templates/messages/outbox.html:44
+#: apps/messages/templates/messages/inbox.html:39 apps/messages/templates/messages/outbox.html:44
 msgid "There are no messages here."
 msgstr "这里目前没有消息。"
 
@@ -2073,8 +1930,7 @@ msgstr "阅读已发消息"
 msgid "Read Message"
 msgstr "阅读消息"
 
-#: apps/messages/templates/messages/includes/macros.html:7
-#: apps/messages/templates/messages/includes/macros.html:15
+#: apps/messages/templates/messages/includes/macros.html:7 apps/messages/templates/messages/includes/macros.html:15
 msgid "System"
 msgstr "系统"
 
@@ -2082,45 +1938,17 @@ msgstr "系统"
 msgid "Message Preview:"
 msgstr "消息预览："
 
-#: apps/products/templates/products/documents.html:6
-#: apps/products/templates/products/documents.html:10
-#: apps/products/templates/products/documents.html:14
-#: apps/products/templates/products/product.html:6
-#: apps/products/templates/products/product.html:9
-#: apps/products/templates/products/product.html:16
-#: apps/products/templates/products/includes/product_macros.html:12
-#: apps/products/templates/products/includes/product_macros.html:36
-#: apps/products/templates/products/mobile/documents.html:8
-#: apps/products/templates/products/mobile/product.html:7
-#: apps/products/templates/products/mobile/products.html:13
-#: apps/wiki/templates/wiki/document.html:12
-msgctxt "DB: products.Product.title"
-msgid "None"
-msgstr "无"
-
-#: apps/products/templates/products/documents.html:7
-#: apps/products/templates/products/documents.html:10
-#: apps/products/templates/products/documents.html:23
-#: apps/products/templates/products/documents.html:33
-#: apps/products/templates/products/product.html:44
-#: apps/products/templates/products/mobile/documents.html:5
-#: apps/products/templates/products/mobile/documents.html:8
-#: apps/products/templates/products/mobile/documents.html:15
-#: apps/products/templates/products/mobile/documents.html:49
-#: apps/products/templates/products/mobile/product.html:15
-#: apps/topics/templates/topics/topic.html:6
-#: apps/topics/templates/topics/includes/topic_macros.html:31
-#: apps/topics/templates/topics/includes/topic_macros.html:58
-#: apps/wiki/templates/wiki/landing.html:25
+#: apps/products/templates/products/documents.html:7 apps/products/templates/products/documents.html:10 apps/products/templates/products/documents.html:23
+#: apps/products/templates/products/documents.html:33 apps/products/templates/products/product.html:44 apps/products/templates/products/mobile/documents.html:5
+#: apps/products/templates/products/mobile/documents.html:8 apps/products/templates/products/mobile/documents.html:15 apps/products/templates/products/mobile/documents.html:49
+#: apps/products/templates/products/mobile/product.html:16 apps/topics/templates/topics/topic.html:6 apps/topics/templates/topics/includes/topic_macros.html:31
+#: apps/topics/templates/topics/includes/topic_macros.html:58 apps/wiki/templates/wiki/landing.html:25
 msgctxt "DB: topics.Topic.title"
 msgid "None"
 msgstr "无"
 
-#: apps/products/templates/products/documents.html:10
-#: apps/products/templates/products/product.html:9
-#: apps/products/templates/products/mobile/documents.html:8
-#: apps/products/templates/products/mobile/product.html:7
-#: apps/wiki/templates/wiki/document.html:12
+#: apps/products/templates/products/documents.html:10 apps/products/templates/products/product.html:9 apps/products/templates/products/mobile/documents.html:8
+#: apps/products/templates/products/mobile/product.html:8 apps/wiki/templates/wiki/document.html:12
 msgid "{product} Help"
 msgstr "{product} 帮助"
 
@@ -2128,16 +1956,12 @@ msgstr "{product} 帮助"
 msgid "Refine and Focus"
 msgstr "挑选并关注"
 
-#: apps/products/templates/products/documents.html:48
-#: apps/products/templates/products/mobile/documents.html:31
-#: apps/topics/templates/topics/topic.html:40
+#: apps/products/templates/products/documents.html:48 apps/products/templates/products/mobile/documents.html:31 apps/topics/templates/topics/topic.html:40
 #: apps/topics/templates/topics/includes/topic_macros.html:10
 msgid "In English"
 msgstr "英文"
 
-#: apps/products/templates/products/product.html:23
-#: templates/global/footer.html:6
-#: templates/global/header.html:7
+#: apps/products/templates/products/product.html:23 templates/global/footer.html:6 templates/global/header.html:7
 msgid "Firefox"
 msgstr "Firefox"
 
@@ -2145,8 +1969,7 @@ msgstr "Firefox"
 msgid "Free Download"
 msgstr "免费下载"
 
-#: apps/products/templates/products/includes/product_macros.html:13
-#: apps/products/templates/products/mobile/products.html:14
+#: apps/products/templates/products/includes/product_macros.html:13 apps/products/templates/products/mobile/products.html:14
 msgctxt "DB: products.Product.description"
 msgid "None"
 msgstr "无"
@@ -2155,13 +1978,11 @@ msgstr "无"
 msgid "Email software for Windows, Mac and Linux"
 msgstr "用于 Windows，Mac 和 Linux 的电子邮件软件"
 
-#: apps/products/templates/products/includes/product_macros.html:32
-#: templates/base.html:132
+#: apps/products/templates/products/includes/product_macros.html:32 templates/base.html:132
 msgid "Products &amp; Services"
 msgstr "产品与服务"
 
-#: apps/products/templates/products/mobile/documents.html:12
-#: apps/products/templates/products/mobile/documents.html:44
+#: apps/products/templates/products/mobile/documents.html:12 apps/products/templates/products/mobile/documents.html:44
 msgid "Showing"
 msgstr "显示"
 
@@ -2169,14 +1990,11 @@ msgstr "显示"
 msgid "All articles"
 msgstr "全部文章"
 
-#: apps/products/templates/products/mobile/product.html:22
-#: apps/topics/templates/topics/includes/topic_macros.html:39
+#: apps/products/templates/products/mobile/product.html:23 apps/topics/templates/topics/includes/topic_macros.html:39
 msgid "Get community support"
 msgstr "获得社区支持"
 
-#: apps/search/__init__.py:14
-#: apps/search/__init__.py:42
-#: apps/search/__init__.py:48
+#: apps/search/__init__.py:14 apps/search/__init__.py:42 apps/search/__init__.py:48
 msgid "Don't filter"
 msgstr "不过滤"
 
@@ -2188,9 +2006,7 @@ msgstr "之前"
 msgid "After"
 msgstr "之后"
 
-#: apps/search/__init__.py:22
-#: apps/search/__init__.py:61
-#: apps/search/__init__.py:74
+#: apps/search/__init__.py:22 apps/search/__init__.py:61 apps/search/__init__.py:74
 msgid "Relevance"
 msgstr "相关性"
 
@@ -2206,18 +2022,12 @@ msgstr "最初发帖日期"
 msgid "Number of replies"
 msgstr "回复数量"
 
-#: apps/search/__init__.py:43
-#: apps/sumo/helpers.py:352
-#: apps/wiki/views.py:961
-#: apps/wiki/templates/wiki/includes/document_macros.html:281
+#: apps/search/__init__.py:43 apps/sumo/helpers.py:352 apps/wiki/views.py:970 apps/wiki/templates/wiki/includes/document_macros.html:281
 #: apps/wiki/templates/wiki/mobile/includes/document_macros.html:15
 msgid "Yes"
 msgstr "是"
 
-#: apps/search/__init__.py:44
-#: apps/sumo/helpers.py:352
-#: apps/wiki/views.py:965
-#: apps/wiki/templates/wiki/includes/document_macros.html:282
+#: apps/search/__init__.py:44 apps/sumo/helpers.py:352 apps/wiki/views.py:974 apps/wiki/templates/wiki/includes/document_macros.html:282
 #: apps/wiki/templates/wiki/mobile/includes/document_macros.html:16
 msgid "No"
 msgstr "否"
@@ -2266,9 +2076,7 @@ msgstr "有关于："
 msgid "Include obsolete articles?"
 msgstr "包括过时的文章？"
 
-#: apps/search/forms.py:96
-#: apps/search/forms.py:118
-#: apps/search/forms.py:136
+#: apps/search/forms.py:96 apps/search/forms.py:118 apps/search/forms.py:136
 msgid "Sort results by"
 msgstr "排序依照"
 
@@ -2288,8 +2096,7 @@ msgstr "主题类型"
 msgid "Search in forum"
 msgstr "在论坛中搜索"
 
-#: apps/search/forms.py:144
-#: apps/search/templates/search/includes/result.html:14
+#: apps/search/forms.py:144 apps/search/templates/search/includes/result.html:14
 msgid "Solved"
 msgstr "已解决"
 
@@ -2313,26 +2120,24 @@ msgstr "标签一, 标签二"
 msgid "Tags"
 msgstr "标签"
 
-#: apps/search/views.py:33
+#: apps/search/views.py:34
 msgctxt "between search excerpts"
 msgid "..."
 msgstr "..."
 
-#: apps/search/views.py:62
+#: apps/search/views.py:63
 msgid "Invalid callback function."
 msgstr "无效的 callback 函数。"
 
-#: apps/search/views.py:95
+#: apps/search/views.py:96
 msgid "Invalid search data."
 msgstr "无效的搜索数据。"
 
-#: apps/search/views.py:413
-#: apps/search/templates/search/down.html:6
-#: apps/search/templates/search/mobile/down.html:7
+#: apps/search/views.py:434 apps/search/templates/search/down.html:6 apps/search/templates/search/mobile/down.html:7
 msgid "Search Unavailable"
 msgstr "搜索不可用"
 
-#: apps/search/views.py:442
+#: apps/search/views.py:463
 msgid "No pages matched the search criteria"
 msgstr "搜索条件没有返回任何结果页面"
 
@@ -2345,20 +2150,15 @@ msgctxt "button"
 msgid "Search"
 msgstr "搜索"
 
-#: apps/search/templates/search/basic-form.html:37
-#: apps/search/templates/search/basic-form.html:50
-#: apps/search/templates/search/includes/macros.html:15
-#: templates/includes/common_macros.html:17
+#: apps/search/templates/search/basic-form.html:37 apps/search/templates/search/basic-form.html:50 apps/search/templates/search/includes/macros.html:15 templates/includes/common_macros.html:17
 msgid "Search Mozilla Support"
 msgstr "搜索 Mozilla 技术支持"
 
-#: apps/search/templates/search/down.html:8
-#: apps/search/templates/search/mobile/down.html:9
+#: apps/search/templates/search/down.html:8 apps/search/templates/search/mobile/down.html:9
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
 msgstr "搜索暂时不可用。请稍等几分钟后重试。"
 
-#: apps/search/templates/search/form.html:5
-#: templates/includes/common_macros.html:118
+#: apps/search/templates/search/form.html:5 templates/includes/common_macros.html:118
 msgid "Advanced Search"
 msgstr "高级搜索"
 
@@ -2390,22 +2190,16 @@ msgstr "讨论区"
 msgid "Article contains"
 msgstr "文章包含"
 
-#: apps/search/templates/search/form.html:28
-#: apps/search/templates/search/form.html:82
-#: apps/search/templates/search/form.html:169
+#: apps/search/templates/search/form.html:28 apps/search/templates/search/form.html:82 apps/search/templates/search/form.html:183
 msgid "crashes on youtube"
 msgstr "无法播放 YouTube 影片"
 
-#: apps/search/templates/search/form.html:75
-#: apps/search/templates/search/form.html:162
-#: apps/search/templates/search/form.html:212
+#: apps/search/templates/search/form.html:75 apps/search/templates/search/form.html:176 apps/search/templates/search/form.html:226
 msgctxt "button"
 msgid "Search Mozilla Support"
 msgstr "搜索 Mozilla 技术支持"
 
-#: apps/search/templates/search/form.html:76
-#: apps/search/templates/search/form.html:163
-#: apps/search/templates/search/form.html:213
+#: apps/search/templates/search/form.html:76 apps/search/templates/search/form.html:177 apps/search/templates/search/form.html:227
 msgid "Use basic search"
 msgstr "使用基本搜索"
 
@@ -2421,21 +2215,19 @@ msgstr "投票数量。必须为整数。"
 msgid "Note: Searching for \"tag1, tag2\" returns questions tagged with both tag1 and tag2"
 msgstr "注意：搜索“标签一, 标签二”将会返回同时标记了标签一和标签二的文章。"
 
-#: apps/search/templates/search/form.html:142
-#: apps/search/templates/search/form.html:187
+#: apps/search/templates/search/form.html:156 apps/search/templates/search/form.html:201
 msgid "Created date. Format: mm/dd/yy"
 msgstr "创建日期。格式：mm/dd/yy"
 
-#: apps/search/templates/search/form.html:148
-#: apps/search/templates/search/form.html:193
+#: apps/search/templates/search/form.html:162 apps/search/templates/search/form.html:207
 msgid "Updated date. Format: mm/dd/yy"
 msgstr "更新日期。格式：mm/dd/yy"
 
-#: apps/search/templates/search/form.html:168
+#: apps/search/templates/search/form.html:182
 msgid "Thread contains"
 msgstr "主题包含"
 
-#: apps/search/templates/search/form.html:221
+#: apps/search/templates/search/form.html:235
 msgid "Use advanced search"
 msgstr "使用高级搜索"
 
@@ -2444,22 +2236,21 @@ msgstr "使用高级搜索"
 msgid "Search the Firefox Support Knowledge Base and Support Forum."
 msgstr "搜索 Firefox 支持知识库和支持论坛。"
 
-#: apps/search/templates/search/results.html:17
+#: apps/search/templates/search/results.html:36
 msgid "Show Everything"
 msgstr "显示全部"
 
-#: apps/search/templates/search/results.html:18
+#: apps/search/templates/search/results.html:41
 msgid "Help Articles Only"
 msgstr "仅帮助文章"
 
-#: apps/search/templates/search/results.html:19
+#: apps/search/templates/search/results.html:46
 msgid "Community Discussion Only"
 msgstr "仅社区讨论"
 
 # Found 123 results for abc in 正体中文 (繁体)
 #. {n} is the number of search results, {q} is the search query, {l} is the language searched.
-#: apps/search/templates/search/results.html:29
-#: apps/search/templates/search/mobile/results-old.html:13
+#: apps/search/templates/search/results.html:77 apps/search/templates/search/mobile/results-old.html:13
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
 msgstr[0] "在<strong>{l}</strong>当中找到<strong>{n}</strong>个关于<strong>{q}</strong>的结果"
@@ -2990,8 +2781,7 @@ msgstr "您必须启用 Cookie 才能登录或注册。"
 msgid "You do not have permission to access this page."
 msgstr "您没有访问这个网页的权限。"
 
-#: apps/sumo/templates/handlers/403.html:19
-#: apps/users/templates/users/includes/macros.html:23
+#: apps/sumo/templates/handlers/403.html:19 apps/users/templates/users/includes/macros.html:23
 msgid "Log in"
 msgstr "登录"
 
@@ -3023,14 +2813,11 @@ msgstr "该网址已经移到新地方了！"
 msgid "It looks like you've bookmarked an old URL. The new URL for this page is below. You should update your bookmarks. We will forward you to the new URL in 10 seconds."
 msgstr "看起来您书签的网址已经过时了。本页面的新网址如下。您应该更新您的书签。我们将在十秒后带您到新的网址。"
 
-#: apps/sumo/templates/sumo/locales.html:3
-#: apps/sumo/templates/sumo/mobile/locales.html:3
-#: templates/mobile/base-new.html:81
+#: apps/sumo/templates/sumo/locales.html:3 apps/sumo/templates/sumo/mobile/locales.html:3 templates/mobile/base-new.html:81
 msgid "Switch language"
 msgstr "切换语言"
 
-#: apps/sumo/templates/sumo/read-only.html:3
-#: apps/sumo/templates/sumo/read-only.html:7
+#: apps/sumo/templates/sumo/read-only.html:3 apps/sumo/templates/sumo/read-only.html:7
 msgid "Maintenance in progress"
 msgstr "系统维护中"
 
@@ -3050,8 +2837,7 @@ msgstr "添加"
 msgid "Select a product"
 msgstr "选择产品"
 
-#: apps/topics/templates/topics/includes/topic_macros.html:4
-#: templates/base.html:134
+#: apps/topics/templates/topics/includes/topic_macros.html:4 templates/base.html:134
 msgid "Hot Topics"
 msgstr "热门主题"
 
@@ -3171,8 +2957,7 @@ msgstr "关注我留过言的提问"
 msgid "Send emails for private messages"
 msgstr "收到私信时发送电子邮件"
 
-#: apps/users/forms.py:83
-#: apps/users/templates/users/includes/macros.html:12
+#: apps/users/forms.py:83 apps/users/templates/users/includes/macros.html:12
 msgid "Username:"
 msgstr "用户名："
 
@@ -3180,16 +2965,11 @@ msgstr "用户名："
 msgid "Required. 30 characters or fewer. Letters, digits and ./+/-/_ only."
 msgstr "不能为空。最多允许30个字符。仅允许输入字母、数字以及 ./+/-/_。"
 
-#: apps/users/forms.py:92
-#: apps/users/forms.py:231
-#: apps/users/forms.py:237
-#: apps/users/forms.py:285
+#: apps/users/forms.py:92 apps/users/forms.py:231 apps/users/forms.py:237 apps/users/forms.py:285
 msgid "Email address:"
 msgstr "电子邮件地址:"
 
-#: apps/users/forms.py:97
-#: apps/users/templates/users/edit_profile.html:31
-#: apps/users/templates/users/includes/macros.html:16
+#: apps/users/forms.py:97 apps/users/templates/users/edit_profile.html:31 apps/users/templates/users/includes/macros.html:16
 msgid "Password:"
 msgstr "密码："
 
@@ -3205,13 +2985,11 @@ msgstr "输入与上面相同的密码，以便确认。"
 msgid "Passwords must match."
 msgstr "密码必须匹配。"
 
-#: apps/users/forms.py:132
-#: apps/users/forms.py:248
+#: apps/users/forms.py:132 apps/users/forms.py:248
 msgid "A user with that email address already exists."
 msgstr "已有一位用户使用了该电子邮件地址。"
 
-#: apps/users/forms.py:147
-#: apps/users/templates/users/mobile/includes/macros.html:14
+#: apps/users/forms.py:147 apps/users/templates/users/mobile/includes/macros.html:14
 msgid "Password"
 msgstr "密码"
 
@@ -3239,8 +3017,7 @@ msgstr "请输入一个 facebook.com 的网址。"
 msgid "This is your current email."
 msgstr "这是您当前的电子邮件。"
 
-#: apps/users/forms.py:255
-#: apps/users/forms.py:269
+#: apps/users/forms.py:255 apps/users/forms.py:269
 msgid "New password:"
 msgstr "新密码："
 
@@ -3264,18 +3041,15 @@ msgstr "密码中至少要有一个数字和一个英文字母。"
 msgid "The user name you entered is inappropriate. Please pick another and consider that our helpers are other Firefox users just like you."
 msgstr "您所输入的用户名不恰当。请再挑选一个，并请考虑到我们的志愿者都是像您一样的 Firefox 用户。"
 
-#: apps/users/hashers.py:30
-#: apps/users/hashers.py:51
+#: apps/users/hashers.py:30 apps/users/hashers.py:51
 msgid "algorithm"
 msgstr "算法"
 
-#: apps/users/hashers.py:31
-#: apps/users/hashers.py:52
+#: apps/users/hashers.py:31 apps/users/hashers.py:52
 msgid "salt"
 msgstr "salt"
 
-#: apps/users/hashers.py:32
-#: apps/users/hashers.py:53
+#: apps/users/hashers.py:32 apps/users/hashers.py:53
 msgid "hash"
 msgstr "hash"
 
@@ -3283,8 +3057,7 @@ msgstr "hash"
 msgid "Private message"
 msgstr "私信"
 
-#: apps/users/models.py:38
-#: apps/users/models.py:84
+#: apps/users/models.py:38 apps/users/models.py:84
 msgid "User"
 msgstr "用户"
 
@@ -3300,8 +3073,7 @@ msgstr "公开我的的电子邮箱地址"
 msgid "Biography"
 msgstr "自我介绍"
 
-#: apps/users/models.py:50
-#: apps/users/templates/users/profile.html:94
+#: apps/users/models.py:50 apps/users/templates/users/profile.html:94
 msgid "Website"
 msgstr "网站"
 
@@ -3345,18 +3117,15 @@ msgstr "值"
 msgid "Welcome to SUMO!"
 msgstr "欢迎来到 Mozilla 技术支持"
 
-#: apps/users/models.py:256
-#: apps/users/models.py:301
+#: apps/users/models.py:256 apps/users/models.py:301
 msgid "Please confirm your email address"
 msgstr "请确认您的电子邮箱地址"
 
-#: apps/users/models.py:315
-#: apps/users/models.py:352
+#: apps/users/models.py:315 apps/users/models.py:352
 msgid "user"
 msgstr "用户"
 
-#: apps/users/models.py:316
-#: apps/users/models.py:353
+#: apps/users/models.py:316 apps/users/models.py:353
 msgid "activation key"
 msgstr "激活码"
 
@@ -3368,20 +3137,19 @@ msgstr "注册信息"
 msgid "registration profiles"
 msgstr "注册信息"
 
-#: apps/users/views.py:144
+#: apps/users/views.py:154
 msgid "Your account is already activated, log in below."
 msgstr "您的帐户已被激活，请在下面登录。"
 
-#: apps/users/views.py:184
-#: apps/users/views.py:199
+#: apps/users/views.py:194 apps/users/views.py:209
 msgid "Account already activated"
 msgstr "帐户已激活"
 
-#: apps/users/views.py:300
+#: apps/users/views.py:310
 msgid "Your settings have been saved."
 msgstr "您的设置已保存。"
 
-#: apps/users/views.py:541
+#: apps/users/views.py:551
 msgid "We've sent an email with the username to any account using {email}."
 msgstr "我们已经寄出了一封带有您用户名的电子邮件到 {email}。"
 
@@ -3498,8 +3266,7 @@ msgstr "编辑或翻译过的文章"
 msgid "Change Avatar"
 msgstr "更改头像"
 
-#: apps/users/templates/users/edit_profile.html:3
-#: templates/includes/common_macros.html:34
+#: apps/users/templates/users/edit_profile.html:3 templates/includes/common_macros.html:34
 msgid "Edit Profile"
 msgstr "编辑个人信息"
 
@@ -3521,9 +3288,7 @@ msgstr "删除"
 msgid "Email:"
 msgstr "邮箱："
 
-#: apps/users/templates/users/edit_profile.html:42
-#: apps/users/templates/users/edit_settings.html:15
-#: apps/users/templates/users/pw_reset_confirm.html:27
+#: apps/users/templates/users/edit_profile.html:42 apps/users/templates/users/edit_settings.html:15 apps/users/templates/users/pw_reset_confirm.html:27
 msgid "Update"
 msgstr "更新"
 
@@ -3555,9 +3320,7 @@ msgstr "编辑用户个人资料"
 msgid "{city}, {country}"
 msgstr "{country}, {city}"
 
-#: apps/users/templates/users/profile.html:42
-#: templates/includes/common_macros.html:37
-#: templates/mobile/base-new.html:70
+#: apps/users/templates/users/profile.html:42 templates/includes/common_macros.html:37 templates/mobile/base-new.html:70
 msgid "Sign Out"
 msgstr "登出"
 
@@ -3585,13 +3348,11 @@ msgstr[0] "{0} 篇文章"
 msgid "Email"
 msgstr "邮箱"
 
-#: apps/users/templates/users/profile.html:100
-#: templates/base.html:194
+#: apps/users/templates/users/profile.html:100 templates/base.html:194
 msgid "Twitter"
 msgstr "Twitter"
 
-#: apps/users/templates/users/profile.html:106
-#: templates/base.html:195
+#: apps/users/templates/users/profile.html:106 templates/base.html:195
 msgid "Facebook"
 msgstr "Facebook"
 
@@ -3631,9 +3392,7 @@ msgstr "密码重置成功。"
 msgid "You can now log in."
 msgstr "您现在可以登录。"
 
-#: apps/users/templates/users/pw_reset_confirm.html:4
-#: apps/users/templates/users/pw_reset_form.html:4
-#: apps/users/templates/users/pw_reset_sent.html:4
+#: apps/users/templates/users/pw_reset_confirm.html:4 apps/users/templates/users/pw_reset_form.html:4 apps/users/templates/users/pw_reset_sent.html:4
 msgid "Password Reset"
 msgstr "密码重置"
 
@@ -3673,20 +3432,16 @@ msgstr "发送密码重置链接"
 msgid "We've sent an email to any account using this address. Please follow the link in the email to reset your password."
 msgstr "我们已经向该电子邮箱地址发送了一封邮件。请使用邮件中的链接来重置您的密码。"
 
-#: apps/users/templates/users/register_done.html:4
-#: apps/users/templates/users/register_done.html:9
-#: apps/users/templates/users/mobile/register_done.html:13
+#: apps/users/templates/users/register_done.html:4 apps/users/templates/users/register_done.html:9 apps/users/templates/users/mobile/register_done.html:13
 msgid "Thank you for registering!"
 msgstr "感谢您的注册！"
 
 #. This string appears on the 'thank you for registering' page.
-#: apps/users/templates/users/register_done.html:11
-#: apps/users/templates/users/mobile/register_done.html:14
+#: apps/users/templates/users/register_done.html:11 apps/users/templates/users/mobile/register_done.html:14
 msgid "Thank you for being awesome!"
 msgstr "感谢您成为我们的一份子！"
 
-#: apps/users/templates/users/register_done.html:12
-#: apps/users/templates/users/mobile/register_done.html:15
+#: apps/users/templates/users/register_done.html:12 apps/users/templates/users/mobile/register_done.html:15
 msgid "Before you can log in, you need to confirm your email address. We've sent you an email with a confirmation link in it. Just click the link and you'll be ready to go!"
 msgstr "您需要确认了您的的电子邮箱地址后方可登录。我们已经向您的电子邮箱发送了确认邮件。只要点击其中的链接您马上就可以开始了！"
 
@@ -3707,7 +3462,9 @@ msgid "Confirmation email sent successfully."
 msgstr "确认邮件成功发送。"
 
 #: apps/users/templates/users/resend_confirmation_done.html:10
-msgid "Before you can log in, you need to confirm your email address. We've sent a new confirmation email to any account using <strong>%(email)s</strong>. To confirm the email address, just follow the link in the email."
+msgid ""
+"Before you can log in, you need to confirm your email address. We've sent a new confirmation email to any account using <strong>%(email)s</strong>. To confirm the email address, just follow the "
+"link in the email."
 msgstr "您需要确认了您的电子邮箱地址后方可登录。我们已经向<strong>%(email)s</strong>这个地址发送了确认邮件。您只需使用其中的链接便可确认您的邮件地址。"
 
 #: apps/users/templates/users/includes/macros.html:23
@@ -3718,9 +3475,7 @@ msgstr "登录中..."
 msgid "Logged in!"
 msgstr "已登录！"
 
-#: apps/users/templates/users/includes/macros.html:28
-#: apps/users/templates/users/includes/macros.html:32
-#: apps/users/templates/users/mobile/includes/macros.html:23
+#: apps/users/templates/users/includes/macros.html:28 apps/users/templates/users/includes/macros.html:32 apps/users/templates/users/mobile/includes/macros.html:23
 msgid "My password isn't working."
 msgstr "我的密码不能用。"
 
@@ -3728,8 +3483,7 @@ msgstr "我的密码不能用。"
 msgid "Login Problems?"
 msgstr "登录有问题？"
 
-#: apps/users/templates/users/includes/macros.html:33
-#: apps/users/templates/users/mobile/includes/macros.html:24
+#: apps/users/templates/users/includes/macros.html:33 apps/users/templates/users/mobile/includes/macros.html:24
 msgid "I forgot my username."
 msgstr "我忘记了用户名。"
 
@@ -3737,18 +3491,19 @@ msgstr "我忘记了用户名。"
 msgid "I don't have an account."
 msgstr "我还没有帐户。"
 
-#: apps/users/templates/users/includes/macros.html:35
-#: apps/users/templates/users/mobile/includes/macros.html:25
+#: apps/users/templates/users/includes/macros.html:35 apps/users/templates/users/mobile/includes/macros.html:25
 msgid "I didn't get a confirmation email."
 msgstr "我没有收到确认信。"
 
-#: apps/users/templates/users/includes/macros.html:56
-#: templates/mobile/base-new.html:73
+#: apps/users/templates/users/includes/macros.html:53
+msgid "Password should be at least 8 characters long and contain at least 1 number."
+msgstr ""
+
+#: apps/users/templates/users/includes/macros.html:60 templates/mobile/base-new.html:73
 msgid "Register"
 msgstr "注册"
 
-#: apps/users/templates/users/mobile/register.html:7
-#: apps/users/templates/users/mobile/register_done.html:7
+#: apps/users/templates/users/mobile/register.html:7 apps/users/templates/users/mobile/register_done.html:7
 msgid "Register or sign in"
 msgstr "注册/登录"
 
@@ -3780,266 +3535,245 @@ msgstr "注册新的技术支持帐户"
 msgid "Already have an account? Sign in"
 msgstr "已经有帐户了？登录吧"
 
-#: apps/wiki/config.py:29
-#: apps/wiki/config.py:30
-#: apps/wiki/config.py:65
+#: apps/wiki/config.py:29 apps/wiki/config.py:30 apps/wiki/config.py:67
+#, fuzzy
+msgid "Firefox 19"
+msgstr "Firefox 9"
+
+#: apps/wiki/config.py:31 apps/wiki/config.py:32 apps/wiki/config.py:69
 msgid "Firefox 18"
 msgstr "Firefox 18"
 
-#: apps/wiki/config.py:31
-#: apps/wiki/config.py:32
-#: apps/wiki/config.py:67
+#: apps/wiki/config.py:33 apps/wiki/config.py:34 apps/wiki/config.py:71
 msgid "Firefox 17"
 msgstr "Firefox 17"
 
-#: apps/wiki/config.py:33
-#: apps/wiki/config.py:34
-#: apps/wiki/config.py:69
+#: apps/wiki/config.py:35 apps/wiki/config.py:36 apps/wiki/config.py:73
 msgid "Firefox 16"
 msgstr "Firefox 16"
 
-#: apps/wiki/config.py:35
-#: apps/wiki/config.py:36
-#: apps/wiki/config.py:71
+#: apps/wiki/config.py:37 apps/wiki/config.py:38 apps/wiki/config.py:75
 msgid "Firefox 15"
 msgstr "Firefox 15"
 
-#: apps/wiki/config.py:37
-#: apps/wiki/config.py:38
-#: apps/wiki/config.py:73
+#: apps/wiki/config.py:39 apps/wiki/config.py:40 apps/wiki/config.py:77
 msgid "Firefox 14"
 msgstr "Firefox 14"
 
-#: apps/wiki/config.py:39
-#: apps/wiki/config.py:40
+#: apps/wiki/config.py:41 apps/wiki/config.py:42
 msgid "Firefox 13"
 msgstr "Firefox 13"
 
-#: apps/wiki/config.py:41
-#: apps/wiki/config.py:42
-#: apps/wiki/config.py:76
+#: apps/wiki/config.py:43 apps/wiki/config.py:44 apps/wiki/config.py:80
 msgid "Firefox 12"
 msgstr "Firefox 12"
 
-#: apps/wiki/config.py:43
-#: apps/wiki/config.py:44
-#: apps/wiki/config.py:78
+#: apps/wiki/config.py:45 apps/wiki/config.py:46 apps/wiki/config.py:82
 msgid "Firefox 11"
 msgstr "Firefox 11"
 
-#: apps/wiki/config.py:45
-#: apps/wiki/config.py:46
+#: apps/wiki/config.py:47 apps/wiki/config.py:48
 msgid "Firefox ESR"
 msgstr "Firefox ESR"
 
-#: apps/wiki/config.py:47
-#: apps/wiki/config.py:48
-#: apps/wiki/config.py:82
+#: apps/wiki/config.py:49 apps/wiki/config.py:50 apps/wiki/config.py:86
 msgid "Firefox 9"
 msgstr "Firefox 9"
 
-#: apps/wiki/config.py:49
-#: apps/wiki/config.py:50
-#: apps/wiki/config.py:84
+#: apps/wiki/config.py:51 apps/wiki/config.py:52 apps/wiki/config.py:88
 msgid "Firefox 8"
 msgstr "Firefox 8"
 
-#: apps/wiki/config.py:51
-#: apps/wiki/config.py:52
-#: apps/wiki/config.py:86
+#: apps/wiki/config.py:53 apps/wiki/config.py:54 apps/wiki/config.py:90
 msgid "Firefox 7"
 msgstr "Firefox 7"
 
-#: apps/wiki/config.py:53
-#: apps/wiki/config.py:54
-#: apps/wiki/config.py:88
+#: apps/wiki/config.py:55 apps/wiki/config.py:56 apps/wiki/config.py:92
 msgid "Firefox 6"
 msgstr "Firefox 6"
 
-#: apps/wiki/config.py:55
-#: apps/wiki/config.py:56
-#: apps/wiki/config.py:90
+#: apps/wiki/config.py:57 apps/wiki/config.py:58 apps/wiki/config.py:94
 msgid "Firefox 5"
 msgstr "Firefox 5"
 
-#: apps/wiki/config.py:57
-#: apps/wiki/config.py:58
-#: apps/wiki/config.py:92
+#: apps/wiki/config.py:59 apps/wiki/config.py:60 apps/wiki/config.py:96
 msgid "Firefox 4"
 msgstr "Firefox 4"
 
-#: apps/wiki/config.py:59
-#: apps/wiki/config.py:60
+#: apps/wiki/config.py:61 apps/wiki/config.py:62
 msgid "Firefox 3.5-3.6"
 msgstr "Firefox 3.5-3.6"
 
-#: apps/wiki/config.py:62
-#: apps/wiki/config.py:63
+#: apps/wiki/config.py:64 apps/wiki/config.py:65
 msgid "Firefox 3.0"
 msgstr "Firefox 3.0"
 
-#: apps/wiki/config.py:65
+#: apps/wiki/config.py:67
+#, fuzzy
+msgid "Firefox 19 for Mobile"
+msgstr "Firefox 9 移动版"
+
+#: apps/wiki/config.py:69
 msgid "Firefox 18 for Mobile"
 msgstr "Firefox 18 移动版"
 
-#: apps/wiki/config.py:67
+#: apps/wiki/config.py:71
 msgid "Firefox 17 for Mobile"
 msgstr "Firefox 17 移动版"
 
-#: apps/wiki/config.py:69
+#: apps/wiki/config.py:73
 msgid "Firefox 16 for Mobile"
 msgstr "Firefox 16 移动版"
 
-#: apps/wiki/config.py:71
+#: apps/wiki/config.py:75
 msgid "Firefox 15 for Mobile"
 msgstr "Firefox 15 移动版"
 
-#: apps/wiki/config.py:73
+#: apps/wiki/config.py:77
 msgid "Firefox 14 for Mobile"
 msgstr "Firefox 14 移动版"
 
-#: apps/wiki/config.py:76
+#: apps/wiki/config.py:80
 msgid "Firefox 12 for Mobile"
 msgstr "Firefox 12 移动版"
 
-#: apps/wiki/config.py:78
+#: apps/wiki/config.py:82
 msgid "Firefox 11 for Mobile"
 msgstr "Firefox 11 移动版"
 
-#: apps/wiki/config.py:80
+#: apps/wiki/config.py:84
 msgid "Firefox 10"
 msgstr "Firefox 10"
 
-#: apps/wiki/config.py:80
+#: apps/wiki/config.py:84
 msgid "Firefox 10 for Mobile"
 msgstr "Firefox 10 移动版"
 
-#: apps/wiki/config.py:82
+#: apps/wiki/config.py:86
 msgid "Firefox 9 for Mobile"
 msgstr "Firefox 9 移动版"
 
-#: apps/wiki/config.py:84
+#: apps/wiki/config.py:88
 msgid "Firefox 8 for Mobile"
 msgstr "Firefox 8 移动版"
 
-#: apps/wiki/config.py:86
+#: apps/wiki/config.py:90
 msgid "Firefox 7 for Mobile"
 msgstr "Firefox 7 移动版"
 
-#: apps/wiki/config.py:88
+#: apps/wiki/config.py:92
 msgid "Firefox 6 for Mobile"
 msgstr "Firefox 6 移动版"
 
-#: apps/wiki/config.py:90
+#: apps/wiki/config.py:94
 msgid "Firefox 5 for Mobile"
 msgstr "Firefox 5 移动版"
 
-#: apps/wiki/config.py:92
+#: apps/wiki/config.py:96
 msgid "Firefox 4 for Mobile"
 msgstr "Firefox 4 移动版"
 
-#: apps/wiki/config.py:95
-#: apps/wiki/showfor.py:96
-#: apps/wiki/showfor.py:99
+#: apps/wiki/config.py:99 apps/wiki/showfor.py:96 apps/wiki/showfor.py:99
 msgid "Desktop:"
 msgstr "桌面版："
 
-#: apps/wiki/config.py:96
-#: apps/wiki/showfor.py:86
-#: apps/wiki/showfor.py:89
+#: apps/wiki/config.py:100 apps/wiki/showfor.py:86 apps/wiki/showfor.py:89
 msgid "Mobile:"
 msgstr "移动版︰"
 
-#: apps/wiki/config.py:107
+#: apps/wiki/config.py:111
 msgid "Windows"
 msgstr "Windows"
 
-#: apps/wiki/config.py:108
+#: apps/wiki/config.py:112
 msgid "Windows XP"
 msgstr "Windows XP"
 
-#: apps/wiki/config.py:109
+#: apps/wiki/config.py:113
 msgid "Windows 7/Vista"
 msgstr "Windows 7/Vista"
 
-#: apps/wiki/config.py:110
+#: apps/wiki/config.py:114
 msgid "Windows 8"
 msgstr "Windows 8"
 
-#: apps/wiki/config.py:111
+#: apps/wiki/config.py:115
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: apps/wiki/config.py:112
+#: apps/wiki/config.py:116
 msgid "Linux"
 msgstr "Linux"
 
-#: apps/wiki/config.py:114
+#: apps/wiki/config.py:118
 msgid "Android"
 msgstr "Android"
 
-#: apps/wiki/config.py:115
+#: apps/wiki/config.py:119
 msgid "Maemo"
 msgstr "Maemo"
 
-#: apps/wiki/config.py:117
+#: apps/wiki/config.py:121
 msgid "Desktop OS:"
 msgstr "桌面操作系统︰"
 
-#: apps/wiki/config.py:118
+#: apps/wiki/config.py:122
 msgid "Mobile OS:"
 msgstr "移动操作系统"
 
-#: apps/wiki/config.py:133
+#: apps/wiki/config.py:137
 msgid "Minor details that don't affect the instructions"
 msgstr "不影响说明的细微变化"
 
-#: apps/wiki/config.py:135
+#: apps/wiki/config.py:139
 msgid "Content changes that don't require immediate translation"
 msgstr "不需要立刻翻译的内容改动"
 
-#: apps/wiki/config.py:137
+#: apps/wiki/config.py:141
 msgid "Major content changes that will make older translations inaccurate"
 msgstr "大量的改动并可能造成原有翻译不准确"
 
-#: apps/wiki/config.py:143
+#: apps/wiki/config.py:147
 msgid "These minor changes are not important for localizers and they will not be notified."
 msgstr "这些细微的变化对本地化翻译并不重要，他们不需要收到通知。"
 
-#: apps/wiki/config.py:146
-msgid "This will notify localizers and translations will be marked as \"needing updates\" on dashboards. Most changes&mdash;updating an image, fixing {for} markup, adding or removing non-critical sections&mdash;should use this."
+#: apps/wiki/config.py:150
+msgid ""
+"This will notify localizers and translations will be marked as \"needing updates\" on dashboards. Most changes&mdash;updating an image, fixing {for} markup, adding or removing non-critical "
+"sections&mdash;should use this."
 msgstr "这将通知本地化人员，并且在状态面板上将翻译状态标记为“需要更新”。大多数变更——更新一个图像，修改 {for} 标记、添加或移除非关键的章节——都应使用此项。"
 
-#: apps/wiki/config.py:151
-msgid "This will notify localizers and translations will be marked \"out of date\" on dashboards. Translations will show a warning to users that they are out of date and that the English version is the most accurate. Use this when the old instructions are completely unusable."
+#: apps/wiki/config.py:155
+msgid ""
+"This will notify localizers and translations will be marked \"out of date\" on dashboards. Translations will show a warning to users that they are out of date and that the English version is the "
+"most accurate. Use this when the old instructions are completely unusable."
 msgstr "这将通知本地化人员，并且在状态面板上将翻译标记为“已过时”。翻译版本将显示一个警告，提示用户翻译已经过时并且英文版本是最准确的。当旧的使用说明完全无法使用时，请使用此项。"
 
-#: apps/wiki/config.py:166
+#: apps/wiki/config.py:170
 msgid "Troubleshooting"
 msgstr "疑难解答"
 
-#: apps/wiki/config.py:167
+#: apps/wiki/config.py:171
 msgid "How to"
 msgstr "如何"
 
-#: apps/wiki/config.py:168
+#: apps/wiki/config.py:172
 msgid "How to contribute"
 msgstr "如何贡献"
 
-#: apps/wiki/config.py:169
+#: apps/wiki/config.py:173
 msgid "Administration"
 msgstr "管理"
 
-#: apps/wiki/config.py:170
-#: templates/mobile/base-new.html:53
+#: apps/wiki/config.py:174 templates/mobile/base-new.html:53
 msgid "Navigation"
 msgstr "导航"
 
-#: apps/wiki/config.py:176
+#: apps/wiki/config.py:180
 msgid "%(old)s Redirect %(number)i"
 msgstr "%(old)s重定向%(number)i"
 
-#: apps/wiki/config.py:177
+#: apps/wiki/config.py:181
 msgid "%(old)s-redirect-%(number)i"
 msgstr "%(old)s-redirect-%(number)i"
 
@@ -4051,8 +3785,7 @@ msgstr "{title} 已被{creator}编辑"
 msgid "{title} is ready for review ({creator})"
 msgstr "{title} 正等待审核（{creator}）"
 
-#: apps/wiki/events.py:181
-#: apps/wiki/events.py:246
+#: apps/wiki/events.py:181 apps/wiki/events.py:246
 msgid "{title} has a revision ready for localization"
 msgstr "{title} 已有一个可用于本地化的修订版本"
 
@@ -4120,8 +3853,7 @@ msgstr "请至少选择一个主题。"
 msgid "Title of article"
 msgstr "文章标题"
 
-#: apps/wiki/forms.py:93
-#: apps/wiki/templates/wiki/translate.html:63
+#: apps/wiki/forms.py:93 apps/wiki/templates/wiki/translate.html:63
 msgid "Slug:"
 msgstr "缩略名："
 
@@ -4161,18 +3893,11 @@ msgstr "主题："
 msgid "Needs change:"
 msgstr "需要修改："
 
-#: apps/wiki/forms.py:139
-#: apps/wiki/forms.py:223
-#: apps/wiki/forms.py:279
-#: apps/wiki/forms.py:300
-#: apps/wiki/templates/wiki/revision.html:33
+#: apps/wiki/forms.py:139 apps/wiki/forms.py:223 apps/wiki/forms.py:279 apps/wiki/forms.py:300 apps/wiki/templates/wiki/revision.html:33
 msgid "Comment:"
 msgstr "评论："
 
-#: apps/wiki/forms.py:196
-#: apps/wiki/templates/wiki/review_revision.html:41
-#: apps/wiki/templates/wiki/review_translation.html:53
-#: apps/wiki/templates/wiki/translate.html:119
+#: apps/wiki/forms.py:196 apps/wiki/templates/wiki/review_revision.html:41 apps/wiki/templates/wiki/review_translation.html:53 apps/wiki/templates/wiki/translate.html:119
 #: apps/wiki/templates/wiki/includes/document_macros.html:147
 msgid "Keywords:"
 msgstr "关键词："
@@ -4181,8 +3906,7 @@ msgstr "关键词："
 msgid "Affects search results"
 msgstr "影响搜索结果"
 
-#: apps/wiki/forms.py:201
-#: apps/wiki/templates/wiki/translate.html:129
+#: apps/wiki/forms.py:201 apps/wiki/templates/wiki/translate.html:129
 msgid "Search result summary:"
 msgstr "搜索结果概要："
 
@@ -4226,7 +3950,7 @@ msgstr "若勾选，则代表这篇文档需要更新。"
 msgid "Please choose a category."
 msgstr "请选择一个分类。"
 
-#: apps/wiki/models.py:749
+#: apps/wiki/models.py:750
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "页面的修订必须基于英文文章。修订ID %(id)s 不符合此条件。"
 
@@ -4308,50 +4032,49 @@ msgctxt "KB Topic"
 msgid "browserID"
 msgstr "浏览器ID"
 
-#: apps/wiki/views.py:570
+#: apps/wiki/views.py:576
 msgid "You cannot translate this document."
 msgstr "您不能翻译这篇文章。"
 
-#: apps/wiki/views.py:828
+#: apps/wiki/views.py:837
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "感谢您提供的反馈信息！"
 
-#: apps/wiki/views.py:830
-#: apps/wiki/templates/wiki/includes/unhelpful_survey.html:5
+#: apps/wiki/views.py:839 apps/wiki/templates/wiki/includes/unhelpful_survey.html:5
 msgid "Sorry to hear that."
 msgstr "很抱歉听到这消息。"
 
-#: apps/wiki/views.py:852
+#: apps/wiki/views.py:861
 msgid "You already voted on this Article."
 msgstr "这篇文章您已经投过票了。"
 
-#: apps/wiki/views.py:880
+#: apps/wiki/views.py:889
 msgid "Thanks for making us better!"
 msgstr "感谢您让我们变得更好！"
 
 #. L10n: 'R' is the first letter of "Revision".
-#: apps/wiki/views.py:954
+#: apps/wiki/views.py:963
 msgctxt "revision_heading"
 msgid "R"
 msgstr "R"
 
-#: apps/wiki/views.py:955
+#: apps/wiki/views.py:964
 msgid "Revision %s"
 msgstr "修订 %s"
 
-#: apps/wiki/views.py:969
+#: apps/wiki/views.py:978
 msgid "Helpfulness Percentage"
 msgstr "有所帮助百分比"
 
-#: apps/wiki/views.py:1088
+#: apps/wiki/views.py:1097
 msgid "{users} added to the contributors successfully!"
 msgstr "{users} 已成功添加到贡献者中！"
 
-#: apps/wiki/views.py:1095
+#: apps/wiki/views.py:1104
 msgid "There were errors adding new contributors, see below."
 msgstr "添加新的贡献者时发生错误，详见下列信息。"
 
-#: apps/wiki/views.py:1111
+#: apps/wiki/views.py:1120
 msgid "{user} removed from the contributors successfully!"
 msgstr "{user} 已成功从贡献者中移除！"
 
@@ -4359,14 +4082,11 @@ msgstr "{user} 已成功从贡献者中移除！"
 msgid "Compare Revisions | {document}"
 msgstr "比较修订 | {document}"
 
-#: apps/wiki/templates/wiki/compare_revisions.html:7
-#: apps/wiki/templates/wiki/compare_revisions.html:15
+#: apps/wiki/templates/wiki/compare_revisions.html:7 apps/wiki/templates/wiki/compare_revisions.html:15
 msgid "Compare Revisions"
 msgstr "比较修订"
 
-#: apps/wiki/templates/wiki/compare_revisions.html:19
-#: apps/wiki/templates/wiki/review_revision.html:15
-#: apps/wiki/templates/wiki/review_translation.html:15
+#: apps/wiki/templates/wiki/compare_revisions.html:19 apps/wiki/templates/wiki/review_revision.html:15 apps/wiki/templates/wiki/review_translation.html:15
 #: apps/wiki/templates/wiki/includes/review_form.html:5
 msgid "Back to History"
 msgstr "返回历史记录"
@@ -4403,8 +4123,7 @@ msgstr "当前内容"
 msgid "You are about to permanently delete this document. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "您即将永久删除这篇文章。<strong>此操作无法撤销！</strong> 您确定要继续吗？"
 
-#: apps/wiki/templates/wiki/confirm_document_delete.html:37
-#: apps/wiki/templates/wiki/confirm_revision_delete.html:35
+#: apps/wiki/templates/wiki/confirm_document_delete.html:37 apps/wiki/templates/wiki/confirm_revision_delete.html:35
 msgid "Cancel and go back to document history"
 msgstr "取消并返回文章历史版本"
 
@@ -4424,15 +4143,11 @@ msgstr "您确定要从该文档的贡献者中移除 {user} 吗？"
 msgid "Remove contributor"
 msgstr "移除贡献者"
 
-#: apps/wiki/templates/wiki/confirm_remove_from_locale.html:3
-#: apps/wiki/templates/wiki/confirm_remove_from_locale.html:14
+#: apps/wiki/templates/wiki/confirm_remove_from_locale.html:3 apps/wiki/templates/wiki/confirm_remove_from_locale.html:14
 msgid "Remove {role}"
 msgstr "移除 {role}"
 
-#: apps/wiki/templates/wiki/confirm_remove_from_locale.html:4
-#: apps/wiki/templates/wiki/locale_details.html:6
-#: apps/wiki/templates/wiki/locale_list.html:5
-#: apps/wiki/templates/wiki/locale_list.html:10
+#: apps/wiki/templates/wiki/confirm_remove_from_locale.html:4 apps/wiki/templates/wiki/locale_details.html:6 apps/wiki/templates/wiki/locale_list.html:5 apps/wiki/templates/wiki/locale_list.html:10
 msgid "Locales"
 msgstr "语系"
 
@@ -4472,8 +4187,7 @@ msgstr "<strong>警告：</strong>曾有与此修订有关的这篇文章有帮�
 msgid "You are about to permanently delete this revision. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "您将要永久地删除此修订。<strong>此操作无法撤销！</strong> 您确定要继续吗？"
 
-#: apps/wiki/templates/wiki/document.html:12
-#: templates/base.html:15
+#: apps/wiki/templates/wiki/document.html:12 templates/base.html:15
 msgctxt "site_title"
 msgid "Mozilla Support"
 msgstr "Mozilla 技术支持"
@@ -4482,9 +4196,7 @@ msgstr "Mozilla 技术支持"
 msgid "Edit Article | {document}"
 msgstr "编辑文章 | {document}"
 
-#: apps/wiki/templates/wiki/edit.html:12
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:26
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:28
+#: apps/wiki/templates/wiki/edit.html:12 apps/wiki/templates/wiki/includes/sidebar_modules.html:26 apps/wiki/templates/wiki/includes/sidebar_modules.html:28
 #: apps/wiki/templates/wiki/includes/sidebar_modules.html:80
 msgid "Edit Article"
 msgstr "编辑文章"
@@ -4497,8 +4209,7 @@ msgstr "{title} <em>编辑中</em>"
 msgid "Edit Description"
 msgstr "编辑描述"
 
-#: apps/wiki/templates/wiki/edit.html:43
-#: apps/wiki/templates/wiki/translate.html:77
+#: apps/wiki/templates/wiki/edit.html:43 apps/wiki/templates/wiki/translate.html:77
 msgid "Save description"
 msgstr "保存描述"
 
@@ -4510,10 +4221,7 @@ msgstr "编辑内容"
 msgid "For help with writing articles, check out the <a href=\"%(url)s\">Support Document Guide</a>."
 msgstr "若需要撰写文章的帮助，请看看 <a href=\"%(url)s\">技术支持文章撰写指南</a>。"
 
-#: apps/wiki/templates/wiki/edit.html:70
-#: apps/wiki/templates/wiki/new_document.html:37
-#: apps/wiki/templates/wiki/translate.html:135
-#: apps/wiki/templates/wiki/includes/unhelpful_survey.html:15
+#: apps/wiki/templates/wiki/edit.html:70 apps/wiki/templates/wiki/new_document.html:37 apps/wiki/templates/wiki/translate.html:135 apps/wiki/templates/wiki/includes/unhelpful_survey.html:15
 msgid "characters remaining."
 msgstr "剩余字数。"
 
@@ -4549,8 +4257,7 @@ msgstr "从贡献者中移除用户"
 msgid "Add Contributor"
 msgstr "添加贡献者"
 
-#: apps/wiki/templates/wiki/landing.html:6
-#: templates/base.html:133
+#: apps/wiki/templates/wiki/landing.html:6 templates/base.html:133
 msgid "Help Articles"
 msgstr "帮助文章"
 
@@ -4630,12 +4337,8 @@ msgstr "建立新文章"
 msgid "Create a New Knowledge Base Article"
 msgstr "建立新的知识库文章"
 
-#: apps/wiki/templates/wiki/preview.html:3
-#: apps/wiki/templates/wiki/review_revision.html:37
-#: apps/wiki/templates/wiki/review_revision.html:72
-#: apps/wiki/templates/wiki/review_translation.html:82
-#: apps/wiki/templates/wiki/review_translation.html:117
-#: apps/wiki/templates/wiki/revision.html:90
+#: apps/wiki/templates/wiki/preview.html:3 apps/wiki/templates/wiki/review_revision.html:37 apps/wiki/templates/wiki/review_revision.html:72 apps/wiki/templates/wiki/review_translation.html:82
+#: apps/wiki/templates/wiki/review_translation.html:117 apps/wiki/templates/wiki/revision.html:90
 msgid "Article is for:"
 msgstr "文章包含："
 
@@ -4667,14 +4370,11 @@ msgstr "当前公开版本："
 msgid "Submitted revision:"
 msgstr "已提交的修订："
 
-#: apps/wiki/templates/wiki/review_revision.html:27
-#: apps/wiki/templates/wiki/revision.html:69
+#: apps/wiki/templates/wiki/review_revision.html:27 apps/wiki/templates/wiki/revision.html:69
 msgid "Revision Source"
 msgstr "修订来源"
 
-#: apps/wiki/templates/wiki/review_revision.html:33
-#: apps/wiki/templates/wiki/review_translation.html:78
-#: apps/wiki/templates/wiki/revision.html:75
+#: apps/wiki/templates/wiki/review_revision.html:33 apps/wiki/templates/wiki/review_translation.html:78 apps/wiki/templates/wiki/revision.html:75
 msgid "Revision Content"
 msgstr "修订内容"
 
@@ -4682,9 +4382,7 @@ msgstr "修订内容"
 msgid "This document does not have a current revision."
 msgstr "此文件目前没有修订内容。"
 
-#: apps/wiki/templates/wiki/review_revision.html:45
-#: apps/wiki/templates/wiki/review_translation.html:60
-#: apps/wiki/templates/wiki/includes/document_macros.html:153
+#: apps/wiki/templates/wiki/review_revision.html:45 apps/wiki/templates/wiki/review_translation.html:60 apps/wiki/templates/wiki/includes/document_macros.html:153
 msgid "Search results summary:"
 msgstr "搜索结果概要："
 
@@ -4736,14 +4434,11 @@ msgstr "全文来源"
 msgid "The {default_locale} version has no approved content to show."
 msgstr "本篇文章的{default_locale}版目前没有已通过审核的内容。"
 
-#: apps/wiki/templates/wiki/review_translation.html:46
-#: apps/wiki/templates/wiki/translate.html:141
+#: apps/wiki/templates/wiki/review_translation.html:46 apps/wiki/templates/wiki/translate.html:141
 msgid "Approved {default_locale} version:"
 msgstr "通过审核的{default_locale}版本："
 
-#: apps/wiki/templates/wiki/review_translation.html:47
-#: apps/wiki/templates/wiki/review_translation.html:51
-#: apps/wiki/templates/wiki/includes/document_macros.html:132
+#: apps/wiki/templates/wiki/review_translation.html:47 apps/wiki/templates/wiki/review_translation.html:51 apps/wiki/templates/wiki/includes/document_macros.html:132
 #: apps/wiki/templates/wiki/includes/document_macros.html:144
 msgid "Revision {id} by {user} on {date}"
 msgstr "由{user}于{date}提交的修订 {id}"
@@ -4793,8 +4488,7 @@ msgstr "修订编号："
 msgid "Creator:"
 msgstr "创建者："
 
-#: apps/wiki/templates/wiki/revision.html:37
-#: apps/wiki/templates/wiki/revision.html:46
+#: apps/wiki/templates/wiki/revision.html:37 apps/wiki/templates/wiki/revision.html:46
 msgid "Reviewed:"
 msgstr "已审核："
 
@@ -4814,8 +4508,7 @@ msgstr "审核通过？"
 msgid "Is current revision?"
 msgstr "这是当前最新的版本吗？"
 
-#: apps/wiki/templates/wiki/revision.html:63
-#: apps/wiki/templates/wiki/includes/revision_list.html:97
+#: apps/wiki/templates/wiki/revision.html:63 apps/wiki/templates/wiki/includes/revision_list.html:97
 msgid "Edit article based on this revision"
 msgstr "基于这个修订版本编辑文章"
 
@@ -4835,12 +4528,8 @@ msgstr "选择欲翻译的目标语言："
 msgid "Translate Article | {document}"
 msgstr "翻译文章 | {document}"
 
-#: apps/wiki/templates/wiki/translate.html:10
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:35
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:37
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:44
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:46
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:85
+#: apps/wiki/templates/wiki/translate.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:35 apps/wiki/templates/wiki/includes/sidebar_modules.html:37
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:44 apps/wiki/templates/wiki/includes/sidebar_modules.html:46 apps/wiki/templates/wiki/includes/sidebar_modules.html:85
 #: apps/wiki/templates/wiki/includes/sidebar_modules.html:90
 msgid "Translate Article"
 msgstr "翻译文章"
@@ -4914,7 +4603,9 @@ msgid "(Redirected from <a href=\"{href}\">{title}</a>)"
 msgstr "（重定向自<a href=\"{href}\">{title}</a>）"
 
 #: apps/wiki/templates/wiki/includes/document_macros.html:37
-msgid "<p>This article may be out of date.</p> <p> An important change has been made to the English article on which this is based. Until this page is updated, you might find this helpful: <a href=\"%(url)s\">%(title)s</a> </p>"
+msgid ""
+"<p>This article may be out of date.</p> <p> An important change has been made to the English article on which this is based. Until this page is updated, you might find this helpful: <a href=\"%(url)"
+"s\">%(title)s</a> </p>"
 msgstr "<p>这篇文章可能已经过时。</p> <p> 这篇文章的原文版本已经做出了重大修订。在此页面更新前，这个对您也许有用：<a href=\"%(url)s\">%(title)s</a> </p>"
 
 #: apps/wiki/templates/wiki/includes/document_macros.html:50
@@ -4946,8 +4637,7 @@ msgstr "请参考 <a href=\"%(url)s\">历史记录</a> 以自现有的未经审�
 msgid "Change Revisions"
 msgstr "比较修订"
 
-#: apps/wiki/templates/wiki/includes/document_macros.html:128
-#: apps/wiki/templates/wiki/includes/document_macros.html:140
+#: apps/wiki/templates/wiki/includes/document_macros.html:128 apps/wiki/templates/wiki/includes/document_macros.html:140
 msgid "Revision {num}:"
 msgstr "修订版本 {num}："
 
@@ -4995,13 +4685,11 @@ msgstr "此页面将来有任何更新时请通知我"
 msgid "Help with:"
 msgstr "帮助："
 
-#: apps/wiki/templates/wiki/includes/document_macros.html:270
-#: apps/wiki/templates/wiki/mobile/includes/document_macros.html:3
+#: apps/wiki/templates/wiki/includes/document_macros.html:270 apps/wiki/templates/wiki/mobile/includes/document_macros.html:3
 msgid "Was this article helpful?"
 msgstr "这篇文章对您有帮助吗？"
 
-#: apps/wiki/templates/wiki/includes/document_macros.html:283
-#: apps/wiki/templates/wiki/mobile/includes/document_macros.html:18
+#: apps/wiki/templates/wiki/includes/document_macros.html:283 apps/wiki/templates/wiki/mobile/includes/document_macros.html:18
 msgid "Please wait..."
 msgstr "请稍候..."
 
@@ -5098,7 +4786,9 @@ msgid "Defer this Revision"
 msgstr "待定此修订"
 
 #: apps/wiki/templates/wiki/includes/review_form.html:76
-msgid "Thanks for taking the time to review these changes. Please thank the editor and then give specific, constructive feedback about what you feel needs to change in order for the revision to be acceptable."
+msgid ""
+"Thanks for taking the time to review these changes. Please thank the editor and then give specific, constructive feedback about what you feel needs to change in order for the revision to be "
+"acceptable."
 msgstr "感谢您花时间审核这些修订。也请您向编辑者说声谢谢，并请您对怎样修改才能达到可接受的标准给出一些明确的、有建设性的反馈意见。"
 
 #: apps/wiki/templates/wiki/includes/review_form.html:89
@@ -5109,13 +4799,11 @@ msgstr "待定"
 msgid "Show Helpfulness Votes Chart"
 msgstr "显示有所帮助投票的图表"
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:9
-#: apps/wiki/templates/wiki/includes/revision_list.html:110
+#: apps/wiki/templates/wiki/includes/revision_list.html:9 apps/wiki/templates/wiki/includes/revision_list.html:110
 msgid "Compare Selected Translations"
 msgstr "比较所选择的翻译"
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:9
-#: apps/wiki/templates/wiki/includes/revision_list.html:110
+#: apps/wiki/templates/wiki/includes/revision_list.html:9 apps/wiki/templates/wiki/includes/revision_list.html:110
 msgid "Compare Selected Revisions"
 msgstr "比较所选择的修订"
 
@@ -5162,8 +4850,7 @@ msgstr "已审核"
 msgid "This revision is ready for localization."
 msgstr "此修订可进行本地化。"
 
-#: apps/wiki/templates/wiki/includes/revision_list.html:85
-#: apps/wiki/templates/wiki/includes/revision_list.html:87
+#: apps/wiki/templates/wiki/includes/revision_list.html:85 apps/wiki/templates/wiki/includes/revision_list.html:87
 msgid "This revision is not ready for localization."
 msgstr "此修订不可进行本地化。"
 
@@ -5175,13 +4862,11 @@ msgstr "删除此修订"
 msgid "This document has no revisions."
 msgstr "这篇文章没有修订记录。"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:20
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:75
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:20 apps/wiki/templates/wiki/includes/sidebar_modules.html:75
 msgid "Discussion"
 msgstr "讨论"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:52
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:95
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:52 apps/wiki/templates/wiki/includes/sidebar_modules.html:95
 msgid "Show History"
 msgstr "显示历史"
 
@@ -5225,13 +4910,13 @@ msgstr "告诉我们更多信息。"
 msgid "Please provide more details"
 msgstr "请提供更多详情"
 
-#: apps/wiki/templates/wiki/mobile/document-new.html:8
-#: apps/wiki/templates/wiki/mobile/document-old.html:7
+#: apps/wiki/templates/wiki/mobile/document-new.html:8 apps/wiki/templates/wiki/mobile/document-old.html:7
 msgid "{t} | {c}"
 msgstr "{t} | {c}"
 
 #: templates/base.html:80
-msgid "This is a staging site. The production site is <a href=\"http://support.mozilla.org\">here</a>."
+#, fuzzy
+msgid "This is a staging site, the content gets overwritten on the 1st of every month.<br>The production site is <a href=\"http://support.mozilla.org\">here</a>."
 msgstr "这里是一个临时测试版的网站。正式的网站在<a href=\"http://support.mozilla.com\">此处</a>。"
 
 #: templates/base.html:91
@@ -5246,25 +4931,19 @@ msgstr "点击这里打开本站的移动版本。"
 msgid "Portions of this content are &copy;1998–2012 <br>by individual mozilla.org contributors. Content <br>available under a Creative Commons license."
 msgstr "部份内容系版权所有©1998–2012，<br>由不同的 mozilla.org 贡献者所创作。 <br>内容遵循 Creative Commons 授权条款进行授权。"
 
-#: templates/base.html:186
-#: templates/global/menu_links.html:63
+#: templates/base.html:186 templates/global/menu_links.html:63
 msgid "Contact Us"
 msgstr "联络我们"
 
-#: templates/base.html:187
-#: templates/global/copyright.html:4
-#: templates/mobile/base-old.html:101
+#: templates/base.html:187 templates/global/copyright.html:4 templates/mobile/base-old.html:101
 msgid "Privacy Policy"
 msgstr "隐私政策"
 
-#: templates/base.html:188
-#: templates/global/copyright.html:5
-#: templates/mobile/base-old.html:102
+#: templates/base.html:188 templates/global/copyright.html:5 templates/mobile/base-old.html:102
 msgid "Legal Notices"
 msgstr "法律条款"
 
-#: templates/base.html:189
-#: templates/global/copyright.html:6
+#: templates/base.html:189 templates/global/copyright.html:6
 msgid "Report Trademark Abuse"
 msgstr "报告商标滥用"
 
@@ -5277,8 +4956,12 @@ msgid "Switch to mobile site"
 msgstr "切换到移动版"
 
 #: templates/global/copyright.html:11
-msgid "Except where otherwise <a href=\"http://www.mozilla.org/about/legal.html#site\">noted</a>, content on this site is licensed under the <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> Creative Commons Attribution Share-Alike License v3.0 </a> or any later version."
-msgstr "除非另有 <a href=\"http://www.mozilla.com/about/legal.html#site\">指明</a>，本站内容皆以 <br/><strong><a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">知识共享-署名-相同方式分享 3.0</a></strong> 或更新版本授权分享。"
+msgid ""
+"Except where otherwise <a href=\"http://www.mozilla.org/about/legal.html#site\">noted</a>, content on this site is licensed under the <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/"
+"\"> Creative Commons Attribution Share-Alike License v3.0 </a> or any later version."
+msgstr ""
+"除非另有 <a href=\"http://www.mozilla.com/about/legal.html#site\">指明</a>，本站内容皆以 <br/><strong><a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">知识共享-署名-相同方式分享 3.0</a></"
+"strong> 或更新版本授权分享。"
 
 #: templates/global/footer.html:6
 msgid "Back to home page"
@@ -5296,15 +4979,11 @@ msgstr "切换语言"
 msgid "Back to Mozilla.com"
 msgstr "回到 Mozilla.com"
 
-#: templates/global/header.html:8
-#: templates/global/minimal-header.html:2
+#: templates/global/header.html:8 templates/global/minimal-header.html:2
 msgid "visit <span>mozilla.org</span>"
 msgstr "访问 <span>mozilla.org</span>"
 
-#: templates/global/menu_links.html:3
-#: templates/global/menu_links.html:5
-#: templates/global/menu_links.html:19
-#: templates/global/mobile/header.html:4
+#: templates/global/menu_links.html:3 templates/global/menu_links.html:5 templates/global/menu_links.html:19 templates/global/mobile/header.html:4
 msgid "Features"
 msgstr "特性"
 
@@ -5356,13 +5035,11 @@ msgstr "参与"
 msgid "FAQ"
 msgstr "常见问题"
 
-#: templates/global/menu_links.html:25
-#: templates/global/menu_links.html:64
+#: templates/global/menu_links.html:25 templates/global/menu_links.html:64
 msgid "Blog"
 msgstr "博客"
 
-#: templates/global/menu_links.html:30
-#: templates/global/mobile/header.html:6
+#: templates/global/menu_links.html:30 templates/global/mobile/header.html:6
 msgid "Add-ons"
 msgstr "附加组件"
 
@@ -5406,8 +5083,7 @@ msgstr "移动版附加组件"
 msgid "Developer Hub"
 msgstr "开发者中心"
 
-#: templates/global/menu_links.html:46
-#: templates/global/mobile/header.html:7
+#: templates/global/menu_links.html:46 templates/global/mobile/header.html:7
 msgid "Support"
 msgstr "技术支持"
 
@@ -5463,8 +5139,7 @@ msgstr "访问 Mozilla"
 msgid "Menu"
 msgstr "菜单"
 
-#: templates/includes/common_macros.html:29
-#: templates/mobile/base-new.html:51
+#: templates/includes/common_macros.html:29 templates/mobile/base-new.html:51
 msgid "Ask a question"
 msgstr "我要提问"
 
@@ -5472,13 +5147,11 @@ msgstr "我要提问"
 msgid "View Profile"
 msgstr "查看个人信息"
 
-#: templates/includes/common_macros.html:35
-#: templates/mobile/base-new.html:68
+#: templates/includes/common_macros.html:35 templates/mobile/base-new.html:68
 msgid "Dashboard"
 msgstr "状态面板"
 
-#: templates/includes/common_macros.html:36
-#: templates/mobile/base-new.html:69
+#: templates/includes/common_macros.html:36 templates/mobile/base-new.html:69
 msgid "Settings"
 msgstr "设置"
 
@@ -5486,8 +5159,7 @@ msgstr "设置"
 msgid "Sign In / Register"
 msgstr "登录/注册"
 
-#: templates/includes/common_macros.html:78
-#: templates/includes/common_macros.html:95
+#: templates/includes/common_macros.html:78 templates/includes/common_macros.html:95
 msgid "For Contributors"
 msgstr "贡献者专区"
 
@@ -5527,17 +5199,11 @@ msgstr "Karma 状态面板"
 msgid "Other Languages"
 msgstr "其他语言"
 
-#: templates/includes/quick_paginator.html:5
-#: templates/includes/simple_paginator.html:5
-#: templates/includes/mobile/paginator.html:5
-#: templates/includes/mobile/paginator.html:7
+#: templates/includes/quick_paginator.html:5 templates/includes/simple_paginator.html:5 templates/includes/mobile/paginator.html:5 templates/includes/mobile/paginator.html:7
 msgid "Newer"
 msgstr "较新"
 
-#: templates/includes/quick_paginator.html:10
-#: templates/includes/simple_paginator.html:10
-#: templates/includes/mobile/paginator.html:15
-#: templates/includes/mobile/paginator.html:17
+#: templates/includes/quick_paginator.html:10 templates/includes/simple_paginator.html:10 templates/includes/mobile/paginator.html:15 templates/includes/mobile/paginator.html:17
 msgid "Older"
 msgstr "较旧"
 
@@ -5554,8 +5220,7 @@ msgstr "上一个"
 msgid "Next"
 msgstr "下一个"
 
-#: templates/mobile/base-new.html:16
-#: templates/mobile/base-old.html:13
+#: templates/mobile/base-new.html:16 templates/mobile/base-old.html:13
 msgctxt "site_title"
 msgid "Firefox Help"
 msgstr "Firefox 帮助"
@@ -5608,8 +5273,7 @@ msgstr "Firefox 帮助首页"
 msgid "Couldn't find what you were looking for?"
 msgstr "找不到需要的信息吗？"
 
-#: templates/mobile/base-old.html:67
-#: templates/mobile/base-old.html:72
+#: templates/mobile/base-old.html:67 templates/mobile/base-old.html:72
 msgid "Ask a Question"
 msgstr "向网友求救"
 
@@ -5687,8 +5351,8 @@ msgstr "查看全站"
 #, fuzzy
 #~ msgid "Sign in with <strong>Twitter</strong>"
 #~ msgstr "登录 <mark>Twitter</mark>"
-#~ msgctxt "army_stats"
 
+#~ msgctxt "army_stats"
 #~ msgid "Last Month"
 #~ msgstr "上月"
 
@@ -5794,13 +5458,11 @@ msgstr "查看全站"
 
 #, fuzzy
 #~ msgctxt "DB: topics.Topic.title"
-
 #~ msgid "Firefox Home for iOS"
 #~ msgstr "Firefox Sync 帮助"
 
 #, fuzzy
 #~ msgctxt "DB: topics.Topic.description"
-
 #~ msgid "Firefox Home for iOS"
 #~ msgstr "Firefox Sync 帮助"
 
@@ -5991,7 +5653,6 @@ msgstr "查看全站"
 #~ msgstr "您需要什么帮助吗？"
 
 #~ msgid "Your question is now visible on the site!"
-
 #~ msgid_plural "Your questions are now visible on the site!"
 #~ msgstr[0] "您在站点提出的问题现在已经可见！"
 
@@ -6067,20 +5728,20 @@ msgstr "查看全站"
 
 #~ msgid "Sunbird"
 #~ msgstr "Sunbird"
-#~ msgctxt "KB Topic"
 
+#~ msgctxt "KB Topic"
 #~ msgid "ui"
 #~ msgstr "ui"
-#~ msgctxt "KB Topic"
 
+#~ msgctxt "KB Topic"
 #~ msgid "addon"
 #~ msgstr "附加组件"
-#~ msgctxt "KB Topic"
 
+#~ msgctxt "KB Topic"
 #~ msgid "Firefox 3.6.13"
 #~ msgstr "Firefox 3.6.13"
-#~ msgctxt "KB Topic"
 
+#~ msgctxt "KB Topic"
 #~ msgid "Firefox 4.0"
 #~ msgstr "Firefox 4.0"
 
@@ -6151,8 +5812,8 @@ msgstr "查看全站"
 
 #~ msgid "Operating systems:"
 #~ msgstr "操作系统："
-#~ msgctxt "First letter of 'Localizable'"
 
+#~ msgctxt "First letter of 'Localizable'"
 #~ msgid "L"
 #~ msgstr "L"
 
@@ -6261,20 +5922,20 @@ msgstr "查看全站"
 
 #~ msgid "Forum"
 #~ msgstr "讨论区"
-#~ msgctxt "locale"
 
+#~ msgctxt "locale"
 #~ msgid "Stop getting emailed when English revisions are approved"
 #~ msgstr "当简体中文修订被审核通过时不再用电子邮件通知"
-#~ msgctxt "locale"
 
+#~ msgctxt "locale"
 #~ msgid "Get emailed when English revisions are approved"
 #~ msgstr "当简体中文修订被审核通过时用电子邮件通知"
-#~ msgctxt "locale"
 
+#~ msgctxt "locale"
 #~ msgid "Stop getting emailed when English reviews are waiting"
 #~ msgstr "当简体中文中有等待审核的文章时不再用电子邮件通知"
-#~ msgctxt "locale"
 
+#~ msgctxt "locale"
 #~ msgid "Get emailed when English reviews are waiting"
 #~ msgstr "当简体中文中有等待审核的文章时用电子邮件通知"
 
