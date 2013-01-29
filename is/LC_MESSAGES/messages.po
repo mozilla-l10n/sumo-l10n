@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-09 10:03-0700\n"
+"POT-Creation-Date: 2013-01-29 13:17-0700\n"
 "PO-Revision-Date: 2013-01-15 22:49+0200\n"
 "Last-Translator: Kristján Bjarni <kristjanbjarni@gmail.com>\n"
 "Language-Team: Icelandic\n"
@@ -92,36 +92,33 @@ msgstr "Veldu tíst fyrir neðan"
 msgid "Respond to the tweet!"
 msgstr "Svaraðu tístinu!"
 
-#: apps/customercare/templates/customercare/landing.html:36
-msgid "Total tweets to answer"
+#: apps/customercare/templates/customercare/landing.html:37
+#, fuzzy
+msgid "Total tweets to answer: <strong>%(goal)s</strong>"
 msgstr "Fjöldi tísta sem þarf að svara"
 
-#: apps/customercare/templates/customercare/landing.html:38
-msgid "<strong>%(recent_replied_count)s tweets</strong> in the last"
-msgstr "<strong>%(recent_replied_count)s tíst</strong> seinustu"
+#. Refers to the number of tweets that have had replies.
+#: apps/customercare/templates/customercare/landing.html:43
+#, fuzzy
+msgid "<strong>%(count)s tweet</strong> in the last <strong>24 hours</strong> has a reply"
+msgid_plural "<strong>%(count)s tweets</strong> in the last <strong>24 hours</strong> have replies"
+msgstr[0] "<strong>%(recent_replied_count)s tíst</strong> seinustu"
+msgstr[1] "<strong>%(recent_replied_count)s tíst</strong> seinustu"
 
-#: apps/customercare/templates/customercare/landing.html:39
-msgid "24 hours"
-msgstr "24 tíma"
-
-#: apps/customercare/templates/customercare/landing.html:39
-msgid "have replies"
-msgstr "eru með svör"
-
-#: apps/customercare/templates/customercare/landing.html:56
+#: apps/customercare/templates/customercare/landing.html:66
 msgid "Refresh"
 msgstr "Endurlesa"
 
-#: apps/customercare/templates/customercare/landing.html:61
+#: apps/customercare/templates/customercare/landing.html:71
 msgid "Sign out"
 msgstr "Útskráning"
 
-#: apps/customercare/templates/customercare/landing.html:64 apps/customercare/templates/customercare/twitter_modal.html:15 apps/users/templates/users/mobile/login.html:7
-#: apps/users/templates/users/mobile/includes/macros.html:19 templates/mobile/base-new.html:72
+#: apps/customercare/templates/customercare/landing.html:74 apps/customercare/templates/customercare/twitter_modal.html:15 apps/users/templates/users/mobile/login.html:7
+#: apps/users/templates/users/mobile/includes/macros.html:19 templates/mobile/base.html:77
 msgid "Sign in"
 msgstr "Innskráning"
 
-#: apps/customercare/templates/customercare/landing.html:74
+#: apps/customercare/templates/customercare/landing.html:84
 msgid ""
 "We couldn't find any matching tweets for %(language)s at this time. Please check again later, choose a different tweet type from the menu above, or view tweets for other languages by using the "
 "language selector at the bottom of the page."
@@ -129,11 +126,11 @@ msgstr ""
 "Ekki tókst að finna tíst sem pössuðu við %(language)s. Reyndu aftur seinna, veldu annað tíst frá valmyndinni fyrir ofan, eða skoðaðu tíst fyrir önnur tungumál með því að nota tungumála valmyndina "
 "neðst á síðunni."
 
-#: apps/customercare/templates/customercare/landing.html:95
+#: apps/customercare/templates/customercare/landing.html:105
 msgid "Top Contributors Last Week"
 msgstr "Topp þátttakendur seinustu viku"
 
-#: apps/customercare/templates/customercare/landing.html:101
+#: apps/customercare/templates/customercare/landing.html:111
 msgid "No recent contributions"
 msgstr "Engar nýlegar breytingar"
 
@@ -579,7 +576,7 @@ msgid "Edit"
 msgstr "Breyta"
 
 #: apps/dashboards/templates/dashboards/includes/kb_readout.html:4 apps/wiki/templates/wiki/includes/sidebar_modules.html:13 apps/wiki/templates/wiki/includes/sidebar_modules.html:15
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:70
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:79
 msgid "Article"
 msgstr "Síða"
 
@@ -620,7 +617,7 @@ msgstr "Bíð eftir yfirlestri"
 msgid "Ready for localization"
 msgstr "Tilbúið fyrir þýðingu"
 
-#: apps/dashboards/templates/dashboards/includes/macros.html:152 apps/search/templates/search/results.html:58
+#: apps/dashboards/templates/dashboards/includes/macros.html:152 apps/search/templates/search/results.html:62
 msgid "All Products"
 msgstr "Allar vörur"
 
@@ -628,7 +625,7 @@ msgstr "Allar vörur"
 #: apps/products/templates/products/documents.html:14 apps/products/templates/products/product.html:6 apps/products/templates/products/product.html:9 apps/products/templates/products/product.html:16
 #: apps/products/templates/products/includes/product_macros.html:12 apps/products/templates/products/includes/product_macros.html:36 apps/products/templates/products/mobile/documents.html:8
 #: apps/products/templates/products/mobile/product.html:3 apps/products/templates/products/mobile/product.html:8 apps/products/templates/products/mobile/products.html:13
-#: apps/search/templates/search/results.html:64 apps/wiki/templates/wiki/document.html:12
+#: apps/search/templates/search/results.html:68 apps/wiki/templates/wiki/document.html:12
 msgctxt "DB: products.Product.title"
 msgid "None"
 msgstr "Ekkert"
@@ -1022,8 +1019,7 @@ msgid "Media Gallery Search"
 msgstr "Leita í myndasafni"
 
 #: apps/gallery/templates/gallery/search.html:7 apps/search/templates/search/base.html:4 apps/search/templates/search/basic-form.html:22 apps/search/templates/search/basic-form.html:38
-#: apps/search/templates/search/basic-form.html:51 apps/search/templates/search/mobile/down.html:3 apps/search/templates/search/mobile/results-new.html:3
-#: apps/search/templates/search/mobile/results-old.html:3 templates/includes/common_macros.html:18
+#: apps/search/templates/search/basic-form.html:51 apps/search/templates/search/mobile/down.html:3 apps/search/templates/search/mobile/results.html:4 templates/includes/common_macros.html:18
 msgid "Search"
 msgstr "Leita"
 
@@ -1230,7 +1226,7 @@ msgstr "Þjónustuspjallsvæði fyrir Karma skjáborð"
 msgid "Period Total"
 msgstr "Heildarfjöldi tímabils"
 
-#: apps/karma/templates/karma/dashboards/questions.html:30 apps/search/templates/search/mobile/results-new.html:17
+#: apps/karma/templates/karma/dashboards/questions.html:30 apps/search/templates/search/mobile/results.html:20
 msgid "Questions"
 msgstr "Spurningar"
 
@@ -1758,11 +1754,11 @@ msgstr "Umræðuefni"
 msgid "Products and Services"
 msgstr "Vörur og þjónustur"
 
-#: apps/landings/templates/landings/home.html:25 templates/base.html:135
+#: apps/landings/templates/landings/home.html:25 templates/base.html:134
 msgid "Mozilla News"
 msgstr "Mozilla fréttir"
 
-#: apps/landings/templates/landings/home.html:31 templates/base.html:136
+#: apps/landings/templates/landings/home.html:31 templates/base.html:135
 msgid "Help Other Users"
 msgstr "Hjálpa öðrum notendum"
 
@@ -1770,73 +1766,13 @@ msgstr "Hjálpa öðrum notendum"
 msgid "Participate and help other users – <a href=\"%(url)s\"> get started </a>"
 msgstr "Taktu þátt og hjálpaðu öðrum notendum - <a href=\"%(url)s\"> byrja</a>"
 
-#: apps/landings/templates/landings/home.html:40 templates/base.html:137
+#: apps/landings/templates/landings/home.html:40 templates/base.html:136
 msgid "Suggestion Box"
 msgstr "Hugmyndabox"
 
 #: apps/landings/templates/landings/home.html:43
 msgid "Your input helps make Mozilla better. <a href=\"%(url)s\"> Give us your feedback </a>"
 msgstr "Þitt inntak hjálpar okkur við að gera Mozilla betri. <a href=\"%(url)s\"> Sendu okkur þín viðbrögð </a>"
-
-#: apps/landings/templates/landings/mobile/ask.html:3
-msgid "Join the Discussion"
-msgstr "Taka þátt í umræðu"
-
-#: apps/landings/templates/landings/mobile/base.html:13
-msgid "Common Questions"
-msgstr "Algengar spurningar"
-
-#: apps/landings/templates/landings/mobile/feedback.html:3
-msgid "Feedback"
-msgstr "Viðbrögð"
-
-#: apps/landings/templates/landings/mobile/firefox.html:3
-msgid "Firefox Product Support"
-msgstr "Firefox aðstoð við vöru"
-
-#: apps/landings/templates/landings/mobile/kb.html:3
-msgid "Mozilla Knowledge Base"
-msgstr "Mozilla þekkingargrunnur"
-
-#: apps/landings/templates/landings/mobile/marketplace.html:3
-msgid "Marketplace Home Page"
-msgstr "Heimasíða Marketplace"
-
-#: apps/landings/templates/landings/mobile/marketplace.html:5
-msgid "Help <span>for Marketplace</span>"
-msgstr "Hjálp <span>fyrir Marketplace</span>"
-
-#: apps/landings/templates/landings/mobile/mobile.html:3
-msgid "Firefox for Mobile Support Home Page"
-msgstr "Hjálparsíða fyrir Firefox fyrir farsíma"
-
-#: apps/landings/templates/landings/mobile/mobile.html:5 templates/mobile/base-new.html:6 templates/mobile/base-old.html:6
-msgid "Firefox Help <span>for Mobile</span>"
-msgstr "Firefox hjálp <span>fyrir farsíma</span>"
-
-#: apps/landings/templates/landings/mobile/old-home.html:3
-msgid "Firefox Support Home Page"
-msgstr "Hjálparsíða fyrir Firefox"
-
-#: apps/landings/templates/landings/mobile/old-home.html:5 apps/search/templates/search/plugin.html:3 templates/base.html:18 templates/mobile/base-new.html:19 templates/mobile/base-old.html:16
-msgid "Firefox Help"
-msgstr "Firefox hjálp"
-
-#: apps/landings/templates/landings/mobile/participate.html:3 templates/global/menu_links.html:58
-msgid "Participate"
-msgstr "Taka þátt"
-
-#: apps/landings/templates/landings/mobile/products.html:3
-msgid "Mozilla Product Support"
-msgstr "Mozilla aðstoð við forrit"
-
-#: apps/landings/templates/landings/mobile/sync.html:3
-msgid "Firefox Sync Support Home Page"
-msgstr "Hjálparsíða fyrir Firefox Sync"
-
-#: apps/landings/templates/landings/mobile/sync.html:5
-msgid "Firefox Help <span>for Sync</span>"
-msgstr "Firefox hjálp <span>fyrir Sync</span>"
 
 #: apps/messages/forms.py:8
 msgid "username1, username2,..."
@@ -1888,7 +1824,7 @@ msgstr "Ertu viss um að þú viljir eyða þessum skilaboðum?"
 msgid "Are you sure you want to delete this message?"
 msgstr "Ertu viss um að þú viljir eyða þessum skilaboðum?"
 
-#: apps/messages/templates/messages/inbox.html:3 apps/messages/templates/messages/includes/macros.html:22 templates/includes/common_macros.html:42 templates/mobile/base-new.html:63
+#: apps/messages/templates/messages/inbox.html:3 apps/messages/templates/messages/includes/macros.html:22 templates/includes/common_macros.html:42 templates/mobile/base.html:68
 msgid "Inbox"
 msgstr "Innhólf"
 
@@ -1944,7 +1880,7 @@ msgstr "Forskoðun pósts:"
 #: apps/products/templates/products/documents.html:7 apps/products/templates/products/documents.html:10 apps/products/templates/products/documents.html:23
 #: apps/products/templates/products/documents.html:33 apps/products/templates/products/product.html:44 apps/products/templates/products/mobile/documents.html:5
 #: apps/products/templates/products/mobile/documents.html:8 apps/products/templates/products/mobile/documents.html:15 apps/products/templates/products/mobile/documents.html:49
-#: apps/products/templates/products/mobile/product.html:16 apps/topics/templates/topics/topic.html:6 apps/topics/templates/topics/includes/topic_macros.html:31
+#: apps/products/templates/products/mobile/product.html:34 apps/topics/templates/topics/topic.html:6 apps/topics/templates/topics/includes/topic_macros.html:31
 #: apps/topics/templates/topics/includes/topic_macros.html:58 apps/wiki/templates/wiki/landing.html:25
 msgctxt "DB: topics.Topic.title"
 msgid "None"
@@ -1959,8 +1895,8 @@ msgstr "{product} Hjálp"
 msgid "Refine and Focus"
 msgstr "Stilla og skilgreina"
 
-#: apps/products/templates/products/documents.html:48 apps/products/templates/products/mobile/documents.html:31 apps/topics/templates/topics/topic.html:40
-#: apps/topics/templates/topics/includes/topic_macros.html:10
+#: apps/products/templates/products/documents.html:48 apps/products/templates/products/mobile/documents.html:31 apps/products/templates/products/mobile/product.html:20
+#: apps/topics/templates/topics/topic.html:40 apps/topics/templates/topics/includes/topic_macros.html:10
 msgid "In English"
 msgstr "Á ensku"
 
@@ -1981,7 +1917,7 @@ msgstr "Ekkert"
 msgid "Email software for Windows, Mac and Linux"
 msgstr "Tölvupóstforrit fyrir Windows, Mac og Linux"
 
-#: apps/products/templates/products/includes/product_macros.html:32 templates/base.html:132
+#: apps/products/templates/products/includes/product_macros.html:32 templates/base.html:131
 msgid "Products &amp; Services"
 msgstr "Vörur og þjónustur"
 
@@ -1993,7 +1929,11 @@ msgstr "Sýni"
 msgid "All articles"
 msgstr "Allar síður"
 
-#: apps/products/templates/products/mobile/product.html:23 apps/topics/templates/topics/includes/topic_macros.html:39
+#: apps/products/templates/products/mobile/product.html:13 apps/topics/templates/topics/includes/topic_macros.html:4 templates/base.html:133
+msgid "Hot Topics"
+msgstr "Umræðuefni"
+
+#: apps/products/templates/products/mobile/product.html:41 apps/topics/templates/topics/includes/topic_macros.html:39
 msgid "Get community support"
 msgstr "Fá stuðning frá samfélaginu"
 
@@ -2234,25 +2174,29 @@ msgstr "Þráður inniheldur"
 msgid "Use advanced search"
 msgstr "Nota ítarlega leit"
 
+#: apps/search/templates/search/plugin.html:3 templates/base.html:16 templates/mobile/base.html:20
+msgid "Firefox Help"
+msgstr "Firefox hjálp"
+
 #. The description for the OpenSearch plugin.
 #: apps/search/templates/search/plugin.html:5
 msgid "Search the Firefox Support Knowledge Base and Support Forum."
 msgstr "Leita í þekkingargrunni Firefox og spjallsvæði."
 
-#: apps/search/templates/search/results.html:36
+#: apps/search/templates/search/results.html:40
 msgid "Show Everything"
 msgstr "Sýna allt"
 
-#: apps/search/templates/search/results.html:41
+#: apps/search/templates/search/results.html:45
 msgid "Help Articles Only"
 msgstr "Aðeins hjálparsíður"
 
-#: apps/search/templates/search/results.html:46
+#: apps/search/templates/search/results.html:50
 msgid "Community Discussion Only"
 msgstr "Aðeins umræður"
 
 #. {n} is the number of search results, {q} is the search query, {l} is the language searched.
-#: apps/search/templates/search/results.html:77 apps/search/templates/search/mobile/results-old.html:13
+#: apps/search/templates/search/results.html:81
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
 msgstr[0] "Fann <strong>{n}</strong> niðurstöðu fyrir <strong>{q}</strong> á <strong>{l}</strong>"
@@ -2280,11 +2224,11 @@ msgid_plural "{n} new this week"
 msgstr[0] "{n} nýtt þessa viku"
 msgstr[1] "{n} nýtt þessa viku"
 
-#: apps/search/templates/search/mobile/results-new.html:16
+#: apps/search/templates/search/mobile/results.html:19
 msgid "Articles"
 msgstr "Síður"
 
-#: apps/search/templates/search/mobile/results-new.html:37
+#: apps/search/templates/search/mobile/results.html:40
 msgid "No results found"
 msgstr "Engar niðurstöður fundust"
 
@@ -2629,9 +2573,10 @@ msgid "Web browser for Windows, Mac and Linux"
 msgstr "Vafri fyrir Windows, Mac og Linux"
 
 #: apps/sumo/db_strings.py:74
+#, fuzzy
 msgctxt "DB: products.Product.title"
-msgid "Firefox for mobile"
-msgstr "Firefox fyrir farsíma"
+msgid "Firefox for Android"
+msgstr "Firefox fyrir Android"
 
 #: apps/sumo/db_strings.py:75
 msgctxt "DB: products.Product.description"
@@ -2649,61 +2594,43 @@ msgid "Firefox OS"
 msgstr "Firefox stýrikerfi"
 
 #: apps/sumo/db_strings.py:78
+#, fuzzy
+msgctxt "DB: products.Product.title"
+msgid "Firefox Marketplace"
+msgstr "Hjálp fyrir Marketplace"
+
+#: apps/sumo/db_strings.py:79
+#, fuzzy
+msgctxt "DB: products.Product.description"
+msgid "Firefox Marketplace"
+msgstr "Hjálp fyrir Marketplace"
+
+#: apps/sumo/db_strings.py:80
 msgctxt "DB: products.Product.title"
 msgid "Mozilla Persona"
 msgstr "Mozilla Persona"
 
-#: apps/sumo/db_strings.py:79
+#: apps/sumo/db_strings.py:81
 msgctxt "DB: products.Product.description"
 msgid "Mozilla Persona"
 msgstr "Mozilla Persona"
 
-#: apps/sumo/db_strings.py:81
+#: apps/sumo/db_strings.py:83
 msgctxt "DB: karma.Title.name"
 msgid "Administrator"
 msgstr "Kerfisstjóra"
 
-#: apps/sumo/db_strings.py:83
-msgctxt "DB: karma.Title.name"
-msgid "Cadet/Soldier"
-msgstr "Hermaður"
-
 #: apps/sumo/db_strings.py:85
-msgctxt "DB: karma.Title.name"
-msgid "Captain/Major"
-msgstr "Kafteinn"
-
-#: apps/sumo/db_strings.py:87
-msgctxt "DB: karma.Title.name"
-msgid "Chief Commander"
-msgstr "Hershöfðingi"
-
-#: apps/sumo/db_strings.py:89
-msgctxt "DB: karma.Title.name"
-msgid "Colonel"
-msgstr "Ofursti"
-
-#: apps/sumo/db_strings.py:91
-msgctxt "DB: karma.Title.name"
-msgid "Drill Instructor"
-msgstr "Liðsþjálfari"
-
-#: apps/sumo/db_strings.py:93
-msgctxt "DB: karma.Title.name"
-msgid "Lieutenant"
-msgstr "Liðsforingi"
-
-#: apps/sumo/db_strings.py:95
 msgctxt "DB: karma.Title.name"
 msgid "Moderator"
 msgstr "Umræðustjóri"
 
-#: apps/sumo/db_strings.py:97
+#: apps/sumo/db_strings.py:87
 msgctxt "DB: karma.Title.name"
 msgid "Top 10 Contributor"
 msgstr "Topp 10 þátttakendur"
 
-#: apps/sumo/db_strings.py:99
+#: apps/sumo/db_strings.py:89
 msgctxt "DB: karma.Title.name"
 msgid "Top 25 Contributor"
 msgstr "Topp 25 þátttakendur"
@@ -2770,7 +2697,12 @@ msgid_plural "%(number)d seconds ago"
 msgstr[0] "%(number)d sekúndu síðan"
 msgstr[1] "%(number)d sekúndum síðan"
 
-#: apps/sumo/parser.py:249
+#: apps/sumo/parser.py:240
+#, fuzzy
+msgid "Page does not exist."
+msgstr "Módel er ekki til."
+
+#: apps/sumo/parser.py:251
 msgid "The image \"%s\" does not exist."
 msgstr "Myndin \"%s\" er ekki til."
 
@@ -2828,7 +2760,7 @@ msgstr ""
 "Svo virðist sem þú hafir sett gamlan tengil í bókamerki. Nýi tengillinn fyrir þessar síðu er hér fyrir neðan. Þú ættir að uppfæra bókamerkið þitt. Við munum áframsenda þig yfir á nýja tengilinn "
 "eftir 10 sekúndur."
 
-#: apps/sumo/templates/sumo/locales.html:3 apps/sumo/templates/sumo/mobile/locales.html:3 templates/mobile/base-new.html:81
+#: apps/sumo/templates/sumo/locales.html:3 apps/sumo/templates/sumo/mobile/locales.html:3 templates/mobile/base.html:86
 msgid "Switch language"
 msgstr "Skipta um tungumál"
 
@@ -2851,10 +2783,6 @@ msgstr "Bæta við"
 #: apps/topics/templates/topics/topic.html:14
 msgid "Select a product"
 msgstr "Veldu vöru"
-
-#: apps/topics/templates/topics/includes/topic_macros.html:4 templates/base.html:134
-msgid "Hot Topics"
-msgstr "Umræðuefni"
 
 #: apps/upload/forms.py:11
 msgid "Please upload an image with one of the following extensions: jpg, jpeg, png, gif."
@@ -3152,19 +3080,19 @@ msgstr "skráning"
 msgid "registration profiles"
 msgstr "skráningar"
 
-#: apps/users/views.py:154
+#: apps/users/views.py:159
 msgid "Your account is already activated, log in below."
 msgstr "Reikningurinn þinn er þegar virkjaður, skráðu þig inn hér fyrir neðan."
 
-#: apps/users/views.py:194 apps/users/views.py:209
+#: apps/users/views.py:199 apps/users/views.py:214
 msgid "Account already activated"
 msgstr "Reikningur er þegar búið að virkja"
 
-#: apps/users/views.py:310
+#: apps/users/views.py:315
 msgid "Your settings have been saved."
 msgstr "Búið er að vista stillingar."
 
-#: apps/users/views.py:551
+#: apps/users/views.py:556
 msgid "We've sent an email with the username to any account using {email}."
 msgstr "Búið er að senda tölvupóst með notandanafni á {email}."
 
@@ -3338,7 +3266,7 @@ msgstr "Breyta notanda"
 msgid "{city}, {country}"
 msgstr "{city}, {country}"
 
-#: apps/users/templates/users/profile.html:42 templates/includes/common_macros.html:37 templates/mobile/base-new.html:70
+#: apps/users/templates/users/profile.html:42 templates/includes/common_macros.html:37 templates/mobile/base.html:75
 msgid "Sign Out"
 msgstr "Útskráning"
 
@@ -3370,11 +3298,11 @@ msgstr[1] "{0} skjöl"
 msgid "Email"
 msgstr "Tölvupóstfang"
 
-#: apps/users/templates/users/profile.html:100 templates/base.html:194
+#: apps/users/templates/users/profile.html:100 templates/base.html:195
 msgid "Twitter"
 msgstr "Twitter"
 
-#: apps/users/templates/users/profile.html:106 templates/base.html:195
+#: apps/users/templates/users/profile.html:106 templates/base.html:196
 msgid "Facebook"
 msgstr "Facebook"
 
@@ -3521,11 +3449,13 @@ msgstr "Ég fékk ekki sendan staðfestingartölvupóst."
 
 #: apps/users/templates/users/includes/macros.html:53
 msgid "Password should be at least 8 characters long and contain at least 1 number."
-msgstr ""
-"Lykilorð ætti að vera að minnsta kosti 8 stafir og innihalda að minnsta "
-"kosti 1 tölustaf."
+msgstr "Lykilorð ætti að vera að minnsta kosti 8 stafir og innihalda að minnsta kosti 1 tölustaf."
 
-#: apps/users/templates/users/includes/macros.html:60 templates/mobile/base-new.html:73
+#: apps/users/templates/users/includes/macros.html:55
+msgid "Your username will be shown next to your question in our public support forums."
+msgstr ""
+
+#: apps/users/templates/users/includes/macros.html:62 templates/mobile/base.html:78
 msgid "Register"
 msgstr "Nýskráning"
 
@@ -3793,7 +3723,7 @@ msgstr "Hvernig get ég lagt mitt af mörkum"
 msgid "Administration"
 msgstr "Stjórnun"
 
-#: apps/wiki/config.py:174 templates/mobile/base-new.html:53
+#: apps/wiki/config.py:174 templates/mobile/base.html:58
 msgid "Navigation"
 msgstr "Yfirlit"
 
@@ -3962,23 +3892,23 @@ msgstr "Upp komu villur við að bæta við notendum, sjá fyrir neðan."
 msgid "{user} removed from successfully!"
 msgstr "Tókst að fjarlægja {user}!"
 
-#: apps/wiki/models.py:90
+#: apps/wiki/models.py:94
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "Ef hakað er við þetta, verður þessi wiki síða falin frá einföldum leitum og stjórnborði. Ef síðan er skoðuð, mun síðan vara við að hún sé ekki lengur viðhaldið."
 
-#: apps/wiki/models.py:97
+#: apps/wiki/models.py:101
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "Ef hakað er við þetta, mun þetta skjal leyfa spjall á tengdu spjallsvæði. Afhakaðu til að fela/slökkva á spjallsvæðinu."
 
-#: apps/wiki/models.py:111
+#: apps/wiki/models.py:115
 msgid "If checked, this document needs updates."
 msgstr "Ef hakað er við, þá þarfnast þetta skjal uppfærslu."
 
-#: apps/wiki/models.py:199
+#: apps/wiki/models.py:203
 msgid "Please choose a category."
 msgstr "Veldu flokk."
 
-#: apps/wiki/models.py:750
+#: apps/wiki/models.py:759
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Útgáfa verður að vera byggð á ensku útgáfu skjalsins. Útgáfu auðkenni %(id)s passar ekki við þessi skilyrði."
 
@@ -4215,7 +4145,7 @@ msgstr "<strong>Aðvörun:</strong> Þessi útgáfa er með tengd KB atkvæði f
 msgid "You are about to permanently delete this revision. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "Þú ert að fara að eyða þessari útgáfu. <strong>Ekki er hægt að bakfæra þessa aðgerð!</strong> Ertu viss um að þú viljir halda áfram?"
 
-#: apps/wiki/templates/wiki/document.html:12 templates/base.html:15
+#: apps/wiki/templates/wiki/document.html:12 templates/base.html:13
 msgctxt "site_title"
 msgid "Mozilla Support"
 msgstr "Mozilla aðstoð"
@@ -4225,7 +4155,7 @@ msgid "Edit Article | {document}"
 msgstr "Breyta síðu | {document}"
 
 #: apps/wiki/templates/wiki/edit.html:12 apps/wiki/templates/wiki/includes/sidebar_modules.html:26 apps/wiki/templates/wiki/includes/sidebar_modules.html:28
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:80
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:89
 msgid "Edit Article"
 msgstr "Breyta síðu"
 
@@ -4285,7 +4215,7 @@ msgstr "Fjarlægja notanda úr þátttakendum"
 msgid "Add Contributor"
 msgstr "Bæta við þátttakanda"
 
-#: apps/wiki/templates/wiki/landing.html:6 templates/base.html:133
+#: apps/wiki/templates/wiki/landing.html:6 templates/base.html:132
 msgid "Help Articles"
 msgstr "Hjálparsíður"
 
@@ -4552,13 +4482,31 @@ msgstr "Veldu tungumál"
 msgid "Select a language to translate to:"
 msgstr "Veldu tungumál til að þýða yfir á:"
 
+#: apps/wiki/templates/wiki/show_translations.html:4
+#, fuzzy
+msgid "Show translations | {document}"
+msgstr "Yfirfara þýðingu {id} | {document}"
+
+#: apps/wiki/templates/wiki/show_translations.html:6
+#, fuzzy
+msgid "Show translations"
+msgstr "Leyfa þýðingar:"
+
+#: apps/wiki/templates/wiki/show_translations.html:11
+msgid "This document has been translated to the following locales:"
+msgstr ""
+
+#: apps/wiki/templates/wiki/show_translations.html:17
+msgid "This document is missing translations for the following locales:"
+msgstr ""
+
 #: apps/wiki/templates/wiki/translate.html:8
 msgid "Translate Article | {document}"
 msgstr "Þýða síðu | {document}"
 
 #: apps/wiki/templates/wiki/translate.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:35 apps/wiki/templates/wiki/includes/sidebar_modules.html:37
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:44 apps/wiki/templates/wiki/includes/sidebar_modules.html:46 apps/wiki/templates/wiki/includes/sidebar_modules.html:85
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:90
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:44 apps/wiki/templates/wiki/includes/sidebar_modules.html:46 apps/wiki/templates/wiki/includes/sidebar_modules.html:94
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:99
 msgid "Translate Article"
 msgstr "Þýða síðu"
 
@@ -4892,23 +4840,28 @@ msgstr "Eyða þessari útgáfu"
 msgid "This document has no revisions."
 msgstr "Þetta skjal hefur engar útgáfur."
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:20 apps/wiki/templates/wiki/includes/sidebar_modules.html:75
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:20 apps/wiki/templates/wiki/includes/sidebar_modules.html:84
 msgid "Discussion"
 msgstr "Umræður"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:52 apps/wiki/templates/wiki/includes/sidebar_modules.html:95
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:53 apps/wiki/templates/wiki/includes/sidebar_modules.html:55 apps/wiki/templates/wiki/includes/sidebar_modules.html:104
+#, fuzzy
+msgid "Show Translations"
+msgstr "Leyfa þýðingar:"
+
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:61 apps/wiki/templates/wiki/includes/sidebar_modules.html:109
 msgid "Show History"
 msgstr "Sýna feril"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:66
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:75
 msgid "Editing Tools"
 msgstr "Breytingarverkfæri"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:112
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:126
 msgid "Unsubscribe from edit notifications"
 msgstr "Afpanta áskrift að tilkynningum um breytingar"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:117
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:131
 msgid "Subscribe to edit notifications"
 msgstr "Gerast áskrifandi að tilkynningum um breytingar"
 
@@ -4940,38 +4893,38 @@ msgstr "Segðu okkur meira."
 msgid "Please provide more details"
 msgstr "Sláðu inn meiri upplýsingar"
 
-#: apps/wiki/templates/wiki/mobile/document-new.html:8 apps/wiki/templates/wiki/mobile/document-old.html:7
+#: apps/wiki/templates/wiki/mobile/document.html:8
 msgid "{t} | {c}"
 msgstr "{t} | {c}"
 
-#: templates/base.html:80
+#: templates/base.html:79
 msgid "This is a staging site, the content gets overwritten on the 1st of every month.<br>The production site is <a href=\"http://support.mozilla.org\">here</a>."
-msgstr ""
-"Þetta er prófunarvefsvæði, skrifað er yfir innihald fyrsta hvern "
-"mánaðar.<br> Raunverulega vefsvæðið er <a "
-"href=\"http://support.mozilla.org\">hér</a>."
+msgstr "Þetta er prófunarvefsvæði, skrifað er yfir innihald fyrsta hvern mánaðar.<br> Raunverulega vefsvæðið er <a href=\"http://support.mozilla.org\">hér</a>."
 
-#: templates/base.html:91
+#: templates/base.html:90
 msgid "This page doesn't have a mobile optimized version. Tap here to go back."
 msgstr "Þessi síða er ekki með sérstaka síðu fyrir farsíma. Smelltu hér til að fara til baka."
 
-#: templates/base.html:98
+#: templates/base.html:97
 msgid "Tap here to go to the mobile version of the site."
 msgstr "Smelltu hér til að fara á farsímaútgáfu af þessu vefsvæði."
 
-#: templates/base.html:177
-msgid "Portions of this content are &copy;1998–2012 <br>by individual mozilla.org contributors. Content <br>available under a Creative Commons license."
+#: templates/base.html:176
+#, fuzzy
+msgid ""
+"Portions of this content are &copy;1998–2013 <br>by individual mozilla.org contributors. Content <br>available under a <a href=\"//www.mozilla.org/foundation/licensing/website-content.html"
+"\">Creative Commons license</a>."
 msgstr "Hlutar innihalds er &copy;1998–2012 <br>af einstökum mozilla.org þátttakendum. Efnið <br> er aðgengilegt undir Creative Commons leyfi."
 
 #: templates/base.html:186 templates/global/menu_links.html:63
 msgid "Contact Us"
 msgstr "Hafðu samband"
 
-#: templates/base.html:187 templates/global/copyright.html:4 templates/mobile/base-old.html:101
+#: templates/base.html:187 templates/global/copyright.html:4
 msgid "Privacy Policy"
 msgstr "Persónuverndarstefna"
 
-#: templates/base.html:188 templates/global/copyright.html:5 templates/mobile/base-old.html:102
+#: templates/base.html:188 templates/global/copyright.html:5
 msgid "Legal Notices"
 msgstr "Lögfræðitilkynningar"
 
@@ -4979,11 +4932,15 @@ msgstr "Lögfræðitilkynningar"
 msgid "Report Trademark Abuse"
 msgstr "Tilkynna misnotkun á vörumerki"
 
-#: templates/base.html:196
+#: templates/base.html:190
+msgid "Source Code"
+msgstr ""
+
+#: templates/base.html:197
 msgid "Firefox Affiliates"
 msgstr "Firefox aðilar"
 
-#: templates/base.html:197
+#: templates/base.html:198
 msgid "Switch to mobile site"
 msgstr "Skipta yfir í farsíma vefsvæði"
 
@@ -5139,6 +5096,10 @@ msgstr "Um"
 msgid "About Firefox"
 msgstr "Um Firefox"
 
+#: templates/global/menu_links.html:58
+msgid "Participate"
+msgstr "Taka þátt"
+
 #: templates/global/menu_links.html:59
 msgid "Communications"
 msgstr "Samskipti"
@@ -5171,7 +5132,7 @@ msgstr "Heimsækja Mozilla"
 msgid "Menu"
 msgstr "Valmynd"
 
-#: templates/includes/common_macros.html:29 templates/mobile/base-new.html:51
+#: templates/includes/common_macros.html:29 templates/mobile/base.html:56
 msgid "Ask a question"
 msgstr "Spyrja spurningar"
 
@@ -5179,11 +5140,11 @@ msgstr "Spyrja spurningar"
 msgid "View Profile"
 msgstr "Skoða notanda"
 
-#: templates/includes/common_macros.html:35 templates/mobile/base-new.html:68
+#: templates/includes/common_macros.html:35 templates/mobile/base.html:73
 msgid "Dashboard"
 msgstr "Skjáborð"
 
-#: templates/includes/common_macros.html:36 templates/mobile/base-new.html:69
+#: templates/includes/common_macros.html:36 templates/mobile/base.html:74
 msgid "Settings"
 msgstr "Stillingar"
 
@@ -5253,86 +5214,149 @@ msgstr "Fyrra"
 msgid "Next"
 msgstr "Næsta"
 
-#: templates/mobile/base-new.html:16 templates/mobile/base-old.html:13
+#: templates/mobile/base.html:17
 msgctxt "site_title"
 msgid "Firefox Help"
 msgstr "Firefox hjálp"
 
-#: templates/mobile/base-new.html:45
+#: templates/mobile/base.html:50
 msgid "Home"
 msgstr "Heim"
 
-#: templates/mobile/base-new.html:54
+#: templates/mobile/base.html:59
 msgid "Hot topics"
 msgstr "Heit umræðuefni"
 
-#: templates/mobile/base-new.html:55
+#: templates/mobile/base.html:60
 msgid "Mozilla news"
 msgstr "Mozilla fréttir"
 
-#: templates/mobile/base-new.html:56
+#: templates/mobile/base.html:61
 msgid "Help other users"
 msgstr "Hjálpa öðrum notendum"
 
-#: templates/mobile/base-new.html:57
+#: templates/mobile/base.html:62
 msgid "Suggestion box"
 msgstr "Hugmyndabox"
 
-#: templates/mobile/base-new.html:59
+#: templates/mobile/base.html:64
 msgid "Profile"
 msgstr "Notendur"
 
-#: templates/mobile/base-new.html:76
+#: templates/mobile/base.html:81
 msgid "Languages"
 msgstr "Tungumál"
 
-#: templates/mobile/base-new.html:82
+#: templates/mobile/base.html:87
 msgid "Switch to desktop site"
 msgstr "Skipta yfir venjulega vefsvæðið"
 
-#: templates/mobile/base-new.html:92
+#: templates/mobile/base.html:97
 msgid "Mozilla Support"
 msgstr "Mozilla aðstoð"
 
-#: templates/mobile/base-old.html:40
-msgid "Return to Firefox Support homepage"
-msgstr "Til baka á hjálparsíðu Firefox"
+#~ msgid "24 hours"
+#~ msgstr "24 tíma"
 
-#: templates/mobile/base-old.html:49
-msgid "Firefox Help Home"
-msgstr "Heimasíða fyrir Firefox hjálp"
+#~ msgid "have replies"
+#~ msgstr "eru með svör"
 
-#: templates/mobile/base-old.html:64
-msgid "Couldn't find what you were looking for?"
-msgstr "Fannstu ekki það sem þú leitaðir að?"
+#~ msgid "Join the Discussion"
+#~ msgstr "Taka þátt í umræðu"
 
-#: templates/mobile/base-old.html:67 templates/mobile/base-old.html:72
-msgid "Ask a Question"
-msgstr "Spyrja spurninga"
+#~ msgid "Common Questions"
+#~ msgstr "Algengar spurningar"
 
-#: templates/mobile/base-old.html:70
-msgid "Need More Personal Help?"
-msgstr "Þarftu frekar persónulega hjálp?"
+#~ msgid "Feedback"
+#~ msgstr "Viðbrögð"
 
-#: templates/mobile/base-old.html:76
-msgid "Other Products"
-msgstr "Aðrar vörur"
+#~ msgid "Firefox Product Support"
+#~ msgstr "Firefox aðstoð við vöru"
 
-#: templates/mobile/base-old.html:79
-msgid "Firefox for Desktop"
-msgstr "Firefox fyrir borðtölvur"
+#~ msgid "Mozilla Knowledge Base"
+#~ msgstr "Mozilla þekkingargrunnur"
 
-#: templates/mobile/base-old.html:82
-msgid "Firefox for Mobile"
-msgstr "Firefox fyrir farsíma"
+#~ msgid "Marketplace Home Page"
+#~ msgstr "Heimasíða Marketplace"
 
-#: templates/mobile/base-old.html:85
-msgid "Firefox Sync"
-msgstr "Firefox Sync"
+#~ msgid "Help <span>for Marketplace</span>"
+#~ msgstr "Hjálp <span>fyrir Marketplace</span>"
 
-#: templates/mobile/base-old.html:99
-msgid "View full site"
-msgstr "Skoða allt vefsvæðið"
+#~ msgid "Firefox for Mobile Support Home Page"
+#~ msgstr "Hjálparsíða fyrir Firefox fyrir farsíma"
+
+#~ msgid "Firefox Help <span>for Mobile</span>"
+#~ msgstr "Firefox hjálp <span>fyrir farsíma</span>"
+
+#~ msgid "Firefox Support Home Page"
+#~ msgstr "Hjálparsíða fyrir Firefox"
+
+#~ msgid "Mozilla Product Support"
+#~ msgstr "Mozilla aðstoð við forrit"
+
+#~ msgid "Firefox Sync Support Home Page"
+#~ msgstr "Hjálparsíða fyrir Firefox Sync"
+
+#~ msgid "Firefox Help <span>for Sync</span>"
+#~ msgstr "Firefox hjálp <span>fyrir Sync</span>"
+
+#~ msgctxt "DB: products.Product.title"
+#~ msgid "Firefox for mobile"
+#~ msgstr "Firefox fyrir farsíma"
+
+#~ msgctxt "DB: karma.Title.name"
+#~ msgid "Cadet/Soldier"
+#~ msgstr "Hermaður"
+
+#~ msgctxt "DB: karma.Title.name"
+#~ msgid "Captain/Major"
+#~ msgstr "Kafteinn"
+
+#~ msgctxt "DB: karma.Title.name"
+#~ msgid "Chief Commander"
+#~ msgstr "Hershöfðingi"
+
+#~ msgctxt "DB: karma.Title.name"
+#~ msgid "Colonel"
+#~ msgstr "Ofursti"
+
+#~ msgctxt "DB: karma.Title.name"
+#~ msgid "Drill Instructor"
+#~ msgstr "Liðsþjálfari"
+
+#~ msgctxt "DB: karma.Title.name"
+#~ msgid "Lieutenant"
+#~ msgstr "Liðsforingi"
+
+#~ msgid "Return to Firefox Support homepage"
+#~ msgstr "Til baka á hjálparsíðu Firefox"
+
+#~ msgid "Firefox Help Home"
+#~ msgstr "Heimasíða fyrir Firefox hjálp"
+
+#~ msgid "Couldn't find what you were looking for?"
+#~ msgstr "Fannstu ekki það sem þú leitaðir að?"
+
+#~ msgid "Ask a Question"
+#~ msgstr "Spyrja spurninga"
+
+#~ msgid "Need More Personal Help?"
+#~ msgstr "Þarftu frekar persónulega hjálp?"
+
+#~ msgid "Other Products"
+#~ msgstr "Aðrar vörur"
+
+#~ msgid "Firefox for Desktop"
+#~ msgstr "Firefox fyrir borðtölvur"
+
+#~ msgid "Firefox for Mobile"
+#~ msgstr "Firefox fyrir farsíma"
+
+#~ msgid "Firefox Sync"
+#~ msgstr "Firefox Sync"
+
+#~ msgid "View full site"
+#~ msgstr "Skoða allt vefsvæðið"
 
 #~ msgid "{date} by {user}"
 #~ msgstr "{date} eftir {user}"
@@ -5713,9 +5737,6 @@ msgstr "Skoða allt vefsvæðið"
 #~ msgstr ""
 #~ "Þú ert á réttum stað! Byrjaðu á því að leita á vefsvæðinu hér fyrir neðan, eða skoðaðu lista af vinsælum svörum. Ef þú finnur ekki svarið sem þú ert að leita að, eru sjálfboðaliðar hjá okkur "
 #~ "tilbúnir til að hjálpa þér."
-
-#~ msgid "Help for Marketplace"
-#~ msgstr "Hjálp fyrir Marketplace"
 
 #~ msgid "Firefox Help for Mobile"
 #~ msgstr "Firefox hjálp fyrir farsíma"

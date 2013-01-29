@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-09 10:03-0700\n"
+"POT-Creation-Date: 2013-01-29 13:17-0700\n"
 "PO-Revision-Date: 2013-01-12 15:10+0200\n"
 "Last-Translator: Branislav <sektormaster@atlas.sk>\n"
 "Language-Team: Slovak\n"
@@ -91,36 +91,34 @@ msgstr "Nižšie vyberte tweet"
 msgid "Respond to the tweet!"
 msgstr "Odpovedzte na tweet!"
 
-#: apps/customercare/templates/customercare/landing.html:36
-msgid "Total tweets to answer"
+#: apps/customercare/templates/customercare/landing.html:37
+#, fuzzy
+msgid "Total tweets to answer: <strong>%(goal)s</strong>"
 msgstr "Celkový počet tweetov k odpovedi"
 
-#: apps/customercare/templates/customercare/landing.html:38
-msgid "<strong>%(recent_replied_count)s tweets</strong> in the last"
-msgstr "<strong>%(recent_replied_count)s tweetov</strong> od minula"
+#. Refers to the number of tweets that have had replies.
+#: apps/customercare/templates/customercare/landing.html:43
+#, fuzzy
+msgid "<strong>%(count)s tweet</strong> in the last <strong>24 hours</strong> has a reply"
+msgid_plural "<strong>%(count)s tweets</strong> in the last <strong>24 hours</strong> have replies"
+msgstr[0] "<strong>%(recent_replied_count)s tweetov</strong> od minula"
+msgstr[1] "<strong>%(recent_replied_count)s tweetov</strong> od minula"
+msgstr[2] "<strong>%(recent_replied_count)s tweetov</strong> od minula"
 
-#: apps/customercare/templates/customercare/landing.html:39
-msgid "24 hours"
-msgstr "24 hodín"
-
-#: apps/customercare/templates/customercare/landing.html:39
-msgid "have replies"
-msgstr "majú odpovede"
-
-#: apps/customercare/templates/customercare/landing.html:56
+#: apps/customercare/templates/customercare/landing.html:66
 msgid "Refresh"
 msgstr "Obnoviť"
 
-#: apps/customercare/templates/customercare/landing.html:61
+#: apps/customercare/templates/customercare/landing.html:71
 msgid "Sign out"
 msgstr "Odhlásiť sa"
 
-#: apps/customercare/templates/customercare/landing.html:64 apps/customercare/templates/customercare/twitter_modal.html:15 apps/users/templates/users/mobile/login.html:7
-#: apps/users/templates/users/mobile/includes/macros.html:19 templates/mobile/base-new.html:72
+#: apps/customercare/templates/customercare/landing.html:74 apps/customercare/templates/customercare/twitter_modal.html:15 apps/users/templates/users/mobile/login.html:7
+#: apps/users/templates/users/mobile/includes/macros.html:19 templates/mobile/base.html:77
 msgid "Sign in"
 msgstr "Prihlásiť sa"
 
-#: apps/customercare/templates/customercare/landing.html:74
+#: apps/customercare/templates/customercare/landing.html:84
 msgid ""
 "We couldn't find any matching tweets for %(language)s at this time. Please check again later, choose a different tweet type from the menu above, or view tweets for other languages by using the "
 "language selector at the bottom of the page."
@@ -128,11 +126,11 @@ msgstr ""
 "Momentálne nemôžeme nájsť žiadny tweet pre jazyk %(language)s. Vyskúšajte to prosím znovu neskôr, vyberte iný typ tweetu z ponuky vyššie alebo sa pozrite na tweety v iných jazykoch. Na tie sa "
 "môžete pozrieť výberom iného jazyka v dolnej časti stránky."
 
-#: apps/customercare/templates/customercare/landing.html:95
+#: apps/customercare/templates/customercare/landing.html:105
 msgid "Top Contributors Last Week"
 msgstr "Hlavní prispievatelia v poslednom týždni"
 
-#: apps/customercare/templates/customercare/landing.html:101
+#: apps/customercare/templates/customercare/landing.html:111
 msgid "No recent contributions"
 msgstr "Žiadne príspevky"
 
@@ -579,7 +577,7 @@ msgid "Edit"
 msgstr "Upraviť"
 
 #: apps/dashboards/templates/dashboards/includes/kb_readout.html:4 apps/wiki/templates/wiki/includes/sidebar_modules.html:13 apps/wiki/templates/wiki/includes/sidebar_modules.html:15
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:70
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:79
 msgid "Article"
 msgstr "Článok"
 
@@ -620,7 +618,7 @@ msgstr "Čakajúce na kontrolu"
 msgid "Ready for localization"
 msgstr "Pripravené na lokalizáciu"
 
-#: apps/dashboards/templates/dashboards/includes/macros.html:152 apps/search/templates/search/results.html:58
+#: apps/dashboards/templates/dashboards/includes/macros.html:152 apps/search/templates/search/results.html:62
 msgid "All Products"
 msgstr "Všetky produkty"
 
@@ -628,7 +626,7 @@ msgstr "Všetky produkty"
 #: apps/products/templates/products/documents.html:14 apps/products/templates/products/product.html:6 apps/products/templates/products/product.html:9 apps/products/templates/products/product.html:16
 #: apps/products/templates/products/includes/product_macros.html:12 apps/products/templates/products/includes/product_macros.html:36 apps/products/templates/products/mobile/documents.html:8
 #: apps/products/templates/products/mobile/product.html:3 apps/products/templates/products/mobile/product.html:8 apps/products/templates/products/mobile/products.html:13
-#: apps/search/templates/search/results.html:64 apps/wiki/templates/wiki/document.html:12
+#: apps/search/templates/search/results.html:68 apps/wiki/templates/wiki/document.html:12
 msgctxt "DB: products.Product.title"
 msgid "None"
 msgstr "Nič"
@@ -1022,8 +1020,7 @@ msgid "Media Gallery Search"
 msgstr "vyhľadávanie v galérii médií"
 
 #: apps/gallery/templates/gallery/search.html:7 apps/search/templates/search/base.html:4 apps/search/templates/search/basic-form.html:22 apps/search/templates/search/basic-form.html:38
-#: apps/search/templates/search/basic-form.html:51 apps/search/templates/search/mobile/down.html:3 apps/search/templates/search/mobile/results-new.html:3
-#: apps/search/templates/search/mobile/results-old.html:3 templates/includes/common_macros.html:18
+#: apps/search/templates/search/basic-form.html:51 apps/search/templates/search/mobile/down.html:3 apps/search/templates/search/mobile/results.html:4 templates/includes/common_macros.html:18
 msgid "Search"
 msgstr "Hľadať"
 
@@ -1230,7 +1227,7 @@ msgstr "Nástenka hodnotení vo fóre podpory"
 msgid "Period Total"
 msgstr "Po celý čas"
 
-#: apps/karma/templates/karma/dashboards/questions.html:30 apps/search/templates/search/mobile/results-new.html:17
+#: apps/karma/templates/karma/dashboards/questions.html:30 apps/search/templates/search/mobile/results.html:20
 msgid "Questions"
 msgstr "Otázky"
 
@@ -1757,11 +1754,11 @@ msgstr "Témy pomocníka"
 msgid "Products and Services"
 msgstr "Produkty a služby"
 
-#: apps/landings/templates/landings/home.html:25 templates/base.html:135
+#: apps/landings/templates/landings/home.html:25 templates/base.html:134
 msgid "Mozilla News"
 msgstr "Novinky Mozilly"
 
-#: apps/landings/templates/landings/home.html:31 templates/base.html:136
+#: apps/landings/templates/landings/home.html:31 templates/base.html:135
 msgid "Help Other Users"
 msgstr "Pomoc ostatným používateľom"
 
@@ -1769,73 +1766,13 @@ msgstr "Pomoc ostatným používateľom"
 msgid "Participate and help other users – <a href=\"%(url)s\"> get started </a>"
 msgstr "Zapojte sa a pomôžte ďalším používateľom – <a href=\"%(url)s\">začať</a>"
 
-#: apps/landings/templates/landings/home.html:40 templates/base.html:137
+#: apps/landings/templates/landings/home.html:40 templates/base.html:136
 msgid "Suggestion Box"
 msgstr "Váš nápad"
 
 #: apps/landings/templates/landings/home.html:43
 msgid "Your input helps make Mozilla better. <a href=\"%(url)s\"> Give us your feedback </a>"
 msgstr "Vaše návrhy nám pomôžu urobiť Mozillu lepšiu. <a href=\"%(url)s\"> Pošlite nám svoj názor </a>"
-
-#: apps/landings/templates/landings/mobile/ask.html:3
-msgid "Join the Discussion"
-msgstr "Pripojiť sa k diskusii"
-
-#: apps/landings/templates/landings/mobile/base.html:13
-msgid "Common Questions"
-msgstr "Časté otázky"
-
-#: apps/landings/templates/landings/mobile/feedback.html:3
-msgid "Feedback"
-msgstr "Spätná väzba"
-
-#: apps/landings/templates/landings/mobile/firefox.html:3
-msgid "Firefox Product Support"
-msgstr "Podpora Firefoxu"
-
-#: apps/landings/templates/landings/mobile/kb.html:3
-msgid "Mozilla Knowledge Base"
-msgstr "Databáza vedomostí Mozilla"
-
-#: apps/landings/templates/landings/mobile/marketplace.html:3
-msgid "Marketplace Home Page"
-msgstr "Domovská stránka Marketplace"
-
-#: apps/landings/templates/landings/mobile/marketplace.html:5
-msgid "Help <span>for Marketplace</span>"
-msgstr "Pomocník <span>pre Marketplace</span>"
-
-#: apps/landings/templates/landings/mobile/mobile.html:3
-msgid "Firefox for Mobile Support Home Page"
-msgstr "Domovská stránka podpory pre Mobilný Firefox"
-
-#: apps/landings/templates/landings/mobile/mobile.html:5 templates/mobile/base-new.html:6 templates/mobile/base-old.html:6
-msgid "Firefox Help <span>for Mobile</span>"
-msgstr "Pomocník <span>pre Mobilný Firefox</span>"
-
-#: apps/landings/templates/landings/mobile/old-home.html:3
-msgid "Firefox Support Home Page"
-msgstr "Domovská stránka podpory Firefoxu"
-
-#: apps/landings/templates/landings/mobile/old-home.html:5 apps/search/templates/search/plugin.html:3 templates/base.html:18 templates/mobile/base-new.html:19 templates/mobile/base-old.html:16
-msgid "Firefox Help"
-msgstr "Pomocník Firefoxu"
-
-#: apps/landings/templates/landings/mobile/participate.html:3 templates/global/menu_links.html:58
-msgid "Participate"
-msgstr "Spolupracovať"
-
-#: apps/landings/templates/landings/mobile/products.html:3
-msgid "Mozilla Product Support"
-msgstr "Podpora produktov Mozilla"
-
-#: apps/landings/templates/landings/mobile/sync.html:3
-msgid "Firefox Sync Support Home Page"
-msgstr "Domovská stránka podpory Firefox Sync"
-
-#: apps/landings/templates/landings/mobile/sync.html:5
-msgid "Firefox Help <span>for Sync</span>"
-msgstr "Pomocník Firefoxu <span>pre Sync</span>"
 
 #: apps/messages/forms.py:8
 msgid "username1, username2,..."
@@ -1887,7 +1824,7 @@ msgstr "Ste si istý, že chcete tieto správy odstrániť?"
 msgid "Are you sure you want to delete this message?"
 msgstr "Ste si istý, že chcete túto správu odstrániť?"
 
-#: apps/messages/templates/messages/inbox.html:3 apps/messages/templates/messages/includes/macros.html:22 templates/includes/common_macros.html:42 templates/mobile/base-new.html:63
+#: apps/messages/templates/messages/inbox.html:3 apps/messages/templates/messages/includes/macros.html:22 templates/includes/common_macros.html:42 templates/mobile/base.html:68
 msgid "Inbox"
 msgstr "Prijaté správy"
 
@@ -1943,7 +1880,7 @@ msgstr "Náhľad správy:"
 #: apps/products/templates/products/documents.html:7 apps/products/templates/products/documents.html:10 apps/products/templates/products/documents.html:23
 #: apps/products/templates/products/documents.html:33 apps/products/templates/products/product.html:44 apps/products/templates/products/mobile/documents.html:5
 #: apps/products/templates/products/mobile/documents.html:8 apps/products/templates/products/mobile/documents.html:15 apps/products/templates/products/mobile/documents.html:49
-#: apps/products/templates/products/mobile/product.html:16 apps/topics/templates/topics/topic.html:6 apps/topics/templates/topics/includes/topic_macros.html:31
+#: apps/products/templates/products/mobile/product.html:34 apps/topics/templates/topics/topic.html:6 apps/topics/templates/topics/includes/topic_macros.html:31
 #: apps/topics/templates/topics/includes/topic_macros.html:58 apps/wiki/templates/wiki/landing.html:25
 msgctxt "DB: topics.Topic.title"
 msgid "None"
@@ -1958,8 +1895,8 @@ msgstr "Pomocník {product}"
 msgid "Refine and Focus"
 msgstr "Spresniť a aktivovať"
 
-#: apps/products/templates/products/documents.html:48 apps/products/templates/products/mobile/documents.html:31 apps/topics/templates/topics/topic.html:40
-#: apps/topics/templates/topics/includes/topic_macros.html:10
+#: apps/products/templates/products/documents.html:48 apps/products/templates/products/mobile/documents.html:31 apps/products/templates/products/mobile/product.html:20
+#: apps/topics/templates/topics/topic.html:40 apps/topics/templates/topics/includes/topic_macros.html:10
 msgid "In English"
 msgstr "V angličtine"
 
@@ -1980,7 +1917,7 @@ msgstr "Nič"
 msgid "Email software for Windows, Mac and Linux"
 msgstr "Poštový klient pre Windows, Mac a Linux"
 
-#: apps/products/templates/products/includes/product_macros.html:32 templates/base.html:132
+#: apps/products/templates/products/includes/product_macros.html:32 templates/base.html:131
 msgid "Products &amp; Services"
 msgstr "Produkty a služby"
 
@@ -1992,7 +1929,11 @@ msgstr "Zobrazení"
 msgid "All articles"
 msgstr "Všetky články"
 
-#: apps/products/templates/products/mobile/product.html:23 apps/topics/templates/topics/includes/topic_macros.html:39
+#: apps/products/templates/products/mobile/product.html:13 apps/topics/templates/topics/includes/topic_macros.html:4 templates/base.html:133
+msgid "Hot Topics"
+msgstr "Populárne témy"
+
+#: apps/products/templates/products/mobile/product.html:41 apps/topics/templates/topics/includes/topic_macros.html:39
 msgid "Get community support"
 msgstr "Získať podporu od komunity"
 
@@ -2233,25 +2174,29 @@ msgstr "Téma obsahuje"
 msgid "Use advanced search"
 msgstr "Použiť rozšírené vyhľadávanie"
 
+#: apps/search/templates/search/plugin.html:3 templates/base.html:16 templates/mobile/base.html:20
+msgid "Firefox Help"
+msgstr "Pomocník Firefoxu"
+
 #. The description for the OpenSearch plugin.
 #: apps/search/templates/search/plugin.html:5
 msgid "Search the Firefox Support Knowledge Base and Support Forum."
 msgstr "Prehľadávanie databázy vedomostí podpory Firefoxu a fóra."
 
-#: apps/search/templates/search/results.html:36
+#: apps/search/templates/search/results.html:40
 msgid "Show Everything"
 msgstr "Zobraziť všetko"
 
-#: apps/search/templates/search/results.html:41
+#: apps/search/templates/search/results.html:45
 msgid "Help Articles Only"
 msgstr "Len články podpory"
 
-#: apps/search/templates/search/results.html:46
+#: apps/search/templates/search/results.html:50
 msgid "Community Discussion Only"
 msgstr "Len diskusie komunity"
 
 #. {n} is the number of search results, {q} is the search query, {l} is the language searched.
-#: apps/search/templates/search/results.html:77 apps/search/templates/search/mobile/results-old.html:13
+#: apps/search/templates/search/results.html:81
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
 msgstr[0] "Pre výraz <strong>{q}</strong> bol nájdený <strong>{n}</strong> výsledok v jazyku <strong>{l}</strong>."
@@ -2283,11 +2228,11 @@ msgstr[0] "1 nový za tento týždeň"
 msgstr[1] "{n} nové za tento týždeň"
 msgstr[2] "{n} nových za tento týždeň"
 
-#: apps/search/templates/search/mobile/results-new.html:16
+#: apps/search/templates/search/mobile/results.html:19
 msgid "Articles"
 msgstr "Články"
 
-#: apps/search/templates/search/mobile/results-new.html:37
+#: apps/search/templates/search/mobile/results.html:40
 msgid "No results found"
 msgstr "Neboli nájdené žiadne výsledky."
 
@@ -2632,9 +2577,10 @@ msgid "Web browser for Windows, Mac and Linux"
 msgstr "Webový prehliadač pre Windows, Mac a Linux"
 
 #: apps/sumo/db_strings.py:74
+#, fuzzy
 msgctxt "DB: products.Product.title"
-msgid "Firefox for mobile"
-msgstr "Mobilný Firefox"
+msgid "Firefox for Android"
+msgstr "Firefox pre Android"
 
 #: apps/sumo/db_strings.py:75
 msgctxt "DB: products.Product.description"
@@ -2652,61 +2598,43 @@ msgid "Firefox OS"
 msgstr "Firefox OS"
 
 #: apps/sumo/db_strings.py:78
+#, fuzzy
+msgctxt "DB: products.Product.title"
+msgid "Firefox Marketplace"
+msgstr "Pomocník pre službu Marketplace"
+
+#: apps/sumo/db_strings.py:79
+#, fuzzy
+msgctxt "DB: products.Product.description"
+msgid "Firefox Marketplace"
+msgstr "Pomocník pre službu Marketplace"
+
+#: apps/sumo/db_strings.py:80
 msgctxt "DB: products.Product.title"
 msgid "Mozilla Persona"
 msgstr "Mozilla Persona"
 
-#: apps/sumo/db_strings.py:79
+#: apps/sumo/db_strings.py:81
 msgctxt "DB: products.Product.description"
 msgid "Mozilla Persona"
 msgstr "Mozilla Persona"
 
-#: apps/sumo/db_strings.py:81
+#: apps/sumo/db_strings.py:83
 msgctxt "DB: karma.Title.name"
 msgid "Administrator"
 msgstr "Administrátor"
 
-#: apps/sumo/db_strings.py:83
-msgctxt "DB: karma.Title.name"
-msgid "Cadet/Soldier"
-msgstr "Kadet/Vojak"
-
 #: apps/sumo/db_strings.py:85
-msgctxt "DB: karma.Title.name"
-msgid "Captain/Major"
-msgstr "Kapitán/Major"
-
-#: apps/sumo/db_strings.py:87
-msgctxt "DB: karma.Title.name"
-msgid "Chief Commander"
-msgstr "Vrchný veliteľ"
-
-#: apps/sumo/db_strings.py:89
-msgctxt "DB: karma.Title.name"
-msgid "Colonel"
-msgstr "Plukovník"
-
-#: apps/sumo/db_strings.py:91
-msgctxt "DB: karma.Title.name"
-msgid "Drill Instructor"
-msgstr "Školiaci inštruktor"
-
-#: apps/sumo/db_strings.py:93
-msgctxt "DB: karma.Title.name"
-msgid "Lieutenant"
-msgstr "Poručík"
-
-#: apps/sumo/db_strings.py:95
 msgctxt "DB: karma.Title.name"
 msgid "Moderator"
 msgstr "Moderátor"
 
-#: apps/sumo/db_strings.py:97
+#: apps/sumo/db_strings.py:87
 msgctxt "DB: karma.Title.name"
 msgid "Top 10 Contributor"
 msgstr "10 najlepších prispievateľov"
 
-#: apps/sumo/db_strings.py:99
+#: apps/sumo/db_strings.py:89
 msgctxt "DB: karma.Title.name"
 msgid "Top 25 Contributor"
 msgstr "25 najlepších prispievateľov"
@@ -2780,7 +2708,12 @@ msgstr[0] "Pred %(number)d sekundou"
 msgstr[1] "Pred %(number)d sekundami"
 msgstr[2] "Pred %(number)d sekundami"
 
-#: apps/sumo/parser.py:249
+#: apps/sumo/parser.py:240
+#, fuzzy
+msgid "Page does not exist."
+msgstr "Model neexistuje."
+
+#: apps/sumo/parser.py:251
 msgid "The image \"%s\" does not exist."
 msgstr "Obrázok \"%s\" neexistuje."
 
@@ -2836,7 +2769,7 @@ msgstr "URL adresa sa zmenila!"
 msgid "It looks like you've bookmarked an old URL. The new URL for this page is below. You should update your bookmarks. We will forward you to the new URL in 10 seconds."
 msgstr "Zdá se, že máte v záložkách starú URL adresu. Nová URL pre túto stránku je uvedená nižšie. Mali by ste si svoje záložky aktualizovať. Do 10-tich sekúnd vás presmerujeme na novú URL adresu."
 
-#: apps/sumo/templates/sumo/locales.html:3 apps/sumo/templates/sumo/mobile/locales.html:3 templates/mobile/base-new.html:81
+#: apps/sumo/templates/sumo/locales.html:3 apps/sumo/templates/sumo/mobile/locales.html:3 templates/mobile/base.html:86
 msgid "Switch language"
 msgstr "Zmena jazyka"
 
@@ -2859,10 +2792,6 @@ msgstr "Pridať"
 #: apps/topics/templates/topics/topic.html:14
 msgid "Select a product"
 msgstr "Výber produktu"
-
-#: apps/topics/templates/topics/includes/topic_macros.html:4 templates/base.html:134
-msgid "Hot Topics"
-msgstr "Populárne témy"
 
 #: apps/upload/forms.py:11
 msgid "Please upload an image with one of the following extensions: jpg, jpeg, png, gif."
@@ -3160,19 +3089,19 @@ msgstr "registračný profil"
 msgid "registration profiles"
 msgstr "registračné profily"
 
-#: apps/users/views.py:154
+#: apps/users/views.py:159
 msgid "Your account is already activated, log in below."
 msgstr "Váš účet bol už aktivovaný. Prihláste sa nižšie."
 
-#: apps/users/views.py:194 apps/users/views.py:209
+#: apps/users/views.py:199 apps/users/views.py:214
 msgid "Account already activated"
 msgstr "Účet bol už overený"
 
-#: apps/users/views.py:310
+#: apps/users/views.py:315
 msgid "Your settings have been saved."
 msgstr "Vaše nastavenia boli uložené."
 
-#: apps/users/views.py:551
+#: apps/users/views.py:556
 msgid "We've sent an email with the username to any account using {email}."
 msgstr "Poslali sme vám e-mail s používateľským menom účtu, ktorý používa e-mail {email}."
 
@@ -3345,7 +3274,7 @@ msgstr "Upraviť profil používateľa"
 msgid "{city}, {country}"
 msgstr "{city}, {country}"
 
-#: apps/users/templates/users/profile.html:42 templates/includes/common_macros.html:37 templates/mobile/base-new.html:70
+#: apps/users/templates/users/profile.html:42 templates/includes/common_macros.html:37 templates/mobile/base.html:75
 msgid "Sign Out"
 msgstr "Odhlásiť sa"
 
@@ -3381,11 +3310,11 @@ msgstr[2] "{0} dokumentov"
 msgid "Email"
 msgstr "E-mail"
 
-#: apps/users/templates/users/profile.html:100 templates/base.html:194
+#: apps/users/templates/users/profile.html:100 templates/base.html:195
 msgid "Twitter"
 msgstr "Twitter"
 
-#: apps/users/templates/users/profile.html:106 templates/base.html:195
+#: apps/users/templates/users/profile.html:106 templates/base.html:196
 msgid "Facebook"
 msgstr "Facebook"
 
@@ -3534,7 +3463,11 @@ msgstr "Nedostal som potvrdzujúci e-mail."
 msgid "Password should be at least 8 characters long and contain at least 1 number."
 msgstr "Heslo musí obsahovať najmenej 8 znakov a musí mať aspoň jedno číslo."
 
-#: apps/users/templates/users/includes/macros.html:60 templates/mobile/base-new.html:73
+#: apps/users/templates/users/includes/macros.html:55
+msgid "Your username will be shown next to your question in our public support forums."
+msgstr ""
+
+#: apps/users/templates/users/includes/macros.html:62 templates/mobile/base.html:78
 msgid "Register"
 msgstr "Registrácia"
 
@@ -3802,7 +3735,7 @@ msgstr "Ako sa zapojiť"
 msgid "Administration"
 msgstr "Administrácia"
 
-#: apps/wiki/config.py:174 templates/mobile/base-new.html:53
+#: apps/wiki/config.py:174 templates/mobile/base.html:58
 msgid "Navigation"
 msgstr "Navigácia"
 
@@ -3971,23 +3904,23 @@ msgstr "Pri pridávaní nových členov nastali chyby. Viď nižšie."
 msgid "{user} removed from successfully!"
 msgstr "Používateľ {user} bol úspešne odstránený!"
 
-#: apps/wiki/models.py:90
+#: apps/wiki/models.py:94
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "Ak je označené, bude táto stránka skrytá v základnom vyhľadávaní a na nástenkách. Ak bude zobrazená, bude varovať, že už nie je aktuálna."
 
-#: apps/wiki/models.py:97
+#: apps/wiki/models.py:101
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "Ak je označené, je u tohto dokumentu povolená diskusia v súvisiacom fóre. Odznačením fórum skryjete/zakážete."
 
-#: apps/wiki/models.py:111
+#: apps/wiki/models.py:115
 msgid "If checked, this document needs updates."
 msgstr "Ak označíte, bude dokument potrebné aktualizovať."
 
-#: apps/wiki/models.py:199
+#: apps/wiki/models.py:203
 msgid "Please choose a category."
 msgstr "Vyberte prosím kategóriu."
 
-#: apps/wiki/models.py:750
+#: apps/wiki/models.py:759
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Revízia musí byť založená na článku v angličtine. Revízia s ID %(id)s toto kritérium nespĺňa."
 
@@ -4224,7 +4157,7 @@ msgstr "<strong>Upozornenie:</strong> Revízia má pridelené hlasovanie o užit
 msgid "You are about to permanently delete this revision. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "Chcete natrvalo odstrániť túto revíziu. <strong>Túto operáciu nemožno vrátiť naspäť!</strong> Naozaj chcete pokračovať?"
 
-#: apps/wiki/templates/wiki/document.html:12 templates/base.html:15
+#: apps/wiki/templates/wiki/document.html:12 templates/base.html:13
 msgctxt "site_title"
 msgid "Mozilla Support"
 msgstr "Podpora Mozilly"
@@ -4234,7 +4167,7 @@ msgid "Edit Article | {document}"
 msgstr "Upraviť článok | {document}"
 
 #: apps/wiki/templates/wiki/edit.html:12 apps/wiki/templates/wiki/includes/sidebar_modules.html:26 apps/wiki/templates/wiki/includes/sidebar_modules.html:28
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:80
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:89
 msgid "Edit Article"
 msgstr "Upraviť článok"
 
@@ -4294,7 +4227,7 @@ msgstr "Odstránenie používateľa z prispievateľov"
 msgid "Add Contributor"
 msgstr "Pridať prispievateľa"
 
-#: apps/wiki/templates/wiki/landing.html:6 templates/base.html:133
+#: apps/wiki/templates/wiki/landing.html:6 templates/base.html:132
 msgid "Help Articles"
 msgstr "Články podpory"
 
@@ -4561,13 +4494,31 @@ msgstr "Výber jazyka"
 msgid "Select a language to translate to:"
 msgstr "Výber jazyka, do ktorého chcete prekladať:"
 
+#: apps/wiki/templates/wiki/show_translations.html:4
+#, fuzzy
+msgid "Show translations | {document}"
+msgstr "Kontrola prekladu {id} | {document}"
+
+#: apps/wiki/templates/wiki/show_translations.html:6
+#, fuzzy
+msgid "Show translations"
+msgstr "Povolené preklady:"
+
+#: apps/wiki/templates/wiki/show_translations.html:11
+msgid "This document has been translated to the following locales:"
+msgstr ""
+
+#: apps/wiki/templates/wiki/show_translations.html:17
+msgid "This document is missing translations for the following locales:"
+msgstr ""
+
 #: apps/wiki/templates/wiki/translate.html:8
 msgid "Translate Article | {document}"
 msgstr "Preklad článku | {document}"
 
 #: apps/wiki/templates/wiki/translate.html:10 apps/wiki/templates/wiki/includes/sidebar_modules.html:35 apps/wiki/templates/wiki/includes/sidebar_modules.html:37
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:44 apps/wiki/templates/wiki/includes/sidebar_modules.html:46 apps/wiki/templates/wiki/includes/sidebar_modules.html:85
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:90
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:44 apps/wiki/templates/wiki/includes/sidebar_modules.html:46 apps/wiki/templates/wiki/includes/sidebar_modules.html:94
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:99
 msgid "Translate Article"
 msgstr "Preklad článku"
 
@@ -4903,23 +4854,28 @@ msgstr "Odstrániť túto revíziu"
 msgid "This document has no revisions."
 msgstr "Tento dokument nemá žiadne revízie."
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:20 apps/wiki/templates/wiki/includes/sidebar_modules.html:75
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:20 apps/wiki/templates/wiki/includes/sidebar_modules.html:84
 msgid "Discussion"
 msgstr "Diskusia"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:52 apps/wiki/templates/wiki/includes/sidebar_modules.html:95
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:53 apps/wiki/templates/wiki/includes/sidebar_modules.html:55 apps/wiki/templates/wiki/includes/sidebar_modules.html:104
+#, fuzzy
+msgid "Show Translations"
+msgstr "Povolené preklady:"
+
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:61 apps/wiki/templates/wiki/includes/sidebar_modules.html:109
 msgid "Show History"
 msgstr "Zobraziť históriu"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:66
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:75
 msgid "Editing Tools"
 msgstr "Nástroje na úpravu"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:112
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:126
 msgid "Unsubscribe from edit notifications"
 msgstr "Zrušiť odber upozornení na úpravy"
 
-#: apps/wiki/templates/wiki/includes/sidebar_modules.html:117
+#: apps/wiki/templates/wiki/includes/sidebar_modules.html:131
 msgid "Subscribe to edit notifications"
 msgstr "Odoberať upozornenia na úpravy"
 
@@ -4951,38 +4907,38 @@ msgstr "Povedzte nám viac."
 msgid "Please provide more details"
 msgstr "Zadajte prosím viac informácií"
 
-#: apps/wiki/templates/wiki/mobile/document-new.html:8 apps/wiki/templates/wiki/mobile/document-old.html:7
+#: apps/wiki/templates/wiki/mobile/document.html:8
 msgid "{t} | {c}"
 msgstr "{t} | {c}"
 
-#: templates/base.html:80
+#: templates/base.html:79
 msgid "This is a staging site, the content gets overwritten on the 1st of every month.<br>The production site is <a href=\"http://support.mozilla.org\">here</a>."
-msgstr ""
-"Toto je testovacia verzia, ktorej obsah býva redukovaný vždy prvý deň v "
-"mesiaci. Produkčnú verziu nájdete <a "
-"href=\"http://support.mozilla.org\">tu</a>."
+msgstr "Toto je testovacia verzia, ktorej obsah býva redukovaný vždy prvý deň v mesiaci. Produkčnú verziu nájdete <a href=\"http://support.mozilla.org\">tu</a>."
 
-#: templates/base.html:91
+#: templates/base.html:90
 msgid "This page doesn't have a mobile optimized version. Tap here to go back."
 msgstr "Tato stránka nemá verziu optimalizovanú pre mobily. Pre prechod späť kliknite sem."
 
-#: templates/base.html:98
+#: templates/base.html:97
 msgid "Tap here to go to the mobile version of the site."
 msgstr "Kliknite sem pre prechod na mobilnú verziu webu."
 
-#: templates/base.html:177
-msgid "Portions of this content are &copy;1998–2012 <br>by individual mozilla.org contributors. Content <br>available under a Creative Commons license."
+#: templates/base.html:176
+#, fuzzy
+msgid ""
+"Portions of this content are &copy;1998–2013 <br>by individual mozilla.org contributors. Content <br>available under a <a href=\"//www.mozilla.org/foundation/licensing/website-content.html"
+"\">Creative Commons license</a>."
 msgstr "Súčasťou tohto obsahu sú &copy;1998–2012 <br> jednotlivými prispievateľmi mozilla.org. Obsah <br>je dostupný pod licenciou Creative Commons."
 
 #: templates/base.html:186 templates/global/menu_links.html:63
 msgid "Contact Us"
 msgstr "Kontaktujte nás"
 
-#: templates/base.html:187 templates/global/copyright.html:4 templates/mobile/base-old.html:101
+#: templates/base.html:187 templates/global/copyright.html:4
 msgid "Privacy Policy"
 msgstr "Zásady ochrany súkromia"
 
-#: templates/base.html:188 templates/global/copyright.html:5 templates/mobile/base-old.html:102
+#: templates/base.html:188 templates/global/copyright.html:5
 msgid "Legal Notices"
 msgstr "Právne informácie"
 
@@ -4990,11 +4946,15 @@ msgstr "Právne informácie"
 msgid "Report Trademark Abuse"
 msgstr "Nahlásiť zneužitie ochrannej známky"
 
-#: templates/base.html:196
+#: templates/base.html:190
+msgid "Source Code"
+msgstr ""
+
+#: templates/base.html:197
 msgid "Firefox Affiliates"
 msgstr "Partnerský program Firefoxu"
 
-#: templates/base.html:197
+#: templates/base.html:198
 msgid "Switch to mobile site"
 msgstr "Prepnúť na mobilnú verziu"
 
@@ -5150,6 +5110,10 @@ msgstr "Všetko o …"
 msgid "About Firefox"
 msgstr "O Firefoxe"
 
+#: templates/global/menu_links.html:58
+msgid "Participate"
+msgstr "Spolupracovať"
+
 #: templates/global/menu_links.html:59
 msgid "Communications"
 msgstr "Komunikácia"
@@ -5182,7 +5146,7 @@ msgstr "Navštíviť Mozillu"
 msgid "Menu"
 msgstr "Ponuka"
 
-#: templates/includes/common_macros.html:29 templates/mobile/base-new.html:51
+#: templates/includes/common_macros.html:29 templates/mobile/base.html:56
 msgid "Ask a question"
 msgstr "Položiť otázku"
 
@@ -5190,11 +5154,11 @@ msgstr "Položiť otázku"
 msgid "View Profile"
 msgstr "Zobraziť profil"
 
-#: templates/includes/common_macros.html:35 templates/mobile/base-new.html:68
+#: templates/includes/common_macros.html:35 templates/mobile/base.html:73
 msgid "Dashboard"
 msgstr "Nástenka"
 
-#: templates/includes/common_macros.html:36 templates/mobile/base-new.html:69
+#: templates/includes/common_macros.html:36 templates/mobile/base.html:74
 msgid "Settings"
 msgstr "Nastavenia"
 
@@ -5265,86 +5229,149 @@ msgstr "Predchádzajúca"
 msgid "Next"
 msgstr "Ďalšia"
 
-#: templates/mobile/base-new.html:16 templates/mobile/base-old.html:13
+#: templates/mobile/base.html:17
 msgctxt "site_title"
 msgid "Firefox Help"
 msgstr "Pomocník Firefoxu"
 
-#: templates/mobile/base-new.html:45
+#: templates/mobile/base.html:50
 msgid "Home"
 msgstr "Domov"
 
-#: templates/mobile/base-new.html:54
+#: templates/mobile/base.html:59
 msgid "Hot topics"
 msgstr "Populárne témy"
 
-#: templates/mobile/base-new.html:55
+#: templates/mobile/base.html:60
 msgid "Mozilla news"
 msgstr "Novinky Mozilly"
 
-#: templates/mobile/base-new.html:56
+#: templates/mobile/base.html:61
 msgid "Help other users"
 msgstr "Pomoc ostatným používateľom"
 
-#: templates/mobile/base-new.html:57
+#: templates/mobile/base.html:62
 msgid "Suggestion box"
 msgstr "Váš nápad"
 
-#: templates/mobile/base-new.html:59
+#: templates/mobile/base.html:64
 msgid "Profile"
 msgstr "Profily"
 
-#: templates/mobile/base-new.html:76
+#: templates/mobile/base.html:81
 msgid "Languages"
 msgstr "Jazyky"
 
-#: templates/mobile/base-new.html:82
+#: templates/mobile/base.html:87
 msgid "Switch to desktop site"
 msgstr "Prepnúť na plnú verziu webu"
 
-#: templates/mobile/base-new.html:92
+#: templates/mobile/base.html:97
 msgid "Mozilla Support"
 msgstr "Podpora Mozilly"
 
-#: templates/mobile/base-old.html:40
-msgid "Return to Firefox Support homepage"
-msgstr "Späť na domovskou stránku podpory Firefoxu"
+#~ msgid "24 hours"
+#~ msgstr "24 hodín"
 
-#: templates/mobile/base-old.html:49
-msgid "Firefox Help Home"
-msgstr "Pomocník Firefoxu"
+#~ msgid "have replies"
+#~ msgstr "majú odpovede"
 
-#: templates/mobile/base-old.html:64
-msgid "Couldn't find what you were looking for?"
-msgstr "Nemôžete nájsť to čo hľadáte?"
+#~ msgid "Join the Discussion"
+#~ msgstr "Pripojiť sa k diskusii"
 
-#: templates/mobile/base-old.html:67 templates/mobile/base-old.html:72
-msgid "Ask a Question"
-msgstr "Položiť otázku"
+#~ msgid "Common Questions"
+#~ msgstr "Časté otázky"
 
-#: templates/mobile/base-old.html:70
-msgid "Need More Personal Help?"
-msgstr "Potrebujete viac osobnú pomoc?"
+#~ msgid "Feedback"
+#~ msgstr "Spätná väzba"
 
-#: templates/mobile/base-old.html:76
-msgid "Other Products"
-msgstr "Ďalšie produkty"
+#~ msgid "Firefox Product Support"
+#~ msgstr "Podpora Firefoxu"
 
-#: templates/mobile/base-old.html:79
-msgid "Firefox for Desktop"
-msgstr "Firefox pre desktop"
+#~ msgid "Mozilla Knowledge Base"
+#~ msgstr "Databáza vedomostí Mozilla"
 
-#: templates/mobile/base-old.html:82
-msgid "Firefox for Mobile"
-msgstr "Mobilný Firefox"
+#~ msgid "Marketplace Home Page"
+#~ msgstr "Domovská stránka Marketplace"
 
-#: templates/mobile/base-old.html:85
-msgid "Firefox Sync"
-msgstr "Firefox Sync"
+#~ msgid "Help <span>for Marketplace</span>"
+#~ msgstr "Pomocník <span>pre Marketplace</span>"
 
-#: templates/mobile/base-old.html:99
-msgid "View full site"
-msgstr "Zobraziť plnú verziu webu"
+#~ msgid "Firefox for Mobile Support Home Page"
+#~ msgstr "Domovská stránka podpory pre Mobilný Firefox"
+
+#~ msgid "Firefox Help <span>for Mobile</span>"
+#~ msgstr "Pomocník <span>pre Mobilný Firefox</span>"
+
+#~ msgid "Firefox Support Home Page"
+#~ msgstr "Domovská stránka podpory Firefoxu"
+
+#~ msgid "Mozilla Product Support"
+#~ msgstr "Podpora produktov Mozilla"
+
+#~ msgid "Firefox Sync Support Home Page"
+#~ msgstr "Domovská stránka podpory Firefox Sync"
+
+#~ msgid "Firefox Help <span>for Sync</span>"
+#~ msgstr "Pomocník Firefoxu <span>pre Sync</span>"
+
+#~ msgctxt "DB: products.Product.title"
+#~ msgid "Firefox for mobile"
+#~ msgstr "Mobilný Firefox"
+
+#~ msgctxt "DB: karma.Title.name"
+#~ msgid "Cadet/Soldier"
+#~ msgstr "Kadet/Vojak"
+
+#~ msgctxt "DB: karma.Title.name"
+#~ msgid "Captain/Major"
+#~ msgstr "Kapitán/Major"
+
+#~ msgctxt "DB: karma.Title.name"
+#~ msgid "Chief Commander"
+#~ msgstr "Vrchný veliteľ"
+
+#~ msgctxt "DB: karma.Title.name"
+#~ msgid "Colonel"
+#~ msgstr "Plukovník"
+
+#~ msgctxt "DB: karma.Title.name"
+#~ msgid "Drill Instructor"
+#~ msgstr "Školiaci inštruktor"
+
+#~ msgctxt "DB: karma.Title.name"
+#~ msgid "Lieutenant"
+#~ msgstr "Poručík"
+
+#~ msgid "Return to Firefox Support homepage"
+#~ msgstr "Späť na domovskou stránku podpory Firefoxu"
+
+#~ msgid "Firefox Help Home"
+#~ msgstr "Pomocník Firefoxu"
+
+#~ msgid "Couldn't find what you were looking for?"
+#~ msgstr "Nemôžete nájsť to čo hľadáte?"
+
+#~ msgid "Ask a Question"
+#~ msgstr "Položiť otázku"
+
+#~ msgid "Need More Personal Help?"
+#~ msgstr "Potrebujete viac osobnú pomoc?"
+
+#~ msgid "Other Products"
+#~ msgstr "Ďalšie produkty"
+
+#~ msgid "Firefox for Desktop"
+#~ msgstr "Firefox pre desktop"
+
+#~ msgid "Firefox for Mobile"
+#~ msgstr "Mobilný Firefox"
+
+#~ msgid "Firefox Sync"
+#~ msgstr "Firefox Sync"
+
+#~ msgid "View full site"
+#~ msgstr "Zobraziť plnú verziu webu"
 
 #~ msgid "{date} by {user}"
 #~ msgstr "{date} používateľom {user}"
@@ -5723,9 +5750,6 @@ msgstr "Zobraziť plnú verziu webu"
 #~ msgstr ""
 #~ "Ste na správnom mieste! Začnite s hľadaním riešení alebo si vyberte jeden z našich článkov podpory nižšie. Ak nemôžete nájsť odpoveď, ktorú hľadáte, naša komunita dobrovoľníkov je pripravená vám "
 #~ "pomôcť."
-
-#~ msgid "Help for Marketplace"
-#~ msgstr "Pomocník pre službu Marketplace"
 
 #~ msgid "Firefox Help for Mobile"
 #~ msgstr "Pomocník pre Mobilný Firefox"
