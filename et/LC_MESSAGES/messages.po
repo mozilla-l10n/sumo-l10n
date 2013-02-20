@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-07 10:08-0700\n"
+"POT-Creation-Date: 2013-02-20 10:53-0700\n"
 "PO-Revision-Date: 2013-02-12 21:26+0200\n"
 "Last-Translator: Merike <merike.sell@eesti.ee>\n"
 "Language-Team: Estonian <>\n"
@@ -190,8 +190,8 @@ msgstr ""
 #. This is an email.  Whitespace matters!
 #: apps/users/templates/users/email/contributor.ltxt:12
 msgid ""
-"We would love to find a good place for your to help users, so please send us an email with your username and the area you would like to get involved. Please feel free to add all your skills, we "
-"will try to find the right use for them :)"
+"We would love to find a good place for you to help users, so please send us an email with your username and the area you would like to get involved. Please feel free to add all your skills, we will "
+"try to find the right use for them :)"
 msgstr ""
 
 #. This is an email.  Whitespace matters!
@@ -493,7 +493,7 @@ msgstr "Viimased 90 päeva"
 msgid "All Time"
 msgstr "Läbi aegade"
 
-#: apps/dashboards/models.py:142
+#: apps/dashboards/models.py:88
 msgid "Parameters which will be passed to the dashboard. The dashboard determines the meaning and format of these."
 msgstr "Ülevaatele saadetavad parameetrid. Ülevaade määrab nende tähenduse ja vormingu."
 
@@ -726,6 +726,11 @@ msgstr "Nädalate lõikes"
 #: apps/dashboards/templates/dashboards/contributors.html:56 apps/kpi/templates/kpi/dashboard.html:151
 msgid "Monthly"
 msgstr "Kuude lõikes"
+
+#: apps/dashboards/templates/dashboards/contributors.html:61
+#, fuzzy
+msgid "Show Aggregate Helpfulness Chart"
+msgstr "Kuva kasulikkuse häälte graafik"
 
 #: apps/dashboards/templates/dashboards/group_locale.html:4
 msgid "{locale} | Group Dashboard"
@@ -1321,35 +1326,35 @@ msgstr "kasutajanimi"
 msgid "Avatar"
 msgstr "Avatar"
 
-#: apps/groups/views.py:53
+#: apps/groups/views.py:65
 msgid "Group information updated successfully!"
 msgstr "Grupiteabe uuendamine õnnestus!"
 
-#: apps/groups/views.py:128
+#: apps/groups/views.py:140
 msgid "{users} added to the group successfully!"
 msgstr "{users} lisati edukalt gruppi!"
 
-#: apps/groups/views.py:133
+#: apps/groups/views.py:145
 msgid "There were errors adding members to the group, see below."
 msgstr "Kasutajate gruppi lisamisel tekkis alljärgnev viga."
 
-#: apps/groups/views.py:153
+#: apps/groups/views.py:165
 msgid "{user} removed from the group successfully!"
 msgstr "{user} eemaldamine grupist õnnestus!"
 
-#: apps/groups/views.py:178
+#: apps/groups/views.py:190
 msgid "{users} added to the group leaders successfully!"
 msgstr "{users} lisati edukalt grupi juhtide hulka!"
 
-#: apps/groups/views.py:183
+#: apps/groups/views.py:195
 msgid "There were errors adding leaders to the group, see below."
 msgstr "Juhtide gruppi lisamisel tekkis alljärgnev viga."
 
-#: apps/groups/views.py:200
+#: apps/groups/views.py:212
 msgid "{user} removed from the group leaders successfully!"
 msgstr "{user} eemaldamine grupi juhtide hulgast õnnestus!"
 
-#: apps/groups/views.py:217
+#: apps/groups/views.py:229
 msgid "You are now part of the Contributors group!"
 msgstr "Oled nüüd kaastöötajate grupi liige!"
 
@@ -1466,6 +1471,19 @@ msgstr "Lisa liige"
 #: apps/groups/templates/groups/profile.html:76
 msgid "Remove user from group"
 msgstr "Eemalda kasutaja grupist"
+
+#: apps/groups/templates/groups/profile.html:87
+#, fuzzy
+msgid "previous"
+msgstr "Eelmine"
+
+#: apps/groups/templates/groups/profile.html:90
+msgid "Page {0} of {1}."
+msgstr ""
+
+#: apps/groups/templates/groups/profile.html:93
+msgid "next"
+msgstr ""
 
 #: apps/karma/templates/karma/dashboards/questions.html:4
 msgid "Support Forum Karma Dashboard"
@@ -2350,15 +2368,11 @@ msgstr "Palun sisesta küsimus."
 
 #: apps/questions/forms.py:45
 msgid "Your question is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
-msgstr ""
-"Sisestatud küsimus on liiga lühike (%(show_value)s märki). Kohustuslik on "
-"vähemalt %(limit_value)s märki."
+msgstr "Sisestatud küsimus on liiga lühike (%(show_value)s märki). Kohustuslik on vähemalt %(limit_value)s märki."
 
 #: apps/questions/forms.py:48
 msgid "Please keep the length of your question to %(limit_value)s characters or less. It is currently %(show_value)s characters."
-msgstr ""
-"Palun hoia küsimus %(limit_value)s märgi piires. Praegu on see %"
-"(show_value)s märki pikk."
+msgstr "Palun hoia küsimus %(limit_value)s märgi piires. Praegu on see %(show_value)s märki pikk."
 
 #: apps/questions/forms.py:51 apps/wiki/forms.py:39
 msgid "Please provide content."
@@ -2390,15 +2404,11 @@ msgstr "Palun sisesta teema."
 
 #: apps/questions/forms.py:65
 msgid "The subject is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
-msgstr ""
-"Sisestatud teema on liiga lühike (%(show_value)s märki). Kohustuslik on "
-"vähemalt %(limit_value)s märki."
+msgstr "Sisestatud teema on liiga lühike (%(show_value)s märki). Kohustuslik on vähemalt %(limit_value)s märki."
 
 #: apps/questions/forms.py:68
 msgid "Please keep the length of the subject to %(limit_value)s characters or less. It is currently %(show_value)s characters."
-msgstr ""
-"Palun jälgi, et teema pikkus oleks %(limit_value)s märki või vähem. Hetkel "
-"on see %(show_value)s märki pikk."
+msgstr "Palun jälgi, et teema pikkus oleks %(limit_value)s märki või vähem. Hetkel on see %(show_value)s märki pikk."
 
 #: apps/questions/forms.py:71
 msgid "Describe your issue here."
@@ -2561,43 +2571,43 @@ msgstr "Palun sisesta silt."
 msgid "Request type not recognized."
 msgstr ""
 
-#: apps/questions/views.py:404
+#: apps/questions/views.py:405
 msgid "Done! Your question is now posted on the Mozilla community support forum."
 msgstr ""
 
-#: apps/questions/views.py:589
+#: apps/questions/views.py:590
 msgid "Thank you for choosing a solution!"
 msgstr "Täname lahenduse märkimise eest!"
 
-#: apps/questions/views.py:614
+#: apps/questions/views.py:615
 msgid "The solution was undone successfully."
 msgstr "Lahenduse eemaldamine õnnestus."
 
-#: apps/questions/views.py:672
+#: apps/questions/views.py:673
 msgid "Glad to hear it!"
 msgstr ""
 
-#: apps/questions/views.py:675 apps/wiki/views.py:839 apps/wiki/templates/wiki/includes/unhelpful_survey.html:5
+#: apps/questions/views.py:676 apps/wiki/views.py:839 apps/wiki/templates/wiki/includes/unhelpful_survey.html:5
 msgid "Sorry to hear that."
 msgstr "Seda on kahju kuulda."
 
-#: apps/questions/views.py:696
+#: apps/questions/views.py:697
 msgid "You already voted on this reply."
 msgstr "Oled sellele vastusele juba hääle andnud."
 
-#: apps/questions/views.py:913
+#: apps/questions/views.py:914
 msgid "Could not send a message to that email address."
 msgstr ""
 
-#: apps/questions/views.py:918
+#: apps/questions/views.py:919
 msgid "You will be notified of updates by email."
 msgstr ""
 
-#: apps/questions/views.py:920
+#: apps/questions/views.py:921
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr ""
 
-#: apps/questions/views.py:1017
+#: apps/questions/views.py:1018
 msgid "There was an error submitting the ticket, please try again later."
 msgstr ""
 
@@ -2971,9 +2981,7 @@ msgstr[1] ""
 
 #: apps/questions/templates/questions/questions.html:40
 msgid "<strong>0</strong> questions in the last <strong>3 days</strong> have no reply. <strong>Good job!</strong>"
-msgstr ""
-"Viimase <strong>3 päeva</strong> küsimuste hulgas pole "
-"<strong>ükski</strong> vastuseta. <strong>Tubli töö!</strong>"
+msgstr "Viimase <strong>3 päeva</strong> küsimuste hulgas pole <strong>ükski</strong> vastuseta. <strong>Tubli töö!</strong>"
 
 #: apps/questions/templates/questions/questions.html:54
 msgid "Showing questions tagged:"
@@ -3255,12 +3263,12 @@ msgstr ""
 msgid "Was this helpful to you?"
 msgstr "Kas sellest teemast oli abi?"
 
-#: apps/questions/templates/questions/includes/answer.html:67 apps/search/__init__.py:43 apps/sumo/helpers.py:352 apps/wiki/views.py:970 apps/wiki/templates/wiki/includes/document_macros.html:281
+#: apps/questions/templates/questions/includes/answer.html:67 apps/search/__init__.py:43 apps/sumo/helpers.py:353 apps/wiki/views.py:970 apps/wiki/templates/wiki/includes/document_macros.html:281
 #: apps/wiki/templates/wiki/mobile/includes/document_macros.html:15
 msgid "Yes"
 msgstr "Jah"
 
-#: apps/questions/templates/questions/includes/answer.html:68 apps/search/__init__.py:44 apps/sumo/helpers.py:352 apps/wiki/views.py:974 apps/wiki/templates/wiki/includes/document_macros.html:282
+#: apps/questions/templates/questions/includes/answer.html:68 apps/search/__init__.py:44 apps/sumo/helpers.py:353 apps/wiki/views.py:974 apps/wiki/templates/wiki/includes/document_macros.html:282
 #: apps/wiki/templates/wiki/mobile/includes/document_macros.html:16
 msgid "No"
 msgstr "Ei"
@@ -4118,47 +4126,47 @@ msgstr "Veendu, et välja pikkus on vähemalt %(limit_value)s märki (praegu on 
 msgid "Ensure this value has at most %(limit_value)s characters (it has %(show_value)s)."
 msgstr "Veendu, et välja pikkus on vähemalt %(limit_value)s märki (praegu on %(show_value)s märki)."
 
-#: apps/sumo/helpers.py:226
+#: apps/sumo/helpers.py:227
 msgid "Today at %s"
 msgstr "Täna kell %s"
 
-#: apps/sumo/helpers.py:309
+#: apps/sumo/helpers.py:310
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "%(number)d aasta tagasi"
 msgstr[1] "%(number)d aastat tagasi"
 
-#: apps/sumo/helpers.py:311
+#: apps/sumo/helpers.py:312
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "%(number)d kuu tagasi"
 msgstr[1] "%(number)d kuud tagasi"
 
-#: apps/sumo/helpers.py:313
+#: apps/sumo/helpers.py:314
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "%(number)d nädal tagasi"
 msgstr[1] "%(number)d nädalat tagasi"
 
-#: apps/sumo/helpers.py:315
+#: apps/sumo/helpers.py:316
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "%(number)d päev tagasi"
 msgstr[1] "%(number)d päeva tagasi"
 
-#: apps/sumo/helpers.py:317
+#: apps/sumo/helpers.py:318
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "%(number)d tund tagasi"
 msgstr[1] "%(number)d tundi tagasi"
 
-#: apps/sumo/helpers.py:319
+#: apps/sumo/helpers.py:320
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "%(number)d minut tagasi"
 msgstr[1] "%(number)d minutit tagasi"
 
-#: apps/sumo/helpers.py:321
+#: apps/sumo/helpers.py:322
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
 msgstr[0] "%(number)d sekund tagasi"
@@ -4445,15 +4453,15 @@ msgstr ""
 msgid "The user name you entered is inappropriate. Please pick another and consider that our helpers are other Firefox users just like you."
 msgstr ""
 
-#: apps/users/hashers.py:30 apps/users/hashers.py:51
+#: apps/users/hashers.py:30
 msgid "algorithm"
 msgstr ""
 
-#: apps/users/hashers.py:31 apps/users/hashers.py:52
+#: apps/users/hashers.py:31
 msgid "salt"
 msgstr ""
 
-#: apps/users/hashers.py:32 apps/users/hashers.py:53
+#: apps/users/hashers.py:32
 msgid "hash"
 msgstr ""
 
@@ -4533,19 +4541,19 @@ msgstr "registreerumisprofiil"
 msgid "registration profiles"
 msgstr "registreerumisprofiilid"
 
-#: apps/users/views.py:160
+#: apps/users/views.py:161
 msgid "Your account is already activated, log in below."
 msgstr "Sinu konto on juba aktiveeritud, logi allpool sisse."
 
-#: apps/users/views.py:201 apps/users/views.py:216
+#: apps/users/views.py:202 apps/users/views.py:212
 msgid "Account already activated"
 msgstr "Sinu konto on juba aktiveeritud"
 
-#: apps/users/views.py:318
+#: apps/users/views.py:321
 msgid "Your settings have been saved."
 msgstr "Sinu seaded salvestati."
 
-#: apps/users/views.py:574
+#: apps/users/views.py:577
 msgid "We've sent an email with the username to any account using {email}."
 msgstr ""
 
@@ -5423,7 +5431,7 @@ msgstr ""
 msgid "Please choose a category."
 msgstr "Palun vali kategooria."
 
-#: apps/wiki/models.py:760
+#: apps/wiki/models.py:767
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Versioon peab baseeruma ingliskeelse dokumendi versioonil. Versioon ID-ga %(id)s ei rahulda seda tingimust."
 
@@ -6422,10 +6430,8 @@ msgid ""
 "Portions of this content are &copy;1998–2013 <br>by individual mozilla.org contributors. Content <br>available under a <a href=\"//www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
 msgstr ""
-"Osa sisu autoriõigusi kuuluvad &copy;1998–2013 <br>mozilla.org "
-"kaastöötajatele. Sisu <br>on avaldatud <a "
-"href=\"//www.mozilla.org/foundation/licensing/website-content.html\">Creative "
-"Commons'i litsentsi</a> all."
+"Osa sisu autoriõigusi kuuluvad &copy;1998–2013 <br>mozilla.org kaastöötajatele. Sisu <br>on avaldatud <a href=\"//www.mozilla.org/foundation/licensing/website-content.html\">Creative Commons'i "
+"litsentsi</a> all."
 
 #: templates/base.html:187
 msgid "Contact Us"
