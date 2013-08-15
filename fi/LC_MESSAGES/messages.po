@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-07 11:23-0700\n"
+"POT-Creation-Date: 2013-08-15 06:04-0700\n"
 "PO-Revision-Date: 2013-08-02 19:50+0000\n"
 "Last-Translator: Atte <attel0@gmail.com>\n"
 "Language-Team: Finnish\n"
@@ -78,7 +78,7 @@ msgstr "Kiitos!"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email. Whitespace matters!
-#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:463 kitsune/questions/templates/questions/email/confirm_question.html:4
+#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:492 kitsune/questions/templates/questions/email/confirm_question.html:4
 msgid "Please confirm your Firefox Help question"
 msgstr "Vahvista Firefoxin tukikysymyksesi"
 
@@ -954,7 +954,7 @@ msgstr "Kaikki valmiit vastaukset..."
 msgid "Knowledge Base Dashboard"
 msgstr "Tukikannan kojelauta"
 
-#: kitsune/dashboards/views.py:65 kitsune/dashboards/templates/dashboards/includes/macros.html:175
+#: kitsune/dashboards/views.py:65 kitsune/dashboards/templates/dashboards/includes/macros.html:178
 msgid "Localization Dashboard"
 msgstr "Lokalisointikojelauta"
 
@@ -962,8 +962,22 @@ msgstr "Lokalisointikojelauta"
 msgid "Show information for:"
 msgstr "Näytä tiedot kohteelle:"
 
-#: kitsune/dashboards/templates/dashboards/contributors.html:48 kitsune/dashboards/templates/dashboards/localization.html:93 kitsune/karma/templates/karma/dashboards/questions.html:71
-#: kitsune/karma/templates/karma/dashboards/questions.html:113 kitsune/kpi/templates/kpi/dashboard.html:48
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:3
+#, fuzzy
+msgid "[{locale}] Locale Metrics"
+msgstr "Kielen {locale} käännös:"
+
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:16
+#, fuzzy
+msgid "Localization Percentage"
+msgstr "Lokalisointitiimi"
+
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:28 kitsune/kpi/templates/kpi/dashboard.html:74
+msgid "Active Contributors"
+msgstr "aktiivista avustajaa"
+
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:39 kitsune/karma/templates/karma/dashboards/questions.html:71 kitsune/karma/templates/karma/dashboards/questions.html:113
+#: kitsune/kpi/templates/kpi/dashboard.html:48
 msgid "Helpful Votes"
 msgstr "Positiivisia ääniä"
 
@@ -1041,7 +1055,7 @@ msgstr "Odottamassa tarkistusta"
 msgid "Ready for localization"
 msgstr "Valmiina käännettäväksi"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:149 kitsune/search/templates/search/results.html:61
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:149 kitsune/search/templates/search/results.html:63 kitsune/search/templates/search/results.html:85
 msgid "All Products"
 msgstr "Kaikki tuotteet"
 
@@ -1049,8 +1063,8 @@ msgstr "Kaikki tuotteet"
 #: kitsune/products/templates/products/documents.html:19 kitsune/products/templates/products/product.html:4 kitsune/products/templates/products/product.html:7
 #: kitsune/products/templates/products/product.html:14 kitsune/products/templates/products/includes/product_macros.html:12 kitsune/products/templates/products/mobile/documents.html:10
 #: kitsune/products/templates/products/mobile/documents.html:27 kitsune/products/templates/products/mobile/product.html:3 kitsune/products/templates/products/mobile/product.html:8
-#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/mobile/questions.html:36 kitsune/search/templates/search/results.html:67
-#: kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
+#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/mobile/questions.html:36 kitsune/search/templates/search/results.html:69
+#: kitsune/search/templates/search/results.html:83 kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
 msgctxt "DB: products.Product.title"
 msgid "None"
 msgstr "Ei mitään"
@@ -1069,7 +1083,21 @@ msgctxt "DB: products.Topic.title"
 msgid "None"
 msgstr "Ei mitään"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:178
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:176
+#, fuzzy
+msgid "KB Dashboard"
+msgstr "KPI-kojelauta"
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:182
+#, fuzzy
+msgid "Locale Metrics"
+msgstr "Kielen johtajat"
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:187
+msgid "KB Team"
+msgstr ""
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:189
 msgid "Localization Team"
 msgstr "Lokalisointitiimi"
 
@@ -1513,7 +1541,7 @@ msgstr "{group} | Ryhmät"
 msgid "Change avatar"
 msgstr "Pofiilikuva"
 
-#: kitsune/groups/templates/groups/profile.html:10 kitsune/users/templates/users/edit_profile.html:31 kitsune/users/templates/users/edit_profile.html:36
+#: kitsune/groups/templates/groups/profile.html:10 kitsune/users/templates/users/edit_profile.html:37 kitsune/users/templates/users/edit_profile.html:46
 #: kitsune/users/templates/users/mobile/pw_change.html:33
 msgid "Change"
 msgstr "Muuta"
@@ -1538,7 +1566,7 @@ msgstr "Ryhmän johtajat"
 msgid "Remove user from leaders"
 msgstr "Poista käyttäjä johtajista"
 
-#: kitsune/groups/templates/groups/profile.html:51 kitsune/wiki/templates/wiki/locale_details.html:22
+#: kitsune/groups/templates/groups/profile.html:51 kitsune/wiki/templates/wiki/locale_details.html:26
 msgid "Add Leader"
 msgstr "Lisää johtaja"
 
@@ -1884,11 +1912,11 @@ msgstr "Voi ei! Näyttää siltä, ettei viestejä ole!"
 msgid "Post a reply"
 msgstr "Lähetä vastaus"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:356 kitsune/questions/templates/questions/mobile/answers.html:44
+#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:377 kitsune/questions/templates/questions/mobile/answers.html:44
 msgid "Post Reply"
 msgstr "Lähetä vastaus"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:357 kitsune/questions/templates/questions/edit_answer.html:53
+#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:378 kitsune/questions/templates/questions/edit_answer.html:53
 msgid "Preview Reply"
 msgstr "Esikatsele vastausta"
 
@@ -2016,10 +2044,6 @@ msgstr ""
 #: kitsune/kpi/templates/kpi/dashboard.html:63
 msgid "Definition: Ratio of “yes”/total votes for KB articles, forum threads"
 msgstr ""
-
-#: kitsune/kpi/templates/kpi/dashboard.html:74
-msgid "Active Contributors"
-msgstr "aktiivista avustajaa"
 
 #: kitsune/kpi/templates/kpi/dashboard.html:86
 msgid "Number of active contributors to the English KB"
@@ -2635,15 +2659,15 @@ msgstr "Ratkaisu löydetty Firefox-kysymykseen"
 msgid "Solution found for question: %s"
 msgstr "Ratkaisu löydetty kysymykseen: %s"
 
-#: kitsune/questions/feeds.py:20
+#: kitsune/questions/feeds.py:36
 msgid "Recently updated questions"
 msgstr "Äskettäin päivitetyt kysymykset"
 
-#: kitsune/questions/feeds.py:48
+#: kitsune/questions/feeds.py:79
 msgid "Recently updated questions tagged %s"
 msgstr "Äskettäin päivitetyt kysymykset avainsanalla %s"
 
-#: kitsune/questions/feeds.py:66
+#: kitsune/questions/feeds.py:97
 msgid "Recent answers to %s"
 msgstr "Tuoreet vastaukset kohteeseen %s"
 
@@ -2693,7 +2717,7 @@ msgstr "Muutaman kerran viikossa"
 msgid "Every time Firefox opened"
 msgstr "Aina, kun Firefox avautuu"
 
-#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:244
+#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:265
 msgid "This started when..."
 msgstr "Ongelma alkoi, kun..."
 
@@ -2856,7 +2880,7 @@ msgstr "Maksut"
 msgid "Please provide an email."
 msgstr "Anna sähköpostiosoite."
 
-#: kitsune/questions/forms.py:318 kitsune/users/templates/users/edit_profile.html:34
+#: kitsune/questions/forms.py:318 kitsune/users/templates/users/edit_profile.html:41
 msgid "Email:"
 msgstr "Sähköposti:"
 
@@ -2986,47 +3010,47 @@ msgid "Please provide a tag."
 msgstr "Anna avainsana."
 
 #. L10n: This shouldn't happen unless people tamper with POST data.
-#: kitsune/questions/views.py:473
+#: kitsune/questions/views.py:502
 msgid "Request type not recognized."
 msgstr "Pyyntötyyppiä ei tunnistettu."
 
-#: kitsune/questions/views.py:530
+#: kitsune/questions/views.py:559
 msgid "Done! Your question is now posted on the Mozilla community support forum."
 msgstr "Valmista! Kysymyksesi on lähetetty Mozillan yhteisön tukikeskusteluun."
 
-#: kitsune/questions/views.py:732
+#: kitsune/questions/views.py:761
 msgid "Thank you for choosing a solution!"
 msgstr "Kiitos, että valitsit ratkaisun!"
 
-#: kitsune/questions/views.py:757
+#: kitsune/questions/views.py:786
 msgid "The solution was undone successfully."
 msgstr "Ratkaisu poistettiin onnistuneesti."
 
-#: kitsune/questions/views.py:828
+#: kitsune/questions/views.py:857
 msgid "Glad to hear it!"
 msgstr "Mahtavaa kuulla!"
 
-#: kitsune/questions/views.py:831 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
+#: kitsune/questions/views.py:860 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
 msgid "Sorry to hear that."
 msgstr "Ikävä kuulla."
 
-#: kitsune/questions/views.py:852
+#: kitsune/questions/views.py:881
 msgid "You already voted on this reply."
 msgstr "Äänestit jo tässä vastauksessa."
 
-#: kitsune/questions/views.py:1072
+#: kitsune/questions/views.py:1101
 msgid "Could not send a message to that email address."
 msgstr "Ei voitu lähettää viestiä sähköpostiosoitteeseen."
 
-#: kitsune/questions/views.py:1077
+#: kitsune/questions/views.py:1106
 msgid "You will be notified of updates by email."
 msgstr "Sinulle ilmoitetaan päivityksistä sähköpostilla."
 
-#: kitsune/questions/views.py:1079
+#: kitsune/questions/views.py:1108
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "Saat pian sähköpostin, jolla vahvistetaan tilauksesi."
 
-#: kitsune/questions/views.py:1159
+#: kitsune/questions/views.py:1188
 msgid "There was an error submitting the ticket. Please try again later."
 msgstr ""
 
@@ -3138,7 +3162,7 @@ msgstr "Siirry vastaukseen"
 msgid "I have this problem, too"
 msgstr "Minullakin on tämä ongelma"
 
-#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:333
+#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:354
 msgid "Post a Reply"
 msgstr "Lähetä vastaus"
 
@@ -3166,67 +3190,72 @@ msgstr "Sähköpostipäivitykset"
 msgid "Subscribe to feed"
 msgstr "Tilaa syöte"
 
-#: kitsune/questions/templates/questions/answers.html:185
+#: kitsune/questions/templates/questions/answers.html:186
 msgid "Question details"
 msgstr "Kysymyksen lisätiedot"
 
-#: kitsune/questions/templates/questions/answers.html:190 kitsune/questions/templates/questions/includes/aaq_macros.html:41
+#: kitsune/questions/templates/questions/answers.html:191 kitsune/questions/templates/questions/includes/aaq_macros.html:41
 msgid "Product"
 msgstr "Tuote"
 
-#: kitsune/questions/templates/questions/answers.html:201
+#: kitsune/questions/templates/questions/answers.html:208
 msgid "Topic"
 msgstr "Aihe"
 
-#: kitsune/questions/templates/questions/answers.html:210
+#: kitsune/questions/templates/questions/answers.html:223
 msgid "System Details"
 msgstr "Järjestelmän tiedot"
 
-#: kitsune/questions/templates/questions/answers.html:223
+#: kitsune/questions/templates/questions/answers.html:236
 msgid "More system details"
 msgstr "Lisää järjestelmätietoja"
 
-#: kitsune/questions/templates/questions/answers.html:229 kitsune/questions/templates/questions/answers.html:230
+#: kitsune/questions/templates/questions/answers.html:241
+#, fuzzy
+msgid "Save changes"
+msgstr "Tallenna kuva"
+
+#: kitsune/questions/templates/questions/answers.html:250 kitsune/questions/templates/questions/answers.html:251
 msgid "Additional System Details"
 msgstr "Lisätietoja järjestelmästä"
 
-#: kitsune/questions/templates/questions/answers.html:232
+#: kitsune/questions/templates/questions/answers.html:253
 msgid "Sites Affected"
 msgstr "Kysymystä koskevat sivustot"
 
-#: kitsune/questions/templates/questions/answers.html:236
+#: kitsune/questions/templates/questions/answers.html:257
 msgid "Crash ID"
 msgstr "Kaatumisen tunniste"
 
-#: kitsune/questions/templates/questions/answers.html:240
+#: kitsune/questions/templates/questions/answers.html:261
 msgid "This happened"
 msgstr "Tämä tapahtui"
 
-#: kitsune/questions/templates/questions/answers.html:248
+#: kitsune/questions/templates/questions/answers.html:269
 msgid "Installed Plug-ins"
 msgstr "Asennetut liitännäiset"
 
-#: kitsune/questions/templates/questions/answers.html:255
+#: kitsune/questions/templates/questions/answers.html:276
 msgid "Close"
 msgstr "Sulje"
 
-#: kitsune/questions/templates/questions/answers.html:261 kitsune/questions/templates/questions/questions.html:215 kitsune/search/forms.py:163
+#: kitsune/questions/templates/questions/answers.html:282 kitsune/questions/templates/questions/questions.html:215 kitsune/search/forms.py:163
 msgid "Tags"
 msgstr "Avainsanat"
 
-#: kitsune/questions/templates/questions/answers.html:301 kitsune/tags/forms.py:121
+#: kitsune/questions/templates/questions/answers.html:322 kitsune/tags/forms.py:121
 msgid "Add"
 msgstr "Lisää"
 
-#: kitsune/questions/templates/questions/answers.html:328
+#: kitsune/questions/templates/questions/answers.html:349
 msgid "You have exceeded the number of answers that can be posted in a given amount of time. Please try again shortly."
 msgstr "Olet ylittänyt tietyssä ajassa sallittujen vastausten määrän. Yritä pian uudestaan."
 
-#: kitsune/questions/templates/questions/answers.html:336
+#: kitsune/questions/templates/questions/answers.html:357
 msgid "You must <a href=\"{url}\">log in to your account</a> to reply to posts."
 msgstr "<a href=\"{url}\">Kirjaudu sisään tunnuksellesi</a> vastataksesi viesteihin."
 
-#: kitsune/questions/templates/questions/answers.html:339
+#: kitsune/questions/templates/questions/answers.html:360
 msgid "Don't have an account? You can <a href='{url}'>create a free account</a> now."
 msgstr "Ei tunnusta? Voit <a href='{url}'>luoda ilmaisen tunnuksen</a> nyt."
 
@@ -4120,11 +4149,11 @@ msgstr ""
 msgid "Invalid search data."
 msgstr "Virheellinen hakutieto."
 
-#: kitsune/search/views.py:454 kitsune/search/templates/search/down.html:5 kitsune/search/templates/search/mobile/down.html:6
+#: kitsune/search/views.py:452 kitsune/search/templates/search/down.html:5 kitsune/search/templates/search/mobile/down.html:6
 msgid "Search Unavailable"
 msgstr "Haku poissa käytöstä"
 
-#: kitsune/search/views.py:481
+#: kitsune/search/views.py:479
 msgid "No pages matched the search criteria"
 msgstr "Ei sivuja näillä hakuehdoilla"
 
@@ -4228,27 +4257,28 @@ msgstr "Firefox-tuki"
 msgid "Search the Firefox Support Knowledge Base and Support Forum."
 msgstr "Etsi Firefox-tukikannasta ja -keskustelusta."
 
-#: kitsune/search/templates/search/results.html:39
+#: kitsune/search/templates/search/results.html:41
 msgid "Show Everything"
 msgstr "Näytä kaikki"
 
-#: kitsune/search/templates/search/results.html:44
+#: kitsune/search/templates/search/results.html:46
 msgid "Help Articles Only"
 msgstr "Ohjeartikkelit"
 
-#: kitsune/search/templates/search/results.html:49
+#: kitsune/search/templates/search/results.html:51
 msgid "Community Discussion Only"
 msgstr "Keskustelut"
 
-#. {n} is the number of search results, {q} is the search query, {l} is the language searched.
-#: kitsune/search/templates/search/results.html:81
-msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
-msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
+#. {n} is the number of search results, {q} is the search query, {product} is the product.
+#: kitsune/search/templates/search/results.html:88
+#, fuzzy
+msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> for <strong>{product}</strong>"
+msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> for <strong>{product}</strong>"
 msgstr[0] "Hakusanalla <strong>{q}</strong> löytyi <strong>{n}</strong> hakutulos kielellä <strong>{l}</strong>"
 msgstr[1] "Hakusanalla <strong>{q}</strong> löytyi <strong>{n}</strong> hakutulosta kielellä <strong>{l}</strong>"
 
 #. {q} is the search query, {l} is the language searched.
-#: kitsune/search/templates/search/results.html:96
+#: kitsune/search/templates/search/results.html:103
 msgid "We couldn't find any results for <strong>{q}</strong> in <strong>{l}</strong>. Maybe one of these articles will be helpful?"
 msgstr "Emme löytäneet tuloksia haulla <strong>{q}</strong> kielelle <strong>{l}</strong>. Auttaisiko jokin näistä artikkeleista?"
 
@@ -5460,7 +5490,7 @@ msgstr "Kirjaudu ulos"
 
 #: kitsune/sumo/templates/includes/common_macros.html:54
 #, fuzzy
-msgid "Sign in with Persona"
+msgid "Sign in with email"
 msgstr "Kirjaudu sisään Twitter-tunnuksella"
 
 #: kitsune/sumo/templates/includes/common_macros.html:56
@@ -5580,6 +5610,10 @@ msgstr "Vaihda kieli"
 #: kitsune/sumo/templates/mobile/base.html:92
 msgid "Switch to desktop site"
 msgstr "Siirry työpöytäsivustolle"
+
+#: kitsune/sumo/templates/mobile/base.html:123
+msgid "Get support for another platform:"
+msgstr ""
 
 #: kitsune/sumo/templates/sumo/deprecated.html:2
 msgid "Redirecting"
@@ -5738,7 +5772,7 @@ msgstr "Pakollinen. Enintään 30 merkkiä. Vain kirjaimia, numeroita ja merkkej
 msgid "Email address:"
 msgstr "Sähköpostiosoite:"
 
-#: kitsune/users/forms.py:127 kitsune/users/templates/users/edit_profile.html:30 kitsune/users/templates/users/includes/macros.html:15
+#: kitsune/users/forms.py:127 kitsune/users/templates/users/edit_profile.html:36 kitsune/users/templates/users/includes/macros.html:15
 msgid "Password:"
 msgstr "Salasana:"
 
@@ -6042,21 +6076,26 @@ msgstr "Muokatut tai käännetyt dokumentit"
 msgid "Change Avatar"
 msgstr "Profiilikuva"
 
-#: kitsune/users/templates/users/edit_profile.html:16
+#: kitsune/users/templates/users/edit_profile.html:21
 msgid "Avatar:"
 msgstr "Profiilikuva:"
 
-#: kitsune/users/templates/users/edit_profile.html:20
+#: kitsune/users/templates/users/edit_profile.html:25
 msgctxt "avatar"
 msgid "Change"
 msgstr "Muuta"
 
-#: kitsune/users/templates/users/edit_profile.html:24
+#: kitsune/users/templates/users/edit_profile.html:29
 msgctxt "avatar"
 msgid "Delete"
 msgstr "Poista"
 
-#: kitsune/users/templates/users/edit_profile.html:41 kitsune/users/templates/users/edit_settings.html:15 kitsune/users/templates/users/pw_reset_confirm.html:26
+#: kitsune/users/templates/users/edit_profile.html:44
+#, fuzzy
+msgid "Change with Persona"
+msgstr "Kirjaudu sisään Twitter-tunnuksella"
+
+#: kitsune/users/templates/users/edit_profile.html:52 kitsune/users/templates/users/edit_settings.html:15 kitsune/users/templates/users/pw_reset_confirm.html:26
 msgid "Update"
 msgstr "Päivitä"
 
@@ -6840,7 +6879,7 @@ msgstr ""
 msgid "Please choose a category."
 msgstr "Valitse luokka."
 
-#: kitsune/wiki/models.py:891
+#: kitsune/wiki/models.py:898
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Muutoksen pitää pohjautua englanninkieliseen artikkeliin. Muutostunnus %(id)s ei täytä tätä vaatimusta."
 
@@ -7030,7 +7069,7 @@ msgstr "Avustajille"
 msgid "Remove {role}"
 msgstr "Poista johtaja"
 
-#: kitsune/wiki/templates/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/templates/wiki/locale_details.html:5 kitsune/wiki/templates/wiki/locale_list.html:4
+#: kitsune/wiki/templates/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/templates/wiki/locale_details.html:9 kitsune/wiki/templates/wiki/locale_list.html:4
 #: kitsune/wiki/templates/wiki/locale_list.html:9
 msgid "Locales"
 msgstr "Kielet"
@@ -7156,61 +7195,61 @@ msgstr "Kaikki artikkelit"
 msgid "There are no articles."
 msgstr "Ei artikkeleita."
 
-#: kitsune/wiki/templates/wiki/locale_details.html:4
+#: kitsune/wiki/templates/wiki/locale_details.html:5
 #, fuzzy
-msgid "{locale} Localization Team | Knowledge Base"
-msgstr "{locale} | Tukikanta"
+msgid "[{locale}] KB Team"
+msgstr "Kielen {locale} käännös:"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:10
+#: kitsune/wiki/templates/wiki/locale_details.html:7
 #, fuzzy
 msgid "[{locale}] Localization Team"
 msgstr "Kielen {locale} käännös:"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:14
+#: kitsune/wiki/templates/wiki/locale_details.html:18
 msgid "Edit locale leaders"
 msgstr "Muokkaa kielen johtajia"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:16
+#: kitsune/wiki/templates/wiki/locale_details.html:20
 msgid "Locale Leaders"
 msgstr "Kielen johtajat"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:31
+#: kitsune/wiki/templates/wiki/locale_details.html:35
 msgid "Remove user from locale leaders"
 msgstr "Poista käyttäjä kielen johtajista"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:41
+#: kitsune/wiki/templates/wiki/locale_details.html:45
 msgid "Edit locale reviewers"
 msgstr "Muokkaa kielen tarkastajia"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:43
+#: kitsune/wiki/templates/wiki/locale_details.html:47
 msgid "Locale Reviewers"
 msgstr "Kielen tarkastajat"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:49
+#: kitsune/wiki/templates/wiki/locale_details.html:53
 msgid "Add Reviewer"
 msgstr "Lisää tarkastaja"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:58
+#: kitsune/wiki/templates/wiki/locale_details.html:62
 msgid "Remove user from locale reviewers"
 msgstr "Poista käyttäjä kielen tarkastajista"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:68
+#: kitsune/wiki/templates/wiki/locale_details.html:72
 msgid "Edit locale editors"
 msgstr "Muokkaa kielen muokkaajia"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:70
+#: kitsune/wiki/templates/wiki/locale_details.html:74
 msgid "Locale Editors"
 msgstr "Kielen muokkaajat"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:76
+#: kitsune/wiki/templates/wiki/locale_details.html:80
 msgid "Add Editor"
 msgstr "Lisää muokkaaja"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:85
+#: kitsune/wiki/templates/wiki/locale_details.html:89
 msgid "Remove user from locale editors"
 msgstr "Poista käyttäjä kielen muokkaajista"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:94
+#: kitsune/wiki/templates/wiki/locale_details.html:98
 #, fuzzy
 msgid "{count} Active Contributors (last 90 days)"
 msgstr "aktiivista avustajaa"
@@ -7920,6 +7959,10 @@ msgstr ""
 #, fuzzy
 msgid "Unsubscribed"
 msgstr "tilattu"
+
+#, fuzzy
+#~ msgid "{locale} Localization Team | Knowledge Base"
+#~ msgstr "{locale} | Tukikanta"
 
 #~ msgid "More options:"
 #~ msgstr "Lisää valintoja:"

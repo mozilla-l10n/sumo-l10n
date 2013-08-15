@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-07 11:23-0700\n"
+"POT-Creation-Date: 2013-08-15 06:04-0700\n"
 "PO-Revision-Date: 2012-04-15 22:49+0200\n"
 "Last-Translator: Håvard <havard.mork@gmail.com>\n"
 "Language-Team: Norwegian Bokmal\n"
@@ -79,7 +79,7 @@ msgstr ""
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email. Whitespace matters!
-#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:463 kitsune/questions/templates/questions/email/confirm_question.html:4
+#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:492 kitsune/questions/templates/questions/email/confirm_question.html:4
 #, fuzzy
 msgid "Please confirm your Firefox Help question"
 msgstr "Bekreft e-postadressen din"
@@ -992,7 +992,7 @@ msgstr "Alle kunnskapsbaseartikler ..."
 msgid "Knowledge Base Dashboard"
 msgstr "Kunnskapsbase-instrumentbord"
 
-#: kitsune/dashboards/views.py:65 kitsune/dashboards/templates/dashboards/includes/macros.html:175
+#: kitsune/dashboards/views.py:65 kitsune/dashboards/templates/dashboards/includes/macros.html:178
 msgid "Localization Dashboard"
 msgstr "Oversetter-instrumentbord"
 
@@ -1000,8 +1000,23 @@ msgstr "Oversetter-instrumentbord"
 msgid "Show information for:"
 msgstr "Vis informasjon for:"
 
-#: kitsune/dashboards/templates/dashboards/contributors.html:48 kitsune/dashboards/templates/dashboards/localization.html:93 kitsune/karma/templates/karma/dashboards/questions.html:71
-#: kitsune/karma/templates/karma/dashboards/questions.html:113 kitsune/kpi/templates/kpi/dashboard.html:48
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:3
+#, fuzzy
+msgid "[{locale}] Locale Metrics"
+msgstr "{locale}-oversetting:"
+
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:16
+#, fuzzy
+msgid "Localization Percentage"
+msgstr "Oversetter-instrumentbord"
+
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:28 kitsune/kpi/templates/kpi/dashboard.html:74
+#, fuzzy
+msgid "Active Contributors"
+msgstr "For bidragsytere"
+
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:39 kitsune/karma/templates/karma/dashboards/questions.html:71 kitsune/karma/templates/karma/dashboards/questions.html:113
+#: kitsune/kpi/templates/kpi/dashboard.html:48
 #, fuzzy
 msgid "Helpful Votes"
 msgstr "Har hjelpsomme svar"
@@ -1085,7 +1100,7 @@ msgstr "Send til gjennomgang"
 msgid "Ready for localization"
 msgstr ""
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:149 kitsune/search/templates/search/results.html:61
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:149 kitsune/search/templates/search/results.html:63 kitsune/search/templates/search/results.html:85
 #, fuzzy
 msgid "All Products"
 msgstr "Andre produkter"
@@ -1094,8 +1109,8 @@ msgstr "Andre produkter"
 #: kitsune/products/templates/products/documents.html:19 kitsune/products/templates/products/product.html:4 kitsune/products/templates/products/product.html:7
 #: kitsune/products/templates/products/product.html:14 kitsune/products/templates/products/includes/product_macros.html:12 kitsune/products/templates/products/mobile/documents.html:10
 #: kitsune/products/templates/products/mobile/documents.html:27 kitsune/products/templates/products/mobile/product.html:3 kitsune/products/templates/products/mobile/product.html:8
-#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/mobile/questions.html:36 kitsune/search/templates/search/results.html:67
-#: kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
+#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/mobile/questions.html:36 kitsune/search/templates/search/results.html:69
+#: kitsune/search/templates/search/results.html:83 kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
 msgctxt "DB: products.Product.title"
 msgid "None"
 msgstr ""
@@ -1115,7 +1130,21 @@ msgctxt "DB: products.Topic.title"
 msgid "None"
 msgstr ""
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:178
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:176
+#, fuzzy
+msgid "KB Dashboard"
+msgstr "Bidragsyter-instrumentpanel"
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:182
+#, fuzzy
+msgid "Locale Metrics"
+msgstr "Språk"
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:187
+msgid "KB Team"
+msgstr ""
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:189
 #, fuzzy
 msgid "Localization Team"
 msgstr "Oversetter-instrumentbord"
@@ -1574,7 +1603,7 @@ msgstr ""
 msgid "Change avatar"
 msgstr "Bytt profilbilde"
 
-#: kitsune/groups/templates/groups/profile.html:10 kitsune/users/templates/users/edit_profile.html:31 kitsune/users/templates/users/edit_profile.html:36
+#: kitsune/groups/templates/groups/profile.html:10 kitsune/users/templates/users/edit_profile.html:37 kitsune/users/templates/users/edit_profile.html:46
 #: kitsune/users/templates/users/mobile/pw_change.html:33
 msgid "Change"
 msgstr "Endre"
@@ -1603,7 +1632,7 @@ msgstr ""
 msgid "Remove user from leaders"
 msgstr "Fjern"
 
-#: kitsune/groups/templates/groups/profile.html:51 kitsune/wiki/templates/wiki/locale_details.html:22
+#: kitsune/groups/templates/groups/profile.html:51 kitsune/wiki/templates/wiki/locale_details.html:26
 msgid "Add Leader"
 msgstr ""
 
@@ -1974,12 +2003,12 @@ msgstr "Å nei! Ser ut som der ikke fins noen meldinger."
 msgid "Post a reply"
 msgstr "Skriv svar"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:356 kitsune/questions/templates/questions/mobile/answers.html:44
+#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:377 kitsune/questions/templates/questions/mobile/answers.html:44
 #, fuzzy
 msgid "Post Reply"
 msgstr "Skriv svar"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:357 kitsune/questions/templates/questions/edit_answer.html:53
+#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:378 kitsune/questions/templates/questions/edit_answer.html:53
 #, fuzzy
 msgid "Preview Reply"
 msgstr "Forhåndsvisning"
@@ -2111,11 +2140,6 @@ msgstr ""
 #: kitsune/kpi/templates/kpi/dashboard.html:63
 msgid "Definition: Ratio of “yes”/total votes for KB articles, forum threads"
 msgstr ""
-
-#: kitsune/kpi/templates/kpi/dashboard.html:74
-#, fuzzy
-msgid "Active Contributors"
-msgstr "For bidragsytere"
 
 #: kitsune/kpi/templates/kpi/dashboard.html:86
 msgid "Number of active contributors to the English KB"
@@ -2765,17 +2789,17 @@ msgstr ""
 msgid "Solution found for question: %s"
 msgstr ""
 
-#: kitsune/questions/feeds.py:20
+#: kitsune/questions/feeds.py:36
 #, fuzzy
 msgid "Recently updated questions"
 msgstr "Nylig oppdaterte tråder om %s"
 
-#: kitsune/questions/feeds.py:48
+#: kitsune/questions/feeds.py:79
 #, fuzzy
 msgid "Recently updated questions tagged %s"
 msgstr "Nylig oppdaterte tråder om %s"
 
-#: kitsune/questions/feeds.py:66
+#: kitsune/questions/feeds.py:97
 #, fuzzy
 msgid "Recent answers to %s"
 msgstr "Nylige meldinger i %s"
@@ -2825,7 +2849,7 @@ msgstr "Besøk per uke"
 msgid "Every time Firefox opened"
 msgstr ""
 
-#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:244
+#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:265
 msgid "This started when..."
 msgstr ""
 
@@ -3006,7 +3030,7 @@ msgstr ""
 msgid "Please provide an email."
 msgstr "Oppgi en tittel."
 
-#: kitsune/questions/forms.py:318 kitsune/users/templates/users/edit_profile.html:34
+#: kitsune/questions/forms.py:318 kitsune/users/templates/users/edit_profile.html:41
 msgid "Email:"
 msgstr "E-postadresse:"
 
@@ -3146,50 +3170,50 @@ msgid "Please provide a tag."
 msgstr "Oppgi en slug."
 
 #. L10n: This shouldn't happen unless people tamper with POST data.
-#: kitsune/questions/views.py:473
+#: kitsune/questions/views.py:502
 msgid "Request type not recognized."
 msgstr ""
 
-#: kitsune/questions/views.py:530
+#: kitsune/questions/views.py:559
 msgid "Done! Your question is now posted on the Mozilla community support forum."
 msgstr ""
 
-#: kitsune/questions/views.py:732
+#: kitsune/questions/views.py:761
 #, fuzzy
 msgid "Thank you for choosing a solution!"
 msgstr "Takk for at du er så kul!"
 
-#: kitsune/questions/views.py:757
+#: kitsune/questions/views.py:786
 #, fuzzy
 msgid "The solution was undone successfully."
 msgstr "E-postbekreftelse sendt."
 
-#: kitsune/questions/views.py:828
+#: kitsune/questions/views.py:857
 msgid "Glad to hear it!"
 msgstr ""
 
-#: kitsune/questions/views.py:831 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
+#: kitsune/questions/views.py:860 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
 msgid "Sorry to hear that."
 msgstr ""
 
-#: kitsune/questions/views.py:852
+#: kitsune/questions/views.py:881
 #, fuzzy
 msgid "You already voted on this reply."
 msgstr "Du har allerede stemt i denne artikkelen."
 
-#: kitsune/questions/views.py:1072
+#: kitsune/questions/views.py:1101
 msgid "Could not send a message to that email address."
 msgstr ""
 
-#: kitsune/questions/views.py:1077
+#: kitsune/questions/views.py:1106
 msgid "You will be notified of updates by email."
 msgstr ""
 
-#: kitsune/questions/views.py:1079
+#: kitsune/questions/views.py:1108
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr ""
 
-#: kitsune/questions/views.py:1159
+#: kitsune/questions/views.py:1188
 msgid "There was an error submitting the ticket. Please try again later."
 msgstr ""
 
@@ -3314,7 +3338,7 @@ msgstr "Har svar"
 msgid "I have this problem, too"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:333
+#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:354
 #, fuzzy
 msgid "Post a Reply"
 msgstr "Skriv svar"
@@ -3349,72 +3373,77 @@ msgstr "E-postadresse:"
 msgid "Subscribe to feed"
 msgstr "Abonner på redigeringsvarslinger"
 
-#: kitsune/questions/templates/questions/answers.html:185
+#: kitsune/questions/templates/questions/answers.html:186
 #, fuzzy
 msgid "Question details"
 msgstr "Spørsmålsdato"
 
-#: kitsune/questions/templates/questions/answers.html:190 kitsune/questions/templates/questions/includes/aaq_macros.html:41
+#: kitsune/questions/templates/questions/answers.html:191 kitsune/questions/templates/questions/includes/aaq_macros.html:41
 #, fuzzy
 msgid "Product"
 msgstr "Andre produkter"
 
-#: kitsune/questions/templates/questions/answers.html:201
+#: kitsune/questions/templates/questions/answers.html:208
 #, fuzzy
 msgid "Topic"
 msgstr "Emner:"
 
-#: kitsune/questions/templates/questions/answers.html:210
+#: kitsune/questions/templates/questions/answers.html:223
 msgid "System Details"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:223
+#: kitsune/questions/templates/questions/answers.html:236
 msgid "More system details"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:229 kitsune/questions/templates/questions/answers.html:230
+#: kitsune/questions/templates/questions/answers.html:241
+#, fuzzy
+msgid "Save changes"
+msgstr "Lagre bilde"
+
+#: kitsune/questions/templates/questions/answers.html:250 kitsune/questions/templates/questions/answers.html:251
 msgid "Additional System Details"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:232
+#: kitsune/questions/templates/questions/answers.html:253
 msgid "Sites Affected"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:236
+#: kitsune/questions/templates/questions/answers.html:257
 #, fuzzy
 msgid "Crash ID"
 msgstr "Følger"
 
-#: kitsune/questions/templates/questions/answers.html:240
+#: kitsune/questions/templates/questions/answers.html:261
 #, fuzzy
 msgid "This happened"
 msgstr "Denne uken"
 
-#: kitsune/questions/templates/questions/answers.html:248
+#: kitsune/questions/templates/questions/answers.html:269
 msgid "Installed Plug-ins"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:255
+#: kitsune/questions/templates/questions/answers.html:276
 msgid "Close"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:261 kitsune/questions/templates/questions/questions.html:215 kitsune/search/forms.py:163
+#: kitsune/questions/templates/questions/answers.html:282 kitsune/questions/templates/questions/questions.html:215 kitsune/search/forms.py:163
 msgid "Tags"
 msgstr "Etiketter"
 
-#: kitsune/questions/templates/questions/answers.html:301 kitsune/tags/forms.py:121
+#: kitsune/questions/templates/questions/answers.html:322 kitsune/tags/forms.py:121
 msgid "Add"
 msgstr "Legg til"
 
-#: kitsune/questions/templates/questions/answers.html:328
+#: kitsune/questions/templates/questions/answers.html:349
 msgid "You have exceeded the number of answers that can be posted in a given amount of time. Please try again shortly."
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:336
+#: kitsune/questions/templates/questions/answers.html:357
 msgid "You must <a href=\"{url}\">log in to your account</a> to reply to posts."
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:339
+#: kitsune/questions/templates/questions/answers.html:360
 msgid "Don't have an account? You can <a href='{url}'>create a free account</a> now."
 msgstr ""
 
@@ -4397,11 +4426,11 @@ msgstr "Ugyldig callback-funksjon."
 msgid "Invalid search data."
 msgstr "Ugyldig søkedata."
 
-#: kitsune/search/views.py:454 kitsune/search/templates/search/down.html:5 kitsune/search/templates/search/mobile/down.html:6
+#: kitsune/search/views.py:452 kitsune/search/templates/search/down.html:5 kitsune/search/templates/search/mobile/down.html:6
 msgid "Search Unavailable"
 msgstr "Søk er utilgjengelig"
 
-#: kitsune/search/views.py:481
+#: kitsune/search/views.py:479
 msgid "No pages matched the search criteria"
 msgstr "Ingen sider passer til søkekriteriene"
 
@@ -4508,30 +4537,31 @@ msgstr "Firefox Hjelp"
 msgid "Search the Firefox Support Knowledge Base and Support Forum."
 msgstr "Søk i Firefox Support Kunnskapsbase og brukerstøtteforum."
 
-#: kitsune/search/templates/search/results.html:39
+#: kitsune/search/templates/search/results.html:41
 #, fuzzy
 msgid "Show Everything"
 msgstr "Vis media for:"
 
-#: kitsune/search/templates/search/results.html:44
+#: kitsune/search/templates/search/results.html:46
 #, fuzzy
 msgid "Help Articles Only"
 msgstr "Alle artikler"
 
-#: kitsune/search/templates/search/results.html:49
+#: kitsune/search/templates/search/results.html:51
 #, fuzzy
 msgid "Community Discussion Only"
 msgstr "Diskusjon"
 
-#. {n} is the number of search results, {q} is the search query, {l} is the language searched.
-#: kitsune/search/templates/search/results.html:81
-msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
-msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
+#. {n} is the number of search results, {q} is the search query, {product} is the product.
+#: kitsune/search/templates/search/results.html:88
+#, fuzzy
+msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> for <strong>{product}</strong>"
+msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> for <strong>{product}</strong>"
 msgstr[0] "Fant <strong>{n}</strong> resultat for <strong>{q}</strong> i <strong>{l}</strong>"
 msgstr[1] "Fant <strong>{n}</strong> resultater for <strong>{q}</strong> i <strong>{l}</strong>"
 
 #. {q} is the search query, {l} is the language searched.
-#: kitsune/search/templates/search/results.html:96
+#: kitsune/search/templates/search/results.html:103
 #, fuzzy
 msgid "We couldn't find any results for <strong>{q}</strong> in <strong>{l}</strong>. Maybe one of these articles will be helpful?"
 msgstr "Fant <strong>{n}</strong> resultat for <strong>{q}</strong> i <strong>{l}</strong>"
@@ -5824,7 +5854,7 @@ msgstr "Logg ut"
 
 #: kitsune/sumo/templates/includes/common_macros.html:54
 #, fuzzy
-msgid "Sign in with Persona"
+msgid "Sign in with email"
 msgstr "Logg inn med Twitter-kontoen din"
 
 #: kitsune/sumo/templates/includes/common_macros.html:56
@@ -5958,6 +5988,10 @@ msgstr "bytt språk"
 
 #: kitsune/sumo/templates/mobile/base.html:92
 msgid "Switch to desktop site"
+msgstr ""
+
+#: kitsune/sumo/templates/mobile/base.html:123
+msgid "Get support for another platform:"
 msgstr ""
 
 #: kitsune/sumo/templates/sumo/deprecated.html:2
@@ -6122,7 +6156,7 @@ msgstr "Påkrevd. 30 tegn eller kortere. Bare bokstaver, tall og @/./+/-/_."
 msgid "Email address:"
 msgstr "E-postadresse:"
 
-#: kitsune/users/forms.py:127 kitsune/users/templates/users/edit_profile.html:30 kitsune/users/templates/users/includes/macros.html:15
+#: kitsune/users/forms.py:127 kitsune/users/templates/users/edit_profile.html:36 kitsune/users/templates/users/includes/macros.html:15
 msgid "Password:"
 msgstr "Passord:"
 
@@ -6435,21 +6469,26 @@ msgstr ""
 msgid "Change Avatar"
 msgstr "Bytt profilbilde"
 
-#: kitsune/users/templates/users/edit_profile.html:16
+#: kitsune/users/templates/users/edit_profile.html:21
 msgid "Avatar:"
 msgstr "Profilbilde:"
 
-#: kitsune/users/templates/users/edit_profile.html:20
+#: kitsune/users/templates/users/edit_profile.html:25
 msgctxt "avatar"
 msgid "Change"
 msgstr "Endre"
 
-#: kitsune/users/templates/users/edit_profile.html:24
+#: kitsune/users/templates/users/edit_profile.html:29
 msgctxt "avatar"
 msgid "Delete"
 msgstr "Slett"
 
-#: kitsune/users/templates/users/edit_profile.html:41 kitsune/users/templates/users/edit_settings.html:15 kitsune/users/templates/users/pw_reset_confirm.html:26
+#: kitsune/users/templates/users/edit_profile.html:44
+#, fuzzy
+msgid "Change with Persona"
+msgstr "Logg inn med Twitter-kontoen din"
+
+#: kitsune/users/templates/users/edit_profile.html:52 kitsune/users/templates/users/edit_settings.html:15 kitsune/users/templates/users/pw_reset_confirm.html:26
 msgid "Update"
 msgstr "Oppdater"
 
@@ -7314,7 +7353,7 @@ msgstr ""
 msgid "Please choose a category."
 msgstr "Velg en kategori."
 
-#: kitsune/wiki/models.py:891
+#: kitsune/wiki/models.py:898
 #, fuzzy
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "En revisjon må baseres på en annen revisjon av %(locale)s-dokumentet. Revisjons-ID %(id)s passer ikke disse kriteriene."
@@ -7526,7 +7565,7 @@ msgstr "For bidragsytere"
 msgid "Remove {role}"
 msgstr "Husk meg"
 
-#: kitsune/wiki/templates/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/templates/wiki/locale_details.html:5 kitsune/wiki/templates/wiki/locale_list.html:4
+#: kitsune/wiki/templates/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/templates/wiki/locale_details.html:9 kitsune/wiki/templates/wiki/locale_list.html:4
 #: kitsune/wiki/templates/wiki/locale_list.html:9
 #, fuzzy
 msgid "Locales"
@@ -7658,71 +7697,71 @@ msgstr "Alle artikler"
 msgid "There are no articles."
 msgstr "Der er ingen artikler."
 
-#: kitsune/wiki/templates/wiki/locale_details.html:4
+#: kitsune/wiki/templates/wiki/locale_details.html:5
 #, fuzzy
-msgid "{locale} Localization Team | Knowledge Base"
-msgstr "Kunnskapsbase"
+msgid "[{locale}] KB Team"
+msgstr "{locale}-oversetting:"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:10
+#: kitsune/wiki/templates/wiki/locale_details.html:7
 #, fuzzy
 msgid "[{locale}] Localization Team"
 msgstr "{locale}-oversetting:"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:14
+#: kitsune/wiki/templates/wiki/locale_details.html:18
 #, fuzzy
 msgid "Edit locale leaders"
 msgstr "Rediger profil"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:16
+#: kitsune/wiki/templates/wiki/locale_details.html:20
 #, fuzzy
 msgid "Locale Leaders"
 msgstr "Språk"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:31
+#: kitsune/wiki/templates/wiki/locale_details.html:35
 #, fuzzy
 msgid "Remove user from locale leaders"
 msgstr "Fjern"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:41
+#: kitsune/wiki/templates/wiki/locale_details.html:45
 msgid "Edit locale reviewers"
 msgstr ""
 
-#: kitsune/wiki/templates/wiki/locale_details.html:43
+#: kitsune/wiki/templates/wiki/locale_details.html:47
 #, fuzzy
 msgid "Locale Reviewers"
 msgstr "Avbryt gjennomgang"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:49
+#: kitsune/wiki/templates/wiki/locale_details.html:53
 #, fuzzy
 msgid "Add Reviewer"
 msgstr "Gjennomgått:"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:58
+#: kitsune/wiki/templates/wiki/locale_details.html:62
 #, fuzzy
 msgid "Remove user from locale reviewers"
 msgstr "Fjern"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:68
+#: kitsune/wiki/templates/wiki/locale_details.html:72
 #, fuzzy
 msgid "Edit locale editors"
 msgstr "For bidragsytere"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:70
+#: kitsune/wiki/templates/wiki/locale_details.html:74
 #, fuzzy
 msgid "Locale Editors"
 msgstr "Språk"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:76
+#: kitsune/wiki/templates/wiki/locale_details.html:80
 #, fuzzy
 msgid "Add Editor"
 msgstr "Rediger"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:85
+#: kitsune/wiki/templates/wiki/locale_details.html:89
 #, fuzzy
 msgid "Remove user from locale editors"
 msgstr "Fjern"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:94
+#: kitsune/wiki/templates/wiki/locale_details.html:98
 #, fuzzy
 msgid "{count} Active Contributors (last 90 days)"
 msgstr "For bidragsytere"
@@ -8462,6 +8501,10 @@ msgstr ""
 #: vendor/src/django-tidings/tidings/templates/tidings/unsubscribe_success.html:8
 msgid "Unsubscribed"
 msgstr "Utmeldt"
+
+#, fuzzy
+#~ msgid "{locale} Localization Team | Knowledge Base"
+#~ msgstr "Kunnskapsbase"
 
 #~ msgid "More options:"
 #~ msgstr "Flere valg:"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-07 11:23-0700\n"
+"POT-Creation-Date: 2013-08-15 06:04-0700\n"
 "PO-Revision-Date: 2013-08-04 10:29+0000\n"
 "Last-Translator: xcffl <hc5023295@gmail.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -78,7 +78,7 @@ msgstr "感谢订阅！"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email. Whitespace matters!
-#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:463 kitsune/questions/templates/questions/email/confirm_question.html:4
+#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:492 kitsune/questions/templates/questions/email/confirm_question.html:4
 msgid "Please confirm your Firefox Help question"
 msgstr "请确认您的 Firefox 帮助 问题"
 
@@ -937,7 +937,7 @@ msgstr "所有预装回应的知识库文章..."
 msgid "Knowledge Base Dashboard"
 msgstr "知识库状态面板"
 
-#: kitsune/dashboards/views.py:65 kitsune/dashboards/templates/dashboards/includes/macros.html:175
+#: kitsune/dashboards/views.py:65 kitsune/dashboards/templates/dashboards/includes/macros.html:178
 msgid "Localization Dashboard"
 msgstr "本地化状态面板"
 
@@ -945,8 +945,22 @@ msgstr "本地化状态面板"
 msgid "Show information for:"
 msgstr "显示相关信息："
 
-#: kitsune/dashboards/templates/dashboards/contributors.html:48 kitsune/dashboards/templates/dashboards/localization.html:93 kitsune/karma/templates/karma/dashboards/questions.html:71
-#: kitsune/karma/templates/karma/dashboards/questions.html:113 kitsune/kpi/templates/kpi/dashboard.html:48
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:3
+#, fuzzy
+msgid "[{locale}] Locale Metrics"
+msgstr "[{locale}] 本地化团队"
+
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:16
+#, fuzzy
+msgid "Localization Percentage"
+msgstr "本地化团队"
+
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:28 kitsune/kpi/templates/kpi/dashboard.html:74
+msgid "Active Contributors"
+msgstr "活跃的贡献者"
+
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:39 kitsune/karma/templates/karma/dashboards/questions.html:71 kitsune/karma/templates/karma/dashboards/questions.html:113
+#: kitsune/kpi/templates/kpi/dashboard.html:48
 msgid "Helpful Votes"
 msgstr "投向有帮助的投票"
 
@@ -1024,7 +1038,7 @@ msgstr "正在等待审核"
 msgid "Ready for localization"
 msgstr "可进行本地化"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:149 kitsune/search/templates/search/results.html:61
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:149 kitsune/search/templates/search/results.html:63 kitsune/search/templates/search/results.html:85
 msgid "All Products"
 msgstr "所有产品"
 
@@ -1032,8 +1046,8 @@ msgstr "所有产品"
 #: kitsune/products/templates/products/documents.html:19 kitsune/products/templates/products/product.html:4 kitsune/products/templates/products/product.html:7
 #: kitsune/products/templates/products/product.html:14 kitsune/products/templates/products/includes/product_macros.html:12 kitsune/products/templates/products/mobile/documents.html:10
 #: kitsune/products/templates/products/mobile/documents.html:27 kitsune/products/templates/products/mobile/product.html:3 kitsune/products/templates/products/mobile/product.html:8
-#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/mobile/questions.html:36 kitsune/search/templates/search/results.html:67
-#: kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
+#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/mobile/questions.html:36 kitsune/search/templates/search/results.html:69
+#: kitsune/search/templates/search/results.html:83 kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
 msgctxt "DB: products.Product.title"
 msgid "None"
 msgstr "无"
@@ -1052,7 +1066,21 @@ msgctxt "DB: products.Topic.title"
 msgid "None"
 msgstr "无"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:178
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:176
+#, fuzzy
+msgid "KB Dashboard"
+msgstr "关键效绩指标面板"
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:182
+#, fuzzy
+msgid "Locale Metrics"
+msgstr "语言领导者"
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:187
+msgid "KB Team"
+msgstr ""
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:189
 msgid "Localization Team"
 msgstr "本地化团队"
 
@@ -1496,7 +1524,7 @@ msgstr "{group} | 群组"
 msgid "Change avatar"
 msgstr "更改头像"
 
-#: kitsune/groups/templates/groups/profile.html:10 kitsune/users/templates/users/edit_profile.html:31 kitsune/users/templates/users/edit_profile.html:36
+#: kitsune/groups/templates/groups/profile.html:10 kitsune/users/templates/users/edit_profile.html:37 kitsune/users/templates/users/edit_profile.html:46
 #: kitsune/users/templates/users/mobile/pw_change.html:33
 msgid "Change"
 msgstr "更改"
@@ -1521,7 +1549,7 @@ msgstr "群组组长"
 msgid "Remove user from leaders"
 msgstr "从组长中移除用户"
 
-#: kitsune/groups/templates/groups/profile.html:51 kitsune/wiki/templates/wiki/locale_details.html:22
+#: kitsune/groups/templates/groups/profile.html:51 kitsune/wiki/templates/wiki/locale_details.html:26
 msgid "Add Leader"
 msgstr "添加组长"
 
@@ -1867,11 +1895,11 @@ msgstr "不是吧！这里看起来一个帖子都没有！"
 msgid "Post a reply"
 msgstr "回复"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:356 kitsune/questions/templates/questions/mobile/answers.html:44
+#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:377 kitsune/questions/templates/questions/mobile/answers.html:44
 msgid "Post Reply"
 msgstr "发表回复"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:357 kitsune/questions/templates/questions/edit_answer.html:53
+#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:378 kitsune/questions/templates/questions/edit_answer.html:53
 msgid "Preview Reply"
 msgstr "预览回复"
 
@@ -1996,10 +2024,6 @@ msgstr "知识库文章和论坛的帮助效果"
 #: kitsune/kpi/templates/kpi/dashboard.html:63
 msgid "Definition: Ratio of “yes”/total votes for KB articles, forum threads"
 msgstr "定义：知识库文章、论坛主题的有所帮助投票中投“是”的比例"
-
-#: kitsune/kpi/templates/kpi/dashboard.html:74
-msgid "Active Contributors"
-msgstr "活跃的贡献者"
 
 #: kitsune/kpi/templates/kpi/dashboard.html:86
 msgid "Number of active contributors to the English KB"
@@ -2602,15 +2626,15 @@ msgstr "找到了 Firefox 帮助问题的解决方案"
 msgid "Solution found for question: %s"
 msgstr "找到解决方案的问题：%s"
 
-#: kitsune/questions/feeds.py:20
+#: kitsune/questions/feeds.py:36
 msgid "Recently updated questions"
 msgstr "最近更新的问题"
 
-#: kitsune/questions/feeds.py:48
+#: kitsune/questions/feeds.py:79
 msgid "Recently updated questions tagged %s"
 msgstr "最近更新的有关 %s 的问题"
 
-#: kitsune/questions/feeds.py:66
+#: kitsune/questions/feeds.py:97
 msgid "Recent answers to %s"
 msgstr "%s 最近的回答"
 
@@ -2659,7 +2683,7 @@ msgstr "一周几次"
 msgid "Every time Firefox opened"
 msgstr "每次打开 Firefox 时"
 
-#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:244
+#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:265
 msgid "This started when..."
 msgstr "在此时开始..."
 
@@ -2820,7 +2844,7 @@ msgstr "支付/结算"
 msgid "Please provide an email."
 msgstr "请输入一个电子邮箱地址。"
 
-#: kitsune/questions/forms.py:318 kitsune/users/templates/users/edit_profile.html:34
+#: kitsune/questions/forms.py:318 kitsune/users/templates/users/edit_profile.html:41
 msgid "Email:"
 msgstr "邮箱："
 
@@ -2950,47 +2974,47 @@ msgid "Please provide a tag."
 msgstr "请提供一个标签。"
 
 #. L10n: This shouldn't happen unless people tamper with POST data.
-#: kitsune/questions/views.py:473
+#: kitsune/questions/views.py:502
 msgid "Request type not recognized."
 msgstr "无法识别请求的类型。"
 
-#: kitsune/questions/views.py:530
+#: kitsune/questions/views.py:559
 msgid "Done! Your question is now posted on the Mozilla community support forum."
 msgstr "完成！您的问题已成功在 Mozilla 社区支持论坛上发布。"
 
-#: kitsune/questions/views.py:732
+#: kitsune/questions/views.py:761
 msgid "Thank you for choosing a solution!"
 msgstr "感谢您选了一个解决方案！"
 
-#: kitsune/questions/views.py:757
+#: kitsune/questions/views.py:786
 msgid "The solution was undone successfully."
 msgstr "该解决方案已成功撤销。"
 
-#: kitsune/questions/views.py:828
+#: kitsune/questions/views.py:857
 msgid "Glad to hear it!"
 msgstr "很高兴听到这个消息！"
 
-#: kitsune/questions/views.py:831 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
+#: kitsune/questions/views.py:860 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
 msgid "Sorry to hear that."
 msgstr "很抱歉听到这消息。"
 
-#: kitsune/questions/views.py:852
+#: kitsune/questions/views.py:881
 msgid "You already voted on this reply."
 msgstr "您已在此回答上投过票了。"
 
-#: kitsune/questions/views.py:1072
+#: kitsune/questions/views.py:1101
 msgid "Could not send a message to that email address."
 msgstr "不能向那个邮件地址发送邮件。"
 
-#: kitsune/questions/views.py:1077
+#: kitsune/questions/views.py:1106
 msgid "You will be notified of updates by email."
 msgstr "有更新时您会得到邮件通知。"
 
-#: kitsune/questions/views.py:1079
+#: kitsune/questions/views.py:1108
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "您很快会收到邮件确认您的订阅。"
 
-#: kitsune/questions/views.py:1159
+#: kitsune/questions/views.py:1188
 msgid "There was an error submitting the ticket. Please try again later."
 msgstr "提交票据时发生错误，请稍后再试。"
 
@@ -3099,7 +3123,7 @@ msgstr "回到回答"
 msgid "I have this problem, too"
 msgstr "我也有此问题"
 
-#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:333
+#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:354
 msgid "Post a Reply"
 msgstr "回复"
 
@@ -3127,67 +3151,72 @@ msgstr "获取电子邮件更新"
 msgid "Subscribe to feed"
 msgstr "订阅收取点"
 
-#: kitsune/questions/templates/questions/answers.html:185
+#: kitsune/questions/templates/questions/answers.html:186
 msgid "Question details"
 msgstr "问题详情"
 
-#: kitsune/questions/templates/questions/answers.html:190 kitsune/questions/templates/questions/includes/aaq_macros.html:41
+#: kitsune/questions/templates/questions/answers.html:191 kitsune/questions/templates/questions/includes/aaq_macros.html:41
 msgid "Product"
 msgstr "产品"
 
-#: kitsune/questions/templates/questions/answers.html:201
+#: kitsune/questions/templates/questions/answers.html:208
 msgid "Topic"
 msgstr "主题"
 
-#: kitsune/questions/templates/questions/answers.html:210
+#: kitsune/questions/templates/questions/answers.html:223
 msgid "System Details"
 msgstr "系统详细信息"
 
-#: kitsune/questions/templates/questions/answers.html:223
+#: kitsune/questions/templates/questions/answers.html:236
 msgid "More system details"
 msgstr "更多系统细节"
 
-#: kitsune/questions/templates/questions/answers.html:229 kitsune/questions/templates/questions/answers.html:230
+#: kitsune/questions/templates/questions/answers.html:241
+#, fuzzy
+msgid "Save changes"
+msgstr "保存图像"
+
+#: kitsune/questions/templates/questions/answers.html:250 kitsune/questions/templates/questions/answers.html:251
 msgid "Additional System Details"
 msgstr "补充系统细节"
 
-#: kitsune/questions/templates/questions/answers.html:232
+#: kitsune/questions/templates/questions/answers.html:253
 msgid "Sites Affected"
 msgstr "影响的网站"
 
-#: kitsune/questions/templates/questions/answers.html:236
+#: kitsune/questions/templates/questions/answers.html:257
 msgid "Crash ID"
 msgstr "崩溃ID"
 
-#: kitsune/questions/templates/questions/answers.html:240
+#: kitsune/questions/templates/questions/answers.html:261
 msgid "This happened"
 msgstr "这发生于"
 
-#: kitsune/questions/templates/questions/answers.html:248
+#: kitsune/questions/templates/questions/answers.html:269
 msgid "Installed Plug-ins"
 msgstr "已安装的插件"
 
-#: kitsune/questions/templates/questions/answers.html:255
+#: kitsune/questions/templates/questions/answers.html:276
 msgid "Close"
 msgstr "关闭"
 
-#: kitsune/questions/templates/questions/answers.html:261 kitsune/questions/templates/questions/questions.html:215 kitsune/search/forms.py:163
+#: kitsune/questions/templates/questions/answers.html:282 kitsune/questions/templates/questions/questions.html:215 kitsune/search/forms.py:163
 msgid "Tags"
 msgstr "标签"
 
-#: kitsune/questions/templates/questions/answers.html:301 kitsune/tags/forms.py:121
+#: kitsune/questions/templates/questions/answers.html:322 kitsune/tags/forms.py:121
 msgid "Add"
 msgstr "添加"
 
-#: kitsune/questions/templates/questions/answers.html:328
+#: kitsune/questions/templates/questions/answers.html:349
 msgid "You have exceeded the number of answers that can be posted in a given amount of time. Please try again shortly."
 msgstr "超过了一分钟内允许回答的最大次数。请稍后再试。"
 
-#: kitsune/questions/templates/questions/answers.html:336
+#: kitsune/questions/templates/questions/answers.html:357
 msgid "You must <a href=\"{url}\">log in to your account</a> to reply to posts."
 msgstr "<a href=\"{url}\">登录</a>后才能回复。"
 
-#: kitsune/questions/templates/questions/answers.html:339
+#: kitsune/questions/templates/questions/answers.html:360
 msgid "Don't have an account? You can <a href='{url}'>create a free account</a> now."
 msgstr "没有帐号？现在就<a href='{url}'>免费创建</a>。"
 
@@ -4073,11 +4102,11 @@ msgstr "无效的 callback 函数。"
 msgid "Invalid search data."
 msgstr "无效的搜索数据。"
 
-#: kitsune/search/views.py:454 kitsune/search/templates/search/down.html:5 kitsune/search/templates/search/mobile/down.html:6
+#: kitsune/search/views.py:452 kitsune/search/templates/search/down.html:5 kitsune/search/templates/search/mobile/down.html:6
 msgid "Search Unavailable"
 msgstr "搜索不可用"
 
-#: kitsune/search/views.py:481
+#: kitsune/search/views.py:479
 msgid "No pages matched the search criteria"
 msgstr "搜索条件没有返回任何结果页面"
 
@@ -4181,28 +4210,29 @@ msgstr "Firefox 帮助"
 msgid "Search the Firefox Support Knowledge Base and Support Forum."
 msgstr "搜索 Firefox 支持知识库和支持论坛。"
 
-#: kitsune/search/templates/search/results.html:39
+#: kitsune/search/templates/search/results.html:41
 msgid "Show Everything"
 msgstr "显示全部"
 
-#: kitsune/search/templates/search/results.html:44
+#: kitsune/search/templates/search/results.html:46
 msgid "Help Articles Only"
 msgstr "仅帮助文章"
 
-#: kitsune/search/templates/search/results.html:49
+#: kitsune/search/templates/search/results.html:51
 msgid "Community Discussion Only"
 msgstr "仅社区讨论"
 
 # Found 123 results for abc in 正体中文 (繁体)
-#. {n} is the number of search results, {q} is the search query, {l} is the language searched.
-#: kitsune/search/templates/search/results.html:81
-msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
-msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
+#. {n} is the number of search results, {q} is the search query, {product} is the product.
+#: kitsune/search/templates/search/results.html:88
+#, fuzzy
+msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> for <strong>{product}</strong>"
+msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> for <strong>{product}</strong>"
 msgstr[0] "在<strong>{l}</strong>当中找到<strong>{n}</strong>个关于<strong>{q}</strong>的结果"
 
 # Found 123 results for abc in 正体中文 (繁体)
 #. {q} is the search query, {l} is the language searched.
-#: kitsune/search/templates/search/results.html:96
+#: kitsune/search/templates/search/results.html:103
 msgid "We couldn't find any results for <strong>{q}</strong> in <strong>{l}</strong>. Maybe one of these articles will be helpful?"
 msgstr "我们无法在 <strong>{l}</strong> 中找到 <strong>{q}</strong> 的任何结果。也许以下文章会对你有所帮助？"
 
@@ -5396,7 +5426,8 @@ msgid "Sign Out"
 msgstr "登出"
 
 #: kitsune/sumo/templates/includes/common_macros.html:54
-msgid "Sign in with Persona"
+#, fuzzy
+msgid "Sign in with email"
 msgstr "用 Persona 帐号登录"
 
 #: kitsune/sumo/templates/includes/common_macros.html:56
@@ -5514,6 +5545,10 @@ msgstr "切换语言"
 #: kitsune/sumo/templates/mobile/base.html:92
 msgid "Switch to desktop site"
 msgstr "切换到桌面版"
+
+#: kitsune/sumo/templates/mobile/base.html:123
+msgid "Get support for another platform:"
+msgstr ""
 
 #: kitsune/sumo/templates/sumo/deprecated.html:2
 msgid "Redirecting"
@@ -5671,7 +5706,7 @@ msgstr "不能为空。最多允许30个字符。仅允许输入字母、数字�
 msgid "Email address:"
 msgstr "电子邮件地址:"
 
-#: kitsune/users/forms.py:127 kitsune/users/templates/users/edit_profile.html:30 kitsune/users/templates/users/includes/macros.html:15
+#: kitsune/users/forms.py:127 kitsune/users/templates/users/edit_profile.html:36 kitsune/users/templates/users/includes/macros.html:15
 msgid "Password:"
 msgstr "密码："
 
@@ -5972,21 +6007,26 @@ msgstr "编辑或翻译过的文章"
 msgid "Change Avatar"
 msgstr "更改头像"
 
-#: kitsune/users/templates/users/edit_profile.html:16
+#: kitsune/users/templates/users/edit_profile.html:21
 msgid "Avatar:"
 msgstr "头像："
 
-#: kitsune/users/templates/users/edit_profile.html:20
+#: kitsune/users/templates/users/edit_profile.html:25
 msgctxt "avatar"
 msgid "Change"
 msgstr "更改"
 
-#: kitsune/users/templates/users/edit_profile.html:24
+#: kitsune/users/templates/users/edit_profile.html:29
 msgctxt "avatar"
 msgid "Delete"
 msgstr "删除"
 
-#: kitsune/users/templates/users/edit_profile.html:41 kitsune/users/templates/users/edit_settings.html:15 kitsune/users/templates/users/pw_reset_confirm.html:26
+#: kitsune/users/templates/users/edit_profile.html:44
+#, fuzzy
+msgid "Change with Persona"
+msgstr "用 Persona 帐号登录"
+
+#: kitsune/users/templates/users/edit_profile.html:52 kitsune/users/templates/users/edit_settings.html:15 kitsune/users/templates/users/pw_reset_confirm.html:26
 msgid "Update"
 msgstr "更新"
 
@@ -6762,7 +6802,7 @@ msgstr "若勾选，则代表这篇文档需要更新。"
 msgid "Please choose a category."
 msgstr "请选择一个分类。"
 
-#: kitsune/wiki/models.py:891
+#: kitsune/wiki/models.py:898
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "页面的修订必须基于英文文章。修订ID %(id)s 不符合此条件。"
 
@@ -6949,7 +6989,7 @@ msgstr "移除贡献者"
 msgid "Remove {role}"
 msgstr "移除 {role}"
 
-#: kitsune/wiki/templates/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/templates/wiki/locale_details.html:5 kitsune/wiki/templates/wiki/locale_list.html:4
+#: kitsune/wiki/templates/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/templates/wiki/locale_details.html:9 kitsune/wiki/templates/wiki/locale_list.html:4
 #: kitsune/wiki/templates/wiki/locale_list.html:9
 msgid "Locales"
 msgstr "语系"
@@ -7071,59 +7111,60 @@ msgstr "全部文章"
 msgid "There are no articles."
 msgstr "目前无任何文章。"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:4
-msgid "{locale} Localization Team | Knowledge Base"
-msgstr "{locale} 本地化团队 | 知识库"
+#: kitsune/wiki/templates/wiki/locale_details.html:5
+#, fuzzy
+msgid "[{locale}] KB Team"
+msgstr "[{locale}] 本地化团队"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:10
+#: kitsune/wiki/templates/wiki/locale_details.html:7
 msgid "[{locale}] Localization Team"
 msgstr "[{locale}] 本地化团队"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:14
+#: kitsune/wiki/templates/wiki/locale_details.html:18
 msgid "Edit locale leaders"
 msgstr "编辑语言团队领导者"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:16
+#: kitsune/wiki/templates/wiki/locale_details.html:20
 msgid "Locale Leaders"
 msgstr "语言领导者"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:31
+#: kitsune/wiki/templates/wiki/locale_details.html:35
 msgid "Remove user from locale leaders"
 msgstr "从领导者中移除"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:41
+#: kitsune/wiki/templates/wiki/locale_details.html:45
 msgid "Edit locale reviewers"
 msgstr "编辑语言审核者"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:43
+#: kitsune/wiki/templates/wiki/locale_details.html:47
 msgid "Locale Reviewers"
 msgstr "语言审核者"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:49
+#: kitsune/wiki/templates/wiki/locale_details.html:53
 msgid "Add Reviewer"
 msgstr "添加审核者"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:58
+#: kitsune/wiki/templates/wiki/locale_details.html:62
 msgid "Remove user from locale reviewers"
 msgstr "从语言审核者中移除"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:68
+#: kitsune/wiki/templates/wiki/locale_details.html:72
 msgid "Edit locale editors"
 msgstr "编辑语言编者"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:70
+#: kitsune/wiki/templates/wiki/locale_details.html:74
 msgid "Locale Editors"
 msgstr "语言编者"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:76
+#: kitsune/wiki/templates/wiki/locale_details.html:80
 msgid "Add Editor"
 msgstr "添加编者"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:85
+#: kitsune/wiki/templates/wiki/locale_details.html:89
 msgid "Remove user from locale editors"
 msgstr "从语言编者中移除"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:94
+#: kitsune/wiki/templates/wiki/locale_details.html:98
 msgid "{count} Active Contributors (last 90 days)"
 msgstr "{count} 活跃的贡献者 (最近90天)"
 
@@ -7826,6 +7867,9 @@ msgstr ""
 #: vendor/src/django-tidings/tidings/templates/tidings/unsubscribe_success.html:8
 msgid "Unsubscribed"
 msgstr "已取消订阅"
+
+#~ msgid "{locale} Localization Team | Knowledge Base"
+#~ msgstr "{locale} 本地化团队 | 知识库"
 
 #~ msgid "More options:"
 #~ msgstr "更多选项："

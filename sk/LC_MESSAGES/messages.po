@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-07 11:23-0700\n"
+"POT-Creation-Date: 2013-08-15 06:04-0700\n"
 "PO-Revision-Date: 2013-07-11 12:36+0200\n"
 "Last-Translator: Branislav <sektormaster@atlas.sk>\n"
 "Language-Team: Slovak\n"
@@ -77,7 +77,7 @@ msgstr "Ďakujeme!"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email. Whitespace matters!
-#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:463 kitsune/questions/templates/questions/email/confirm_question.html:4
+#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:492 kitsune/questions/templates/questions/email/confirm_question.html:4
 msgid "Please confirm your Firefox Help question"
 msgstr "Potvrďte prosím svoju otázku v rámci Pomocníka Firefoxu"
 
@@ -955,7 +955,7 @@ msgstr "Všetky články predpripravených odpovedí..."
 msgid "Knowledge Base Dashboard"
 msgstr "Nástenka databázy vedomostí"
 
-#: kitsune/dashboards/views.py:65 kitsune/dashboards/templates/dashboards/includes/macros.html:175
+#: kitsune/dashboards/views.py:65 kitsune/dashboards/templates/dashboards/includes/macros.html:178
 msgid "Localization Dashboard"
 msgstr "Nástenka lokalizátora"
 
@@ -963,8 +963,22 @@ msgstr "Nástenka lokalizátora"
 msgid "Show information for:"
 msgstr "Zobraziť informácie pre jazyk:"
 
-#: kitsune/dashboards/templates/dashboards/contributors.html:48 kitsune/dashboards/templates/dashboards/localization.html:93 kitsune/karma/templates/karma/dashboards/questions.html:71
-#: kitsune/karma/templates/karma/dashboards/questions.html:113 kitsune/kpi/templates/kpi/dashboard.html:48
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:3
+#, fuzzy
+msgid "[{locale}] Locale Metrics"
+msgstr "Preklad do jazyka {locale}:"
+
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:16
+#, fuzzy
+msgid "Localization Percentage"
+msgstr "Nástenka lokalizátora"
+
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:28 kitsune/kpi/templates/kpi/dashboard.html:74
+msgid "Active Contributors"
+msgstr "Aktívni prispievatelia"
+
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:39 kitsune/karma/templates/karma/dashboards/questions.html:71 kitsune/karma/templates/karma/dashboards/questions.html:113
+#: kitsune/kpi/templates/kpi/dashboard.html:48
 msgid "Helpful Votes"
 msgstr "Hlasy o užitočnosti"
 
@@ -1043,7 +1057,7 @@ msgstr "Čakajúce na kontrolu"
 msgid "Ready for localization"
 msgstr "Pripravené na lokalizáciu"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:149 kitsune/search/templates/search/results.html:61
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:149 kitsune/search/templates/search/results.html:63 kitsune/search/templates/search/results.html:85
 msgid "All Products"
 msgstr "Všetky produkty"
 
@@ -1051,8 +1065,8 @@ msgstr "Všetky produkty"
 #: kitsune/products/templates/products/documents.html:19 kitsune/products/templates/products/product.html:4 kitsune/products/templates/products/product.html:7
 #: kitsune/products/templates/products/product.html:14 kitsune/products/templates/products/includes/product_macros.html:12 kitsune/products/templates/products/mobile/documents.html:10
 #: kitsune/products/templates/products/mobile/documents.html:27 kitsune/products/templates/products/mobile/product.html:3 kitsune/products/templates/products/mobile/product.html:8
-#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/mobile/questions.html:36 kitsune/search/templates/search/results.html:67
-#: kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
+#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/mobile/questions.html:36 kitsune/search/templates/search/results.html:69
+#: kitsune/search/templates/search/results.html:83 kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
 msgctxt "DB: products.Product.title"
 msgid "None"
 msgstr "Nič"
@@ -1071,7 +1085,21 @@ msgctxt "DB: products.Topic.title"
 msgid "None"
 msgstr "Nič"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:178
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:176
+#, fuzzy
+msgid "KB Dashboard"
+msgstr "Nástenka KPI"
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:182
+#, fuzzy
+msgid "Locale Metrics"
+msgstr "Vedúci pre jazyky"
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:187
+msgid "KB Team"
+msgstr ""
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:189
 #, fuzzy
 msgid "Localization Team"
 msgstr "Nástenka lokalizátora"
@@ -1516,7 +1544,7 @@ msgstr "{group} | Skupiny"
 msgid "Change avatar"
 msgstr "Zmena ikonky"
 
-#: kitsune/groups/templates/groups/profile.html:10 kitsune/users/templates/users/edit_profile.html:31 kitsune/users/templates/users/edit_profile.html:36
+#: kitsune/groups/templates/groups/profile.html:10 kitsune/users/templates/users/edit_profile.html:37 kitsune/users/templates/users/edit_profile.html:46
 #: kitsune/users/templates/users/mobile/pw_change.html:33
 msgid "Change"
 msgstr "Zmeniť"
@@ -1541,7 +1569,7 @@ msgstr "Vodcovia skupiny"
 msgid "Remove user from leaders"
 msgstr "Odstránenie používateľa zo skupiny vodcov"
 
-#: kitsune/groups/templates/groups/profile.html:51 kitsune/wiki/templates/wiki/locale_details.html:22
+#: kitsune/groups/templates/groups/profile.html:51 kitsune/wiki/templates/wiki/locale_details.html:26
 msgid "Add Leader"
 msgstr "Pridať vodcu"
 
@@ -1887,11 +1915,11 @@ msgstr "Ejha! Zdá sa, že tu neexistujú žiadne príspevky!"
 msgid "Post a reply"
 msgstr "Napísať odpoveď"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:356 kitsune/questions/templates/questions/mobile/answers.html:44
+#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:377 kitsune/questions/templates/questions/mobile/answers.html:44
 msgid "Post Reply"
 msgstr "Napísať odpoveď"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:357 kitsune/questions/templates/questions/edit_answer.html:53
+#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:378 kitsune/questions/templates/questions/edit_answer.html:53
 msgid "Preview Reply"
 msgstr "Ukážka odpovede"
 
@@ -2018,10 +2046,6 @@ msgstr "Užitočnosť článku vedomostnej databázy a fóra"
 #: kitsune/kpi/templates/kpi/dashboard.html:63
 msgid "Definition: Ratio of “yes”/total votes for KB articles, forum threads"
 msgstr "Definícia: Pomer pozitívnych hodnotení k celkovému počtu hodnotení pri článku v databáze vedomostí a v témach fóra"
-
-#: kitsune/kpi/templates/kpi/dashboard.html:74
-msgid "Active Contributors"
-msgstr "Aktívni prispievatelia"
 
 #: kitsune/kpi/templates/kpi/dashboard.html:86
 msgid "Number of active contributors to the English KB"
@@ -2634,15 +2658,15 @@ msgstr "Nájdené riešenie k otázke v Pomocníkovi Firefoxu"
 msgid "Solution found for question: %s"
 msgstr "Nájdené riešenie k otázke: %s"
 
-#: kitsune/questions/feeds.py:20
+#: kitsune/questions/feeds.py:36
 msgid "Recently updated questions"
 msgstr "Nedávno aktualizované otázky"
 
-#: kitsune/questions/feeds.py:48
+#: kitsune/questions/feeds.py:79
 msgid "Recently updated questions tagged %s"
 msgstr "Nedávno aktualizované otázky označené ako %s"
 
-#: kitsune/questions/feeds.py:66
+#: kitsune/questions/feeds.py:97
 msgid "Recent answers to %s"
 msgstr "Posledné odpovede k %s"
 
@@ -2692,7 +2716,7 @@ msgstr "Viac krát za týždeň"
 msgid "Every time Firefox opened"
 msgstr "Pri každom spustení Firefoxu"
 
-#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:244
+#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:265
 msgid "This started when..."
 msgstr "Začalo to, keď..."
 
@@ -2858,7 +2882,7 @@ msgstr ""
 msgid "Please provide an email."
 msgstr "Zadajte prosím e-mailovú adresu."
 
-#: kitsune/questions/forms.py:318 kitsune/users/templates/users/edit_profile.html:34
+#: kitsune/questions/forms.py:318 kitsune/users/templates/users/edit_profile.html:41
 msgid "Email:"
 msgstr "E-mail:"
 
@@ -2992,47 +3016,47 @@ msgid "Please provide a tag."
 msgstr "Zadajte prosím značku."
 
 #. L10n: This shouldn't happen unless people tamper with POST data.
-#: kitsune/questions/views.py:473
+#: kitsune/questions/views.py:502
 msgid "Request type not recognized."
 msgstr "Typ požiadavky nebol rozpoznaný."
 
-#: kitsune/questions/views.py:530
+#: kitsune/questions/views.py:559
 msgid "Done! Your question is now posted on the Mozilla community support forum."
 msgstr "Hotovo! Vaša otázka je teraz vložená vo fóre podpory komunity Mozilla."
 
-#: kitsune/questions/views.py:732
+#: kitsune/questions/views.py:761
 msgid "Thank you for choosing a solution!"
 msgstr "Ďakujeme, za výber riešenia!"
 
-#: kitsune/questions/views.py:757
+#: kitsune/questions/views.py:786
 msgid "The solution was undone successfully."
 msgstr "Riešenie bolo úspešne vrátené späť."
 
-#: kitsune/questions/views.py:828
+#: kitsune/questions/views.py:857
 msgid "Glad to hear it!"
 msgstr "Sme radi, že to počujeme!"
 
-#: kitsune/questions/views.py:831 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
+#: kitsune/questions/views.py:860 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
 msgid "Sorry to hear that."
 msgstr "Je nám to moc ľúto, že to počujeme."
 
-#: kitsune/questions/views.py:852
+#: kitsune/questions/views.py:881
 msgid "You already voted on this reply."
 msgstr "Pre túto odpoveď ste už hlasovali."
 
-#: kitsune/questions/views.py:1072
+#: kitsune/questions/views.py:1101
 msgid "Could not send a message to that email address."
 msgstr "Nemožno odoslať správu na túto e-mailovú adresu."
 
-#: kitsune/questions/views.py:1077
+#: kitsune/questions/views.py:1106
 msgid "You will be notified of updates by email."
 msgstr "Na aktualizácie vás upozorníme e-mailom."
 
-#: kitsune/questions/views.py:1079
+#: kitsune/questions/views.py:1108
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "Ako potvrdenie prihlásenia k odberu by ste mal dostať e-mailovú správu."
 
-#: kitsune/questions/views.py:1159
+#: kitsune/questions/views.py:1188
 #, fuzzy
 msgid "There was an error submitting the ticket. Please try again later."
 msgstr "Pri pridávaní tiketu nastala chyba. Skúste to prosím neskôr."
@@ -3148,7 +3172,7 @@ msgstr "Prejsť na odpoveď"
 msgid "I have this problem, too"
 msgstr "Mám tiež tento problém"
 
-#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:333
+#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:354
 msgid "Post a Reply"
 msgstr "Napísať odpoveď"
 
@@ -3180,68 +3204,73 @@ msgstr "Aktualizácia e-mailom"
 msgid "Subscribe to feed"
 msgstr "Odber potvrdený."
 
-#: kitsune/questions/templates/questions/answers.html:185
+#: kitsune/questions/templates/questions/answers.html:186
 #, fuzzy
 msgid "Question details"
 msgstr "Metriky otázok"
 
-#: kitsune/questions/templates/questions/answers.html:190 kitsune/questions/templates/questions/includes/aaq_macros.html:41
+#: kitsune/questions/templates/questions/answers.html:191 kitsune/questions/templates/questions/includes/aaq_macros.html:41
 msgid "Product"
 msgstr "Produkt"
 
-#: kitsune/questions/templates/questions/answers.html:201
+#: kitsune/questions/templates/questions/answers.html:208
 msgid "Topic"
 msgstr "Téma"
 
-#: kitsune/questions/templates/questions/answers.html:210
+#: kitsune/questions/templates/questions/answers.html:223
 msgid "System Details"
 msgstr "Informácie o systéme"
 
-#: kitsune/questions/templates/questions/answers.html:223
+#: kitsune/questions/templates/questions/answers.html:236
 msgid "More system details"
 msgstr "Viac informácií o systéme"
 
-#: kitsune/questions/templates/questions/answers.html:229 kitsune/questions/templates/questions/answers.html:230
+#: kitsune/questions/templates/questions/answers.html:241
+#, fuzzy
+msgid "Save changes"
+msgstr "Uložiť obrázok"
+
+#: kitsune/questions/templates/questions/answers.html:250 kitsune/questions/templates/questions/answers.html:251
 msgid "Additional System Details"
 msgstr "Ďalšie informácie o systéme"
 
-#: kitsune/questions/templates/questions/answers.html:232
+#: kitsune/questions/templates/questions/answers.html:253
 msgid "Sites Affected"
 msgstr "Problematické stránky"
 
-#: kitsune/questions/templates/questions/answers.html:236
+#: kitsune/questions/templates/questions/answers.html:257
 msgid "Crash ID"
 msgstr "ID číslo pádu"
 
-#: kitsune/questions/templates/questions/answers.html:240
+#: kitsune/questions/templates/questions/answers.html:261
 msgid "This happened"
 msgstr "Stalo sa to"
 
-#: kitsune/questions/templates/questions/answers.html:248
+#: kitsune/questions/templates/questions/answers.html:269
 msgid "Installed Plug-ins"
 msgstr "Nainštalované zásuvné moduly"
 
-#: kitsune/questions/templates/questions/answers.html:255
+#: kitsune/questions/templates/questions/answers.html:276
 msgid "Close"
 msgstr "Zavrieť"
 
-#: kitsune/questions/templates/questions/answers.html:261 kitsune/questions/templates/questions/questions.html:215 kitsune/search/forms.py:163
+#: kitsune/questions/templates/questions/answers.html:282 kitsune/questions/templates/questions/questions.html:215 kitsune/search/forms.py:163
 msgid "Tags"
 msgstr "Značky"
 
-#: kitsune/questions/templates/questions/answers.html:301 kitsune/tags/forms.py:121
+#: kitsune/questions/templates/questions/answers.html:322 kitsune/tags/forms.py:121
 msgid "Add"
 msgstr "Pridať"
 
-#: kitsune/questions/templates/questions/answers.html:328
+#: kitsune/questions/templates/questions/answers.html:349
 msgid "You have exceeded the number of answers that can be posted in a given amount of time. Please try again shortly."
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:336
+#: kitsune/questions/templates/questions/answers.html:357
 msgid "You must <a href=\"{url}\">log in to your account</a> to reply to posts."
 msgstr "Pre pridávanie reakcií k príspevkom sa <a href=\"{url}\">musíte prihlásiť k svojmu účtu</a>."
 
-#: kitsune/questions/templates/questions/answers.html:339
+#: kitsune/questions/templates/questions/answers.html:360
 msgid "Don't have an account? You can <a href='{url}'>create a free account</a> now."
 msgstr "Nemáte účet? Môžete si ho teraz <a href='{url}'>zadarmo vytvoriť</a>."
 
@@ -4155,11 +4184,11 @@ msgstr "Neplatná funkcia spätného volania"
 msgid "Invalid search data."
 msgstr "Neplatné údaje vyhľadávania"
 
-#: kitsune/search/views.py:454 kitsune/search/templates/search/down.html:5 kitsune/search/templates/search/mobile/down.html:6
+#: kitsune/search/views.py:452 kitsune/search/templates/search/down.html:5 kitsune/search/templates/search/mobile/down.html:6
 msgid "Search Unavailable"
 msgstr "Vyhľadávanie nie je dostupné"
 
-#: kitsune/search/views.py:481
+#: kitsune/search/views.py:479
 msgid "No pages matched the search criteria"
 msgstr "Žiadna stránka nesplňuje kritériá vyhľadávania"
 
@@ -4263,28 +4292,29 @@ msgstr "Pomocník Firefoxu"
 msgid "Search the Firefox Support Knowledge Base and Support Forum."
 msgstr "Prehľadávanie databázy vedomostí podpory Firefoxu a fóra."
 
-#: kitsune/search/templates/search/results.html:39
+#: kitsune/search/templates/search/results.html:41
 msgid "Show Everything"
 msgstr "Zobraziť všetko"
 
-#: kitsune/search/templates/search/results.html:44
+#: kitsune/search/templates/search/results.html:46
 msgid "Help Articles Only"
 msgstr "Len články podpory"
 
-#: kitsune/search/templates/search/results.html:49
+#: kitsune/search/templates/search/results.html:51
 msgid "Community Discussion Only"
 msgstr "Len diskusie komunity"
 
-#. {n} is the number of search results, {q} is the search query, {l} is the language searched.
-#: kitsune/search/templates/search/results.html:81
-msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
-msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
+#. {n} is the number of search results, {q} is the search query, {product} is the product.
+#: kitsune/search/templates/search/results.html:88
+#, fuzzy
+msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> for <strong>{product}</strong>"
+msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> for <strong>{product}</strong>"
 msgstr[0] "Pre výraz <strong>{q}</strong> bol nájdený <strong>{n}</strong> výsledok v jazyku <strong>{l}</strong>."
 msgstr[1] "Pre výraz <strong>{q}</strong> boli nájdené <strong>{n}</strong> výsledky v jazyku <strong>{l}</strong>."
 msgstr[2] "Pre výraz <strong>{q}</strong> bolo nájdených <strong>{n}</strong> výsledkov v jazyku <strong>{l}</strong>."
 
 #. {q} is the search query, {l} is the language searched.
-#: kitsune/search/templates/search/results.html:96
+#: kitsune/search/templates/search/results.html:103
 msgid "We couldn't find any results for <strong>{q}</strong> in <strong>{l}</strong>. Maybe one of these articles will be helpful?"
 msgstr "Pre výraz <strong>{q}</strong> nebol nájdený v <strong>{l}</strong> žiadny výsledok. Nemôže byť jeden z týchto článkov užitočný?"
 
@@ -5577,7 +5607,7 @@ msgstr "Odhlásiť sa"
 
 #: kitsune/sumo/templates/includes/common_macros.html:54
 #, fuzzy
-msgid "Sign in with Persona"
+msgid "Sign in with email"
 msgstr "Prihlásenie k účtu na Twitteri"
 
 #: kitsune/sumo/templates/includes/common_macros.html:56
@@ -5700,6 +5730,10 @@ msgstr "Zmena jazyka"
 #: kitsune/sumo/templates/mobile/base.html:92
 msgid "Switch to desktop site"
 msgstr "Prepnúť na plnú verziu webu"
+
+#: kitsune/sumo/templates/mobile/base.html:123
+msgid "Get support for another platform:"
+msgstr ""
 
 #: kitsune/sumo/templates/sumo/deprecated.html:2
 msgid "Redirecting"
@@ -5859,7 +5893,7 @@ msgstr "Požadované. Max. 30 znakov. Len znaky abecedy, čísla alebo špeciál
 msgid "Email address:"
 msgstr "E-mailová adresa:"
 
-#: kitsune/users/forms.py:127 kitsune/users/templates/users/edit_profile.html:30 kitsune/users/templates/users/includes/macros.html:15
+#: kitsune/users/forms.py:127 kitsune/users/templates/users/edit_profile.html:36 kitsune/users/templates/users/includes/macros.html:15
 msgid "Password:"
 msgstr "Heslo:"
 
@@ -6165,21 +6199,26 @@ msgstr "Upravené alebo preložené dokumenty"
 msgid "Change Avatar"
 msgstr "Zmena profilového obrázka"
 
-#: kitsune/users/templates/users/edit_profile.html:16
+#: kitsune/users/templates/users/edit_profile.html:21
 msgid "Avatar:"
 msgstr "Profilový obrázok:"
 
-#: kitsune/users/templates/users/edit_profile.html:20
+#: kitsune/users/templates/users/edit_profile.html:25
 msgctxt "avatar"
 msgid "Change"
 msgstr "Zmeniť"
 
-#: kitsune/users/templates/users/edit_profile.html:24
+#: kitsune/users/templates/users/edit_profile.html:29
 msgctxt "avatar"
 msgid "Delete"
 msgstr "Odstrániť"
 
-#: kitsune/users/templates/users/edit_profile.html:41 kitsune/users/templates/users/edit_settings.html:15 kitsune/users/templates/users/pw_reset_confirm.html:26
+#: kitsune/users/templates/users/edit_profile.html:44
+#, fuzzy
+msgid "Change with Persona"
+msgstr "Prihlásenie k účtu na Twitteri"
+
+#: kitsune/users/templates/users/edit_profile.html:52 kitsune/users/templates/users/edit_settings.html:15 kitsune/users/templates/users/pw_reset_confirm.html:26
 msgid "Update"
 msgstr "Aktualizovať"
 
@@ -6985,7 +7024,7 @@ msgstr "Ak označíte, bude dokument potrebné aktualizovať."
 msgid "Please choose a category."
 msgstr "Vyberte prosím kategóriu."
 
-#: kitsune/wiki/models.py:891
+#: kitsune/wiki/models.py:898
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Revízia musí byť založená na článku v angličtine. Revízia s ID %(id)s toto kritérium nespĺňa."
 
@@ -7174,7 +7213,7 @@ msgstr "Odobrať prispievateľa"
 msgid "Remove {role}"
 msgstr "Odobrať {role}"
 
-#: kitsune/wiki/templates/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/templates/wiki/locale_details.html:5 kitsune/wiki/templates/wiki/locale_list.html:4
+#: kitsune/wiki/templates/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/templates/wiki/locale_details.html:9 kitsune/wiki/templates/wiki/locale_list.html:4
 #: kitsune/wiki/templates/wiki/locale_list.html:9
 msgid "Locales"
 msgstr "Jazyky"
@@ -7297,61 +7336,61 @@ msgstr "Všetky články"
 msgid "There are no articles."
 msgstr "Žiadne články."
 
-#: kitsune/wiki/templates/wiki/locale_details.html:4
+#: kitsune/wiki/templates/wiki/locale_details.html:5
 #, fuzzy
-msgid "{locale} Localization Team | Knowledge Base"
-msgstr "{locale} | Databáza vedomostí"
+msgid "[{locale}] KB Team"
+msgstr "Preklad do jazyka {locale}:"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:10
+#: kitsune/wiki/templates/wiki/locale_details.html:7
 #, fuzzy
 msgid "[{locale}] Localization Team"
 msgstr "Preklad do jazyka {locale}:"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:14
+#: kitsune/wiki/templates/wiki/locale_details.html:18
 msgid "Edit locale leaders"
 msgstr "Úprava vedúcich pre jazyky"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:16
+#: kitsune/wiki/templates/wiki/locale_details.html:20
 msgid "Locale Leaders"
 msgstr "Vedúci pre jazyky"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:31
+#: kitsune/wiki/templates/wiki/locale_details.html:35
 msgid "Remove user from locale leaders"
 msgstr "Odstránenie používateľa z vedúcich jazykov"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:41
+#: kitsune/wiki/templates/wiki/locale_details.html:45
 msgid "Edit locale reviewers"
 msgstr "Úprava redaktorov pre jazyky"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:43
+#: kitsune/wiki/templates/wiki/locale_details.html:47
 msgid "Locale Reviewers"
 msgstr "Redaktori pre jazyky"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:49
+#: kitsune/wiki/templates/wiki/locale_details.html:53
 msgid "Add Reviewer"
 msgstr "Pridať redaktora"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:58
+#: kitsune/wiki/templates/wiki/locale_details.html:62
 msgid "Remove user from locale reviewers"
 msgstr "Odstránenie používateľa zo skupiny redaktorov pre jazyky"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:68
+#: kitsune/wiki/templates/wiki/locale_details.html:72
 msgid "Edit locale editors"
 msgstr "Úprava redaktorov pre jazyk"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:70
+#: kitsune/wiki/templates/wiki/locale_details.html:74
 msgid "Locale Editors"
 msgstr "Editori pre jazyk"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:76
+#: kitsune/wiki/templates/wiki/locale_details.html:80
 msgid "Add Editor"
 msgstr "Pridať editora"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:85
+#: kitsune/wiki/templates/wiki/locale_details.html:89
 msgid "Remove user from locale editors"
 msgstr "Odstránenie používateľa zo skupiny editorov pre jazyk"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:94
+#: kitsune/wiki/templates/wiki/locale_details.html:98
 #, fuzzy
 msgid "{count} Active Contributors (last 90 days)"
 msgstr "Aktívni prispievatelia"
@@ -8073,6 +8112,10 @@ msgstr ""
 #, fuzzy
 msgid "Unsubscribed"
 msgstr "Přihlásiť sa k odberu"
+
+#, fuzzy
+#~ msgid "{locale} Localization Team | Knowledge Base"
+#~ msgstr "{locale} | Databáza vedomostí"
 
 #~ msgid "More options:"
 #~ msgstr "Ďalšie možnosti:"

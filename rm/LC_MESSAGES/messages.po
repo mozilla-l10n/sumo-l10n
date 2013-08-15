@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-07 11:23-0700\n"
+"POT-Creation-Date: 2013-08-15 06:04-0700\n"
 "PO-Revision-Date: 2013-03-18 21:44+0200\n"
 "Last-Translator: Gion-Andri <gion-andri@gmx.ch>\n"
 "Language-Team: Rhaeto-Roman\n"
@@ -77,7 +77,7 @@ msgstr "Grazia!"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email. Whitespace matters!
-#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:463 kitsune/questions/templates/questions/email/confirm_question.html:4
+#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:492 kitsune/questions/templates/questions/email/confirm_question.html:4
 msgid "Please confirm your Firefox Help question"
 msgstr "Conferma tia dumonda per agid davart Firefox"
 
@@ -959,7 +959,7 @@ msgstr "Tut ils artitgels ord la banca da savida…"
 msgid "Knowledge Base Dashboard"
 msgstr "Survista da la banca da savida"
 
-#: kitsune/dashboards/views.py:65 kitsune/dashboards/templates/dashboards/includes/macros.html:175
+#: kitsune/dashboards/views.py:65 kitsune/dashboards/templates/dashboards/includes/macros.html:178
 msgid "Localization Dashboard"
 msgstr "Survista da translaziun"
 
@@ -967,8 +967,23 @@ msgstr "Survista da translaziun"
 msgid "Show information for:"
 msgstr "Mussar infurmaziuns per:"
 
-#: kitsune/dashboards/templates/dashboards/contributors.html:48 kitsune/dashboards/templates/dashboards/localization.html:93 kitsune/karma/templates/karma/dashboards/questions.html:71
-#: kitsune/karma/templates/karma/dashboards/questions.html:113 kitsune/kpi/templates/kpi/dashboard.html:48
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:3
+#, fuzzy
+msgid "[{locale}] Locale Metrics"
+msgstr "Translaziun per {locale}:"
+
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:16
+#, fuzzy
+msgid "Localization Percentage"
+msgstr "Survista da translaziun"
+
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:28 kitsune/kpi/templates/kpi/dashboard.html:74
+#, fuzzy
+msgid "Active Contributors"
+msgstr "Agiuntar in contribuent"
+
+#: kitsune/dashboards/templates/dashboards/locale_metrics.html:39 kitsune/karma/templates/karma/dashboards/questions.html:71 kitsune/karma/templates/karma/dashboards/questions.html:113
+#: kitsune/kpi/templates/kpi/dashboard.html:48
 msgid "Helpful Votes"
 msgstr "Vuschs da nizzaivladad"
 
@@ -1047,7 +1062,7 @@ msgstr "Spetgan sil repassar"
 msgid "Ready for localization"
 msgstr "Pront per la localisaziun"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:149 kitsune/search/templates/search/results.html:61
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:149 kitsune/search/templates/search/results.html:63 kitsune/search/templates/search/results.html:85
 msgid "All Products"
 msgstr "Tut ils products"
 
@@ -1055,8 +1070,8 @@ msgstr "Tut ils products"
 #: kitsune/products/templates/products/documents.html:19 kitsune/products/templates/products/product.html:4 kitsune/products/templates/products/product.html:7
 #: kitsune/products/templates/products/product.html:14 kitsune/products/templates/products/includes/product_macros.html:12 kitsune/products/templates/products/mobile/documents.html:10
 #: kitsune/products/templates/products/mobile/documents.html:27 kitsune/products/templates/products/mobile/product.html:3 kitsune/products/templates/products/mobile/product.html:8
-#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/mobile/questions.html:36 kitsune/search/templates/search/results.html:67
-#: kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
+#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/mobile/questions.html:36 kitsune/search/templates/search/results.html:69
+#: kitsune/search/templates/search/results.html:83 kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
 msgctxt "DB: products.Product.title"
 msgid "None"
 msgstr "Nagin"
@@ -1077,7 +1092,21 @@ msgctxt "DB: products.Topic.title"
 msgid "None"
 msgstr "Nagin"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:178
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:176
+#, fuzzy
+msgid "KB Dashboard"
+msgstr "Dashboard da KPI"
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:182
+#, fuzzy
+msgid "Locale Metrics"
+msgstr "Manaders da la lingua"
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:187
+msgid "KB Team"
+msgstr ""
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:189
 #, fuzzy
 msgid "Localization Team"
 msgstr "Survista da translaziun"
@@ -1522,7 +1551,7 @@ msgstr "{group} | Gruppas"
 msgid "Change avatar"
 msgstr "Midar l'avatar"
 
-#: kitsune/groups/templates/groups/profile.html:10 kitsune/users/templates/users/edit_profile.html:31 kitsune/users/templates/users/edit_profile.html:36
+#: kitsune/groups/templates/groups/profile.html:10 kitsune/users/templates/users/edit_profile.html:37 kitsune/users/templates/users/edit_profile.html:46
 #: kitsune/users/templates/users/mobile/pw_change.html:33
 msgid "Change"
 msgstr "Midar"
@@ -1547,7 +1576,7 @@ msgstr "Manaders da la gruppa"
 msgid "Remove user from leaders"
 msgstr "Allontanar l'utilisader dals manaders"
 
-#: kitsune/groups/templates/groups/profile.html:51 kitsune/wiki/templates/wiki/locale_details.html:22
+#: kitsune/groups/templates/groups/profile.html:51 kitsune/wiki/templates/wiki/locale_details.html:26
 msgid "Add Leader"
 msgstr "Agiuntar in manader"
 
@@ -1894,11 +1923,11 @@ msgstr "Oh, na! Sco para na datti naginas contribuziuns!"
 msgid "Post a reply"
 msgstr "Publitgar ina resposta"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:356 kitsune/questions/templates/questions/mobile/answers.html:44
+#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:377 kitsune/questions/templates/questions/mobile/answers.html:44
 msgid "Post Reply"
 msgstr "Publitgar la resposta"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:357 kitsune/questions/templates/questions/edit_answer.html:53
+#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:378 kitsune/questions/templates/questions/edit_answer.html:53
 msgid "Preview Reply"
 msgstr "Prevista da la resposta"
 
@@ -2029,11 +2058,6 @@ msgstr "Nizzaivladad d'artitgels da la banca da savida e dal forum"
 #: kitsune/kpi/templates/kpi/dashboard.html:63
 msgid "Definition: Ratio of “yes”/total votes for KB articles, forum threads"
 msgstr "Definiziun: Relaziun da \"gea\" tar total da las vuschs sin artitgels da la banca da savida e da temas en il forum"
-
-#: kitsune/kpi/templates/kpi/dashboard.html:74
-#, fuzzy
-msgid "Active Contributors"
-msgstr "Agiuntar in contribuent"
 
 #: kitsune/kpi/templates/kpi/dashboard.html:86
 msgid "Number of active contributors to the English KB"
@@ -2665,17 +2689,17 @@ msgstr ""
 msgid "Solution found for question: %s"
 msgstr ""
 
-#: kitsune/questions/feeds.py:20
+#: kitsune/questions/feeds.py:36
 #, fuzzy
 msgid "Recently updated questions"
 msgstr "Temas actualisads dacurt davart %s"
 
-#: kitsune/questions/feeds.py:48
+#: kitsune/questions/feeds.py:79
 #, fuzzy
 msgid "Recently updated questions tagged %s"
 msgstr "Temas actualisads dacurt davart %s"
 
-#: kitsune/questions/feeds.py:66
+#: kitsune/questions/feeds.py:97
 #, fuzzy
 msgid "Recent answers to %s"
 msgstr "Ultimas contribuziuns en %s"
@@ -2725,7 +2749,7 @@ msgstr "1 nov quest'emna"
 msgid "Every time Firefox opened"
 msgstr ""
 
-#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:244
+#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:265
 msgid "This started when..."
 msgstr ""
 
@@ -2909,7 +2933,7 @@ msgstr ""
 msgid "Please provide an email."
 msgstr "Endatescha in titel."
 
-#: kitsune/questions/forms.py:318 kitsune/users/templates/users/edit_profile.html:34
+#: kitsune/questions/forms.py:318 kitsune/users/templates/users/edit_profile.html:41
 msgid "Email:"
 msgstr "Adressa dad e-mail:"
 
@@ -3059,51 +3083,51 @@ msgid "Please provide a tag."
 msgstr "Endatescha per plaschair in num d'adressa."
 
 #. L10n: This shouldn't happen unless people tamper with POST data.
-#: kitsune/questions/views.py:473
+#: kitsune/questions/views.py:502
 msgid "Request type not recognized."
 msgstr ""
 
-#: kitsune/questions/views.py:530
+#: kitsune/questions/views.py:559
 #, fuzzy
 msgid "Done! Your question is now posted on the Mozilla community support forum."
 msgstr "Tes conto è vegnì confermà cun success e tia dumonda è ussa vegnida publitgada en il forum da la cuminanza da Mozilla."
 
-#: kitsune/questions/views.py:732
+#: kitsune/questions/views.py:761
 #, fuzzy
 msgid "Thank you for choosing a solution!"
 msgstr "Grazia per esser grondius!"
 
-#: kitsune/questions/views.py:757
+#: kitsune/questions/views.py:786
 #, fuzzy
 msgid "The solution was undone successfully."
 msgstr "Tramess cun success l'e-mail da conferma."
 
-#: kitsune/questions/views.py:828
+#: kitsune/questions/views.py:857
 msgid "Glad to hear it!"
 msgstr ""
 
-#: kitsune/questions/views.py:831 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
+#: kitsune/questions/views.py:860 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
 msgid "Sorry to hear that."
 msgstr "Donn dad udir quai."
 
-#: kitsune/questions/views.py:852
+#: kitsune/questions/views.py:881
 #, fuzzy
 msgid "You already voted on this reply."
 msgstr "Ti has gia votà davart quest artitgel."
 
-#: kitsune/questions/views.py:1072
+#: kitsune/questions/views.py:1101
 msgid "Could not send a message to that email address."
 msgstr ""
 
-#: kitsune/questions/views.py:1077
+#: kitsune/questions/views.py:1106
 msgid "You will be notified of updates by email."
 msgstr ""
 
-#: kitsune/questions/views.py:1079
+#: kitsune/questions/views.py:1108
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr ""
 
-#: kitsune/questions/views.py:1159
+#: kitsune/questions/views.py:1188
 msgid "There was an error submitting the ticket. Please try again later."
 msgstr ""
 
@@ -3227,7 +3251,7 @@ msgstr "{0} resposta"
 msgid "I have this problem, too"
 msgstr "1 persuna ha era quest problem"
 
-#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:333
+#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:354
 #, fuzzy
 msgid "Post a Reply"
 msgstr "Publitgar ina resposta"
@@ -3262,73 +3286,78 @@ msgstr "Adressa dad e-mail:"
 msgid "Subscribe to feed"
 msgstr "Abunar modificaziuns"
 
-#: kitsune/questions/templates/questions/answers.html:185
+#: kitsune/questions/templates/questions/answers.html:186
 #, fuzzy
 msgid "Question details"
 msgstr "Dumondas"
 
-#: kitsune/questions/templates/questions/answers.html:190 kitsune/questions/templates/questions/includes/aaq_macros.html:41
+#: kitsune/questions/templates/questions/answers.html:191 kitsune/questions/templates/questions/includes/aaq_macros.html:41
 #, fuzzy
 msgid "Product"
 msgstr "Tut ils products"
 
-#: kitsune/questions/templates/questions/answers.html:201
+#: kitsune/questions/templates/questions/answers.html:208
 #, fuzzy
 msgid "Topic"
 msgstr "Tematicas"
 
-#: kitsune/questions/templates/questions/answers.html:210
+#: kitsune/questions/templates/questions/answers.html:223
 #, fuzzy
 msgid "System Details"
 msgstr "Sistem"
 
-#: kitsune/questions/templates/questions/answers.html:223
+#: kitsune/questions/templates/questions/answers.html:236
 msgid "More system details"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:229 kitsune/questions/templates/questions/answers.html:230
+#: kitsune/questions/templates/questions/answers.html:241
+#, fuzzy
+msgid "Save changes"
+msgstr "Memorisar la grafica"
+
+#: kitsune/questions/templates/questions/answers.html:250 kitsune/questions/templates/questions/answers.html:251
 msgid "Additional System Details"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:232
+#: kitsune/questions/templates/questions/answers.html:253
 msgid "Sites Affected"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:236
+#: kitsune/questions/templates/questions/answers.html:257
 #, fuzzy
 msgid "Crash ID"
 msgstr "Collaps"
 
-#: kitsune/questions/templates/questions/answers.html:240
+#: kitsune/questions/templates/questions/answers.html:261
 #, fuzzy
 msgid "This happened"
 msgstr "Questa emna"
 
-#: kitsune/questions/templates/questions/answers.html:248
+#: kitsune/questions/templates/questions/answers.html:269
 msgid "Installed Plug-ins"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:255
+#: kitsune/questions/templates/questions/answers.html:276
 msgid "Close"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:261 kitsune/questions/templates/questions/questions.html:215 kitsune/search/forms.py:163
+#: kitsune/questions/templates/questions/answers.html:282 kitsune/questions/templates/questions/questions.html:215 kitsune/search/forms.py:163
 msgid "Tags"
 msgstr "Chavazzins"
 
-#: kitsune/questions/templates/questions/answers.html:301 kitsune/tags/forms.py:121
+#: kitsune/questions/templates/questions/answers.html:322 kitsune/tags/forms.py:121
 msgid "Add"
 msgstr "Agiuntar"
 
-#: kitsune/questions/templates/questions/answers.html:328
+#: kitsune/questions/templates/questions/answers.html:349
 msgid "You have exceeded the number of answers that can be posted in a given amount of time. Please try again shortly."
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:336
+#: kitsune/questions/templates/questions/answers.html:357
 msgid "You must <a href=\"{url}\">log in to your account</a> to reply to posts."
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:339
+#: kitsune/questions/templates/questions/answers.html:360
 msgid "Don't have an account? You can <a href='{url}'>create a free account</a> now."
 msgstr ""
 
@@ -4324,11 +4353,11 @@ msgstr "Funcziun da callback nunvalida."
 msgid "Invalid search data."
 msgstr "Datas per tschertgar nunvalidas."
 
-#: kitsune/search/views.py:454 kitsune/search/templates/search/down.html:5 kitsune/search/templates/search/mobile/down.html:6
+#: kitsune/search/views.py:452 kitsune/search/templates/search/down.html:5 kitsune/search/templates/search/mobile/down.html:6
 msgid "Search Unavailable"
 msgstr "Tschertgar n'è betg disponibel"
 
-#: kitsune/search/views.py:481
+#: kitsune/search/views.py:479
 msgid "No pages matched the search criteria"
 msgstr "Naginas paginas correspundan al criteri da tschertgar"
 
@@ -4432,27 +4461,28 @@ msgstr "Agid da Firefox"
 msgid "Search the Firefox Support Knowledge Base and Support Forum."
 msgstr "Tschertgar en la banca da savida ed il forum d'agid da Firefox."
 
-#: kitsune/search/templates/search/results.html:39
+#: kitsune/search/templates/search/results.html:41
 msgid "Show Everything"
 msgstr "Mussar tut"
 
-#: kitsune/search/templates/search/results.html:44
+#: kitsune/search/templates/search/results.html:46
 msgid "Help Articles Only"
 msgstr "Be artitgels d'agid"
 
-#: kitsune/search/templates/search/results.html:49
+#: kitsune/search/templates/search/results.html:51
 msgid "Community Discussion Only"
 msgstr "Be discussiuns da la communitad"
 
-#. {n} is the number of search results, {q} is the search query, {l} is the language searched.
-#: kitsune/search/templates/search/results.html:81
-msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> in <strong>{l}</strong>"
-msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> in <strong>{l}</strong>"
+#. {n} is the number of search results, {q} is the search query, {product} is the product.
+#: kitsune/search/templates/search/results.html:88
+#, fuzzy
+msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> for <strong>{product}</strong>"
+msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> for <strong>{product}</strong>"
 msgstr[0] "Chattà <strong>{n}</strong> resultat cun tschertgar <strong>{q}</strong> per <strong>{l}</strong>"
 msgstr[1] "Chattà <strong>{n}</strong> resultats cun tschertgar <strong>{q}</strong> per <strong>{l}</strong>"
 
 #. {q} is the search query, {l} is the language searched.
-#: kitsune/search/templates/search/results.html:96
+#: kitsune/search/templates/search/results.html:103
 #, fuzzy
 msgid "We couldn't find any results for <strong>{q}</strong> in <strong>{l}</strong>. Maybe one of these articles will be helpful?"
 msgstr "Chattà <strong>{n}</strong> resultat cun tschertgar <strong>{q}</strong> per <strong>{l}</strong>"
@@ -5737,7 +5767,7 @@ msgstr "Partir"
 
 #: kitsune/sumo/templates/includes/common_macros.html:54
 #, fuzzy
-msgid "Sign in with Persona"
+msgid "Sign in with email"
 msgstr "S'annunziar cun Twitter"
 
 #: kitsune/sumo/templates/includes/common_macros.html:56
@@ -5858,6 +5888,10 @@ msgstr "Midar la lingua"
 #: kitsune/sumo/templates/mobile/base.html:92
 msgid "Switch to desktop site"
 msgstr "Midar a la versiun classica"
+
+#: kitsune/sumo/templates/mobile/base.html:123
+msgid "Get support for another platform:"
+msgstr ""
 
 #: kitsune/sumo/templates/sumo/deprecated.html:2
 msgid "Redirecting"
@@ -6017,7 +6051,7 @@ msgstr "Necessari. 30 caracters u pli pauc. Be bustabs, cifras e ./+/-/_."
 msgid "Email address:"
 msgstr "Adressa dad e-mail:"
 
-#: kitsune/users/forms.py:127 kitsune/users/templates/users/edit_profile.html:30 kitsune/users/templates/users/includes/macros.html:15
+#: kitsune/users/forms.py:127 kitsune/users/templates/users/edit_profile.html:36 kitsune/users/templates/users/includes/macros.html:15
 msgid "Password:"
 msgstr "Pled-clav:"
 
@@ -6324,21 +6358,26 @@ msgstr "Documents modifitgads u translatads"
 msgid "Change Avatar"
 msgstr "Midar l'avatar"
 
-#: kitsune/users/templates/users/edit_profile.html:16
+#: kitsune/users/templates/users/edit_profile.html:21
 msgid "Avatar:"
 msgstr "Avatar:"
 
-#: kitsune/users/templates/users/edit_profile.html:20
+#: kitsune/users/templates/users/edit_profile.html:25
 msgctxt "avatar"
 msgid "Change"
 msgstr "Midar"
 
-#: kitsune/users/templates/users/edit_profile.html:24
+#: kitsune/users/templates/users/edit_profile.html:29
 msgctxt "avatar"
 msgid "Delete"
 msgstr "Stizzar"
 
-#: kitsune/users/templates/users/edit_profile.html:41 kitsune/users/templates/users/edit_settings.html:15 kitsune/users/templates/users/pw_reset_confirm.html:26
+#: kitsune/users/templates/users/edit_profile.html:44
+#, fuzzy
+msgid "Change with Persona"
+msgstr "S'annunziar cun Twitter"
+
+#: kitsune/users/templates/users/edit_profile.html:52 kitsune/users/templates/users/edit_settings.html:15 kitsune/users/templates/users/pw_reset_confirm.html:26
 msgid "Update"
 msgstr "Actualisar"
 
@@ -7159,7 +7198,7 @@ msgstr "Sche activà sto quest document vegnir actualisà."
 msgid "Please choose a category."
 msgstr "Tscherna ina categoria."
 
-#: kitsune/wiki/models.py:891
+#: kitsune/wiki/models.py:898
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Ina midada sto sa basar sin l'artitgel englais. La versiun cun l'ID %(id)s na correspunda betg a quest criteri."
 
@@ -7348,7 +7387,7 @@ msgstr "Allontanar contribuent"
 msgid "Remove {role}"
 msgstr "Allontanar {role}"
 
-#: kitsune/wiki/templates/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/templates/wiki/locale_details.html:5 kitsune/wiki/templates/wiki/locale_list.html:4
+#: kitsune/wiki/templates/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/templates/wiki/locale_details.html:9 kitsune/wiki/templates/wiki/locale_list.html:4
 #: kitsune/wiki/templates/wiki/locale_list.html:9
 msgid "Locales"
 msgstr "Linguas"
@@ -7471,61 +7510,61 @@ msgstr "Tut ils artitgels"
 msgid "There are no articles."
 msgstr "I n'existan nagins artitgels."
 
-#: kitsune/wiki/templates/wiki/locale_details.html:4
+#: kitsune/wiki/templates/wiki/locale_details.html:5
 #, fuzzy
-msgid "{locale} Localization Team | Knowledge Base"
-msgstr "{locale} | Banca da savida"
+msgid "[{locale}] KB Team"
+msgstr "Translaziun per {locale}:"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:10
+#: kitsune/wiki/templates/wiki/locale_details.html:7
 #, fuzzy
 msgid "[{locale}] Localization Team"
 msgstr "Translaziun per {locale}:"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:14
+#: kitsune/wiki/templates/wiki/locale_details.html:18
 msgid "Edit locale leaders"
 msgstr "Modifitgar ils manaders da la lingua"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:16
+#: kitsune/wiki/templates/wiki/locale_details.html:20
 msgid "Locale Leaders"
 msgstr "Manaders da la lingua"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:31
+#: kitsune/wiki/templates/wiki/locale_details.html:35
 msgid "Remove user from locale leaders"
 msgstr "Allontanar l'utilisader dals manaders da la lingua"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:41
+#: kitsune/wiki/templates/wiki/locale_details.html:45
 msgid "Edit locale reviewers"
 msgstr "Modifitgar ils inspecturs da la lingua"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:43
+#: kitsune/wiki/templates/wiki/locale_details.html:47
 msgid "Locale Reviewers"
 msgstr "Inspecturs da la lingua"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:49
+#: kitsune/wiki/templates/wiki/locale_details.html:53
 msgid "Add Reviewer"
 msgstr "Agiuntà in inspectur"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:58
+#: kitsune/wiki/templates/wiki/locale_details.html:62
 msgid "Remove user from locale reviewers"
 msgstr "Allontanar l'utilisader dals inspecturs da la lingua"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:68
+#: kitsune/wiki/templates/wiki/locale_details.html:72
 msgid "Edit locale editors"
 msgstr "Modifitgar contribuents da la lingua"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:70
+#: kitsune/wiki/templates/wiki/locale_details.html:74
 msgid "Locale Editors"
 msgstr "Contribuents da la lingua"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:76
+#: kitsune/wiki/templates/wiki/locale_details.html:80
 msgid "Add Editor"
 msgstr "Agiuntar in contribuent"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:85
+#: kitsune/wiki/templates/wiki/locale_details.html:89
 msgid "Remove user from locale editors"
 msgstr "Allontanar l'utilisader dals contribuents"
 
-#: kitsune/wiki/templates/wiki/locale_details.html:94
+#: kitsune/wiki/templates/wiki/locale_details.html:98
 #, fuzzy
 msgid "{count} Active Contributors (last 90 days)"
 msgstr "Agiuntar in contribuent"
@@ -8244,6 +8283,10 @@ msgstr ""
 #: vendor/src/django-tidings/tidings/templates/tidings/unsubscribe_success.html:8
 msgid "Unsubscribed"
 msgstr "Annullà l'abunament"
+
+#, fuzzy
+#~ msgid "{locale} Localization Team | Knowledge Base"
+#~ msgstr "{locale} | Banca da savida"
 
 #~ msgid "More options:"
 #~ msgstr "Dapli opziuns:"
