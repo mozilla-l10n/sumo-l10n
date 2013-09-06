@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-22 03:01-0700\n"
+"POT-Creation-Date: 2013-09-06 08:37-0700\n"
 "PO-Revision-Date: 2013-06-17 14:29+0200\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian\n"
@@ -43,6 +43,14 @@ msgstr "Rrjedhë e re: {title}"
 msgid "User %(author)s has posted a new thread in a forum you're watching. Here is the thread:"
 msgstr "Përdoruesi %(author)s ka postuar një rrjedhë të re te një forum që ju e ndiqni. Ja rrjedha:"
 
+#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:2
+msgid "%(username)s has awarded you a badge!"
+msgstr ""
+
+#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:6 kitsune/kbadge/tasks.py:19
+msgid "You have been awarded a badge!"
+msgstr ""
+
 #: kitsune/messages/templates/messages/email/private_message.ltxt:3 kitsune/messages/templates/messages/email/private_message.html:4
 msgid "{sender} sent you the following message:"
 msgstr "{sender} ju dërgoi mesazhin vijues:"
@@ -77,7 +85,7 @@ msgstr "Faleminderit!"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email. Whitespace matters!
-#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:492 kitsune/questions/templates/questions/email/confirm_question.html:4
+#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:551 kitsune/questions/templates/questions/email/confirm_question.html:4
 msgid "Please confirm your Firefox Help question"
 msgstr "Ju lutemi, ripohoni pyetjen tuaj për Ndihmë Firefox-i"
 
@@ -312,7 +320,7 @@ msgstr "Mund të aplikoni për porgramin tonë të shokëve dhe të udhëzoheni 
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is at the end of an email.
-#: kitsune/users/templates/users/email/contributor.ltxt:76 kitsune/users/models.py:217 kitsune/users/views.py:410 kitsune/users/templates/users/email/contributor.html:76
+#: kitsune/users/templates/users/email/contributor.ltxt:76 kitsune/users/models.py:217 kitsune/users/utils.py:88 kitsune/users/views.py:412 kitsune/users/templates/users/email/contributor.html:76
 msgid "Welcome to SUMO!"
 msgstr "Mirë se vini te SUMO!"
 
@@ -474,7 +482,7 @@ msgstr "Shfaqe deri më"
 msgid "New announcement for {group}"
 msgstr "Njoftim i ri për {group}"
 
-#: kitsune/customercare/views.py:29 kitsune/dashboards/readouts.py:321 kitsune/questions/templates/questions/questions.html:72 kitsune/questions/templates/questions/mobile/questions.html:110
+#: kitsune/customercare/views.py:29 kitsune/dashboards/readouts.py:327 kitsune/questions/templates/questions/questions.html:72 kitsune/questions/templates/questions/mobile/questions.html:110
 msgid "Most Recent"
 msgstr "Më të Fundmet"
 
@@ -486,7 +494,8 @@ msgstr "Të papërgjigje"
 msgid "Answered"
 msgstr "Me Përgjigje"
 
-#: kitsune/customercare/views.py:32 kitsune/questions/templates/questions/questions.html:83 kitsune/questions/templates/questions/mobile/questions.html:124
+#: kitsune/customercare/views.py:32 kitsune/questions/templates/questions/metrics.html:14 kitsune/questions/templates/questions/metrics.html:16 kitsune/questions/templates/questions/questions.html:83
+#: kitsune/questions/templates/questions/mobile/questions.html:124
 msgid "All"
 msgstr "Krejt"
 
@@ -563,7 +572,7 @@ msgid "Sign out"
 msgstr "Dilni"
 
 #: kitsune/customercare/templates/customercare/landing.html:72 kitsune/customercare/templates/customercare/twitter_modal.html:14
-#: kitsune/questions/templates/questions/mobile/new_question_login.html:18 kitsune/sumo/templates/mobile/base.html:82 kitsune/users/templates/users/mobile/login.html:7
+#: kitsune/questions/templates/questions/mobile/new_question_login.html:38 kitsune/sumo/templates/mobile/base.html:85 kitsune/users/templates/users/mobile/login.html:7
 #: kitsune/users/templates/users/mobile/includes/macros.html:19
 msgid "Sign in"
 msgstr "Hyni"
@@ -586,7 +595,7 @@ msgstr "Pa kontribute së fundi"
 
 #: kitsune/customercare/templates/customercare/reply_modal.html:1 kitsune/customercare/templates/customercare/tweets.html:18 kitsune/kbforums/templates/kbforums/includes/post.html:38
 #: kitsune/messages/templates/messages/read.html:19 kitsune/messages/templates/messages/mobile/read.html:14 kitsune/messages/templates/messages/mobile/read.html:21
-#: kitsune/questions/templates/questions/includes/answer.html:76 kitsune/questions/templates/questions/mobile/answers.html:36 kitsune/questions/templates/questions/mobile/answers.html:115
+#: kitsune/questions/templates/questions/includes/answer.html:77 kitsune/questions/templates/questions/mobile/answers.html:36 kitsune/questions/templates/questions/mobile/answers.html:115
 msgid "Reply"
 msgstr "Përgjigjjuni"
 
@@ -706,119 +715,119 @@ msgstr ""
 msgid "Monthly Active Contributors"
 msgstr "Pjesëmarrës Aktivë"
 
-#: kitsune/dashboards/readouts.py:67
+#: kitsune/dashboards/readouts.py:69
 msgid "Review Needed"
 msgstr "Lyp Shqyrtim"
 
-#: kitsune/dashboards/readouts.py:71
+#: kitsune/dashboards/readouts.py:73
 msgid "Update Needed"
 msgstr "Lyp Përditësim"
 
-#: kitsune/dashboards/readouts.py:73
+#: kitsune/dashboards/readouts.py:75
 msgid "Immediate Update Needed"
 msgstr "Lypset Përditësim i Menjëhershëm"
 
-#: kitsune/dashboards/readouts.py:163
+#: kitsune/dashboards/readouts.py:165
 msgid "Translation Needed"
 msgstr "Lyp Përkthim"
 
-#: kitsune/dashboards/readouts.py:275
+#: kitsune/dashboards/readouts.py:281
 msgid "Most-Visited Articles"
 msgstr "Artikujt Më të Vizituar"
 
-#: kitsune/dashboards/readouts.py:279
+#: kitsune/dashboards/readouts.py:285
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "Këta janë 20 artikujt më të vizituar, që zënë më tepër se 50% të trafikut te Baza e Dijes."
 
-#: kitsune/dashboards/readouts.py:283 kitsune/dashboards/readouts.py:552 kitsune/dashboards/readouts.py:624 kitsune/dashboards/readouts.py:625 kitsune/wiki/config.py:200
+#: kitsune/dashboards/readouts.py:289 kitsune/dashboards/readouts.py:558 kitsune/dashboards/readouts.py:631 kitsune/dashboards/readouts.py:632 kitsune/wiki/config.py:200
 msgid "Templates"
 msgstr "Gjedhe"
 
-#: kitsune/dashboards/readouts.py:287
+#: kitsune/dashboards/readouts.py:293
 msgid "Templates are a way of reusing pieces of content across KB articles. You can create and update a set of instructions in one place, and then refer to it in other pages."
 msgstr "Gjedhet janë një mënyrë ripërdorimi pjesësh lënde nëpër artikuj të BD-së. Mund të krijoni dhe përditësoni diku në një vend një grup udhëzimesh, dhe mandej t'i përdorni ato në faqe të tjera."
 
-#: kitsune/dashboards/readouts.py:292 kitsune/dashboards/readouts.py:688 kitsune/dashboards/readouts.py:689
+#: kitsune/dashboards/readouts.py:298 kitsune/dashboards/readouts.py:695 kitsune/dashboards/readouts.py:696
 msgid "Navigation Articles"
 msgstr "Artikuj mbi Lëvizjet"
 
-#: kitsune/dashboards/readouts.py:296
+#: kitsune/dashboards/readouts.py:302
 msgid "How many of the approved navigation articles which allow translations have an approved translation into this language"
 msgstr "Sa artikuj të miratuar mbi lëvizjet, për të cilët lejohet përkthimi, kanë një përkthim të miratuar në këtë gjuhë"
 
-#: kitsune/dashboards/readouts.py:300
+#: kitsune/dashboards/readouts.py:306
 msgid "All Knowledge Base Articles"
 msgstr "Krejt Artikujt e Bazës së Dijes"
 
-#: kitsune/dashboards/readouts.py:303
+#: kitsune/dashboards/readouts.py:309
 msgid "This is the number of all Knowledge Base articles that are ready to be localized."
 msgstr "Ky është numri i krejt artikujve të Bazës së Dijes që janë gati për përkthim."
 
-#: kitsune/dashboards/readouts.py:318
+#: kitsune/dashboards/readouts.py:324
 msgid "Visits in last 30 days"
 msgstr "Vizita 30 ditët e fundit"
 
-#: kitsune/dashboards/readouts.py:319 kitsune/wiki/templates/wiki/includes/revision_list.html:23
+#: kitsune/dashboards/readouts.py:325 kitsune/wiki/templates/wiki/includes/revision_list.html:23
 msgid "Status"
 msgstr "Gjendje"
 
-#: kitsune/dashboards/readouts.py:320 kitsune/dashboards/readouts.py:1107
+#: kitsune/dashboards/readouts.py:326 kitsune/dashboards/readouts.py:1114
 msgid "Most Viewed"
 msgstr "Më të Shikuarit"
 
-#: kitsune/dashboards/readouts.py:425 kitsune/dashboards/readouts.py:582
+#: kitsune/dashboards/readouts.py:431 kitsune/dashboards/readouts.py:588
 msgid "Most Visited"
 msgstr "Më të Vizituarat"
 
-#: kitsune/dashboards/readouts.py:427
+#: kitsune/dashboards/readouts.py:433
 msgid "All knowledge base articles..."
 msgstr "Krejt artikujt e bazës së dijes..."
 
-#: kitsune/dashboards/readouts.py:429 kitsune/dashboards/readouts.py:492
+#: kitsune/dashboards/readouts.py:435 kitsune/dashboards/readouts.py:498
 msgid "Visits"
 msgstr "Vizita"
 
-#: kitsune/dashboards/readouts.py:533
+#: kitsune/dashboards/readouts.py:539
 msgid "Changes Needed"
 msgstr "Lyp Ndryshime"
 
-#: kitsune/dashboards/readouts.py:536 kitsune/dashboards/readouts.py:1032
+#: kitsune/dashboards/readouts.py:542 kitsune/dashboards/readouts.py:1039
 msgid "Changes Not Ready For Localization"
 msgstr "Ndryshime Ende Jo Gati Për Përkthim"
 
-#: kitsune/dashboards/readouts.py:554 kitsune/dashboards/readouts.py:627
+#: kitsune/dashboards/readouts.py:560 kitsune/dashboards/readouts.py:634
 msgid "All templates..."
 msgstr "Krejt gjedhet..."
 
-#: kitsune/dashboards/readouts.py:559
+#: kitsune/dashboards/readouts.py:565
 msgid "How To Contribute"
 msgstr "Si Të Kontribuohet"
 
-#: kitsune/dashboards/readouts.py:561
+#: kitsune/dashboards/readouts.py:567
 msgid "All How To Contribute articles..."
 msgstr "Krejt artikujt Si të Kontribuoni..."
 
-#: kitsune/dashboards/readouts.py:566 kitsune/wiki/config.py:198
+#: kitsune/dashboards/readouts.py:572 kitsune/wiki/config.py:198
 msgid "Administration"
 msgstr "Administrim"
 
-#: kitsune/dashboards/readouts.py:568
+#: kitsune/dashboards/readouts.py:574
 msgid "All Administration articles..."
 msgstr "Krejt artikujt mbi Administrimin..."
 
-#: kitsune/dashboards/readouts.py:584
+#: kitsune/dashboards/readouts.py:590
 msgid "All translations..."
 msgstr "Krejt përkthimet..."
 
-#: kitsune/dashboards/readouts.py:691
+#: kitsune/dashboards/readouts.py:698
 msgid "All navigation articles..."
 msgstr "Krejt artikujt mbi lëvizjet..."
 
-#: kitsune/dashboards/readouts.py:736 kitsune/dashboards/readouts.py:741
+#: kitsune/dashboards/readouts.py:743 kitsune/dashboards/readouts.py:748
 msgid "Untranslated"
 msgstr "Të papërkthyer"
 
-#: kitsune/dashboards/readouts.py:737
+#: kitsune/dashboards/readouts.py:744
 msgid ""
 "This indicates there are no approved translations of these articles. Some of the articles may have proposed translations waiting to be reviewed and will appear in the Unreviewed Changes section as "
 "well."
@@ -826,19 +835,19 @@ msgstr ""
 "Kjo tregon që për këto artikuj nuk ka përkthime të miratuara. Disa prej artikujve mund të kenë përkthime të propozuara, në pritje të shqyrtimit dhe do të shfaqen edhe te ndarja Ndryshime të "
 "Pashqyrtuara."
 
-#: kitsune/dashboards/readouts.py:742
+#: kitsune/dashboards/readouts.py:749
 msgid "All untranslated articles..."
 msgstr "Krejt artikujt e papërkthyer..."
 
-#: kitsune/dashboards/readouts.py:744
+#: kitsune/dashboards/readouts.py:751
 msgid "Updated"
 msgstr "U përditësua"
 
-#: kitsune/dashboards/readouts.py:803 kitsune/dashboards/readouts.py:809
+#: kitsune/dashboards/readouts.py:810 kitsune/dashboards/readouts.py:816
 msgid "Immediate Updates Needed"
 msgstr "Lypsen Përditësime të Menjëhershme"
 
-#: kitsune/dashboards/readouts.py:804
+#: kitsune/dashboards/readouts.py:811
 msgid ""
 "This indicates a major edit which changes the content of the article enough to hurt the value of the localization. Until it is updated, the localized page will warn users that it may be outdated. "
 "You should update these articles as soon as possible."
@@ -846,19 +855,19 @@ msgstr ""
 "Kjo tregon një përpunim të rëndësishëm që ndryshon lëndën e artikullit deri në atë pikë sa të cënojë vlerën e përkthimit. Deri sa të jetë përditësuar, faqja e përkthyer do t'i sinjalizojë "
 "përdoruesit rreth të qenët i vjetruar. Këta artikuj do të duhej t'i përditësonin sa më parë."
 
-#: kitsune/dashboards/readouts.py:810
+#: kitsune/dashboards/readouts.py:817
 msgid "All translations needing immediate updates..."
 msgstr "Krejt përkthimet që lypin përditësim të menjëhershëm..."
 
-#: kitsune/dashboards/readouts.py:812
+#: kitsune/dashboards/readouts.py:819
 msgid "Out of date since"
 msgstr "E vjetruar që prej"
 
-#: kitsune/dashboards/readouts.py:908 kitsune/dashboards/readouts.py:914
+#: kitsune/dashboards/readouts.py:915 kitsune/dashboards/readouts.py:921
 msgid "Updates Needed"
 msgstr "Lypin Përditësim"
 
-#: kitsune/dashboards/readouts.py:909
+#: kitsune/dashboards/readouts.py:916
 msgid ""
 "This signifies an edit that doesn't diminish the value of the localized article: for example, rewording a paragraph. Localizers are notified of this edit, but no warning is shown on the localized "
 "page. You should update these articles soon."
@@ -866,87 +875,87 @@ msgstr ""
 "Ky përfaqëson një përpunim që nuk e ul vlerën e artikullit të përkthyer: për shembull, riformulim i një paragrafi. Përkthyesit për këtë përpunim njoftohen, por te faqja e përkthyer nuk tregohet "
 "ndonjë sinjalizim. Këta artikuj do të duhej t'i përditësonit pa vonesë."
 
-#: kitsune/dashboards/readouts.py:915
+#: kitsune/dashboards/readouts.py:922
 msgid "All translations needing updates..."
 msgstr "Krejt përkthimet që lypin përditësime..."
 
 #. L10n: Not just changes to translations but also unreviewed changes to
 #. docs in this locale that are not translations
-#: kitsune/dashboards/readouts.py:924
+#: kitsune/dashboards/readouts.py:931
 msgid "Unreviewed Changes"
 msgstr "Ndryshime të Pashqyrtuara"
 
-#: kitsune/dashboards/readouts.py:926
+#: kitsune/dashboards/readouts.py:933
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "Të pashqyrtuar"
 
-#: kitsune/dashboards/readouts.py:927
+#: kitsune/dashboards/readouts.py:934
 msgid "All articles requiring review..."
 msgstr "Krejt artikujt që lypin shqyrtim..."
 
-#: kitsune/dashboards/readouts.py:929
+#: kitsune/dashboards/readouts.py:936
 msgid "Changed"
 msgstr "U ndryshua"
 
-#: kitsune/dashboards/readouts.py:985
+#: kitsune/dashboards/readouts.py:992
 msgid "Unhelpful Documents"
 msgstr "Dokumente të Padobishëm"
 
-#: kitsune/dashboards/readouts.py:987
+#: kitsune/dashboards/readouts.py:994
 msgctxt "document"
 msgid "Unhelpful"
 msgstr "I padobishëm"
 
-#: kitsune/dashboards/readouts.py:988
+#: kitsune/dashboards/readouts.py:995
 msgid "All unhelpful articles..."
 msgstr "Krejt artikujt e padobishëm..."
 
-#: kitsune/dashboards/readouts.py:990
+#: kitsune/dashboards/readouts.py:997
 msgid "Total Votes"
 msgstr "Vota Gjithsej"
 
-#: kitsune/dashboards/readouts.py:991
+#: kitsune/dashboards/readouts.py:998
 msgid "Helpfulness"
 msgstr "Dobishmëri"
 
-#: kitsune/dashboards/readouts.py:1033
+#: kitsune/dashboards/readouts.py:1040
 msgid "Articles which have approved revisions newer than the latest ready-for-localization one"
 msgstr "Artikuj për të cilët ka rishikime të miratuara më të reja se sa ai i gatshëm për përkthim"
 
-#: kitsune/dashboards/readouts.py:1036
+#: kitsune/dashboards/readouts.py:1043
 msgid "All articles with changes not ready for localization..."
 msgstr "Krejt artikujt me ndryshime ende jo gati për përkthim..."
 
-#: kitsune/dashboards/readouts.py:1039 kitsune/dashboards/templates/dashboards/includes/macros.html:139 kitsune/wiki/templates/wiki/includes/revision_list.html:59
+#: kitsune/dashboards/readouts.py:1046 kitsune/dashboards/templates/dashboards/includes/macros.html:139 kitsune/wiki/templates/wiki/includes/revision_list.html:59
 msgid "Approved"
 msgstr "Miratuar"
 
-#: kitsune/dashboards/readouts.py:1101
+#: kitsune/dashboards/readouts.py:1108
 msgid "Need Changes"
 msgstr "Lyp Ndryshime"
 
-#: kitsune/dashboards/readouts.py:1102
+#: kitsune/dashboards/readouts.py:1109
 msgid "Articles that require changes."
 msgstr "Artikuj që lypin ndryshime."
 
-#: kitsune/dashboards/readouts.py:1104
+#: kitsune/dashboards/readouts.py:1111
 msgid "All articles that require changes..."
 msgstr "Krejt artikujt që lypin ndryshime..."
 
-#: kitsune/dashboards/readouts.py:1106 kitsune/wiki/templates/wiki/includes/recent_revisions_fragment.html:45 kitsune/wiki/templates/wiki/includes/revision_list.html:29
+#: kitsune/dashboards/readouts.py:1113 kitsune/wiki/templates/wiki/includes/recent_revisions_fragment.html:45 kitsune/wiki/templates/wiki/includes/revision_list.html:29
 msgid "Comment"
 msgstr "Koment"
 
-#: kitsune/dashboards/readouts.py:1153 kitsune/wiki/config.py:201
+#: kitsune/dashboards/readouts.py:1160 kitsune/wiki/config.py:201
 msgid "Canned Responses"
 msgstr "Përgjigje Konservë"
 
-#: kitsune/dashboards/readouts.py:1154
+#: kitsune/dashboards/readouts.py:1161
 msgid "Localization status of all canned responses"
 msgstr "Gjendje përkthime për krejt përgjigjet konservë"
 
-#: kitsune/dashboards/readouts.py:1156
+#: kitsune/dashboards/readouts.py:1163
 msgid "All canned responses articles..."
 msgstr "Krejt artikujt mbi përgjigje konservë..."
 
@@ -1074,16 +1083,16 @@ msgstr "Në pritje të shqyrtimit"
 msgid "Ready for localization"
 msgstr "Gati për përkthim"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:149 kitsune/search/templates/search/results.html:63 kitsune/search/templates/search/results.html:85
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:149 kitsune/search/views.py:485 kitsune/search/templates/search/results.html:63
 msgid "All Products"
 msgstr "Krejt Produktet"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:152 kitsune/products/templates/products/documents.html:4 kitsune/products/templates/products/documents.html:12
-#: kitsune/products/templates/products/documents.html:19 kitsune/products/templates/products/product.html:4 kitsune/products/templates/products/product.html:9
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:152 kitsune/products/templates/products/documents.html:3 kitsune/products/templates/products/documents.html:11
+#: kitsune/products/templates/products/documents.html:18 kitsune/products/templates/products/product.html:4 kitsune/products/templates/products/product.html:9
 #: kitsune/products/templates/products/product.html:16 kitsune/products/templates/products/includes/product_macros.html:12 kitsune/products/templates/products/mobile/documents.html:10
 #: kitsune/products/templates/products/mobile/documents.html:27 kitsune/products/templates/products/mobile/product.html:3 kitsune/products/templates/products/mobile/product.html:8
-#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/mobile/questions.html:36 kitsune/search/templates/search/results.html:69
-#: kitsune/search/templates/search/results.html:83 kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
+#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/answers.html:192 kitsune/questions/templates/questions/mobile/questions.html:36
+#: kitsune/search/views.py:482 kitsune/search/templates/search/results.html:69 kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
 msgctxt "DB: products.Product.title"
 msgid "None"
 msgstr "Asnjë"
@@ -1092,12 +1101,12 @@ msgstr "Asnjë"
 msgid "All Topics"
 msgstr "Krejt Temat"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:165 kitsune/landings/templates/landings/hot.html:3 kitsune/products/templates/products/documents.html:6
-#: kitsune/products/templates/products/documents.html:8 kitsune/products/templates/products/documents.html:12 kitsune/products/templates/products/documents.html:32
-#: kitsune/products/templates/products/documents.html:40 kitsune/products/templates/products/documents.html:50 kitsune/products/templates/products/includes/topic_macros.html:7
-#: kitsune/products/templates/products/includes/topic_macros.html:15 kitsune/products/templates/products/mobile/documents.html:6 kitsune/products/templates/products/mobile/documents.html:8
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:165 kitsune/products/templates/products/documents.html:5 kitsune/products/templates/products/documents.html:7
+#: kitsune/products/templates/products/documents.html:11 kitsune/products/templates/products/documents.html:31 kitsune/products/templates/products/documents.html:39
+#: kitsune/products/templates/products/documents.html:49 kitsune/products/templates/products/includes/topic_macros.html:70 kitsune/products/templates/products/includes/topic_macros.html:93
+#: kitsune/products/templates/products/includes/topic_macros.html:101 kitsune/products/templates/products/mobile/documents.html:6 kitsune/products/templates/products/mobile/documents.html:8
 #: kitsune/products/templates/products/mobile/documents.html:21 kitsune/products/templates/products/mobile/documents.html:38 kitsune/products/templates/products/mobile/product.html:65
-#: kitsune/topics/templates/topics/includes/topic_macros.html:70 kitsune/topics/templates/topics/includes/topic_macros.html:93
+#: kitsune/questions/templates/questions/answers.html:208
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "None"
@@ -1353,11 +1362,11 @@ msgstr "Fshini videon | {t} | Galeri Media"
 msgid "Media Gallery"
 msgstr "Galeri Media"
 
-#: kitsune/gallery/templates/gallery/confirm_media_delete.html:52 kitsune/gallery/templates/gallery/media.html:55
+#: kitsune/gallery/templates/gallery/confirm_media_delete.html:52
 msgid "by {user}"
 msgstr "nga {user}"
 
-#: kitsune/gallery/templates/gallery/confirm_media_delete.html:53 kitsune/gallery/templates/gallery/media.html:56
+#: kitsune/gallery/templates/gallery/confirm_media_delete.html:53 kitsune/gallery/templates/gallery/media.html:60
 msgid "Uploaded {date}"
 msgstr "Ngarkuar {date}"
 
@@ -1435,6 +1444,11 @@ msgstr "Fshije këtë figurë"
 #: kitsune/gallery/templates/gallery/media.html:12
 msgid "Edit this image"
 msgstr "Përpunoni këtë figurë"
+
+#: kitsune/gallery/templates/gallery/media.html:56
+#, fuzzy
+msgid "by <a href=\"{profile_url}\">{user}</a>"
+msgstr "nga <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 
 #: kitsune/gallery/templates/gallery/search.html:2
 msgid "Media Gallery Search"
@@ -1942,11 +1956,11 @@ msgstr "Oh, jo! Duket se nuk ka postime!"
 msgid "Post a reply"
 msgstr "Postoni përgjigje"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:377 kitsune/questions/templates/questions/mobile/answers.html:44
+#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:376 kitsune/questions/templates/questions/mobile/answers.html:44
 msgid "Post Reply"
 msgstr "Postoni Përgjigje"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:378 kitsune/questions/templates/questions/edit_answer.html:53
+#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:377 kitsune/questions/templates/questions/edit_answer.html:53
 msgid "Preview Reply"
 msgstr "Paraparje Përgjigjeje"
 
@@ -2012,11 +2026,11 @@ msgstr ""
 msgid "If you need help with Firefox, please <a href=\"%(aaq_url)s\">ask a question</a>."
 msgstr "Nëse ju duhet ndihmë  me Firefox-in, ju lutemi, <a href=\"%(aaq_url)s\">bëni një pyejte</a>."
 
-#: kitsune/kbforums/templates/kbforums/includes/post.html:12 kitsune/questions/templates/questions/answers.html:149 kitsune/questions/templates/questions/includes/answer.html:114
+#: kitsune/kbforums/templates/kbforums/includes/post.html:12 kitsune/questions/templates/questions/answers.html:149 kitsune/questions/templates/questions/includes/answer.html:115
 msgid "Edit this post"
 msgstr "Përpunoni këtë postim"
 
-#: kitsune/kbforums/templates/kbforums/includes/post.html:15 kitsune/questions/templates/questions/answers.html:154 kitsune/questions/templates/questions/includes/answer.html:119
+#: kitsune/kbforums/templates/kbforums/includes/post.html:15 kitsune/questions/templates/questions/answers.html:154 kitsune/questions/templates/questions/includes/answer.html:120
 msgid "Delete this post"
 msgstr "Fshijeni këtë postim"
 
@@ -2222,65 +2236,48 @@ msgstr ""
 msgid "It's fun and addictive and the Awesome is you!"
 msgstr "Është zbavitëse, ngjitëse dhe Mahnia jeni ju!"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:31 kitsune/landings/templates/landings/get-involved-kb.html:27 kitsune/landings/templates/landings/get-involved-l10n.html:26
-#: kitsune/landings/templates/landings/get-involved-questions.html:27 kitsune/landings/templates/landings/get-involved.html:80 kitsune/landings/templates/landings/get-involved.html:83
-#: kitsune/landings/templates/landings/mobile/get-involved-aoa.html:70 kitsune/landings/templates/landings/mobile/get-involved-kb.html:69
-#: kitsune/landings/templates/landings/mobile/get-involved-l10n.html:64 kitsune/landings/templates/landings/mobile/get-involved-questions.html:76
-#: kitsune/landings/templates/landings/mobile/get-involved.html:77 kitsune/landings/templates/landings/mobile/get-involved.html:81
-msgid "Sign me up"
-msgstr "Regjistromë"
-
-#: kitsune/landings/templates/landings/get-involved-aoa.html:32 kitsune/landings/templates/landings/get-involved-kb.html:28 kitsune/landings/templates/landings/get-involved-kb.html:39
-#: kitsune/landings/templates/landings/get-involved-l10n.html:27 kitsune/landings/templates/landings/get-involved-l10n.html:38 kitsune/landings/templates/landings/get-involved-questions.html:28
-#: kitsune/landings/templates/landings/get-involved-questions.html:40 kitsune/landings/templates/landings/get-involved.html:85 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:68
-#: kitsune/landings/templates/landings/mobile/get-involved-kb.html:32 kitsune/landings/templates/landings/mobile/get-involved-kb.html:67
-#: kitsune/landings/templates/landings/mobile/get-involved-l10n.html:62 kitsune/landings/templates/landings/mobile/get-involved-questions.html:31
-#: kitsune/landings/templates/landings/mobile/get-involved-questions.html:74 kitsune/landings/templates/landings/mobile/get-involved.html:72
-msgid "Sign up as a volunteer"
-msgstr "Regjistrohuni si vullnetar"
-
-#: kitsune/landings/templates/landings/get-involved-aoa.html:39 kitsune/landings/templates/landings/get-involved-kb.html:35 kitsune/landings/templates/landings/get-involved-l10n.html:34
-#: kitsune/landings/templates/landings/get-involved-questions.html:35 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:32
+#: kitsune/landings/templates/landings/get-involved-aoa.html:32 kitsune/landings/templates/landings/get-involved-kb.html:28 kitsune/landings/templates/landings/get-involved-l10n.html:27
+#: kitsune/landings/templates/landings/get-involved-questions.html:28 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:32
 #: kitsune/landings/templates/landings/mobile/get-involved-kb.html:28 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:27
 #: kitsune/landings/templates/landings/mobile/get-involved-questions.html:28
 msgid "How it works"
 msgstr "Si funksionon"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:43 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:36
+#: kitsune/landings/templates/landings/get-involved-aoa.html:36 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:36
 #: kitsune/landings/templates/landings/mobile/get-involved-l10n.html:31
 msgid "Go to Army of Awesome"
 msgstr "Shkoni te Armata e të Mahnitshmes"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:46 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:39
+#: kitsune/landings/templates/landings/get-involved-aoa.html:39 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:39
 msgid "Connect your Twitter account"
 msgstr "Lidhuni me llogarinë tuaj në Twitter"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:50 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:41
+#: kitsune/landings/templates/landings/get-involved-aoa.html:43 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:41
 msgid "Answer to Twitter users that need help. It's super easy with our canned responses."
 msgstr "Përgjigjjuni në Twitter përdoruesve që kanë nevojë. Është shumë e lehtë me përgjigjet tona konservë."
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:58
+#: kitsune/landings/templates/landings/get-involved-aoa.html:51
 msgid "1 tweet can save 1 day"
 msgstr "1 cicërimë mund t'i kursejë dikujt ditën"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:64 kitsune/landings/templates/landings/get-involved-kb.html:63 kitsune/landings/templates/landings/get-involved-l10n.html:58
-#: kitsune/landings/templates/landings/get-involved-questions.html:74
+#: kitsune/landings/templates/landings/get-involved-aoa.html:57 kitsune/landings/templates/landings/get-involved-kb.html:56 kitsune/landings/templates/landings/get-involved-l10n.html:51
+#: kitsune/landings/templates/landings/get-involved-questions.html:67
 msgid "Other ways to get involved"
 msgstr "Rrugë të tjera për t'u përfshirë"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:69 kitsune/landings/templates/landings/get-involved-kb.html:74 kitsune/landings/templates/landings/get-involved-l10n.html:69
+#: kitsune/landings/templates/landings/get-involved-aoa.html:62 kitsune/landings/templates/landings/get-involved-kb.html:67 kitsune/landings/templates/landings/get-involved-l10n.html:62
 #: kitsune/landings/templates/landings/get-involved.html:55 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:53 kitsune/landings/templates/landings/mobile/get-involved-kb.html:57
 #: kitsune/landings/templates/landings/mobile/get-involved-l10n.html:52 kitsune/landings/templates/landings/mobile/get-involved.html:56
 msgid "Answer questions in the support forum"
 msgstr "Përgjigjuni pyetjeve te forumi i asistencës"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:75 kitsune/landings/templates/landings/get-involved-l10n.html:75 kitsune/landings/templates/landings/get-involved-questions.html:85
+#: kitsune/landings/templates/landings/get-involved-aoa.html:68 kitsune/landings/templates/landings/get-involved-l10n.html:68 kitsune/landings/templates/landings/get-involved-questions.html:78
 #: kitsune/landings/templates/landings/get-involved.html:61 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:58 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:57
 #: kitsune/landings/templates/landings/mobile/get-involved-questions.html:64 kitsune/landings/templates/landings/mobile/get-involved.html:61
 msgid "Write help articles"
 msgstr "Shkruani artikuj ndihme"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:81 kitsune/landings/templates/landings/get-involved-kb.html:80 kitsune/landings/templates/landings/get-involved-questions.html:91
+#: kitsune/landings/templates/landings/get-involved-aoa.html:74 kitsune/landings/templates/landings/get-involved-kb.html:73 kitsune/landings/templates/landings/get-involved-questions.html:84
 #: kitsune/landings/templates/landings/get-involved.html:67 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:63 kitsune/landings/templates/landings/mobile/get-involved-kb.html:62
 #: kitsune/landings/templates/landings/mobile/get-involved-questions.html:69 kitsune/landings/templates/landings/mobile/get-involved.html:66
 msgid "Translate help to your languages"
@@ -2306,19 +2303,27 @@ msgstr ""
 "Nëse ju pëlqejnë të shkruajturit dhe mësimdhënia të tjerëve, atëherë Baza e Dijes është vendi juaj. Na duhen kontribues që mund të shkruajnë, redaktojnë dhe kontrollojnë artikuj. Mijëra njerëz "
 "hyjnë në Bazën tonë të Dijeve çdo javë. Përfytyroni se sa prej tyre do të ndihmohen prej jush!"
 
-#: kitsune/landings/templates/landings/get-involved-kb.html:44 kitsune/landings/templates/landings/mobile/get-involved-kb.html:37
+#: kitsune/landings/templates/landings/get-involved-kb.html:32 kitsune/landings/templates/landings/get-involved-l10n.html:31 kitsune/landings/templates/landings/get-involved-questions.html:33
+#: kitsune/landings/templates/landings/includes/register_contributor.html:22 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:68
+#: kitsune/landings/templates/landings/mobile/get-involved-kb.html:32 kitsune/landings/templates/landings/mobile/get-involved-kb.html:67
+#: kitsune/landings/templates/landings/mobile/get-involved-l10n.html:62 kitsune/landings/templates/landings/mobile/get-involved-questions.html:31
+#: kitsune/landings/templates/landings/mobile/get-involved-questions.html:74 kitsune/landings/templates/landings/mobile/get-involved.html:72
+msgid "Sign up as a volunteer"
+msgstr "Regjistrohuni si vullnetar"
+
+#: kitsune/landings/templates/landings/get-involved-kb.html:37 kitsune/landings/templates/landings/mobile/get-involved-kb.html:37
 msgid "Introduce yourself"
 msgstr "Prezantoni veten"
 
-#: kitsune/landings/templates/landings/get-involved-kb.html:51 kitsune/landings/templates/landings/mobile/get-involved-kb.html:42
+#: kitsune/landings/templates/landings/get-involved-kb.html:44 kitsune/landings/templates/landings/mobile/get-involved-kb.html:42
 msgid "Watch our videos and check our documentation"
 msgstr "Shihni videot tona dhe dokumentimin tonë"
 
-#: kitsune/landings/templates/landings/get-involved-kb.html:57
+#: kitsune/landings/templates/landings/get-involved-kb.html:50
 msgid "1 article can be viewed by 400 million users and translated into 70+ languages"
 msgstr "1 artikull mund të shihet nga 400 milionë përdorues dhe të përkthehet në më tepër se 70 gjuhë"
 
-#: kitsune/landings/templates/landings/get-involved-kb.html:68 kitsune/landings/templates/landings/get-involved-l10n.html:63 kitsune/landings/templates/landings/get-involved-questions.html:79
+#: kitsune/landings/templates/landings/get-involved-kb.html:61 kitsune/landings/templates/landings/get-involved-l10n.html:56 kitsune/landings/templates/landings/get-involved-questions.html:72
 #: kitsune/landings/templates/landings/get-involved.html:49 kitsune/landings/templates/landings/mobile/get-involved-kb.html:52 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:47
 #: kitsune/landings/templates/landings/mobile/get-involved-questions.html:59 kitsune/landings/templates/landings/mobile/get-involved.html:51
 msgid "Army of Awesome: help users on Twitter"
@@ -2341,15 +2346,15 @@ msgid "Help articles are not available in your language yet? You want to join th
 msgstr ""
 "Nuk ka ende të gatshëm artikuj ndihme në gjuhën tuaj? Dëshironi të bëheni pjesë e ekipit të mahnitshëm duke përkthyer të tillë? Do të ndihmoni miliona vetë në gjuhën tuaj. Jo pak heroike, apo jo?"
 
-#: kitsune/landings/templates/landings/get-involved-l10n.html:43 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:36
+#: kitsune/landings/templates/landings/get-involved-l10n.html:36 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:36
 msgid "Check our documentation"
 msgstr "Kontrolloni dokumentimin tonë dhe shihni edhe"
 
-#: kitsune/landings/templates/landings/get-involved-l10n.html:48 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:39
+#: kitsune/landings/templates/landings/get-involved-l10n.html:41 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:39
 msgid "Just edit articles in your language!"
 msgstr "Thjesht përpunoni artikuj në gjuhën tuaj!"
 
-#: kitsune/landings/templates/landings/get-involved-l10n.html:52
+#: kitsune/landings/templates/landings/get-involved-l10n.html:45
 msgid "Translating 1 article can help 1,000's of users in your language"
 msgstr "Përkthimi i 1 artikulli mund të ndihmojë 1000 përdorues në gjuhën tuaj"
 
@@ -2370,19 +2375,19 @@ msgstr ""
 "Nga programuesit e sprovuar web e deri te përdoruesit për herë të parë të kategorisë \"si ta instaloj Firefox-in\", kushdo ka nevojë për ndihmën tuaj te forumi! Ndani me të tjerët dijet tuaja mbi "
 "Firefox-in duke u treguar njerëzve artikujt e duhur për ndihmë dhe duke ofruar hapa diagnostikimi për pyetjet e tyre individuale."
 
-#: kitsune/landings/templates/landings/get-involved-questions.html:50 kitsune/landings/templates/landings/mobile/get-involved-questions.html:39
+#: kitsune/landings/templates/landings/get-involved-questions.html:43 kitsune/landings/templates/landings/mobile/get-involved-questions.html:39
 msgid "Go to our support forum and choose a question to answer"
 msgstr "Shkoni te forumi ynë i asistencës dhe zgjidhni një pyetje që t'i përgjigjeni"
 
-#: kitsune/landings/templates/landings/get-involved-questions.html:60 kitsune/landings/templates/landings/mobile/get-involved-questions.html:47
+#: kitsune/landings/templates/landings/get-involved-questions.html:53 kitsune/landings/templates/landings/mobile/get-involved-questions.html:47
 msgid "Start answering!"
 msgstr "Filloni të përgjigjeni!"
 
-#: kitsune/landings/templates/landings/get-involved-questions.html:62 kitsune/landings/templates/landings/mobile/get-involved-questions.html:49
+#: kitsune/landings/templates/landings/get-involved-questions.html:55 kitsune/landings/templates/landings/mobile/get-involved-questions.html:49
 msgid "Read this for some help to get started"
 msgstr "Lexoni këtu për ca ndihmë se si t'ia fillohet"
 
-#: kitsune/landings/templates/landings/get-involved-questions.html:68
+#: kitsune/landings/templates/landings/get-involved-questions.html:61
 msgid "Solving 1 issue helps up to 1,000 users a day"
 msgstr "Zgjidhja e 1 çështje ndihmon deri në 1000 përdorues në ditë"
 
@@ -2443,11 +2448,13 @@ msgstr "Kuti Këshillash"
 msgid "Your input helps make Mozilla better. <a href=\"%(url)s\"> Give us your feedback </a>"
 msgstr "Reagimet tuaja ndihmojnë për ta bërë Mozilla-n më të mirë. <a href=\"%(url)s\"> Na jepni përshtypjet tuaja </a>"
 
-#: kitsune/landings/templates/landings/hot.html:23 kitsune/products/templates/products/documents.html:64 kitsune/products/templates/products/mobile/documents.html:51
-#: kitsune/products/templates/products/mobile/product.html:36 kitsune/products/templates/products/mobile/product.html:48 kitsune/topics/templates/topics/includes/topic_macros.html:27
-#: kitsune/topics/templates/topics/includes/topic_macros.html:48
-msgid "In English"
-msgstr "Në Anglisht"
+#: kitsune/landings/templates/landings/includes/register_contributor.html:9 kitsune/landings/templates/landings/includes/register_contributor.html:17
+#: kitsune/landings/templates/landings/includes/register_contributor.html:19 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:70
+#: kitsune/landings/templates/landings/mobile/get-involved-kb.html:69 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:64
+#: kitsune/landings/templates/landings/mobile/get-involved-questions.html:76 kitsune/landings/templates/landings/mobile/get-involved.html:77
+#: kitsune/landings/templates/landings/mobile/get-involved.html:81
+msgid "Sign me up"
+msgstr "Regjistromë"
 
 #: kitsune/landings/templates/landings/mobile/get-involved.html:3 kitsune/sumo/templates/mobile/base.html:67
 msgid "Help other users"
@@ -2602,10 +2609,15 @@ msgstr ""
 msgid "From:"
 msgstr "Nga:"
 
-#: kitsune/products/templates/products/documents.html:12 kitsune/products/templates/products/product.html:9 kitsune/products/templates/products/mobile/documents.html:10
+#: kitsune/products/templates/products/documents.html:11 kitsune/products/templates/products/product.html:9 kitsune/products/templates/products/mobile/documents.html:10
 #: kitsune/products/templates/products/mobile/product.html:8 kitsune/wiki/templates/wiki/document.html:11
 msgid "{product} Help"
 msgstr "Ndihmë {product}-i"
+
+#: kitsune/products/templates/products/documents.html:63 kitsune/products/templates/products/includes/topic_macros.html:27 kitsune/products/templates/products/includes/topic_macros.html:48
+#: kitsune/products/templates/products/mobile/documents.html:51 kitsune/products/templates/products/mobile/product.html:36 kitsune/products/templates/products/mobile/product.html:48
+msgid "In English"
+msgstr "Në Anglisht"
 
 #: kitsune/products/templates/products/product.html:25
 msgid "Firefox"
@@ -2654,18 +2666,18 @@ msgstr "Asnjë"
 msgid "Email software for Windows, Mac and Linux"
 msgstr "Software email-esh për Windows, Mac dhe Linux"
 
+#: kitsune/products/templates/products/includes/topic_macros.html:4 kitsune/products/templates/products/mobile/product.html:13
+msgid "Hot Topics"
+msgstr "Tema të Nxehta"
+
+#: kitsune/products/templates/products/includes/topic_macros.html:78 kitsune/products/templates/products/mobile/product.html:72
+msgid "Get community support"
+msgstr "Merrni asistencë nga bashkësia"
+
 #: kitsune/products/templates/products/mobile/documents.html:21 kitsune/products/templates/products/mobile/documents.html:27
 #, fuzzy
 msgid "Back to:"
 msgstr "Mbrapsht te Historiku"
-
-#: kitsune/products/templates/products/mobile/product.html:13 kitsune/topics/templates/topics/includes/topic_macros.html:4
-msgid "Hot Topics"
-msgstr "Tema të Nxehta"
-
-#: kitsune/products/templates/products/mobile/product.html:72 kitsune/topics/templates/topics/includes/topic_macros.html:78
-msgid "Get community support"
-msgstr "Merrni asistencë nga bashkësia"
 
 #: kitsune/questions/events.py:32 kitsune/users/models.py:276 kitsune/users/models.py:322
 msgid "Please confirm your email address"
@@ -2749,7 +2761,7 @@ msgstr "Ca herë në javë"
 msgid "Every time Firefox opened"
 msgstr "Sa herë që hapet Firefox-i"
 
-#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:265
+#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:264
 msgid "This started when..."
 msgstr "Kjo filloi të ndodhë kur..."
 
@@ -3040,56 +3052,56 @@ msgstr "Thunderbird"
 msgid "or other Mozilla products"
 msgstr "ose të tjera produkte Mozilla"
 
-#: kitsune/questions/views.py:75
+#: kitsune/questions/views.py:78
 msgid "That tag does not exist."
 msgstr "Kjo etiketë nuk ekziston."
 
-#: kitsune/questions/views.py:76
+#: kitsune/questions/views.py:79
 msgid "Please provide a tag."
 msgstr "Ju lutemi, jepni një etiketë."
 
 #. L10n: This shouldn't happen unless people tamper with POST data.
-#: kitsune/questions/views.py:502
+#: kitsune/questions/views.py:561
 msgid "Request type not recognized."
 msgstr "Lloj i panjohur kërkese."
 
-#: kitsune/questions/views.py:559
+#: kitsune/questions/views.py:618
 msgid "Done! Your question is now posted on the Mozilla community support forum."
 msgstr "U bë! Pyetja juaj tani është postuar te forumi i bashkësisë Mozilla për asistencë."
 
-#: kitsune/questions/views.py:761
+#: kitsune/questions/views.py:820
 msgid "Thank you for choosing a solution!"
 msgstr "Faleminderit për zgjedhjen e një zgjidhjeje!"
 
-#: kitsune/questions/views.py:786
+#: kitsune/questions/views.py:845
 msgid "The solution was undone successfully."
 msgstr "Zgjidhja u zhbë me sukses."
 
-#: kitsune/questions/views.py:857
+#: kitsune/questions/views.py:916
 msgid "Glad to hear it!"
 msgstr "Na bëhet qejfi!"
 
-#: kitsune/questions/views.py:860 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
+#: kitsune/questions/views.py:919 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
 msgid "Sorry to hear that."
 msgstr "Na vjen keq për këtë."
 
-#: kitsune/questions/views.py:881
+#: kitsune/questions/views.py:940
 msgid "You already voted on this reply."
 msgstr "Keni votuar një herë për këtë përgjigje."
 
-#: kitsune/questions/views.py:1101
+#: kitsune/questions/views.py:1160
 msgid "Could not send a message to that email address."
 msgstr "Nuk dërgoi dot mesazh te kjo adresë email."
 
-#: kitsune/questions/views.py:1106
+#: kitsune/questions/views.py:1165
 msgid "You will be notified of updates by email."
 msgstr "Për përditësime do të njoftoheni me email."
 
-#: kitsune/questions/views.py:1108
+#: kitsune/questions/views.py:1167
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "Do të duhej të merrnit një email pa humbur kohë, që të ripohoni pajtimin tuaj."
 
-#: kitsune/questions/views.py:1188
+#: kitsune/questions/views.py:1247
 #, fuzzy
 msgid "There was an error submitting the ticket. Please try again later."
 msgstr "Pati një gabim gjatë parashtrimit të çështjes, ju lutemi, riprovoni më vonë."
@@ -3104,8 +3116,8 @@ msgstr "Pati një problem me ripohimin e pajtimit tuaj."
 
 #: kitsune/questions/templates/questions/activate_watch.html:8 kitsune/questions/templates/questions/answers.html:11 kitsune/questions/templates/questions/answers.html:21
 #: kitsune/questions/templates/questions/confirm_answer_delete.html:4 kitsune/questions/templates/questions/confirm_question_delete.html:4 kitsune/questions/templates/questions/edit_answer.html:8
-#: kitsune/questions/templates/questions/edit_question.html:3 kitsune/questions/templates/questions/questions.html:5 kitsune/questions/templates/questions/questions.html:25
-#: kitsune/questions/templates/questions/stats.html:3 kitsune/questions/templates/questions/unsubscribe_watch.html:8 kitsune/questions/templates/questions/mobile/questions.html:7
+#: kitsune/questions/templates/questions/edit_question.html:3 kitsune/questions/templates/questions/metrics.html:3 kitsune/questions/templates/questions/questions.html:5
+#: kitsune/questions/templates/questions/questions.html:25 kitsune/questions/templates/questions/unsubscribe_watch.html:8 kitsune/questions/templates/questions/mobile/questions.html:7
 #: kitsune/sumo/templates/mobile/base.html:63
 msgid "Support Forum"
 msgstr "Forum Asistence"
@@ -3174,7 +3186,7 @@ msgstr "Përgjigja e fundit nga {user}"
 msgid "Posted"
 msgstr "Postuar"
 
-#: kitsune/questions/templates/questions/answers.html:96 kitsune/questions/templates/questions/includes/answer.html:58
+#: kitsune/questions/templates/questions/answers.html:96 kitsune/questions/templates/questions/includes/answer.html:59
 msgid "Modified {datetime} by {name}"
 msgstr "Ndryshuar {datetime} nga {name}"
 
@@ -3202,7 +3214,7 @@ msgstr "Kaloni tek përgjigja"
 msgid "I have this problem, too"
 msgstr "Edhe unë e kam hasur këtë problem"
 
-#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:354
+#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:353
 msgid "Post a Reply"
 msgstr "Postoni një Përgjigje"
 
@@ -3238,64 +3250,69 @@ msgstr "Hollësi pyetjeje"
 msgid "Product"
 msgstr "Produkt"
 
-#: kitsune/questions/templates/questions/answers.html:208
+#: kitsune/questions/templates/questions/answers.html:207
 msgid "Topic"
 msgstr "Temë"
 
-#: kitsune/questions/templates/questions/answers.html:223
+#: kitsune/questions/templates/questions/answers.html:221
 msgid "System Details"
 msgstr "Hollësi Sistemi"
 
-#: kitsune/questions/templates/questions/answers.html:236
+#: kitsune/questions/templates/questions/answers.html:234
 msgid "More system details"
 msgstr "Më tepër hollësi sistemi"
 
-#: kitsune/questions/templates/questions/answers.html:241
+#: kitsune/questions/templates/questions/answers.html:239
+#, fuzzy
+msgid "Edit details"
+msgstr "Përpunoni Rregullime"
+
+#: kitsune/questions/templates/questions/answers.html:240
 #, fuzzy
 msgid "Save changes"
 msgstr "Ruaje figurën"
 
-#: kitsune/questions/templates/questions/answers.html:250 kitsune/questions/templates/questions/answers.html:251
+#: kitsune/questions/templates/questions/answers.html:249 kitsune/questions/templates/questions/answers.html:250
 msgid "Additional System Details"
 msgstr "Hollësi Shtesë Sistemi"
 
-#: kitsune/questions/templates/questions/answers.html:253
+#: kitsune/questions/templates/questions/answers.html:252
 msgid "Sites Affected"
 msgstr "Site-e të Prekur"
 
-#: kitsune/questions/templates/questions/answers.html:257
+#: kitsune/questions/templates/questions/answers.html:256
 msgid "Crash ID"
 msgstr "ID Vithisjeje"
 
-#: kitsune/questions/templates/questions/answers.html:261
+#: kitsune/questions/templates/questions/answers.html:260
 msgid "This happened"
 msgstr "Kjo ndodhi"
 
-#: kitsune/questions/templates/questions/answers.html:269
+#: kitsune/questions/templates/questions/answers.html:268
 msgid "Installed Plug-ins"
 msgstr "Shtojca të Instaluara"
 
-#: kitsune/questions/templates/questions/answers.html:276
+#: kitsune/questions/templates/questions/answers.html:275
 msgid "Close"
 msgstr "Mbylle"
 
-#: kitsune/questions/templates/questions/answers.html:282 kitsune/questions/templates/questions/questions.html:215 kitsune/search/forms.py:163
+#: kitsune/questions/templates/questions/answers.html:281 kitsune/questions/templates/questions/questions.html:215 kitsune/search/forms.py:163
 msgid "Tags"
 msgstr "Etiketa"
 
-#: kitsune/questions/templates/questions/answers.html:322 kitsune/tags/forms.py:121
+#: kitsune/questions/templates/questions/answers.html:321 kitsune/tags/forms.py:121
 msgid "Add"
 msgstr "Shtoni"
 
-#: kitsune/questions/templates/questions/answers.html:349
+#: kitsune/questions/templates/questions/answers.html:348
 msgid "You have exceeded the number of answers that can be posted in a given amount of time. Please try again shortly."
 msgstr "E keni tejkaluar numrin e përgjigjeve që mund të postohen brenda një sasie kohe të dhënë. Ju lutemi, riprovoni pas pak."
 
-#: kitsune/questions/templates/questions/answers.html:357
+#: kitsune/questions/templates/questions/answers.html:356
 msgid "You must <a href=\"{url}\">log in to your account</a> to reply to posts."
 msgstr "Duhet <a href=\"{url}\">të bëni hyrjen te llogaria juaj</a> që t'u përgjigjeni postimeve."
 
-#: kitsune/questions/templates/questions/answers.html:360
+#: kitsune/questions/templates/questions/answers.html:359
 msgid "Don't have an account? You can <a href='{url}'>create a free account</a> now."
 msgstr "Nuk keni një llogari? Mund <a href='{url}'>të krijoni një llogari falas</a> që tani."
 
@@ -3436,6 +3453,26 @@ msgstr "Çështja u parashtrua me sukses"
 msgid "Your issue has been submitted successfully. You should receive a confirmation email and hear back from us shortly."
 msgstr "Problemi juaj është parashtruar me sukses. Do të duhej t'ju vinte një email ripohimi dhe të keni lajme prej nesh shumë shpejt."
 
+#: kitsune/questions/templates/questions/metrics.html:2 kitsune/questions/templates/questions/metrics.html:9 kitsune/sumo/templates/includes/common_macros.html:142
+msgid "Support Forum Metrics"
+msgstr ""
+
+#: kitsune/questions/templates/questions/metrics.html:4
+msgid "Metrics"
+msgstr ""
+
+#: kitsune/questions/templates/questions/metrics.html:12 kitsune/wiki/forms.py:312
+msgid "Locale:"
+msgstr "Vendore:"
+
+#: kitsune/questions/templates/questions/metrics.html:43 kitsune/search/forms.py:76
+msgid "Topics"
+msgstr "Tema"
+
+#: kitsune/questions/templates/questions/metrics.html:65
+msgid "Data is temporarily unavailable, please try again in a few minutes."
+msgstr "Të dhënat hëpërhë nuk janë të gatshme, ju lutemi, riprovoni pas pak minutash."
+
 #: kitsune/questions/templates/questions/new_question.html:5 kitsune/questions/templates/questions/new_question_login.html:4 kitsune/questions/templates/questions/mobile/confirm_email.html:3
 msgid "Ask a Question"
 msgstr "Bëni një Pyetje"
@@ -3464,9 +3501,35 @@ msgstr "Jepni më tepër hollësi"
 msgid "Fill in the details of your question."
 msgstr "Plotësoni hollësitë për pyetjen tuaj."
 
-#: kitsune/questions/templates/questions/new_question.html:76 kitsune/questions/templates/questions/new_question_login.html:14
+#: kitsune/questions/templates/questions/new_question.html:76 kitsune/questions/templates/questions/new_question_login.html:38
 msgid "Post Question"
 msgstr "Postoni Pyetje"
+
+#: kitsune/questions/templates/questions/new_question_login.html:19 kitsune/questions/templates/questions/mobile/new_question_login.html:14
+#, fuzzy
+msgid "Before you continue, you must sign in"
+msgstr "Përpara se të vazhdoni, ju lutemi, krijoni një llogari asistence"
+
+#: kitsune/questions/templates/questions/new_question_login.html:20 kitsune/questions/templates/questions/mobile/new_question_login.html:16 kitsune/sumo/templates/includes/common_macros.html:54
+#: kitsune/sumo/templates/mobile/base.html:83 kitsune/users/templates/users/auth.html:23 kitsune/users/templates/users/mobile/login.html:14
+#, fuzzy
+msgid "Sign in with email"
+msgstr "Hyni me Twitter"
+
+#: kitsune/questions/templates/questions/new_question_login.html:24
+#, fuzzy
+msgid "It appears you do not have an existing account"
+msgstr "Bëni hyrjen te një llogari ekzistuese"
+
+#: kitsune/questions/templates/questions/new_question_login.html:25
+#, fuzzy
+msgid "Please select a username for your new account."
+msgstr "Ju lutemi, përzgjidhni të paktën një produkt."
+
+#: kitsune/questions/templates/questions/new_question_login.html:29 kitsune/questions/templates/questions/mobile/new_question_login.html:26
+#, fuzzy
+msgid "Register and continue"
+msgstr "Regjistrohuni që të bëheni një Kontribues"
 
 #: kitsune/questions/templates/questions/questions.html:3
 msgid "Firefox Support Forum"
@@ -3568,26 +3631,6 @@ msgstr "Postuar nga {user}"
 #: kitsune/questions/templates/questions/questions.html:204 kitsune/questions/templates/questions/questions.html:210
 msgid "on"
 msgstr "te"
-
-#: kitsune/questions/templates/questions/stats.html:2
-msgid "Question Metrics"
-msgstr ""
-
-#: kitsune/questions/templates/questions/stats.html:4
-msgid "Metrics"
-msgstr ""
-
-#: kitsune/questions/templates/questions/stats.html:9
-msgid "Question Statistics"
-msgstr "Statistika Pyetjesh"
-
-#: kitsune/questions/templates/questions/stats.html:13 kitsune/search/forms.py:76
-msgid "Topics"
-msgstr "Tema"
-
-#: kitsune/questions/templates/questions/stats.html:35
-msgid "Data is temporarily unavailable, please try again in a few minutes."
-msgstr "Të dhënat hëpërhë nuk janë të gatshme, ju lutemi, riprovoni pas pak minutash."
 
 #: kitsune/questions/templates/questions/unsubscribe_watch.html:3 vendor/src/django-tidings/tidings/templates/tidings/unsubscribe_success.html:10
 msgid "You have been unsubscribed."
@@ -3814,56 +3857,56 @@ msgstr "{num} përgjigje"
 msgid "karma"
 msgstr "karma"
 
-#: kitsune/questions/templates/questions/includes/answer.html:38
+#: kitsune/questions/templates/questions/includes/answer.html:39
 #, fuzzy
 msgid "Chosen Solution"
 msgstr "Zgjidhje e zgjedhur"
 
-#: kitsune/questions/templates/questions/includes/answer.html:40
+#: kitsune/questions/templates/questions/includes/answer.html:41
 #, fuzzy
 msgid "Helpful Reply"
 msgstr "Përgjigje të dobishme"
 
-#: kitsune/questions/templates/questions/includes/answer.html:42
+#: kitsune/questions/templates/questions/includes/answer.html:43
 #, fuzzy
 msgid "Question owner"
 msgstr "Datë pyetjeje"
 
-#: kitsune/questions/templates/questions/includes/answer.html:66
+#: kitsune/questions/templates/questions/includes/answer.html:67
 msgid "Was this helpful to you?"
 msgstr "Qe e dobishme për ju kjo?"
 
-#: kitsune/questions/templates/questions/includes/answer.html:67 kitsune/search/__init__.py:43 kitsune/sumo/helpers.py:369 kitsune/wiki/templates/wiki/includes/document_macros.html:299
+#: kitsune/questions/templates/questions/includes/answer.html:68 kitsune/search/__init__.py:43 kitsune/sumo/helpers.py:369 kitsune/wiki/templates/wiki/includes/document_macros.html:299
 #: kitsune/wiki/templates/wiki/mobile/includes/document_macros.html:15
 msgid "Yes"
 msgstr "Po"
 
-#: kitsune/questions/templates/questions/includes/answer.html:68 kitsune/search/__init__.py:44 kitsune/sumo/helpers.py:369 kitsune/wiki/templates/wiki/includes/document_macros.html:300
+#: kitsune/questions/templates/questions/includes/answer.html:69 kitsune/search/__init__.py:44 kitsune/sumo/helpers.py:369 kitsune/wiki/templates/wiki/includes/document_macros.html:300
 #: kitsune/wiki/templates/wiki/mobile/includes/document_macros.html:16
 msgid "No"
 msgstr "Jo"
 
-#: kitsune/questions/templates/questions/includes/answer.html:88
+#: kitsune/questions/templates/questions/includes/answer.html:89
 msgid "Did this reply solve your problem?"
 msgstr "E zgjidhi problemin tuaj kjo përgjigje?"
 
-#: kitsune/questions/templates/questions/includes/answer.html:89
+#: kitsune/questions/templates/questions/includes/answer.html:90
 msgid "Solved the problem"
 msgstr "E zgjidhi problemin"
 
-#: kitsune/questions/templates/questions/includes/answer.html:91
+#: kitsune/questions/templates/questions/includes/answer.html:92
 msgid "Does this reply solve the problem?"
 msgstr "E zgjidhi problemin kjo përgjigje?"
 
-#: kitsune/questions/templates/questions/includes/answer.html:92
+#: kitsune/questions/templates/questions/includes/answer.html:93
 msgid "Solves the problem"
 msgstr "E zgjidh problemin"
 
-#: kitsune/questions/templates/questions/includes/answer.html:100
+#: kitsune/questions/templates/questions/includes/answer.html:101
 msgid "Solution chosen"
 msgstr "Zgjidhja e zgjedhur"
 
-#: kitsune/questions/templates/questions/includes/answer.html:104
+#: kitsune/questions/templates/questions/includes/answer.html:105
 msgid "Undo"
 msgstr "Zhbëje"
 
@@ -4311,7 +4354,7 @@ msgid "Community Discussion Only"
 msgstr "Vetëm Diskutime Bashkësie"
 
 #. {n} is the number of search results, {q} is the search query, {product} is the product.
-#: kitsune/search/templates/search/results.html:88
+#: kitsune/search/templates/search/results.html:83
 #, fuzzy
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> for <strong>{product}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> for <strong>{product}</strong>"
@@ -4319,7 +4362,7 @@ msgstr[0] "U gjet <strong>{n}</strong> përfundim për <strong>{q}</strong> në 
 msgstr[1] "U gjetën <strong>{n}</strong> përfundime për <strong>{q}</strong> në <strong>{l}</strong>"
 
 #. {q} is the search query, {l} is the language searched.
-#: kitsune/search/templates/search/results.html:103
+#: kitsune/search/templates/search/results.html:98
 msgid "We couldn't find any results for <strong>{q}</strong> in <strong>{l}</strong>. Maybe one of these articles will be helpful?"
 msgstr "S'gjetëm dot ndonjë përfundim për <strong>{q}</strong> te <strong>{l}</strong>. Ndoshta një prej këtyre artikujve mund të jetë i dobishëm?"
 
@@ -5456,28 +5499,28 @@ msgctxt "site_title"
 msgid "Mozilla Support"
 msgstr "Asistencë Mozilla"
 
-#: kitsune/sumo/templates/base.html:83
+#: kitsune/sumo/templates/base.html:85
 msgid "This is a staging site, the content gets overwritten on the 1st of every month.<br>The production site is <a href=\"http://support.mozilla.org\">here</a>."
 msgstr "Ky është site-i i provës, lënda këtu mbishkruhet më 1 të çdo muaji.<br>Site-i faktik është <a href=\"http://support.mozilla.com\">ky  këtu</a>."
 
-#: kitsune/sumo/templates/base.html:94
+#: kitsune/sumo/templates/base.html:96
 msgid "This page doesn't have a mobile optimized version. Tap here to go back."
 msgstr "Kjo faqe nuk ka version të optimizuar për celularin. Bjerini këtu që të shkoni mbrapa."
 
-#: kitsune/sumo/templates/base.html:101
+#: kitsune/sumo/templates/base.html:103
 msgid "Tap here to go to the mobile version of the site."
 msgstr "Prekeni këtu që të kalohet te viersioni për celular i site-it."
 
-#: kitsune/sumo/templates/base.html:110
+#: kitsune/sumo/templates/base.html:112
 msgid "Your Firefox is out of date and may contain a security risk!"
 msgstr ""
 
-#: kitsune/sumo/templates/base.html:114
+#: kitsune/sumo/templates/base.html:116
 #, fuzzy
 msgid "Upgrade Firefox"
 msgstr "Firefox"
 
-#: kitsune/sumo/templates/base.html:184
+#: kitsune/sumo/templates/base.html:186
 msgid ""
 "Portions of this content are &copy;1998–2013 <br>by individual mozilla.org contributors. Content <br>available under a <a href=\"//www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
@@ -5485,43 +5528,43 @@ msgstr ""
 "Pjesë të kësaj lënde janë &copy;1998–2013 <br>by individual mozilla.org contributors. nga kontribues individualë te mozilla.org. Lëndë <br>e përdorshme sipas një prej lejeve <a href=\"//www.mozilla."
 "org/foundation/licensing/website-content.html\">Creative Commons</a>."
 
-#: kitsune/sumo/templates/base.html:194
+#: kitsune/sumo/templates/base.html:196
 msgid "Contact Us"
 msgstr "Lidhuni me Ne"
 
-#: kitsune/sumo/templates/base.html:195
+#: kitsune/sumo/templates/base.html:197
 msgid "Privacy Policy"
 msgstr "Rregulla Vetësie"
 
-#: kitsune/sumo/templates/base.html:196
+#: kitsune/sumo/templates/base.html:198
 msgid "Legal Notices"
 msgstr "Shënime Ligjore"
 
-#: kitsune/sumo/templates/base.html:197
+#: kitsune/sumo/templates/base.html:199
 msgid "Report Trademark Abuse"
 msgstr "Njoftoni Shpërdorim Shenjash Tregtare"
 
-#: kitsune/sumo/templates/base.html:198
+#: kitsune/sumo/templates/base.html:200
 msgid "Source Code"
 msgstr "Kod Burim"
 
-#: kitsune/sumo/templates/base.html:203 kitsune/users/templates/users/profile.html:110 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:75
+#: kitsune/sumo/templates/base.html:205 kitsune/users/templates/users/profile.html:110 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:75
 msgid "Twitter"
 msgstr "Twitter"
 
-#: kitsune/sumo/templates/base.html:204 kitsune/users/templates/users/profile.html:116 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:79
+#: kitsune/sumo/templates/base.html:206 kitsune/users/templates/users/profile.html:116 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:79
 msgid "Facebook"
 msgstr "Facebook"
 
-#: kitsune/sumo/templates/base.html:205
+#: kitsune/sumo/templates/base.html:207
 msgid "Firefox Affiliates"
 msgstr "Përkrahës të Firefox-it"
 
-#: kitsune/sumo/templates/base.html:206
+#: kitsune/sumo/templates/base.html:208
 msgid "Switch to mobile site"
 msgstr "Kalo te site-i për celular"
 
-#: kitsune/sumo/templates/email/base.html:213 kitsune/sumo/templates/mobile/base.html:109
+#: kitsune/sumo/templates/email/base.html:213 kitsune/sumo/templates/mobile/base.html:113
 msgid "Mozilla Support"
 msgstr "Asistencë Mozilla"
 
@@ -5598,11 +5641,6 @@ msgstr "Rregullime"
 msgid "Sign Out"
 msgstr "Dilni"
 
-#: kitsune/sumo/templates/includes/common_macros.html:54
-#, fuzzy
-msgid "Sign in with email"
-msgstr "Hyni me Twitter"
-
 #: kitsune/sumo/templates/includes/common_macros.html:56
 #, fuzzy
 msgid "What's this"
@@ -5648,10 +5686,6 @@ msgstr "Ndihmë nga Twitter"
 #: kitsune/sumo/templates/includes/common_macros.html:141
 msgid "Support Forum Home"
 msgstr "Hyrje te Forumi i Asistencës"
-
-#: kitsune/sumo/templates/includes/common_macros.html:142
-msgid "Support Forum Metrics"
-msgstr ""
 
 #: kitsune/sumo/templates/includes/common_macros.html:144
 msgid "Moderate Forum Content"
@@ -5706,23 +5740,23 @@ msgstr "Kuti Këshillash"
 msgid "Profile"
 msgstr "Profil"
 
-#: kitsune/sumo/templates/mobile/base.html:83 kitsune/users/templates/users/includes/macros.html:82
+#: kitsune/sumo/templates/mobile/base.html:86 kitsune/users/templates/users/includes/macros.html:82
 msgid "Register"
 msgstr "Regjistrohuni"
 
-#: kitsune/sumo/templates/mobile/base.html:86
+#: kitsune/sumo/templates/mobile/base.html:90
 msgid "Languages"
 msgstr "Gjuhë"
 
-#: kitsune/sumo/templates/mobile/base.html:91 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
+#: kitsune/sumo/templates/mobile/base.html:95 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
 msgid "Switch language"
 msgstr "Këmbeni gjuhën"
 
-#: kitsune/sumo/templates/mobile/base.html:92
+#: kitsune/sumo/templates/mobile/base.html:96
 msgid "Switch to desktop site"
 msgstr "Kaloni te site-i për dekstop"
 
-#: kitsune/sumo/templates/mobile/base.html:123
+#: kitsune/sumo/templates/mobile/base.html:127
 msgid "Get support for another platform:"
 msgstr ""
 
@@ -6035,19 +6069,19 @@ msgstr "profil regjistrimi"
 msgid "registration profiles"
 msgstr "profile regjistrimi"
 
-#: kitsune/users/views.py:161
+#: kitsune/users/views.py:163
 msgid "Your account is already activated, log in below."
 msgstr "Llogaria juaj është tashmë aktive, hyni më poshtë."
 
-#: kitsune/users/views.py:208 kitsune/users/views.py:218
+#: kitsune/users/views.py:210 kitsune/users/views.py:220
 msgid "Account already activated"
 msgstr "Llogari tashmë e aktivizuar"
 
-#: kitsune/users/views.py:346
+#: kitsune/users/views.py:348
 msgid "Your settings have been saved."
 msgstr "Rregullimet tuaja u ruajtën!"
 
-#: kitsune/users/views.py:631
+#: kitsune/users/views.py:633
 msgid "We've sent an email with the username to any account using {email}."
 msgstr "Kemi dërguar një email me një emër përdoruesi te çfarëdo llogarie që përdor {email}."
 
@@ -6101,15 +6135,19 @@ msgstr "Hyni / Regjistrohuni"
 msgid "Would you like to ask a question in the community support forum?"
 msgstr "Do të donit të bënit një pyetje te forumi i asistencës nga bashkësia?"
 
-#: kitsune/users/templates/users/auth.html:21
+#: kitsune/users/templates/users/auth.html:22 kitsune/users/templates/users/mobile/login.html:13
+msgid "You must be signed in to continue"
+msgstr ""
+
+#: kitsune/users/templates/users/auth.html:29
 msgid "Sign In"
 msgstr "Hyni"
 
-#: kitsune/users/templates/users/auth.html:27
+#: kitsune/users/templates/users/auth.html:35
 msgid "Register to be a Contributor"
 msgstr "Regjistrohuni që të bëheni një Kontribues"
 
-#: kitsune/users/templates/users/auth.html:28
+#: kitsune/users/templates/users/auth.html:36
 msgid "You don't need to register to <a href=\"{url}\">ask a question</a>."
 msgstr "Nuk keni nevojë të regjistroheni që të <a href=\"{url}\">bëni një pyetje</a>."
 
@@ -6121,7 +6159,7 @@ msgstr ""
 msgid "Please select a username and click continue to proceed with sign up."
 msgstr ""
 
-#: kitsune/users/templates/users/browserid_signup.html:21
+#: kitsune/users/templates/users/browserid_signup.html:24
 #, fuzzy
 msgid "Continue"
 msgstr "Përmbajtje"
@@ -6183,6 +6221,11 @@ msgstr "Dokumente"
 #: kitsune/users/templates/users/documents_contributed.html:20
 msgid "Documents edited or translated"
 msgstr "Dokumente të përpunuar ose të përkthyer"
+
+#: kitsune/users/templates/users/documents_contributed.html:34
+#, fuzzy
+msgid "Redirects"
+msgstr "Po ridrejtohet"
 
 #: kitsune/users/templates/users/edit_avatar.html:2
 msgid "Change Avatar"
@@ -6964,10 +7007,6 @@ msgstr "Domethënie:"
 #: kitsune/wiki/forms.py:289
 msgid "Needs change"
 msgstr "Lyp ndryshim"
-
-#: kitsune/wiki/forms.py:312
-msgid "Locale:"
-msgstr "Vendore:"
 
 #: kitsune/wiki/forms.py:314
 msgid "Users:"
@@ -8060,6 +8099,91 @@ msgstr "Ju lutemi, jepni më tepër hollësi"
 msgid "{t} | {c}"
 msgstr "{t} | {c}"
 
+#: vendor/src/django-badger/badger/feeds.py:149
+#, fuzzy
+msgid "Recently awarded badges"
+msgstr "Përditësime të miratuar së fundmi"
+
+#: vendor/src/django-badger/badger/feeds.py:156
+msgid "%s awarded to %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/feeds.py:187
+#, fuzzy
+msgid "Badges recently awarded to %s"
+msgstr "Përgjigje së fundmi për %s"
+
+#: vendor/src/django-badger/badger/feeds.py:205
+#, fuzzy
+msgid "Recent awards of \"%s\""
+msgstr "Përgjigje së fundmi për %s"
+
+#: vendor/src/django-badger/badger/feeds.py:222
+#, fuzzy
+msgid "Recently created badges"
+msgstr "Përditësime të miratuar së fundmi"
+
+#: vendor/src/django-badger/badger/feeds.py:249
+msgid "Badges recently created by %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/forms.py:93
+msgid "%s items entered, only %s allowed"
+msgstr ""
+
+#: vendor/src/django-badger/badger/forms.py:105
+msgid "These items were invalid: %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/forms.py:141
+msgid "No such claim code, %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/models.py:451
+msgid "Cannot process image"
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:212
+#, fuzzy
+msgid "Badge \"%s\" deleted."
+msgstr "Mesazhi u fshi!"
+
+#: vendor/src/django-badger/badger/views.py:241
+msgid "Award issued to %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:243
+msgid "Invitation to claim award sent to %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:310
+msgid "Award for badge \"%s\" deleted."
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:390
+msgid "Award claim granted to %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:464
+msgid "Badge \"%s\" granted to %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:534
+msgid "Nomination submitted for %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:537
+msgid "Badge already awarded to %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:540
+msgid "Nomination failed for %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/templatetags/badger_tags.py:76
+msgid "Issue award"
+msgstr ""
+
 #: vendor/src/django-tidings/tidings/templates/tidings/unsubscribe.html:3 vendor/src/django-tidings/tidings/templates/tidings/unsubscribe.html:13
 #: vendor/src/django-tidings/tidings/templates/tidings/unsubscribe_error.html:3 vendor/src/django-tidings/tidings/templates/tidings/unsubscribe_success.html:3
 msgid "Unsubscribe"
@@ -8085,6 +8209,9 @@ msgstr ""
 #, fuzzy
 msgid "Unsubscribed"
 msgstr "Pajtohuni te prurja"
+
+#~ msgid "Question Statistics"
+#~ msgstr "Statistika Pyetjesh"
 
 #, fuzzy
 #~ msgid "{locale} Localization Team | Knowledge Base"

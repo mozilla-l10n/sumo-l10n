@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-22 03:01-0700\n"
+"POT-Creation-Date: 2013-09-06 08:37-0700\n"
 "PO-Revision-Date: 2013-08-10 19:05+0400\n"
 "Last-Translator: Alexander L. Slovesnik <unghost@mozilla-russia.org>\n"
 "Language-Team: Russian\n"
@@ -43,6 +43,14 @@ msgstr "Новая тема: {title}"
 msgid "User %(author)s has posted a new thread in a forum you're watching. Here is the thread:"
 msgstr "Пользователь %(author)s создал новую тему на форуме, за которым вы следите. Вот эта тема:"
 
+#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:2
+msgid "%(username)s has awarded you a badge!"
+msgstr ""
+
+#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:6 kitsune/kbadge/tasks.py:19
+msgid "You have been awarded a badge!"
+msgstr ""
+
 #: kitsune/messages/templates/messages/email/private_message.ltxt:3 kitsune/messages/templates/messages/email/private_message.html:4
 msgid "{sender} sent you the following message:"
 msgstr "{sender} отправил вам следующее сообщение:"
@@ -77,7 +85,7 @@ msgstr "Спасибо!"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email. Whitespace matters!
-#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:492 kitsune/questions/templates/questions/email/confirm_question.html:4
+#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:551 kitsune/questions/templates/questions/email/confirm_question.html:4
 msgid "Please confirm your Firefox Help question"
 msgstr "Пожалуйста, подтвердите свой вопрос в Помощь Firefox"
 
@@ -311,7 +319,7 @@ msgstr "Вы также можете подать заявление на уча
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is at the end of an email.
-#: kitsune/users/templates/users/email/contributor.ltxt:76 kitsune/users/models.py:217 kitsune/users/views.py:410 kitsune/users/templates/users/email/contributor.html:76
+#: kitsune/users/templates/users/email/contributor.ltxt:76 kitsune/users/models.py:217 kitsune/users/utils.py:88 kitsune/users/views.py:412 kitsune/users/templates/users/email/contributor.html:76
 msgid "Welcome to SUMO!"
 msgstr "Добро пожаловать на SUMO!"
 
@@ -472,7 +480,7 @@ msgstr "Показывать пока"
 msgid "New announcement for {group}"
 msgstr "Новое объявление для {group}"
 
-#: kitsune/customercare/views.py:29 kitsune/dashboards/readouts.py:321 kitsune/questions/templates/questions/questions.html:72 kitsune/questions/templates/questions/mobile/questions.html:110
+#: kitsune/customercare/views.py:29 kitsune/dashboards/readouts.py:327 kitsune/questions/templates/questions/questions.html:72 kitsune/questions/templates/questions/mobile/questions.html:110
 msgid "Most Recent"
 msgstr "Самые последние"
 
@@ -484,7 +492,8 @@ msgstr "Неотвеченные"
 msgid "Answered"
 msgstr "Отвеченные"
 
-#: kitsune/customercare/views.py:32 kitsune/questions/templates/questions/questions.html:83 kitsune/questions/templates/questions/mobile/questions.html:124
+#: kitsune/customercare/views.py:32 kitsune/questions/templates/questions/metrics.html:14 kitsune/questions/templates/questions/metrics.html:16 kitsune/questions/templates/questions/questions.html:83
+#: kitsune/questions/templates/questions/mobile/questions.html:124
 msgid "All"
 msgstr "Все"
 
@@ -561,7 +570,7 @@ msgid "Sign out"
 msgstr "Выйти"
 
 #: kitsune/customercare/templates/customercare/landing.html:72 kitsune/customercare/templates/customercare/twitter_modal.html:14
-#: kitsune/questions/templates/questions/mobile/new_question_login.html:18 kitsune/sumo/templates/mobile/base.html:82 kitsune/users/templates/users/mobile/login.html:7
+#: kitsune/questions/templates/questions/mobile/new_question_login.html:38 kitsune/sumo/templates/mobile/base.html:85 kitsune/users/templates/users/mobile/login.html:7
 #: kitsune/users/templates/users/mobile/includes/macros.html:19
 msgid "Sign in"
 msgstr "Войти"
@@ -584,7 +593,7 @@ msgstr "Нет недавних вкладов"
 
 #: kitsune/customercare/templates/customercare/reply_modal.html:1 kitsune/customercare/templates/customercare/tweets.html:18 kitsune/kbforums/templates/kbforums/includes/post.html:38
 #: kitsune/messages/templates/messages/read.html:19 kitsune/messages/templates/messages/mobile/read.html:14 kitsune/messages/templates/messages/mobile/read.html:21
-#: kitsune/questions/templates/questions/includes/answer.html:76 kitsune/questions/templates/questions/mobile/answers.html:36 kitsune/questions/templates/questions/mobile/answers.html:115
+#: kitsune/questions/templates/questions/includes/answer.html:77 kitsune/questions/templates/questions/mobile/answers.html:36 kitsune/questions/templates/questions/mobile/answers.html:115
 msgid "Reply"
 msgstr "Ответить"
 
@@ -704,140 +713,140 @@ msgstr "Процент локализации: Всё"
 msgid "Monthly Active Contributors"
 msgstr "Активные помощники за месяц"
 
-#: kitsune/dashboards/readouts.py:67
+#: kitsune/dashboards/readouts.py:69
 msgid "Review Needed"
 msgstr "Требуется рецензия"
 
-#: kitsune/dashboards/readouts.py:71
+#: kitsune/dashboards/readouts.py:73
 msgid "Update Needed"
 msgstr "Требуется обновление"
 
-#: kitsune/dashboards/readouts.py:73
+#: kitsune/dashboards/readouts.py:75
 msgid "Immediate Update Needed"
 msgstr "Требуется немедленное обновление"
 
-#: kitsune/dashboards/readouts.py:163
+#: kitsune/dashboards/readouts.py:165
 msgid "Translation Needed"
 msgstr "Требуется перевод"
 
-#: kitsune/dashboards/readouts.py:275
+#: kitsune/dashboards/readouts.py:281
 msgid "Most-Visited Articles"
 msgstr "Наиболее часто посещаемые статьи"
 
-#: kitsune/dashboards/readouts.py:279
+#: kitsune/dashboards/readouts.py:285
 msgid "These are the top 20 most visited articles, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "Это 20 наиболее посещаемых статей, которые в сумме отвечают за более чем 50% трафика в базе знаний."
 
-#: kitsune/dashboards/readouts.py:283 kitsune/dashboards/readouts.py:552 kitsune/dashboards/readouts.py:624 kitsune/dashboards/readouts.py:625 kitsune/wiki/config.py:200
+#: kitsune/dashboards/readouts.py:289 kitsune/dashboards/readouts.py:558 kitsune/dashboards/readouts.py:631 kitsune/dashboards/readouts.py:632 kitsune/wiki/config.py:200
 msgid "Templates"
 msgstr "Шаблоны"
 
-#: kitsune/dashboards/readouts.py:287
+#: kitsune/dashboards/readouts.py:293
 msgid "Templates are a way of reusing pieces of content across KB articles. You can create and update a set of instructions in one place, and then refer to it in other pages."
 msgstr ""
 "Шаблоны представляют собой способ повторного использования кусков содержимого в статьях базы знаний. Вы можете создавать и обновлять набор инструкций в одном месте, а затем ссылаться на него в "
 "других страницах."
 
-#: kitsune/dashboards/readouts.py:292 kitsune/dashboards/readouts.py:688 kitsune/dashboards/readouts.py:689
+#: kitsune/dashboards/readouts.py:298 kitsune/dashboards/readouts.py:695 kitsune/dashboards/readouts.py:696
 msgid "Navigation Articles"
 msgstr "Статьи по навигации"
 
-#: kitsune/dashboards/readouts.py:296
+#: kitsune/dashboards/readouts.py:302
 msgid "How many of the approved navigation articles which allow translations have an approved translation into this language"
 msgstr "Сколько одобренных статей по навигации, которые можно перевести, имеют одобренные переводы на этот язык"
 
-#: kitsune/dashboards/readouts.py:300
+#: kitsune/dashboards/readouts.py:306
 msgid "All Knowledge Base Articles"
 msgstr "Все статьи базы знаний"
 
-#: kitsune/dashboards/readouts.py:303
+#: kitsune/dashboards/readouts.py:309
 msgid "This is the number of all Knowledge Base articles that are ready to be localized."
 msgstr "Это число всех статей Базы Знаний, готовых для локализации."
 
-#: kitsune/dashboards/readouts.py:318
+#: kitsune/dashboards/readouts.py:324
 msgid "Visits in last 30 days"
 msgstr "Посещений за последние 30 дней"
 
-#: kitsune/dashboards/readouts.py:319 kitsune/wiki/templates/wiki/includes/revision_list.html:23
+#: kitsune/dashboards/readouts.py:325 kitsune/wiki/templates/wiki/includes/revision_list.html:23
 msgid "Status"
 msgstr "Статус"
 
-#: kitsune/dashboards/readouts.py:320 kitsune/dashboards/readouts.py:1107
+#: kitsune/dashboards/readouts.py:326 kitsune/dashboards/readouts.py:1114
 msgid "Most Viewed"
 msgstr "Чаще всего просмотренные"
 
-#: kitsune/dashboards/readouts.py:425 kitsune/dashboards/readouts.py:582
+#: kitsune/dashboards/readouts.py:431 kitsune/dashboards/readouts.py:588
 msgid "Most Visited"
 msgstr "Чаще всего посещённые"
 
-#: kitsune/dashboards/readouts.py:427
+#: kitsune/dashboards/readouts.py:433
 msgid "All knowledge base articles..."
 msgstr "Все статьи базы знаний..."
 
-#: kitsune/dashboards/readouts.py:429 kitsune/dashboards/readouts.py:492
+#: kitsune/dashboards/readouts.py:435 kitsune/dashboards/readouts.py:498
 msgid "Visits"
 msgstr "Посещений"
 
-#: kitsune/dashboards/readouts.py:533
+#: kitsune/dashboards/readouts.py:539
 msgid "Changes Needed"
 msgstr "Требуются изменения"
 
-#: kitsune/dashboards/readouts.py:536 kitsune/dashboards/readouts.py:1032
+#: kitsune/dashboards/readouts.py:542 kitsune/dashboards/readouts.py:1039
 msgid "Changes Not Ready For Localization"
 msgstr "Изменения, не готовые для локализации"
 
-#: kitsune/dashboards/readouts.py:554 kitsune/dashboards/readouts.py:627
+#: kitsune/dashboards/readouts.py:560 kitsune/dashboards/readouts.py:634
 msgid "All templates..."
 msgstr "Все шаблоны..."
 
-#: kitsune/dashboards/readouts.py:559
+#: kitsune/dashboards/readouts.py:565
 msgid "How To Contribute"
 msgstr "Как помочь"
 
-#: kitsune/dashboards/readouts.py:561
+#: kitsune/dashboards/readouts.py:567
 msgid "All How To Contribute articles..."
 msgstr "Все статьи нуждающиеся в помощи..."
 
-#: kitsune/dashboards/readouts.py:566 kitsune/wiki/config.py:198
+#: kitsune/dashboards/readouts.py:572 kitsune/wiki/config.py:198
 msgid "Administration"
 msgstr "Администрация"
 
-#: kitsune/dashboards/readouts.py:568
+#: kitsune/dashboards/readouts.py:574
 msgid "All Administration articles..."
 msgstr "Все административные статьи..."
 
-#: kitsune/dashboards/readouts.py:584
+#: kitsune/dashboards/readouts.py:590
 msgid "All translations..."
 msgstr "Все переводы..."
 
-#: kitsune/dashboards/readouts.py:691
+#: kitsune/dashboards/readouts.py:698
 msgid "All navigation articles..."
 msgstr "Все статьи по навигации..."
 
-#: kitsune/dashboards/readouts.py:736 kitsune/dashboards/readouts.py:741
+#: kitsune/dashboards/readouts.py:743 kitsune/dashboards/readouts.py:748
 msgid "Untranslated"
 msgstr "Непереведено"
 
-#: kitsune/dashboards/readouts.py:737
+#: kitsune/dashboards/readouts.py:744
 msgid ""
 "This indicates there are no approved translations of these articles. Some of the articles may have proposed translations waiting to be reviewed and will appear in the Unreviewed Changes section as "
 "well."
 msgstr ""
 "Это означает, что одобренных переводов этих статей не существует. Некоторые из статей могут иметь предложения переводов, ожидающих проверки, и они также появятся в разделе Непроверенные Изменения."
 
-#: kitsune/dashboards/readouts.py:742
+#: kitsune/dashboards/readouts.py:749
 msgid "All untranslated articles..."
 msgstr "Все непереведённые статьи..."
 
-#: kitsune/dashboards/readouts.py:744
+#: kitsune/dashboards/readouts.py:751
 msgid "Updated"
 msgstr "Обновлено"
 
-#: kitsune/dashboards/readouts.py:803 kitsune/dashboards/readouts.py:809
+#: kitsune/dashboards/readouts.py:810 kitsune/dashboards/readouts.py:816
 msgid "Immediate Updates Needed"
 msgstr "Требуются немедленные обновления"
 
-#: kitsune/dashboards/readouts.py:804
+#: kitsune/dashboards/readouts.py:811
 msgid ""
 "This indicates a major edit which changes the content of the article enough to hurt the value of the localization. Until it is updated, the localized page will warn users that it may be outdated. "
 "You should update these articles as soon as possible."
@@ -845,19 +854,19 @@ msgstr ""
 "Это обозначает серьёзную правку, которая так сильно меняет содержание статьи, что её текущий перевод становится более-менее бесполезным. Пока перевод не будет обновлён, локализованная страница "
 "будет предупреждать пользователей, что она может быть устаревшей. Вы должны как можно скорее обновить эти статьи."
 
-#: kitsune/dashboards/readouts.py:810
+#: kitsune/dashboards/readouts.py:817
 msgid "All translations needing immediate updates..."
 msgstr "Все переводы требующие немедленных обновлений..."
 
-#: kitsune/dashboards/readouts.py:812
+#: kitsune/dashboards/readouts.py:819
 msgid "Out of date since"
 msgstr "Устарело с"
 
-#: kitsune/dashboards/readouts.py:908 kitsune/dashboards/readouts.py:914
+#: kitsune/dashboards/readouts.py:915 kitsune/dashboards/readouts.py:921
 msgid "Updates Needed"
 msgstr "Требуются обновления"
 
-#: kitsune/dashboards/readouts.py:909
+#: kitsune/dashboards/readouts.py:916
 msgid ""
 "This signifies an edit that doesn't diminish the value of the localized article: for example, rewording a paragraph. Localizers are notified of this edit, but no warning is shown on the localized "
 "page. You should update these articles soon."
@@ -865,87 +874,87 @@ msgstr ""
 "Это обозначает правку, которая не умаляет значимость локализованной статьи: например, переформулировка параграфа. Локализаторы извещаются об этой правке, но на локализованной странице никаких "
 "предупреждений не появляется. Вам следует обновить эти статьи при первой возможности."
 
-#: kitsune/dashboards/readouts.py:915
+#: kitsune/dashboards/readouts.py:922
 msgid "All translations needing updates..."
 msgstr "Все переводы требующие обновлений..."
 
 #. L10n: Not just changes to translations but also unreviewed changes to
 #. docs in this locale that are not translations
-#: kitsune/dashboards/readouts.py:924
+#: kitsune/dashboards/readouts.py:931
 msgid "Unreviewed Changes"
 msgstr "Неотрецензированные изменения"
 
-#: kitsune/dashboards/readouts.py:926
+#: kitsune/dashboards/readouts.py:933
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "Неотрецензирован"
 
-#: kitsune/dashboards/readouts.py:927
+#: kitsune/dashboards/readouts.py:934
 msgid "All articles requiring review..."
 msgstr "Все статьи, требующие рецензии..."
 
-#: kitsune/dashboards/readouts.py:929
+#: kitsune/dashboards/readouts.py:936
 msgid "Changed"
 msgstr "Изменено"
 
-#: kitsune/dashboards/readouts.py:985
+#: kitsune/dashboards/readouts.py:992
 msgid "Unhelpful Documents"
 msgstr "Бесполезные документы"
 
-#: kitsune/dashboards/readouts.py:987
+#: kitsune/dashboards/readouts.py:994
 msgctxt "document"
 msgid "Unhelpful"
 msgstr "Бесполезно"
 
-#: kitsune/dashboards/readouts.py:988
+#: kitsune/dashboards/readouts.py:995
 msgid "All unhelpful articles..."
 msgstr "Все бесполезные статьи..."
 
-#: kitsune/dashboards/readouts.py:990
+#: kitsune/dashboards/readouts.py:997
 msgid "Total Votes"
 msgstr "Всего голосов"
 
-#: kitsune/dashboards/readouts.py:991
+#: kitsune/dashboards/readouts.py:998
 msgid "Helpfulness"
 msgstr "Полезность"
 
-#: kitsune/dashboards/readouts.py:1033
+#: kitsune/dashboards/readouts.py:1040
 msgid "Articles which have approved revisions newer than the latest ready-for-localization one"
 msgstr "Статьи, в которых одобренные ревизии новее последних готовых-для-локализации"
 
-#: kitsune/dashboards/readouts.py:1036
+#: kitsune/dashboards/readouts.py:1043
 msgid "All articles with changes not ready for localization..."
 msgstr "Все статьи с изменениями, не готовыми для локализации..."
 
-#: kitsune/dashboards/readouts.py:1039 kitsune/dashboards/templates/dashboards/includes/macros.html:139 kitsune/wiki/templates/wiki/includes/revision_list.html:59
+#: kitsune/dashboards/readouts.py:1046 kitsune/dashboards/templates/dashboards/includes/macros.html:139 kitsune/wiki/templates/wiki/includes/revision_list.html:59
 msgid "Approved"
 msgstr "Одобрено"
 
-#: kitsune/dashboards/readouts.py:1101
+#: kitsune/dashboards/readouts.py:1108
 msgid "Need Changes"
 msgstr "Требует изменений"
 
-#: kitsune/dashboards/readouts.py:1102
+#: kitsune/dashboards/readouts.py:1109
 msgid "Articles that require changes."
 msgstr "Статьи, требующие изменений."
 
-#: kitsune/dashboards/readouts.py:1104
+#: kitsune/dashboards/readouts.py:1111
 msgid "All articles that require changes..."
 msgstr "Все статьи, требующие изменений..."
 
-#: kitsune/dashboards/readouts.py:1106 kitsune/wiki/templates/wiki/includes/recent_revisions_fragment.html:45 kitsune/wiki/templates/wiki/includes/revision_list.html:29
+#: kitsune/dashboards/readouts.py:1113 kitsune/wiki/templates/wiki/includes/recent_revisions_fragment.html:45 kitsune/wiki/templates/wiki/includes/revision_list.html:29
 msgid "Comment"
 msgstr "Комментарий"
 
-#: kitsune/dashboards/readouts.py:1153 kitsune/wiki/config.py:201
+#: kitsune/dashboards/readouts.py:1160 kitsune/wiki/config.py:201
 msgid "Canned Responses"
 msgstr "Типовые ответы"
 
-#: kitsune/dashboards/readouts.py:1154
+#: kitsune/dashboards/readouts.py:1161
 msgid "Localization status of all canned responses"
 msgstr "Статус локализации всех типовых ответов"
 
-#: kitsune/dashboards/readouts.py:1156
+#: kitsune/dashboards/readouts.py:1163
 msgid "All canned responses articles..."
 msgstr "Все статьи с типовыми ответами..."
 
@@ -1072,16 +1081,16 @@ msgstr "Ждёт проверки"
 msgid "Ready for localization"
 msgstr "Готово для локализации"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:149 kitsune/search/templates/search/results.html:63 kitsune/search/templates/search/results.html:85
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:149 kitsune/search/views.py:485 kitsune/search/templates/search/results.html:63
 msgid "All Products"
 msgstr "Все продукты"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:152 kitsune/products/templates/products/documents.html:4 kitsune/products/templates/products/documents.html:12
-#: kitsune/products/templates/products/documents.html:19 kitsune/products/templates/products/product.html:4 kitsune/products/templates/products/product.html:9
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:152 kitsune/products/templates/products/documents.html:3 kitsune/products/templates/products/documents.html:11
+#: kitsune/products/templates/products/documents.html:18 kitsune/products/templates/products/product.html:4 kitsune/products/templates/products/product.html:9
 #: kitsune/products/templates/products/product.html:16 kitsune/products/templates/products/includes/product_macros.html:12 kitsune/products/templates/products/mobile/documents.html:10
 #: kitsune/products/templates/products/mobile/documents.html:27 kitsune/products/templates/products/mobile/product.html:3 kitsune/products/templates/products/mobile/product.html:8
-#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/mobile/questions.html:36 kitsune/search/templates/search/results.html:69
-#: kitsune/search/templates/search/results.html:83 kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
+#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/answers.html:192 kitsune/questions/templates/questions/mobile/questions.html:36
+#: kitsune/search/views.py:482 kitsune/search/templates/search/results.html:69 kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
 msgctxt "DB: products.Product.title"
 msgid "None"
 msgstr "Нет"
@@ -1090,12 +1099,12 @@ msgstr "Нет"
 msgid "All Topics"
 msgstr "Все темы"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:165 kitsune/landings/templates/landings/hot.html:3 kitsune/products/templates/products/documents.html:6
-#: kitsune/products/templates/products/documents.html:8 kitsune/products/templates/products/documents.html:12 kitsune/products/templates/products/documents.html:32
-#: kitsune/products/templates/products/documents.html:40 kitsune/products/templates/products/documents.html:50 kitsune/products/templates/products/includes/topic_macros.html:7
-#: kitsune/products/templates/products/includes/topic_macros.html:15 kitsune/products/templates/products/mobile/documents.html:6 kitsune/products/templates/products/mobile/documents.html:8
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:165 kitsune/products/templates/products/documents.html:5 kitsune/products/templates/products/documents.html:7
+#: kitsune/products/templates/products/documents.html:11 kitsune/products/templates/products/documents.html:31 kitsune/products/templates/products/documents.html:39
+#: kitsune/products/templates/products/documents.html:49 kitsune/products/templates/products/includes/topic_macros.html:70 kitsune/products/templates/products/includes/topic_macros.html:93
+#: kitsune/products/templates/products/includes/topic_macros.html:101 kitsune/products/templates/products/mobile/documents.html:6 kitsune/products/templates/products/mobile/documents.html:8
 #: kitsune/products/templates/products/mobile/documents.html:21 kitsune/products/templates/products/mobile/documents.html:38 kitsune/products/templates/products/mobile/product.html:65
-#: kitsune/topics/templates/topics/includes/topic_macros.html:70 kitsune/topics/templates/topics/includes/topic_macros.html:93
+#: kitsune/questions/templates/questions/answers.html:208
 msgctxt "DB: products.Topic.title"
 msgid "None"
 msgstr "Нет"
@@ -1349,11 +1358,11 @@ msgstr "Удалить видео | {t} | Медиа-галерея"
 msgid "Media Gallery"
 msgstr "Медиа-галерея"
 
-#: kitsune/gallery/templates/gallery/confirm_media_delete.html:52 kitsune/gallery/templates/gallery/media.html:55
+#: kitsune/gallery/templates/gallery/confirm_media_delete.html:52
 msgid "by {user}"
 msgstr "от {user}"
 
-#: kitsune/gallery/templates/gallery/confirm_media_delete.html:53 kitsune/gallery/templates/gallery/media.html:56
+#: kitsune/gallery/templates/gallery/confirm_media_delete.html:53 kitsune/gallery/templates/gallery/media.html:60
 msgid "Uploaded {date}"
 msgstr "Загружено {date}"
 
@@ -1431,6 +1440,11 @@ msgstr "Удалить это изображение"
 #: kitsune/gallery/templates/gallery/media.html:12
 msgid "Edit this image"
 msgstr "Изменить это изображение"
+
+#: kitsune/gallery/templates/gallery/media.html:56
+#, fuzzy
+msgid "by <a href=\"{profile_url}\">{user}</a>"
+msgstr "от  <a class=\"username\" href=\"{profile_url}\">{username}</a>"
 
 #: kitsune/gallery/templates/gallery/search.html:2
 msgid "Media Gallery Search"
@@ -1936,11 +1950,11 @@ msgstr "О нет! Похоже что тут нет ни одного сооб�
 msgid "Post a reply"
 msgstr "Написать ответ"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:377 kitsune/questions/templates/questions/mobile/answers.html:44
+#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:376 kitsune/questions/templates/questions/mobile/answers.html:44
 msgid "Post Reply"
 msgstr "Написать ответ"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:378 kitsune/questions/templates/questions/edit_answer.html:53
+#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:377 kitsune/questions/templates/questions/edit_answer.html:53
 msgid "Preview Reply"
 msgstr "Предпросмотр ответа"
 
@@ -2004,11 +2018,11 @@ msgstr "На этом форуме обсуждается, как улучшит
 msgid "If you need help with Firefox, please <a href=\"%(aaq_url)s\">ask a question</a>."
 msgstr "Если вам нужна помощь с Firefox, пожалуйста, <a href=\"%(aaq_url)s\">задайте вопрос</a>."
 
-#: kitsune/kbforums/templates/kbforums/includes/post.html:12 kitsune/questions/templates/questions/answers.html:149 kitsune/questions/templates/questions/includes/answer.html:114
+#: kitsune/kbforums/templates/kbforums/includes/post.html:12 kitsune/questions/templates/questions/answers.html:149 kitsune/questions/templates/questions/includes/answer.html:115
 msgid "Edit this post"
 msgstr "Правка этого сообщения"
 
-#: kitsune/kbforums/templates/kbforums/includes/post.html:15 kitsune/questions/templates/questions/answers.html:154 kitsune/questions/templates/questions/includes/answer.html:119
+#: kitsune/kbforums/templates/kbforums/includes/post.html:15 kitsune/questions/templates/questions/answers.html:154 kitsune/questions/templates/questions/includes/answer.html:120
 msgid "Delete this post"
 msgstr "Удалить этот пост"
 
@@ -2215,65 +2229,48 @@ msgstr ""
 msgid "It's fun and addictive and the Awesome is you!"
 msgstr "Это весело и захватывающе и вы просто великолепны!"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:31 kitsune/landings/templates/landings/get-involved-kb.html:27 kitsune/landings/templates/landings/get-involved-l10n.html:26
-#: kitsune/landings/templates/landings/get-involved-questions.html:27 kitsune/landings/templates/landings/get-involved.html:80 kitsune/landings/templates/landings/get-involved.html:83
-#: kitsune/landings/templates/landings/mobile/get-involved-aoa.html:70 kitsune/landings/templates/landings/mobile/get-involved-kb.html:69
-#: kitsune/landings/templates/landings/mobile/get-involved-l10n.html:64 kitsune/landings/templates/landings/mobile/get-involved-questions.html:76
-#: kitsune/landings/templates/landings/mobile/get-involved.html:77 kitsune/landings/templates/landings/mobile/get-involved.html:81
-msgid "Sign me up"
-msgstr "Подписать меня"
-
-#: kitsune/landings/templates/landings/get-involved-aoa.html:32 kitsune/landings/templates/landings/get-involved-kb.html:28 kitsune/landings/templates/landings/get-involved-kb.html:39
-#: kitsune/landings/templates/landings/get-involved-l10n.html:27 kitsune/landings/templates/landings/get-involved-l10n.html:38 kitsune/landings/templates/landings/get-involved-questions.html:28
-#: kitsune/landings/templates/landings/get-involved-questions.html:40 kitsune/landings/templates/landings/get-involved.html:85 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:68
-#: kitsune/landings/templates/landings/mobile/get-involved-kb.html:32 kitsune/landings/templates/landings/mobile/get-involved-kb.html:67
-#: kitsune/landings/templates/landings/mobile/get-involved-l10n.html:62 kitsune/landings/templates/landings/mobile/get-involved-questions.html:31
-#: kitsune/landings/templates/landings/mobile/get-involved-questions.html:74 kitsune/landings/templates/landings/mobile/get-involved.html:72
-msgid "Sign up as a volunteer"
-msgstr "Войти как доброволец"
-
-#: kitsune/landings/templates/landings/get-involved-aoa.html:39 kitsune/landings/templates/landings/get-involved-kb.html:35 kitsune/landings/templates/landings/get-involved-l10n.html:34
-#: kitsune/landings/templates/landings/get-involved-questions.html:35 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:32
+#: kitsune/landings/templates/landings/get-involved-aoa.html:32 kitsune/landings/templates/landings/get-involved-kb.html:28 kitsune/landings/templates/landings/get-involved-l10n.html:27
+#: kitsune/landings/templates/landings/get-involved-questions.html:28 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:32
 #: kitsune/landings/templates/landings/mobile/get-involved-kb.html:28 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:27
 #: kitsune/landings/templates/landings/mobile/get-involved-questions.html:28
 msgid "How it works"
 msgstr "Как это работает"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:43 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:36
+#: kitsune/landings/templates/landings/get-involved-aoa.html:36 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:36
 #: kitsune/landings/templates/landings/mobile/get-involved-l10n.html:31
 msgid "Go to Army of Awesome"
 msgstr "Вступайте в ряды наших помощников"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:46 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:39
+#: kitsune/landings/templates/landings/get-involved-aoa.html:39 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:39
 msgid "Connect your Twitter account"
 msgstr "Подсоединить мою учётную запись Твиттер"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:50 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:41
+#: kitsune/landings/templates/landings/get-involved-aoa.html:43 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:41
 msgid "Answer to Twitter users that need help. It's super easy with our canned responses."
 msgstr "Отвечайте на твиты пользователей, которым нужна помощь. Это очень легко с помощью наших типовых ответов."
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:58
+#: kitsune/landings/templates/landings/get-involved-aoa.html:51
 msgid "1 tweet can save 1 day"
 msgstr "1 твит может спасти 1 день"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:64 kitsune/landings/templates/landings/get-involved-kb.html:63 kitsune/landings/templates/landings/get-involved-l10n.html:58
-#: kitsune/landings/templates/landings/get-involved-questions.html:74
+#: kitsune/landings/templates/landings/get-involved-aoa.html:57 kitsune/landings/templates/landings/get-involved-kb.html:56 kitsune/landings/templates/landings/get-involved-l10n.html:51
+#: kitsune/landings/templates/landings/get-involved-questions.html:67
 msgid "Other ways to get involved"
 msgstr "Другие способы принять участие"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:69 kitsune/landings/templates/landings/get-involved-kb.html:74 kitsune/landings/templates/landings/get-involved-l10n.html:69
+#: kitsune/landings/templates/landings/get-involved-aoa.html:62 kitsune/landings/templates/landings/get-involved-kb.html:67 kitsune/landings/templates/landings/get-involved-l10n.html:62
 #: kitsune/landings/templates/landings/get-involved.html:55 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:53 kitsune/landings/templates/landings/mobile/get-involved-kb.html:57
 #: kitsune/landings/templates/landings/mobile/get-involved-l10n.html:52 kitsune/landings/templates/landings/mobile/get-involved.html:56
 msgid "Answer questions in the support forum"
 msgstr "Ответить на вопросы на форуме поддержки"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:75 kitsune/landings/templates/landings/get-involved-l10n.html:75 kitsune/landings/templates/landings/get-involved-questions.html:85
+#: kitsune/landings/templates/landings/get-involved-aoa.html:68 kitsune/landings/templates/landings/get-involved-l10n.html:68 kitsune/landings/templates/landings/get-involved-questions.html:78
 #: kitsune/landings/templates/landings/get-involved.html:61 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:58 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:57
 #: kitsune/landings/templates/landings/mobile/get-involved-questions.html:64 kitsune/landings/templates/landings/mobile/get-involved.html:61
 msgid "Write help articles"
 msgstr "Написать статьи Справки"
 
-#: kitsune/landings/templates/landings/get-involved-aoa.html:81 kitsune/landings/templates/landings/get-involved-kb.html:80 kitsune/landings/templates/landings/get-involved-questions.html:91
+#: kitsune/landings/templates/landings/get-involved-aoa.html:74 kitsune/landings/templates/landings/get-involved-kb.html:73 kitsune/landings/templates/landings/get-involved-questions.html:84
 #: kitsune/landings/templates/landings/get-involved.html:67 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:63 kitsune/landings/templates/landings/mobile/get-involved-kb.html:62
 #: kitsune/landings/templates/landings/mobile/get-involved-questions.html:69 kitsune/landings/templates/landings/mobile/get-involved.html:66
 msgid "Translate help to your languages"
@@ -2299,19 +2296,27 @@ msgstr ""
 "Если вы нравится писать и обучать, то База Знаний для вас. Нам нужны помощники, которые могут писать, редактировать или вычитывать статьи. Каждую неделю тысячи людей обращаются к нашей базе знаний. "
 "Представьте себе, скольким из них вы поможете!"
 
-#: kitsune/landings/templates/landings/get-involved-kb.html:44 kitsune/landings/templates/landings/mobile/get-involved-kb.html:37
+#: kitsune/landings/templates/landings/get-involved-kb.html:32 kitsune/landings/templates/landings/get-involved-l10n.html:31 kitsune/landings/templates/landings/get-involved-questions.html:33
+#: kitsune/landings/templates/landings/includes/register_contributor.html:22 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:68
+#: kitsune/landings/templates/landings/mobile/get-involved-kb.html:32 kitsune/landings/templates/landings/mobile/get-involved-kb.html:67
+#: kitsune/landings/templates/landings/mobile/get-involved-l10n.html:62 kitsune/landings/templates/landings/mobile/get-involved-questions.html:31
+#: kitsune/landings/templates/landings/mobile/get-involved-questions.html:74 kitsune/landings/templates/landings/mobile/get-involved.html:72
+msgid "Sign up as a volunteer"
+msgstr "Войти как доброволец"
+
+#: kitsune/landings/templates/landings/get-involved-kb.html:37 kitsune/landings/templates/landings/mobile/get-involved-kb.html:37
 msgid "Introduce yourself"
 msgstr "Представьтесь"
 
-#: kitsune/landings/templates/landings/get-involved-kb.html:51 kitsune/landings/templates/landings/mobile/get-involved-kb.html:42
+#: kitsune/landings/templates/landings/get-involved-kb.html:44 kitsune/landings/templates/landings/mobile/get-involved-kb.html:42
 msgid "Watch our videos and check our documentation"
 msgstr "Смотрите наши видео и обратитесь к нашей документации"
 
-#: kitsune/landings/templates/landings/get-involved-kb.html:57
+#: kitsune/landings/templates/landings/get-involved-kb.html:50
 msgid "1 article can be viewed by 400 million users and translated into 70+ languages"
 msgstr "1 статья может быть просмотрена 400 миллионами пользователей и переведена на более чем 70 языков"
 
-#: kitsune/landings/templates/landings/get-involved-kb.html:68 kitsune/landings/templates/landings/get-involved-l10n.html:63 kitsune/landings/templates/landings/get-involved-questions.html:79
+#: kitsune/landings/templates/landings/get-involved-kb.html:61 kitsune/landings/templates/landings/get-involved-l10n.html:56 kitsune/landings/templates/landings/get-involved-questions.html:72
 #: kitsune/landings/templates/landings/get-involved.html:49 kitsune/landings/templates/landings/mobile/get-involved-kb.html:52 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:47
 #: kitsune/landings/templates/landings/mobile/get-involved-questions.html:59 kitsune/landings/templates/landings/mobile/get-involved.html:51
 msgid "Army of Awesome: help users on Twitter"
@@ -2335,15 +2340,15 @@ msgstr ""
 "Статьи справки ещё не доступны на вашем языке? Вы хотите, переводя их, присоединиться к удивительной команде? Вы поможете миллионам пользователей, говорящих на вашем языке. Довольно героично, не "
 "так ли?"
 
-#: kitsune/landings/templates/landings/get-involved-l10n.html:43 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:36
+#: kitsune/landings/templates/landings/get-involved-l10n.html:36 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:36
 msgid "Check our documentation"
 msgstr "Обратитесь к нашей документации"
 
-#: kitsune/landings/templates/landings/get-involved-l10n.html:48 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:39
+#: kitsune/landings/templates/landings/get-involved-l10n.html:41 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:39
 msgid "Just edit articles in your language!"
 msgstr "Просто редактируйте статьи на вашем языке!"
 
-#: kitsune/landings/templates/landings/get-involved-l10n.html:52
+#: kitsune/landings/templates/landings/get-involved-l10n.html:45
 msgid "Translating 1 article can help 1,000's of users in your language"
 msgstr "Перевод 1 статьи может помочь тысячам пользователей говорящим на вашем языке"
 
@@ -2364,19 +2369,19 @@ msgstr ""
 "От хардкорных веб-разработчиков до новичков спрашивающих «как мне установить Firefox»  - каждый на форуме нуждается в вашей помощи! Поделитесь своими знаниями о Firefox, указывая людям на "
 "правильные статьи и пошагово решая их проблемы."
 
-#: kitsune/landings/templates/landings/get-involved-questions.html:50 kitsune/landings/templates/landings/mobile/get-involved-questions.html:39
+#: kitsune/landings/templates/landings/get-involved-questions.html:43 kitsune/landings/templates/landings/mobile/get-involved-questions.html:39
 msgid "Go to our support forum and choose a question to answer"
 msgstr "Перейдите на наш форум поддержки и выберите вопрос для ответа"
 
-#: kitsune/landings/templates/landings/get-involved-questions.html:60 kitsune/landings/templates/landings/mobile/get-involved-questions.html:47
+#: kitsune/landings/templates/landings/get-involved-questions.html:53 kitsune/landings/templates/landings/mobile/get-involved-questions.html:47
 msgid "Start answering!"
 msgstr "Начните отвечать!"
 
-#: kitsune/landings/templates/landings/get-involved-questions.html:62 kitsune/landings/templates/landings/mobile/get-involved-questions.html:49
+#: kitsune/landings/templates/landings/get-involved-questions.html:55 kitsune/landings/templates/landings/mobile/get-involved-questions.html:49
 msgid "Read this for some help to get started"
 msgstr "Прочтите это, чтобы помочь себе начать работу"
 
-#: kitsune/landings/templates/landings/get-involved-questions.html:68
+#: kitsune/landings/templates/landings/get-involved-questions.html:61
 msgid "Solving 1 issue helps up to 1,000 users a day"
 msgstr "Решение 1 проблемы помогает до 1000 пользователей в день"
 
@@ -2434,11 +2439,13 @@ msgstr "Ящик для предложений"
 msgid "Your input helps make Mozilla better. <a href=\"%(url)s\"> Give us your feedback </a>"
 msgstr "Ваше мнение помогает нам сделать Mozilla лучше. <a href=\"%(url)s\"> Отправьте нам свой отзыв </a>"
 
-#: kitsune/landings/templates/landings/hot.html:23 kitsune/products/templates/products/documents.html:64 kitsune/products/templates/products/mobile/documents.html:51
-#: kitsune/products/templates/products/mobile/product.html:36 kitsune/products/templates/products/mobile/product.html:48 kitsune/topics/templates/topics/includes/topic_macros.html:27
-#: kitsune/topics/templates/topics/includes/topic_macros.html:48
-msgid "In English"
-msgstr "На английском"
+#: kitsune/landings/templates/landings/includes/register_contributor.html:9 kitsune/landings/templates/landings/includes/register_contributor.html:17
+#: kitsune/landings/templates/landings/includes/register_contributor.html:19 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:70
+#: kitsune/landings/templates/landings/mobile/get-involved-kb.html:69 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:64
+#: kitsune/landings/templates/landings/mobile/get-involved-questions.html:76 kitsune/landings/templates/landings/mobile/get-involved.html:77
+#: kitsune/landings/templates/landings/mobile/get-involved.html:81
+msgid "Sign me up"
+msgstr "Подписать меня"
 
 #: kitsune/landings/templates/landings/mobile/get-involved.html:3 kitsune/sumo/templates/mobile/base.html:67
 msgid "Help other users"
@@ -2593,10 +2600,15 @@ msgstr "Отправить сообщение"
 msgid "From:"
 msgstr "От:"
 
-#: kitsune/products/templates/products/documents.html:12 kitsune/products/templates/products/product.html:9 kitsune/products/templates/products/mobile/documents.html:10
+#: kitsune/products/templates/products/documents.html:11 kitsune/products/templates/products/product.html:9 kitsune/products/templates/products/mobile/documents.html:10
 #: kitsune/products/templates/products/mobile/product.html:8 kitsune/wiki/templates/wiki/document.html:11
 msgid "{product} Help"
 msgstr "Справка {product}"
+
+#: kitsune/products/templates/products/documents.html:63 kitsune/products/templates/products/includes/topic_macros.html:27 kitsune/products/templates/products/includes/topic_macros.html:48
+#: kitsune/products/templates/products/mobile/documents.html:51 kitsune/products/templates/products/mobile/product.html:36 kitsune/products/templates/products/mobile/product.html:48
+msgid "In English"
+msgstr "На английском"
 
 #: kitsune/products/templates/products/product.html:25
 msgid "Firefox"
@@ -2640,17 +2652,17 @@ msgstr "Нет"
 msgid "Email software for Windows, Mac and Linux"
 msgstr "Почтовая программа для Windows, Mac и Linux"
 
-#: kitsune/products/templates/products/mobile/documents.html:21 kitsune/products/templates/products/mobile/documents.html:27
-msgid "Back to:"
-msgstr "Вернуться к:"
-
-#: kitsune/products/templates/products/mobile/product.html:13 kitsune/topics/templates/topics/includes/topic_macros.html:4
+#: kitsune/products/templates/products/includes/topic_macros.html:4 kitsune/products/templates/products/mobile/product.html:13
 msgid "Hot Topics"
 msgstr "Горячие темы"
 
-#: kitsune/products/templates/products/mobile/product.html:72 kitsune/topics/templates/topics/includes/topic_macros.html:78
+#: kitsune/products/templates/products/includes/topic_macros.html:78 kitsune/products/templates/products/mobile/product.html:72
 msgid "Get community support"
 msgstr "Получить поддержку у сообщества"
+
+#: kitsune/products/templates/products/mobile/documents.html:21 kitsune/products/templates/products/mobile/documents.html:27
+msgid "Back to:"
+msgstr "Вернуться к:"
 
 #: kitsune/questions/events.py:32 kitsune/users/models.py:276 kitsune/users/models.py:322
 msgid "Please confirm your email address"
@@ -2734,7 +2746,7 @@ msgstr "Несколько раз в неделю"
 msgid "Every time Firefox opened"
 msgstr "Каждый раз при открытии Firefox"
 
-#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:265
+#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:264
 msgid "This started when..."
 msgstr "Это началось когда..."
 
@@ -3016,56 +3028,56 @@ msgstr "Thunderbird"
 msgid "or other Mozilla products"
 msgstr "или другие продукты Mozilla"
 
-#: kitsune/questions/views.py:75
+#: kitsune/questions/views.py:78
 msgid "That tag does not exist."
 msgstr "Этот тег не существует."
 
-#: kitsune/questions/views.py:76
+#: kitsune/questions/views.py:79
 msgid "Please provide a tag."
 msgstr "Пожалуйста, введите тег."
 
 #. L10n: This shouldn't happen unless people tamper with POST data.
-#: kitsune/questions/views.py:502
+#: kitsune/questions/views.py:561
 msgid "Request type not recognized."
 msgstr "Тип запроса не распознан."
 
-#: kitsune/questions/views.py:559
+#: kitsune/questions/views.py:618
 msgid "Done! Your question is now posted on the Mozilla community support forum."
 msgstr "Готово! Ваш вопрос сейчас размещен на форуме поддержки сообщества Mozilla."
 
-#: kitsune/questions/views.py:761
+#: kitsune/questions/views.py:820
 msgid "Thank you for choosing a solution!"
 msgstr "Спасибо за выбор решения!"
 
-#: kitsune/questions/views.py:786
+#: kitsune/questions/views.py:845
 msgid "The solution was undone successfully."
 msgstr "Решение было успешно отменено."
 
-#: kitsune/questions/views.py:857
+#: kitsune/questions/views.py:916
 msgid "Glad to hear it!"
 msgstr "Рады это слышать!"
 
-#: kitsune/questions/views.py:860 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
+#: kitsune/questions/views.py:919 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
 msgid "Sorry to hear that."
 msgstr "Нам жаль это слышать."
 
-#: kitsune/questions/views.py:881
+#: kitsune/questions/views.py:940
 msgid "You already voted on this reply."
 msgstr "Вы уже проголосовали по этому ответу."
 
-#: kitsune/questions/views.py:1101
+#: kitsune/questions/views.py:1160
 msgid "Could not send a message to that email address."
 msgstr "Не удалось отправить сообщение на этот адрес эл. почты."
 
-#: kitsune/questions/views.py:1106
+#: kitsune/questions/views.py:1165
 msgid "You will be notified of updates by email."
 msgstr "Вас будут уведомлять об обновлениях по эл. почте."
 
-#: kitsune/questions/views.py:1108
+#: kitsune/questions/views.py:1167
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "В ближайшее время вы должны получить письмо по эл. почте для подтверждения вашей подписки."
 
-#: kitsune/questions/views.py:1188
+#: kitsune/questions/views.py:1247
 msgid "There was an error submitting the ticket. Please try again later."
 msgstr "Ошибка при отправке тикета, пожалуйста, попробуйте позже."
 
@@ -3079,8 +3091,8 @@ msgstr "При подтверждении вашей подписки возни
 
 #: kitsune/questions/templates/questions/activate_watch.html:8 kitsune/questions/templates/questions/answers.html:11 kitsune/questions/templates/questions/answers.html:21
 #: kitsune/questions/templates/questions/confirm_answer_delete.html:4 kitsune/questions/templates/questions/confirm_question_delete.html:4 kitsune/questions/templates/questions/edit_answer.html:8
-#: kitsune/questions/templates/questions/edit_question.html:3 kitsune/questions/templates/questions/questions.html:5 kitsune/questions/templates/questions/questions.html:25
-#: kitsune/questions/templates/questions/stats.html:3 kitsune/questions/templates/questions/unsubscribe_watch.html:8 kitsune/questions/templates/questions/mobile/questions.html:7
+#: kitsune/questions/templates/questions/edit_question.html:3 kitsune/questions/templates/questions/metrics.html:3 kitsune/questions/templates/questions/questions.html:5
+#: kitsune/questions/templates/questions/questions.html:25 kitsune/questions/templates/questions/unsubscribe_watch.html:8 kitsune/questions/templates/questions/mobile/questions.html:7
 #: kitsune/sumo/templates/mobile/base.html:63
 msgid "Support Forum"
 msgstr "Форум поддержки"
@@ -3152,7 +3164,7 @@ msgstr "Последний ответ от {user}"
 msgid "Posted"
 msgstr "Размещено"
 
-#: kitsune/questions/templates/questions/answers.html:96 kitsune/questions/templates/questions/includes/answer.html:58
+#: kitsune/questions/templates/questions/answers.html:96 kitsune/questions/templates/questions/includes/answer.html:59
 msgid "Modified {datetime} by {name}"
 msgstr "Изменено {datetime} {name}"
 
@@ -3180,7 +3192,7 @@ msgstr "Перейти к ответу"
 msgid "I have this problem, too"
 msgstr "У меня тоже есть эта проблема"
 
-#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:354
+#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:353
 msgid "Post a Reply"
 msgstr "Написать ответ"
 
@@ -3216,64 +3228,69 @@ msgstr "Детали вопроса"
 msgid "Product"
 msgstr "Продукт"
 
-#: kitsune/questions/templates/questions/answers.html:208
+#: kitsune/questions/templates/questions/answers.html:207
 msgid "Topic"
 msgstr "Тема"
 
-#: kitsune/questions/templates/questions/answers.html:223
+#: kitsune/questions/templates/questions/answers.html:221
 msgid "System Details"
 msgstr "Сведения о системе"
 
-#: kitsune/questions/templates/questions/answers.html:236
+#: kitsune/questions/templates/questions/answers.html:234
 msgid "More system details"
 msgstr "Больше сведений о системе"
 
-#: kitsune/questions/templates/questions/answers.html:241
+#: kitsune/questions/templates/questions/answers.html:239
+#, fuzzy
+msgid "Edit details"
+msgstr "Изменить настройки"
+
+#: kitsune/questions/templates/questions/answers.html:240
 #, fuzzy
 msgid "Save changes"
 msgstr "Сохранить изображение"
 
-#: kitsune/questions/templates/questions/answers.html:250 kitsune/questions/templates/questions/answers.html:251
+#: kitsune/questions/templates/questions/answers.html:249 kitsune/questions/templates/questions/answers.html:250
 msgid "Additional System Details"
 msgstr "Дополнительные сведения о системе"
 
-#: kitsune/questions/templates/questions/answers.html:253
+#: kitsune/questions/templates/questions/answers.html:252
 msgid "Sites Affected"
 msgstr "Затронутые сайты"
 
-#: kitsune/questions/templates/questions/answers.html:257
+#: kitsune/questions/templates/questions/answers.html:256
 msgid "Crash ID"
 msgstr "ID падения"
 
-#: kitsune/questions/templates/questions/answers.html:261
+#: kitsune/questions/templates/questions/answers.html:260
 msgid "This happened"
 msgstr "Это случилось"
 
-#: kitsune/questions/templates/questions/answers.html:269
+#: kitsune/questions/templates/questions/answers.html:268
 msgid "Installed Plug-ins"
 msgstr "Установленные плагины"
 
-#: kitsune/questions/templates/questions/answers.html:276
+#: kitsune/questions/templates/questions/answers.html:275
 msgid "Close"
 msgstr "Закрыть"
 
-#: kitsune/questions/templates/questions/answers.html:282 kitsune/questions/templates/questions/questions.html:215 kitsune/search/forms.py:163
+#: kitsune/questions/templates/questions/answers.html:281 kitsune/questions/templates/questions/questions.html:215 kitsune/search/forms.py:163
 msgid "Tags"
 msgstr "Метки"
 
-#: kitsune/questions/templates/questions/answers.html:322 kitsune/tags/forms.py:121
+#: kitsune/questions/templates/questions/answers.html:321 kitsune/tags/forms.py:121
 msgid "Add"
 msgstr "Добавить"
 
-#: kitsune/questions/templates/questions/answers.html:349
+#: kitsune/questions/templates/questions/answers.html:348
 msgid "You have exceeded the number of answers that can be posted in a given amount of time. Please try again shortly."
 msgstr "Вы превысили лимит числа ответов, которые могут быть размещены за определённый отрезок времени. Пожалуйста, попробуйте чуть позже."
 
-#: kitsune/questions/templates/questions/answers.html:357
+#: kitsune/questions/templates/questions/answers.html:356
 msgid "You must <a href=\"{url}\">log in to your account</a> to reply to posts."
 msgstr "Чтобы ответить на сообщения вы должны <a href=\"{url}\">войти в свою учётную запись</a>."
 
-#: kitsune/questions/templates/questions/answers.html:360
+#: kitsune/questions/templates/questions/answers.html:359
 msgid "Don't have an account? You can <a href='{url}'>create a free account</a> now."
 msgstr "Нет учетной записи? Вы можете прямо сейчас <a href='{url}'>бесплатно создать учётную запись</a> ."
 
@@ -3413,6 +3430,26 @@ msgstr "О проблеме успешно написано"
 msgid "Your issue has been submitted successfully. You should receive a confirmation email and hear back from us shortly."
 msgstr "Ваш вопрос был успешно отправлен. Вскоре вы должны получить по эл. почте от нас подтверждение и ответ."
 
+#: kitsune/questions/templates/questions/metrics.html:2 kitsune/questions/templates/questions/metrics.html:9 kitsune/sumo/templates/includes/common_macros.html:142
+msgid "Support Forum Metrics"
+msgstr "Метрики форума поддержки"
+
+#: kitsune/questions/templates/questions/metrics.html:4
+msgid "Metrics"
+msgstr "Метрики"
+
+#: kitsune/questions/templates/questions/metrics.html:12 kitsune/wiki/forms.py:312
+msgid "Locale:"
+msgstr "Локаль:"
+
+#: kitsune/questions/templates/questions/metrics.html:43 kitsune/search/forms.py:76
+msgid "Topics"
+msgstr "Темы"
+
+#: kitsune/questions/templates/questions/metrics.html:65
+msgid "Data is temporarily unavailable, please try again in a few minutes."
+msgstr "Данные временно недоступны. Пожалуйста, попробуйте снова через несколько минут."
+
 #: kitsune/questions/templates/questions/new_question.html:5 kitsune/questions/templates/questions/new_question_login.html:4 kitsune/questions/templates/questions/mobile/confirm_email.html:3
 msgid "Ask a Question"
 msgstr "Задать вопрос"
@@ -3441,9 +3478,35 @@ msgstr "Представьте больше информации"
 msgid "Fill in the details of your question."
 msgstr "Введите детали вашего вопроса."
 
-#: kitsune/questions/templates/questions/new_question.html:76 kitsune/questions/templates/questions/new_question_login.html:14
+#: kitsune/questions/templates/questions/new_question.html:76 kitsune/questions/templates/questions/new_question_login.html:38
 msgid "Post Question"
 msgstr "Задать вопрос"
+
+#: kitsune/questions/templates/questions/new_question_login.html:19 kitsune/questions/templates/questions/mobile/new_question_login.html:14
+#, fuzzy
+msgid "Before you continue, you must sign in"
+msgstr "Перед продолжением создайте учётную запись для поддержки"
+
+#: kitsune/questions/templates/questions/new_question_login.html:20 kitsune/questions/templates/questions/mobile/new_question_login.html:16 kitsune/sumo/templates/includes/common_macros.html:54
+#: kitsune/sumo/templates/mobile/base.html:83 kitsune/users/templates/users/auth.html:23 kitsune/users/templates/users/mobile/login.html:14
+#, fuzzy
+msgid "Sign in with email"
+msgstr "Войти через Persona"
+
+#: kitsune/questions/templates/questions/new_question_login.html:24
+#, fuzzy
+msgid "It appears you do not have an existing account"
+msgstr "Войдите в существующую учётную запись"
+
+#: kitsune/questions/templates/questions/new_question_login.html:25
+#, fuzzy
+msgid "Please select a username for your new account."
+msgstr "Пожалуйста, выберите не менее одного продукта."
+
+#: kitsune/questions/templates/questions/new_question_login.html:29 kitsune/questions/templates/questions/mobile/new_question_login.html:26
+#, fuzzy
+msgid "Register and continue"
+msgstr "Зарегистрироваться, чтобы помочь"
 
 #: kitsune/questions/templates/questions/questions.html:3
 msgid "Firefox Support Forum"
@@ -3547,26 +3610,6 @@ msgstr "Размещено {user}"
 #: kitsune/questions/templates/questions/questions.html:204 kitsune/questions/templates/questions/questions.html:210
 msgid "on"
 msgstr "в"
-
-#: kitsune/questions/templates/questions/stats.html:2
-msgid "Question Metrics"
-msgstr "Метрики вопросов"
-
-#: kitsune/questions/templates/questions/stats.html:4
-msgid "Metrics"
-msgstr "Метрики"
-
-#: kitsune/questions/templates/questions/stats.html:9
-msgid "Question Statistics"
-msgstr "Статистика вопросов"
-
-#: kitsune/questions/templates/questions/stats.html:13 kitsune/search/forms.py:76
-msgid "Topics"
-msgstr "Темы"
-
-#: kitsune/questions/templates/questions/stats.html:35
-msgid "Data is temporarily unavailable, please try again in a few minutes."
-msgstr "Данные временно недоступны. Пожалуйста, попробуйте снова через несколько минут."
 
 #: kitsune/questions/templates/questions/unsubscribe_watch.html:3 vendor/src/django-tidings/tidings/templates/tidings/unsubscribe_success.html:10
 msgid "You have been unsubscribed."
@@ -3792,53 +3835,53 @@ msgstr "{num} ответов"
 msgid "karma"
 msgstr "карма"
 
-#: kitsune/questions/templates/questions/includes/answer.html:38
+#: kitsune/questions/templates/questions/includes/answer.html:39
 msgid "Chosen Solution"
 msgstr "Выбранное решение"
 
-#: kitsune/questions/templates/questions/includes/answer.html:40
+#: kitsune/questions/templates/questions/includes/answer.html:41
 msgid "Helpful Reply"
 msgstr "Полезный ответ"
 
-#: kitsune/questions/templates/questions/includes/answer.html:42
+#: kitsune/questions/templates/questions/includes/answer.html:43
 msgid "Question owner"
 msgstr "Задавший вопрос"
 
-#: kitsune/questions/templates/questions/includes/answer.html:66
+#: kitsune/questions/templates/questions/includes/answer.html:67
 msgid "Was this helpful to you?"
 msgstr "Помогла ли вам это?"
 
-#: kitsune/questions/templates/questions/includes/answer.html:67 kitsune/search/__init__.py:43 kitsune/sumo/helpers.py:369 kitsune/wiki/templates/wiki/includes/document_macros.html:299
+#: kitsune/questions/templates/questions/includes/answer.html:68 kitsune/search/__init__.py:43 kitsune/sumo/helpers.py:369 kitsune/wiki/templates/wiki/includes/document_macros.html:299
 #: kitsune/wiki/templates/wiki/mobile/includes/document_macros.html:15
 msgid "Yes"
 msgstr "Да"
 
-#: kitsune/questions/templates/questions/includes/answer.html:68 kitsune/search/__init__.py:44 kitsune/sumo/helpers.py:369 kitsune/wiki/templates/wiki/includes/document_macros.html:300
+#: kitsune/questions/templates/questions/includes/answer.html:69 kitsune/search/__init__.py:44 kitsune/sumo/helpers.py:369 kitsune/wiki/templates/wiki/includes/document_macros.html:300
 #: kitsune/wiki/templates/wiki/mobile/includes/document_macros.html:16
 msgid "No"
 msgstr "Нет"
 
-#: kitsune/questions/templates/questions/includes/answer.html:88
+#: kitsune/questions/templates/questions/includes/answer.html:89
 msgid "Did this reply solve your problem?"
 msgstr "Этот ответ решил вашу проблему?"
 
-#: kitsune/questions/templates/questions/includes/answer.html:89
+#: kitsune/questions/templates/questions/includes/answer.html:90
 msgid "Solved the problem"
 msgstr "Решило проблему"
 
-#: kitsune/questions/templates/questions/includes/answer.html:91
+#: kitsune/questions/templates/questions/includes/answer.html:92
 msgid "Does this reply solve the problem?"
 msgstr "Этот ответ решает эту проблему?"
 
-#: kitsune/questions/templates/questions/includes/answer.html:92
+#: kitsune/questions/templates/questions/includes/answer.html:93
 msgid "Solves the problem"
 msgstr "Решает проблему"
 
-#: kitsune/questions/templates/questions/includes/answer.html:100
+#: kitsune/questions/templates/questions/includes/answer.html:101
 msgid "Solution chosen"
 msgstr "Выбранное решение"
 
-#: kitsune/questions/templates/questions/includes/answer.html:104
+#: kitsune/questions/templates/questions/includes/answer.html:105
 msgid "Undo"
 msgstr "Отменить"
 
@@ -4287,7 +4330,7 @@ msgid "Community Discussion Only"
 msgstr "Только обсуждение сообщества"
 
 #. {n} is the number of search results, {q} is the search query, {product} is the product.
-#: kitsune/search/templates/search/results.html:88
+#: kitsune/search/templates/search/results.html:83
 #, fuzzy
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> for <strong>{product}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> for <strong>{product}</strong>"
@@ -4296,7 +4339,7 @@ msgstr[1] "Найдено <strong>{n}</strong> результата для <stro
 msgstr[2] "Найдено <strong>{n}</strong> результатов для <strong>{q}</strong> в <strong>{l}</strong>"
 
 #. {q} is the search query, {l} is the language searched.
-#: kitsune/search/templates/search/results.html:103
+#: kitsune/search/templates/search/results.html:98
 msgid "We couldn't find any results for <strong>{q}</strong> in <strong>{l}</strong>. Maybe one of these articles will be helpful?"
 msgstr "Мы не смогли найти никаких результатов для <strong>{q}</strong> в <strong>{l}</strong>. Может быть одна из этих статей будет полезна?"
 
@@ -5367,27 +5410,27 @@ msgctxt "site_title"
 msgid "Mozilla Support"
 msgstr "Поддержка Mozilla"
 
-#: kitsune/sumo/templates/base.html:83
+#: kitsune/sumo/templates/base.html:85
 msgid "This is a staging site, the content gets overwritten on the 1st of every month.<br>The production site is <a href=\"http://support.mozilla.org\">here</a>."
 msgstr "Это тестовый сайт, его содержимое перезаписывается 1 числа каждого месяца.<br>Рабочий сайт расположен <a href=\"http://support.mozilla.org\">здесь</a>."
 
-#: kitsune/sumo/templates/base.html:94
+#: kitsune/sumo/templates/base.html:96
 msgid "This page doesn't have a mobile optimized version. Tap here to go back."
 msgstr "У этой страницы нет версии, оптимизированной для мобильных устройств. Нажмите здесь, чтобы вернуться назад."
 
-#: kitsune/sumo/templates/base.html:101
+#: kitsune/sumo/templates/base.html:103
 msgid "Tap here to go to the mobile version of the site."
 msgstr "Нажмите здесь, чтобы перейти на мобильную версию сайта."
 
-#: kitsune/sumo/templates/base.html:110
+#: kitsune/sumo/templates/base.html:112
 msgid "Your Firefox is out of date and may contain a security risk!"
 msgstr "Ваш Firefox устарел и может содержать угрозу безопасности!"
 
-#: kitsune/sumo/templates/base.html:114
+#: kitsune/sumo/templates/base.html:116
 msgid "Upgrade Firefox"
 msgstr "Обновление Firefox"
 
-#: kitsune/sumo/templates/base.html:184
+#: kitsune/sumo/templates/base.html:186
 msgid ""
 "Portions of this content are &copy;1998–2013 <br>by individual mozilla.org contributors. Content <br>available under a <a href=\"//www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
@@ -5395,43 +5438,43 @@ msgstr ""
 "Части этого содержимого созданы <br>участниками проекта mozilla.org &copy;1998–2013. Содержимое <br>доступно на условиях <a href=\"//www.mozilla.org/foundation/licensing/website-content.html"
 "\">лицензии Creative Commons</a>."
 
-#: kitsune/sumo/templates/base.html:194
+#: kitsune/sumo/templates/base.html:196
 msgid "Contact Us"
 msgstr "Связаться с нами"
 
-#: kitsune/sumo/templates/base.html:195
+#: kitsune/sumo/templates/base.html:197
 msgid "Privacy Policy"
 msgstr "Политика приватности"
 
-#: kitsune/sumo/templates/base.html:196
+#: kitsune/sumo/templates/base.html:198
 msgid "Legal Notices"
 msgstr "Правовые уведомления"
 
-#: kitsune/sumo/templates/base.html:197
+#: kitsune/sumo/templates/base.html:199
 msgid "Report Trademark Abuse"
 msgstr "Сообщить о злоупотреблении торговой маркой"
 
-#: kitsune/sumo/templates/base.html:198
+#: kitsune/sumo/templates/base.html:200
 msgid "Source Code"
 msgstr "Исходный код"
 
-#: kitsune/sumo/templates/base.html:203 kitsune/users/templates/users/profile.html:110 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:75
+#: kitsune/sumo/templates/base.html:205 kitsune/users/templates/users/profile.html:110 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:75
 msgid "Twitter"
 msgstr "Твиттер"
 
-#: kitsune/sumo/templates/base.html:204 kitsune/users/templates/users/profile.html:116 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:79
+#: kitsune/sumo/templates/base.html:206 kitsune/users/templates/users/profile.html:116 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:79
 msgid "Facebook"
 msgstr "Facebook"
 
-#: kitsune/sumo/templates/base.html:205
+#: kitsune/sumo/templates/base.html:207
 msgid "Firefox Affiliates"
 msgstr "Помощники Firefox"
 
-#: kitsune/sumo/templates/base.html:206
+#: kitsune/sumo/templates/base.html:208
 msgid "Switch to mobile site"
 msgstr "Перейти на мобильный сайт"
 
-#: kitsune/sumo/templates/email/base.html:213 kitsune/sumo/templates/mobile/base.html:109
+#: kitsune/sumo/templates/email/base.html:213 kitsune/sumo/templates/mobile/base.html:113
 msgid "Mozilla Support"
 msgstr "Поддержка Mozilla"
 
@@ -5507,11 +5550,6 @@ msgstr "Параметры"
 msgid "Sign Out"
 msgstr "Выйти"
 
-#: kitsune/sumo/templates/includes/common_macros.html:54
-#, fuzzy
-msgid "Sign in with email"
-msgstr "Войти через Persona"
-
 #: kitsune/sumo/templates/includes/common_macros.html:56
 msgid "What's this"
 msgstr "Что это"
@@ -5557,10 +5595,6 @@ msgstr "Помощь на Твиттер"
 #: kitsune/sumo/templates/includes/common_macros.html:141
 msgid "Support Forum Home"
 msgstr "Страница форума поддержки"
-
-#: kitsune/sumo/templates/includes/common_macros.html:142
-msgid "Support Forum Metrics"
-msgstr "Метрики форума поддержки"
 
 #: kitsune/sumo/templates/includes/common_macros.html:144
 msgid "Moderate Forum Content"
@@ -5616,23 +5650,23 @@ msgstr "Ящик для предложений"
 msgid "Profile"
 msgstr "Профили"
 
-#: kitsune/sumo/templates/mobile/base.html:83 kitsune/users/templates/users/includes/macros.html:82
+#: kitsune/sumo/templates/mobile/base.html:86 kitsune/users/templates/users/includes/macros.html:82
 msgid "Register"
 msgstr "Регистрация"
 
-#: kitsune/sumo/templates/mobile/base.html:86
+#: kitsune/sumo/templates/mobile/base.html:90
 msgid "Languages"
 msgstr "Языки"
 
-#: kitsune/sumo/templates/mobile/base.html:91 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
+#: kitsune/sumo/templates/mobile/base.html:95 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
 msgid "Switch language"
 msgstr "Переключить язык"
 
-#: kitsune/sumo/templates/mobile/base.html:92
+#: kitsune/sumo/templates/mobile/base.html:96
 msgid "Switch to desktop site"
 msgstr "Перейти на полный сайт"
 
-#: kitsune/sumo/templates/mobile/base.html:123
+#: kitsune/sumo/templates/mobile/base.html:127
 msgid "Get support for another platform:"
 msgstr ""
 
@@ -5944,19 +5978,19 @@ msgstr "профиль регистрации"
 msgid "registration profiles"
 msgstr "профили регистрации"
 
-#: kitsune/users/views.py:161
+#: kitsune/users/views.py:163
 msgid "Your account is already activated, log in below."
 msgstr "Ваша учётная запись уже активирована, войдите ниже."
 
-#: kitsune/users/views.py:208 kitsune/users/views.py:218
+#: kitsune/users/views.py:210 kitsune/users/views.py:220
 msgid "Account already activated"
 msgstr "Учётная запись уже активирована"
 
-#: kitsune/users/views.py:346
+#: kitsune/users/views.py:348
 msgid "Your settings have been saved."
 msgstr "Ваши настройки были сохранены."
 
-#: kitsune/users/views.py:631
+#: kitsune/users/views.py:633
 msgid "We've sent an email with the username to any account using {email}."
 msgstr "Мы отправили вам письмо с именем пользователя для любой учётной записи, используя {email}."
 
@@ -6011,15 +6045,19 @@ msgstr "Войти / Зарегистрироваться"
 msgid "Would you like to ask a question in the community support forum?"
 msgstr "Вы хотите задать вопрос на форуме поддержки сообщества?"
 
-#: kitsune/users/templates/users/auth.html:21
+#: kitsune/users/templates/users/auth.html:22 kitsune/users/templates/users/mobile/login.html:13
+msgid "You must be signed in to continue"
+msgstr ""
+
+#: kitsune/users/templates/users/auth.html:29
 msgid "Sign In"
 msgstr "Войти"
 
-#: kitsune/users/templates/users/auth.html:27
+#: kitsune/users/templates/users/auth.html:35
 msgid "Register to be a Contributor"
 msgstr "Зарегистрироваться, чтобы помочь"
 
-#: kitsune/users/templates/users/auth.html:28
+#: kitsune/users/templates/users/auth.html:36
 msgid "You don't need to register to <a href=\"{url}\">ask a question</a>."
 msgstr "Вам не нужно регистрироваться, чтобы <a href=\"{url}\">задать вопрос</a>."
 
@@ -6031,7 +6069,7 @@ msgstr "Вы почти здесь!"
 msgid "Please select a username and click continue to proceed with sign up."
 msgstr "Пожалуйста, выберите имя пользователя и щёлкните продолжить, чтобы продолжить регистрацию."
 
-#: kitsune/users/templates/users/browserid_signup.html:21
+#: kitsune/users/templates/users/browserid_signup.html:24
 msgid "Continue"
 msgstr "Продолжить"
 
@@ -6091,6 +6129,11 @@ msgstr "Документы"
 #: kitsune/users/templates/users/documents_contributed.html:20
 msgid "Documents edited or translated"
 msgstr "Изменённые или переведённые документы"
+
+#: kitsune/users/templates/users/documents_contributed.html:34
+#, fuzzy
+msgid "Redirects"
+msgstr "Перенаправление"
 
 #: kitsune/users/templates/users/edit_avatar.html:2
 msgid "Change Avatar"
@@ -6874,10 +6917,6 @@ msgstr "Значимость:"
 #: kitsune/wiki/forms.py:289
 msgid "Needs change"
 msgstr "Требует изменения"
-
-#: kitsune/wiki/forms.py:312
-msgid "Locale:"
-msgstr "Локаль:"
 
 #: kitsune/wiki/forms.py:314
 msgid "Users:"
@@ -7962,6 +8001,91 @@ msgstr "Пожалуйста, предоставьте больше информ
 msgid "{t} | {c}"
 msgstr "{t} | {c}"
 
+#: vendor/src/django-badger/badger/feeds.py:149
+#, fuzzy
+msgid "Recently awarded badges"
+msgstr "Недавно одобренные обновления"
+
+#: vendor/src/django-badger/badger/feeds.py:156
+msgid "%s awarded to %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/feeds.py:187
+#, fuzzy
+msgid "Badges recently awarded to %s"
+msgstr "Недавние ответы в %s"
+
+#: vendor/src/django-badger/badger/feeds.py:205
+#, fuzzy
+msgid "Recent awards of \"%s\""
+msgstr "Недавние ответы в %s"
+
+#: vendor/src/django-badger/badger/feeds.py:222
+#, fuzzy
+msgid "Recently created badges"
+msgstr "Недавно одобренные обновления"
+
+#: vendor/src/django-badger/badger/feeds.py:249
+msgid "Badges recently created by %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/forms.py:93
+msgid "%s items entered, only %s allowed"
+msgstr ""
+
+#: vendor/src/django-badger/badger/forms.py:105
+msgid "These items were invalid: %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/forms.py:141
+msgid "No such claim code, %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/models.py:451
+msgid "Cannot process image"
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:212
+#, fuzzy
+msgid "Badge \"%s\" deleted."
+msgstr "Сообщение было удалено!"
+
+#: vendor/src/django-badger/badger/views.py:241
+msgid "Award issued to %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:243
+msgid "Invitation to claim award sent to %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:310
+msgid "Award for badge \"%s\" deleted."
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:390
+msgid "Award claim granted to %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:464
+msgid "Badge \"%s\" granted to %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:534
+msgid "Nomination submitted for %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:537
+msgid "Badge already awarded to %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/views.py:540
+msgid "Nomination failed for %s"
+msgstr ""
+
+#: vendor/src/django-badger/badger/templatetags/badger_tags.py:76
+msgid "Issue award"
+msgstr ""
+
 #: vendor/src/django-tidings/tidings/templates/tidings/unsubscribe.html:3 vendor/src/django-tidings/tidings/templates/tidings/unsubscribe.html:13
 #: vendor/src/django-tidings/tidings/templates/tidings/unsubscribe_error.html:3 vendor/src/django-tidings/tidings/templates/tidings/unsubscribe_success.html:3
 msgid "Unsubscribe"
@@ -7986,6 +8110,12 @@ msgstr ""
 #: vendor/src/django-tidings/tidings/templates/tidings/unsubscribe_success.html:8
 msgid "Unsubscribed"
 msgstr "Отписан"
+
+#~ msgid "Question Metrics"
+#~ msgstr "Метрики вопросов"
+
+#~ msgid "Question Statistics"
+#~ msgstr "Статистика вопросов"
 
 #~ msgid "{locale} Localization Team | Knowledge Base"
 #~ msgstr "[{locale}] Команда локализации | База знаний"
