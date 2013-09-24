@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-13 08:04-0700\n"
+"POT-Creation-Date: 2013-09-24 06:28-0700\n"
 "PO-Revision-Date: 2013-08-27 18:20+0000\n"
 "Last-Translator: Ricardo <rpmdisguise-otros@yahoo.es>\n"
 "Language-Team: Spanish\n"
@@ -86,7 +86,7 @@ msgstr "¡Gracias!"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email. Whitespace matters!
-#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:551 kitsune/questions/templates/questions/email/confirm_question.html:4
+#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:494 kitsune/questions/templates/questions/email/confirm_question.html:4
 msgid "Please confirm your Firefox Help question"
 msgstr "Por favor, confirma tu pregunta para la asistencia de Firefox"
 
@@ -323,7 +323,7 @@ msgstr "También puedes apuntarte a nuestro programa de colegas y obtener consej
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is at the end of an email.
-#: kitsune/users/templates/users/email/contributor.ltxt:76 kitsune/users/models.py:237 kitsune/users/utils.py:88 kitsune/users/views.py:412 kitsune/users/templates/users/email/contributor.html:76
+#: kitsune/users/templates/users/email/contributor.ltxt:76 kitsune/users/models.py:237 kitsune/users/utils.py:89 kitsune/users/views.py:414 kitsune/users/templates/users/email/contributor.html:76
 msgid "Welcome to SUMO!"
 msgstr "¡Te damos la bienvenida a SUMO!"
 
@@ -485,46 +485,46 @@ msgstr "Mostrar hasta"
 msgid "New announcement for {group}"
 msgstr "Nuevo anuncio para {group}"
 
-#: kitsune/customercare/views.py:29 kitsune/dashboards/readouts.py:327 kitsune/questions/templates/questions/questions.html:75 kitsune/questions/templates/questions/mobile/questions.html:110
+#: kitsune/customercare/views.py:30 kitsune/dashboards/readouts.py:327 kitsune/questions/templates/questions/questions.html:75 kitsune/questions/templates/questions/mobile/questions.html:110
 msgid "Most Recent"
 msgstr "Más recientes"
 
-#: kitsune/customercare/views.py:30
+#: kitsune/customercare/views.py:31
 msgid "Unanswered"
 msgstr "Sin respuesta"
 
-#: kitsune/customercare/views.py:31
+#: kitsune/customercare/views.py:32
 msgid "Answered"
 msgstr "Con respuesta"
 
-#: kitsune/customercare/views.py:32 kitsune/questions/templates/questions/metrics.html:14 kitsune/questions/templates/questions/metrics.html:16 kitsune/questions/templates/questions/questions.html:86
+#: kitsune/customercare/views.py:33 kitsune/questions/templates/questions/metrics.html:14 kitsune/questions/templates/questions/metrics.html:16 kitsune/questions/templates/questions/questions.html:86
 #: kitsune/questions/templates/questions/mobile/questions.html:124
 msgid "All"
 msgstr "Todos"
 
 #. L10n: the tweet needs to be a reply to another tweet.
-#: kitsune/customercare/views.py:191
+#: kitsune/customercare/views.py:193
 msgid "Reply-to is empty"
 msgstr "Falta indicar a quién se responde"
 
 #. L10n: the tweet has no content.
-#: kitsune/customercare/views.py:196
+#: kitsune/customercare/views.py:198
 msgid "Message is empty"
 msgstr "El mensaje está vacío"
 
-#: kitsune/customercare/views.py:199
+#: kitsune/customercare/views.py:201
 msgid "Message is too long"
 msgstr "El mensaje es demasiado largo"
 
-#: kitsune/customercare/views.py:213 kitsune/customercare/views.py:297
+#: kitsune/customercare/views.py:215 kitsune/customercare/views.py:299
 msgid "An error occured: {message}"
 msgstr "Se ha producido un error: {message}"
 
-#: kitsune/customercare/views.py:280 kitsune/customercare/views.py:285
+#: kitsune/customercare/views.py:282 kitsune/customercare/views.py:287
 msgid "Invalid ID."
 msgstr "Id. no válida."
 
-#: kitsune/customercare/views.py:289
+#: kitsune/customercare/views.py:291
 msgid "Tweets that are replies or have replies must not be hidden."
 msgstr "No deben ocultarse los tuits que son o tienen respuestas."
 
@@ -574,7 +574,7 @@ msgid "Sign out"
 msgstr "Cerrar sesión"
 
 #: kitsune/customercare/templates/customercare/landing.html:72 kitsune/customercare/templates/customercare/twitter_modal.html:14
-#: kitsune/questions/templates/questions/mobile/new_question_login.html:38 kitsune/sumo/templates/mobile/base.html:85 kitsune/users/templates/users/mobile/login.html:7
+#: kitsune/questions/templates/questions/mobile/new_question_login.html:38 kitsune/sumo/templates/mobile/base.html:89 kitsune/users/templates/users/mobile/login.html:7
 #: kitsune/users/templates/users/mobile/includes/macros.html:19
 msgid "Sign in"
 msgstr "Identificarse"
@@ -656,23 +656,29 @@ msgstr "La Armada Alucinante nunca publicará un tuit sin tu permiso."
 msgid "If you’re registered with Mozilla Support, we will keep you logged into Twitter, so you can use Army of Awesome instantly."
 msgstr "Si estás registrado en Mozilla Support, te mantendremos identificado con Twitter para que puedas usar la Armada Alucinante instantáneamente."
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:21
+#: kitsune/customercare/templates/customercare/twitter_modal.html:24 kitsune/questions/templates/questions/new_question_login.html:20
+#: kitsune/questions/templates/questions/mobile/new_question_login.html:16 kitsune/sumo/templates/includes/common_macros.html:55 kitsune/sumo/templates/includes/common_macros.html:57
+#: kitsune/sumo/templates/mobile/base.html:84 kitsune/sumo/templates/mobile/base.html:86 kitsune/users/templates/users/auth.html:23 kitsune/users/templates/users/mobile/login.html:14
+msgid "Sign in with email"
+msgstr "Iniciar sesión con la cuenta de correo"
+
+#: kitsune/customercare/templates/customercare/twitter_modal.html:28
 msgid "Are you registered with Mozilla Support?"
 msgstr "¿Estás registrado en Mozilla Support?"
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:26
+#: kitsune/customercare/templates/customercare/twitter_modal.html:33
 msgid "Yes, I am."
 msgstr "Si, lo estoy."
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:27
+#: kitsune/customercare/templates/customercare/twitter_modal.html:34
 msgid "Click to sign in."
 msgstr "Haz clic para identificarte."
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:30
+#: kitsune/customercare/templates/customercare/twitter_modal.html:37
 msgid "No, I'm not."
 msgstr "No, no lo estoy."
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:31
+#: kitsune/customercare/templates/customercare/twitter_modal.html:38
 msgid "Click to register."
 msgstr "Haz clic aquí para registrarte."
 
@@ -961,7 +967,7 @@ msgstr "Estado de localización de todas las respuestas enlatadas"
 msgid "All canned responses articles..."
 msgstr "Todos los artículos de respuestas enlatadas..."
 
-#: kitsune/dashboards/views.py:57 kitsune/dashboards/templates/dashboards/contributors.html:4 kitsune/sumo/templates/includes/common_macros.html:137
+#: kitsune/dashboards/views.py:57 kitsune/dashboards/templates/dashboards/contributors.html:4 kitsune/sumo/templates/includes/common_macros.html:131
 msgid "Knowledge Base Dashboard"
 msgstr "Panel de la base de conocimientos"
 
@@ -1088,7 +1094,7 @@ msgstr "Todos los productos"
 #: kitsune/products/templates/products/documents.html:18 kitsune/products/templates/products/product.html:4 kitsune/products/templates/products/product.html:9
 #: kitsune/products/templates/products/product.html:16 kitsune/products/templates/products/includes/product_macros.html:12 kitsune/products/templates/products/mobile/documents.html:10
 #: kitsune/products/templates/products/mobile/documents.html:27 kitsune/products/templates/products/mobile/product.html:3 kitsune/products/templates/products/mobile/product.html:8
-#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/answers.html:192 kitsune/questions/templates/questions/mobile/questions.html:36
+#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/answers.html:217 kitsune/questions/templates/questions/mobile/questions.html:36
 #: kitsune/search/views.py:482 kitsune/search/templates/search/results.html:69 kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
 msgctxt "DB: products.Product.title"
 msgid "None"
@@ -1103,7 +1109,7 @@ msgstr "Todos los temas"
 #: kitsune/products/templates/products/documents.html:49 kitsune/products/templates/products/includes/topic_macros.html:70 kitsune/products/templates/products/includes/topic_macros.html:93
 #: kitsune/products/templates/products/includes/topic_macros.html:101 kitsune/products/templates/products/mobile/documents.html:6 kitsune/products/templates/products/mobile/documents.html:8
 #: kitsune/products/templates/products/mobile/documents.html:21 kitsune/products/templates/products/mobile/documents.html:38 kitsune/products/templates/products/mobile/product.html:65
-#: kitsune/questions/templates/questions/answers.html:208
+#: kitsune/questions/templates/questions/answers.html:233
 msgctxt "DB: products.Topic.title"
 msgid "None"
 msgstr "Ninguno"
@@ -1124,7 +1130,7 @@ msgstr "Equipo de KB"
 msgid "Localization Team"
 msgstr "Equipo de localización"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:194 kitsune/sumo/templates/includes/common_macros.html:139 kitsune/wiki/templates/wiki/recent_revisions.html:3
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:194 kitsune/sumo/templates/includes/common_macros.html:133 kitsune/wiki/templates/wiki/recent_revisions.html:3
 msgid "Recent Revisions"
 msgstr "Revisiones recientes"
 
@@ -1215,7 +1221,8 @@ msgid "Content:"
 msgstr "Contenido:"
 
 #: kitsune/flagit/templates/flagit/includes/flagged_answer.html:4 kitsune/flagit/templates/flagit/includes/flagged_post.html:6 kitsune/flagit/templates/flagit/includes/flagged_question.html:6
-#: kitsune/questions/templates/questions/edit_answer.html:23 kitsune/wiki/templates/wiki/revision.html:24
+#: kitsune/kbadge/templates/badger/award_detail.html:29 kitsune/kbadge/templates/badger/badge_detail.html:29 kitsune/questions/templates/questions/edit_answer.html:23
+#: kitsune/wiki/templates/wiki/revision.html:24
 msgid "Created:"
 msgstr "Creado:"
 
@@ -1350,7 +1357,7 @@ msgstr "Borrar vídeo | {t} | Galería multimedia"
 
 #: kitsune/gallery/templates/gallery/confirm_media_delete.html:13 kitsune/gallery/templates/gallery/edit_media.html:7 kitsune/gallery/templates/gallery/gallery.html:2
 #: kitsune/gallery/templates/gallery/gallery.html:5 kitsune/gallery/templates/gallery/gallery.html:11 kitsune/gallery/templates/gallery/media.html:8 kitsune/gallery/templates/gallery/search.html:5
-#: kitsune/gallery/templates/gallery/search.html:9 kitsune/sumo/templates/includes/common_macros.html:146
+#: kitsune/gallery/templates/gallery/search.html:9 kitsune/sumo/templates/includes/common_macros.html:140
 msgid "Media Gallery"
 msgstr "Galería multimedia"
 
@@ -1698,6 +1705,95 @@ msgstr "6 meses"
 msgid "1 year"
 msgstr "1 año"
 
+#: kitsune/kbadge/templates/badger/award_detail.html:8
+msgid "Awarded badge: %(badge_name)s"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/award_detail.html:8 kitsune/kbadge/templates/badger/awards_list.html:8 kitsune/kbadge/templates/badger/awards_list.html:28
+#: kitsune/kbadge/templates/badger/awards_list.html:29 kitsune/kbadge/templates/badger/badge_detail.html:8 kitsune/kbadge/templates/kbadge/includes/macros.html:12
+#: kitsune/kbadge/templates/kbadge/includes/macros.html:13
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "None"
+msgstr "Ninguno"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:15 kitsune/kbadge/templates/badger/badge_detail.html:15
+#, fuzzy
+msgid "Image:"
+msgstr "Imagen"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:20 kitsune/kbadge/templates/badger/badge_detail.html:20
+#, fuzzy
+msgid "Description:"
+msgstr "Descripción"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:21 kitsune/kbadge/templates/badger/badge_detail.html:21
+#, fuzzy
+msgctxt "DB: badger.Badge.description"
+msgid "None"
+msgstr "Ninguno"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:25 kitsune/kbadge/templates/badger/badge_detail.html:25 kitsune/wiki/templates/wiki/revision.html:28
+msgid "Creator:"
+msgstr "Creador/a:"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:32 kitsune/kbadge/templates/badger/badge_detail.html:32
+msgid "Modified:"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/award_detail.html:38
+#, fuzzy
+msgid "Award details"
+msgstr "Editar configuración"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:40
+msgid "Awarded to:"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/award_detail.html:49
+#, fuzzy
+msgid "Explanation:"
+msgstr "Aplicación"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:54
+#, fuzzy
+msgid "Awarded by:"
+msgstr "Creada por:"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:63
+msgid "Issued on:"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/awards_list.html:8
+msgid "<h2>Recently awarded &quot;%(badge_name)s&quot; badges</h2>"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/awards_list.html:12 vendor/src/django-badger/badger/feeds.py:149
+#, fuzzy
+msgid "Recently awarded badges"
+msgstr "Actualizaciones recientemente aprobadas"
+
+#: kitsune/kbadge/templates/badger/awards_list.html:32
+msgid "awarded to"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/awards_list.html:48 kitsune/sumo/templates/layout/paginator.html:6
+msgid "Previous"
+msgstr "Anterior"
+
+#: kitsune/kbadge/templates/badger/awards_list.html:53 kitsune/questions/templates/questions/mobile/new_question.html:79 kitsune/sumo/templates/layout/paginator.html:30
+msgid "Next"
+msgstr "Siguiente"
+
+#: kitsune/kbadge/templates/badger/badge_detail.html:8
+msgid "Badge: %(badge_name)s"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/badge_detail.html:39
+#, fuzzy
+msgid "Recent awardees"
+msgstr "Actualizaciones recientemente aprobadas"
+
 #: kitsune/kbforums/events.py:23
 msgid "Re: {forum} - {thread}"
 msgstr "Re: {forum} - {thread}"
@@ -1946,11 +2042,11 @@ msgstr "¡Oh no! ¡Parece que no hay mensajes!"
 msgid "Post a reply"
 msgstr "Publicar una entrada"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:368 kitsune/questions/templates/questions/mobile/answers.html:44
+#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:393 kitsune/questions/templates/questions/mobile/answers.html:44
 msgid "Post Reply"
 msgstr "Publicar una respuesta"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:369 kitsune/questions/templates/questions/edit_answer.html:53
+#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:394 kitsune/questions/templates/questions/edit_answer.html:53
 msgid "Preview Reply"
 msgstr "Vista previa de la respuesta"
 
@@ -2014,11 +2110,11 @@ msgstr "En este foro se discute sobre cómo mejorar la localización del artícu
 msgid "If you need help with Firefox, please <a href=\"%(aaq_url)s\">ask a question</a>."
 msgstr "Si necesitas ayuda con Firefox, por favor, <a href=\"%(aaq_url)s\">haz una pregunta</a>."
 
-#: kitsune/kbforums/templates/kbforums/includes/post.html:12 kitsune/questions/templates/questions/answers.html:149 kitsune/questions/templates/questions/includes/answer.html:115
+#: kitsune/kbforums/templates/kbforums/includes/post.html:12 kitsune/questions/templates/questions/answers.html:158 kitsune/questions/templates/questions/includes/answer.html:115
 msgid "Edit this post"
 msgstr "Editar este artículo"
 
-#: kitsune/kbforums/templates/kbforums/includes/post.html:15 kitsune/questions/templates/questions/answers.html:154 kitsune/questions/templates/questions/includes/answer.html:120
+#: kitsune/kbforums/templates/kbforums/includes/post.html:15 kitsune/questions/templates/questions/answers.html:163 kitsune/questions/templates/questions/includes/answer.html:120
 msgid "Delete this post"
 msgstr "Borrar este artículo"
 
@@ -2049,7 +2145,7 @@ msgstr "Desactivar correos para la discusión en mi idioma."
 msgid "Get emailed when there is new discussion activity in my locale."
 msgstr "Recibir correo cuando haya actividad de discusiones nuevas en mi idioma."
 
-#: kitsune/kpi/templates/kpi/dashboard.html:4 kitsune/sumo/templates/includes/common_macros.html:151
+#: kitsune/kpi/templates/kpi/dashboard.html:4 kitsune/sumo/templates/includes/common_macros.html:145
 msgid "KPI Dashboard"
 msgstr "Panel de control KPI"
 
@@ -2683,15 +2779,15 @@ msgstr "Encontrada solución a pregunta en Ayuda de Firefox"
 msgid "Solution found for question: %s"
 msgstr "Solución encontrada a la pregunta: %s"
 
-#: kitsune/questions/feeds.py:36
+#: kitsune/questions/feeds.py:39
 msgid "Recently updated questions"
 msgstr "Preguntas actualizadas recientemente"
 
-#: kitsune/questions/feeds.py:79
+#: kitsune/questions/feeds.py:86
 msgid "Recently updated questions tagged %s"
 msgstr "Preguntas actualizadas recientemente etiquetadas con %s"
 
-#: kitsune/questions/feeds.py:97
+#: kitsune/questions/feeds.py:104
 msgid "Recent answers to %s"
 msgstr "Respuestas recientes a %s"
 
@@ -2741,7 +2837,7 @@ msgstr "Unas pocas veces por semana"
 msgid "Every time Firefox opened"
 msgstr "Cada vez que Firefox se abre"
 
-#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:264
+#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:289
 msgid "This started when..."
 msgstr "Esto comenzó cuando..."
 
@@ -3023,56 +3119,56 @@ msgstr "Thunderbird"
 msgid "or other Mozilla products"
 msgstr "u otros productos de Mozilla"
 
-#: kitsune/questions/views.py:78
+#: kitsune/questions/views.py:75
 msgid "That tag does not exist."
 msgstr "Esta etiqueta no existe."
 
-#: kitsune/questions/views.py:79
+#: kitsune/questions/views.py:76
 msgid "Please provide a tag."
 msgstr "Por favor, proporciona una etiqueta."
 
 #. L10n: This shouldn't happen unless people tamper with POST data.
-#: kitsune/questions/views.py:561
+#: kitsune/questions/views.py:504
 msgid "Request type not recognized."
 msgstr "Tipo de petición no reconocida."
 
-#: kitsune/questions/views.py:618
+#: kitsune/questions/views.py:561
 msgid "Done! Your question is now posted on the Mozilla community support forum."
 msgstr "¡Hecho! Tu pregunta ha sido publicada en el foro de asistencia comunitaria de Mozilla."
 
-#: kitsune/questions/views.py:820
+#: kitsune/questions/views.py:764
 msgid "Thank you for choosing a solution!"
 msgstr "¡Gracias por elegir una solución!"
 
-#: kitsune/questions/views.py:845
+#: kitsune/questions/views.py:789
 msgid "The solution was undone successfully."
 msgstr "La solución se deshizo correctamente."
 
-#: kitsune/questions/views.py:916
+#: kitsune/questions/views.py:860
 msgid "Glad to hear it!"
 msgstr "¡Nos alegra oír eso!"
 
-#: kitsune/questions/views.py:919 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
+#: kitsune/questions/views.py:863 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
 msgid "Sorry to hear that."
 msgstr "Sentimos oír eso."
 
-#: kitsune/questions/views.py:940
+#: kitsune/questions/views.py:884
 msgid "You already voted on this reply."
 msgstr "Ya has dado tu voto para esta respuesta."
 
-#: kitsune/questions/views.py:1160
+#: kitsune/questions/views.py:1118
 msgid "Could not send a message to that email address."
 msgstr "No se pudo enviar un mensaje a esa dirección de correo."
 
-#: kitsune/questions/views.py:1165
+#: kitsune/questions/views.py:1123
 msgid "You will be notified of updates by email."
 msgstr "Serás notificado de las actualizaciones por correo electrónico."
 
-#: kitsune/questions/views.py:1167
+#: kitsune/questions/views.py:1125
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "Recibirás un correo electrónico en breve para confirmar tu suscripción."
 
-#: kitsune/questions/views.py:1247
+#: kitsune/questions/views.py:1205
 msgid "There was an error submitting the ticket. Please try again later."
 msgstr "Hubo un error al enviar el tique. Por favor inténtalo de nuevo más tarde."
 
@@ -3117,172 +3213,192 @@ msgstr "Volver a la pregunta e intentarlo de nuevo."
 msgid "{q} | Firefox Support Forum"
 msgstr "{q} | Foro de asistencia para Firefox"
 
-#: kitsune/questions/templates/questions/answers.html:29
+#: kitsune/questions/templates/questions/answers.html:30
 msgid "This thread was closed."
 msgstr "Esta conversación se cerró."
 
-#: kitsune/questions/templates/questions/answers.html:30
+#: kitsune/questions/templates/questions/answers.html:32
+#, fuzzy
+msgid "This thread was archived."
+msgstr "Esta conversación se cerró."
+
+#: kitsune/questions/templates/questions/answers.html:34
+#, fuzzy
+msgid "This thread was closed and archived."
+msgstr "Esta conversación se cerró."
+
+#: kitsune/questions/templates/questions/answers.html:38
 msgid "Please ask a new question if you need help."
 msgstr "Haz una nueva pregunta si necesitas ayuda."
 
 #. {n} is the number of replies.
-#: kitsune/questions/templates/questions/answers.html:41 kitsune/search/templates/search/includes/result.html:18
+#: kitsune/questions/templates/questions/answers.html:50 kitsune/search/templates/search/includes/result.html:18
 msgid "1 reply"
 msgid_plural "{n} replies"
 msgstr[0] "1 respuesta"
 msgstr[1] "{n} respuestas"
 
-#: kitsune/questions/templates/questions/answers.html:43 kitsune/search/templates/search/includes/result.html:21
+#: kitsune/questions/templates/questions/answers.html:52 kitsune/search/templates/search/includes/result.html:21
 msgid "No replies"
 msgstr "Sin respuestas"
 
-#: kitsune/questions/templates/questions/answers.html:48 kitsune/questions/templates/questions/includes/have_problem.html:3
+#: kitsune/questions/templates/questions/answers.html:57 kitsune/questions/templates/questions/includes/have_problem.html:3
 msgid "has this problem"
 msgid_plural "have this problem"
 msgstr[0] "tiene este problema"
 msgstr[1] "tienen este problema"
 
-#: kitsune/questions/templates/questions/answers.html:56
+#: kitsune/questions/templates/questions/answers.html:65
 msgid "%(count)s view"
 msgid_plural "%(count)s views"
 msgstr[0] "%(count)s vez"
 msgstr[1] "%(count)s veces"
 
-#: kitsune/questions/templates/questions/answers.html:66 kitsune/questions/templates/questions/questions.html:212
+#: kitsune/questions/templates/questions/answers.html:75 kitsune/questions/templates/questions/questions.html:215
 msgid "Last reply by {user}"
 msgstr "Última respuesta de {user}"
 
-#: kitsune/questions/templates/questions/answers.html:86 kitsune/questions/templates/questions/includes/answer.html:31
+#: kitsune/questions/templates/questions/answers.html:95 kitsune/questions/templates/questions/includes/answer.html:31
 msgid "Posted"
 msgstr "Publicadas"
 
-#: kitsune/questions/templates/questions/answers.html:96 kitsune/questions/templates/questions/includes/answer.html:59
+#: kitsune/questions/templates/questions/answers.html:105 kitsune/questions/templates/questions/includes/answer.html:59
 msgid "Modified {datetime} by {name}"
 msgstr "Modificadas por {name} el {datetime}"
 
-#: kitsune/questions/templates/questions/answers.html:102
+#: kitsune/questions/templates/questions/answers.html:111
 msgid "Chosen solution"
 msgstr "Solución elegida"
 
-#: kitsune/questions/templates/questions/answers.html:102
+#: kitsune/questions/templates/questions/answers.html:111
 msgid "by"
 msgstr "por"
 
-#: kitsune/questions/templates/questions/answers.html:106
+#: kitsune/questions/templates/questions/answers.html:115
 msgid "Read this answer in context"
 msgstr "Leer esta respuesta en su contexto"
 
-#: kitsune/questions/templates/questions/answers.html:115
+#: kitsune/questions/templates/questions/answers.html:124
 msgid "Helpful replies"
 msgstr "Respuestas útiles"
 
-#: kitsune/questions/templates/questions/answers.html:119
+#: kitsune/questions/templates/questions/answers.html:128
 msgid "Go to answer"
 msgstr "Ir a la respuesta"
 
-#: kitsune/questions/templates/questions/answers.html:133 kitsune/questions/templates/questions/answers.html:387 kitsune/questions/templates/questions/mobile/answers.html:32
+#: kitsune/questions/templates/questions/answers.html:142 kitsune/questions/templates/questions/answers.html:413 kitsune/questions/templates/questions/mobile/answers.html:32
 msgid "I have this problem, too"
 msgstr "Yo también tengo este problema"
 
-#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:355
+#: kitsune/questions/templates/questions/answers.html:146 kitsune/questions/templates/questions/answers.html:380
 msgid "Post a Reply"
 msgstr "Publicar una respuesta"
 
-#: kitsune/questions/templates/questions/answers.html:145
+#: kitsune/questions/templates/questions/answers.html:154
 msgid "Question tools"
 msgstr "Herramientas de preguntas"
 
-#: kitsune/questions/templates/questions/answers.html:159
+#: kitsune/questions/templates/questions/answers.html:168
 msgid "Unlock this post"
 msgstr "Desbloquear este mensaje"
 
-#: kitsune/questions/templates/questions/answers.html:159
+#: kitsune/questions/templates/questions/answers.html:168
 msgid "Lock this post"
 msgstr "Bloquear este mensaje"
 
-#: kitsune/questions/templates/questions/answers.html:167
+#: kitsune/questions/templates/questions/answers.html:179
+#, fuzzy
+msgid "Unarchive this post"
+msgstr "Desbloquear este mensaje"
+
+#: kitsune/questions/templates/questions/answers.html:181
+#, fuzzy
+msgid "Archive this post"
+msgstr "Editar este artículo"
+
+#: kitsune/questions/templates/questions/answers.html:192
 msgid "Stop email updates"
 msgstr "Detener las actualizaciones por correo electrónico"
 
-#: kitsune/questions/templates/questions/answers.html:172 kitsune/questions/templates/questions/includes/email_subscribe.html:2
+#: kitsune/questions/templates/questions/answers.html:197 kitsune/questions/templates/questions/includes/email_subscribe.html:2
 msgid "Get email updates"
 msgstr "Obtener actualizaciones por correo electrónico"
 
-#: kitsune/questions/templates/questions/answers.html:177
+#: kitsune/questions/templates/questions/answers.html:202
 msgid "Subscribe to feed"
 msgstr "Suscribirse al canal"
 
-#: kitsune/questions/templates/questions/answers.html:186
+#: kitsune/questions/templates/questions/answers.html:211
 msgid "Question details"
 msgstr "Detalles de preguntas"
 
-#: kitsune/questions/templates/questions/answers.html:191 kitsune/questions/templates/questions/includes/aaq_macros.html:41
+#: kitsune/questions/templates/questions/answers.html:216 kitsune/questions/templates/questions/includes/aaq_macros.html:41
 msgid "Product"
 msgstr "Producto"
 
-#: kitsune/questions/templates/questions/answers.html:207
+#: kitsune/questions/templates/questions/answers.html:232
 msgid "Topic"
 msgstr "Tema"
 
-#: kitsune/questions/templates/questions/answers.html:221
+#: kitsune/questions/templates/questions/answers.html:246
 msgid "System Details"
 msgstr "Datos del sistema"
 
-#: kitsune/questions/templates/questions/answers.html:234
+#: kitsune/questions/templates/questions/answers.html:259
 msgid "More system details"
 msgstr "Más datos del sistema"
 
-#: kitsune/questions/templates/questions/answers.html:239
+#: kitsune/questions/templates/questions/answers.html:264
 #, fuzzy
 msgid "Edit details"
 msgstr "Editar configuración"
 
-#: kitsune/questions/templates/questions/answers.html:240
+#: kitsune/questions/templates/questions/answers.html:265
 msgid "Save changes"
 msgstr "Guardar cambios"
 
-#: kitsune/questions/templates/questions/answers.html:249 kitsune/questions/templates/questions/answers.html:250
+#: kitsune/questions/templates/questions/answers.html:274 kitsune/questions/templates/questions/answers.html:275
 msgid "Additional System Details"
 msgstr "Datos adicionales del sistema"
 
-#: kitsune/questions/templates/questions/answers.html:252
+#: kitsune/questions/templates/questions/answers.html:277
 msgid "Sites Affected"
 msgstr "Sitios afectados"
 
-#: kitsune/questions/templates/questions/answers.html:256
+#: kitsune/questions/templates/questions/answers.html:281
 msgid "Crash ID"
 msgstr "ID del fallo"
 
-#: kitsune/questions/templates/questions/answers.html:260
+#: kitsune/questions/templates/questions/answers.html:285
 msgid "This happened"
 msgstr "Ocurrió esto"
 
-#: kitsune/questions/templates/questions/answers.html:268
+#: kitsune/questions/templates/questions/answers.html:293
 msgid "Installed Plug-ins"
 msgstr "Plugins instalados"
 
-#: kitsune/questions/templates/questions/answers.html:275
+#: kitsune/questions/templates/questions/answers.html:300
 msgid "Close"
 msgstr "Cerrar"
 
-#: kitsune/questions/templates/questions/answers.html:281 kitsune/questions/templates/questions/questions.html:218 kitsune/search/forms.py:163
+#: kitsune/questions/templates/questions/answers.html:306 kitsune/questions/templates/questions/questions.html:221 kitsune/search/forms.py:167
 msgid "Tags"
 msgstr "Etiquetas"
 
-#: kitsune/questions/templates/questions/answers.html:321 kitsune/tags/forms.py:121
+#: kitsune/questions/templates/questions/answers.html:346 kitsune/tags/forms.py:121
 msgid "Add"
 msgstr "Añadir"
 
-#: kitsune/questions/templates/questions/answers.html:348
+#: kitsune/questions/templates/questions/answers.html:373
 msgid "You have exceeded the number of answers that can be posted in a given amount of time. Please try again shortly."
 msgstr "Has sobrepasado el número de respuestas que se pueden publicar en un periodo de tiempo determinado. Prueba de nuevo en unos minutos."
 
-#: kitsune/questions/templates/questions/answers.html:391 kitsune/sumo/templates/includes/common_macros.html:27 kitsune/sumo/templates/mobile/base.html:62
+#: kitsune/questions/templates/questions/answers.html:417 kitsune/sumo/templates/includes/common_macros.html:27 kitsune/sumo/templates/mobile/base.html:62
 msgid "Ask a question"
 msgstr "Haz una pregunta"
 
-#: kitsune/questions/templates/questions/answers.html:395
-msgid "If you want to join us in helping users, <a href='{url}'>sign up as a contributor</a>."
+#: kitsune/questions/templates/questions/answers.html:421
+msgid "You must <a href=\"{login_url}\">log in to your account</a> to reply to posts. Please <a href=\"{ask_url}\">start a new question</a>, if you do not have an account yet."
 msgstr ""
 
 #. {t} is the title of the question.
@@ -3421,7 +3537,7 @@ msgstr "Incidencia enviada correctamente"
 msgid "Your issue has been submitted successfully. You should receive a confirmation email and hear back from us shortly."
 msgstr "Tu incidencia se ha enviado correctamente. Recibirás un correo de confirmación y tendrás noticias de nosotros muy pronto."
 
-#: kitsune/questions/templates/questions/metrics.html:2 kitsune/questions/templates/questions/metrics.html:9 kitsune/sumo/templates/includes/common_macros.html:142
+#: kitsune/questions/templates/questions/metrics.html:2 kitsune/questions/templates/questions/metrics.html:9 kitsune/sumo/templates/includes/common_macros.html:136
 msgid "Support Forum Metrics"
 msgstr "Métricas de los foros de asistencia"
 
@@ -3465,11 +3581,11 @@ msgstr "Esta pregunta no se ha hecho antes."
 msgid "Provide more details"
 msgstr "Proporciona más info"
 
-#: kitsune/questions/templates/questions/new_question.html:73
+#: kitsune/questions/templates/questions/new_question.html:78
 msgid "Fill in the details of your question."
 msgstr "Completa los detalles de tu pregunta."
 
-#: kitsune/questions/templates/questions/new_question.html:76 kitsune/questions/templates/questions/new_question_login.html:38
+#: kitsune/questions/templates/questions/new_question.html:81 kitsune/questions/templates/questions/new_question_login.html:38
 msgid "Post Question"
 msgstr "Publicar una pregunta"
 
@@ -3477,11 +3593,6 @@ msgstr "Publicar una pregunta"
 #, fuzzy
 msgid "Before you continue, you must sign in"
 msgstr "Antes de continuar, crea una nueva cuenta de asistencia"
-
-#: kitsune/questions/templates/questions/new_question_login.html:20 kitsune/questions/templates/questions/mobile/new_question_login.html:16 kitsune/sumo/templates/includes/common_macros.html:54
-#: kitsune/sumo/templates/mobile/base.html:83 kitsune/users/templates/users/auth.html:23 kitsune/users/templates/users/mobile/login.html:14
-msgid "Sign in with email"
-msgstr "Iniciar sesión con la cuenta de correo"
 
 #: kitsune/questions/templates/questions/new_question_login.html:24
 #, fuzzy
@@ -3545,7 +3656,7 @@ msgid "Unsolved"
 msgstr "Sin resolver"
 
 #: kitsune/questions/templates/questions/questions.html:92 kitsune/questions/templates/questions/questions.html:194 kitsune/questions/templates/questions/mobile/questions.html:130
-#: kitsune/search/forms.py:146 kitsune/search/templates/search/includes/result.html:14
+#: kitsune/search/forms.py:150 kitsune/search/templates/search/includes/result.html:14
 msgid "Solved"
 msgstr "Resueltas"
 
@@ -3591,11 +3702,15 @@ msgstr "vistas"
 msgid "Contributed"
 msgstr "Con colaboraciones"
 
-#: kitsune/questions/templates/questions/questions.html:206
+#: kitsune/questions/templates/questions/questions.html:203 kitsune/search/forms.py:146
+msgid "Archived"
+msgstr ""
+
+#: kitsune/questions/templates/questions/questions.html:209
 msgid "Posted by {user}"
 msgstr "Publicada(s) por {user}"
 
-#: kitsune/questions/templates/questions/questions.html:207 kitsune/questions/templates/questions/questions.html:213
+#: kitsune/questions/templates/questions/questions.html:210 kitsune/questions/templates/questions/questions.html:216
 msgid "on"
 msgstr "el"
 
@@ -4050,13 +4165,9 @@ msgstr "Hacer una pregunta"
 msgid "Try another topic"
 msgstr "Probar con otro tema"
 
-#: kitsune/questions/templates/questions/mobile/new_question.html:54
+#: kitsune/questions/templates/questions/mobile/new_question.html:52 kitsune/questions/templates/questions/mobile/new_question.html:57
 msgid "Post a question"
 msgstr "Publicar una pregunta"
-
-#: kitsune/questions/templates/questions/mobile/new_question.html:75 kitsune/sumo/templates/layout/paginator.html:30
-msgid "Next"
-msgstr "Siguiente"
 
 #: kitsune/questions/templates/questions/mobile/questions.html:16
 msgid "Top contributors"
@@ -4168,19 +4279,19 @@ msgstr "Tipo de tema"
 msgid "Search in forum"
 msgstr "Buscar en el foro"
 
-#: kitsune/search/forms.py:150
+#: kitsune/search/forms.py:154
 msgid "Has answers"
 msgstr "Tiene respuestas"
 
-#: kitsune/search/forms.py:154
+#: kitsune/search/forms.py:158
 msgid "Has helpful answers"
 msgstr "Tiene respuestas útiles"
 
-#: kitsune/search/forms.py:158
+#: kitsune/search/forms.py:162
 msgid "Votes"
 msgstr "Votos"
 
-#: kitsune/search/forms.py:161
+#: kitsune/search/forms.py:165
 msgid "tag1, tag2"
 msgstr "etiqueta1, etiqueta2"
 
@@ -4223,7 +4334,7 @@ msgstr "Buscar en la Ayuda de Mozilla"
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
 msgstr "La búsqueda no está disponible temporalmente. Vuelve a intentarlo dentro de unos minutos."
 
-#: kitsune/search/templates/search/form.html:4 kitsune/sumo/templates/includes/common_macros.html:147
+#: kitsune/search/templates/search/form.html:4 kitsune/sumo/templates/includes/common_macros.html:141
 msgid "Advanced Search"
 msgstr "Búsqueda avanzada"
 
@@ -4255,16 +4366,16 @@ msgstr "Foros de discusión"
 msgid "Article contains"
 msgstr "El artículo contiene"
 
-#: kitsune/search/templates/search/form.html:27 kitsune/search/templates/search/form.html:81 kitsune/search/templates/search/form.html:182
+#: kitsune/search/templates/search/form.html:27 kitsune/search/templates/search/form.html:81 kitsune/search/templates/search/form.html:189
 msgid "crashes on youtube"
 msgstr "cierres inesperados en youtube"
 
-#: kitsune/search/templates/search/form.html:74 kitsune/search/templates/search/form.html:175 kitsune/search/templates/search/form.html:225
+#: kitsune/search/templates/search/form.html:74 kitsune/search/templates/search/form.html:182 kitsune/search/templates/search/form.html:232
 msgctxt "button"
 msgid "Search Mozilla Support"
 msgstr "Buscar en la Ayuda de Mozilla"
 
-#: kitsune/search/templates/search/form.html:75 kitsune/search/templates/search/form.html:176 kitsune/search/templates/search/form.html:226
+#: kitsune/search/templates/search/form.html:75 kitsune/search/templates/search/form.html:183 kitsune/search/templates/search/form.html:233
 msgid "Use basic search"
 msgstr "Usar la búsqueda básica"
 
@@ -4272,27 +4383,27 @@ msgstr "Usar la búsqueda básica"
 msgid "Post contains"
 msgstr "La entrada contiene"
 
-#: kitsune/search/templates/search/form.html:117
+#: kitsune/search/templates/search/form.html:124
 msgid "Number of votes. Must be an integer."
 msgstr "Número de votos. Debe ser un entero."
 
-#: kitsune/search/templates/search/form.html:134
+#: kitsune/search/templates/search/form.html:141
 msgid "Note: Searching for \"tag1, tag2\" returns questions tagged with both tag1 and tag2"
 msgstr "Nota: la búsqueda de \"etiqueta1, etiqueta2\" devuelve preguntas con las etiquetas etiqueta1 y etiqueta2"
 
-#: kitsune/search/templates/search/form.html:155 kitsune/search/templates/search/form.html:200
+#: kitsune/search/templates/search/form.html:162 kitsune/search/templates/search/form.html:207
 msgid "Created date. Format: mm/dd/yy"
 msgstr "Fecha de creación. Formato: mm/dd/aa"
 
-#: kitsune/search/templates/search/form.html:161 kitsune/search/templates/search/form.html:206
+#: kitsune/search/templates/search/form.html:168 kitsune/search/templates/search/form.html:213
 msgid "Updated date. Format: mm/dd/yy"
 msgstr "Fecha de actualización. Formato: mm/dd/aa"
 
-#: kitsune/search/templates/search/form.html:181
+#: kitsune/search/templates/search/form.html:188
 msgid "Thread contains"
 msgstr "El tema contiene"
 
-#: kitsune/search/templates/search/form.html:234
+#: kitsune/search/templates/search/form.html:241
 msgid "Use advanced search"
 msgstr "Usar la búsqueda avanzada"
 
@@ -4894,6 +5005,18 @@ msgctxt "DB: karma.Title.name"
 msgid "Top 25 Contributor"
 msgstr "25 mayores colaboradores"
 
+#: kitsune/sumo/db_strings.py:184
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "Kitsune Contributor"
+msgstr "Colaboradores activos"
+
+#: kitsune/sumo/db_strings.py:185
+#, fuzzy
+msgctxt "DB: badger.Badge.description"
+msgid "Badge awarded to those who have contributed to the Kitsune code base."
+msgstr "Definición: número de personas que han colaborado en la base de conocimientos en los últimos 30 días."
+
 #: kitsune/sumo/form_fields.py:96
 msgid "To field is required."
 msgstr "Es necesario el campo \"Para\"."
@@ -4977,27 +5100,27 @@ msgctxt "site_title"
 msgid "Mozilla Support"
 msgstr "Ayuda de Mozilla"
 
-#: kitsune/sumo/templates/base.html:85
+#: kitsune/sumo/templates/base.html:81
 msgid "This is a staging site, the content gets overwritten on the 1st of every month.<br>The production site is <a href=\"http://support.mozilla.org\">here</a>."
 msgstr "Este es un sitio de pruebas y su contenido será sobrescrito el primer día de cada mes. <br>El sitio de producción está <a href=\"http://support.mozilla.org\">aquí</a>."
 
-#: kitsune/sumo/templates/base.html:96
+#: kitsune/sumo/templates/base.html:92
 msgid "This page doesn't have a mobile optimized version. Tap here to go back."
 msgstr "Esta página no dispone de una versión optimizada para dispositivos móviles. Toca aquí para volver."
 
-#: kitsune/sumo/templates/base.html:103
+#: kitsune/sumo/templates/base.html:99
 msgid "Tap here to go to the mobile version of the site."
 msgstr "Toca aquí para ir a una versión del sitio para dispositivos móviles."
 
-#: kitsune/sumo/templates/base.html:112
+#: kitsune/sumo/templates/base.html:108
 msgid "Your Firefox is out of date and may contain a security risk!"
 msgstr "¡Firefox no está actualizado y puede ser un riesgo para la seguridad!"
 
-#: kitsune/sumo/templates/base.html:116
+#: kitsune/sumo/templates/base.html:112
 msgid "Upgrade Firefox"
 msgstr "Actualiza Firefox"
 
-#: kitsune/sumo/templates/base.html:186
+#: kitsune/sumo/templates/base.html:182
 msgid ""
 "Portions of this content are &copy;1998–2013 <br>by individual mozilla.org contributors. Content <br>available under a <a href=\"//www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
@@ -5005,43 +5128,43 @@ msgstr ""
 "Algunos fragmentos de este contenido son &copy;1998–2013 <br>de colaboradores particulares de mozilla.org. El contenido está <br>disponible bajo una <a href=\"//www.mozilla.org/foundation/licensing/"
 "website-content.html\">licencia Creative Commons</a>."
 
-#: kitsune/sumo/templates/base.html:196
+#: kitsune/sumo/templates/base.html:192
 msgid "Contact Us"
 msgstr "Contacta con nosotros"
 
-#: kitsune/sumo/templates/base.html:197
+#: kitsune/sumo/templates/base.html:193
 msgid "Privacy Policy"
 msgstr "Política de privacidad"
 
-#: kitsune/sumo/templates/base.html:198
+#: kitsune/sumo/templates/base.html:194
 msgid "Legal Notices"
 msgstr "Advertencia legal"
 
-#: kitsune/sumo/templates/base.html:199
+#: kitsune/sumo/templates/base.html:195
 msgid "Report Trademark Abuse"
 msgstr "Informar de abuso de marca"
 
-#: kitsune/sumo/templates/base.html:200
+#: kitsune/sumo/templates/base.html:196
 msgid "Source Code"
 msgstr "Código fuente"
 
-#: kitsune/sumo/templates/base.html:205 kitsune/users/templates/users/profile.html:111 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:76
+#: kitsune/sumo/templates/base.html:201 kitsune/users/templates/users/profile.html:111 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:76
 msgid "Twitter"
 msgstr "Twitter"
 
-#: kitsune/sumo/templates/base.html:206 kitsune/users/templates/users/profile.html:117 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:80
+#: kitsune/sumo/templates/base.html:202 kitsune/users/templates/users/profile.html:117 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:80
 msgid "Facebook"
 msgstr "Facebook"
 
-#: kitsune/sumo/templates/base.html:207
+#: kitsune/sumo/templates/base.html:203
 msgid "Firefox Affiliates"
 msgstr "Firefox Affiliates"
 
-#: kitsune/sumo/templates/base.html:208
+#: kitsune/sumo/templates/base.html:204
 msgid "Switch to mobile site"
 msgstr "Cambiar a la versión para dispositivos móviles"
 
-#: kitsune/sumo/templates/email/base.html:213 kitsune/sumo/templates/mobile/base.html:113
+#: kitsune/sumo/templates/email/base.html:213 kitsune/sumo/templates/mobile/base.html:117
 msgid "Mozilla Support"
 msgstr "Ayuda de Mozilla"
 
@@ -5073,7 +5196,7 @@ msgstr "Debes tener las cookies activadas para entrar o registrarte."
 msgid "You do not have permission to access this page."
 msgstr "No tienes permisos para acceder a esta página."
 
-#: kitsune/sumo/templates/handlers/403.html:18 kitsune/users/templates/users/includes/macros.html:22
+#: kitsune/sumo/templates/handlers/403.html:18 kitsune/users/templates/users/includes/macros.html:21
 msgid "Log in"
 msgstr "Entrar"
 
@@ -5113,55 +5236,47 @@ msgstr "Configuración"
 msgid "Sign Out"
 msgstr "Cerrar sesión"
 
-#: kitsune/sumo/templates/includes/common_macros.html:56
-msgid "What's this"
-msgstr "Qué es esto"
-
-#: kitsune/sumo/templates/includes/common_macros.html:58
-msgid "SUMO has switched to Persona, a safe and simple way to sign in with just your e-mail address. <a href=\"%(url)s\">Learn more about why Mozilla is using Persona.</a>"
-msgstr "SUMO ha pasado a Persona, una manera segura y sencilla de iniciar sesión con únicamente tu dirección de correo. <a href=\"%(url)s\">Conoce más sobre por qué Mozilla usa Persona.</a>"
-
-#: kitsune/sumo/templates/includes/common_macros.html:68
+#: kitsune/sumo/templates/includes/common_macros.html:62
 msgid "Sign In / Register"
 msgstr "Identificarse / Registrarse"
 
-#: kitsune/sumo/templates/includes/common_macros.html:104 kitsune/sumo/templates/includes/common_macros.html:121
+#: kitsune/sumo/templates/includes/common_macros.html:98 kitsune/sumo/templates/includes/common_macros.html:115
 msgid "For Contributors"
 msgstr "Para colaboradores"
 
-#: kitsune/sumo/templates/includes/common_macros.html:133
+#: kitsune/sumo/templates/includes/common_macros.html:127
 msgid "Quickstart Guide"
 msgstr "Guía de inicio rápido para colaboradores"
 
-#: kitsune/sumo/templates/includes/common_macros.html:134
+#: kitsune/sumo/templates/includes/common_macros.html:128
 msgid "News &amp; Resources"
 msgstr "Noticias y recursos"
 
-#: kitsune/sumo/templates/includes/common_macros.html:135
+#: kitsune/sumo/templates/includes/common_macros.html:129
 msgid "Contributor Forums"
 msgstr "Foros de colaboradores"
 
-#: kitsune/sumo/templates/includes/common_macros.html:136
+#: kitsune/sumo/templates/includes/common_macros.html:130
 msgid "Article Discussions"
 msgstr "Discusiones de artículos"
 
-#: kitsune/sumo/templates/includes/common_macros.html:138
+#: kitsune/sumo/templates/includes/common_macros.html:132
 msgid "Localization Metrics"
 msgstr "Métricas de localización"
 
-#: kitsune/sumo/templates/includes/common_macros.html:140
+#: kitsune/sumo/templates/includes/common_macros.html:134
 msgid "Help on Twitter"
 msgstr "Ayuda en Twitter"
 
-#: kitsune/sumo/templates/includes/common_macros.html:141
+#: kitsune/sumo/templates/includes/common_macros.html:135
 msgid "Support Forum Home"
 msgstr "Página principal de los foros de asistencia"
 
-#: kitsune/sumo/templates/includes/common_macros.html:144
+#: kitsune/sumo/templates/includes/common_macros.html:138
 msgid "Moderate Forum Content"
 msgstr "Moderar contenido del foro"
 
-#: kitsune/sumo/templates/includes/common_macros.html:149
+#: kitsune/sumo/templates/includes/common_macros.html:143
 msgid "Karma Dashboard"
 msgstr "Panel de control de karma"
 
@@ -5180,10 +5295,6 @@ msgid "Page {n}"
 msgid_plural "Page {n}"
 msgstr[0] "Página {n}"
 msgstr[1] "Páginas {n}"
-
-#: kitsune/sumo/templates/layout/paginator.html:6
-msgid "Previous"
-msgstr "Anterior"
 
 #: kitsune/sumo/templates/mobile/base.html:17
 msgctxt "site_title"
@@ -5210,23 +5321,23 @@ msgstr "Buzón de sugerencias"
 msgid "Profile"
 msgstr "Perfil"
 
-#: kitsune/sumo/templates/mobile/base.html:86 kitsune/users/templates/users/includes/macros.html:82
+#: kitsune/sumo/templates/mobile/base.html:90 kitsune/users/templates/users/includes/macros.html:82
 msgid "Register"
 msgstr "Registrarse"
 
-#: kitsune/sumo/templates/mobile/base.html:90
+#: kitsune/sumo/templates/mobile/base.html:94
 msgid "Languages"
 msgstr "Idiomas"
 
-#: kitsune/sumo/templates/mobile/base.html:95 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
+#: kitsune/sumo/templates/mobile/base.html:99 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
 msgid "Switch language"
 msgstr "Cambiar idioma"
 
-#: kitsune/sumo/templates/mobile/base.html:96
+#: kitsune/sumo/templates/mobile/base.html:100
 msgid "Switch to desktop site"
 msgstr "Cambiar a la versión para equipos de escritorio"
 
-#: kitsune/sumo/templates/mobile/base.html:127
+#: kitsune/sumo/templates/mobile/base.html:131
 msgid "Get support for another platform:"
 msgstr "Obtener ayuda para otra plataforma:"
 
@@ -5538,19 +5649,19 @@ msgstr "perfil de registro"
 msgid "registration profiles"
 msgstr "perfiles de registro"
 
-#: kitsune/users/views.py:163
+#: kitsune/users/views.py:164
 msgid "Your account is already activated, log in below."
 msgstr "Tu cuenta ya está activada, puedes entrar a continuación."
 
-#: kitsune/users/views.py:210 kitsune/users/views.py:220
+#: kitsune/users/views.py:211 kitsune/users/views.py:221
 msgid "Account already activated"
 msgstr "Cuenta ya activada"
 
-#: kitsune/users/views.py:348
+#: kitsune/users/views.py:350
 msgid "Your settings have been saved."
 msgstr "Tu configuración ha sido guardada."
 
-#: kitsune/users/views.py:633
+#: kitsune/users/views.py:635
 msgid "We've sent an email with the username to any account using {email}."
 msgstr "Hemos enviado un correo con el nombre de usuario a cualquier cuenta que use {email}."
 
@@ -5620,15 +5731,20 @@ msgstr "Registrarse para ser colaborador/a"
 msgid "You don't need to register to <a href=\"{url}\">ask a question</a>."
 msgstr "No necesitas registrarte para <a href=\"{url}\">hacer una pregunta</a>."
 
-#: kitsune/users/templates/users/browserid_signup.html:10
+#: kitsune/users/templates/users/browserid_signup.html:5
+#, fuzzy
+msgid "Select a username"
+msgstr "Enviar nombre de usuario"
+
+#: kitsune/users/templates/users/browserid_signup.html:12 kitsune/users/templates/users/mobile/browserid_signup.html:5
 msgid "You're almost there!"
 msgstr "¡Casi has llegado!"
 
-#: kitsune/users/templates/users/browserid_signup.html:12
+#: kitsune/users/templates/users/browserid_signup.html:14 kitsune/users/templates/users/mobile/browserid_signup.html:12
 msgid "Please select a username and click continue to proceed with sign up."
 msgstr "Por favor, selecciona un nombre de usuario y pulsa Continuar para seguir con el registro."
 
-#: kitsune/users/templates/users/browserid_signup.html:24
+#: kitsune/users/templates/users/browserid_signup.html:27 kitsune/users/templates/users/mobile/browserid_signup.html:26
 msgid "Continue"
 msgstr "Continuar"
 
@@ -5923,11 +6039,11 @@ msgstr ""
 msgid "<a href=\"https://support.mozilla.org/en-US/kb/localize-firefox-help\">L10N Contributor</a> - Help to translate Firefox Help content to your language."
 msgstr "<a href=\"https://support.mozilla.org/en-US/kb/localize-firefox-help\">Colaborador en L10N:</a> ayuda a traducir los contenidos de la ayuda de Firefox en tu idioma."
 
-#: kitsune/users/templates/users/includes/macros.html:22
+#: kitsune/users/templates/users/includes/macros.html:21
 msgid "Logging in..."
 msgstr "Entrando..."
 
-#: kitsune/users/templates/users/includes/macros.html:22
+#: kitsune/users/templates/users/includes/macros.html:21
 msgid "Logged in!"
 msgstr "¡Ya estás!"
 
@@ -5974,6 +6090,10 @@ msgstr "Editar configuración"
 #: kitsune/users/templates/users/mobile/activate.html:6
 msgid "Successfully activated"
 msgstr "Activada correctamente"
+
+#: kitsune/users/templates/users/mobile/browserid_signup.html:10 kitsune/users/templates/users/mobile/register.html:13
+msgid "Create a support account."
+msgstr "Crear una cuenta de asistencia."
 
 #: kitsune/users/templates/users/mobile/change_email.html:3 kitsune/users/templates/users/mobile/change_email.html:27 kitsune/users/templates/users/mobile/change_email_done.html:3
 msgid "Change email"
@@ -6038,10 +6158,6 @@ msgstr "Restablecimiento de contraseña"
 #: kitsune/users/templates/users/mobile/register.html:7 kitsune/users/templates/users/mobile/register_done.html:7
 msgid "Register or sign in"
 msgstr "Regístrate o indentifícate"
-
-#: kitsune/users/templates/users/mobile/register.html:13
-msgid "Create a support account."
-msgstr "Crear una cuenta de asistencia."
 
 #: kitsune/users/templates/users/mobile/includes/macros.html:19
 msgid "Signing in..."
@@ -7052,10 +7168,6 @@ msgstr "Información de la revisión"
 msgid "Revision id:"
 msgstr "Identificador de la revisión:"
 
-#: kitsune/wiki/templates/wiki/revision.html:28
-msgid "Creator:"
-msgstr "Creador/a:"
-
 #: kitsune/wiki/templates/wiki/revision.html:36 kitsune/wiki/templates/wiki/revision.html:41
 msgid "Reviewed:"
 msgstr "Revisado:"
@@ -7562,11 +7674,6 @@ msgstr "Por favor, proporciona más info"
 msgid "{t} | {c}"
 msgstr "{t} | {c}"
 
-#: vendor/src/django-badger/badger/feeds.py:149
-#, fuzzy
-msgid "Recently awarded badges"
-msgstr "Actualizaciones recientemente aprobadas"
-
 #: vendor/src/django-badger/badger/feeds.py:156
 #, fuzzy
 msgid "{badgetitle} awarded to {username}"
@@ -7703,6 +7810,12 @@ msgstr ""
 #: vendor/src/django-tidings/tidings/templates/tidings/unsubscribe_success.html:8
 msgid "Unsubscribed"
 msgstr "Cancelado suscripción"
+
+#~ msgid "What's this"
+#~ msgstr "Qué es esto"
+
+#~ msgid "SUMO has switched to Persona, a safe and simple way to sign in with just your e-mail address. <a href=\"%(url)s\">Learn more about why Mozilla is using Persona.</a>"
+#~ msgstr "SUMO ha pasado a Persona, una manera segura y sencilla de iniciar sesión con únicamente tu dirección de correo. <a href=\"%(url)s\">Conoce más sobre por qué Mozilla usa Persona.</a>"
 
 #~ msgid "See the answer:"
 #~ msgstr "Ver la respuesta:"

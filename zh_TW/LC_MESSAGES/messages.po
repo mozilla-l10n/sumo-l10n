@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-13 08:04-0700\n"
+"POT-Creation-Date: 2013-09-24 06:28-0700\n"
 "PO-Revision-Date: 2013-09-22 13:16+0000\n"
 "Last-Translator: Peter <petercpg@mail.moztw.org>\n"
 "Language-Team: Chinese (traditional)\n"
@@ -86,7 +86,7 @@ msgstr "感謝您！"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email. Whitespace matters!
-#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:551 kitsune/questions/templates/questions/email/confirm_question.html:4
+#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:494 kitsune/questions/templates/questions/email/confirm_question.html:4
 msgid "Please confirm your Firefox Help question"
 msgstr "請確認您的 Firefox Help 問題"
 
@@ -311,7 +311,7 @@ msgstr "您也可以加入我們的 Buddy Program，讓較有經驗的志工來�
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is at the end of an email.
-#: kitsune/users/templates/users/email/contributor.ltxt:76 kitsune/users/models.py:237 kitsune/users/utils.py:88 kitsune/users/views.py:412 kitsune/users/templates/users/email/contributor.html:76
+#: kitsune/users/templates/users/email/contributor.ltxt:76 kitsune/users/models.py:237 kitsune/users/utils.py:89 kitsune/users/views.py:414 kitsune/users/templates/users/email/contributor.html:76
 msgid "Welcome to SUMO!"
 msgstr "歡迎來到 SUMO！"
 
@@ -471,46 +471,46 @@ msgstr "顯示直到某時"
 msgid "New announcement for {group}"
 msgstr "{group} 的新公告"
 
-#: kitsune/customercare/views.py:29 kitsune/dashboards/readouts.py:327 kitsune/questions/templates/questions/questions.html:75 kitsune/questions/templates/questions/mobile/questions.html:110
+#: kitsune/customercare/views.py:30 kitsune/dashboards/readouts.py:327 kitsune/questions/templates/questions/questions.html:75 kitsune/questions/templates/questions/mobile/questions.html:110
 msgid "Most Recent"
 msgstr "最新"
 
-#: kitsune/customercare/views.py:30
+#: kitsune/customercare/views.py:31
 msgid "Unanswered"
 msgstr "未解答"
 
-#: kitsune/customercare/views.py:31
+#: kitsune/customercare/views.py:32
 msgid "Answered"
 msgstr "已解答"
 
-#: kitsune/customercare/views.py:32 kitsune/questions/templates/questions/metrics.html:14 kitsune/questions/templates/questions/metrics.html:16 kitsune/questions/templates/questions/questions.html:86
+#: kitsune/customercare/views.py:33 kitsune/questions/templates/questions/metrics.html:14 kitsune/questions/templates/questions/metrics.html:16 kitsune/questions/templates/questions/questions.html:86
 #: kitsune/questions/templates/questions/mobile/questions.html:124
 msgid "All"
 msgstr "全部"
 
 #. L10n: the tweet needs to be a reply to another tweet.
-#: kitsune/customercare/views.py:191
+#: kitsune/customercare/views.py:193
 msgid "Reply-to is empty"
 msgstr "回覆欄位是空白的"
 
 #. L10n: the tweet has no content.
-#: kitsune/customercare/views.py:196
+#: kitsune/customercare/views.py:198
 msgid "Message is empty"
 msgstr "空白的訊息欄位"
 
-#: kitsune/customercare/views.py:199
+#: kitsune/customercare/views.py:201
 msgid "Message is too long"
 msgstr "訊息過長"
 
-#: kitsune/customercare/views.py:213 kitsune/customercare/views.py:297
+#: kitsune/customercare/views.py:215 kitsune/customercare/views.py:299
 msgid "An error occured: {message}"
 msgstr "發生錯誤: {message}"
 
-#: kitsune/customercare/views.py:280 kitsune/customercare/views.py:285
+#: kitsune/customercare/views.py:282 kitsune/customercare/views.py:287
 msgid "Invalid ID."
 msgstr "無效的 ID。"
 
-#: kitsune/customercare/views.py:289
+#: kitsune/customercare/views.py:291
 msgid "Tweets that are replies or have replies must not be hidden."
 msgstr "不能隱藏作為回覆或有回覆的 Tweet。"
 
@@ -559,7 +559,7 @@ msgid "Sign out"
 msgstr "登出"
 
 #: kitsune/customercare/templates/customercare/landing.html:72 kitsune/customercare/templates/customercare/twitter_modal.html:14
-#: kitsune/questions/templates/questions/mobile/new_question_login.html:38 kitsune/sumo/templates/mobile/base.html:85 kitsune/users/templates/users/mobile/login.html:7
+#: kitsune/questions/templates/questions/mobile/new_question_login.html:38 kitsune/sumo/templates/mobile/base.html:89 kitsune/users/templates/users/mobile/login.html:7
 #: kitsune/users/templates/users/mobile/includes/macros.html:19
 msgid "Sign in"
 msgstr "登入"
@@ -638,23 +638,29 @@ msgstr "Army of Awesome 永遠不會在未經您授權前發出 tweet。"
 msgid "If you’re registered with Mozilla Support, we will keep you logged into Twitter, so you can use Army of Awesome instantly."
 msgstr "若您註冊了 Mozilla Support 帳號，我們將會保留您在 Twitter 的登入狀態，這樣就能即時使用 Army of Awesome。"
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:21
+#: kitsune/customercare/templates/customercare/twitter_modal.html:24 kitsune/questions/templates/questions/new_question_login.html:20
+#: kitsune/questions/templates/questions/mobile/new_question_login.html:16 kitsune/sumo/templates/includes/common_macros.html:55 kitsune/sumo/templates/includes/common_macros.html:57
+#: kitsune/sumo/templates/mobile/base.html:84 kitsune/sumo/templates/mobile/base.html:86 kitsune/users/templates/users/auth.html:23 kitsune/users/templates/users/mobile/login.html:14
+msgid "Sign in with email"
+msgstr "使用 email 帳號登入"
+
+#: kitsune/customercare/templates/customercare/twitter_modal.html:28
 msgid "Are you registered with Mozilla Support?"
 msgstr "已經註冊 Mozilla Support 帳號了嗎？"
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:26
+#: kitsune/customercare/templates/customercare/twitter_modal.html:33
 msgid "Yes, I am."
 msgstr "是，我註冊過了。"
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:27
+#: kitsune/customercare/templates/customercare/twitter_modal.html:34
 msgid "Click to sign in."
 msgstr "點此處登入。"
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:30
+#: kitsune/customercare/templates/customercare/twitter_modal.html:37
 msgid "No, I'm not."
 msgstr "不，我還沒註冊過。"
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:31
+#: kitsune/customercare/templates/customercare/twitter_modal.html:38
 msgid "Click to register."
 msgstr "點此處註冊。"
 
@@ -936,7 +942,7 @@ msgstr "所有罐頭回覆的在地化狀態"
 msgid "All canned responses articles..."
 msgstr "所有的罐頭回覆文章…"
 
-#: kitsune/dashboards/views.py:57 kitsune/dashboards/templates/dashboards/contributors.html:4 kitsune/sumo/templates/includes/common_macros.html:137
+#: kitsune/dashboards/views.py:57 kitsune/dashboards/templates/dashboards/contributors.html:4 kitsune/sumo/templates/includes/common_macros.html:131
 msgid "Knowledge Base Dashboard"
 msgstr "知識庫主控台"
 
@@ -1063,7 +1069,7 @@ msgstr "所有其他產品"
 #: kitsune/products/templates/products/documents.html:18 kitsune/products/templates/products/product.html:4 kitsune/products/templates/products/product.html:9
 #: kitsune/products/templates/products/product.html:16 kitsune/products/templates/products/includes/product_macros.html:12 kitsune/products/templates/products/mobile/documents.html:10
 #: kitsune/products/templates/products/mobile/documents.html:27 kitsune/products/templates/products/mobile/product.html:3 kitsune/products/templates/products/mobile/product.html:8
-#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/answers.html:192 kitsune/questions/templates/questions/mobile/questions.html:36
+#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/answers.html:217 kitsune/questions/templates/questions/mobile/questions.html:36
 #: kitsune/search/views.py:482 kitsune/search/templates/search/results.html:69 kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
 msgctxt "DB: products.Product.title"
 msgid "None"
@@ -1078,7 +1084,7 @@ msgstr "所有主題"
 #: kitsune/products/templates/products/documents.html:49 kitsune/products/templates/products/includes/topic_macros.html:70 kitsune/products/templates/products/includes/topic_macros.html:93
 #: kitsune/products/templates/products/includes/topic_macros.html:101 kitsune/products/templates/products/mobile/documents.html:6 kitsune/products/templates/products/mobile/documents.html:8
 #: kitsune/products/templates/products/mobile/documents.html:21 kitsune/products/templates/products/mobile/documents.html:38 kitsune/products/templates/products/mobile/product.html:65
-#: kitsune/questions/templates/questions/answers.html:208
+#: kitsune/questions/templates/questions/answers.html:233
 msgctxt "DB: products.Topic.title"
 msgid "None"
 msgstr "無"
@@ -1099,7 +1105,7 @@ msgstr ""
 msgid "Localization Team"
 msgstr "在地化團隊"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:194 kitsune/sumo/templates/includes/common_macros.html:139 kitsune/wiki/templates/wiki/recent_revisions.html:3
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:194 kitsune/sumo/templates/includes/common_macros.html:133 kitsune/wiki/templates/wiki/recent_revisions.html:3
 msgid "Recent Revisions"
 msgstr "最近編修"
 
@@ -1190,7 +1196,8 @@ msgid "Content:"
 msgstr "內容："
 
 #: kitsune/flagit/templates/flagit/includes/flagged_answer.html:4 kitsune/flagit/templates/flagit/includes/flagged_post.html:6 kitsune/flagit/templates/flagit/includes/flagged_question.html:6
-#: kitsune/questions/templates/questions/edit_answer.html:23 kitsune/wiki/templates/wiki/revision.html:24
+#: kitsune/kbadge/templates/badger/award_detail.html:29 kitsune/kbadge/templates/badger/badge_detail.html:29 kitsune/questions/templates/questions/edit_answer.html:23
+#: kitsune/wiki/templates/wiki/revision.html:24
 msgid "Created:"
 msgstr "建立於"
 
@@ -1325,7 +1332,7 @@ msgstr "編輯影片 | {t} | 媒體檔案庫"
 
 #: kitsune/gallery/templates/gallery/confirm_media_delete.html:13 kitsune/gallery/templates/gallery/edit_media.html:7 kitsune/gallery/templates/gallery/gallery.html:2
 #: kitsune/gallery/templates/gallery/gallery.html:5 kitsune/gallery/templates/gallery/gallery.html:11 kitsune/gallery/templates/gallery/media.html:8 kitsune/gallery/templates/gallery/search.html:5
-#: kitsune/gallery/templates/gallery/search.html:9 kitsune/sumo/templates/includes/common_macros.html:146
+#: kitsune/gallery/templates/gallery/search.html:9 kitsune/sumo/templates/includes/common_macros.html:140
 msgid "Media Gallery"
 msgstr "媒體檔案庫"
 
@@ -1672,6 +1679,94 @@ msgstr "6 個月"
 msgid "1 year"
 msgstr "1 年"
 
+#: kitsune/kbadge/templates/badger/award_detail.html:8
+msgid "Awarded badge: %(badge_name)s"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/award_detail.html:8 kitsune/kbadge/templates/badger/awards_list.html:8 kitsune/kbadge/templates/badger/awards_list.html:28
+#: kitsune/kbadge/templates/badger/awards_list.html:29 kitsune/kbadge/templates/badger/badge_detail.html:8 kitsune/kbadge/templates/kbadge/includes/macros.html:12
+#: kitsune/kbadge/templates/kbadge/includes/macros.html:13
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "None"
+msgstr "無"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:15 kitsune/kbadge/templates/badger/badge_detail.html:15
+#, fuzzy
+msgid "Image:"
+msgstr "影像"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:20 kitsune/kbadge/templates/badger/badge_detail.html:20
+#, fuzzy
+msgid "Description:"
+msgstr "描述"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:21 kitsune/kbadge/templates/badger/badge_detail.html:21
+#, fuzzy
+msgctxt "DB: badger.Badge.description"
+msgid "None"
+msgstr "無"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:25 kitsune/kbadge/templates/badger/badge_detail.html:25 kitsune/wiki/templates/wiki/revision.html:28
+msgid "Creator:"
+msgstr "建立者:"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:32 kitsune/kbadge/templates/badger/badge_detail.html:32
+msgid "Modified:"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/award_detail.html:38
+#, fuzzy
+msgid "Award details"
+msgstr "編輯詳情"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:40
+msgid "Awarded to:"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/award_detail.html:49
+#, fuzzy
+msgid "Explanation:"
+msgstr "應用程式"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:54
+#, fuzzy
+msgid "Awarded by:"
+msgstr "建立者:"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:63
+msgid "Issued on:"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/awards_list.html:8
+msgid "<h2>Recently awarded &quot;%(badge_name)s&quot; badges</h2>"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/awards_list.html:12 vendor/src/django-badger/badger/feeds.py:149
+msgid "Recently awarded badges"
+msgstr "最近頒發的勳章"
+
+#: kitsune/kbadge/templates/badger/awards_list.html:32
+msgid "awarded to"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/awards_list.html:48 kitsune/sumo/templates/layout/paginator.html:6
+msgid "Previous"
+msgstr "上一個"
+
+#: kitsune/kbadge/templates/badger/awards_list.html:53 kitsune/questions/templates/questions/mobile/new_question.html:79 kitsune/sumo/templates/layout/paginator.html:30
+msgid "Next"
+msgstr "下一個"
+
+#: kitsune/kbadge/templates/badger/badge_detail.html:8
+msgid "Badge: %(badge_name)s"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/badge_detail.html:39
+#, fuzzy
+msgid "Recent awardees"
+msgstr "最近頒發的勳章"
+
 #: kitsune/kbforums/events.py:23
 msgid "Re: {forum} - {thread}"
 msgstr "Re: {forum} - {thread}"
@@ -1920,11 +2015,11 @@ msgstr "噢！看來目前沒有文章！"
 msgid "Post a reply"
 msgstr "回覆"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:368 kitsune/questions/templates/questions/mobile/answers.html:44
+#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:393 kitsune/questions/templates/questions/mobile/answers.html:44
 msgid "Post Reply"
 msgstr "張貼回覆"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:369 kitsune/questions/templates/questions/edit_answer.html:53
+#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:394 kitsune/questions/templates/questions/edit_answer.html:53
 msgid "Preview Reply"
 msgstr "預覽回覆"
 
@@ -1988,11 +2083,11 @@ msgstr "這個討論區主要討論如何改進「%(title)s」這篇文章的在
 msgid "If you need help with Firefox, please <a href=\"%(aaq_url)s\">ask a question</a>."
 msgstr "若您需要 Firefox 的使用幫助，請 <a href=\"%(aaq_url)s\">直接問個問題</a>。"
 
-#: kitsune/kbforums/templates/kbforums/includes/post.html:12 kitsune/questions/templates/questions/answers.html:149 kitsune/questions/templates/questions/includes/answer.html:115
+#: kitsune/kbforums/templates/kbforums/includes/post.html:12 kitsune/questions/templates/questions/answers.html:158 kitsune/questions/templates/questions/includes/answer.html:115
 msgid "Edit this post"
 msgstr "編輯此文章"
 
-#: kitsune/kbforums/templates/kbforums/includes/post.html:15 kitsune/questions/templates/questions/answers.html:154 kitsune/questions/templates/questions/includes/answer.html:120
+#: kitsune/kbforums/templates/kbforums/includes/post.html:15 kitsune/questions/templates/questions/answers.html:163 kitsune/questions/templates/questions/includes/answer.html:120
 msgid "Delete this post"
 msgstr "刪除此文章"
 
@@ -2022,7 +2117,7 @@ msgstr "關閉我的語系的討論電子郵件。"
 msgid "Get emailed when there is new discussion activity in my locale."
 msgstr "在我的語系有新的討論時請用電子郵件通知我"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:4 kitsune/sumo/templates/includes/common_macros.html:151
+#: kitsune/kpi/templates/kpi/dashboard.html:4 kitsune/sumo/templates/includes/common_macros.html:145
 msgid "KPI Dashboard"
 msgstr "KPI 主控台"
 
@@ -2646,15 +2741,15 @@ msgstr ""
 msgid "Solution found for question: %s"
 msgstr ""
 
-#: kitsune/questions/feeds.py:36
+#: kitsune/questions/feeds.py:39
 msgid "Recently updated questions"
 msgstr "最近更新的問題"
 
-#: kitsune/questions/feeds.py:79
+#: kitsune/questions/feeds.py:86
 msgid "Recently updated questions tagged %s"
 msgstr "最近更新的關於 %s 的問題"
 
-#: kitsune/questions/feeds.py:97
+#: kitsune/questions/feeds.py:104
 msgid "Recent answers to %s"
 msgstr "%s 的最新解答"
 
@@ -2701,7 +2796,7 @@ msgstr "一週發生數次"
 msgid "Every time Firefox opened"
 msgstr "每當開啟 Firefox 的時候"
 
-#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:264
+#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:289
 msgid "This started when..."
 msgstr ""
 
@@ -2983,56 +3078,56 @@ msgstr "Thunderbird"
 msgid "or other Mozilla products"
 msgstr "或其他 Mozilla 產品"
 
-#: kitsune/questions/views.py:78
+#: kitsune/questions/views.py:75
 msgid "That tag does not exist."
 msgstr "該標籤不存在。"
 
-#: kitsune/questions/views.py:79
+#: kitsune/questions/views.py:76
 msgid "Please provide a tag."
 msgstr "請提供一個 tag。"
 
 #. L10n: This shouldn't happen unless people tamper with POST data.
-#: kitsune/questions/views.py:561
+#: kitsune/questions/views.py:504
 msgid "Request type not recognized."
 msgstr ""
 
-#: kitsune/questions/views.py:618
+#: kitsune/questions/views.py:561
 msgid "Done! Your question is now posted on the Mozilla community support forum."
 msgstr "完成了！您的問題已經張貼至 Mozilla 社群支援討論區。"
 
-#: kitsune/questions/views.py:820
+#: kitsune/questions/views.py:764
 msgid "Thank you for choosing a solution!"
 msgstr "感謝您選擇解決方式！"
 
-#: kitsune/questions/views.py:845
+#: kitsune/questions/views.py:789
 msgid "The solution was undone successfully."
 msgstr "已成功還原解決方式。"
 
-#: kitsune/questions/views.py:916
+#: kitsune/questions/views.py:860
 msgid "Glad to hear it!"
 msgstr ""
 
-#: kitsune/questions/views.py:919 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
+#: kitsune/questions/views.py:863 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
 msgid "Sorry to hear that."
 msgstr "很抱歉聽到這消息。"
 
-#: kitsune/questions/views.py:940
+#: kitsune/questions/views.py:884
 msgid "You already voted on this reply."
 msgstr "這篇文章您已經投票過了。"
 
-#: kitsune/questions/views.py:1160
+#: kitsune/questions/views.py:1118
 msgid "Could not send a message to that email address."
 msgstr ""
 
-#: kitsune/questions/views.py:1165
+#: kitsune/questions/views.py:1123
 msgid "You will be notified of updates by email."
 msgstr ""
 
-#: kitsune/questions/views.py:1167
+#: kitsune/questions/views.py:1125
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr ""
 
-#: kitsune/questions/views.py:1247
+#: kitsune/questions/views.py:1205
 msgid "There was an error submitting the ticket. Please try again later."
 msgstr ""
 
@@ -3077,168 +3172,187 @@ msgstr ""
 msgid "{q} | Firefox Support Forum"
 msgstr "{q} | Firefox 技術支援首頁"
 
-#: kitsune/questions/templates/questions/answers.html:29
+#: kitsune/questions/templates/questions/answers.html:30
 msgid "This thread was closed."
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:30
+#: kitsune/questions/templates/questions/answers.html:32
+#, fuzzy
+msgid "This thread was archived."
+msgstr "已停用此使用者。"
+
+#: kitsune/questions/templates/questions/answers.html:34
+msgid "This thread was closed and archived."
+msgstr ""
+
+#: kitsune/questions/templates/questions/answers.html:38
 msgid "Please ask a new question if you need help."
 msgstr ""
 
 #. {n} is the number of replies.
-#: kitsune/questions/templates/questions/answers.html:41 kitsune/search/templates/search/includes/result.html:18
+#: kitsune/questions/templates/questions/answers.html:50 kitsune/search/templates/search/includes/result.html:18
 msgid "1 reply"
 msgid_plural "{n} replies"
 msgstr[0] "{n} 個回覆"
 
-#: kitsune/questions/templates/questions/answers.html:43 kitsune/search/templates/search/includes/result.html:21
+#: kitsune/questions/templates/questions/answers.html:52 kitsune/search/templates/search/includes/result.html:21
 msgid "No replies"
 msgstr "無回覆"
 
-#: kitsune/questions/templates/questions/answers.html:48 kitsune/questions/templates/questions/includes/have_problem.html:3
+#: kitsune/questions/templates/questions/answers.html:57 kitsune/questions/templates/questions/includes/have_problem.html:3
 msgid "has this problem"
 msgid_plural "have this problem"
 msgstr[0] "有這個問題"
 
-#: kitsune/questions/templates/questions/answers.html:56
+#: kitsune/questions/templates/questions/answers.html:65
 msgid "%(count)s view"
 msgid_plural "%(count)s views"
 msgstr[0] ""
 
-#: kitsune/questions/templates/questions/answers.html:66 kitsune/questions/templates/questions/questions.html:212
+#: kitsune/questions/templates/questions/answers.html:75 kitsune/questions/templates/questions/questions.html:215
 msgid "Last reply by {user}"
 msgstr "{user} 最近回覆"
 
-#: kitsune/questions/templates/questions/answers.html:86 kitsune/questions/templates/questions/includes/answer.html:31
+#: kitsune/questions/templates/questions/answers.html:95 kitsune/questions/templates/questions/includes/answer.html:31
 msgid "Posted"
 msgstr "已張貼"
 
-#: kitsune/questions/templates/questions/answers.html:96 kitsune/questions/templates/questions/includes/answer.html:59
+#: kitsune/questions/templates/questions/answers.html:105 kitsune/questions/templates/questions/includes/answer.html:59
 msgid "Modified {datetime} by {name}"
 msgstr "由 {name} 於 {datetime} 修改"
 
-#: kitsune/questions/templates/questions/answers.html:102
+#: kitsune/questions/templates/questions/answers.html:111
 msgid "Chosen solution"
 msgstr "被選擇的解決方法"
 
-#: kitsune/questions/templates/questions/answers.html:102
+#: kitsune/questions/templates/questions/answers.html:111
 msgid "by"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:106
+#: kitsune/questions/templates/questions/answers.html:115
 msgid "Read this answer in context"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:115
+#: kitsune/questions/templates/questions/answers.html:124
 msgid "Helpful replies"
 msgstr "有幫助的回覆"
 
-#: kitsune/questions/templates/questions/answers.html:119
+#: kitsune/questions/templates/questions/answers.html:128
 msgid "Go to answer"
 msgstr "跳到解答"
 
-#: kitsune/questions/templates/questions/answers.html:133 kitsune/questions/templates/questions/answers.html:387 kitsune/questions/templates/questions/mobile/answers.html:32
+#: kitsune/questions/templates/questions/answers.html:142 kitsune/questions/templates/questions/answers.html:413 kitsune/questions/templates/questions/mobile/answers.html:32
 msgid "I have this problem, too"
 msgstr "我也有這個問題"
 
-#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:355
+#: kitsune/questions/templates/questions/answers.html:146 kitsune/questions/templates/questions/answers.html:380
 msgid "Post a Reply"
 msgstr "發表回覆"
 
-#: kitsune/questions/templates/questions/answers.html:145
+#: kitsune/questions/templates/questions/answers.html:154
 msgid "Question tools"
 msgstr "問題工具"
 
-#: kitsune/questions/templates/questions/answers.html:159
+#: kitsune/questions/templates/questions/answers.html:168
 msgid "Unlock this post"
 msgstr "解鎖此文章"
 
-#: kitsune/questions/templates/questions/answers.html:159
+#: kitsune/questions/templates/questions/answers.html:168
 msgid "Lock this post"
 msgstr "鎖定此文章"
 
-#: kitsune/questions/templates/questions/answers.html:167
+#: kitsune/questions/templates/questions/answers.html:179
+#, fuzzy
+msgid "Unarchive this post"
+msgstr "解鎖此文章"
+
+#: kitsune/questions/templates/questions/answers.html:181
+#, fuzzy
+msgid "Archive this post"
+msgstr "編輯此文章"
+
+#: kitsune/questions/templates/questions/answers.html:192
 msgid "Stop email updates"
 msgstr "停止發送電子郵件更新"
 
-#: kitsune/questions/templates/questions/answers.html:172 kitsune/questions/templates/questions/includes/email_subscribe.html:2
+#: kitsune/questions/templates/questions/answers.html:197 kitsune/questions/templates/questions/includes/email_subscribe.html:2
 msgid "Get email updates"
 msgstr "取得電子郵件更新"
 
-#: kitsune/questions/templates/questions/answers.html:177
+#: kitsune/questions/templates/questions/answers.html:202
 msgid "Subscribe to feed"
 msgstr "訂閱資訊來源"
 
-#: kitsune/questions/templates/questions/answers.html:186
+#: kitsune/questions/templates/questions/answers.html:211
 msgid "Question details"
 msgstr "問題詳情"
 
-#: kitsune/questions/templates/questions/answers.html:191 kitsune/questions/templates/questions/includes/aaq_macros.html:41
+#: kitsune/questions/templates/questions/answers.html:216 kitsune/questions/templates/questions/includes/aaq_macros.html:41
 msgid "Product"
 msgstr "產品"
 
-#: kitsune/questions/templates/questions/answers.html:207
+#: kitsune/questions/templates/questions/answers.html:232
 msgid "Topic"
 msgstr "主題"
 
-#: kitsune/questions/templates/questions/answers.html:221
+#: kitsune/questions/templates/questions/answers.html:246
 msgid "System Details"
 msgstr "系統詳情"
 
-#: kitsune/questions/templates/questions/answers.html:234
+#: kitsune/questions/templates/questions/answers.html:259
 msgid "More system details"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:239
+#: kitsune/questions/templates/questions/answers.html:264
 msgid "Edit details"
 msgstr "編輯詳情"
 
-#: kitsune/questions/templates/questions/answers.html:240
+#: kitsune/questions/templates/questions/answers.html:265
 msgid "Save changes"
 msgstr "儲存更改"
 
-#: kitsune/questions/templates/questions/answers.html:249 kitsune/questions/templates/questions/answers.html:250
+#: kitsune/questions/templates/questions/answers.html:274 kitsune/questions/templates/questions/answers.html:275
 msgid "Additional System Details"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:252
+#: kitsune/questions/templates/questions/answers.html:277
 msgid "Sites Affected"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:256
+#: kitsune/questions/templates/questions/answers.html:281
 msgid "Crash ID"
 msgstr "錯誤 ID"
 
-#: kitsune/questions/templates/questions/answers.html:260
+#: kitsune/questions/templates/questions/answers.html:285
 msgid "This happened"
 msgstr "這發生了"
 
-#: kitsune/questions/templates/questions/answers.html:268
+#: kitsune/questions/templates/questions/answers.html:293
 msgid "Installed Plug-ins"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:275
+#: kitsune/questions/templates/questions/answers.html:300
 msgid "Close"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:281 kitsune/questions/templates/questions/questions.html:218 kitsune/search/forms.py:163
+#: kitsune/questions/templates/questions/answers.html:306 kitsune/questions/templates/questions/questions.html:221 kitsune/search/forms.py:167
 msgid "Tags"
 msgstr "標籤"
 
-#: kitsune/questions/templates/questions/answers.html:321 kitsune/tags/forms.py:121
+#: kitsune/questions/templates/questions/answers.html:346 kitsune/tags/forms.py:121
 msgid "Add"
 msgstr "新增"
 
-#: kitsune/questions/templates/questions/answers.html:348
+#: kitsune/questions/templates/questions/answers.html:373
 msgid "You have exceeded the number of answers that can be posted in a given amount of time. Please try again shortly."
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:391 kitsune/sumo/templates/includes/common_macros.html:27 kitsune/sumo/templates/mobile/base.html:62
+#: kitsune/questions/templates/questions/answers.html:417 kitsune/sumo/templates/includes/common_macros.html:27 kitsune/sumo/templates/mobile/base.html:62
 msgid "Ask a question"
 msgstr "問個問題"
 
-#: kitsune/questions/templates/questions/answers.html:395
-msgid "If you want to join us in helping users, <a href='{url}'>sign up as a contributor</a>."
+#: kitsune/questions/templates/questions/answers.html:421
+msgid "You must <a href=\"{login_url}\">log in to your account</a> to reply to posts. Please <a href=\"{ask_url}\">start a new question</a>, if you do not have an account yet."
 msgstr ""
 
 #. {t} is the title of the question.
@@ -3377,7 +3491,7 @@ msgstr "已成功送出問題"
 msgid "Your issue has been submitted successfully. You should receive a confirmation email and hear back from us shortly."
 msgstr ""
 
-#: kitsune/questions/templates/questions/metrics.html:2 kitsune/questions/templates/questions/metrics.html:9 kitsune/sumo/templates/includes/common_macros.html:142
+#: kitsune/questions/templates/questions/metrics.html:2 kitsune/questions/templates/questions/metrics.html:9 kitsune/sumo/templates/includes/common_macros.html:136
 msgid "Support Forum Metrics"
 msgstr "技術支援討論區統計"
 
@@ -3421,22 +3535,17 @@ msgstr ""
 msgid "Provide more details"
 msgstr "提供更多詳情"
 
-#: kitsune/questions/templates/questions/new_question.html:73
+#: kitsune/questions/templates/questions/new_question.html:78
 msgid "Fill in the details of your question."
 msgstr ""
 
-#: kitsune/questions/templates/questions/new_question.html:76 kitsune/questions/templates/questions/new_question_login.html:38
+#: kitsune/questions/templates/questions/new_question.html:81 kitsune/questions/templates/questions/new_question_login.html:38
 msgid "Post Question"
 msgstr "張貼問題"
 
 #: kitsune/questions/templates/questions/new_question_login.html:19 kitsune/questions/templates/questions/mobile/new_question_login.html:14
 msgid "Before you continue, you must sign in"
 msgstr "您必須登入才能繼續"
-
-#: kitsune/questions/templates/questions/new_question_login.html:20 kitsune/questions/templates/questions/mobile/new_question_login.html:16 kitsune/sumo/templates/includes/common_macros.html:54
-#: kitsune/sumo/templates/mobile/base.html:83 kitsune/users/templates/users/auth.html:23 kitsune/users/templates/users/mobile/login.html:14
-msgid "Sign in with email"
-msgstr "使用 email 帳號登入"
 
 #: kitsune/questions/templates/questions/new_question_login.html:24
 msgid "It appears you do not have an existing account"
@@ -3466,9 +3575,7 @@ msgstr[0] "最近 <strong>24 小時</strong> 中有 <strong>%(recent_unanswered_
 # Found 123 results for abc in 正體中文 (繁體)
 #: kitsune/questions/templates/questions/questions.html:42
 msgid "<strong>0</strong> questions in the last <strong>24 hours</strong> have no reply. <strong>Good job!</strong>"
-msgstr ""
-"最近 <strong>24 小時內</strong> 有 <strong>0</strong> "
-"個問題沒有回覆。<strong>好樣的！</strong>"
+msgstr "最近 <strong>24 小時內</strong> 有 <strong>0</strong> 個問題沒有回覆。<strong>好樣的！</strong>"
 
 #: kitsune/questions/templates/questions/questions.html:56
 msgid "Showing questions tagged:"
@@ -3499,7 +3606,7 @@ msgid "Unsolved"
 msgstr "未解決"
 
 #: kitsune/questions/templates/questions/questions.html:92 kitsune/questions/templates/questions/questions.html:194 kitsune/questions/templates/questions/mobile/questions.html:130
-#: kitsune/search/forms.py:146 kitsune/search/templates/search/includes/result.html:14
+#: kitsune/search/forms.py:150 kitsune/search/templates/search/includes/result.html:14
 msgid "Solved"
 msgstr "已解決"
 
@@ -3544,11 +3651,15 @@ msgstr "檢視"
 msgid "Contributed"
 msgstr "已貢獻"
 
-#: kitsune/questions/templates/questions/questions.html:206
+#: kitsune/questions/templates/questions/questions.html:203 kitsune/search/forms.py:146
+msgid "Archived"
+msgstr ""
+
+#: kitsune/questions/templates/questions/questions.html:209
 msgid "Posted by {user}"
 msgstr "由 {user} 張貼"
 
-#: kitsune/questions/templates/questions/questions.html:207 kitsune/questions/templates/questions/questions.html:213
+#: kitsune/questions/templates/questions/questions.html:210 kitsune/questions/templates/questions/questions.html:216
 msgid "on"
 msgstr "於"
 
@@ -4000,13 +4111,9 @@ msgstr "問個問題"
 msgid "Try another topic"
 msgstr ""
 
-#: kitsune/questions/templates/questions/mobile/new_question.html:54
+#: kitsune/questions/templates/questions/mobile/new_question.html:52 kitsune/questions/templates/questions/mobile/new_question.html:57
 msgid "Post a question"
 msgstr "貼個問題"
-
-#: kitsune/questions/templates/questions/mobile/new_question.html:75 kitsune/sumo/templates/layout/paginator.html:30
-msgid "Next"
-msgstr "下一個"
 
 #: kitsune/questions/templates/questions/mobile/questions.html:16
 msgid "Top contributors"
@@ -4117,19 +4224,19 @@ msgstr "討論串類型"
 msgid "Search in forum"
 msgstr "在論壇中搜尋"
 
-#: kitsune/search/forms.py:150
+#: kitsune/search/forms.py:154
 msgid "Has answers"
 msgstr "有回答"
 
-#: kitsune/search/forms.py:154
+#: kitsune/search/forms.py:158
 msgid "Has helpful answers"
 msgstr "有有幫助的回答"
 
-#: kitsune/search/forms.py:158
+#: kitsune/search/forms.py:162
 msgid "Votes"
 msgstr "投票"
 
-#: kitsune/search/forms.py:161
+#: kitsune/search/forms.py:165
 msgid "tag1, tag2"
 msgstr "標籤1、標籤2"
 
@@ -4172,7 +4279,7 @@ msgstr "搜尋 Mozilla 技術支援網站"
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
 msgstr "暫時無法搜尋。請稍等幾分鐘再試一次。"
 
-#: kitsune/search/templates/search/form.html:4 kitsune/sumo/templates/includes/common_macros.html:147
+#: kitsune/search/templates/search/form.html:4 kitsune/sumo/templates/includes/common_macros.html:141
 msgid "Advanced Search"
 msgstr "進階搜尋"
 
@@ -4204,16 +4311,16 @@ msgstr "討論區"
 msgid "Article contains"
 msgstr "文章包含"
 
-#: kitsune/search/templates/search/form.html:27 kitsune/search/templates/search/form.html:81 kitsune/search/templates/search/form.html:182
+#: kitsune/search/templates/search/form.html:27 kitsune/search/templates/search/form.html:81 kitsune/search/templates/search/form.html:189
 msgid "crashes on youtube"
 msgstr "不能播放 YouTube 影片"
 
-#: kitsune/search/templates/search/form.html:74 kitsune/search/templates/search/form.html:175 kitsune/search/templates/search/form.html:225
+#: kitsune/search/templates/search/form.html:74 kitsune/search/templates/search/form.html:182 kitsune/search/templates/search/form.html:232
 msgctxt "button"
 msgid "Search Mozilla Support"
 msgstr "搜尋 Mozilla 技術支援網站"
 
-#: kitsune/search/templates/search/form.html:75 kitsune/search/templates/search/form.html:176 kitsune/search/templates/search/form.html:226
+#: kitsune/search/templates/search/form.html:75 kitsune/search/templates/search/form.html:183 kitsune/search/templates/search/form.html:233
 msgid "Use basic search"
 msgstr "使用簡單搜尋"
 
@@ -4221,27 +4328,27 @@ msgstr "使用簡單搜尋"
 msgid "Post contains"
 msgstr "文章包含"
 
-#: kitsune/search/templates/search/form.html:117
+#: kitsune/search/templates/search/form.html:124
 msgid "Number of votes. Must be an integer."
 msgstr "投票數量。必須為整數。"
 
-#: kitsune/search/templates/search/form.html:134
+#: kitsune/search/templates/search/form.html:141
 msgid "Note: Searching for \"tag1, tag2\" returns questions tagged with both tag1 and tag2"
 msgstr "注意: 搜尋「標籤一, 標籤二」將會回傳同時標記了標籤一及標籤二的文章。"
 
-#: kitsune/search/templates/search/form.html:155 kitsune/search/templates/search/form.html:200
+#: kitsune/search/templates/search/form.html:162 kitsune/search/templates/search/form.html:207
 msgid "Created date. Format: mm/dd/yy"
 msgstr "建立日期。格式: mm/dd/yy"
 
-#: kitsune/search/templates/search/form.html:161 kitsune/search/templates/search/form.html:206
+#: kitsune/search/templates/search/form.html:168 kitsune/search/templates/search/form.html:213
 msgid "Updated date. Format: mm/dd/yy"
 msgstr "更新日期。格式: mm/dd/yy"
 
-#: kitsune/search/templates/search/form.html:181
+#: kitsune/search/templates/search/form.html:188
 msgid "Thread contains"
 msgstr "討論串包含"
 
-#: kitsune/search/templates/search/form.html:234
+#: kitsune/search/templates/search/form.html:241
 msgid "Use advanced search"
 msgstr "使用進階搜尋"
 
@@ -4271,9 +4378,7 @@ msgstr "僅社群討論"
 #: kitsune/search/templates/search/results.html:83
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> for <strong>{product}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> for <strong>{product}</strong>"
-msgstr[0] ""
-"找到 <strong>{n}</strong> 個 <strong>{product}</strong> 產品中關於 "
-"<strong>{q}</strong> 的結果"
+msgstr[0] "找到 <strong>{n}</strong> 個 <strong>{product}</strong> 產品中關於 <strong>{q}</strong> 的結果"
 
 # Found 123 results for abc in 正體中文 (繁體)
 #. {q} is the search query, {l} is the language searched.
@@ -4844,6 +4949,18 @@ msgctxt "DB: karma.Title.name"
 msgid "Top 25 Contributor"
 msgstr "前 25 名貢獻者"
 
+#: kitsune/sumo/db_strings.py:184
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "Kitsune Contributor"
+msgstr "活躍貢獻者"
+
+#: kitsune/sumo/db_strings.py:185
+#, fuzzy
+msgctxt "DB: badger.Badge.description"
+msgid "Badge awarded to those who have contributed to the Kitsune code base."
+msgstr "定義: 最近 30 天當中，曾經對英語知識庫做出貢獻的人數。"
+
 #: kitsune/sumo/form_fields.py:96
 msgid "To field is required."
 msgstr "傳送到的欄位是必要的。"
@@ -4920,69 +5037,69 @@ msgctxt "site_title"
 msgid "Mozilla Support"
 msgstr "Mozilla 技術支援"
 
-#: kitsune/sumo/templates/base.html:85
+#: kitsune/sumo/templates/base.html:81
 msgid "This is a staging site, the content gets overwritten on the 1st of every month.<br>The production site is <a href=\"http://support.mozilla.org\">here</a>."
 msgstr "這是測試版本的網站，內容將於每月一日被覆蓋。<br>正式版本的網站位於 <a href=\"http://support.mozilla.org\">此處</a>。"
 
-#: kitsune/sumo/templates/base.html:96
+#: kitsune/sumo/templates/base.html:92
 msgid "This page doesn't have a mobile optimized version. Tap here to go back."
 msgstr "這頁面沒有針對行動裝置最佳化的版本。點擊此處回上一頁。"
 
-#: kitsune/sumo/templates/base.html:103
+#: kitsune/sumo/templates/base.html:99
 msgid "Tap here to go to the mobile version of the site."
 msgstr "點擊此處開啟此網站的行動版。"
 
-#: kitsune/sumo/templates/base.html:112
+#: kitsune/sumo/templates/base.html:108
 msgid "Your Firefox is out of date and may contain a security risk!"
 msgstr ""
 
-#: kitsune/sumo/templates/base.html:116
+#: kitsune/sumo/templates/base.html:112
 msgid "Upgrade Firefox"
 msgstr "升級 Firefox"
 
-#: kitsune/sumo/templates/base.html:186
+#: kitsune/sumo/templates/base.html:182
 msgid ""
 "Portions of this content are &copy;1998–2013 <br>by individual mozilla.org contributors. Content <br>available under a <a href=\"//www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
 msgstr "部份內容係版權所有 &copy;1998–2013，由不同的 mozilla.org 貢獻者所創作。<br>內容依照<a href=\"//www.mozilla.org/foundation/licensing/website-content.html\">創用 CC 授權條款</a>進行授權。"
 
-#: kitsune/sumo/templates/base.html:196
+#: kitsune/sumo/templates/base.html:192
 msgid "Contact Us"
 msgstr "聯絡我們"
 
-#: kitsune/sumo/templates/base.html:197
+#: kitsune/sumo/templates/base.html:193
 msgid "Privacy Policy"
 msgstr "隱私權保護政策"
 
-#: kitsune/sumo/templates/base.html:198
+#: kitsune/sumo/templates/base.html:194
 msgid "Legal Notices"
 msgstr "法律條款"
 
-#: kitsune/sumo/templates/base.html:199
+#: kitsune/sumo/templates/base.html:195
 msgid "Report Trademark Abuse"
 msgstr "檢舉商標濫用"
 
-#: kitsune/sumo/templates/base.html:200
+#: kitsune/sumo/templates/base.html:196
 msgid "Source Code"
 msgstr "原始碼"
 
-#: kitsune/sumo/templates/base.html:205 kitsune/users/templates/users/profile.html:111 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:76
+#: kitsune/sumo/templates/base.html:201 kitsune/users/templates/users/profile.html:111 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:76
 msgid "Twitter"
 msgstr "Twitter"
 
-#: kitsune/sumo/templates/base.html:206 kitsune/users/templates/users/profile.html:117 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:80
+#: kitsune/sumo/templates/base.html:202 kitsune/users/templates/users/profile.html:117 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:80
 msgid "Facebook"
 msgstr "Facebook"
 
-#: kitsune/sumo/templates/base.html:207
+#: kitsune/sumo/templates/base.html:203
 msgid "Firefox Affiliates"
 msgstr "Firefox 伙伴計劃"
 
-#: kitsune/sumo/templates/base.html:208
+#: kitsune/sumo/templates/base.html:204
 msgid "Switch to mobile site"
 msgstr "切換為行動版"
 
-#: kitsune/sumo/templates/email/base.html:213 kitsune/sumo/templates/mobile/base.html:113
+#: kitsune/sumo/templates/email/base.html:213 kitsune/sumo/templates/mobile/base.html:117
 msgid "Mozilla Support"
 msgstr "Mozilla 技術支援"
 
@@ -5014,7 +5131,7 @@ msgstr "您必須啟用 Cookie 才能登入或註冊。"
 msgid "You do not have permission to access this page."
 msgstr "您沒有存取這個網頁的權限。"
 
-#: kitsune/sumo/templates/handlers/403.html:18 kitsune/users/templates/users/includes/macros.html:22
+#: kitsune/sumo/templates/handlers/403.html:18 kitsune/users/templates/users/includes/macros.html:21
 msgid "Log in"
 msgstr "登入"
 
@@ -5054,55 +5171,47 @@ msgstr "設定"
 msgid "Sign Out"
 msgstr "登出"
 
-#: kitsune/sumo/templates/includes/common_macros.html:56
-msgid "What's this"
-msgstr ""
-
-#: kitsune/sumo/templates/includes/common_macros.html:58
-msgid "SUMO has switched to Persona, a safe and simple way to sign in with just your e-mail address. <a href=\"%(url)s\">Learn more about why Mozilla is using Persona.</a>"
-msgstr ""
-
-#: kitsune/sumo/templates/includes/common_macros.html:68
+#: kitsune/sumo/templates/includes/common_macros.html:62
 msgid "Sign In / Register"
 msgstr "登入 / 註冊"
 
-#: kitsune/sumo/templates/includes/common_macros.html:104 kitsune/sumo/templates/includes/common_macros.html:121
+#: kitsune/sumo/templates/includes/common_macros.html:98 kitsune/sumo/templates/includes/common_macros.html:115
 msgid "For Contributors"
 msgstr "貢獻者"
 
-#: kitsune/sumo/templates/includes/common_macros.html:133
+#: kitsune/sumo/templates/includes/common_macros.html:127
 msgid "Quickstart Guide"
 msgstr "快速上手指南"
 
-#: kitsune/sumo/templates/includes/common_macros.html:134
+#: kitsune/sumo/templates/includes/common_macros.html:128
 msgid "News &amp; Resources"
 msgstr "新聞與資源"
 
-#: kitsune/sumo/templates/includes/common_macros.html:135
+#: kitsune/sumo/templates/includes/common_macros.html:129
 msgid "Contributor Forums"
 msgstr "貢獻者討論區"
 
-#: kitsune/sumo/templates/includes/common_macros.html:136
+#: kitsune/sumo/templates/includes/common_macros.html:130
 msgid "Article Discussions"
 msgstr "文章討論"
 
-#: kitsune/sumo/templates/includes/common_macros.html:138
+#: kitsune/sumo/templates/includes/common_macros.html:132
 msgid "Localization Metrics"
 msgstr "Localization Metrics"
 
-#: kitsune/sumo/templates/includes/common_macros.html:140
+#: kitsune/sumo/templates/includes/common_macros.html:134
 msgid "Help on Twitter"
 msgstr "在 Twitter 上提供幫助"
 
-#: kitsune/sumo/templates/includes/common_macros.html:141
+#: kitsune/sumo/templates/includes/common_macros.html:135
 msgid "Support Forum Home"
 msgstr "技術支援討論區首頁"
 
-#: kitsune/sumo/templates/includes/common_macros.html:144
+#: kitsune/sumo/templates/includes/common_macros.html:138
 msgid "Moderate Forum Content"
 msgstr "管理討論區內容"
 
-#: kitsune/sumo/templates/includes/common_macros.html:149
+#: kitsune/sumo/templates/includes/common_macros.html:143
 msgid "Karma Dashboard"
 msgstr "Karma 主控台"
 
@@ -5120,10 +5229,6 @@ msgstr "更舊"
 msgid "Page {n}"
 msgid_plural "Page {n}"
 msgstr[0] "第 {n} 頁"
-
-#: kitsune/sumo/templates/layout/paginator.html:6
-msgid "Previous"
-msgstr "上一個"
 
 #: kitsune/sumo/templates/mobile/base.html:17
 msgctxt "site_title"
@@ -5150,23 +5255,23 @@ msgstr "意見箱"
 msgid "Profile"
 msgstr "個人資料"
 
-#: kitsune/sumo/templates/mobile/base.html:86 kitsune/users/templates/users/includes/macros.html:82
+#: kitsune/sumo/templates/mobile/base.html:90 kitsune/users/templates/users/includes/macros.html:82
 msgid "Register"
 msgstr "註冊"
 
-#: kitsune/sumo/templates/mobile/base.html:90
+#: kitsune/sumo/templates/mobile/base.html:94
 msgid "Languages"
 msgstr "語言"
 
-#: kitsune/sumo/templates/mobile/base.html:95 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
+#: kitsune/sumo/templates/mobile/base.html:99 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
 msgid "Switch language"
 msgstr "切換語言"
 
-#: kitsune/sumo/templates/mobile/base.html:96
+#: kitsune/sumo/templates/mobile/base.html:100
 msgid "Switch to desktop site"
 msgstr "切換為桌面版"
 
-#: kitsune/sumo/templates/mobile/base.html:127
+#: kitsune/sumo/templates/mobile/base.html:131
 msgid "Get support for another platform:"
 msgstr ""
 
@@ -5478,19 +5583,19 @@ msgstr "註冊資料"
 msgid "registration profiles"
 msgstr "註冊資料"
 
-#: kitsune/users/views.py:163
+#: kitsune/users/views.py:164
 msgid "Your account is already activated, log in below."
 msgstr "您的帳號已被啟用，請在下面登入。"
 
-#: kitsune/users/views.py:210 kitsune/users/views.py:220
+#: kitsune/users/views.py:211 kitsune/users/views.py:221
 msgid "Account already activated"
 msgstr "您的帳號已經啟用"
 
-#: kitsune/users/views.py:348
+#: kitsune/users/views.py:350
 msgid "Your settings have been saved."
 msgstr "已儲存您的設定。"
 
-#: kitsune/users/views.py:633
+#: kitsune/users/views.py:635
 msgid "We've sent an email with the username to any account using {email}."
 msgstr "我們已寄出關於您的帳號名稱電子郵件到 {email}。"
 
@@ -5559,15 +5664,20 @@ msgstr "註冊以成為貢獻者"
 msgid "You don't need to register to <a href=\"{url}\">ask a question</a>."
 msgstr "您不需要註冊就能 <a href=\"{url}\">問問題</a>。"
 
-#: kitsune/users/templates/users/browserid_signup.html:10
+#: kitsune/users/templates/users/browserid_signup.html:5
+#, fuzzy
+msgid "Select a username"
+msgstr "寄出使用者名稱"
+
+#: kitsune/users/templates/users/browserid_signup.html:12 kitsune/users/templates/users/mobile/browserid_signup.html:5
 msgid "You're almost there!"
 msgstr "差不多了！"
 
-#: kitsune/users/templates/users/browserid_signup.html:12
+#: kitsune/users/templates/users/browserid_signup.html:14 kitsune/users/templates/users/mobile/browserid_signup.html:12
 msgid "Please select a username and click continue to proceed with sign up."
 msgstr ""
 
-#: kitsune/users/templates/users/browserid_signup.html:24
+#: kitsune/users/templates/users/browserid_signup.html:27 kitsune/users/templates/users/mobile/browserid_signup.html:26
 msgid "Continue"
 msgstr "繼續"
 
@@ -5848,11 +5958,11 @@ msgstr "<a href=\"https://support.mozilla.org/contributors/need-changes\">知識
 msgid "<a href=\"https://support.mozilla.org/en-US/kb/localize-firefox-help\">L10N Contributor</a> - Help to translate Firefox Help content to your language."
 msgstr "<a href=\"https://support.mozilla.org/en-US/kb/localize-firefox-help\">在地化貢獻者</a>－協助將 Firefox Help 內容翻譯為您的語言。"
 
-#: kitsune/users/templates/users/includes/macros.html:22
+#: kitsune/users/templates/users/includes/macros.html:21
 msgid "Logging in..."
 msgstr "正在登入..."
 
-#: kitsune/users/templates/users/includes/macros.html:22
+#: kitsune/users/templates/users/includes/macros.html:21
 msgid "Logged in!"
 msgstr "已登入!"
 
@@ -5899,6 +6009,10 @@ msgstr "編輯設定值"
 #: kitsune/users/templates/users/mobile/activate.html:6
 msgid "Successfully activated"
 msgstr "已成功啟用"
+
+#: kitsune/users/templates/users/mobile/browserid_signup.html:10 kitsune/users/templates/users/mobile/register.html:13
+msgid "Create a support account."
+msgstr "註冊技術支援帳號。"
 
 #: kitsune/users/templates/users/mobile/change_email.html:3 kitsune/users/templates/users/mobile/change_email.html:27 kitsune/users/templates/users/mobile/change_email_done.html:3
 msgid "Change email"
@@ -5963,10 +6077,6 @@ msgstr "密碼重設"
 #: kitsune/users/templates/users/mobile/register.html:7 kitsune/users/templates/users/mobile/register_done.html:7
 msgid "Register or sign in"
 msgstr "註冊或登入"
-
-#: kitsune/users/templates/users/mobile/register.html:13
-msgid "Create a support account."
-msgstr "註冊技術支援帳號。"
 
 #: kitsune/users/templates/users/mobile/includes/macros.html:19
 msgid "Signing in..."
@@ -6973,10 +7083,6 @@ msgstr "修訂版本資訊"
 msgid "Revision id:"
 msgstr "編修 ID:"
 
-#: kitsune/wiki/templates/wiki/revision.html:28
-msgid "Creator:"
-msgstr "建立者:"
-
 #: kitsune/wiki/templates/wiki/revision.html:36 kitsune/wiki/templates/wiki/revision.html:41
 msgid "Reviewed:"
 msgstr "審核過:"
@@ -7476,10 +7582,6 @@ msgstr "請提供更多詳情。"
 #: kitsune/wiki/templates/wiki/mobile/document.html:8
 msgid "{t} | {c}"
 msgstr "{t} | {c}"
-
-#: vendor/src/django-badger/badger/feeds.py:149
-msgid "Recently awarded badges"
-msgstr "最近頒發的勳章"
 
 #: vendor/src/django-badger/badger/feeds.py:156
 msgid "{badgetitle} awarded to {username}"

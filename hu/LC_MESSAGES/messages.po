@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-13 08:04-0700\n"
+"POT-Creation-Date: 2013-09-24 06:28-0700\n"
 "PO-Revision-Date: 2013-09-21 16:25+0000\n"
 "Last-Translator: Gábor <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -91,7 +91,7 @@ msgstr "Köszönjük!"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email. Whitespace matters!
-#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:551 kitsune/questions/templates/questions/email/confirm_question.html:4
+#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:494 kitsune/questions/templates/questions/email/confirm_question.html:4
 msgid "Please confirm your Firefox Help question"
 msgstr "Hagyja jóvá a Firefox Help kérést"
 
@@ -323,7 +323,7 @@ msgstr ""
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is at the end of an email.
-#: kitsune/users/templates/users/email/contributor.ltxt:76 kitsune/users/models.py:237 kitsune/users/utils.py:88 kitsune/users/views.py:412 kitsune/users/templates/users/email/contributor.html:76
+#: kitsune/users/templates/users/email/contributor.ltxt:76 kitsune/users/models.py:237 kitsune/users/utils.py:89 kitsune/users/views.py:414 kitsune/users/templates/users/email/contributor.html:76
 msgid "Welcome to SUMO!"
 msgstr "Üdvözöli a SUMO!"
 
@@ -494,46 +494,46 @@ msgstr "Megjelenítés eddig"
 msgid "New announcement for {group}"
 msgstr "Új {group} bejelentés"
 
-#: kitsune/customercare/views.py:29 kitsune/dashboards/readouts.py:327 kitsune/questions/templates/questions/questions.html:75 kitsune/questions/templates/questions/mobile/questions.html:110
+#: kitsune/customercare/views.py:30 kitsune/dashboards/readouts.py:327 kitsune/questions/templates/questions/questions.html:75 kitsune/questions/templates/questions/mobile/questions.html:110
 msgid "Most Recent"
 msgstr "Legfrissebb"
 
-#: kitsune/customercare/views.py:30
+#: kitsune/customercare/views.py:31
 msgid "Unanswered"
 msgstr "Megválaszolatlan"
 
-#: kitsune/customercare/views.py:31
+#: kitsune/customercare/views.py:32
 msgid "Answered"
 msgstr "Megválaszolt"
 
-#: kitsune/customercare/views.py:32 kitsune/questions/templates/questions/metrics.html:14 kitsune/questions/templates/questions/metrics.html:16 kitsune/questions/templates/questions/questions.html:86
+#: kitsune/customercare/views.py:33 kitsune/questions/templates/questions/metrics.html:14 kitsune/questions/templates/questions/metrics.html:16 kitsune/questions/templates/questions/questions.html:86
 #: kitsune/questions/templates/questions/mobile/questions.html:124
 msgid "All"
 msgstr "Összes"
 
 #. L10n: the tweet needs to be a reply to another tweet.
-#: kitsune/customercare/views.py:191
+#: kitsune/customercare/views.py:193
 msgid "Reply-to is empty"
 msgstr "A válasz üres"
 
 #. L10n: the tweet has no content.
-#: kitsune/customercare/views.py:196
+#: kitsune/customercare/views.py:198
 msgid "Message is empty"
 msgstr "Az üzenet üres"
 
-#: kitsune/customercare/views.py:199
+#: kitsune/customercare/views.py:201
 msgid "Message is too long"
 msgstr "Az üzenet túl hosszú"
 
-#: kitsune/customercare/views.py:213 kitsune/customercare/views.py:297
+#: kitsune/customercare/views.py:215 kitsune/customercare/views.py:299
 msgid "An error occured: {message}"
 msgstr "Hiba történt: {message}"
 
-#: kitsune/customercare/views.py:280 kitsune/customercare/views.py:285
+#: kitsune/customercare/views.py:282 kitsune/customercare/views.py:287
 msgid "Invalid ID."
 msgstr "Érvénytelen ID."
 
-#: kitsune/customercare/views.py:289
+#: kitsune/customercare/views.py:291
 msgid "Tweets that are replies or have replies must not be hidden."
 msgstr "A válaszcsiripek vagy amelyekhez válaszok vannak nem rejthetők el."
 
@@ -583,7 +583,7 @@ msgid "Sign out"
 msgstr "Kijelentkezés"
 
 #: kitsune/customercare/templates/customercare/landing.html:72 kitsune/customercare/templates/customercare/twitter_modal.html:14
-#: kitsune/questions/templates/questions/mobile/new_question_login.html:38 kitsune/sumo/templates/mobile/base.html:85 kitsune/users/templates/users/mobile/login.html:7
+#: kitsune/questions/templates/questions/mobile/new_question_login.html:38 kitsune/sumo/templates/mobile/base.html:89 kitsune/users/templates/users/mobile/login.html:7
 #: kitsune/users/templates/users/mobile/includes/macros.html:19
 msgid "Sign in"
 msgstr "Bejelentkezés"
@@ -663,23 +663,30 @@ msgstr "A Szuperhősök sosem fognak tweetelni az engedélye nélkül."
 msgid "If you’re registered with Mozilla Support, we will keep you logged into Twitter, so you can use Army of Awesome instantly."
 msgstr "Amennyiben a Mozilla támogatásnál regisztrált, bejelentkezve tartjuk a Twitter-fiókban, így közvetlenül használhatók a Szuperhősök."
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:21
+#: kitsune/customercare/templates/customercare/twitter_modal.html:24 kitsune/questions/templates/questions/new_question_login.html:20
+#: kitsune/questions/templates/questions/mobile/new_question_login.html:16 kitsune/sumo/templates/includes/common_macros.html:55 kitsune/sumo/templates/includes/common_macros.html:57
+#: kitsune/sumo/templates/mobile/base.html:84 kitsune/sumo/templates/mobile/base.html:86 kitsune/users/templates/users/auth.html:23 kitsune/users/templates/users/mobile/login.html:14
+#, fuzzy
+msgid "Sign in with email"
+msgstr "Bejelentkezés Twitterrel"
+
+#: kitsune/customercare/templates/customercare/twitter_modal.html:28
 msgid "Are you registered with Mozilla Support?"
 msgstr "Regisztrált a Mozilla támogatás oldalán?"
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:26
+#: kitsune/customercare/templates/customercare/twitter_modal.html:33
 msgid "Yes, I am."
 msgstr "Igen."
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:27
+#: kitsune/customercare/templates/customercare/twitter_modal.html:34
 msgid "Click to sign in."
 msgstr "Bejelentkezés."
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:30
+#: kitsune/customercare/templates/customercare/twitter_modal.html:37
 msgid "No, I'm not."
 msgstr "Nem."
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:31
+#: kitsune/customercare/templates/customercare/twitter_modal.html:38
 msgid "Click to register."
 msgstr "Regisztráció."
 
@@ -846,9 +853,8 @@ msgid ""
 "This indicates there are no approved translations of these articles. Some of the articles may have proposed translations waiting to be reviewed and will appear in the Unreviewed Changes section as "
 "well."
 msgstr ""
-"Ez azt jelzi, hogy ezeknek a leírásoknak még nincs jóváhagyott fordítása. "
-"Egyes leírásoknak lehetnek javasolt és még jóvá nem hagyott fordításai, "
-"amelyek az Ellenőrizetlen módosítások szakaszban is megjelennek."
+"Ez azt jelzi, hogy ezeknek a leírásoknak még nincs jóváhagyott fordítása. Egyes leírásoknak lehetnek javasolt és még jóvá nem hagyott fordításai, amelyek az Ellenőrizetlen módosítások szakaszban is "
+"megjelennek."
 
 #: kitsune/dashboards/readouts.py:749
 msgid "All untranslated articles..."
@@ -975,7 +981,7 @@ msgstr ""
 msgid "All canned responses articles..."
 msgstr "Összes leírás a Tudásbázisban…"
 
-#: kitsune/dashboards/views.py:57 kitsune/dashboards/templates/dashboards/contributors.html:4 kitsune/sumo/templates/includes/common_macros.html:137
+#: kitsune/dashboards/views.py:57 kitsune/dashboards/templates/dashboards/contributors.html:4 kitsune/sumo/templates/includes/common_macros.html:131
 msgid "Knowledge Base Dashboard"
 msgstr "Tudásbázis vezérlőpultja"
 
@@ -1104,7 +1110,7 @@ msgstr "Összes termék"
 #: kitsune/products/templates/products/documents.html:18 kitsune/products/templates/products/product.html:4 kitsune/products/templates/products/product.html:9
 #: kitsune/products/templates/products/product.html:16 kitsune/products/templates/products/includes/product_macros.html:12 kitsune/products/templates/products/mobile/documents.html:10
 #: kitsune/products/templates/products/mobile/documents.html:27 kitsune/products/templates/products/mobile/product.html:3 kitsune/products/templates/products/mobile/product.html:8
-#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/answers.html:192 kitsune/questions/templates/questions/mobile/questions.html:36
+#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/answers.html:217 kitsune/questions/templates/questions/mobile/questions.html:36
 #: kitsune/search/views.py:482 kitsune/search/templates/search/results.html:69 kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:37
 msgctxt "DB: products.Product.title"
 msgid "None"
@@ -1120,7 +1126,7 @@ msgstr "Súgó témák"
 #: kitsune/products/templates/products/documents.html:49 kitsune/products/templates/products/includes/topic_macros.html:70 kitsune/products/templates/products/includes/topic_macros.html:93
 #: kitsune/products/templates/products/includes/topic_macros.html:101 kitsune/products/templates/products/mobile/documents.html:6 kitsune/products/templates/products/mobile/documents.html:8
 #: kitsune/products/templates/products/mobile/documents.html:21 kitsune/products/templates/products/mobile/documents.html:38 kitsune/products/templates/products/mobile/product.html:65
-#: kitsune/questions/templates/questions/answers.html:208
+#: kitsune/questions/templates/questions/answers.html:233
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "None"
@@ -1143,7 +1149,7 @@ msgstr ""
 msgid "Localization Team"
 msgstr "Fordítói csapat"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:194 kitsune/sumo/templates/includes/common_macros.html:139 kitsune/wiki/templates/wiki/recent_revisions.html:3
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:194 kitsune/sumo/templates/includes/common_macros.html:133 kitsune/wiki/templates/wiki/recent_revisions.html:3
 msgid "Recent Revisions"
 msgstr "Legutóbbi revíziók"
 
@@ -1234,7 +1240,8 @@ msgid "Content:"
 msgstr "Tartalom:"
 
 #: kitsune/flagit/templates/flagit/includes/flagged_answer.html:4 kitsune/flagit/templates/flagit/includes/flagged_post.html:6 kitsune/flagit/templates/flagit/includes/flagged_question.html:6
-#: kitsune/questions/templates/questions/edit_answer.html:23 kitsune/wiki/templates/wiki/revision.html:24
+#: kitsune/kbadge/templates/badger/award_detail.html:29 kitsune/kbadge/templates/badger/badge_detail.html:29 kitsune/questions/templates/questions/edit_answer.html:23
+#: kitsune/wiki/templates/wiki/revision.html:24
 msgid "Created:"
 msgstr "Létrehozva:"
 
@@ -1369,7 +1376,7 @@ msgstr "Videó törlése | {t} | Médiagaléria"
 
 #: kitsune/gallery/templates/gallery/confirm_media_delete.html:13 kitsune/gallery/templates/gallery/edit_media.html:7 kitsune/gallery/templates/gallery/gallery.html:2
 #: kitsune/gallery/templates/gallery/gallery.html:5 kitsune/gallery/templates/gallery/gallery.html:11 kitsune/gallery/templates/gallery/media.html:8 kitsune/gallery/templates/gallery/search.html:5
-#: kitsune/gallery/templates/gallery/search.html:9 kitsune/sumo/templates/includes/common_macros.html:146
+#: kitsune/gallery/templates/gallery/search.html:9 kitsune/sumo/templates/includes/common_macros.html:140
 msgid "Media Gallery"
 msgstr "Médiagaléria"
 
@@ -1718,6 +1725,95 @@ msgstr "6 hónap"
 msgid "1 year"
 msgstr "1 év"
 
+#: kitsune/kbadge/templates/badger/award_detail.html:8
+msgid "Awarded badge: %(badge_name)s"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/award_detail.html:8 kitsune/kbadge/templates/badger/awards_list.html:8 kitsune/kbadge/templates/badger/awards_list.html:28
+#: kitsune/kbadge/templates/badger/awards_list.html:29 kitsune/kbadge/templates/badger/badge_detail.html:8 kitsune/kbadge/templates/kbadge/includes/macros.html:12
+#: kitsune/kbadge/templates/kbadge/includes/macros.html:13
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "None"
+msgstr "Nincs"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:15 kitsune/kbadge/templates/badger/badge_detail.html:15
+#, fuzzy
+msgid "Image:"
+msgstr "Kép"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:20 kitsune/kbadge/templates/badger/badge_detail.html:20
+#, fuzzy
+msgid "Description:"
+msgstr "Leírás"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:21 kitsune/kbadge/templates/badger/badge_detail.html:21
+#, fuzzy
+msgctxt "DB: badger.Badge.description"
+msgid "None"
+msgstr "Nincs"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:25 kitsune/kbadge/templates/badger/badge_detail.html:25 kitsune/wiki/templates/wiki/revision.html:28
+msgid "Creator:"
+msgstr "Létrehozó:"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:32 kitsune/kbadge/templates/badger/badge_detail.html:32
+msgid "Modified:"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/award_detail.html:38
+#, fuzzy
+msgid "Award details"
+msgstr "Beállítások szerkesztése"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:40
+msgid "Awarded to:"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/award_detail.html:49
+#, fuzzy
+msgid "Explanation:"
+msgstr "Egyéb alkalmazások"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:54
+#, fuzzy
+msgid "Awarded by:"
+msgstr "Létrehozva:"
+
+#: kitsune/kbadge/templates/badger/award_detail.html:63
+msgid "Issued on:"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/awards_list.html:8
+msgid "<h2>Recently awarded &quot;%(badge_name)s&quot; badges</h2>"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/awards_list.html:12 vendor/src/django-badger/badger/feeds.py:149
+#, fuzzy
+msgid "Recently awarded badges"
+msgstr "Nemrég jóváhagyott frissítések"
+
+#: kitsune/kbadge/templates/badger/awards_list.html:32
+msgid "awarded to"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/awards_list.html:48 kitsune/sumo/templates/layout/paginator.html:6
+msgid "Previous"
+msgstr "Előző"
+
+#: kitsune/kbadge/templates/badger/awards_list.html:53 kitsune/questions/templates/questions/mobile/new_question.html:79 kitsune/sumo/templates/layout/paginator.html:30
+msgid "Next"
+msgstr "Következő"
+
+#: kitsune/kbadge/templates/badger/badge_detail.html:8
+msgid "Badge: %(badge_name)s"
+msgstr ""
+
+#: kitsune/kbadge/templates/badger/badge_detail.html:39
+#, fuzzy
+msgid "Recent awardees"
+msgstr "Nemrég jóváhagyott frissítések"
+
 #: kitsune/kbforums/events.py:23
 msgid "Re: {forum} - {thread}"
 msgstr "Vá: {forum} - {thread}"
@@ -1968,11 +2064,11 @@ msgstr "Úgy néz ki, hogy itt nincs bejegyzés!"
 msgid "Post a reply"
 msgstr "Válasz beküldése"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:368 kitsune/questions/templates/questions/mobile/answers.html:44
+#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:393 kitsune/questions/templates/questions/mobile/answers.html:44
 msgid "Post Reply"
 msgstr "Válasz írása"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:369 kitsune/questions/templates/questions/edit_answer.html:53
+#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:394 kitsune/questions/templates/questions/edit_answer.html:53
 msgid "Preview Reply"
 msgstr "Válasz előnézete"
 
@@ -2038,11 +2134,11 @@ msgstr ""
 msgid "If you need help with Firefox, please <a href=\"%(aaq_url)s\">ask a question</a>."
 msgstr "Ha segítségre van szüksége a Firefox használatával kapcsolatban, akkor <a href=\"%(aaq_url)s\">kérdezzen</a>."
 
-#: kitsune/kbforums/templates/kbforums/includes/post.html:12 kitsune/questions/templates/questions/answers.html:149 kitsune/questions/templates/questions/includes/answer.html:115
+#: kitsune/kbforums/templates/kbforums/includes/post.html:12 kitsune/questions/templates/questions/answers.html:158 kitsune/questions/templates/questions/includes/answer.html:115
 msgid "Edit this post"
 msgstr "Bejegyzés szerkesztése"
 
-#: kitsune/kbforums/templates/kbforums/includes/post.html:15 kitsune/questions/templates/questions/answers.html:154 kitsune/questions/templates/questions/includes/answer.html:120
+#: kitsune/kbforums/templates/kbforums/includes/post.html:15 kitsune/questions/templates/questions/answers.html:163 kitsune/questions/templates/questions/includes/answer.html:120
 msgid "Delete this post"
 msgstr "Bejegyzés törlése"
 
@@ -2073,7 +2169,7 @@ msgstr "E-mailek kikapcsolása a beszélgetésnél ezen a nyelven."
 msgid "Get emailed when there is new discussion activity in my locale."
 msgstr "Küldjön e-mailt ha aktivitás történik ezen a nyelven."
 
-#: kitsune/kpi/templates/kpi/dashboard.html:4 kitsune/sumo/templates/includes/common_macros.html:151
+#: kitsune/kpi/templates/kpi/dashboard.html:4 kitsune/sumo/templates/includes/common_macros.html:145
 msgid "KPI Dashboard"
 msgstr "KPI vezérlőpult"
 
@@ -2243,10 +2339,7 @@ msgstr "Szereti a Firefoxot? És a Twittert?"
 
 #: kitsune/landings/templates/landings/get-involved-aoa.html:13 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:16
 msgid "Now you can combine both and help Firefox users on Twitter. It's quick, it's easy, and you don't have to be a tech superstar to do it. We call it our Army of Awesome."
-msgstr ""
-"Most mindkettőt kombinálhatja, és segíthet a Firefox felhasználónak "
-"Twitteren. Gyors, egyszerű, és nem kell hozzá programozózseninek lennie. Mi "
-"csak Szuperhősök Seregének hívjuk."
+msgstr "Most mindkettőt kombinálhatja, és segíthet a Firefox felhasználónak Twitteren. Gyors, egyszerű, és nem kell hozzá programozózseninek lennie. Mi csak Szuperhősök Seregének hívjuk."
 
 #: kitsune/landings/templates/landings/get-involved-aoa.html:20 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:23
 msgid "It's fun and addictive and the Awesome is you!"
@@ -2270,9 +2363,7 @@ msgstr "Csatlakoztassa a Twitter fiókját"
 
 #: kitsune/landings/templates/landings/get-involved-aoa.html:43 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:41
 msgid "Answer to Twitter users that need help. It's super easy with our canned responses."
-msgstr ""
-"Válaszoljon a segítségre szoruló Twitter felhasználóknak. Előre elkészített "
-"válaszainkkal ez szuperkönnyű."
+msgstr "Válaszoljon a segítségre szoruló Twitter felhasználóknak. Előre elkészített válaszainkkal ez szuperkönnyű."
 
 #: kitsune/landings/templates/landings/get-involved-aoa.html:51
 msgid "1 tweet can save 1 day"
@@ -2337,8 +2428,7 @@ msgstr "Mutatkozzon be"
 
 #: kitsune/landings/templates/landings/get-involved-kb.html:50
 msgid "1 article can be viewed by 400 million users and translated into 70+ languages"
-msgstr ""
-"1 leírást 400 millió felhasználó nézhet meg, és 70+ nyelvre fordíthatják le"
+msgstr "1 leírást 400 millió felhasználó nézhet meg, és 70+ nyelvre fordíthatják le"
 
 #: kitsune/landings/templates/landings/get-involved-kb.html:61 kitsune/landings/templates/landings/get-involved-l10n.html:56 kitsune/landings/templates/landings/get-involved-questions.html:72
 #: kitsune/landings/templates/landings/get-involved.html:49 kitsune/landings/templates/landings/mobile/get-involved-kb.html:52 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:47
@@ -2361,10 +2451,7 @@ msgstr "Fordítson súgóleírásokat!"
 
 #: kitsune/landings/templates/landings/get-involved-l10n.html:13 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:16
 msgid "Help articles are not available in your language yet? You want to join the amazing team translating them? You will help millions of users in your language. Pretty heroic, right?"
-msgstr ""
-"Még nem érhetők el egyes súgócikkek magyarul? Szeretnél csatlakozni az "
-"ezeket fordító nagyszerű csapathoz? Ezzel több millió magyar felhasználónak "
-"segíthet! Elég hősies, nem?"
+msgstr "Még nem érhetők el egyes súgócikkek magyarul? Szeretnél csatlakozni az ezeket fordító nagyszerű csapathoz? Ezzel több millió magyar felhasználónak segíthet! Elég hősies, nem?"
 
 #: kitsune/landings/templates/landings/get-involved-l10n.html:36 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:36
 msgid "Check our documentation"
@@ -2392,15 +2479,12 @@ msgid ""
 "From hardcore web developers to \"how do I install Firefox\" first time users, everybody needs your help in the forum! Share your Firefox knowledge by pointing people to the right help articles and "
 "providing troubleshooting steps for their individual questions."
 msgstr ""
-"A tapasztalt webfejlesztőktől a „Hogyan telepítsem a Firefoxot” szintű kezdő "
-"felhasználókig mindenkinek szüksége van a segítségére a fórumon! Ossza meg "
-"firefoxos tudását a megfelelő súgóleírásokra irányítva a kérdezőket, és "
-"hibaelhárítási lépéseket írva az egyes kérdésekre."
+"A tapasztalt webfejlesztőktől a „Hogyan telepítsem a Firefoxot” szintű kezdő felhasználókig mindenkinek szüksége van a segítségére a fórumon! Ossza meg firefoxos tudását a megfelelő súgóleírásokra "
+"irányítva a kérdezőket, és hibaelhárítási lépéseket írva az egyes kérdésekre."
 
 #: kitsune/landings/templates/landings/get-involved-questions.html:43 kitsune/landings/templates/landings/mobile/get-involved-questions.html:39
 msgid "Go to our support forum and choose a question to answer"
-msgstr ""
-"Lépjen be támogatói fórumunkra, és válasszon egy megválaszolandó kérdést"
+msgstr "Lépjen be támogatói fórumunkra, és válasszon egy megválaszolandó kérdést"
 
 #: kitsune/landings/templates/landings/get-involved-questions.html:53 kitsune/landings/templates/landings/mobile/get-involved-questions.html:47
 msgid "Start answering!"
@@ -2428,10 +2512,7 @@ msgstr "Szükségünk van a segítségére!"
 
 #: kitsune/landings/templates/landings/get-involved.html:13 kitsune/landings/templates/landings/mobile/get-involved.html:18
 msgid "Used by more than 400 million people, Firefox support is fully powered by volunteers, and it’s more important than ever. This is where you come in."
-msgstr ""
-"A 400 milliónál is több ember által használt Firefox támogatását teljes "
-"mértékben önkéntesek biztosítják, és ez fontosabb mint valaha. Itt jön Ön a "
-"képbe."
+msgstr "A 400 milliónál is több ember által használt Firefox támogatását teljes mértékben önkéntesek biztosítják, és ez fontosabb mint valaha. Itt jön Ön a képbe."
 
 #: kitsune/landings/templates/landings/get-involved.html:19 kitsune/landings/templates/landings/mobile/get-involved.html:24
 msgid "Why should I help?"
@@ -2440,9 +2521,7 @@ msgstr "Miért segítsek?"
 #: kitsune/landings/templates/landings/get-involved.html:20 kitsune/landings/templates/landings/mobile/get-involved.html:26
 msgid "Help millions of Firefox users get the most out of their favourite browser. Your contributions will reach millions of users worldwide, and you can do it from the comfort of your couch!"
 msgstr ""
-"Segítsen több millió Firefox felhasználónak a legtöbbet kihozni kedvenc "
-"böngészőjükből. Közreműködése világszerte több millió felhasználóhoz juthat "
-"el, és mindezt megteheti kanapéja kényelméből!"
+"Segítsen több millió Firefox felhasználónak a legtöbbet kihozni kedvenc böngészőjükből. Közreműködése világszerte több millió felhasználóhoz juthat el, és mindezt megteheti kanapéja kényelméből!"
 
 #: kitsune/landings/templates/landings/get-involved.html:32 kitsune/landings/templates/landings/mobile/get-involved.html:37
 msgid "About Us"
@@ -2450,10 +2529,7 @@ msgstr "Rólunk"
 
 #: kitsune/landings/templates/landings/get-involved.html:33 kitsune/landings/templates/landings/mobile/get-involved.html:39
 msgid "Mozilla Support is a community of enthusiastic volunteers and employees trying to support our users around the globe. Join us for an incredible adventure!"
-msgstr ""
-"A Mozilla támogatás egy lelkes önkéntesekből és alkalmazottakból álló "
-"közösség, akik megpróbálják támogatni felhasználóinkat az egész világon. "
-"Csatlakozzon ehhez a hihetetlen kalandhoz!"
+msgstr "A Mozilla támogatás egy lelkes önkéntesekből és alkalmazottakból álló közösség, akik megpróbálják támogatni felhasználóinkat az egész világon. Csatlakozzon ehhez a hihetetlen kalandhoz!"
 
 #: kitsune/landings/templates/landings/get-involved.html:44 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:48 kitsune/landings/templates/landings/mobile/get-involved-kb.html:47
 #: kitsune/landings/templates/landings/mobile/get-involved-l10n.html:42 kitsune/landings/templates/landings/mobile/get-involved-questions.html:54
@@ -2735,17 +2811,17 @@ msgstr ""
 msgid "Solution found for question: %s"
 msgstr ""
 
-#: kitsune/questions/feeds.py:36
+#: kitsune/questions/feeds.py:39
 #, fuzzy
 msgid "Recently updated questions"
 msgstr "Legutóbb említett témacsoport erről: %s"
 
-#: kitsune/questions/feeds.py:79
+#: kitsune/questions/feeds.py:86
 #, fuzzy
 msgid "Recently updated questions tagged %s"
 msgstr "Legutóbb említett témacsoport erről: %s"
 
-#: kitsune/questions/feeds.py:97
+#: kitsune/questions/feeds.py:104
 #, fuzzy
 msgid "Recent answers to %s"
 msgstr "Legutóbbi bejegyzések ebben: %s"
@@ -2795,7 +2871,7 @@ msgstr "1 új ezen a héten"
 msgid "Every time Firefox opened"
 msgstr ""
 
-#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:264
+#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:289
 msgid "This started when..."
 msgstr ""
 
@@ -3109,62 +3185,62 @@ msgstr "Thunderbird"
 msgid "or other Mozilla products"
 msgstr "vagy más Mozilla termékek"
 
-#: kitsune/questions/views.py:78
+#: kitsune/questions/views.py:75
 #, fuzzy
 msgid "That tag does not exist."
 msgstr "Az oldal nem létezik"
 
-#: kitsune/questions/views.py:79
+#: kitsune/questions/views.py:76
 #, fuzzy
 msgid "Please provide a tag."
 msgstr "Kérem adjon meg egy SEO URL-t."
 
 #. L10n: This shouldn't happen unless people tamper with POST data.
-#: kitsune/questions/views.py:561
+#: kitsune/questions/views.py:504
 msgid "Request type not recognized."
 msgstr ""
 
-#: kitsune/questions/views.py:618
+#: kitsune/questions/views.py:561
 #, fuzzy
 msgid "Done! Your question is now posted on the Mozilla community support forum."
 msgstr "A felhasználói fiók ellenőrzése megtörtént és a kérdésed megjelent a Mozilla közösségi támogatófórumán."
 
-#: kitsune/questions/views.py:820
+#: kitsune/questions/views.py:764
 #, fuzzy
 msgid "Thank you for choosing a solution!"
 msgstr "Köszönjük, hogy Szuperhős lett!"
 
-#: kitsune/questions/views.py:845
+#: kitsune/questions/views.py:789
 #, fuzzy
 msgid "The solution was undone successfully."
 msgstr "Megerősítő e-mail sikeresen elküldve."
 
-#: kitsune/questions/views.py:916
+#: kitsune/questions/views.py:860
 msgid "Glad to hear it!"
 msgstr ""
 
-#: kitsune/questions/views.py:919 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
+#: kitsune/questions/views.py:863 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
 msgid "Sorry to hear that."
 msgstr "Sajnálattal halljuk."
 
-#: kitsune/questions/views.py:940
+#: kitsune/questions/views.py:884
 #, fuzzy
 msgid "You already voted on this reply."
 msgstr "Vár szavazott erre a leírásra."
 
-#: kitsune/questions/views.py:1160
+#: kitsune/questions/views.py:1118
 msgid "Could not send a message to that email address."
 msgstr ""
 
-#: kitsune/questions/views.py:1165
+#: kitsune/questions/views.py:1123
 msgid "You will be notified of updates by email."
 msgstr ""
 
-#: kitsune/questions/views.py:1167
+#: kitsune/questions/views.py:1125
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr ""
 
-#: kitsune/questions/views.py:1247
+#: kitsune/questions/views.py:1205
 msgid "There was an error submitting the ticket. Please try again later."
 msgstr ""
 
@@ -3210,192 +3286,211 @@ msgstr ""
 msgid "{q} | Firefox Support Forum"
 msgstr "{q} | Firefox támogatói fórum"
 
-#: kitsune/questions/templates/questions/answers.html:29
+#: kitsune/questions/templates/questions/answers.html:30
 msgid "This thread was closed."
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:30
+#: kitsune/questions/templates/questions/answers.html:32
+#, fuzzy
+msgid "This thread was archived."
+msgstr "A dokumentum törlésre került."
+
+#: kitsune/questions/templates/questions/answers.html:34
+msgid "This thread was closed and archived."
+msgstr ""
+
+#: kitsune/questions/templates/questions/answers.html:38
 msgid "Please ask a new question if you need help."
 msgstr ""
 
 #. {n} is the number of replies.
-#: kitsune/questions/templates/questions/answers.html:41 kitsune/search/templates/search/includes/result.html:18
+#: kitsune/questions/templates/questions/answers.html:50 kitsune/search/templates/search/includes/result.html:18
 msgid "1 reply"
 msgid_plural "{n} replies"
 msgstr[0] "1 válasz"
 msgstr[1] "{n} válasz"
 
-#: kitsune/questions/templates/questions/answers.html:43 kitsune/search/templates/search/includes/result.html:21
+#: kitsune/questions/templates/questions/answers.html:52 kitsune/search/templates/search/includes/result.html:21
 msgid "No replies"
 msgstr "Nincs válasz"
 
-#: kitsune/questions/templates/questions/answers.html:48 kitsune/questions/templates/questions/includes/have_problem.html:3
+#: kitsune/questions/templates/questions/answers.html:57 kitsune/questions/templates/questions/includes/have_problem.html:3
 #, fuzzy
 msgid "has this problem"
 msgid_plural "have this problem"
 msgstr[0] "1 embernek van ilyen problémája"
 msgstr[1] "{n} embernek van ilyen problémája"
 
-#: kitsune/questions/templates/questions/answers.html:56
+#: kitsune/questions/templates/questions/answers.html:65
 msgid "%(count)s view"
 msgid_plural "%(count)s views"
 msgstr[0] "%(count)s megnézés"
 msgstr[1] "%(count)s megnézés"
 
-#: kitsune/questions/templates/questions/answers.html:66 kitsune/questions/templates/questions/questions.html:212
+#: kitsune/questions/templates/questions/answers.html:75 kitsune/questions/templates/questions/questions.html:215
 msgid "Last reply by {user}"
 msgstr "Utolsó üzenet ettől: {user}"
 
-#: kitsune/questions/templates/questions/answers.html:86 kitsune/questions/templates/questions/includes/answer.html:31
+#: kitsune/questions/templates/questions/answers.html:95 kitsune/questions/templates/questions/includes/answer.html:31
 #, fuzzy
 msgid "Posted"
 msgstr "Bejegyzés"
 
-#: kitsune/questions/templates/questions/answers.html:96 kitsune/questions/templates/questions/includes/answer.html:59
+#: kitsune/questions/templates/questions/answers.html:105 kitsune/questions/templates/questions/includes/answer.html:59
 #, fuzzy
 msgid "Modified {datetime} by {name}"
 msgstr "Módosította: {name}, {datetime}"
 
-#: kitsune/questions/templates/questions/answers.html:102
+#: kitsune/questions/templates/questions/answers.html:111
 #, fuzzy
 msgid "Chosen solution"
 msgstr "{0} megoldás"
 
-#: kitsune/questions/templates/questions/answers.html:102
+#: kitsune/questions/templates/questions/answers.html:111
 msgid "by"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:106
+#: kitsune/questions/templates/questions/answers.html:115
 msgid "Read this answer in context"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:115
+#: kitsune/questions/templates/questions/answers.html:124
 msgid "Helpful replies"
 msgstr "Hasznos válaszok"
 
-#: kitsune/questions/templates/questions/answers.html:119
+#: kitsune/questions/templates/questions/answers.html:128
 #, fuzzy
 msgid "Go to answer"
 msgstr "{0} válasz"
 
-#: kitsune/questions/templates/questions/answers.html:133 kitsune/questions/templates/questions/answers.html:387 kitsune/questions/templates/questions/mobile/answers.html:32
+#: kitsune/questions/templates/questions/answers.html:142 kitsune/questions/templates/questions/answers.html:413 kitsune/questions/templates/questions/mobile/answers.html:32
 #, fuzzy
 msgid "I have this problem, too"
 msgstr "1 embernek van ilyen problémája"
 
-#: kitsune/questions/templates/questions/answers.html:137 kitsune/questions/templates/questions/answers.html:355
+#: kitsune/questions/templates/questions/answers.html:146 kitsune/questions/templates/questions/answers.html:380
 #, fuzzy
 msgid "Post a Reply"
 msgstr "Válasz beküldése"
 
-#: kitsune/questions/templates/questions/answers.html:145
+#: kitsune/questions/templates/questions/answers.html:154
 #, fuzzy
 msgid "Question tools"
 msgstr "Kérdések"
 
-#: kitsune/questions/templates/questions/answers.html:159
+#: kitsune/questions/templates/questions/answers.html:168
 #, fuzzy
 msgid "Unlock this post"
 msgstr "Témacsoport zárolásának feloldása"
 
-#: kitsune/questions/templates/questions/answers.html:159
+#: kitsune/questions/templates/questions/answers.html:168
 #, fuzzy
 msgid "Lock this post"
 msgstr "Hivatkozás erre a bejegyzésre."
 
-#: kitsune/questions/templates/questions/answers.html:167
+#: kitsune/questions/templates/questions/answers.html:179
+#, fuzzy
+msgid "Unarchive this post"
+msgstr "Témacsoport zárolásának feloldása"
+
+#: kitsune/questions/templates/questions/answers.html:181
+#, fuzzy
+msgid "Archive this post"
+msgstr "Bejegyzés szerkesztése"
+
+#: kitsune/questions/templates/questions/answers.html:192
 #, fuzzy
 msgid "Stop email updates"
 msgstr "E-mail cím:"
 
-#: kitsune/questions/templates/questions/answers.html:172 kitsune/questions/templates/questions/includes/email_subscribe.html:2
+#: kitsune/questions/templates/questions/answers.html:197 kitsune/questions/templates/questions/includes/email_subscribe.html:2
 #, fuzzy
 msgid "Get email updates"
 msgstr "E-mail cím:"
 
-#: kitsune/questions/templates/questions/answers.html:177
+#: kitsune/questions/templates/questions/answers.html:202
 #, fuzzy
 msgid "Subscribe to feed"
 msgstr "Feliratkozás a szerkesztés értesítésére"
 
-#: kitsune/questions/templates/questions/answers.html:186
+#: kitsune/questions/templates/questions/answers.html:211
 #, fuzzy
 msgid "Question details"
 msgstr "Kérdések"
 
-#: kitsune/questions/templates/questions/answers.html:191 kitsune/questions/templates/questions/includes/aaq_macros.html:41
+#: kitsune/questions/templates/questions/answers.html:216 kitsune/questions/templates/questions/includes/aaq_macros.html:41
 #, fuzzy
 msgid "Product"
 msgstr "Összes termék"
 
-#: kitsune/questions/templates/questions/answers.html:207
+#: kitsune/questions/templates/questions/answers.html:232
 #, fuzzy
 msgid "Topic"
 msgstr "Témák"
 
-#: kitsune/questions/templates/questions/answers.html:221
+#: kitsune/questions/templates/questions/answers.html:246
 #, fuzzy
 msgid "System Details"
 msgstr "Rendszer"
 
-#: kitsune/questions/templates/questions/answers.html:234
+#: kitsune/questions/templates/questions/answers.html:259
 msgid "More system details"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:239
+#: kitsune/questions/templates/questions/answers.html:264
 #, fuzzy
 msgid "Edit details"
 msgstr "Beállítások szerkesztése"
 
-#: kitsune/questions/templates/questions/answers.html:240
+#: kitsune/questions/templates/questions/answers.html:265
 #, fuzzy
 msgid "Save changes"
 msgstr "Kép mentése"
 
-#: kitsune/questions/templates/questions/answers.html:249 kitsune/questions/templates/questions/answers.html:250
+#: kitsune/questions/templates/questions/answers.html:274 kitsune/questions/templates/questions/answers.html:275
 msgid "Additional System Details"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:252
+#: kitsune/questions/templates/questions/answers.html:277
 msgid "Sites Affected"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:256
+#: kitsune/questions/templates/questions/answers.html:281
 #, fuzzy
 msgid "Crash ID"
 msgstr "Összeomlás"
 
-#: kitsune/questions/templates/questions/answers.html:260
+#: kitsune/questions/templates/questions/answers.html:285
 #, fuzzy
 msgid "This happened"
 msgstr "Ezen a héten"
 
-#: kitsune/questions/templates/questions/answers.html:268
+#: kitsune/questions/templates/questions/answers.html:293
 msgid "Installed Plug-ins"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:275
+#: kitsune/questions/templates/questions/answers.html:300
 msgid "Close"
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:281 kitsune/questions/templates/questions/questions.html:218 kitsune/search/forms.py:163
+#: kitsune/questions/templates/questions/answers.html:306 kitsune/questions/templates/questions/questions.html:221 kitsune/search/forms.py:167
 msgid "Tags"
 msgstr "Címkék"
 
-#: kitsune/questions/templates/questions/answers.html:321 kitsune/tags/forms.py:121
+#: kitsune/questions/templates/questions/answers.html:346 kitsune/tags/forms.py:121
 msgid "Add"
 msgstr "Hozzáadás"
 
-#: kitsune/questions/templates/questions/answers.html:348
+#: kitsune/questions/templates/questions/answers.html:373
 msgid "You have exceeded the number of answers that can be posted in a given amount of time. Please try again shortly."
 msgstr ""
 
-#: kitsune/questions/templates/questions/answers.html:391 kitsune/sumo/templates/includes/common_macros.html:27 kitsune/sumo/templates/mobile/base.html:62
+#: kitsune/questions/templates/questions/answers.html:417 kitsune/sumo/templates/includes/common_macros.html:27 kitsune/sumo/templates/mobile/base.html:62
 msgid "Ask a question"
 msgstr "Kérdezzen"
 
-#: kitsune/questions/templates/questions/answers.html:395
-msgid "If you want to join us in helping users, <a href='{url}'>sign up as a contributor</a>."
+#: kitsune/questions/templates/questions/answers.html:421
+msgid "You must <a href=\"{login_url}\">log in to your account</a> to reply to posts. Please <a href=\"{ask_url}\">start a new question</a>, if you do not have an account yet."
 msgstr ""
 
 #. {t} is the title of the question.
@@ -3557,7 +3652,7 @@ msgstr "A létrehozás sikeres"
 msgid "Your issue has been submitted successfully. You should receive a confirmation email and hear back from us shortly."
 msgstr ""
 
-#: kitsune/questions/templates/questions/metrics.html:2 kitsune/questions/templates/questions/metrics.html:9 kitsune/sumo/templates/includes/common_macros.html:142
+#: kitsune/questions/templates/questions/metrics.html:2 kitsune/questions/templates/questions/metrics.html:9 kitsune/sumo/templates/includes/common_macros.html:136
 msgid "Support Forum Metrics"
 msgstr "Támogatói fórum metrikái"
 
@@ -3605,11 +3700,11 @@ msgstr ""
 msgid "Provide more details"
 msgstr "Adjon részletesebb információt"
 
-#: kitsune/questions/templates/questions/new_question.html:73
+#: kitsune/questions/templates/questions/new_question.html:78
 msgid "Fill in the details of your question."
 msgstr ""
 
-#: kitsune/questions/templates/questions/new_question.html:76 kitsune/questions/templates/questions/new_question_login.html:38
+#: kitsune/questions/templates/questions/new_question.html:81 kitsune/questions/templates/questions/new_question_login.html:38
 #, fuzzy
 msgid "Post Question"
 msgstr "Kérdezzen"
@@ -3618,12 +3713,6 @@ msgstr "Kérdezzen"
 #, fuzzy
 msgid "Before you continue, you must sign in"
 msgstr "Új támogatói felhasználó fiók létrehozása"
-
-#: kitsune/questions/templates/questions/new_question_login.html:20 kitsune/questions/templates/questions/mobile/new_question_login.html:16 kitsune/sumo/templates/includes/common_macros.html:54
-#: kitsune/sumo/templates/mobile/base.html:83 kitsune/users/templates/users/auth.html:23 kitsune/users/templates/users/mobile/login.html:14
-#, fuzzy
-msgid "Sign in with email"
-msgstr "Bejelentkezés Twitterrel"
 
 #: kitsune/questions/templates/questions/new_question_login.html:24
 #, fuzzy
@@ -3651,18 +3740,12 @@ msgstr "Kérdések összesen: <strong>{num}</strong>"
 #: kitsune/questions/templates/questions/questions.html:34
 msgid "<strong>%(recent_unanswered_count)s</strong> question in the last <strong>24 hours</strong> has no reply. <a href=\"%(url)s\">Help solve it!</a>"
 msgid_plural "<strong>%(recent_unanswered_count)s</strong> questions in the last <strong>24 hours</strong> have no reply. <a href=\"%(url)s\">Help solve them!</a>"
-msgstr[0] ""
-"<strong>%(recent_unanswered_count)s</strong> kérdés nincs megválaszolva az "
-"elmúlt <strong>24 órában</strong>. <a href=\"%(url)s\">Segítsen megoldani!</a>"
-msgstr[1] ""
-"<strong>%(recent_unanswered_count)s</strong> kérdés nincs megválaszolva az "
-"elmúlt <strong>24 órában</strong>. <a href=\"%(url)s\">Segítsen megoldani!</a>"
+msgstr[0] "<strong>%(recent_unanswered_count)s</strong> kérdés nincs megválaszolva az elmúlt <strong>24 órában</strong>. <a href=\"%(url)s\">Segítsen megoldani!</a>"
+msgstr[1] "<strong>%(recent_unanswered_count)s</strong> kérdés nincs megválaszolva az elmúlt <strong>24 órában</strong>. <a href=\"%(url)s\">Segítsen megoldani!</a>"
 
 #: kitsune/questions/templates/questions/questions.html:42
 msgid "<strong>0</strong> questions in the last <strong>24 hours</strong> have no reply. <strong>Good job!</strong>"
-msgstr ""
-"<strong>0</strong> kérdés nincs megválaszolva az elmúlt <strong>24 "
-"órában</strong>. <strong>Szép munka!</strong>"
+msgstr "<strong>0</strong> kérdés nincs megválaszolva az elmúlt <strong>24 órában</strong>. <strong>Szép munka!</strong>"
 
 #: kitsune/questions/templates/questions/questions.html:56
 msgid "Showing questions tagged:"
@@ -3694,7 +3777,7 @@ msgid "Unsolved"
 msgstr "Megoldatlan"
 
 #: kitsune/questions/templates/questions/questions.html:92 kitsune/questions/templates/questions/questions.html:194 kitsune/questions/templates/questions/mobile/questions.html:130
-#: kitsune/search/forms.py:146 kitsune/search/templates/search/includes/result.html:14
+#: kitsune/search/forms.py:150 kitsune/search/templates/search/includes/result.html:14
 msgid "Solved"
 msgstr "Megoldva"
 
@@ -3741,11 +3824,15 @@ msgstr "megnézés"
 msgid "Contributed"
 msgstr "Közreműködés módjai"
 
-#: kitsune/questions/templates/questions/questions.html:206
+#: kitsune/questions/templates/questions/questions.html:203 kitsune/search/forms.py:146
+msgid "Archived"
+msgstr ""
+
+#: kitsune/questions/templates/questions/questions.html:209
 msgid "Posted by {user}"
 msgstr "Beküldte: {user}"
 
-#: kitsune/questions/templates/questions/questions.html:207 kitsune/questions/templates/questions/questions.html:213
+#: kitsune/questions/templates/questions/questions.html:210 kitsune/questions/templates/questions/questions.html:216
 #, fuzzy
 msgid "on"
 msgstr "Nincs"
@@ -4237,14 +4324,10 @@ msgstr "Kérdezzen"
 msgid "Try another topic"
 msgstr ""
 
-#: kitsune/questions/templates/questions/mobile/new_question.html:54
+#: kitsune/questions/templates/questions/mobile/new_question.html:52 kitsune/questions/templates/questions/mobile/new_question.html:57
 #, fuzzy
 msgid "Post a question"
 msgstr "Kérdezzen"
-
-#: kitsune/questions/templates/questions/mobile/new_question.html:75 kitsune/sumo/templates/layout/paginator.html:30
-msgid "Next"
-msgstr "Következő"
 
 #: kitsune/questions/templates/questions/mobile/questions.html:16
 msgid "Top contributors"
@@ -4360,19 +4443,19 @@ msgstr "Témacsoport típusa"
 msgid "Search in forum"
 msgstr "Keresés a fórumban"
 
-#: kitsune/search/forms.py:150
+#: kitsune/search/forms.py:154
 msgid "Has answers"
 msgstr "Megválaszolva"
 
-#: kitsune/search/forms.py:154
+#: kitsune/search/forms.py:158
 msgid "Has helpful answers"
 msgstr "Hasznos válaszok vannak"
 
-#: kitsune/search/forms.py:158
+#: kitsune/search/forms.py:162
 msgid "Votes"
 msgstr "Szavazatok"
 
-#: kitsune/search/forms.py:161
+#: kitsune/search/forms.py:165
 msgid "tag1, tag2"
 msgstr "címke1, címke2"
 
@@ -4415,7 +4498,7 @@ msgstr "Mozilla támogatás keresése"
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
 msgstr "A keresés átmenetileg nem érhető el, próbálja meg pár perccel később."
 
-#: kitsune/search/templates/search/form.html:4 kitsune/sumo/templates/includes/common_macros.html:147
+#: kitsune/search/templates/search/form.html:4 kitsune/sumo/templates/includes/common_macros.html:141
 msgid "Advanced Search"
 msgstr "Speciális keresés"
 
@@ -4447,16 +4530,16 @@ msgstr "Fórumok"
 msgid "Article contains"
 msgstr "Leírás tartalmazza"
 
-#: kitsune/search/templates/search/form.html:27 kitsune/search/templates/search/form.html:81 kitsune/search/templates/search/form.html:182
+#: kitsune/search/templates/search/form.html:27 kitsune/search/templates/search/form.html:81 kitsune/search/templates/search/form.html:189
 msgid "crashes on youtube"
 msgstr "összeomlás a youtube-on"
 
-#: kitsune/search/templates/search/form.html:74 kitsune/search/templates/search/form.html:175 kitsune/search/templates/search/form.html:225
+#: kitsune/search/templates/search/form.html:74 kitsune/search/templates/search/form.html:182 kitsune/search/templates/search/form.html:232
 msgctxt "button"
 msgid "Search Mozilla Support"
 msgstr "Mozilla támogatás keresése"
 
-#: kitsune/search/templates/search/form.html:75 kitsune/search/templates/search/form.html:176 kitsune/search/templates/search/form.html:226
+#: kitsune/search/templates/search/form.html:75 kitsune/search/templates/search/form.html:183 kitsune/search/templates/search/form.html:233
 msgid "Use basic search"
 msgstr "Egyszerű keresés használata"
 
@@ -4464,27 +4547,27 @@ msgstr "Egyszerű keresés használata"
 msgid "Post contains"
 msgstr "Bejegyzés tartalmaz"
 
-#: kitsune/search/templates/search/form.html:117
+#: kitsune/search/templates/search/form.html:124
 msgid "Number of votes. Must be an integer."
 msgstr "Szavazatok száma. Egész számnak kell lennie."
 
-#: kitsune/search/templates/search/form.html:134
+#: kitsune/search/templates/search/form.html:141
 msgid "Note: Searching for \"tag1, tag2\" returns questions tagged with both tag1 and tag2"
 msgstr "Megjegyzés: a \"címke1, címke2\" azokat a kérdéseket jeleníti meg, amelyek címke1 és címke2 címkével is el van látva"
 
-#: kitsune/search/templates/search/form.html:155 kitsune/search/templates/search/form.html:200
+#: kitsune/search/templates/search/form.html:162 kitsune/search/templates/search/form.html:207
 msgid "Created date. Format: mm/dd/yy"
 msgstr "Létrehozás dátuma. Formátum: hh/nn/éé"
 
-#: kitsune/search/templates/search/form.html:161 kitsune/search/templates/search/form.html:206
+#: kitsune/search/templates/search/form.html:168 kitsune/search/templates/search/form.html:213
 msgid "Updated date. Format: mm/dd/yy"
 msgstr "Frissítés dátuma. Formátum: hh/nn/éé"
 
-#: kitsune/search/templates/search/form.html:181
+#: kitsune/search/templates/search/form.html:188
 msgid "Thread contains"
 msgstr "Témacsoport tartalmaz"
 
-#: kitsune/search/templates/search/form.html:234
+#: kitsune/search/templates/search/form.html:241
 msgid "Use advanced search"
 msgstr "Speciális keresés használata"
 
@@ -5099,6 +5182,18 @@ msgctxt "DB: karma.Title.name"
 msgid "Top 25 Contributor"
 msgstr "Legjobb 25 közreműködő"
 
+#: kitsune/sumo/db_strings.py:184
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "Kitsune Contributor"
+msgstr "Aktív közreműködők"
+
+#: kitsune/sumo/db_strings.py:185
+#, fuzzy
+msgctxt "DB: badger.Badge.description"
+msgid "Badge awarded to those who have contributed to the Kitsune code base."
+msgstr "Meghatározás: az elmúlt 30 napban közreműködő emberek száma."
+
 #: kitsune/sumo/form_fields.py:96
 msgid "To field is required."
 msgstr "A mező kitöltése kötelező."
@@ -5183,29 +5278,27 @@ msgctxt "site_title"
 msgid "Mozilla Support"
 msgstr "Mozilla támogatás"
 
-#: kitsune/sumo/templates/base.html:85
+#: kitsune/sumo/templates/base.html:81
 msgid "This is a staging site, the content gets overwritten on the 1st of every month.<br>The production site is <a href=\"http://support.mozilla.org\">here</a>."
 msgstr "Ez egy fejlesztői oldal, az oldal tartalma minden hónap első napján felülírásra kerül. <br>A publikusan elérhető weboldal <a href=\"http://support.mozilla.org\">itt található</a>."
 
-#: kitsune/sumo/templates/base.html:96
+#: kitsune/sumo/templates/base.html:92
 msgid "This page doesn't have a mobile optimized version. Tap here to go back."
-msgstr ""
-"Ez az oldal nem rendelkezik mobil eszközökre optimalizált verzióval. "
-"Koppintson ide a visszatéréshez."
+msgstr "Ez az oldal nem rendelkezik mobil eszközökre optimalizált verzióval. Koppintson ide a visszatéréshez."
 
-#: kitsune/sumo/templates/base.html:103
+#: kitsune/sumo/templates/base.html:99
 msgid "Tap here to go to the mobile version of the site."
 msgstr "Érintse meg, ha az oldal mobil verziójára kíván váltani."
 
-#: kitsune/sumo/templates/base.html:112
+#: kitsune/sumo/templates/base.html:108
 msgid "Your Firefox is out of date and may contain a security risk!"
 msgstr ""
 
-#: kitsune/sumo/templates/base.html:116
+#: kitsune/sumo/templates/base.html:112
 msgid "Upgrade Firefox"
 msgstr "Firefox frissítése"
 
-#: kitsune/sumo/templates/base.html:186
+#: kitsune/sumo/templates/base.html:182
 msgid ""
 "Portions of this content are &copy;1998–2013 <br>by individual mozilla.org contributors. Content <br>available under a <a href=\"//www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
@@ -5213,43 +5306,43 @@ msgstr ""
 "A tartalom egyes részei &copy;1998–2013 <br>egyéni mozilla.org közreműködők munkái. A tartalom <a href=\"//www.mozilla.org/foundation/licensing/website-content.html\">Creative Commons license</a> "
 "alatt érhető el."
 
-#: kitsune/sumo/templates/base.html:196
+#: kitsune/sumo/templates/base.html:192
 msgid "Contact Us"
 msgstr "Kapcsolat"
 
-#: kitsune/sumo/templates/base.html:197
+#: kitsune/sumo/templates/base.html:193
 msgid "Privacy Policy"
 msgstr "Biztonsági irányelvek"
 
-#: kitsune/sumo/templates/base.html:198
+#: kitsune/sumo/templates/base.html:194
 msgid "Legal Notices"
 msgstr "Jogi megjegyzések"
 
-#: kitsune/sumo/templates/base.html:199
+#: kitsune/sumo/templates/base.html:195
 msgid "Report Trademark Abuse"
 msgstr "Védjeggyel való visszaélés jelentése"
 
-#: kitsune/sumo/templates/base.html:200
+#: kitsune/sumo/templates/base.html:196
 msgid "Source Code"
 msgstr "Forráskód"
 
-#: kitsune/sumo/templates/base.html:205 kitsune/users/templates/users/profile.html:111 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:76
+#: kitsune/sumo/templates/base.html:201 kitsune/users/templates/users/profile.html:111 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:76
 msgid "Twitter"
 msgstr "Twitter"
 
-#: kitsune/sumo/templates/base.html:206 kitsune/users/templates/users/profile.html:117 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:80
+#: kitsune/sumo/templates/base.html:202 kitsune/users/templates/users/profile.html:117 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:80
 msgid "Facebook"
 msgstr "Facebook"
 
-#: kitsune/sumo/templates/base.html:207
+#: kitsune/sumo/templates/base.html:203
 msgid "Firefox Affiliates"
 msgstr "Firefox Affiliates"
 
-#: kitsune/sumo/templates/base.html:208
+#: kitsune/sumo/templates/base.html:204
 msgid "Switch to mobile site"
 msgstr "Váltás mobil verzióra"
 
-#: kitsune/sumo/templates/email/base.html:213 kitsune/sumo/templates/mobile/base.html:113
+#: kitsune/sumo/templates/email/base.html:213 kitsune/sumo/templates/mobile/base.html:117
 msgid "Mozilla Support"
 msgstr "Mozilla támogatás"
 
@@ -5282,7 +5375,7 @@ msgstr "A bejelentkezéshez vagy regisztrációhoz a sütiket engedélyezni kell
 msgid "You do not have permission to access this page."
 msgstr "Nincs joga az oldal eléréséhez."
 
-#: kitsune/sumo/templates/handlers/403.html:18 kitsune/users/templates/users/includes/macros.html:22
+#: kitsune/sumo/templates/handlers/403.html:18 kitsune/users/templates/users/includes/macros.html:21
 msgid "Log in"
 msgstr "Bejelentkezés"
 
@@ -5322,55 +5415,47 @@ msgstr "Beállítások"
 msgid "Sign Out"
 msgstr "Kijelentkezés"
 
-#: kitsune/sumo/templates/includes/common_macros.html:56
-msgid "What's this"
-msgstr ""
-
-#: kitsune/sumo/templates/includes/common_macros.html:58
-msgid "SUMO has switched to Persona, a safe and simple way to sign in with just your e-mail address. <a href=\"%(url)s\">Learn more about why Mozilla is using Persona.</a>"
-msgstr ""
-
-#: kitsune/sumo/templates/includes/common_macros.html:68
+#: kitsune/sumo/templates/includes/common_macros.html:62
 msgid "Sign In / Register"
 msgstr "Bejelentkezés / Regisztráció"
 
-#: kitsune/sumo/templates/includes/common_macros.html:104 kitsune/sumo/templates/includes/common_macros.html:121
+#: kitsune/sumo/templates/includes/common_macros.html:98 kitsune/sumo/templates/includes/common_macros.html:115
 msgid "For Contributors"
 msgstr "Közreműködőknek"
 
-#: kitsune/sumo/templates/includes/common_macros.html:133
+#: kitsune/sumo/templates/includes/common_macros.html:127
 msgid "Quickstart Guide"
 msgstr "Rövid bevezetés"
 
-#: kitsune/sumo/templates/includes/common_macros.html:134
+#: kitsune/sumo/templates/includes/common_macros.html:128
 msgid "News &amp; Resources"
 msgstr "Hírek és leírások"
 
-#: kitsune/sumo/templates/includes/common_macros.html:135
+#: kitsune/sumo/templates/includes/common_macros.html:129
 msgid "Contributor Forums"
 msgstr "Közreműködők fóruma"
 
-#: kitsune/sumo/templates/includes/common_macros.html:136
+#: kitsune/sumo/templates/includes/common_macros.html:130
 msgid "Article Discussions"
 msgstr "Leírás beszélgetései"
 
-#: kitsune/sumo/templates/includes/common_macros.html:138
+#: kitsune/sumo/templates/includes/common_macros.html:132
 msgid "Localization Metrics"
 msgstr "Lokalizációs metrikák"
 
-#: kitsune/sumo/templates/includes/common_macros.html:140
+#: kitsune/sumo/templates/includes/common_macros.html:134
 msgid "Help on Twitter"
 msgstr "Segítsen Twitteren"
 
-#: kitsune/sumo/templates/includes/common_macros.html:141
+#: kitsune/sumo/templates/includes/common_macros.html:135
 msgid "Support Forum Home"
 msgstr "Támogatói fórum kezdőlapja"
 
-#: kitsune/sumo/templates/includes/common_macros.html:144
+#: kitsune/sumo/templates/includes/common_macros.html:138
 msgid "Moderate Forum Content"
 msgstr "Moderált fórumtartalom"
 
-#: kitsune/sumo/templates/includes/common_macros.html:149
+#: kitsune/sumo/templates/includes/common_macros.html:143
 msgid "Karma Dashboard"
 msgstr "Karma vezérlőpult"
 
@@ -5389,10 +5474,6 @@ msgid "Page {n}"
 msgid_plural "Page {n}"
 msgstr[0] "{n} oldal"
 msgstr[1] "{n} oldal"
-
-#: kitsune/sumo/templates/layout/paginator.html:6
-msgid "Previous"
-msgstr "Előző"
 
 #: kitsune/sumo/templates/mobile/base.html:17
 msgctxt "site_title"
@@ -5419,23 +5500,23 @@ msgstr "Javaslatok"
 msgid "Profile"
 msgstr "Profil"
 
-#: kitsune/sumo/templates/mobile/base.html:86 kitsune/users/templates/users/includes/macros.html:82
+#: kitsune/sumo/templates/mobile/base.html:90 kitsune/users/templates/users/includes/macros.html:82
 msgid "Register"
 msgstr "Regisztráció"
 
-#: kitsune/sumo/templates/mobile/base.html:90
+#: kitsune/sumo/templates/mobile/base.html:94
 msgid "Languages"
 msgstr "Nyelvek"
 
-#: kitsune/sumo/templates/mobile/base.html:95 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
+#: kitsune/sumo/templates/mobile/base.html:99 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
 msgid "Switch language"
 msgstr "Nyelvváltás"
 
-#: kitsune/sumo/templates/mobile/base.html:96
+#: kitsune/sumo/templates/mobile/base.html:100
 msgid "Switch to desktop site"
 msgstr "Váltás az asztali gép nézetre"
 
-#: kitsune/sumo/templates/mobile/base.html:127
+#: kitsune/sumo/templates/mobile/base.html:131
 msgid "Get support for another platform:"
 msgstr "Támogatás másik platformhoz:"
 
@@ -5749,19 +5830,19 @@ msgstr "regisztrációs profil"
 msgid "registration profiles"
 msgstr "regisztrációs profilok"
 
-#: kitsune/users/views.py:163
+#: kitsune/users/views.py:164
 msgid "Your account is already activated, log in below."
 msgstr "A fiókja már aktiválva van, lépjen be alul."
 
-#: kitsune/users/views.py:210 kitsune/users/views.py:220
+#: kitsune/users/views.py:211 kitsune/users/views.py:221
 msgid "Account already activated"
 msgstr "A fiókja már aktiválva van"
 
-#: kitsune/users/views.py:348
+#: kitsune/users/views.py:350
 msgid "Your settings have been saved."
 msgstr "A beállítások mentése megtörtént."
 
-#: kitsune/users/views.py:633
+#: kitsune/users/views.py:635
 msgid "We've sent an email with the username to any account using {email}."
 msgstr "Elküldtünk egy levelet a(z) {email} címet használó felhasználó felhasználónévvel."
 
@@ -5833,16 +5914,21 @@ msgstr "Regisztráljon közreműködőnek"
 msgid "You don't need to register to <a href=\"{url}\">ask a question</a>."
 msgstr "Ha segítségre van szüksége a Firefox használatával kapcsolatban, akkor <a href=\"%(aaq_url)s\">kérdezzen</a>."
 
-#: kitsune/users/templates/users/browserid_signup.html:10
+#: kitsune/users/templates/users/browserid_signup.html:5
+#, fuzzy
+msgid "Select a username"
+msgstr "Felhasználónév küldése"
+
+#: kitsune/users/templates/users/browserid_signup.html:12 kitsune/users/templates/users/mobile/browserid_signup.html:5
 #, fuzzy
 msgid "You're almost there!"
 msgstr "Jelenlegi pozíció:"
 
-#: kitsune/users/templates/users/browserid_signup.html:12
+#: kitsune/users/templates/users/browserid_signup.html:14 kitsune/users/templates/users/mobile/browserid_signup.html:12
 msgid "Please select a username and click continue to proceed with sign up."
 msgstr ""
 
-#: kitsune/users/templates/users/browserid_signup.html:24
+#: kitsune/users/templates/users/browserid_signup.html:27 kitsune/users/templates/users/mobile/browserid_signup.html:26
 #, fuzzy
 msgid "Continue"
 msgstr "Közreműködés módjai"
@@ -6134,11 +6220,11 @@ msgstr ""
 msgid "<a href=\"https://support.mozilla.org/en-US/kb/localize-firefox-help\">L10N Contributor</a> - Help to translate Firefox Help content to your language."
 msgstr ""
 
-#: kitsune/users/templates/users/includes/macros.html:22
+#: kitsune/users/templates/users/includes/macros.html:21
 msgid "Logging in..."
 msgstr "Bejelentkezés…"
 
-#: kitsune/users/templates/users/includes/macros.html:22
+#: kitsune/users/templates/users/includes/macros.html:21
 msgid "Logged in!"
 msgstr "Bejelentkezett!"
 
@@ -6185,6 +6271,10 @@ msgstr "Beállítások szerkesztése"
 #: kitsune/users/templates/users/mobile/activate.html:6
 msgid "Successfully activated"
 msgstr "Sikeresen aktiválva"
+
+#: kitsune/users/templates/users/mobile/browserid_signup.html:10 kitsune/users/templates/users/mobile/register.html:13
+msgid "Create a support account."
+msgstr "Támogatói fiók létrehozása."
 
 #: kitsune/users/templates/users/mobile/change_email.html:3 kitsune/users/templates/users/mobile/change_email.html:27 kitsune/users/templates/users/mobile/change_email_done.html:3
 #, fuzzy
@@ -6262,10 +6352,6 @@ msgstr "Új jelszó kérése"
 #: kitsune/users/templates/users/mobile/register.html:7 kitsune/users/templates/users/mobile/register_done.html:7
 msgid "Register or sign in"
 msgstr "Regisztráció vagy bejelentkezés"
-
-#: kitsune/users/templates/users/mobile/register.html:13
-msgid "Create a support account."
-msgstr "Támogatói fiók létrehozása."
 
 #: kitsune/users/templates/users/mobile/includes/macros.html:19
 msgid "Signing in..."
@@ -7294,10 +7380,6 @@ msgstr "Verzióinformációk"
 msgid "Revision id:"
 msgstr "Verzióazonosító:"
 
-#: kitsune/wiki/templates/wiki/revision.html:28
-msgid "Creator:"
-msgstr "Létrehozó:"
-
 #: kitsune/wiki/templates/wiki/revision.html:36 kitsune/wiki/templates/wiki/revision.html:41
 msgid "Reviewed:"
 msgstr "Ellenőrzött:"
@@ -7808,11 +7890,6 @@ msgstr "Adjon részletesebb információt"
 #: kitsune/wiki/templates/wiki/mobile/document.html:8
 msgid "{t} | {c}"
 msgstr "{t} | {c}"
-
-#: vendor/src/django-badger/badger/feeds.py:149
-#, fuzzy
-msgid "Recently awarded badges"
-msgstr "Nemrég jóváhagyott frissítések"
 
 #: vendor/src/django-badger/badger/feeds.py:156
 #, fuzzy
