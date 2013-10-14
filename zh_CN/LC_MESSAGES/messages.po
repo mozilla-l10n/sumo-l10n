@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-24 06:28-0700\n"
+"POT-Creation-Date: 2013-10-14 14:06-0700\n"
 "PO-Revision-Date: 2013-10-03 22:01+0000\n"
 "Last-Translator: Shen <steekid@gmail.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -44,13 +44,33 @@ msgstr "新主题：{title}"
 msgid "User %(author)s has posted a new thread in a forum you're watching. Here is the thread:"
 msgstr "用户 %(author)s 在你关注的论坛发了一个新主题。以下是该主题："
 
-#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:2
-msgid "%(username)s has awarded you a badge!"
+#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:1 kitsune/kbadge/templates/kbadge/email/award_notification.html:16
+#, fuzzy
+msgid "Congratulations!"
+msgstr "贡献者"
+
+#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:4
+#, fuzzy
+msgid "%(awarder)s has awarded you the %(title)s badge!"
 msgstr "%(username)s 授予你一枚徽章！"
 
-#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:6 kitsune/kbadge/tasks.py:19
-msgid "You have been awarded a badge!"
+#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:4 kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:8 kitsune/kbadge/templates/badger/award_detail.html:8
+#: kitsune/kbadge/templates/badger/awards_list.html:8 kitsune/kbadge/templates/badger/awards_list.html:28 kitsune/kbadge/templates/badger/awards_list.html:29
+#: kitsune/kbadge/templates/badger/badge_detail.html:8 kitsune/kbadge/templates/kbadge/email/award_notification.html:26 kitsune/kbadge/templates/kbadge/email/award_notification.html:31
+#: kitsune/kbadge/templates/kbadge/includes/macros.html:12 kitsune/kbadge/templates/kbadge/includes/macros.html:13
+msgctxt "DB: badger.Badge.title"
+msgid "None"
+msgstr "无"
+
+#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:8
+#, fuzzy
+msgid "You have been awarded the %(title)s badge!"
 msgstr "你获得一枚徽章！"
+
+#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:17
+#, fuzzy
+msgid "See all the details:"
+msgstr "填写详细信息"
 
 #: kitsune/messages/templates/messages/email/private_message.ltxt:3 kitsune/messages/templates/messages/email/private_message.html:4
 msgid "{sender} sent you the following message:"
@@ -86,7 +106,7 @@ msgstr "感谢订阅！"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email. Whitespace matters!
-#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:494 kitsune/questions/templates/questions/email/confirm_question.html:4
+#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:509 kitsune/questions/templates/questions/email/confirm_question.html:4
 msgid "Please confirm your Firefox Help question"
 msgstr "请确认您的 Firefox 帮助 问题"
 
@@ -561,7 +581,7 @@ msgid "Sign out"
 msgstr "注销"
 
 #: kitsune/customercare/templates/customercare/landing.html:72 kitsune/customercare/templates/customercare/twitter_modal.html:14
-#: kitsune/questions/templates/questions/mobile/new_question_login.html:38 kitsune/sumo/templates/mobile/base.html:89 kitsune/users/templates/users/mobile/login.html:7
+#: kitsune/questions/templates/questions/mobile/new_question_login.html:38 kitsune/sumo/templates/mobile/base.html:90 kitsune/users/templates/users/mobile/login.html:7
 #: kitsune/users/templates/users/mobile/includes/macros.html:19
 msgid "Sign in"
 msgstr "登录"
@@ -642,9 +662,9 @@ msgstr "小狐狸的了不起大军 未经您的许可绝不会乱发推文。"
 msgid "If you’re registered with Mozilla Support, we will keep you logged into Twitter, so you can use Army of Awesome instantly."
 msgstr "如果您注册了 Mozilla Support，我们将让您登录到 Twitter，以便您马上使用\"小狐狸的了不起大军\"。"
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:24 kitsune/questions/templates/questions/new_question_login.html:20
+#: kitsune/customercare/templates/customercare/twitter_modal.html:24 kitsune/questions/templates/questions/new_question_login.html:21
 #: kitsune/questions/templates/questions/mobile/new_question_login.html:16 kitsune/sumo/templates/includes/common_macros.html:55 kitsune/sumo/templates/includes/common_macros.html:57
-#: kitsune/sumo/templates/mobile/base.html:84 kitsune/sumo/templates/mobile/base.html:86 kitsune/users/templates/users/auth.html:23 kitsune/users/templates/users/mobile/login.html:14
+#: kitsune/sumo/templates/mobile/base.html:85 kitsune/sumo/templates/mobile/base.html:87 kitsune/users/templates/users/auth.html:23 kitsune/users/templates/users/mobile/login.html:14
 msgid "Sign in with email"
 msgstr "用邮件地址登录"
 
@@ -1683,16 +1703,14 @@ msgstr "6 个月"
 msgid "1 year"
 msgstr "1 年"
 
+#: kitsune/kbadge/tasks.py:20
+#, fuzzy
+msgid "You were awarded the '{title}' badge!"
+msgstr "你获得一枚徽章！"
+
 #: kitsune/kbadge/templates/badger/award_detail.html:8
 msgid "Awarded badge: %(badge_name)s"
 msgstr "已获得徽章： %(badge_name)s"
-
-#: kitsune/kbadge/templates/badger/award_detail.html:8 kitsune/kbadge/templates/badger/awards_list.html:8 kitsune/kbadge/templates/badger/awards_list.html:28
-#: kitsune/kbadge/templates/badger/awards_list.html:29 kitsune/kbadge/templates/badger/badge_detail.html:8 kitsune/kbadge/templates/kbadge/includes/macros.html:12
-#: kitsune/kbadge/templates/kbadge/includes/macros.html:13
-msgctxt "DB: badger.Badge.title"
-msgid "None"
-msgstr "无"
 
 #: kitsune/kbadge/templates/badger/award_detail.html:15 kitsune/kbadge/templates/badger/badge_detail.html:15
 msgid "Image:"
@@ -1751,7 +1769,7 @@ msgstr "授予"
 msgid "Previous"
 msgstr "上一个"
 
-#: kitsune/kbadge/templates/badger/awards_list.html:53 kitsune/questions/templates/questions/mobile/new_question.html:79 kitsune/sumo/templates/layout/paginator.html:30
+#: kitsune/kbadge/templates/badger/awards_list.html:53 kitsune/questions/templates/questions/mobile/new_question.html:81 kitsune/sumo/templates/layout/paginator.html:30
 msgid "Next"
 msgstr "下一个"
 
@@ -1762,6 +1780,19 @@ msgstr "徽章： %(badge_name)s"
 #: kitsune/kbadge/templates/badger/badge_detail.html:39
 msgid "Recent awardees"
 msgstr "最近获得的徽章"
+
+#: kitsune/kbadge/templates/kbadge/email/award_notification.html:26
+msgid "<strong>%(awarder)s</strong> has awarded you the <strong>%(title)s</strong> badge!"
+msgstr ""
+
+#: kitsune/kbadge/templates/kbadge/email/award_notification.html:31
+#, fuzzy
+msgid "You have been awarded the <strong>%(title)s</strong> badge!"
+msgstr "你获得一枚徽章！"
+
+#: kitsune/kbadge/templates/kbadge/email/award_notification.html:42
+msgid "See all the details..."
+msgstr ""
 
 #: kitsune/kbforums/events.py:23
 msgid "Re: {forum} - {thread}"
@@ -2223,43 +2254,43 @@ msgstr "定义：本地化覆盖率是指该语言版本的知识库文档在所
 msgid "Edit levels are taken into account as follows:"
 msgstr "编辑程度按以下说明设定："
 
-#: kitsune/kpi/templates/kpi/dashboard.html:204
+#: kitsune/kpi/templates/kpi/dashboard.html:205
 msgid "A level 2 review change drops the localization to 50% of the article"
 msgstr "若该变更会造成50%的翻译内容需要更新，为2级修改"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:205
+#: kitsune/kpi/templates/kpi/dashboard.html:206
 msgid "A level 3 review change drops the localization to 0% of the article"
 msgstr "若该变更会造成所有翻译内容都需要更新，为3级修改"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:206
+#: kitsune/kpi/templates/kpi/dashboard.html:207
 msgid "More than one level 2 review change drops the localization to 0%"
 msgstr "一篇文章中若有超过一个2级修改，就会造成所有翻译版本需要更新"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:210
+#: kitsune/kpi/templates/kpi/dashboard.html:211
 msgid "Example:"
 msgstr "举例："
 
-#: kitsune/kpi/templates/kpi/dashboard.html:212
+#: kitsune/kpi/templates/kpi/dashboard.html:214
 msgid "German makes up 10% of our visitor base"
 msgstr "假如德语版本占整体访问次数的10%"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:213
+#: kitsune/kpi/templates/kpi/dashboard.html:215
 msgid "The 'how to set your home page' article makes up 2% of our top 50 visits"
 msgstr "“如何设置您的首页”这篇文章占前50名阅览文章阅览数的2%"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:214
+#: kitsune/kpi/templates/kpi/dashboard.html:216
 msgid "When the Home page article is the only localized article and it's up to date in German, then our overall coverage is 2% of 10%=0.2% overall (+ the English coverage)"
 msgstr "当这篇文章是德语中唯一完成翻译且更新到最新版本的文章时，德语的覆盖率即为 10% 中的 2%，也就是整体的 0.2%（外加英语覆盖率）"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:215
+#: kitsune/kpi/templates/kpi/dashboard.html:217
 msgid "When German misses a level 2 change, the coverage drops to 50%, so 1% of 10%= 0.1% overall"
 msgstr "当德语没跟上某次2级修改时，覆盖率就会跌落到50%，也就是 10% 中的 1%，总体的 0.1%。"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:216
+#: kitsune/kpi/templates/kpi/dashboard.html:218
 msgid "<b>Important:</b> Currently we are using a simplified model, where each article accounts for 1/50=2% of visits per language"
 msgstr "<b>重要：</b>我们目前正在使用一个简化的模式，每篇文章都定为占各语言版本的1/50=2%访问量"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:226
+#: kitsune/kpi/templates/kpi/dashboard.html:227
 msgid "Exit Survey Results"
 msgstr "退出调查结果"
 
@@ -2350,10 +2381,8 @@ msgid ""
 msgstr "如果您对写教程有兴趣，知识库将是您的最好去处。我们亟需能够撰写、编辑与审阅文章的贡献者。每周，成千上万的人浏览我们的知识库。想像一下，有多少人将会被您帮助到！"
 
 #: kitsune/landings/templates/landings/get-involved-kb.html:32 kitsune/landings/templates/landings/get-involved-l10n.html:31 kitsune/landings/templates/landings/get-involved-questions.html:33
-#: kitsune/landings/templates/landings/includes/register_contributor.html:22 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:68
-#: kitsune/landings/templates/landings/mobile/get-involved-kb.html:32 kitsune/landings/templates/landings/mobile/get-involved-kb.html:67
-#: kitsune/landings/templates/landings/mobile/get-involved-l10n.html:62 kitsune/landings/templates/landings/mobile/get-involved-questions.html:31
-#: kitsune/landings/templates/landings/mobile/get-involved-questions.html:74 kitsune/landings/templates/landings/mobile/get-involved.html:72
+#: kitsune/landings/templates/landings/includes/register_contributor.html:22 kitsune/landings/templates/landings/mobile/get-involved-kb.html:32
+#: kitsune/landings/templates/landings/mobile/get-involved-questions.html:31 kitsune/landings/templates/landings/mobile/includes/register_contributor.html:3
 msgid "Sign up as a volunteer"
 msgstr "成为一名志愿者"
 
@@ -2489,10 +2518,8 @@ msgid "Your input helps make Mozilla better. <a href=\"%(url)s\"> Give us your f
 msgstr "您的反馈将会帮助 Mozilla 改进。<a href=\"%(url)s\">请提交您的反馈</a>"
 
 #: kitsune/landings/templates/landings/includes/register_contributor.html:9 kitsune/landings/templates/landings/includes/register_contributor.html:17
-#: kitsune/landings/templates/landings/includes/register_contributor.html:19 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:70
-#: kitsune/landings/templates/landings/mobile/get-involved-kb.html:69 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:64
-#: kitsune/landings/templates/landings/mobile/get-involved-questions.html:76 kitsune/landings/templates/landings/mobile/get-involved.html:77
-#: kitsune/landings/templates/landings/mobile/get-involved.html:81
+#: kitsune/landings/templates/landings/includes/register_contributor.html:19 kitsune/landings/templates/landings/mobile/includes/register_contributor.html:8
+#: kitsune/landings/templates/landings/mobile/includes/register_contributor.html:16 kitsune/landings/templates/landings/mobile/includes/register_contributor.html:19
 msgid "Sign me up"
 msgstr "加入我们吧"
 
@@ -2557,7 +2584,7 @@ msgid "Are you sure you want to delete this message?"
 msgstr "您确定要删除此消息吗？"
 
 #: kitsune/messages/templates/messages/inbox.html:3 kitsune/messages/templates/messages/includes/macros.html:24 kitsune/messages/templates/messages/mobile/inbox.html:13
-#: kitsune/messages/templates/messages/mobile/outbox.html:13 kitsune/sumo/templates/includes/common_macros.html:45 kitsune/sumo/templates/mobile/base.html:74
+#: kitsune/messages/templates/messages/mobile/outbox.html:13 kitsune/sumo/templates/includes/common_macros.html:45 kitsune/sumo/templates/mobile/base.html:75
 msgid "Inbox"
 msgstr "收件箱"
 
@@ -2687,7 +2714,7 @@ msgstr "帮助主题"
 msgid "Get Involved - Help Other Users"
 msgstr "参与 - 帮助其他用户"
 
-#: kitsune/products/templates/products/products.html:3 kitsune/products/templates/products/mobile/products.html:3 kitsune/questions/templates/questions/mobile/new_question.html:20
+#: kitsune/products/templates/products/products.html:3 kitsune/products/templates/products/mobile/products.html:3 kitsune/questions/templates/questions/mobile/new_question.html:22
 #: kitsune/search/templates/search/mobile/results.html:26
 msgid "Products"
 msgstr "产品"
@@ -3076,56 +3103,60 @@ msgstr "Thunderbird"
 msgid "or other Mozilla products"
 msgstr "或其他 Mozilla 产品"
 
-#: kitsune/questions/views.py:75
+#: kitsune/questions/views.py:76
 msgid "That tag does not exist."
 msgstr "该标签不存在。"
 
-#: kitsune/questions/views.py:76
+#: kitsune/questions/views.py:77
 msgid "Please provide a tag."
 msgstr "请提供一个标签。"
 
+#: kitsune/questions/views.py:382
+msgid "The questions forum isn't available in {old_lang}, we have redirected you to the {new_lang} questions forum."
+msgstr ""
+
 #. L10n: This shouldn't happen unless people tamper with POST data.
-#: kitsune/questions/views.py:504
+#: kitsune/questions/views.py:519
 msgid "Request type not recognized."
 msgstr "无法识别请求的类型。"
 
-#: kitsune/questions/views.py:561
+#: kitsune/questions/views.py:576
 msgid "Done! Your question is now posted on the Mozilla community support forum."
 msgstr "完成！您的问题已成功在 Mozilla 社区支持论坛上发布。"
 
-#: kitsune/questions/views.py:764
+#: kitsune/questions/views.py:783
 msgid "Thank you for choosing a solution!"
 msgstr "感谢您选了一个解决方案！"
 
-#: kitsune/questions/views.py:789
+#: kitsune/questions/views.py:808
 msgid "The solution was undone successfully."
 msgstr "该解决方案已成功撤销。"
 
-#: kitsune/questions/views.py:860
+#: kitsune/questions/views.py:879
 msgid "Glad to hear it!"
 msgstr "很高兴听到这个消息！"
 
-#: kitsune/questions/views.py:863 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
+#: kitsune/questions/views.py:882 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
 msgid "Sorry to hear that."
 msgstr "很抱歉听到这消息。"
 
-#: kitsune/questions/views.py:884
+#: kitsune/questions/views.py:903
 msgid "You already voted on this reply."
 msgstr "您已在此回答上投过票了。"
 
-#: kitsune/questions/views.py:1118
+#: kitsune/questions/views.py:1137
 msgid "Could not send a message to that email address."
 msgstr "不能向那个邮件地址发送邮件。"
 
-#: kitsune/questions/views.py:1123
+#: kitsune/questions/views.py:1142
 msgid "You will be notified of updates by email."
 msgstr "有更新时您会得到邮件通知。"
 
-#: kitsune/questions/views.py:1125
+#: kitsune/questions/views.py:1144
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "您很快会收到邮件确认您的订阅。"
 
-#: kitsune/questions/views.py:1205
+#: kitsune/questions/views.py:1224
 msgid "There was an error submitting the ticket. Please try again later."
 msgstr "提交票据时发生错误，请稍后再试。"
 
@@ -3348,9 +3379,7 @@ msgstr "我要提问"
 
 #: kitsune/questions/templates/questions/answers.html:421
 msgid "You must <a href=\"{login_url}\">log in to your account</a> to reply to posts. Please <a href=\"{ask_url}\">start a new question</a>, if you do not have an account yet."
-msgstr ""
-"你必须<a href=\"{login_url}\">登录到你的帐号</a>才能回复。如果你还没帐号，请<a "
-"href=\"{ask_url}\">提出一个新问题</a>。"
+msgstr "你必须<a href=\"{login_url}\">登录到你的帐号</a>才能回复。如果你还没帐号，请<a href=\"{ask_url}\">提出一个新问题</a>。"
 
 #. {t} is the title of the question.
 #: kitsune/questions/templates/questions/confirm_answer_delete.html:3
@@ -3512,47 +3541,47 @@ msgstr "数据暂时不可用，请稍等片刻再试。"
 msgid "Ask a Question"
 msgstr "提问"
 
-#: kitsune/questions/templates/questions/new_question.html:43
+#: kitsune/questions/templates/questions/new_question.html:45
 msgid "Summarize your question in a sentence"
 msgstr "一句话概括您的问题"
 
-#: kitsune/questions/templates/questions/new_question.html:50
+#: kitsune/questions/templates/questions/new_question.html:52
 msgid "Do any of these articles answer your question?"
 msgstr "这些文章能回答你的问题吗？"
 
-#: kitsune/questions/templates/questions/new_question.html:52 kitsune/questions/templates/questions/includes/aaq_macros.html:115
+#: kitsune/questions/templates/questions/new_question.html:54 kitsune/questions/templates/questions/includes/aaq_macros.html:115
 msgid "None of these solve my problem"
 msgstr "这些都不能解决我的问题"
 
-#: kitsune/questions/templates/questions/new_question.html:60 kitsune/questions/templates/questions/includes/aaq_macros.html:117
+#: kitsune/questions/templates/questions/new_question.html:62 kitsune/questions/templates/questions/includes/aaq_macros.html:117
 msgid "This question has not been asked before."
 msgstr "此前没有人问过这个问题。"
 
-#: kitsune/questions/templates/questions/new_question.html:61 kitsune/questions/templates/questions/includes/aaq_macros.html:118
+#: kitsune/questions/templates/questions/new_question.html:63 kitsune/questions/templates/questions/includes/aaq_macros.html:118
 msgid "Provide more details"
 msgstr "提供更多细节"
 
-#: kitsune/questions/templates/questions/new_question.html:78
+#: kitsune/questions/templates/questions/new_question.html:80
 msgid "Fill in the details of your question."
 msgstr "在您的问题中填写细节。"
 
-#: kitsune/questions/templates/questions/new_question.html:81 kitsune/questions/templates/questions/new_question_login.html:38
+#: kitsune/questions/templates/questions/new_question.html:83 kitsune/questions/templates/questions/new_question_login.html:39
 msgid "Post Question"
 msgstr "发出问题"
 
-#: kitsune/questions/templates/questions/new_question_login.html:19 kitsune/questions/templates/questions/mobile/new_question_login.html:14
+#: kitsune/questions/templates/questions/new_question_login.html:20 kitsune/questions/templates/questions/mobile/new_question_login.html:14
 msgid "Before you continue, you must sign in"
 msgstr "注册后才能继续"
 
-#: kitsune/questions/templates/questions/new_question_login.html:24
+#: kitsune/questions/templates/questions/new_question_login.html:25
 msgid "It appears you do not have an existing account"
 msgstr "看起来你还没有帐号"
 
-#: kitsune/questions/templates/questions/new_question_login.html:25
+#: kitsune/questions/templates/questions/new_question_login.html:26
 msgid "Please select a username for your new account."
 msgstr "为新帐号选择一个用户名。"
 
-#: kitsune/questions/templates/questions/new_question_login.html:29 kitsune/questions/templates/questions/mobile/new_question_login.html:26
+#: kitsune/questions/templates/questions/new_question_login.html:30 kitsune/questions/templates/questions/mobile/new_question_login.html:26
 msgid "Register and continue"
 msgstr "注册并继续"
 
@@ -4104,11 +4133,11 @@ msgstr "问新的问题"
 msgid "Ask A Question"
 msgstr "提问"
 
-#: kitsune/questions/templates/questions/mobile/new_question.html:47
+#: kitsune/questions/templates/questions/mobile/new_question.html:49
 msgid "Try another topic"
 msgstr "看看其他的主题"
 
-#: kitsune/questions/templates/questions/mobile/new_question.html:52 kitsune/questions/templates/questions/mobile/new_question.html:57
+#: kitsune/questions/templates/questions/mobile/new_question.html:54 kitsune/questions/templates/questions/mobile/new_question.html:59
 msgid "Post a question"
 msgstr "我要提问"
 
@@ -4947,11 +4976,227 @@ msgid "Top 25 Contributor"
 msgstr "前25名贡献者"
 
 #: kitsune/sumo/db_strings.py:184
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2012 Army of Awesome Badge"
+msgstr "小狐狸的了不起大军"
+
+#: kitsune/sumo/db_strings.py:185
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Army of Awesome 2012 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2012; in this case: 50 Army of Awesome tweets.\n"
+"\n"
+"Congrats to all SUMO Army of Awesome 2012 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:188
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2013 Army of Awesome Badge"
+msgstr "小狐狸的了不起大军"
+
+#: kitsune/sumo/db_strings.py:189
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Army of Awesome 2013 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2013; in this case: 50 Army of Awesome tweets.\n"
+"\n"
+"Congrats to all SUMO Army of Awesome 2013 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:192
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2010 Army of Awesome Badge"
+msgstr "小狐狸的了不起大军"
+
+#: kitsune/sumo/db_strings.py:193
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Army of Awesome 2010 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2010; in this case: 50 Army of Awesome tweets.\n"
+"\n"
+"Congrats to all SUMO Army of Awesome 2010 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:196
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2011 Army of Awesome Badge"
+msgstr "小狐狸的了不起大军"
+
+#: kitsune/sumo/db_strings.py:197
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Army of Awesome 2011 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2011; in this case: 50 Army of Awesome tweets.\n"
+"\n"
+"Congrats to all SUMO Army of Awesome 2011 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:200
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2012 Support Forum Badge"
+msgstr "技术支持论坛首页"
+
+#: kitsune/sumo/db_strings.py:201
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Forum 2012 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2012 in this case: 30 replies in the English SUMO Forum.\n"
+"\n"
+"Congrats to all SUMO Forum 2012 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:204
+msgctxt "DB: badger.Badge.title"
+msgid "2010 KB Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:205
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO KB 2010 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2010; in this case: 10 approved edits of the English SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO KB 2010 badge earners for advancing the Mozilla Mission"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:208
+msgctxt "DB: badger.Badge.title"
+msgid "2010 L10n Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:209
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO L10n 2010 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2010; in this case: 10 approved translation edits of the SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO L10n 2010 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:212
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2010 Support Forum Badge"
+msgstr "技术支持论坛首页"
+
+#: kitsune/sumo/db_strings.py:213
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Forum 2010 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2010 in this case: 30 replies in the English SUMO Forum.\n"
+"\n"
+"Congrats to all SUMO Forum 2010 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:216
+msgctxt "DB: badger.Badge.title"
+msgid "2011 KB Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:217
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO KB 2011 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2011; in this case: 10 approved edits of the English SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO KB 2011 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:220
+msgctxt "DB: badger.Badge.title"
+msgid "2011 L10n Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:221
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO L10n 2011 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2011; in this case: 10 approved translation edits of the SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO L10n 2011 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:224
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2011 Support Forum Badge"
+msgstr "技术支持论坛首页"
+
+#: kitsune/sumo/db_strings.py:225
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Forum 2011 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2011 in this case: 30 replies in the English SUMO Forum.\n"
+"\n"
+"Congrats to all SUMO Forum 2011 badge earners for advancing the Mozilla Mission!\n"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:229
+msgctxt "DB: badger.Badge.title"
+msgid "2012 KB Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:230
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO KB 2012 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2012; in this case: 10 approved edits of the English SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO KB 2012 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:233
+msgctxt "DB: badger.Badge.title"
+msgid "2013 KB Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:234
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO KB 2013 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2013 in this case: 10 approved edits of the English SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO KB 2013 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:237
+msgctxt "DB: badger.Badge.title"
+msgid "2013 L10n Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:238
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO L10n 2013 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2013 in this case: 10 approved translation edits of the SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO L10n 2013 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:241
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2013 Support Forum Badge"
+msgstr "技术支持论坛首页"
+
+#: kitsune/sumo/db_strings.py:242
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Forum 2013 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2013 in this case: 30 replies in the English SUMO Forum.\n"
+"\n"
+"Congrats to all SUMO Forum 2013 badge earners for advancing the Mozilla Mission"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:245
+msgctxt "DB: badger.Badge.title"
+msgid "2012 L10n Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:246
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO L10n 2012 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2012; in this case: 10 approved translation edits of the SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO L10n 2012 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:249
 msgctxt "DB: badger.Badge.title"
 msgid "Kitsune Contributor"
 msgstr "Kitsune 贡献者"
 
-#: kitsune/sumo/db_strings.py:185
+#: kitsune/sumo/db_strings.py:250
 msgctxt "DB: badger.Badge.description"
 msgid "Badge awarded to those who have contributed to the Kitsune code base."
 msgstr "徽章授予为 Kitsune 代码库作出贡献的人。"
@@ -5052,57 +5297,57 @@ msgstr "您的 Firefox 已过期，且可能包含安全隐患！"
 msgid "Upgrade Firefox"
 msgstr "升级 Firefox"
 
-#: kitsune/sumo/templates/base.html:182
+#: kitsune/sumo/templates/base.html:184
 msgid ""
 "Portions of this content are &copy;1998–2013 <br>by individual mozilla.org contributors. Content <br>available under a <a href=\"//www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
 msgstr "部份内容系版权所有©1998–2013，<br>由不同的 mozilla.org 贡献者所创作。 <br>内容遵循 <a href=\"<a href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.zh\">知识共享许可协议</a> 进行授权。"
 
-#: kitsune/sumo/templates/base.html:192
+#: kitsune/sumo/templates/base.html:194
 msgid "Contact Us"
 msgstr "联系我们"
 
-#: kitsune/sumo/templates/base.html:193
+#: kitsune/sumo/templates/base.html:195
 msgid "Privacy Policy"
 msgstr "隐私政策"
 
-#: kitsune/sumo/templates/base.html:194
+#: kitsune/sumo/templates/base.html:196
 msgid "Legal Notices"
 msgstr "法律条款"
 
-#: kitsune/sumo/templates/base.html:195
+#: kitsune/sumo/templates/base.html:197
 msgid "Report Trademark Abuse"
 msgstr "报告商标滥用"
 
-#: kitsune/sumo/templates/base.html:196
+#: kitsune/sumo/templates/base.html:198
 msgid "Source Code"
 msgstr "源代码"
 
-#: kitsune/sumo/templates/base.html:201 kitsune/users/templates/users/profile.html:111 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:76
+#: kitsune/sumo/templates/base.html:203 kitsune/users/templates/users/profile.html:111 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:76
 msgid "Twitter"
 msgstr "Twitter"
 
-#: kitsune/sumo/templates/base.html:202 kitsune/users/templates/users/profile.html:117 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:80
+#: kitsune/sumo/templates/base.html:204 kitsune/users/templates/users/profile.html:117 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:80
 msgid "Facebook"
 msgstr "Facebook"
 
-#: kitsune/sumo/templates/base.html:203
+#: kitsune/sumo/templates/base.html:205
 msgid "Firefox Affiliates"
 msgstr "Firefox 伙伴计划"
 
-#: kitsune/sumo/templates/base.html:204
+#: kitsune/sumo/templates/base.html:206
 msgid "Switch to mobile site"
 msgstr "切换到移动版"
 
-#: kitsune/sumo/templates/email/base.html:213 kitsune/sumo/templates/mobile/base.html:117
+#: kitsune/sumo/templates/email/base.html:214 kitsune/sumo/templates/mobile/base.html:119
 msgid "Mozilla Support"
 msgstr "Mozilla 技术支持"
 
-#: kitsune/sumo/templates/email/base.html:225
+#: kitsune/sumo/templates/email/base.html:226
 msgid "Change your email preferences"
 msgstr "更改你的电子邮箱偏好设置"
 
-#: kitsune/sumo/templates/email/base.html:227
+#: kitsune/sumo/templates/email/base.html:228
 msgid "Unsubscribe from these emails"
 msgstr "退订这些电子邮件"
 
@@ -5158,11 +5403,11 @@ msgstr "查看个人信息"
 msgid "Edit Profile"
 msgstr "编辑个人信息"
 
-#: kitsune/sumo/templates/includes/common_macros.html:39 kitsune/sumo/templates/mobile/base.html:79
+#: kitsune/sumo/templates/includes/common_macros.html:39 kitsune/sumo/templates/mobile/base.html:80
 msgid "Settings"
 msgstr "设置"
 
-#: kitsune/sumo/templates/includes/common_macros.html:40 kitsune/sumo/templates/mobile/base.html:80 kitsune/users/templates/users/profile.html:44
+#: kitsune/sumo/templates/includes/common_macros.html:40 kitsune/sumo/templates/mobile/base.html:81 kitsune/users/templates/users/profile.html:44
 msgid "Sign Out"
 msgstr "登出"
 
@@ -5246,27 +5491,27 @@ msgstr "Mozilla 新闻"
 msgid "Suggestion box"
 msgstr "意见箱"
 
-#: kitsune/sumo/templates/mobile/base.html:70
-msgid "Profile"
-msgstr "个人资料"
-
-#: kitsune/sumo/templates/mobile/base.html:90 kitsune/users/templates/users/includes/macros.html:82
-msgid "Register"
-msgstr "注册"
-
-#: kitsune/sumo/templates/mobile/base.html:94
-msgid "Languages"
-msgstr "语言"
-
-#: kitsune/sumo/templates/mobile/base.html:99 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
-msgid "Switch language"
-msgstr "切换语言"
-
-#: kitsune/sumo/templates/mobile/base.html:100
+#: kitsune/sumo/templates/mobile/base.html:69
 msgid "Switch to desktop site"
 msgstr "切换到桌面版"
 
-#: kitsune/sumo/templates/mobile/base.html:131
+#: kitsune/sumo/templates/mobile/base.html:71
+msgid "Profile"
+msgstr "个人资料"
+
+#: kitsune/sumo/templates/mobile/base.html:91 kitsune/users/templates/users/includes/macros.html:82
+msgid "Register"
+msgstr "注册"
+
+#: kitsune/sumo/templates/mobile/base.html:96
+msgid "Languages"
+msgstr "语言"
+
+#: kitsune/sumo/templates/mobile/base.html:101 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
+msgid "Switch language"
+msgstr "切换语言"
+
+#: kitsune/sumo/templates/mobile/base.html:133
 msgid "Get support for another platform:"
 msgstr "获取另一个平台的帮助："
 
@@ -5469,6 +5714,10 @@ msgstr "请输入一个 twitter.com 的网址。"
 #: kitsune/users/forms.py:229
 msgid "Please enter a facebook.com URL."
 msgstr "请输入一个 facebook.com 的网址。"
+
+#: kitsune/users/forms.py:240
+msgid "Your avatar will be resized to {size}x{size}"
+msgstr ""
 
 #: kitsune/users/forms.py:276
 msgid "This is your current email."
@@ -6558,19 +6807,19 @@ msgstr "文件“%s”不存在。"
 msgid "The template \"%s\" does not exist or has no approved revision."
 msgstr "模板“%s”不存在，或是没有已通过审核的版本。"
 
-#: kitsune/wiki/tasks.py:53
+#: kitsune/wiki/tasks.py:56
 msgid "Your revision has been approved: {title}"
 msgstr "您的修订已被审核通过：{title}"
 
-#: kitsune/wiki/tasks.py:55
+#: kitsune/wiki/tasks.py:58
 msgid "Your revision has been reviewed: {title}"
 msgstr "您的修订已被审核：{title}"
 
-#: kitsune/wiki/tasks.py:99
+#: kitsune/wiki/tasks.py:102
 msgid "A revision you contributed to has been approved: {title}"
 msgstr "您贡献的一个修订已被审核通过：{title}"
 
-#: kitsune/wiki/tasks.py:102
+#: kitsune/wiki/tasks.py:105
 msgid "A revision you contributed to has been reviewed: {title}"
 msgstr "您贡献的一个修订已被审核：{title}"
 

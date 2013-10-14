@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-24 06:28-0700\n"
+"POT-Creation-Date: 2013-10-14 14:06-0700\n"
 "PO-Revision-Date: 2013-10-02 05:28+0000\n"
 "Last-Translator: Vito <smolejv@gmx.net>\n"
 "Language-Team: Slovenian\n"
@@ -11,8 +11,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 "X-Generator: Pootle 2.5.0\n"
 "X-POOTLE-MTIME: 1380691720.0\n"
 
@@ -46,13 +45,33 @@ msgstr "Nova tema: {title}"
 msgid "User %(author)s has posted a new thread in a forum you're watching. Here is the thread:"
 msgstr "Uporabnik %(author)s je objavil novo temo v forumu, ki ga zasledujete. Tukaj je nit:"
 
-#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:2
-msgid "%(username)s has awarded you a badge!"
+#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:1 kitsune/kbadge/templates/kbadge/email/award_notification.html:16
+#, fuzzy
+msgid "Congratulations!"
+msgstr "Prispevki"
+
+#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:4
+#, fuzzy
+msgid "%(awarder)s has awarded you the %(title)s badge!"
 msgstr "%(username)s ti je podaril značko!"
 
-#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:6 kitsune/kbadge/tasks.py:19
-msgid "You have been awarded a badge!"
+#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:4 kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:8 kitsune/kbadge/templates/badger/award_detail.html:8
+#: kitsune/kbadge/templates/badger/awards_list.html:8 kitsune/kbadge/templates/badger/awards_list.html:28 kitsune/kbadge/templates/badger/awards_list.html:29
+#: kitsune/kbadge/templates/badger/badge_detail.html:8 kitsune/kbadge/templates/kbadge/email/award_notification.html:26 kitsune/kbadge/templates/kbadge/email/award_notification.html:31
+#: kitsune/kbadge/templates/kbadge/includes/macros.html:12 kitsune/kbadge/templates/kbadge/includes/macros.html:13
+msgctxt "DB: badger.Badge.title"
+msgid "None"
+msgstr "Brez"
+
+#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:8
+#, fuzzy
+msgid "You have been awarded the %(title)s badge!"
 msgstr "Nagradili so te z značko!"
+
+#: kitsune/kbadge/templates/kbadge/email/award_notification.ltxt:17
+#, fuzzy
+msgid "See all the details:"
+msgstr "Izpolnite podrobnosti"
 
 #: kitsune/messages/templates/messages/email/private_message.ltxt:3 kitsune/messages/templates/messages/email/private_message.html:4
 msgid "{sender} sent you the following message:"
@@ -88,7 +107,7 @@ msgstr "Hvala!"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email. Whitespace matters!
-#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:494 kitsune/questions/templates/questions/email/confirm_question.html:4
+#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:509 kitsune/questions/templates/questions/email/confirm_question.html:4
 msgid "Please confirm your Firefox Help question"
 msgstr "Potrdite svoje vprašanje za Pomoč v Firefoxu"
 
@@ -105,7 +124,8 @@ msgstr "Pozdravljeni, {username},"
 #. This is an email. Whitespace matters!
 #: kitsune/questions/templates/questions/email/confirm_question.ltxt:11 kitsune/questions/templates/questions/email/confirm_question.html:8
 msgid "Before your Firefox Help question (%(email_data)s) can be seen by our support community, you need to confirm the account you just created by clicking on the link below:"
-msgstr "Preden lahko vaše vprašanje za Pomoč v Firefoxu (%(email_data)s) pokažemo naši skupnosti za podporo, boste morali potrditi račun, ki ste ga pravkar ustvarili s klikom na spodnjo povezavo spodaj:"
+msgstr ""
+"Preden lahko vaše vprašanje za Pomoč v Firefoxu (%(email_data)s) pokažemo naši skupnosti za podporo, boste morali potrditi račun, ki ste ga pravkar ustvarili s klikom na spodnjo povezavo spodaj:"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email. Whitespace matters!
@@ -125,7 +145,9 @@ msgstr "Še enkrat hvala za vprašanje - žal nam je, da imate težave z Firefox
 msgid ""
 "As you may know, Firefox Support (like all of Mozilla) is community powered -- help is provided by users like you! Want to take part? Browse other users' questions at https://%(domain)s/questions?"
 "filter=unsolved -- you might just make someone's day!"
-msgstr "Kot morda že veste, podpora za Firefox (tako kot Mozilla sama) sloni na skupnosti - pomoč je v rokah uporabnikov, kot ste vi! Želite sodelovati? Brskajte skozi vprašanja drugih uporabnikov na https://%(domain)s/questions?filter=unsolved - morda boste lahko komu drugemu pomagali!"
+msgstr ""
+"Kot morda že veste, podpora za Firefox (tako kot Mozilla sama) sloni na skupnosti - pomoč je v rokah uporabnikov, kot ste vi! Želite sodelovati? Brskajte skozi vprašanja drugih uporabnikov na "
+"https://%(domain)s/questions?filter=unsolved - morda boste lahko komu drugemu pomagali!"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email. Whitespace matters!
@@ -204,7 +226,9 @@ msgstr "Ali je ta odgovor pomagal tudi vam? Vam je bilo kako drugo sporočilo ve
 msgid ""
 "Did you know that %(answerer)s is a Firefox user just like you? Get started helping other Firefox users by browsing questions at https://%(host)s/questions?filter=unsolved -- you might just make "
 "someone's day!"
-msgstr "Ali ste vedeli, da je %(answerer)s ravno tako kot vi uporabnik Firefoxa? Začnite brskati po vprašanjih drugih uporabnikov na https://%(host)s/questions?filter=unsolved - morda boste lahko pomagali komu drugemu!"
+msgstr ""
+"Ali ste vedeli, da je %(answerer)s ravno tako kot vi uporabnik Firefoxa? Začnite brskati po vprašanjih drugih uporabnikov na https://%(host)s/questions?filter=unsolved - morda boste lahko pomagali "
+"komu drugemu!"
 
 #: kitsune/sumo/templates/includes/unsubscribe_text.ltxt:3
 msgid "Unsubscribe from these emails:"
@@ -222,7 +246,9 @@ msgstr "Dobrodošli v %(domain)s."
 msgid ""
 "Before you can use your new account you must activate it - this ensures the e-mail address you used is valid and belongs to you. To activate your account, click the link below or copy and paste the "
 "whole thing into your browser's location bar:"
-msgstr "Preden lahko začnete uporabljati svoj novi račun, ga morate aktivirati - tako potrdite, da e-poštni naslov, ki ste ga vnesli, pripada vam. Da svoj račun aktivirate,  kliknite na spodnjo povezavo ali kopirajte in prilepite vse skupaj v iskalno vrstico brskalnika:"
+msgstr ""
+"Preden lahko začnete uporabljati svoj novi račun, ga morate aktivirati - tako potrdite, da e-poštni naslov, ki ste ga vnesli, pripada vam. Da svoj račun aktivirate,  kliknite na spodnjo povezavo "
+"ali kopirajte in prilepite vse skupaj v iskalno vrstico brskalnika:"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email.  Whitespace matters!
@@ -266,7 +292,9 @@ msgstr "Najlepša hvala, da se zanimate za pomoč uporabnikom Mozilla tehnologij
 msgid ""
 "We would love to find a good place for you to help users, so please send us an email with your username and the area you would like to get involved. Please feel free to add all your skills, we will "
 "try to find the right use for them :)"
-msgstr "Radi bomo poiskali dober kotiček za pomoč uporabnikom, zato vas prosimo, da nam pošljete e-pošto s svojim uporabniškim imenom in področjem, kjer bi želeli sodelovati. Omenite v pošti tudi svoja znanja, mi bomo pa poskušali najti ustrezen kot zanje :)"
+msgstr ""
+"Radi bomo poiskali dober kotiček za pomoč uporabnikom, zato vas prosimo, da nam pošljete e-pošto s svojim uporabniškim imenom in področjem, kjer bi želeli sodelovati. Omenite v pošti tudi svoja "
+"znanja, mi bomo pa poskušali najti ustrezen kot zanje :)"
 
 #. This is an email.  Whitespace matters!
 #: kitsune/users/templates/users/email/contributor.ltxt:22
@@ -302,7 +330,8 @@ msgstr "sodelovanje pri lokalizaciji - Pomoč pri prevajanju Pomoči za Firefox 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email.  Whitespace matters!
 #: kitsune/users/templates/users/email/contributor.ltxt:61 kitsune/users/templates/users/email/contributor.html:62
-msgid "Let us know which of the above you would be interested in and weâ€™ll help you get started. Itâ€™s great to have you onboard!"
+#, fuzzy
+msgid "Let us know which of the above you would be interested in and we’ll help you get started. It’s great to have you onboard!"
 msgstr "Sporočite nam, kaj bi vas od tega najbolj zanimalo, mi pa vam bomo pomagali začeti. Prima, da ste se nam pridružili!"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
@@ -564,7 +593,7 @@ msgid "Sign out"
 msgstr "Odjava"
 
 #: kitsune/customercare/templates/customercare/landing.html:72 kitsune/customercare/templates/customercare/twitter_modal.html:14
-#: kitsune/questions/templates/questions/mobile/new_question_login.html:38 kitsune/sumo/templates/mobile/base.html:89 kitsune/users/templates/users/mobile/login.html:7
+#: kitsune/questions/templates/questions/mobile/new_question_login.html:38 kitsune/sumo/templates/mobile/base.html:90 kitsune/users/templates/users/mobile/login.html:7
 #: kitsune/users/templates/users/mobile/includes/macros.html:19
 msgid "Sign in"
 msgstr "Prijava"
@@ -643,12 +672,13 @@ msgid "Army of Awesome will never tweet without your permission."
 msgstr "Armada junakov ne bo nikoli tvitala brez vašega soglasja."
 
 #: kitsune/customercare/templates/customercare/twitter_modal.html:17
-msgid "If youâ€™re registered with Mozilla Support, we will keep you logged into Twitter, so you can use Army of Awesome instantly."
+#, fuzzy
+msgid "If you’re registered with Mozilla Support, we will keep you logged into Twitter, so you can use Army of Awesome instantly."
 msgstr "Če si registriran pri podpori Mozille, boš pri Tweeter stalno prijavljen, tako da lahko armado junakov uporabiš takoj."
 
-#: kitsune/customercare/templates/customercare/twitter_modal.html:24 kitsune/questions/templates/questions/new_question_login.html:20
+#: kitsune/customercare/templates/customercare/twitter_modal.html:24 kitsune/questions/templates/questions/new_question_login.html:21
 #: kitsune/questions/templates/questions/mobile/new_question_login.html:16 kitsune/sumo/templates/includes/common_macros.html:55 kitsune/sumo/templates/includes/common_macros.html:57
-#: kitsune/sumo/templates/mobile/base.html:84 kitsune/sumo/templates/mobile/base.html:86 kitsune/users/templates/users/auth.html:23 kitsune/users/templates/users/mobile/login.html:14
+#: kitsune/sumo/templates/mobile/base.html:85 kitsune/sumo/templates/mobile/base.html:87 kitsune/users/templates/users/auth.html:23 kitsune/users/templates/users/mobile/login.html:14
 msgid "Sign in with email"
 msgstr "Prijavite se z e-pošto"
 
@@ -846,7 +876,9 @@ msgstr "Potrebne takojšnje posodobitve"
 msgid ""
 "This indicates a major edit which changes the content of the article enough to hurt the value of the localization. Until it is updated, the localized page will warn users that it may be outdated. "
 "You should update these articles as soon as possible."
-msgstr "Gre za večje spremembe v vsebini članka, ki vplivajo na smiselnost sedanjega prevoda. Dokler se je ne posodobi, bo lokalizirana stran opozarjala uporabnika, da gre lahko da za zastarele podatke. Posodobite te članke čim preje."
+msgstr ""
+"Gre za večje spremembe v vsebini članka, ki vplivajo na smiselnost sedanjega prevoda. Dokler se je ne posodobi, bo lokalizirana stran opozarjala uporabnika, da gre lahko da za zastarele podatke. "
+"Posodobite te članke čim preje."
 
 #: kitsune/dashboards/readouts.py:817
 msgid "All translations needing immediate updates..."
@@ -864,7 +896,9 @@ msgstr "Potrebne posodobitve"
 msgid ""
 "This signifies an edit that doesn't diminish the value of the localized article: for example, rewording a paragraph. Localizers are notified of this edit, but no warning is shown on the localized "
 "page. You should update these articles soon."
-msgstr "To pomeni, da sprememba vrednosti prevoda ne krni: gre na primer samo za preoblikovan odstavek. Prevajalce se o tem obvešča, vendar se opozorila ne kaže na prevedeni strani. Te članke boste morali slej ko prej posodobiti. "
+msgstr ""
+"To pomeni, da sprememba vrednosti prevoda ne krni: gre na primer samo za preoblikovan odstavek. Prevajalce se o tem obvešča, vendar se opozorila ne kaže na prevedeni strani. Te članke boste morali "
+"slej ko prej posodobiti. "
 
 #: kitsune/dashboards/readouts.py:922
 msgid "All translations needing updates..."
@@ -1687,16 +1721,14 @@ msgstr "6 mescev"
 msgid "1 year"
 msgstr "1 leto"
 
+#: kitsune/kbadge/tasks.py:20
+#, fuzzy
+msgid "You were awarded the '{title}' badge!"
+msgstr "Nagradili so te z značko!"
+
 #: kitsune/kbadge/templates/badger/award_detail.html:8
 msgid "Awarded badge: %(badge_name)s"
 msgstr "Nagradna značka: %(badge_name)s"
-
-#: kitsune/kbadge/templates/badger/award_detail.html:8 kitsune/kbadge/templates/badger/awards_list.html:8 kitsune/kbadge/templates/badger/awards_list.html:28
-#: kitsune/kbadge/templates/badger/awards_list.html:29 kitsune/kbadge/templates/badger/badge_detail.html:8 kitsune/kbadge/templates/kbadge/includes/macros.html:12
-#: kitsune/kbadge/templates/kbadge/includes/macros.html:13
-msgctxt "DB: badger.Badge.title"
-msgid "None"
-msgstr "Brez"
 
 #: kitsune/kbadge/templates/badger/award_detail.html:15 kitsune/kbadge/templates/badger/badge_detail.html:15
 msgid "Image:"
@@ -1755,7 +1787,7 @@ msgstr "nagrada za"
 msgid "Previous"
 msgstr "Prejšnja"
 
-#: kitsune/kbadge/templates/badger/awards_list.html:53 kitsune/questions/templates/questions/mobile/new_question.html:79 kitsune/sumo/templates/layout/paginator.html:30
+#: kitsune/kbadge/templates/badger/awards_list.html:53 kitsune/questions/templates/questions/mobile/new_question.html:81 kitsune/sumo/templates/layout/paginator.html:30
 msgid "Next"
 msgstr "Naslednja"
 
@@ -1766,6 +1798,19 @@ msgstr "značka: %(badge_name)s"
 #: kitsune/kbadge/templates/badger/badge_detail.html:39
 msgid "Recent awardees"
 msgstr "Nedavno nagrajeni"
+
+#: kitsune/kbadge/templates/kbadge/email/award_notification.html:26
+msgid "<strong>%(awarder)s</strong> has awarded you the <strong>%(title)s</strong> badge!"
+msgstr ""
+
+#: kitsune/kbadge/templates/kbadge/email/award_notification.html:31
+#, fuzzy
+msgid "You have been awarded the <strong>%(title)s</strong> badge!"
+msgstr "Nagradili so te z značko!"
+
+#: kitsune/kbadge/templates/kbadge/email/award_notification.html:42
+msgid "See all the details..."
+msgstr ""
 
 #: kitsune/kbforums/events.py:23
 msgid "Re: {forum} - {thread}"
@@ -2145,7 +2190,8 @@ msgid "Helpfulness of KB articles and Forum"
 msgstr "Koristnost člankov v bazi podatkov in foruma"
 
 #: kitsune/kpi/templates/kpi/dashboard.html:63
-msgid "Definition: Ratio of â€œyesâ€�/total votes for KB articles, forum threads"
+#, fuzzy
+msgid "Definition: Ratio of “yes”/total votes for KB articles, forum threads"
 msgstr "Definicija: razmerje med \"da\" in celotnim številom glasov za članke, niti v forumu"
 
 #: kitsune/kpi/templates/kpi/dashboard.html:86
@@ -2224,49 +2270,51 @@ msgstr "Pokritje L10n"
 msgid ""
 "Definition: L10n coverage is a measure of the percentage of our visitor base that get served with KB articles in their own language. It's calculated by taking into account the English top 50 "
 "weighted by the localization status of an article and the the number of visits for each locale."
-msgstr "Definicija: l10n pokritost je merilo odstotka obiskovalcev naše baze, ki imajo članke KB v svojem lastnem jeziku. Izračuna se tako, da se upošteva slovenske top 50, ponderirane s statusom lokalizacije članka in številom obiskov za vsak lokale."
+msgstr ""
+"Definicija: l10n pokritost je merilo odstotka obiskovalcev naše baze, ki imajo članke KB v svojem lastnem jeziku. Izračuna se tako, da se upošteva slovenske top 50, ponderirane s statusom "
+"lokalizacije članka in številom obiskov za vsak lokale."
 
 #: kitsune/kpi/templates/kpi/dashboard.html:202
 msgid "Edit levels are taken into account as follows:"
 msgstr "Stanje prevodov se upošteva kot sledi:"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:204
+#: kitsune/kpi/templates/kpi/dashboard.html:205
 msgid "A level 2 review change drops the localization to 50% of the article"
 msgstr "Sprememba članka na ravni 2 zniža lokalizacijo na 50% članka"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:205
+#: kitsune/kpi/templates/kpi/dashboard.html:206
 msgid "A level 3 review change drops the localization to 0% of the article"
 msgstr "Sprememba članka na ravni 3 zniža lokalizacijo na 0% članka"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:206
+#: kitsune/kpi/templates/kpi/dashboard.html:207
 msgid "More than one level 2 review change drops the localization to 0%"
 msgstr "Več sprememb članka na ravni 2 zniža lokalizacijo na 0% članka"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:210
+#: kitsune/kpi/templates/kpi/dashboard.html:211
 msgid "Example:"
 msgstr "Primer:"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:212
+#: kitsune/kpi/templates/kpi/dashboard.html:214
 msgid "German makes up 10% of our visitor base"
 msgstr "Nemščina predstavlja 10% obiskovalcev"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:213
+#: kitsune/kpi/templates/kpi/dashboard.html:215
 msgid "The 'how to set your home page' article makes up 2% of our top 50 visits"
 msgstr "Članek \"Kako nastavite domačo stran\" predstavlja 2% obiskov najbolj priljubljenih 50 člankov"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:214
+#: kitsune/kpi/templates/kpi/dashboard.html:216
 msgid "When the Home page article is the only localized article and it's up to date in German, then our overall coverage is 2% of 10%=0.2% overall (+ the English coverage)"
 msgstr "Če je članek Naslovna stran edini lokalizirani članek in če je v nemščini na tekočem, potem je naša skupna pokritost 2% od 10% = 0,2% (+  pokritost v angleščini)"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:215
+#: kitsune/kpi/templates/kpi/dashboard.html:217
 msgid "When German misses a level 2 change, the coverage drops to 50%, so 1% of 10%= 0.1% overall"
 msgstr "Če se v nemščini zamudi spremembo na ravni 2, se pokritost zmanjša za 50%, to je na skupno 1% od 10%= 0.1%"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:216
+#: kitsune/kpi/templates/kpi/dashboard.html:218
 msgid "<b>Important:</b> Currently we are using a simplified model, where each article accounts for 1/50=2% of visits per language"
 msgstr "<b>Pomembno:</b> Trenutno uporabljamo poenostavljen model, kjer se za vsak članek računa 1/50 = 2% obiskov za dani jezik"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:226
+#: kitsune/kpi/templates/kpi/dashboard.html:227
 msgid "Exit Survey Results"
 msgstr "Rezultati izhodne ankete"
 
@@ -2285,7 +2333,9 @@ msgstr "Ljubite Firefox? Ljubite Twitter?"
 
 #: kitsune/landings/templates/landings/get-involved-aoa.html:13 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:16
 msgid "Now you can combine both and help Firefox users on Twitter. It's quick, it's easy, and you don't have to be a tech superstar to do it. We call it our Army of Awesome."
-msgstr "Sedaj lahko združite oboje in uporabnikom Firefoxa pomagate na Twitterju. Gre e hitro, enostavno, ni treba vam biti super kul tehnična zvezda. da tako pomagate. Pridružite se našim junakom korenjakom"
+msgstr ""
+"Sedaj lahko združite oboje in uporabnikom Firefoxa pomagate na Twitterju. Gre e hitro, enostavno, ni treba vam biti super kul tehnična zvezda. da tako pomagate. Pridružite se našim junakom "
+"korenjakom"
 
 #: kitsune/landings/templates/landings/get-involved-aoa.html:20 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:23
 msgid "It's fun and addictive and the Awesome is you!"
@@ -2354,13 +2404,13 @@ msgstr "Delite svoje znanje s svetom."
 msgid ""
 "If you like writing and teaching then the Knowledge Base is the place for you. We need contributors that can write, edit or proof read articles. Thousands of people are accessing our Knowledge Base "
 "every week. Imagine how many will be helped by you!"
-msgstr "Če vam je všeč pisanje in poučevanje, potem je baza znanja pravi kraj za vas. Potrebujemo sodelavce, ki znajo pisati, urejati in popravljati članke. Vsak teden na tisoče uporabnikov išče po bazi znanja. Pomislite samo, koliko čjudem boste lahko pomagali!"
+msgstr ""
+"Če vam je všeč pisanje in poučevanje, potem je baza znanja pravi kraj za vas. Potrebujemo sodelavce, ki znajo pisati, urejati in popravljati članke. Vsak teden na tisoče uporabnikov išče po bazi "
+"znanja. Pomislite samo, koliko čjudem boste lahko pomagali!"
 
 #: kitsune/landings/templates/landings/get-involved-kb.html:32 kitsune/landings/templates/landings/get-involved-l10n.html:31 kitsune/landings/templates/landings/get-involved-questions.html:33
-#: kitsune/landings/templates/landings/includes/register_contributor.html:22 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:68
-#: kitsune/landings/templates/landings/mobile/get-involved-kb.html:32 kitsune/landings/templates/landings/mobile/get-involved-kb.html:67
-#: kitsune/landings/templates/landings/mobile/get-involved-l10n.html:62 kitsune/landings/templates/landings/mobile/get-involved-questions.html:31
-#: kitsune/landings/templates/landings/mobile/get-involved-questions.html:74 kitsune/landings/templates/landings/mobile/get-involved.html:72
+#: kitsune/landings/templates/landings/includes/register_contributor.html:22 kitsune/landings/templates/landings/mobile/get-involved-kb.html:32
+#: kitsune/landings/templates/landings/mobile/get-involved-questions.html:31 kitsune/landings/templates/landings/mobile/includes/register_contributor.html:3
 msgid "Sign up as a volunteer"
 msgstr "Prijavite se kot prostovoljec"
 
@@ -2423,7 +2473,9 @@ msgstr "Kjer je \"ekšn\""
 msgid ""
 "From hardcore web developers to \"how do I install Firefox\" first time users, everybody needs your help in the forum! Share your Firefox knowledge by pointing people to the right help articles and "
 "providing troubleshooting steps for their individual questions."
-msgstr "Vsakdo, od hardcore razvijalcov na spletu pa do začetnikov na nivoju \"kako namestim Firefox\", vsakdo bo pozdravil vašo pomoč na forumu! Nudite svoje poznavanje Firefoxa tako, da usmerite ljudi na članke,, ki vsebujejo odgovore na njih vprašanja in pa opis postopkov, kako opisani problem rešiti."
+msgstr ""
+"Vsakdo, od hardcore razvijalcov na spletu pa do začetnikov na nivoju \"kako namestim Firefox\", vsakdo bo pozdravil vašo pomoč na forumu! Nudite svoje poznavanje Firefoxa tako, da usmerite ljudi na "
+"članke,, ki vsebujejo odgovore na njih vprašanja in pa opis postopkov, kako opisani problem rešiti."
 
 #: kitsune/landings/templates/landings/get-involved-questions.html:43 kitsune/landings/templates/landings/mobile/get-involved-questions.html:39
 msgid "Go to our support forum and choose a question to answer"
@@ -2454,7 +2506,8 @@ msgid "We need your help!"
 msgstr "Potrebujemo vašo pomoč!"
 
 #: kitsune/landings/templates/landings/get-involved.html:13 kitsune/landings/templates/landings/mobile/get-involved.html:18
-msgid "Used by more than 400 million people, Firefox support is fully powered by volunteers, and itâ€™s more important than ever. This is where you come in."
+#, fuzzy
+msgid "Used by more than 400 million people, Firefox support is fully powered by volunteers, and it’s more important than ever. This is where you come in."
 msgstr "Firefox uporablja več kot 400 milijonov ljudi, podporazanj pa je v celoti v rokahprostovoljcev, kar je še bolj pomembno kot kdajkoli prej. Sedaj ste vi na vrsti."
 
 #: kitsune/landings/templates/landings/get-involved.html:19 kitsune/landings/templates/landings/mobile/get-involved.html:24
@@ -2471,7 +2524,8 @@ msgstr "O nas"
 
 #: kitsune/landings/templates/landings/get-involved.html:33 kitsune/landings/templates/landings/mobile/get-involved.html:39
 msgid "Mozilla Support is a community of enthusiastic volunteers and employees trying to support our users around the globe. Join us for an incredible adventure!"
-msgstr "Support Mozilla (SuMo) je skupnost navdušenih prostovoljcev in zaposlenih, ki poskušajo po svojih najboljših močeh podpreti uporabnike po vsem svetu. Pridružite se nam pri tej neverjetni avanturi!"
+msgstr ""
+"Support Mozilla (SuMo) je skupnost navdušenih prostovoljcev in zaposlenih, ki poskušajo po svojih najboljših močeh podpreti uporabnike po vsem svetu. Pridružite se nam pri tej neverjetni avanturi!"
 
 #: kitsune/landings/templates/landings/get-involved.html:44 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:48 kitsune/landings/templates/landings/mobile/get-involved-kb.html:47
 #: kitsune/landings/templates/landings/mobile/get-involved-l10n.html:42 kitsune/landings/templates/landings/mobile/get-involved-questions.html:54
@@ -2484,7 +2538,8 @@ msgid "Mozilla News"
 msgstr "Mozilla novice"
 
 #: kitsune/landings/templates/landings/home.html:21
-msgid "Participate and help other users â€“ <a href=\"%(url)s\"> get started </a>"
+#, fuzzy
+msgid "Participate and help other users – <a href=\"%(url)s\"> get started </a>"
 msgstr "Sodeluj in pomagaj drugim uporabnikom - <a href=\"%(url)s\">zać�etek tukaj</a>"
 
 #: kitsune/landings/templates/landings/home.html:28
@@ -2496,10 +2551,8 @@ msgid "Your input helps make Mozilla better. <a href=\"%(url)s\"> Give us your f
 msgstr "Vaš prispevek bo pomagal izboljšati Mozillo. <a href=\"%(url)s\">Pošljite nam povratne informacije</a>"
 
 #: kitsune/landings/templates/landings/includes/register_contributor.html:9 kitsune/landings/templates/landings/includes/register_contributor.html:17
-#: kitsune/landings/templates/landings/includes/register_contributor.html:19 kitsune/landings/templates/landings/mobile/get-involved-aoa.html:70
-#: kitsune/landings/templates/landings/mobile/get-involved-kb.html:69 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:64
-#: kitsune/landings/templates/landings/mobile/get-involved-questions.html:76 kitsune/landings/templates/landings/mobile/get-involved.html:77
-#: kitsune/landings/templates/landings/mobile/get-involved.html:81
+#: kitsune/landings/templates/landings/includes/register_contributor.html:19 kitsune/landings/templates/landings/mobile/includes/register_contributor.html:8
+#: kitsune/landings/templates/landings/mobile/includes/register_contributor.html:16 kitsune/landings/templates/landings/mobile/includes/register_contributor.html:19
 msgid "Sign me up"
 msgstr "Prijavi me"
 
@@ -2564,7 +2617,7 @@ msgid "Are you sure you want to delete this message?"
 msgstr "Res želite izbrisati to sporočilo?"
 
 #: kitsune/messages/templates/messages/inbox.html:3 kitsune/messages/templates/messages/includes/macros.html:24 kitsune/messages/templates/messages/mobile/inbox.html:13
-#: kitsune/messages/templates/messages/mobile/outbox.html:13 kitsune/sumo/templates/includes/common_macros.html:45 kitsune/sumo/templates/mobile/base.html:74
+#: kitsune/messages/templates/messages/mobile/outbox.html:13 kitsune/sumo/templates/includes/common_macros.html:45 kitsune/sumo/templates/mobile/base.html:75
 msgid "Inbox"
 msgstr "Vhodni predal"
 
@@ -2694,7 +2747,7 @@ msgstr "Teme pomoči"
 msgid "Get Involved - Help Other Users"
 msgstr "Pridruži se - Pomagaj drugim"
 
-#: kitsune/products/templates/products/products.html:3 kitsune/products/templates/products/mobile/products.html:3 kitsune/questions/templates/questions/mobile/new_question.html:20
+#: kitsune/products/templates/products/products.html:3 kitsune/products/templates/products/mobile/products.html:3 kitsune/questions/templates/questions/mobile/new_question.html:22
 #: kitsune/search/templates/search/mobile/results.html:26
 msgid "Products"
 msgstr "Izdelki"
@@ -2769,7 +2822,10 @@ msgid ""
 "If you submit information to Mozilla when you crash, you'll be given a crash ID which uniquely identifies your crash and lets us look at details that may help identify the cause. To find your "
 "recently submitted crash IDs, go to <strong>about:crashes</strong> in your location bar. <a href='http://support.mozilla.com/en-US/kb/Firefox"
 "+crashes#Getting_the_most_accurate_help_with_your_Firefox_crash' target='_blank'>Click for detailed instructions</a>."
-msgstr "Če v primeru sesutja pošljete informacije za Mozillo, boste dobili t.i. crash ID, ki edinstveno identificira vašo nezgodo, nam pa omogoča vpogled v podatke, ki nam lahko pomagajo ugotoviti vzrok za sesutje. Da najdete ID za nedavno posredovano sesutje oz. sesutja, vnesite go to <strong>about:crashes</strong>  v naslovno vrstico. <a href='http://support.mozilla.com/en-US/kb/Firefox+crashes#Getting_the_most_accurate_help_with_your_Firefox_crash' target='_blank'>Kliknite za podrobna navodila</a>."
+msgstr ""
+"Če v primeru sesutja pošljete informacije za Mozillo, boste dobili t.i. crash ID, ki edinstveno identificira vašo nezgodo, nam pa omogoča vpogled v podatke, ki nam lahko pomagajo ugotoviti vzrok za "
+"sesutje. Da najdete ID za nedavno posredovano sesutje oz. sesutja, vnesite go to <strong>about:crashes</strong>  v naslovno vrstico. <a href='http://support.mozilla.com/en-US/kb/Firefox"
+"+crashes#Getting_the_most_accurate_help_with_your_Firefox_crash' target='_blank'>Kliknite za podrobna navodila</a>."
 
 #: kitsune/questions/forms.py:24
 msgid "Troubleshooting Information"
@@ -3081,56 +3137,60 @@ msgstr "Thunderbird"
 msgid "or other Mozilla products"
 msgstr "ali drugi izdelki Mozille"
 
-#: kitsune/questions/views.py:75
+#: kitsune/questions/views.py:76
 msgid "That tag does not exist."
 msgstr "Ta oznaka ne obstaja."
 
-#: kitsune/questions/views.py:76
+#: kitsune/questions/views.py:77
 msgid "Please provide a tag."
 msgstr "Navedite oznako."
 
+#: kitsune/questions/views.py:382
+msgid "The questions forum isn't available in {old_lang}, we have redirected you to the {new_lang} questions forum."
+msgstr ""
+
 #. L10n: This shouldn't happen unless people tamper with POST data.
-#: kitsune/questions/views.py:504
+#: kitsune/questions/views.py:519
 msgid "Request type not recognized."
 msgstr "Te vrste zahteva ni znana. "
 
-#: kitsune/questions/views.py:561
+#: kitsune/questions/views.py:576
 msgid "Done! Your question is now posted on the Mozilla community support forum."
 msgstr "Končano! Vaše vprašanje je zdaj objavljeno na forumu skupnosti Mozille za podporo uporabnikov."
 
-#: kitsune/questions/views.py:764
+#: kitsune/questions/views.py:783
 msgid "Thank you for choosing a solution!"
 msgstr "Hvala, ker ste izbrali rešitev!"
 
-#: kitsune/questions/views.py:789
+#: kitsune/questions/views.py:808
 msgid "The solution was undone successfully."
 msgstr "Rešitev je bila uspešno razveljavljena."
 
-#: kitsune/questions/views.py:860
+#: kitsune/questions/views.py:879
 msgid "Glad to hear it!"
 msgstr "Nas veseli!"
 
-#: kitsune/questions/views.py:863 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
+#: kitsune/questions/views.py:882 kitsune/wiki/views.py:852 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
 msgid "Sorry to hear that."
 msgstr "Žal nam je za to."
 
-#: kitsune/questions/views.py:884
+#: kitsune/questions/views.py:903
 msgid "You already voted on this reply."
 msgstr "Za ta odgovor ste že glasovali."
 
-#: kitsune/questions/views.py:1118
+#: kitsune/questions/views.py:1137
 msgid "Could not send a message to that email address."
 msgstr "Ne morem poslati sporočila na ta e-poštni naslov."
 
-#: kitsune/questions/views.py:1123
+#: kitsune/questions/views.py:1142
 msgid "You will be notified of updates by email."
 msgstr "O novostih vas bomo obveščali po elektronski pošti."
 
-#: kitsune/questions/views.py:1125
+#: kitsune/questions/views.py:1144
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "V kratkem boste prejeli e-pošto, da potrdite svojo naročnino."
 
-#: kitsune/questions/views.py:1205
+#: kitsune/questions/views.py:1224
 msgid "There was an error submitting the ticket. Please try again later."
 msgstr "Med pošiljanjem je prišlo do napake. Poskusite znova kasneje."
 
@@ -3362,10 +3422,7 @@ msgstr "Vprašajte"
 
 #: kitsune/questions/templates/questions/answers.html:421
 msgid "You must <a href=\"{login_url}\">log in to your account</a> to reply to posts. Please <a href=\"{ask_url}\">start a new question</a>, if you do not have an account yet."
-msgstr ""
-"Morate <a href=\"{login_url}\"> se prijaviti na svoj ​​račun</a>, če hočete "
-"odgovarjati na prispevke <a href=\"{ask_url}\">Začnite novo vprašanje</a>, če "
-"še nimate računa."
+msgstr "Morate <a href=\"{login_url}\"> se prijaviti na svoj ​​račun</a>, če hočete odgovarjati na prispevke <a href=\"{ask_url}\">Začnite novo vprašanje</a>, če še nimate računa."
 
 #. {t} is the title of the question.
 #: kitsune/questions/templates/questions/confirm_answer_delete.html:3
@@ -3527,47 +3584,47 @@ msgstr "Podatki trenutno niso na voljo, poskusite znova čez nekaj minut."
 msgid "Ask a Question"
 msgstr "Zastavite vprašanje"
 
-#: kitsune/questions/templates/questions/new_question.html:43
+#: kitsune/questions/templates/questions/new_question.html:45
 msgid "Summarize your question in a sentence"
 msgstr "Povzemite svoje vprašanje v stavku"
 
-#: kitsune/questions/templates/questions/new_question.html:50
+#: kitsune/questions/templates/questions/new_question.html:52
 msgid "Do any of these articles answer your question?"
 msgstr "Ali ste v teh članki našli odgovor na svoje vprašanje?"
 
-#: kitsune/questions/templates/questions/new_question.html:52 kitsune/questions/templates/questions/includes/aaq_macros.html:115
+#: kitsune/questions/templates/questions/new_question.html:54 kitsune/questions/templates/questions/includes/aaq_macros.html:115
 msgid "None of these solve my problem"
 msgstr "Noben od predlogov ne reši mojega problema"
 
-#: kitsune/questions/templates/questions/new_question.html:60 kitsune/questions/templates/questions/includes/aaq_macros.html:117
+#: kitsune/questions/templates/questions/new_question.html:62 kitsune/questions/templates/questions/includes/aaq_macros.html:117
 msgid "This question has not been asked before."
 msgstr "To vprašanje so postavili že prej."
 
-#: kitsune/questions/templates/questions/new_question.html:61 kitsune/questions/templates/questions/includes/aaq_macros.html:118
+#: kitsune/questions/templates/questions/new_question.html:63 kitsune/questions/templates/questions/includes/aaq_macros.html:118
 msgid "Provide more details"
 msgstr "Navedite več podrobnosti"
 
-#: kitsune/questions/templates/questions/new_question.html:78
+#: kitsune/questions/templates/questions/new_question.html:80
 msgid "Fill in the details of your question."
 msgstr "Dodajte podrobnosti svojemu vprašanju"
 
-#: kitsune/questions/templates/questions/new_question.html:81 kitsune/questions/templates/questions/new_question_login.html:38
+#: kitsune/questions/templates/questions/new_question.html:83 kitsune/questions/templates/questions/new_question_login.html:39
 msgid "Post Question"
 msgstr "Objavi vprašanje"
 
-#: kitsune/questions/templates/questions/new_question_login.html:19 kitsune/questions/templates/questions/mobile/new_question_login.html:14
+#: kitsune/questions/templates/questions/new_question_login.html:20 kitsune/questions/templates/questions/mobile/new_question_login.html:14
 msgid "Before you continue, you must sign in"
 msgstr "Preden nadaljujete, se morate prijaviti"
 
-#: kitsune/questions/templates/questions/new_question_login.html:24
+#: kitsune/questions/templates/questions/new_question_login.html:25
 msgid "It appears you do not have an existing account"
 msgstr "Zdi se, da računa še nimate"
 
-#: kitsune/questions/templates/questions/new_question_login.html:25
+#: kitsune/questions/templates/questions/new_question_login.html:26
 msgid "Please select a username for your new account."
 msgstr "Izberite uporabniško ime za svoj novi račun."
 
-#: kitsune/questions/templates/questions/new_question_login.html:29 kitsune/questions/templates/questions/mobile/new_question_login.html:26
+#: kitsune/questions/templates/questions/new_question_login.html:30 kitsune/questions/templates/questions/mobile/new_question_login.html:26
 msgid "Register and continue"
 msgstr "Registrirajte se in nadaljujte"
 
@@ -3704,7 +3761,9 @@ msgstr "Potrdite svojo registracijo"
 msgid ""
 "As you may know, Firefox Support (like all of Mozilla) is community powered -- help is provided by users like you! Want to take part? <a href=\"https://%(domain)s/questions?filter=unsolved\">Browse "
 "other users' questions</a> -- you might just make someone's day!"
-msgstr "Kot morda že veste, podpora za Firefox (tako kot Mozilla sama) sloni na skupnosti - pomoč je v rokah uporabnikov, kot ste vi! Želite sodelovati? <a href=\"https://%(domain)s/questions?filter=unsolved\">Brskajte po vprašanjih drugih uporabnikov</a> -- mogoče boste lahko komu pomagali!"
+msgstr ""
+"Kot morda že veste, podpora za Firefox (tako kot Mozilla sama) sloni na skupnosti - pomoč je v rokah uporabnikov, kot ste vi! Želite sodelovati? <a href=\"https://%(domain)s/questions?"
+"filter=unsolved\">Brskajte po vprašanjih drugih uporabnikov</a> -- mogoče boste lahko komu pomagali!"
 
 #: kitsune/questions/templates/questions/email/new_answer.html:16
 msgid "See the comment."
@@ -3742,7 +3801,9 @@ msgstr "Prikaz rešitve"
 msgid ""
 "Did you know that %(answerer)s is a Firefox user just like you? Get started helping other Firefox users by <a href=\"https://%(host)s/questions?filter=unsolved\"> browsing questions</a> -- you "
 "might just make someone's day!"
-msgstr "Ali ste vedeli, da je %(answerer)s ravno tako kot vi uporabnik Firefoxa? <a href=\"https://%(host)s/questions?filter=unsolved\">Brskajte po vprašanjih</a> drugih uporabnikov - morda boste lahko komu pomagali!"
+msgstr ""
+"Ali ste vedeli, da je %(answerer)s ravno tako kot vi uporabnik Firefoxa? <a href=\"https://%(host)s/questions?filter=unsolved\">Brskajte po vprašanjih</a> drugih uporabnikov - morda boste lahko "
+"komu pomagali!"
 
 #: kitsune/questions/templates/questions/includes/aaq_macros.html:5
 msgid "Pick a product"
@@ -4122,11 +4183,11 @@ msgstr "Postavite novo vprašanje:"
 msgid "Ask A Question"
 msgstr "Vprašajte"
 
-#: kitsune/questions/templates/questions/mobile/new_question.html:47
+#: kitsune/questions/templates/questions/mobile/new_question.html:49
 msgid "Try another topic"
 msgstr "Poskusite drugo temo"
 
-#: kitsune/questions/templates/questions/mobile/new_question.html:52 kitsune/questions/templates/questions/mobile/new_question.html:57
+#: kitsune/questions/templates/questions/mobile/new_question.html:54 kitsune/questions/templates/questions/mobile/new_question.html:59
 msgid "Post a question"
 msgstr "Zastavite vprašanje"
 
@@ -4975,11 +5036,227 @@ msgid "Top 25 Contributor"
 msgstr "Top 25 sodelavec"
 
 #: kitsune/sumo/db_strings.py:184
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2012 Army of Awesome Badge"
+msgstr "Armada pomočnikov"
+
+#: kitsune/sumo/db_strings.py:185
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Army of Awesome 2012 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2012; in this case: 50 Army of Awesome tweets.\n"
+"\n"
+"Congrats to all SUMO Army of Awesome 2012 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:188
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2013 Army of Awesome Badge"
+msgstr "Armada pomočnikov"
+
+#: kitsune/sumo/db_strings.py:189
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Army of Awesome 2013 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2013; in this case: 50 Army of Awesome tweets.\n"
+"\n"
+"Congrats to all SUMO Army of Awesome 2013 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:192
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2010 Army of Awesome Badge"
+msgstr "Armada pomočnikov"
+
+#: kitsune/sumo/db_strings.py:193
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Army of Awesome 2010 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2010; in this case: 50 Army of Awesome tweets.\n"
+"\n"
+"Congrats to all SUMO Army of Awesome 2010 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:196
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2011 Army of Awesome Badge"
+msgstr "Armada pomočnikov"
+
+#: kitsune/sumo/db_strings.py:197
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Army of Awesome 2011 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2011; in this case: 50 Army of Awesome tweets.\n"
+"\n"
+"Congrats to all SUMO Army of Awesome 2011 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:200
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2012 Support Forum Badge"
+msgstr "Domača stran za podporo"
+
+#: kitsune/sumo/db_strings.py:201
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Forum 2012 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2012 in this case: 30 replies in the English SUMO Forum.\n"
+"\n"
+"Congrats to all SUMO Forum 2012 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:204
+msgctxt "DB: badger.Badge.title"
+msgid "2010 KB Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:205
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO KB 2010 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2010; in this case: 10 approved edits of the English SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO KB 2010 badge earners for advancing the Mozilla Mission"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:208
+msgctxt "DB: badger.Badge.title"
+msgid "2010 L10n Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:209
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO L10n 2010 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2010; in this case: 10 approved translation edits of the SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO L10n 2010 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:212
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2010 Support Forum Badge"
+msgstr "Domača stran za podporo"
+
+#: kitsune/sumo/db_strings.py:213
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Forum 2010 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2010 in this case: 30 replies in the English SUMO Forum.\n"
+"\n"
+"Congrats to all SUMO Forum 2010 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:216
+msgctxt "DB: badger.Badge.title"
+msgid "2011 KB Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:217
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO KB 2011 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2011; in this case: 10 approved edits of the English SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO KB 2011 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:220
+msgctxt "DB: badger.Badge.title"
+msgid "2011 L10n Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:221
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO L10n 2011 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2011; in this case: 10 approved translation edits of the SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO L10n 2011 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:224
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2011 Support Forum Badge"
+msgstr "Domača stran za podporo"
+
+#: kitsune/sumo/db_strings.py:225
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Forum 2011 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2011 in this case: 30 replies in the English SUMO Forum.\n"
+"\n"
+"Congrats to all SUMO Forum 2011 badge earners for advancing the Mozilla Mission!\n"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:229
+msgctxt "DB: badger.Badge.title"
+msgid "2012 KB Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:230
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO KB 2012 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2012; in this case: 10 approved edits of the English SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO KB 2012 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:233
+msgctxt "DB: badger.Badge.title"
+msgid "2013 KB Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:234
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO KB 2013 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2013 in this case: 10 approved edits of the English SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO KB 2013 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:237
+msgctxt "DB: badger.Badge.title"
+msgid "2013 L10n Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:238
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO L10n 2013 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2013 in this case: 10 approved translation edits of the SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO L10n 2013 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:241
+#, fuzzy
+msgctxt "DB: badger.Badge.title"
+msgid "2013 Support Forum Badge"
+msgstr "Domača stran za podporo"
+
+#: kitsune/sumo/db_strings.py:242
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO Forum 2013 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2013 in this case: 30 replies in the English SUMO Forum.\n"
+"\n"
+"Congrats to all SUMO Forum 2013 badge earners for advancing the Mozilla Mission"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:245
+msgctxt "DB: badger.Badge.title"
+msgid "2012 L10n Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:246
+msgctxt "DB: badger.Badge.description"
+msgid ""
+"The SUMO L10n 2012 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2012; in this case: 10 approved translation edits of the SUMO Knowledge Base.\n"
+"\n"
+"Congrats to all SUMO L10n 2012 badge earners for advancing the Mozilla Mission!"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:249
 msgctxt "DB: badger.Badge.title"
 msgid "Kitsune Contributor"
 msgstr "Sodelavec pri Kitsune"
 
-#: kitsune/sumo/db_strings.py:185
+#: kitsune/sumo/db_strings.py:250
 msgctxt "DB: badger.Badge.description"
 msgid "Badge awarded to those who have contributed to the Kitsune code base."
 msgstr "Značko dodeljena sodelavcem, ki so prispevali k bazo kode Kitsune."
@@ -5101,57 +5378,60 @@ msgstr "Vaš Firefox je zastarel, lahko da za vas predstavlja tveganje"
 msgid "Upgrade Firefox"
 msgstr "Posodobite Firefox"
 
-#: kitsune/sumo/templates/base.html:182
+#: kitsune/sumo/templates/base.html:184
+#, fuzzy
 msgid ""
-"Portions of this content are &copy;1998â€“2013 <br>by individual mozilla.org contributors. Content <br>available under a <a href=\"//www.mozilla.org/foundation/licensing/website-content.html"
+"Portions of this content are &copy;1998–2013 <br>by individual mozilla.org contributors. Content <br>available under a <a href=\"//www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
-msgstr "Deli te vsebine so &copy;1998â€“2013 <br> posameznih sodelavcev mozilla.org. Vsebina <br> na voljo pod <a href=\"//www.mozilla.org/foundation/licensing/website-content.html\">licenco Creative Commons</a>."
+msgstr ""
+"Deli te vsebine so &copy;1998â€“2013 <br> posameznih sodelavcev mozilla.org. Vsebina <br> na voljo pod <a href=\"//www.mozilla.org/foundation/licensing/website-content.html\">licenco Creative "
+"Commons</a>."
 
-#: kitsune/sumo/templates/base.html:192
+#: kitsune/sumo/templates/base.html:194
 msgid "Contact Us"
 msgstr "Stopite v stik z nami"
 
-#: kitsune/sumo/templates/base.html:193
+#: kitsune/sumo/templates/base.html:195
 msgid "Privacy Policy"
 msgstr "Izjava o zasebnosti"
 
-#: kitsune/sumo/templates/base.html:194
+#: kitsune/sumo/templates/base.html:196
 msgid "Legal Notices"
 msgstr "Pravna obvestila"
 
-#: kitsune/sumo/templates/base.html:195
+#: kitsune/sumo/templates/base.html:197
 msgid "Report Trademark Abuse"
 msgstr "Poročilo o zlorabi trgovske znamke"
 
-#: kitsune/sumo/templates/base.html:196
+#: kitsune/sumo/templates/base.html:198
 msgid "Source Code"
 msgstr "Izvorna koda"
 
-#: kitsune/sumo/templates/base.html:201 kitsune/users/templates/users/profile.html:111 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:76
+#: kitsune/sumo/templates/base.html:203 kitsune/users/templates/users/profile.html:111 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:76
 msgid "Twitter"
 msgstr "Twitter"
 
-#: kitsune/sumo/templates/base.html:202 kitsune/users/templates/users/profile.html:117 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:80
+#: kitsune/sumo/templates/base.html:204 kitsune/users/templates/users/profile.html:117 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:80
 msgid "Facebook"
 msgstr "Facebook"
 
-#: kitsune/sumo/templates/base.html:203
+#: kitsune/sumo/templates/base.html:205
 msgid "Firefox Affiliates"
 msgstr "Firefox Partnerji"
 
-#: kitsune/sumo/templates/base.html:204
+#: kitsune/sumo/templates/base.html:206
 msgid "Switch to mobile site"
 msgstr "Preklopite na mobilno spletno stran"
 
-#: kitsune/sumo/templates/email/base.html:213 kitsune/sumo/templates/mobile/base.html:117
+#: kitsune/sumo/templates/email/base.html:214 kitsune/sumo/templates/mobile/base.html:119
 msgid "Mozilla Support"
 msgstr "Podpora Mozilla"
 
-#: kitsune/sumo/templates/email/base.html:225
+#: kitsune/sumo/templates/email/base.html:226
 msgid "Change your email preferences"
 msgstr "Spremenite nastavitve za svojo e-pošto"
 
-#: kitsune/sumo/templates/email/base.html:227
+#: kitsune/sumo/templates/email/base.html:228
 msgid "Unsubscribe from these emails"
 msgstr "Odjavi me za to pošto"
 
@@ -5207,11 +5487,11 @@ msgstr "Prikaži profil"
 msgid "Edit Profile"
 msgstr "Urejanje profila"
 
-#: kitsune/sumo/templates/includes/common_macros.html:39 kitsune/sumo/templates/mobile/base.html:79
+#: kitsune/sumo/templates/includes/common_macros.html:39 kitsune/sumo/templates/mobile/base.html:80
 msgid "Settings"
 msgstr "Nastavitve"
 
-#: kitsune/sumo/templates/includes/common_macros.html:40 kitsune/sumo/templates/mobile/base.html:80 kitsune/users/templates/users/profile.html:44
+#: kitsune/sumo/templates/includes/common_macros.html:40 kitsune/sumo/templates/mobile/base.html:81 kitsune/users/templates/users/profile.html:44
 msgid "Sign Out"
 msgstr "Odjava"
 
@@ -5298,27 +5578,27 @@ msgstr "Mozilla novice"
 msgid "Suggestion box"
 msgstr "Predal za predloge"
 
-#: kitsune/sumo/templates/mobile/base.html:70
-msgid "Profile"
-msgstr "Profil"
-
-#: kitsune/sumo/templates/mobile/base.html:90 kitsune/users/templates/users/includes/macros.html:82
-msgid "Register"
-msgstr "Registrirajte se"
-
-#: kitsune/sumo/templates/mobile/base.html:94
-msgid "Languages"
-msgstr "Jeziki"
-
-#: kitsune/sumo/templates/mobile/base.html:99 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
-msgid "Switch language"
-msgstr "Preklop jezika"
-
-#: kitsune/sumo/templates/mobile/base.html:100
+#: kitsune/sumo/templates/mobile/base.html:69
 msgid "Switch to desktop site"
 msgstr "Preklop na stran za namiznike"
 
-#: kitsune/sumo/templates/mobile/base.html:131
+#: kitsune/sumo/templates/mobile/base.html:71
+msgid "Profile"
+msgstr "Profil"
+
+#: kitsune/sumo/templates/mobile/base.html:91 kitsune/users/templates/users/includes/macros.html:82
+msgid "Register"
+msgstr "Registrirajte se"
+
+#: kitsune/sumo/templates/mobile/base.html:96
+msgid "Languages"
+msgstr "Jeziki"
+
+#: kitsune/sumo/templates/mobile/base.html:101 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
+msgid "Switch language"
+msgstr "Preklop jezika"
+
+#: kitsune/sumo/templates/mobile/base.html:133
 msgid "Get support for another platform:"
 msgstr "Pomoč za drugo platformo:"
 
@@ -5521,6 +5801,10 @@ msgstr "Vnesite prosim URL za twitter.com."
 #: kitsune/users/forms.py:229
 msgid "Please enter a facebook.com URL."
 msgstr "Vnesite prosim URL za facebook.com."
+
+#: kitsune/users/forms.py:240
+msgid "Your avatar will be resized to {size}x{size}"
+msgstr ""
 
 #: kitsune/users/forms.py:276
 msgid "This is your current email."
@@ -5997,7 +6281,9 @@ msgstr "E-pošta za potrdilo uspešno poslana."
 msgid ""
 "Before you can log in, you need to confirm your email address. We've sent a new confirmation email to any account using <strong>%(email)s</strong>. To confirm the email address, just follow the "
 "link in the email."
-msgstr "Preden se lahko prijavite, morate potrditi svoj e-naslov. Novo e-pošto za potrdilo smo poslali na račun z naslovom <strong>%(email)s</strong>.  Da potrdite e-poštni naslov, sledite povezavi v prejeti pošti."
+msgstr ""
+"Preden se lahko prijavite, morate potrditi svoj e-naslov. Novo e-pošto za potrdilo smo poslali na račun z naslovom <strong>%(email)s</strong>.  Da potrdite e-poštni naslov, sledite povezavi v "
+"prejeti pošti."
 
 #: kitsune/users/templates/users/email/contributor.html:24
 msgid "Click here to find out where to help."
@@ -6005,7 +6291,9 @@ msgstr "Kliknite tukaj, da vidite, kje lahko priskočite na pomoč."
 
 #: kitsune/users/templates/users/email/contributor.html:32
 msgid "<a href=\"https://support.mozilla.org/en-US/questions?sort=requested&filter=no-replies\">Forum Contributor</a> - Answer user support questions that are most-requested but have no replies."
-msgstr "<a href=\"https://support.mozilla.org/en-US/questions?sort=requested&filter=no-replies\">Sodelavec foruma</a> - - odgovarjajte na vprašanja za podporo uporabnikov, ki so najbolj pereča, vendar so še brez odgovora."
+msgstr ""
+"<a href=\"https://support.mozilla.org/en-US/questions?sort=requested&filter=no-replies\">Sodelavec foruma</a> - - odgovarjajte na vprašanja za podporo uporabnikov, ki so najbolj pereča, vendar so "
+"še brez odgovora."
 
 #: kitsune/users/templates/users/email/contributor.html:40
 msgid "<a href=\"https://support.mozilla.org/army-of-awesome\">Twitter Contributor</a> - Respond to tweets about Firefox."
@@ -6403,13 +6691,17 @@ msgstr "Te manjše spremembe niso pomembne za lprevajalce in se jih o tem ne bo 
 msgid ""
 "This will notify localizers and translations will be marked as \"needing updates\" on dashboards. Most changes&mdash;updating an image, fixing {for} markup, adding or removing non-critical "
 "sections&mdash;should use this."
-msgstr "Prevajalce se bo obvestilo in prevode se bo na armaturnih ploščah označilo kot \"potrebna je posodobitev\". Največ sprememb&mdash;posodabljanje slike, popravki {for} oznak, dodajanje ali odstranjevanje nekritičnih delov&mdash; bo v tej obliki."
+msgstr ""
+"Prevajalce se bo obvestilo in prevode se bo na armaturnih ploščah označilo kot \"potrebna je posodobitev\". Največ sprememb&mdash;posodabljanje slike, popravki {for} oznak, dodajanje ali "
+"odstranjevanje nekritičnih delov&mdash; bo v tej obliki."
 
 #: kitsune/wiki/config.py:179
 msgid ""
 "This will notify localizers and translations will be marked \"out of date\" on dashboards. Translations will show a warning to users that they are out of date and that the English version is the "
 "most accurate. Use this when the old instructions are completely unusable."
-msgstr "Prevajalce se bo obvestilo in prevode se bo na armaturnih ploščah označilo kot \"zastarelo\". Prevodi vsebovali opozorilo, da gre za zastarelo besedilo in da je članek v angleškem jeziku najbolj točen. Uporablja se, kadar so stara navodila popolnoma neuporabna."
+msgstr ""
+"Prevajalce se bo obvestilo in prevode se bo na armaturnih ploščah označilo kot \"zastarelo\". Prevodi vsebovali opozorilo, da gre za zastarelo besedilo in da je članek v angleškem jeziku najbolj "
+"točen. Uporablja se, kadar so stara navodila popolnoma neuporabna."
 
 #: kitsune/wiki/config.py:195
 msgid "Troubleshooting"
@@ -6625,19 +6917,19 @@ msgstr "Dokument \"%s\" ne obstaja."
 msgid "The template \"%s\" does not exist or has no approved revision."
 msgstr "Predloga \"%s\" ne obstaja, ali pa je brez odobrenih sprememb."
 
-#: kitsune/wiki/tasks.py:53
+#: kitsune/wiki/tasks.py:56
 msgid "Your revision has been approved: {title}"
 msgstr "Vaša redakcija je odobrena:{title}"
 
-#: kitsune/wiki/tasks.py:55
+#: kitsune/wiki/tasks.py:58
 msgid "Your revision has been reviewed: {title}"
 msgstr "Vaša redakcija je pregledana: {title}"
 
-#: kitsune/wiki/tasks.py:99
+#: kitsune/wiki/tasks.py:102
 msgid "A revision you contributed to has been approved: {title}"
 msgstr "Različica, pri kateri ste sodelovali, je odobrena: {title}"
 
-#: kitsune/wiki/tasks.py:102
+#: kitsune/wiki/tasks.py:105
 msgid "A revision you contributed to has been reviewed: {title}"
 msgstr "Različica, pri kateri ste sodelovali, je pregledana: {title}"
 
@@ -7324,7 +7616,9 @@ msgstr "(Preusmerjeno z <a href=\"{href}\">{title}</a>)"
 msgid ""
 "<p>This article may be out of date.</p> <p> An important change has been made to the English article on which this is based. Until this page is updated, you might find this helpful: <a href=\"%(url)"
 "s\">%(title)s</a> </p>"
-msgstr "<p>Ta članek je lahko da zastarel. </p> <p> V angleškem članku, na katerem temelji, je prišlo do važnih sprememb. Dokler se te strani ne posodobi, si lahko pomagate s temle: <a href=\"%(url)s\">%(title)s</a> </p>"
+msgstr ""
+"<p>Ta članek je lahko da zastarel. </p> <p> V angleškem članku, na katerem temelji, je prišlo do važnih sprememb. Dokler se te strani ne posodobi, si lahko pomagate s temle: <a href=\"%(url)s\">"
+"%(title)s</a> </p>"
 
 #: kitsune/wiki/templates/wiki/includes/document_macros.html:68
 msgid "This article is no longer maintained, so its content might be out of date."
@@ -7523,7 +7817,9 @@ msgstr "Preloži to revizijo"
 msgid ""
 "Thanks for taking the time to review these changes. Please thank the editor and then give specific, constructive feedback about what you feel needs to change in order for the revision to be "
 "acceptable."
-msgstr "Hvala, ker ste si vzeli čas za recenzijo teh sprememb. Zahvalite se prosim uredniku in nato vnesite konstruktivne povratne informacije o tem, kaj mislite, da je treba spremeniti, da bi revizija bila sprejemljiva."
+msgstr ""
+"Hvala, ker ste si vzeli čas za recenzijo teh sprememb. Zahvalite se prosim uredniku in nato vnesite konstruktivne povratne informacije o tem, kaj mislite, da je treba spremeniti, da bi revizija "
+"bila sprejemljiva."
 
 #: kitsune/wiki/templates/wiki/includes/review_form.html:88
 msgid "Defer"
@@ -7765,7 +8061,9 @@ msgstr "Napaka pri odjavi naročnine"
 msgid ""
 "We could not find your subscription. Either it has already been cancelled, or there was a mistake in the unsubscribe link. Please make sure the entire link from the email made it into the browser. "
 "If the last part of the link wraps onto a second line in the email, try copying and pasting the link into the browser."
-msgstr "Vaše naročnine nismo mogli najti. Ali ste jo že odpovedali ali je bil odjavni link napačen. Prepričajte se, ali ste povezavo iz e-pošte v celoti vnesli v brskalnik. Če se zadnji del povezave v elektronski pošti preliva v naslednjo vrstico, poskusite naslov prekopirati in zlepiti v brskalniku."
+msgstr ""
+"Vaše naročnine nismo mogli najti. Ali ste jo že odpovedali ali je bil odjavni link napačen. Prepričajte se, ali ste povezavo iz e-pošte v celoti vnesli v brskalnik. Če se zadnji del povezave v "
+"elektronski pošti preliva v naslednjo vrstico, poskusite naslov prekopirati in zlepiti v brskalniku."
 
 #: vendor/src/django-tidings/tidings/templates/tidings/unsubscribe_success.html:8
 msgid "Unsubscribed"
@@ -8509,8 +8807,8 @@ msgstr "Brez naročnine"
 #~ "other users or to get help for yourself. </p>"
 #~ msgstr ""
 #~ "<p> Imamo na razpolago tole elegantno nadzorno ploÅ¡Ä�o za pomoÄ� prostovoljcem, da lahko zasledujejo prispevke, kot so odgovori na vpraÅ¡anja, razprave v forumih in spremembe v Ä�lankih. Da jo "
-#~ "omogoÄ�ite, kliknite spodaj na <span class=\"button\">PridruÅ¾ite se nam!</span>. </p><p>S tem se boste pridruÅ¾ili slovenski ekipi SuMo in se naroÄ�ili na sporoÄ�ila ekipe za podporo. </p><p>Da bi "
-#~ "pomagali drugim uporabnikom, ali da dobite pomoÄ� za sebe, se vam ni treba registrirati.. </p>"
+#~ "omogoÄ�ite, kliknite spodaj na <span class=\"button\">PridruÅ¾ite se nam!</span>. </p><p>S tem se boste pridruÅ¾ili slovenski ekipi SuMo in se naroÄ�ili na sporoÄ�ila ekipe za podporo. </p><p>Da "
+#~ "bi pomagali drugim uporabnikom, ali da dobite pomoÄ� za sebe, se vam ni treba registrirati.. </p>"
 
 #~ msgid "Join!"
 #~ msgstr "PridruÅ¾ite se nam!"
@@ -9074,8 +9372,8 @@ msgstr "Brez naročnine"
 #~ "You've come to the right place! Start by searching our site below, or browse our list of popular support articles. If you can't find the answer you need, our community of volunteers are ready to "
 #~ "help you find a solution."
 #~ msgstr ""
-#~ "PriÅ¡li ste na pravo mesto! ZaÄ�nite iskati spodaj po naÅ¡em spletiÅ¡Ä�u, ali pa prebrskajte naÅ¡ seznam priljubljenih Ä�lankov za podporo. ÄŒe ne morete najti odgovora, ki ga potrebujete, vam je na "
-#~ "razpolago naÅ¡a skupnost in njeni prostovoljci."
+#~ "PriÅ¡li ste na pravo mesto! ZaÄ�nite iskati spodaj po naÅ¡em spletiÅ¡Ä�u, ali pa prebrskajte naÅ¡ seznam priljubljenih Ä�lankov za podporo. ÄŒe ne morete najti odgovora, ki ga potrebujete, vam "
+#~ "je na razpolago naÅ¡a skupnost in njeni prostovoljci."
 
 #~ msgid "Firefox Help for Mobile"
 #~ msgstr "PomoÄ� za Firefox na mobilnikih"
@@ -9111,8 +9409,8 @@ msgstr "Brez naročnine"
 #~ "We have created <a href=\"%(signpost_help_url)s\">signpost messages</a> for easily replying to top Firefox topics on Twitter. If you would like to have messages for your language appear here, "
 #~ "contact Kadir Topal for more info: %(contact_email)s"
 #~ msgstr ""
-#~ "Pripravili smo <a href=\"%(signpost_help_url)s\">tipiÄ�na sporoÄ�ila</a> , da laÅ¾e odgovarjate na popularne teme o Firefoxu na Twitterju. ÄŒe Å¾elite tu imeti sporoÄ�ila za svoj jezik, se obrnite na "
-#~ "Kadirja za veÄ� o tem:%(contact_email)s"
+#~ "Pripravili smo <a href=\"%(signpost_help_url)s\">tipiÄ�na sporoÄ�ila</a> , da laÅ¾e odgovarjate na popularne teme o Firefoxu na Twitterju. ÄŒe Å¾elite tu imeti sporoÄ�ila za svoj jezik, se "
+#~ "obrnite na Kadirja za veÄ� o tem:%(contact_email)s"
 
 #~ msgid "Thanks for taking the time to review these changes. Please consider leaving a message for the person who submitted them explaining why they were deferred."
 #~ msgstr "Hvala, ker ste si vzeli Ä�as za pregled teh sprememb. Prosim pustite sporoÄ�ilo za osebo, ki jih je predloÅ¾ila, in v njem obrazloÅ¾ite, zakaj se jih je zavrnilo."
@@ -9179,8 +9477,8 @@ msgstr "Brez naročnine"
 #~ "You've come to the right place! Start by searching for solutions, or by choosing one of our support articles below. If you can't find the answer you need, our community of volunteers are ready "
 #~ "to help."
 #~ msgstr ""
-#~ "PriÅ¡li ste na pravo mesto! ZaÄ�nite iskati reÅ¡itev, ali pa izberite enega od naÅ¡ih Ä�lankov za podporo spodaj. ÄŒe ne morete najti odgovora, ki ga potrebujete, so vam pripravljeni pomagati naÅ¡i "
-#~ "prostovoljci."
+#~ "PriÅ¡li ste na pravo mesto! ZaÄ�nite iskati reÅ¡itev, ali pa izberite enega od naÅ¡ih Ä�lankov za podporo spodaj. ÄŒe ne morete najti odgovora, ki ga potrebujete, so vam pripravljeni pomagati naÅ"
+#~ "¡i prostovoljci."
 
 #~ msgid "Turn off emails."
 #~ msgstr "Izklopi e-poÅ¡to."
