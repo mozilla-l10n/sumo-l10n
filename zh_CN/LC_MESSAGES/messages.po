@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-31 10:09-0700\n"
+"POT-Creation-Date: 2014-04-04 06:57-0700\n"
 "PO-Revision-Date: 2014-04-02 07:29+0000\n"
 "Last-Translator: Shen <steekid@icloud.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -103,7 +103,7 @@ msgstr "感谢订阅！"
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email. Whitespace matters!
-#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:554 kitsune/questions/templates/questions/email/confirm_question.html:4
+#: kitsune/questions/templates/questions/email/confirm_question.ltxt:3 kitsune/questions/views.py:562 kitsune/questions/templates/questions/email/confirm_question.html:4
 msgid "Please confirm your Firefox Help question"
 msgstr "请确认您的 Firefox 帮助 问题"
 
@@ -323,7 +323,7 @@ msgstr "您也可以通过我们的伙伴计划，获得我们更有经验的志
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is at the end of an email.
-#: kitsune/users/templates/users/email/contributor.ltxt:76 kitsune/users/models.py:248 kitsune/users/utils.py:91 kitsune/users/views.py:453 kitsune/users/templates/users/email/contributor.html:76
+#: kitsune/users/templates/users/email/contributor.ltxt:76 kitsune/users/models.py:248 kitsune/users/utils.py:91 kitsune/users/views.py:449 kitsune/users/templates/users/email/contributor.html:76
 msgid "Welcome to SUMO!"
 msgstr "欢迎来到 Mozilla 技术支持！"
 
@@ -496,7 +496,7 @@ msgid "Answered"
 msgstr "已答复"
 
 #: kitsune/customercare/views.py:32 kitsune/questions/templates/questions/metrics.html:24 kitsune/questions/templates/questions/metrics.html:26
-#: kitsune/questions/templates/questions/questions.html:141
+#: kitsune/questions/templates/questions/question_list.html:149
 msgid "All"
 msgstr "所有"
 
@@ -571,7 +571,7 @@ msgid "Sign out"
 msgstr "注销"
 
 #: kitsune/customercare/templates/customercare/landing.html:78 kitsune/customercare/templates/customercare/twitter_modal.html:20
-#: kitsune/questions/templates/questions/mobile/new_question_login.html:38 kitsune/sumo/templates/mobile/base.html:92 kitsune/users/templates/users/mobile/login.html:7
+#: kitsune/questions/templates/questions/mobile/new_question_login.html:18 kitsune/sumo/templates/mobile/base.html:85 kitsune/users/templates/users/mobile/login.html:7
 #: kitsune/users/templates/users/mobile/includes/macros.html:19
 msgid "Sign in"
 msgstr "登录"
@@ -592,7 +592,8 @@ msgstr "无近期贡献者"
 
 #: kitsune/customercare/templates/customercare/reply_modal.html:1 kitsune/customercare/templates/customercare/tweets.html:18 kitsune/kbforums/templates/kbforums/includes/post.html:38
 #: kitsune/messages/templates/messages/read.html:19 kitsune/messages/templates/messages/mobile/read.html:14 kitsune/messages/templates/messages/mobile/read.html:21
-#: kitsune/questions/templates/questions/includes/answer.html:77 kitsune/questions/templates/questions/mobile/answers.html:36 kitsune/questions/templates/questions/mobile/answers.html:116
+#: kitsune/questions/templates/questions/includes/answer.html:77 kitsune/questions/templates/questions/mobile/question_details.html:36
+#: kitsune/questions/templates/questions/mobile/question_details.html:116
 msgid "Reply"
 msgstr "回复"
 
@@ -704,15 +705,15 @@ msgstr "最近90天"
 msgid "All Time"
 msgstr "全部时间"
 
-#: kitsune/dashboards/models.py:69
+#: kitsune/dashboards/models.py:83
 msgid "Percent Localized: Top 20"
 msgstr "本地化进度：前20名"
 
-#: kitsune/dashboards/models.py:70
+#: kitsune/dashboards/models.py:84
 msgid "Percent Localized: All"
 msgstr "本地化进度：全部"
 
-#: kitsune/dashboards/models.py:72
+#: kitsune/dashboards/models.py:86
 msgid "Monthly Active Contributors"
 msgstr "月度活跃贡献者"
 
@@ -908,7 +909,7 @@ msgstr "所有预装回应的本地化状态"
 msgid "All canned responses articles..."
 msgstr "所有预装回应的知识库文章..."
 
-#: kitsune/dashboards/views.py:57 kitsune/sumo/templates/includes/common_macros.html:123
+#: kitsune/dashboards/views.py:57 kitsune/sumo/templates/includes/common_macros.html:115
 msgid "Knowledge Base Dashboard"
 msgstr "知识库状态面板"
 
@@ -945,15 +946,19 @@ msgstr "[{product}] 知识库状态面板"
 #: kitsune/products/templates/products/documents.html:18 kitsune/products/templates/products/product.html:4 kitsune/products/templates/products/product.html:10
 #: kitsune/products/templates/products/product.html:17 kitsune/products/templates/products/includes/product_macros.html:12 kitsune/products/templates/products/mobile/documents.html:10
 #: kitsune/products/templates/products/mobile/documents.html:27 kitsune/products/templates/products/mobile/product.html:3 kitsune/products/templates/products/mobile/product.html:8
-#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/answers.html:207 kitsune/questions/templates/questions/questions.html:196
-#: kitsune/questions/templates/questions/mobile/questions.html:36 kitsune/search/views.py:486 kitsune/search/templates/search/results.html:69 kitsune/wiki/templates/wiki/document.html:11
+#: kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/product_list.html:20 kitsune/questions/templates/questions/question_details.html:14
+#: kitsune/questions/templates/questions/question_details.html:219 kitsune/questions/templates/questions/question_list.html:14 kitsune/questions/templates/questions/question_list.html:204
+#: kitsune/questions/templates/questions/mobile/product_list.html:14 kitsune/questions/templates/questions/mobile/question_list.html:7
+#: kitsune/questions/templates/questions/mobile/question_list.html:38 kitsune/search/views.py:486 kitsune/search/templates/search/results.html:69 kitsune/wiki/templates/wiki/document.html:11
 #: kitsune/wiki/templates/wiki/document.html:42
 msgctxt "DB: products.Product.title"
 msgid "None"
 msgstr "无"
 
 #: kitsune/dashboards/templates/dashboards/contributors.html:4 kitsune/dashboards/templates/dashboards/localization.html:4 kitsune/dashboards/templates/dashboards/includes/macros.html:198
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:215 kitsune/search/views.py:489 kitsune/search/templates/search/results.html:63
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:215 kitsune/questions/templates/questions/product_list.html:27 kitsune/questions/templates/questions/question_details.html:14
+#: kitsune/questions/templates/questions/question_list.html:14 kitsune/questions/templates/questions/mobile/product_list.html:21 kitsune/questions/templates/questions/mobile/question_list.html:7
+#: kitsune/search/views.py:489 kitsune/search/templates/search/results.html:63
 msgid "All Products"
 msgstr "所有产品"
 
@@ -1081,7 +1086,7 @@ msgstr "全部主题"
 #: kitsune/products/templates/products/documents.html:49 kitsune/products/templates/products/includes/topic_macros.html:8 kitsune/products/templates/products/includes/topic_macros.html:31
 #: kitsune/products/templates/products/includes/topic_macros.html:39 kitsune/products/templates/products/mobile/documents.html:6 kitsune/products/templates/products/mobile/documents.html:8
 #: kitsune/products/templates/products/mobile/documents.html:21 kitsune/products/templates/products/mobile/documents.html:38 kitsune/products/templates/products/mobile/product.html:16
-#: kitsune/questions/templates/questions/answers.html:225 kitsune/questions/templates/questions/questions.html:200
+#: kitsune/questions/templates/questions/question_details.html:237 kitsune/questions/templates/questions/question_list.html:208
 msgctxt "DB: products.Topic.title"
 msgid "None"
 msgstr "无"
@@ -1102,7 +1107,7 @@ msgstr "知识库团队"
 msgid "Localization Team"
 msgstr "本地化团队"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:268 kitsune/sumo/templates/includes/common_macros.html:125 kitsune/wiki/templates/wiki/recent_revisions.html:3
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:268 kitsune/sumo/templates/includes/common_macros.html:117 kitsune/wiki/templates/wiki/recent_revisions.html:3
 msgid "Recent Revisions"
 msgstr "最新修订"
 
@@ -1265,7 +1270,7 @@ msgstr "在 Wiki 语法当中引入[[%(type)s:title]]"
 msgid "Provide a brief description of this media."
 msgstr "请为这个媒体文件提供简短的描述。"
 
-#: kitsune/gallery/forms.py:38 kitsune/questions/templates/questions/answers.html:239 kitsune/wiki/templates/wiki/confirm_document_delete.html:23
+#: kitsune/gallery/forms.py:38 kitsune/questions/templates/questions/question_details.html:251 kitsune/wiki/templates/wiki/confirm_document_delete.html:23
 msgid "Locale"
 msgstr "语系"
 
@@ -1333,7 +1338,7 @@ msgstr "删除视频 | {t} | 媒体文件库"
 
 #: kitsune/gallery/templates/gallery/confirm_media_delete.html:13 kitsune/gallery/templates/gallery/edit_media.html:7 kitsune/gallery/templates/gallery/gallery.html:2
 #: kitsune/gallery/templates/gallery/gallery.html:5 kitsune/gallery/templates/gallery/gallery.html:11 kitsune/gallery/templates/gallery/media.html:8 kitsune/gallery/templates/gallery/search.html:5
-#: kitsune/gallery/templates/gallery/search.html:9 kitsune/sumo/templates/includes/common_macros.html:132
+#: kitsune/gallery/templates/gallery/search.html:9 kitsune/sumo/templates/includes/common_macros.html:124
 msgid "Media Gallery"
 msgstr "媒体文件库"
 
@@ -1352,7 +1357,7 @@ msgstr "上传于 {date}"
 #: kitsune/kbforums/templates/kbforums/new_thread.html:48 kitsune/messages/templates/messages/delete.html:29 kitsune/messages/templates/messages/new.html:26
 #: kitsune/messages/templates/messages/mobile/read.html:13 kitsune/questions/templates/questions/confirm_answer_delete.html:26 kitsune/questions/templates/questions/confirm_question_delete.html:28
 #: kitsune/questions/templates/questions/edit_answer.html:57 kitsune/questions/templates/questions/edit_question.html:18 kitsune/questions/templates/questions/includes/email_subscribe.html:13
-#: kitsune/questions/templates/questions/mobile/answers.html:45 kitsune/users/templates/users/confirm_avatar_delete.html:22 kitsune/users/templates/users/mobile/change_email.html:26
+#: kitsune/questions/templates/questions/mobile/question_details.html:45 kitsune/users/templates/users/confirm_avatar_delete.html:22 kitsune/users/templates/users/mobile/change_email.html:26
 #: kitsune/users/templates/users/mobile/pw_change.html:32 kitsune/wiki/templates/wiki/confirm_remove_contributor.html:15 kitsune/wiki/templates/wiki/confirm_remove_from_locale.html:14
 #: kitsune/wiki/templates/wiki/includes/document_macros.html:239 kitsune/wiki/templates/wiki/includes/ready_for_l10n_modal.html:11 kitsune/wiki/templates/wiki/includes/review_form.html:67
 #: kitsune/wiki/templates/wiki/includes/review_form.html:89 vendor/src/django-tidings/tidings/templates/tidings/unsubscribe.html:14
@@ -1571,7 +1576,7 @@ msgstr "{group} | 群组"
 msgid "Change avatar"
 msgstr "更改头像"
 
-#: kitsune/groups/templates/groups/profile.html:10 kitsune/users/templates/users/edit_profile.html:47 kitsune/users/templates/users/edit_profile.html:56
+#: kitsune/groups/templates/groups/profile.html:10 kitsune/users/templates/users/edit_profile.html:41 kitsune/users/templates/users/edit_profile.html:46
 #: kitsune/users/templates/users/mobile/pw_change.html:33
 msgid "Change"
 msgstr "更改"
@@ -1766,7 +1771,7 @@ msgstr "授予"
 msgid "Previous"
 msgstr "上一个"
 
-#: kitsune/kbadge/templates/badger/awards_list.html:54 kitsune/kbadge/templates/badger/badges_list.html:38 kitsune/questions/templates/questions/mobile/new_question.html:81
+#: kitsune/kbadge/templates/badger/awards_list.html:54 kitsune/kbadge/templates/badger/badges_list.html:38 kitsune/questions/templates/questions/mobile/new_question.html:77
 #: kitsune/sumo/templates/layout/paginator.html:30
 msgid "Next"
 msgstr "下一个"
@@ -2023,7 +2028,8 @@ msgstr "最后回复者为"
 msgid "Sticky"
 msgstr "置顶"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:49 kitsune/questions/views.py:93 kitsune/questions/templates/questions/questions.html:215 kitsune/search/__init__.py:33 kitsune/search/forms.py:142
+#: kitsune/kbforums/templates/kbforums/posts.html:49 kitsune/questions/views.py:93 kitsune/questions/templates/questions/question_list.html:223 kitsune/search/__init__.py:33
+#: kitsune/search/forms.py:142
 msgid "Locked"
 msgstr "已锁定"
 
@@ -2043,11 +2049,11 @@ msgstr "不是吧！这里看起来一个帖子都没有！"
 msgid "Post a reply"
 msgstr "回复"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/answers.html:409 kitsune/questions/templates/questions/mobile/answers.html:44
+#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/question_details.html:421 kitsune/questions/templates/questions/mobile/question_details.html:44
 msgid "Post Reply"
 msgstr "发表回复"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/answers.html:410 kitsune/questions/templates/questions/edit_answer.html:53
+#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/edit_answer.html:53 kitsune/questions/templates/questions/question_details.html:422
 msgid "Preview Reply"
 msgstr "预览回复"
 
@@ -2145,7 +2151,7 @@ msgstr "不再发邮件通知我的语言中的讨论。"
 msgid "Get emailed when there is new discussion activity in my locale."
 msgstr "在我的语言中有新讨论时，发电子邮件通知我。"
 
-#: kitsune/kpi/templates/kpi/dashboard.html:4 kitsune/sumo/templates/includes/common_macros.html:137
+#: kitsune/kpi/templates/kpi/dashboard.html:4 kitsune/sumo/templates/includes/common_macros.html:129
 msgid "KPI Dashboard"
 msgstr "关键效绩指标面板"
 
@@ -2324,7 +2330,7 @@ msgid "How it works"
 msgstr "参与步骤"
 
 #: kitsune/landings/templates/landings/get-involved-aoa.html:38 kitsune/landings/templates/landings/get-involved-kb.html:34 kitsune/landings/templates/landings/get-involved-l10n.html:33
-#: kitsune/landings/templates/landings/get-involved-questions.html:34 kitsune/landings/templates/landings/includes/register_contributor.html:24
+#: kitsune/landings/templates/landings/get-involved-questions.html:34 kitsune/landings/templates/landings/includes/register_contributor.html:16
 #: kitsune/landings/templates/landings/mobile/get-involved-kb.html:32 kitsune/landings/templates/landings/mobile/get-involved-l10n.html:31
 #: kitsune/landings/templates/landings/mobile/get-involved-questions.html:32 kitsune/landings/templates/landings/mobile/includes/register_contributor.html:3
 msgid "Sign up as a volunteer"
@@ -2503,12 +2509,12 @@ msgid "Pick a way to get involved"
 msgstr "选择一种方式加入我们吧"
 
 #: kitsune/landings/templates/landings/home.html:13 kitsune/products/templates/products/product.html:59
-msgid "Get Involved - Help Other Users"
-msgstr "参与 - 帮助其他用户"
+#, fuzzy
+msgid "Volunteer for Mozilla Support"
+msgstr "搜索 Mozilla 技术支持"
 
-#: kitsune/landings/templates/landings/includes/register_contributor.html:9 kitsune/landings/templates/landings/includes/register_contributor.html:17
-#: kitsune/landings/templates/landings/includes/register_contributor.html:20 kitsune/landings/templates/landings/mobile/includes/register_contributor.html:8
-#: kitsune/landings/templates/landings/mobile/includes/register_contributor.html:16 kitsune/landings/templates/landings/mobile/includes/register_contributor.html:19
+#: kitsune/landings/templates/landings/includes/register_contributor.html:9 kitsune/landings/templates/landings/includes/register_contributor.html:13
+#: kitsune/landings/templates/landings/mobile/includes/register_contributor.html:8 kitsune/landings/templates/landings/mobile/includes/register_contributor.html:12
 msgid "Sign me up"
 msgstr "加入我们吧"
 
@@ -2715,7 +2721,8 @@ msgstr "帮助主题"
 msgid "Products"
 msgstr "产品"
 
-#: kitsune/products/templates/products/includes/product_macros.html:13 kitsune/products/templates/products/mobile/products.html:14
+#: kitsune/products/templates/products/includes/product_macros.html:13 kitsune/products/templates/products/mobile/products.html:14 kitsune/questions/templates/questions/product_list.html:21
+#: kitsune/questions/templates/questions/mobile/product_list.html:15
 msgctxt "DB: products.Product.description"
 msgid "None"
 msgstr "无"
@@ -2864,11 +2871,11 @@ msgstr "找到解决方案的问题：%s"
 msgid "Recently updated questions"
 msgstr "最近更新的问题"
 
-#: kitsune/questions/feeds.py:86
+#: kitsune/questions/feeds.py:87
 msgid "Recently updated questions tagged %s"
 msgstr "最近更新的有关 %s 的问题"
 
-#: kitsune/questions/feeds.py:104
+#: kitsune/questions/feeds.py:105
 msgid "Recent answers to %s"
 msgstr "%s 最近的回答"
 
@@ -2917,11 +2924,11 @@ msgstr "一周几次"
 msgid "Every time Firefox opened"
 msgstr "每次打开 Firefox 时"
 
-#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/answers.html:293
+#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/question_details.html:305
 msgid "This started when..."
 msgstr "在此时开始..."
 
-#: kitsune/questions/forms.py:35 kitsune/questions/templates/questions/mobile/answers.html:6
+#: kitsune/questions/forms.py:35 kitsune/questions/templates/questions/mobile/question_details.html:6
 msgid "Question"
 msgstr "问题"
 
@@ -3078,7 +3085,7 @@ msgstr "支付/结算"
 msgid "Please provide an email."
 msgstr "请输入一个电子邮箱地址。"
 
-#: kitsune/questions/forms.py:317 kitsune/users/templates/users/edit_profile.html:51
+#: kitsune/questions/forms.py:317 kitsune/users/templates/users/edit_profile.html:44
 msgid "Email:"
 msgstr "邮箱："
 
@@ -3147,56 +3154,56 @@ msgstr "需要信息"
 msgid "Solution provided"
 msgstr "已提供解决方案"
 
-#: kitsune/questions/views.py:92 kitsune/questions/templates/questions/questions.html:209 kitsune/search/forms.py:150 kitsune/search/templates/search/includes/result.html:14
+#: kitsune/questions/views.py:92 kitsune/questions/templates/questions/question_list.html:217 kitsune/search/forms.py:150 kitsune/search/templates/search/includes/result.html:14
 msgid "Solved"
 msgstr "已解决"
 
-#: kitsune/questions/views.py:427
+#: kitsune/questions/views.py:435
 msgid "The questions forum isn't available in {old_lang}, we have redirected you to the {new_lang} questions forum."
 msgstr "问题论坛无法在 {old_lang} 下使用，我们已为您重定向到 {new_lang} 问题论坛。"
 
 #. L10n: This shouldn't happen unless people tamper with POST data.
-#: kitsune/questions/views.py:564
+#: kitsune/questions/views.py:572
 msgid "Request type not recognized."
 msgstr "无法识别请求的类型。"
 
-#: kitsune/questions/views.py:621
+#: kitsune/questions/views.py:629
 msgid "Done! Your question is now posted on the Mozilla community support forum."
 msgstr "完成！您的问题已成功在 Mozilla 社区支持论坛上发布。"
 
-#: kitsune/questions/views.py:839
+#: kitsune/questions/views.py:847
 msgid "Thank you for choosing a solution!"
 msgstr "感谢您选了一个解决方案！"
 
-#: kitsune/questions/views.py:866
+#: kitsune/questions/views.py:874
 msgid "The solution was undone successfully."
 msgstr "该解决方案已成功撤销。"
 
-#: kitsune/questions/views.py:939
+#: kitsune/questions/views.py:947
 msgid "Glad to hear it!"
 msgstr "很高兴听到这个消息！"
 
-#: kitsune/questions/views.py:942 kitsune/wiki/views.py:902 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
+#: kitsune/questions/views.py:950 kitsune/wiki/views.py:902 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:4
 msgid "Sorry to hear that."
 msgstr "很抱歉听到这消息。"
 
-#: kitsune/questions/views.py:963
+#: kitsune/questions/views.py:971
 msgid "You already voted on this reply."
 msgstr "您已在此回答上投过票了。"
 
-#: kitsune/questions/views.py:1214
+#: kitsune/questions/views.py:1226
 msgid "Could not send a message to that email address."
 msgstr "不能向那个邮件地址发送邮件。"
 
-#: kitsune/questions/views.py:1219
+#: kitsune/questions/views.py:1231
 msgid "You will be notified of updates by email."
 msgstr "有更新时您会得到邮件通知。"
 
-#: kitsune/questions/views.py:1221
+#: kitsune/questions/views.py:1233
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "您很快会收到邮件确认您的订阅。"
 
-#: kitsune/questions/views.py:1301
+#: kitsune/questions/views.py:1313
 msgid "There was an error submitting the ticket. Please try again later."
 msgstr "提交票据时发生错误，请稍后再试。"
 
@@ -3208,11 +3215,11 @@ msgstr "已确认订阅。"
 msgid "There was a problem confirming your subscription."
 msgstr "确认订阅时遇到问题。"
 
-#: kitsune/questions/templates/questions/activate_watch.html:8 kitsune/questions/templates/questions/answers.html:11 kitsune/questions/templates/questions/answers.html:21
-#: kitsune/questions/templates/questions/confirm_answer_delete.html:4 kitsune/questions/templates/questions/confirm_question_delete.html:4 kitsune/questions/templates/questions/edit_answer.html:8
-#: kitsune/questions/templates/questions/edit_question.html:3 kitsune/questions/templates/questions/metrics.html:4 kitsune/questions/templates/questions/questions.html:11
-#: kitsune/questions/templates/questions/questions.html:31 kitsune/questions/templates/questions/unsubscribe_watch.html:8 kitsune/questions/templates/questions/mobile/questions.html:7
-#: kitsune/sumo/templates/mobile/base.html:64
+#: kitsune/questions/templates/questions/activate_watch.html:8 kitsune/questions/templates/questions/confirm_answer_delete.html:4 kitsune/questions/templates/questions/confirm_question_delete.html:4
+#: kitsune/questions/templates/questions/edit_answer.html:8 kitsune/questions/templates/questions/edit_question.html:3 kitsune/questions/templates/questions/metrics.html:4
+#: kitsune/questions/templates/questions/product_list.html:5 kitsune/questions/templates/questions/product_list.html:7 kitsune/questions/templates/questions/question_details.html:19
+#: kitsune/questions/templates/questions/question_details.html:34 kitsune/questions/templates/questions/question_list.html:18 kitsune/questions/templates/questions/unsubscribe_watch.html:8
+#: kitsune/questions/templates/questions/mobile/product_list.html:3 kitsune/sumo/templates/mobile/base.html:64
 msgid "Support Forum"
 msgstr "技术支持论坛"
 
@@ -3235,200 +3242,6 @@ msgstr "停止通过电子邮件接收这个问题的更新。"
 #: kitsune/questions/templates/questions/activate_watch.html:36
 msgid "Go back to the question and try again."
 msgstr "返回问题并再试一次。"
-
-#. {q} is the title of the question.
-#: kitsune/questions/templates/questions/answers.html:9
-msgid "{q} | Firefox Support Forum"
-msgstr "{q} | Firefox 支持论坛"
-
-#: kitsune/questions/templates/questions/answers.html:30
-msgid "This thread was closed."
-msgstr "话题已关闭。"
-
-#: kitsune/questions/templates/questions/answers.html:32
-msgid "This thread was archived."
-msgstr "话题已存档。"
-
-#: kitsune/questions/templates/questions/answers.html:34
-msgid "This thread was closed and archived."
-msgstr "话题已关闭并存档。"
-
-#: kitsune/questions/templates/questions/answers.html:38
-msgid "Please ask a new question if you need help."
-msgstr "如果需要帮助请提出新问题。"
-
-#. {n} is the number of replies.
-#: kitsune/questions/templates/questions/answers.html:50 kitsune/search/templates/search/includes/result.html:18
-msgid "1 reply"
-msgid_plural "{n} replies"
-msgstr[0] "{n} 个回复"
-
-#: kitsune/questions/templates/questions/answers.html:52 kitsune/search/templates/search/includes/result.html:21
-msgid "No replies"
-msgstr "无回复"
-
-#: kitsune/questions/templates/questions/answers.html:57 kitsune/questions/templates/questions/includes/have_problem.html:3
-msgid "has this problem"
-msgid_plural "have this problem"
-msgstr[0] "人有此问题"
-
-#: kitsune/questions/templates/questions/answers.html:65
-msgid "%(count)s view"
-msgid_plural "%(count)s views"
-msgstr[0] "%(count)s 次阅览"
-
-#: kitsune/questions/templates/questions/answers.html:75 kitsune/questions/templates/questions/questions.html:230
-msgid "Last reply by {user}"
-msgstr "最后回复者 {user}"
-
-#: kitsune/questions/templates/questions/answers.html:95 kitsune/questions/templates/questions/includes/answer.html:31
-msgid "Posted"
-msgstr "发布于"
-
-#: kitsune/questions/templates/questions/answers.html:105 kitsune/questions/templates/questions/includes/answer.html:59
-msgid "Modified {datetime} by {name}"
-msgstr "由{name}于{datetime}修改"
-
-#: kitsune/questions/templates/questions/answers.html:112 kitsune/questions/templates/questions/includes/answer.html:39
-msgid "Solution chosen by {user}"
-msgstr "{user} 选择的解决方法"
-
-#: kitsune/questions/templates/questions/answers.html:112
-msgid "Chosen solution"
-msgstr "选择的解决方案"
-
-#: kitsune/questions/templates/questions/answers.html:115
-msgid "Read this answer in context"
-msgstr "在上下文中阅读这个答案"
-
-#: kitsune/questions/templates/questions/answers.html:127 kitsune/questions/templates/questions/answers.html:429 kitsune/questions/templates/questions/mobile/answers.html:32
-msgid "I have this problem, too"
-msgstr "我也有此问题"
-
-#: kitsune/questions/templates/questions/answers.html:131 kitsune/questions/templates/questions/answers.html:384 kitsune/questions/templates/questions/email/new_answer.html:22
-msgid "Post a Reply"
-msgstr "回复"
-
-#: kitsune/questions/templates/questions/answers.html:139
-msgid "Question tools"
-msgstr "问题工具"
-
-#: kitsune/questions/templates/questions/answers.html:144
-msgid "Edit this question"
-msgstr "编辑此问题"
-
-#: kitsune/questions/templates/questions/answers.html:150
-msgid "Delete this question"
-msgstr "删除此问题"
-
-#: kitsune/questions/templates/questions/answers.html:156
-msgid "Unlock this question"
-msgstr "解锁此问题"
-
-#: kitsune/questions/templates/questions/answers.html:157
-msgid "Lock this question"
-msgstr "锁定此问题"
-
-#: kitsune/questions/templates/questions/answers.html:168
-msgid "Unarchive this question"
-msgstr "将此问题解除存档"
-
-#: kitsune/questions/templates/questions/answers.html:170
-msgid "Archive this question"
-msgstr "存档此问题"
-
-#: kitsune/questions/templates/questions/answers.html:181
-msgid "Stop email updates"
-msgstr "停止电子邮件更新"
-
-#: kitsune/questions/templates/questions/answers.html:186 kitsune/questions/templates/questions/includes/email_subscribe.html:2
-msgid "Get email updates"
-msgstr "获取电子邮件更新"
-
-#: kitsune/questions/templates/questions/answers.html:191
-msgid "Subscribe to feed"
-msgstr "订阅收取点"
-
-#: kitsune/questions/templates/questions/answers.html:200
-msgid "Question details"
-msgstr "问题详情"
-
-#: kitsune/questions/templates/questions/answers.html:204 kitsune/questions/templates/questions/includes/aaq_macros.html:37
-msgid "Product"
-msgstr "产品"
-
-#: kitsune/questions/templates/questions/answers.html:222
-msgid "Topic"
-msgstr "主题"
-
-#: kitsune/questions/templates/questions/answers.html:250
-msgid "System Details"
-msgstr "系统详细信息"
-
-#: kitsune/questions/templates/questions/answers.html:263
-msgid "More system details"
-msgstr "更多系统细节"
-
-#: kitsune/questions/templates/questions/answers.html:268
-msgid "Edit details"
-msgstr "编辑详情"
-
-#: kitsune/questions/templates/questions/answers.html:269
-msgid "Save changes"
-msgstr "保存更改"
-
-#: kitsune/questions/templates/questions/answers.html:278 kitsune/questions/templates/questions/answers.html:279
-msgid "Additional System Details"
-msgstr "补充系统细节"
-
-#: kitsune/questions/templates/questions/answers.html:281
-msgid "Sites Affected"
-msgstr "影响的网站"
-
-#: kitsune/questions/templates/questions/answers.html:285
-msgid "Crash ID"
-msgstr "崩溃ID"
-
-#: kitsune/questions/templates/questions/answers.html:289
-msgid "This happened"
-msgstr "这发生于"
-
-#: kitsune/questions/templates/questions/answers.html:297
-msgid "Installed Plug-ins"
-msgstr "已安装的插件"
-
-#: kitsune/questions/templates/questions/answers.html:304
-msgid "Close"
-msgstr "关闭"
-
-#: kitsune/questions/templates/questions/answers.html:310 kitsune/questions/templates/questions/questions.html:236 kitsune/search/forms.py:167
-msgid "Tags"
-msgstr "标签"
-
-#: kitsune/questions/templates/questions/answers.html:350 kitsune/tags/forms.py:120
-msgid "Add"
-msgstr "添加"
-
-#: kitsune/questions/templates/questions/answers.html:378
-msgid "You have exceeded the number of answers that can be posted in a given amount of time. Please try again shortly."
-msgstr "超过了一分钟内允许回答的最大次数。请稍后再试。"
-
-#: kitsune/questions/templates/questions/answers.html:396
-msgid "I am providing the requested information"
-msgstr "我正在提供请求的信息"
-
-#: kitsune/questions/templates/questions/answers.html:401
-msgid "Needs more information"
-msgstr "需要更多信息"
-
-#: kitsune/questions/templates/questions/answers.html:433 kitsune/sumo/templates/includes/common_macros.html:28 kitsune/sumo/templates/mobile/base.html:63
-#: kitsune/users/templates/users/includes/auth.html:15
-msgid "Ask a question"
-msgstr "我要提问"
-
-#: kitsune/questions/templates/questions/answers.html:437
-msgid "You must <a href=\"{login_url}\">log in to your account</a> to reply to posts. Please <a href=\"{ask_url}\">start a new question</a>, if you do not have an account yet."
-msgstr "你必须<a href=\"{login_url}\">登录到你的帐号</a>才能回复。如果你还没帐号，请<a href=\"{ask_url}\">提出一个新问题</a>。"
 
 #. {t} is the title of the question.
 #: kitsune/questions/templates/questions/confirm_answer_delete.html:3
@@ -3566,7 +3379,7 @@ msgstr "问题已成功提交"
 msgid "Your issue has been submitted successfully. You should receive a confirmation email and hear back from us shortly."
 msgstr "问题已经成功提交。您很快会收到确认邮件和我们的回应。"
 
-#: kitsune/questions/templates/questions/metrics.html:3 kitsune/questions/templates/questions/metrics.html:10 kitsune/sumo/templates/includes/common_macros.html:128
+#: kitsune/questions/templates/questions/metrics.html:3 kitsune/questions/templates/questions/metrics.html:10 kitsune/sumo/templates/includes/common_macros.html:120
 msgid "Support Forum Metrics"
 msgstr "技术支持论坛度量"
 
@@ -3606,132 +3419,316 @@ msgstr "此前没有人问过这个问题。"
 msgid "Provide more details"
 msgstr "提供更多细节"
 
-#: kitsune/questions/templates/questions/new_question.html:80
+#: kitsune/questions/templates/questions/new_question.html:76
 msgid "Fill in the details of your question."
 msgstr "在您的问题中填写细节。"
 
-#: kitsune/questions/templates/questions/new_question.html:83 kitsune/questions/templates/questions/new_question_login.html:39
+#: kitsune/questions/templates/questions/new_question.html:79 kitsune/questions/templates/questions/new_question_login.html:15
 msgid "Post Question"
 msgstr "发出问题"
 
-#: kitsune/questions/templates/questions/new_question_login.html:20 kitsune/questions/templates/questions/mobile/new_question_login.html:14
-msgid "Before you continue, you must sign in"
-msgstr "注册后才能继续"
+#: kitsune/questions/templates/questions/product_list.html:20 kitsune/questions/templates/questions/product_list.html:27 kitsune/questions/templates/questions/mobile/product_list.html:14
+#: kitsune/questions/templates/questions/mobile/product_list.html:21
+msgid "<strong>{product}</strong> Support Forum"
+msgstr ""
 
-#: kitsune/questions/templates/questions/new_question_login.html:21 kitsune/questions/templates/questions/mobile/new_question_login.html:16 kitsune/sumo/templates/includes/common_macros.html:62
-#: kitsune/sumo/templates/includes/common_macros.html:64 kitsune/sumo/templates/mobile/base.html:87 kitsune/sumo/templates/mobile/base.html:89 kitsune/users/templates/users/auth.html:13
-#: kitsune/users/templates/users/mobile/login.html:14
-msgid "Sign in with email"
-msgstr "用邮件地址登录"
+#: kitsune/questions/templates/questions/product_list.html:28 kitsune/questions/templates/questions/mobile/product_list.html:22
+msgid "Browse the questions for all the products together in one list."
+msgstr ""
 
-#: kitsune/questions/templates/questions/new_question_login.html:25
-msgid "It appears you do not have an existing account"
-msgstr "看起来你还没有帐号"
+#. {q} is the title of the question.
+#: kitsune/questions/templates/questions/question_details.html:17
+#, fuzzy
+msgid "{q} | {product} Support Forum"
+msgstr "{q} | Firefox 支持论坛"
 
-#: kitsune/questions/templates/questions/new_question_login.html:26
-msgid "Please select a username for your new account."
-msgstr "为新帐号选择一个用户名。"
+#: kitsune/questions/templates/questions/question_details.html:43
+msgid "This thread was closed."
+msgstr "话题已关闭。"
 
-#: kitsune/questions/templates/questions/new_question_login.html:30 kitsune/questions/templates/questions/mobile/new_question_login.html:26
-msgid "Register and continue"
-msgstr "注册并继续"
+#: kitsune/questions/templates/questions/question_details.html:45
+msgid "This thread was archived."
+msgstr "话题已存档。"
 
-#: kitsune/questions/templates/questions/questions.html:3
-msgid "Firefox Support Forum"
+#: kitsune/questions/templates/questions/question_details.html:47
+msgid "This thread was closed and archived."
+msgstr "话题已关闭并存档。"
+
+#: kitsune/questions/templates/questions/question_details.html:51
+msgid "Please ask a new question if you need help."
+msgstr "如果需要帮助请提出新问题。"
+
+#. {n} is the number of replies.
+#: kitsune/questions/templates/questions/question_details.html:63 kitsune/search/templates/search/includes/result.html:18
+msgid "1 reply"
+msgid_plural "{n} replies"
+msgstr[0] "{n} 个回复"
+
+#: kitsune/questions/templates/questions/question_details.html:65 kitsune/search/templates/search/includes/result.html:21
+msgid "No replies"
+msgstr "无回复"
+
+#: kitsune/questions/templates/questions/question_details.html:70 kitsune/questions/templates/questions/includes/have_problem.html:3
+msgid "has this problem"
+msgid_plural "have this problem"
+msgstr[0] "人有此问题"
+
+#: kitsune/questions/templates/questions/question_details.html:78
+msgid "%(count)s view"
+msgid_plural "%(count)s views"
+msgstr[0] "%(count)s 次阅览"
+
+#: kitsune/questions/templates/questions/question_details.html:88 kitsune/questions/templates/questions/question_list.html:238
+msgid "Last reply by {user}"
+msgstr "最后回复者 {user}"
+
+#: kitsune/questions/templates/questions/question_details.html:108 kitsune/questions/templates/questions/includes/answer.html:31
+msgid "Posted"
+msgstr "发布于"
+
+#: kitsune/questions/templates/questions/question_details.html:118 kitsune/questions/templates/questions/includes/answer.html:59
+msgid "Modified {datetime} by {name}"
+msgstr "由{name}于{datetime}修改"
+
+#: kitsune/questions/templates/questions/question_details.html:125 kitsune/questions/templates/questions/includes/answer.html:39
+msgid "Solution chosen by {user}"
+msgstr "{user} 选择的解决方法"
+
+#: kitsune/questions/templates/questions/question_details.html:125
+msgid "Chosen solution"
+msgstr "选择的解决方案"
+
+#: kitsune/questions/templates/questions/question_details.html:128
+msgid "Read this answer in context"
+msgstr "在上下文中阅读这个答案"
+
+#: kitsune/questions/templates/questions/question_details.html:140 kitsune/questions/templates/questions/question_details.html:441
+#: kitsune/questions/templates/questions/mobile/question_details.html:32
+msgid "I have this problem, too"
+msgstr "我也有此问题"
+
+#: kitsune/questions/templates/questions/question_details.html:144 kitsune/questions/templates/questions/question_details.html:396 kitsune/questions/templates/questions/email/new_answer.html:22
+msgid "Post a Reply"
+msgstr "回复"
+
+#: kitsune/questions/templates/questions/question_details.html:152
+msgid "Question tools"
+msgstr "问题工具"
+
+#: kitsune/questions/templates/questions/question_details.html:157
+msgid "Edit this question"
+msgstr "编辑此问题"
+
+#: kitsune/questions/templates/questions/question_details.html:163
+msgid "Delete this question"
+msgstr "删除此问题"
+
+#: kitsune/questions/templates/questions/question_details.html:169
+msgid "Unlock this question"
+msgstr "解锁此问题"
+
+#: kitsune/questions/templates/questions/question_details.html:170
+msgid "Lock this question"
+msgstr "锁定此问题"
+
+#: kitsune/questions/templates/questions/question_details.html:181
+msgid "Unarchive this question"
+msgstr "将此问题解除存档"
+
+#: kitsune/questions/templates/questions/question_details.html:183
+msgid "Archive this question"
+msgstr "存档此问题"
+
+#: kitsune/questions/templates/questions/question_details.html:194
+msgid "Stop email updates"
+msgstr "停止电子邮件更新"
+
+#: kitsune/questions/templates/questions/question_details.html:199 kitsune/questions/templates/questions/includes/email_subscribe.html:2
+msgid "Get email updates"
+msgstr "获取电子邮件更新"
+
+#: kitsune/questions/templates/questions/question_details.html:204
+msgid "Subscribe to feed"
+msgstr "订阅收取点"
+
+#: kitsune/questions/templates/questions/question_details.html:213
+msgid "Question details"
+msgstr "问题详情"
+
+#: kitsune/questions/templates/questions/question_details.html:217 kitsune/questions/templates/questions/includes/aaq_macros.html:37
+msgid "Product"
+msgstr "产品"
+
+#: kitsune/questions/templates/questions/question_details.html:234
+msgid "Topic"
+msgstr "主题"
+
+#: kitsune/questions/templates/questions/question_details.html:262
+msgid "System Details"
+msgstr "系统详细信息"
+
+#: kitsune/questions/templates/questions/question_details.html:275
+msgid "More system details"
+msgstr "更多系统细节"
+
+#: kitsune/questions/templates/questions/question_details.html:280
+msgid "Edit details"
+msgstr "编辑详情"
+
+#: kitsune/questions/templates/questions/question_details.html:281
+msgid "Save changes"
+msgstr "保存更改"
+
+#: kitsune/questions/templates/questions/question_details.html:290 kitsune/questions/templates/questions/question_details.html:291
+msgid "Additional System Details"
+msgstr "补充系统细节"
+
+#: kitsune/questions/templates/questions/question_details.html:293
+msgid "Sites Affected"
+msgstr "影响的网站"
+
+#: kitsune/questions/templates/questions/question_details.html:297
+msgid "Crash ID"
+msgstr "崩溃ID"
+
+#: kitsune/questions/templates/questions/question_details.html:301
+msgid "This happened"
+msgstr "这发生于"
+
+#: kitsune/questions/templates/questions/question_details.html:309
+msgid "Installed Plug-ins"
+msgstr "已安装的插件"
+
+#: kitsune/questions/templates/questions/question_details.html:316
+msgid "Close"
+msgstr "关闭"
+
+#: kitsune/questions/templates/questions/question_details.html:322 kitsune/questions/templates/questions/question_list.html:244 kitsune/search/forms.py:167
+msgid "Tags"
+msgstr "标签"
+
+#: kitsune/questions/templates/questions/question_details.html:362 kitsune/tags/forms.py:120
+msgid "Add"
+msgstr "添加"
+
+#: kitsune/questions/templates/questions/question_details.html:390
+msgid "You have exceeded the number of answers that can be posted in a given amount of time. Please try again shortly."
+msgstr "超过了一分钟内允许回答的最大次数。请稍后再试。"
+
+#: kitsune/questions/templates/questions/question_details.html:408
+msgid "I am providing the requested information"
+msgstr "我正在提供请求的信息"
+
+#: kitsune/questions/templates/questions/question_details.html:413
+msgid "Needs more information"
+msgstr "需要更多信息"
+
+#: kitsune/questions/templates/questions/question_details.html:445 kitsune/sumo/templates/includes/common_macros.html:28 kitsune/sumo/templates/mobile/base.html:63
+#: kitsune/users/templates/users/includes/auth.html:15
+msgid "Ask a question"
+msgstr "我要提问"
+
+#: kitsune/questions/templates/questions/question_details.html:449
+msgid "You must <a href=\"{login_url}\">log in to your account</a> to reply to posts. Please <a href=\"{ask_url}\">start a new question</a>, if you do not have an account yet."
+msgstr "你必须<a href=\"{login_url}\">登录到你的帐号</a>才能回复。如果你还没帐号，请<a href=\"{ask_url}\">提出一个新问题</a>。"
+
+#: kitsune/questions/templates/questions/question_list.html:16 kitsune/questions/templates/questions/mobile/question_list.html:8
+#, fuzzy
+msgid "{product} Support Forum"
 msgstr "Firefox 技术支持"
 
-#: kitsune/questions/templates/questions/questions.html:35
+#: kitsune/questions/templates/questions/question_list.html:43
 msgid "Total questions: <strong>{num}</strong>"
 msgstr "问题总数：<strong>{num}</strong>"
 
-#: kitsune/questions/templates/questions/questions.html:40
+#: kitsune/questions/templates/questions/question_list.html:48
 msgid "<strong>%(recent_unanswered_count)s</strong> question in the last <strong>24 hours</strong> has no reply. <a href=\"%(url)s\">Help solve it!</a>"
 msgid_plural "<strong>%(recent_unanswered_count)s</strong> questions in the last <strong>24 hours</strong> have no reply. <a href=\"%(url)s\">Help solve them!</a>"
 msgstr[0] "<strong>%(recent_unanswered_count)s</strong> 个问题在最近<strong>24小时</strong>内仍没有回答。<a href=\"%(url)s\">去帮帮他们吧！</a>"
 
 # Found 123 results for abc in 正体中文 (繁体)
-#: kitsune/questions/templates/questions/questions.html:48
+#: kitsune/questions/templates/questions/question_list.html:56
 msgid "<strong>0</strong> questions in the last <strong>24 hours</strong> have no reply. <strong>Good job!</strong>"
 msgstr "<strong>0</strong> 个问题在最近<strong>24小时</strong>内仍没有回答。<strong>做的好！</strong>"
 
-#: kitsune/questions/templates/questions/questions.html:62
+#: kitsune/questions/templates/questions/question_list.html:70
 msgid "Showing questions tagged:"
 msgstr "显示带有此标签的问题："
 
-#: kitsune/questions/templates/questions/questions.html:69
+#: kitsune/questions/templates/questions/question_list.html:77
 msgid "Show all questions"
 msgstr "显示所有问题"
 
-#: kitsune/questions/templates/questions/questions.html:76
+#: kitsune/questions/templates/questions/question_list.html:84
 msgid "Attention needed"
 msgstr "需要注意"
 
-#: kitsune/questions/templates/questions/questions.html:77 kitsune/questions/templates/questions/mobile/questions.html:68
+#: kitsune/questions/templates/questions/question_list.html:85 kitsune/questions/templates/questions/mobile/question_list.html:70
 msgid "Responded"
 msgstr "已回应"
 
-#: kitsune/questions/templates/questions/questions.html:78 kitsune/questions/templates/questions/mobile/questions.html:69 kitsune/users/templates/users/mobile/edit_profile.html:12
+#: kitsune/questions/templates/questions/question_list.html:86 kitsune/questions/templates/questions/mobile/question_list.html:71 kitsune/users/templates/users/mobile/edit_profile.html:12
 msgid "Done"
 msgstr "完成"
 
-#: kitsune/questions/templates/questions/questions.html:79
+#: kitsune/questions/templates/questions/question_list.html:87
 msgid "All questions"
 msgstr "所有问题"
 
-#: kitsune/questions/templates/questions/questions.html:85
+#: kitsune/questions/templates/questions/question_list.html:93
 msgid "Top Contributors"
 msgstr "杰出贡献者"
 
-#: kitsune/questions/templates/questions/questions.html:130
+#: kitsune/questions/templates/questions/question_list.html:138
 msgid "Escalated"
 msgstr "已提升"
 
-#: kitsune/questions/templates/questions/questions.html:133
+#: kitsune/questions/templates/questions/question_list.html:141
 msgid "Off-topic"
 msgstr "离题"
 
-#: kitsune/questions/templates/questions/questions.html:139
+#: kitsune/questions/templates/questions/question_list.html:147
 msgid "Filter:"
 msgstr "筛选："
 
-#: kitsune/questions/templates/questions/questions.html:149
+#: kitsune/questions/templates/questions/question_list.html:157
 msgid "Show me:"
 msgstr "显示："
 
-#: kitsune/questions/templates/questions/questions.html:151
+#: kitsune/questions/templates/questions/question_list.html:159
 msgid "Posts from everyone"
 msgstr "来自所有人的文章"
 
-#: kitsune/questions/templates/questions/questions.html:153
+#: kitsune/questions/templates/questions/question_list.html:161
 msgid "My contributions"
 msgstr "我的贡献"
 
-#: kitsune/questions/templates/questions/questions.html:172
+#: kitsune/questions/templates/questions/question_list.html:180
 msgid "votes this week"
 msgstr "本周新投票"
 
-#: kitsune/questions/templates/questions/questions.html:176 kitsune/questions/templates/questions/mobile/questions.html:87
+#: kitsune/questions/templates/questions/question_list.html:184 kitsune/questions/templates/questions/mobile/question_list.html:89
 msgid "reply"
 msgid_plural "replies"
 msgstr[0] "个回答"
 
-#: kitsune/questions/templates/questions/questions.html:185
+#: kitsune/questions/templates/questions/question_list.html:193
 msgid "views"
 msgstr "次查看"
 
-#: kitsune/questions/templates/questions/questions.html:212
+#: kitsune/questions/templates/questions/question_list.html:220
 msgid "Contributed"
 msgstr "贡献"
 
-#: kitsune/questions/templates/questions/questions.html:218 kitsune/search/forms.py:146
+#: kitsune/questions/templates/questions/question_list.html:226 kitsune/search/forms.py:146
 msgid "Archived"
 msgstr "已存档"
 
-#: kitsune/questions/templates/questions/questions.html:224
+#: kitsune/questions/templates/questions/question_list.html:232
 msgid "Posted by {user}"
 msgstr "{user} 发出"
 
-#: kitsune/questions/templates/questions/questions.html:225 kitsune/questions/templates/questions/questions.html:231
+#: kitsune/questions/templates/questions/question_list.html:233 kitsune/questions/templates/questions/question_list.html:239
 msgid "on"
 msgstr "于"
 
@@ -4119,50 +4116,6 @@ msgstr "用户代理（User Agent）: {ua}"
 msgid "More Information"
 msgstr "详细信息"
 
-#: kitsune/questions/templates/questions/mobile/answers.html:13
-msgid "posted by"
-msgstr "提问者"
-
-#: kitsune/questions/templates/questions/mobile/answers.html:24
-msgid "Show more"
-msgstr "显示更多"
-
-#: kitsune/questions/templates/questions/mobile/answers.html:25
-msgid "Show less"
-msgstr "显示更少"
-
-#: kitsune/questions/templates/questions/mobile/answers.html:55
-msgid "All posts"
-msgstr "所有帖子"
-
-#: kitsune/questions/templates/questions/mobile/answers.html:56
-msgid "Helpful Solutions"
-msgstr "有帮助的解答"
-
-#: kitsune/questions/templates/questions/mobile/answers.html:73
-msgid "solution"
-msgstr "解决方法"
-
-#: kitsune/questions/templates/questions/mobile/answers.html:75
-msgid "helpful"
-msgstr "有帮助"
-
-#: kitsune/questions/templates/questions/mobile/answers.html:77
-msgid "owner"
-msgstr "所有者"
-
-#: kitsune/questions/templates/questions/mobile/answers.html:79
-msgid "post"
-msgstr "帖子"
-
-#: kitsune/questions/templates/questions/mobile/answers.html:107
-msgid "Helpful"
-msgstr "有帮助"
-
-#: kitsune/questions/templates/questions/mobile/answers.html:108
-msgid "Not Helpful"
-msgstr "没有帮助"
-
 #: kitsune/questions/templates/questions/mobile/confirm_email.html:7
 msgid "Ask a New Question"
 msgstr "问新的问题"
@@ -4175,44 +4128,88 @@ msgstr "提问"
 msgid "Try another topic"
 msgstr "看看其他的主题"
 
-#: kitsune/questions/templates/questions/mobile/new_question.html:54 kitsune/questions/templates/questions/mobile/new_question.html:59
+#: kitsune/questions/templates/questions/mobile/new_question.html:56
 msgid "Post a question"
 msgstr "我要提问"
 
-#: kitsune/questions/templates/questions/mobile/questions.html:16
+#: kitsune/questions/templates/questions/mobile/question_details.html:13
+msgid "posted by"
+msgstr "提问者"
+
+#: kitsune/questions/templates/questions/mobile/question_details.html:24
+msgid "Show more"
+msgstr "显示更多"
+
+#: kitsune/questions/templates/questions/mobile/question_details.html:25
+msgid "Show less"
+msgstr "显示更少"
+
+#: kitsune/questions/templates/questions/mobile/question_details.html:55
+msgid "All posts"
+msgstr "所有帖子"
+
+#: kitsune/questions/templates/questions/mobile/question_details.html:56
+msgid "Helpful Solutions"
+msgstr "有帮助的解答"
+
+#: kitsune/questions/templates/questions/mobile/question_details.html:73
+msgid "solution"
+msgstr "解决方法"
+
+#: kitsune/questions/templates/questions/mobile/question_details.html:75
+msgid "helpful"
+msgstr "有帮助"
+
+#: kitsune/questions/templates/questions/mobile/question_details.html:77
+msgid "owner"
+msgstr "所有者"
+
+#: kitsune/questions/templates/questions/mobile/question_details.html:79
+msgid "post"
+msgstr "帖子"
+
+#: kitsune/questions/templates/questions/mobile/question_details.html:107
+msgid "Helpful"
+msgstr "有帮助"
+
+#: kitsune/questions/templates/questions/mobile/question_details.html:108
+msgid "Not Helpful"
+msgstr "没有帮助"
+
+#: kitsune/questions/templates/questions/mobile/question_list.html:18
 msgid "Top contributors"
 msgstr "杰出贡献者"
 
-#: kitsune/questions/templates/questions/mobile/questions.html:43
+#: kitsune/questions/templates/questions/mobile/question_list.html:45
 msgid "<strong>%(recent_unanswered_count)s question</strong> has no reply."
 msgid_plural "<strong>%(recent_unanswered_count)s questions</strong> have no reply."
 msgstr[0] "<strong>%(recent_unanswered_count)s </strong>个问题没有回答。"
 
-#: kitsune/questions/templates/questions/mobile/questions.html:49
+#: kitsune/questions/templates/questions/mobile/question_list.html:51
 msgid "Total:"
 msgstr "总计："
 
-#: kitsune/questions/templates/questions/mobile/questions.html:58
+#: kitsune/questions/templates/questions/mobile/question_list.html:60
 msgid "Filter questions"
 msgstr "筛选问题"
 
-#: kitsune/questions/templates/questions/mobile/questions.html:67
+#: kitsune/questions/templates/questions/mobile/question_list.html:69
 msgid "Attention Needed"
 msgstr "需要注意"
 
-#: kitsune/questions/templates/questions/mobile/questions.html:70
+#: kitsune/questions/templates/questions/mobile/question_list.html:72
 msgid "Show All"
 msgstr "显示全部"
 
-#: kitsune/questions/templates/questions/mobile/questions.html:94
+#: kitsune/questions/templates/questions/mobile/question_list.html:96
 msgid "solved"
 msgstr "已解答"
 
-#: kitsune/questions/templates/questions/mobile/questions.html:96
+#: kitsune/questions/templates/questions/mobile/question_list.html:98
 msgid "needs attention"
 msgstr "需要注意"
 
-#: kitsune/questions/templates/questions/mobile/questions.html:98
+#: kitsune/questions/templates/questions/mobile/question_list.html:100
 msgid "contributed"
 msgstr "贡献"
 
@@ -4355,7 +4352,7 @@ msgstr "搜索 Mozilla 技术支持"
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
 msgstr "搜索暂时不可用。请稍等几分钟后重试。"
 
-#: kitsune/search/templates/search/form.html:4 kitsune/sumo/templates/includes/common_macros.html:133
+#: kitsune/search/templates/search/form.html:4 kitsune/sumo/templates/includes/common_macros.html:125
 msgid "Advanced Search"
 msgstr "高级搜索"
 
@@ -5677,69 +5674,82 @@ msgctxt "site_title"
 msgid "Mozilla Support"
 msgstr "Mozilla 技术支持"
 
+#: kitsune/sumo/templates/base.html:80
+msgid "Skip to main content"
+msgstr ""
+
+#: kitsune/sumo/templates/base.html:81 kitsune/sumo/templates/mobile/base.html:94 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
+msgid "Switch language"
+msgstr "切换语言"
+
 #: kitsune/sumo/templates/base.html:82
+#, fuzzy
+msgid "Skip to search"
+msgstr "在此搜索结果的范围内搜索"
+
+#: kitsune/sumo/templates/base.html:88
 msgid "This is a staging site, the content gets overwritten on the 1st of every month.<br>The production site is <a href=\"http://support.mozilla.org\">here</a>."
 msgstr "这里是一个测试版的网站，每月1日本站内容将被覆盖一次。正式的网站在<a href=\"http://support.mozilla.com\">此处</a>。"
 
-#: kitsune/sumo/templates/base.html:93
+#: kitsune/sumo/templates/base.html:99
 msgid "This page doesn't have a mobile optimized version. Tap here to go back."
 msgstr "此页面还没有为移动装置优化的版本。点击这里返回。"
 
-#: kitsune/sumo/templates/base.html:100
+#: kitsune/sumo/templates/base.html:106
 msgid "Tap here to go to the mobile version of the site."
 msgstr "点击这里打开本站的移动版本。"
 
-#: kitsune/sumo/templates/base.html:110
+#: kitsune/sumo/templates/base.html:116
 msgid "Your Firefox is out of date and may contain a security risk!"
 msgstr "您的 Firefox 已过期，且可能包含安全隐患！"
 
-#: kitsune/sumo/templates/base.html:114
+#: kitsune/sumo/templates/base.html:120
 msgid "Upgrade Firefox"
 msgstr "升级 Firefox"
 
-#: kitsune/sumo/templates/base.html:187
+#: kitsune/sumo/templates/base.html:191
 msgid ""
 "Portions of this content are &copy;1998–2014 <br>by individual mozilla.org contributors. Content <br>available under a <a href=\"//www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
 msgstr "部份内容系版权所有©1998–2014，<br>由单独的 mozilla.org 贡献者所创作。<br>内容遵循<a href=\"//www.mozilla.org/foundation/licensing/website-content.html\">知识共享许可协议</a>进行授权。"
 
-#: kitsune/sumo/templates/base.html:197
+#: kitsune/sumo/templates/base.html:201
 msgid "Contact Us"
 msgstr "联系我们"
 
-#: kitsune/sumo/templates/base.html:198
+#: kitsune/sumo/templates/base.html:202
 msgid "Privacy Policy"
 msgstr "隐私政策"
 
-#: kitsune/sumo/templates/base.html:199
+#: kitsune/sumo/templates/base.html:203
 msgid "Legal Notices"
 msgstr "法律条款"
 
-#: kitsune/sumo/templates/base.html:200
+#: kitsune/sumo/templates/base.html:204
 msgid "Report Trademark Abuse"
 msgstr "报告商标滥用"
 
-#: kitsune/sumo/templates/base.html:201
+#: kitsune/sumo/templates/base.html:205
 msgid "Source Code"
 msgstr "源代码"
 
-#: kitsune/sumo/templates/base.html:206 kitsune/users/templates/users/profile.html:111 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:76
+#: kitsune/sumo/templates/base.html:210 kitsune/users/templates/users/profile.html:111 kitsune/users/templates/users/mobile/edit_profile.html:41 kitsune/users/templates/users/mobile/profile.html:76
 msgid "Twitter"
 msgstr "Twitter"
 
-#: kitsune/sumo/templates/base.html:207 kitsune/users/templates/users/profile.html:117 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:80
+#: kitsune/sumo/templates/base.html:211 kitsune/users/templates/users/profile.html:117 kitsune/users/templates/users/mobile/edit_profile.html:44 kitsune/users/templates/users/mobile/profile.html:80
 msgid "Facebook"
 msgstr "Facebook"
 
-#: kitsune/sumo/templates/base.html:208
+#: kitsune/sumo/templates/base.html:212
 msgid "Firefox Affiliates"
 msgstr "Firefox 伙伴计划"
 
-#: kitsune/sumo/templates/base.html:209
+#: kitsune/sumo/templates/base.html:213
 msgid "Switch to mobile site"
 msgstr "切换到移动版"
 
-#: kitsune/sumo/templates/email/base.html:232 kitsune/sumo/templates/mobile/base.html:120
+#: kitsune/sumo/templates/email/base.html:232 kitsune/sumo/templates/mobile/base.html:112
 msgid "Mozilla Support"
 msgstr "Mozilla 技术支持"
 
@@ -5811,47 +5821,47 @@ msgstr "设置"
 msgid "Sign Out"
 msgstr "登出"
 
-#: kitsune/sumo/templates/includes/common_macros.html:69 kitsune/users/templates/users/includes/login-form.html:4
+#: kitsune/sumo/templates/includes/common_macros.html:61 kitsune/users/templates/users/includes/login-form.html:4
 msgid "Sign In"
 msgstr "登录"
 
-#: kitsune/sumo/templates/includes/common_macros.html:107
+#: kitsune/sumo/templates/includes/common_macros.html:99
 msgid "For Contributors"
 msgstr "贡献者专区"
 
-#: kitsune/sumo/templates/includes/common_macros.html:119
+#: kitsune/sumo/templates/includes/common_macros.html:111
 msgid "Quickstart Guide"
 msgstr "快速入门指南"
 
-#: kitsune/sumo/templates/includes/common_macros.html:120
+#: kitsune/sumo/templates/includes/common_macros.html:112
 msgid "News &amp; Resources"
 msgstr "新闻与资源"
 
-#: kitsune/sumo/templates/includes/common_macros.html:121
+#: kitsune/sumo/templates/includes/common_macros.html:113
 msgid "Contributor Forums"
 msgstr "贡献者论坛"
 
-#: kitsune/sumo/templates/includes/common_macros.html:122
+#: kitsune/sumo/templates/includes/common_macros.html:114
 msgid "Article Discussions"
 msgstr "文章讨论"
 
-#: kitsune/sumo/templates/includes/common_macros.html:124
+#: kitsune/sumo/templates/includes/common_macros.html:116
 msgid "Localization Metrics"
 msgstr "本地化指标"
 
-#: kitsune/sumo/templates/includes/common_macros.html:126
+#: kitsune/sumo/templates/includes/common_macros.html:118
 msgid "Help on Twitter"
 msgstr "在 Twitter 上进行帮助"
 
-#: kitsune/sumo/templates/includes/common_macros.html:127
+#: kitsune/sumo/templates/includes/common_macros.html:119
 msgid "Support Forum Home"
 msgstr "技术支持论坛首页"
 
-#: kitsune/sumo/templates/includes/common_macros.html:130
+#: kitsune/sumo/templates/includes/common_macros.html:122
 msgid "Moderate Forum Content"
 msgstr "管理论坛内容"
 
-#: kitsune/sumo/templates/includes/common_macros.html:135
+#: kitsune/sumo/templates/includes/common_macros.html:127
 msgid "Karma Dashboard"
 msgstr "Karma 状态面板"
 
@@ -5891,15 +5901,11 @@ msgstr "切换到桌面版"
 msgid "Profile"
 msgstr "个人资料"
 
-#: kitsune/sumo/templates/mobile/base.html:97
+#: kitsune/sumo/templates/mobile/base.html:89
 msgid "Languages"
 msgstr "语言"
 
-#: kitsune/sumo/templates/mobile/base.html:102 kitsune/sumo/templates/sumo/locales.html:2 kitsune/sumo/templates/sumo/mobile/locales.html:2
-msgid "Switch language"
-msgstr "切换语言"
-
-#: kitsune/sumo/templates/mobile/base.html:134
+#: kitsune/sumo/templates/mobile/base.html:126
 msgid "Get support for another platform:"
 msgstr "获取另一个平台的帮助："
 
@@ -6047,87 +6053,87 @@ msgstr "关注我留过言的提问"
 msgid "Send emails for private messages"
 msgstr "收到私信时发送电子邮件"
 
-#: kitsune/users/forms.py:80 kitsune/users/forms.py:113 kitsune/users/templates/users/includes/macros.html:11
+#: kitsune/users/forms.py:86 kitsune/users/templates/users/includes/macros.html:11
 msgid "Username:"
 msgstr "用户名："
 
-#: kitsune/users/forms.py:82 kitsune/users/forms.py:115
+#: kitsune/users/forms.py:88
 msgid "Required. 30 characters or fewer. Letters, digits and ./+/- only."
 msgstr "不能为空。最多允许30个字符。仅允许输入字母、数字以及 ./+/- 。"
 
-#: kitsune/users/forms.py:122 kitsune/users/forms.py:261 kitsune/users/forms.py:267 kitsune/users/forms.py:315
+#: kitsune/users/forms.py:95 kitsune/users/forms.py:234 kitsune/users/forms.py:240 kitsune/users/forms.py:288
 msgid "Email address:"
 msgstr "电子邮件地址:"
 
-#: kitsune/users/forms.py:127 kitsune/users/templates/users/edit_profile.html:46 kitsune/users/templates/users/includes/macros.html:15
+#: kitsune/users/forms.py:100 kitsune/users/templates/users/edit_profile.html:40 kitsune/users/templates/users/includes/macros.html:15
 msgid "Password:"
 msgstr "密码："
 
-#: kitsune/users/forms.py:133
+#: kitsune/users/forms.py:106
 msgid "Repeat password:"
 msgstr "再输入一次密码："
 
-#: kitsune/users/forms.py:136
+#: kitsune/users/forms.py:109
 msgid "Enter the same password as above, for verification."
 msgstr "输入与上面相同的密码，以便确认。"
 
-#: kitsune/users/forms.py:152
+#: kitsune/users/forms.py:125
 msgid "Passwords must match."
 msgstr "密码必须匹配。"
 
-#: kitsune/users/forms.py:162 kitsune/users/forms.py:278
+#: kitsune/users/forms.py:135 kitsune/users/forms.py:251
 msgid "A user with that email address already exists."
 msgstr "已有一位用户使用了该电子邮件地址。"
 
-#: kitsune/users/forms.py:177 kitsune/users/templates/users/mobile/edit_profile.html:30 kitsune/users/templates/users/mobile/includes/macros.html:14
+#: kitsune/users/forms.py:150 kitsune/users/templates/users/mobile/edit_profile.html:30 kitsune/users/templates/users/mobile/includes/macros.html:14
 msgid "Password"
 msgstr "密码"
 
-#: kitsune/users/forms.py:193
+#: kitsune/users/forms.py:166
 msgid "Please enter a correct username and password. Note that both fields are case-sensitive."
 msgstr "请输入正确的用户名和密码。请注意，这两个字段大小写敏感。"
 
-#: kitsune/users/forms.py:196
+#: kitsune/users/forms.py:169
 msgid "This account is inactive."
 msgstr "此帐户已停用。"
 
-#: kitsune/users/forms.py:201
+#: kitsune/users/forms.py:174
 msgid "Your Web browser doesn't appear to have cookies enabled. Cookies are required for logging in."
 msgstr "您的网页浏览器似乎没有启用 Cookie。登录必须用到 Cookie。"
 
-#: kitsune/users/forms.py:223
+#: kitsune/users/forms.py:196
 msgid "Please enter a twitter.com URL."
 msgstr "请输入一个 twitter.com 的网址。"
 
-#: kitsune/users/forms.py:229
+#: kitsune/users/forms.py:202
 msgid "Please enter a facebook.com URL."
 msgstr "请输入一个 facebook.com 的网址。"
 
-#: kitsune/users/forms.py:240
+#: kitsune/users/forms.py:213
 msgid "Your avatar will be resized to {size}x{size}"
 msgstr "您的头像将被调整为 {size}x{size}"
 
-#: kitsune/users/forms.py:276
+#: kitsune/users/forms.py:249
 msgid "This is your current email."
 msgstr "这是您当前的电子邮件。"
 
-#: kitsune/users/forms.py:285 kitsune/users/forms.py:299
+#: kitsune/users/forms.py:258 kitsune/users/forms.py:272
 msgid "New password:"
 msgstr "新密码："
 
-#: kitsune/users/forms.py:326
+#: kitsune/users/forms.py:299
 msgid "That e-mail address doesn't have an associated user account. Are you sure you've registered?"
 msgstr "没有与该电子邮件地址相关联的用户帐号。您确定您有注册过吗？"
 
-#: kitsune/users/forms.py:341
+#: kitsune/users/forms.py:314
 msgid "Your username on %s"
 msgstr "您在 %s 的用户名"
 
-#: kitsune/users/forms.py:427
+#: kitsune/users/forms.py:400
 msgid "At least one number and one English letter are required in the password."
 msgstr "密码中至少要有一个数字和一个英文字母。"
 
-#: kitsune/users/forms.py:457
+#: kitsune/users/forms.py:430
 msgid "The user name you entered is inappropriate. Please pick another and consider that our helpers are other Firefox users just like you."
 msgstr "您所输入的用户名不恰当。请再挑选一个，并请考虑到我们的志愿者都是像您一样的 Firefox 用户。"
 
@@ -6223,19 +6229,19 @@ msgstr "注册信息"
 msgid "moderator"
 msgstr "版主"
 
-#: kitsune/users/views.py:170
+#: kitsune/users/views.py:166
 msgid "Your account is already activated, log in below."
 msgstr "您的帐户已被激活，请在下面登录。"
 
-#: kitsune/users/views.py:217 kitsune/users/views.py:227
+#: kitsune/users/views.py:213 kitsune/users/views.py:223
 msgid "Account already activated"
 msgstr "帐户已激活"
 
-#: kitsune/users/views.py:389
+#: kitsune/users/views.py:385
 msgid "Your settings have been saved."
 msgstr "您的设置已保存。"
 
-#: kitsune/users/views.py:674
+#: kitsune/users/views.py:670
 msgid "We've sent an email with the username to any account using {email}."
 msgstr "我们已经寄出了一封带有您用户名的电子邮件到 {email}。"
 
@@ -6283,26 +6289,6 @@ msgstr "我们无法激活您的帐户。请确保您已经点击了邮件中正
 #: kitsune/users/templates/users/auth.html:4
 msgid "Log In / Register"
 msgstr "登录/注册"
-
-#: kitsune/users/templates/users/auth.html:12 kitsune/users/templates/users/mobile/login.html:13
-msgid "You must be signed in to continue"
-msgstr "必须注册才能继续"
-
-#: kitsune/users/templates/users/browserid_signup.html:5
-msgid "Select a username"
-msgstr "选择用户名"
-
-#: kitsune/users/templates/users/browserid_signup.html:12 kitsune/users/templates/users/mobile/browserid_signup.html:5
-msgid "You're almost there!"
-msgstr "你就快要成功了！"
-
-#: kitsune/users/templates/users/browserid_signup.html:14 kitsune/users/templates/users/mobile/browserid_signup.html:12
-msgid "Please select a username and click continue to proceed with sign up."
-msgstr "请选择用户名并点击 继续 以完成注册。"
-
-#: kitsune/users/templates/users/browserid_signup.html:27 kitsune/users/templates/users/mobile/browserid_signup.html:26
-msgid "Continue"
-msgstr "继续"
 
 #: kitsune/users/templates/users/change_email.html:3
 msgid "Change email address"
@@ -6388,34 +6374,30 @@ msgstr "重定向"
 msgid "Change Avatar"
 msgstr "更改头像"
 
-#: kitsune/users/templates/users/edit_profile.html:21
+#: kitsune/users/templates/users/edit_profile.html:16
 msgid "Avatar:"
 msgstr "头像："
 
-#: kitsune/users/templates/users/edit_profile.html:26
+#: kitsune/users/templates/users/edit_profile.html:21
 msgctxt "avatar"
 msgid "Change"
 msgstr "更改"
 
-#: kitsune/users/templates/users/edit_profile.html:28
+#: kitsune/users/templates/users/edit_profile.html:23
 msgid ""
 "<p> SUMO is now using Gravatars as avatars. You must change your Gravatar on gravatar.com. </p> <p> It can take a few minutes for the avatar change to take effect. You may need to wait a few "
 "minutes and reload the page to see your new Gravatar. </p>"
 msgstr "<p> SUMO 现在使用 Gravatars 为头像。您可以在 gravatar.com 更改您的头像。</p> <p> 头像的变更可能需要几分钟才能生效。您可能需要等待几分钟后重新加载本页面才能看到您的新头像。</p>"
 
-#: kitsune/users/templates/users/edit_profile.html:54
-msgid "Change with Persona"
-msgstr "用 Persona 更改"
-
-#: kitsune/users/templates/users/edit_profile.html:62 kitsune/users/templates/users/edit_settings.html:15 kitsune/users/templates/users/pw_reset_confirm.html:26
+#: kitsune/users/templates/users/edit_profile.html:51 kitsune/users/templates/users/edit_settings.html:15 kitsune/users/templates/users/pw_reset_confirm.html:26
 msgid "Update"
 msgstr "更新"
 
-#: kitsune/users/templates/users/edit_profile.html:66
+#: kitsune/users/templates/users/edit_profile.html:55
 msgid "Are you sure you want to close your account? You cannot undo this action."
 msgstr "您确定要关闭您的账户吗？您无法撤销这个操作。"
 
-#: kitsune/users/templates/users/edit_profile.html:69
+#: kitsune/users/templates/users/edit_profile.html:58
 msgid "Close account and delete all profile information"
 msgstr "关闭账户并删除所有个人资料信息"
 
@@ -6688,10 +6670,6 @@ msgstr "编辑设置"
 msgid "Successfully activated"
 msgstr "已成功激活"
 
-#: kitsune/users/templates/users/mobile/browserid_signup.html:10 kitsune/users/templates/users/mobile/register.html:13
-msgid "Create a support account."
-msgstr "注册技术支持帐户。"
-
 #: kitsune/users/templates/users/mobile/change_email.html:3 kitsune/users/templates/users/mobile/change_email.html:27 kitsune/users/templates/users/mobile/change_email_done.html:3
 msgid "Change email"
 msgstr "更改电子邮箱"
@@ -6751,6 +6729,10 @@ msgstr "密码重置"
 #: kitsune/users/templates/users/mobile/register.html:7 kitsune/users/templates/users/mobile/register_done.html:7
 msgid "Register or sign in"
 msgstr "注册或登录"
+
+#: kitsune/users/templates/users/mobile/register.html:13
+msgid "Create a support account."
+msgstr "注册技术支持帐户。"
 
 #: kitsune/users/templates/users/mobile/includes/macros.html:19
 msgid "Signing in..."
@@ -8171,6 +8153,42 @@ msgstr "没有找到您的订阅，可能已经取消，或者取消订阅链接
 #: vendor/src/django-tidings/tidings/templates/tidings/unsubscribe_success.html:8
 msgid "Unsubscribed"
 msgstr "已取消订阅"
+
+#~ msgid "Get Involved - Help Other Users"
+#~ msgstr "参与 - 帮助其他用户"
+
+#~ msgid "Before you continue, you must sign in"
+#~ msgstr "注册后才能继续"
+
+#~ msgid "Sign in with email"
+#~ msgstr "用邮件地址登录"
+
+#~ msgid "It appears you do not have an existing account"
+#~ msgstr "看起来你还没有帐号"
+
+#~ msgid "Please select a username for your new account."
+#~ msgstr "为新帐号选择一个用户名。"
+
+#~ msgid "Register and continue"
+#~ msgstr "注册并继续"
+
+#~ msgid "You must be signed in to continue"
+#~ msgstr "必须注册才能继续"
+
+#~ msgid "Select a username"
+#~ msgstr "选择用户名"
+
+#~ msgid "You're almost there!"
+#~ msgstr "你就快要成功了！"
+
+#~ msgid "Please select a username and click continue to proceed with sign up."
+#~ msgstr "请选择用户名并点击 继续 以完成注册。"
+
+#~ msgid "Continue"
+#~ msgstr "继续"
+
+#~ msgid "Change with Persona"
+#~ msgstr "用 Persona 更改"
 
 #~ msgctxt "DB: products.Topic.title"
 #~ msgid "Learn the basics: get started"
@@ -9895,9 +9913,6 @@ msgstr "已取消订阅"
 #~ msgctxt "KB Topic"
 #~ msgid "Firefox 4.0"
 #~ msgstr "Firefox 4.0"
-
-#~ msgid "Refine your search"
-#~ msgstr "在此搜索结果的范围内搜索"
 
 #~ msgid "Contributor Home Page"
 #~ msgstr "贡献者首页"
