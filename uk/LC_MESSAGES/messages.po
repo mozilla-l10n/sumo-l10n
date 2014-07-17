@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-01 07:45-0700\n"
+"POT-Creation-Date: 2014-07-17 11:58-0700\n"
 "PO-Revision-Date: 2014-07-11 07:33+0000\n"
 "Last-Translator: Artem <a.polivanchuk@outlook.com>\n"
 "Language-Team: Ukrainian team\n"
@@ -11,8 +11,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Pootle 2.5.0\n"
 "X-POOTLE-MTIME: 1405064031.0\n"
 
@@ -123,6 +122,7 @@ msgstr "Дякуємо!"
 #. This is an email.  Whitespace matters!
 #: kitsune/questions/templates/questions/email/new_answer.ltxt:4 kitsune/questions/templates/questions/email/new_answer_to_asker.ltxt:4 kitsune/questions/templates/questions/email/solution.ltxt:4
 #: kitsune/users/templates/users/email/activate.ltxt:3 kitsune/questions/templates/questions/email/solution.html:5 kitsune/users/templates/users/email/activate.html:4
+#: kitsune/wiki/templates/wiki/email/ready_for_review_weekly_digest.html:11
 msgid "Hi {username},"
 msgstr "Привіт, {username},"
 
@@ -207,10 +207,8 @@ msgid ""
 "Did you know that %(answerer)s is a Firefox user just like you? Get started helping other Firefox users by browsing questions at https://%(host)s/questions?filter=unsolved -- you might just make "
 "someone's day!"
 msgstr ""
-"Чи знаєте ви, що %(answerer)s є таким же як і ви користувачем Firefox? "
-"Почніть допомагати іншим користувачам Firefox, переглядаючи запитання на "
-"https://%(host)s/questions?filter=unsolved -- ви можете зробити чийсь день "
-"кращим!"
+"Чи знаєте ви, що %(answerer)s є таким же як і ви користувачем Firefox? Почніть допомагати іншим користувачам Firefox, переглядаючи запитання на https://%(host)s/questions?filter=unsolved -- ви "
+"можете зробити чийсь день кращим!"
 
 #: kitsune/sumo/templates/includes/unsubscribe_text.ltxt:3
 msgid "Unsubscribe from these emails:"
@@ -257,7 +255,7 @@ msgstr "Перш ніж ми оновимо вашу адресу ел. пошт
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is an email.  Whitespace matters!
-#: kitsune/users/templates/users/email/contributor.ltxt:3 kitsune/users/templates/users/email/contributor.html:4
+#: kitsune/users/templates/users/email/contributor.ltxt:3 kitsune/wiki/templates/wiki/email/ready_for_review_weekly_digest.ltxt:3 kitsune/users/templates/users/email/contributor.html:4
 msgid "Hi {username}"
 msgstr "Привіт, {username}"
 
@@ -329,7 +327,7 @@ msgstr "Ви також можете подати заяву на участь �
 
 #. #-#-#-#-#  ltxt.pot (PACKAGE VERSION)  #-#-#-#-#
 #. This is at the end of an email.
-#: kitsune/users/templates/users/email/contributor.ltxt:76 kitsune/users/models.py:373 kitsune/users/utils.py:91 kitsune/users/views.py:462 kitsune/users/templates/users/email/contributor.html:76
+#: kitsune/users/templates/users/email/contributor.ltxt:76 kitsune/users/models.py:373 kitsune/users/utils.py:91 kitsune/users/views.py:461 kitsune/users/templates/users/email/contributor.html:76
 msgid "Welcome to SUMO!"
 msgstr "Ласкаво просимо на SUMO!"
 
@@ -464,6 +462,22 @@ msgstr "%(creator)s представив(-ла) нову редакцію док
 msgid "To review this revision, click the following link, or paste it into your browser's location bar:"
 msgstr "Для перевірки цієї редакції, перейдіть за наступним посиланням, або вставте його в адресний рядок вашого браузера:"
 
+#: kitsune/wiki/templates/wiki/email/ready_for_review_weekly_digest.ltxt:5 kitsune/wiki/templates/wiki/email/ready_for_review_weekly_digest.html:15
+msgid "Our contributors have been working hard on articles and it would be great if you could review them. The faster we get them published the faster they start helping users."
+msgstr ""
+
+#: kitsune/wiki/templates/wiki/email/ready_for_review_weekly_digest.ltxt:11
+msgid "If you have a moment please review these articles:"
+msgstr ""
+
+#: kitsune/wiki/templates/wiki/email/ready_for_review_weekly_digest.ltxt:19
+msgid "Many thanks for your contribution on behalf of SUMO and the happy users who are helped by your work!"
+msgstr ""
+
+#: kitsune/wiki/templates/wiki/email/ready_for_review_weekly_digest.ltxt:24
+msgid "Regards, The SUMO team"
+msgstr ""
+
 #: kitsune/wiki/templates/wiki/email/reviewed.ltxt:3 kitsune/wiki/templates/wiki/email/reviewed.html:4
 msgid "Your revision has been reviewed."
 msgstr "Ваша редакція була перевірена."
@@ -533,42 +547,40 @@ msgstr "Змінити мову"
 msgid "Skip to search"
 msgstr "Перейти до пошуку"
 
-#: kitsune/community/templates/community/base.html:58 kitsune/sumo/templates/base.html:195
+#: kitsune/community/templates/community/base.html:53 kitsune/sumo/templates/base.html:195
 msgid ""
 "Portions of this content are &copy;1998–2014 <br>by individual mozilla.org contributors. Content <br>available under a <a href=\"//www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
 msgstr ""
-"Частини цього вмісту створені <br>учасниками проекту mozilla.org "
-"&copy;1998–2014. Вміст <br>доступний на умовах <a "
-"href=\"//www.mozilla.org/foundation/licensing/website-content.html\">ліцензії "
+"Частини цього вмісту створені <br>учасниками проекту mozilla.org &copy;1998–2014. Вміст <br>доступний на умовах <a href=\"//www.mozilla.org/foundation/licensing/website-content.html\">ліцензії "
 "Creative Commons</a>."
 
-#: kitsune/community/templates/community/base.html:68 kitsune/sumo/templates/base.html:205
+#: kitsune/community/templates/community/base.html:63 kitsune/sumo/templates/base.html:205
 msgid "Contact Us"
 msgstr "Зв’язатись з нами"
 
-#: kitsune/community/templates/community/base.html:69 kitsune/sumo/templates/base.html:206
+#: kitsune/community/templates/community/base.html:64 kitsune/sumo/templates/base.html:206
 msgid "Privacy Policy"
 msgstr "Політика конфіденційності"
 
-#: kitsune/community/templates/community/base.html:70 kitsune/sumo/templates/base.html:207
+#: kitsune/community/templates/community/base.html:65 kitsune/sumo/templates/base.html:207
 msgid "Legal Notices"
 msgstr "Юридичні примітки"
 
-#: kitsune/community/templates/community/base.html:71 kitsune/sumo/templates/base.html:208
+#: kitsune/community/templates/community/base.html:66 kitsune/sumo/templates/base.html:208
 msgid "Report Trademark Abuse"
 msgstr "Повідомити про зловживання торговою маркою"
 
-#: kitsune/community/templates/community/base.html:72 kitsune/sumo/templates/base.html:209
+#: kitsune/community/templates/community/base.html:67 kitsune/sumo/templates/base.html:209
 msgid "Source Code"
 msgstr "Вихідний код"
 
-#: kitsune/community/templates/community/base.html:77 kitsune/sumo/templates/base.html:214 kitsune/users/templates/users/profile.html:111 kitsune/users/templates/users/mobile/edit_profile.html:41
+#: kitsune/community/templates/community/base.html:72 kitsune/sumo/templates/base.html:214 kitsune/users/templates/users/profile.html:111 kitsune/users/templates/users/mobile/edit_profile.html:41
 #: kitsune/users/templates/users/mobile/profile.html:76
 msgid "Twitter"
 msgstr "Твітер"
 
-#: kitsune/community/templates/community/base.html:78 kitsune/sumo/templates/base.html:215 kitsune/users/templates/users/profile.html:117 kitsune/users/templates/users/mobile/edit_profile.html:44
+#: kitsune/community/templates/community/base.html:73 kitsune/sumo/templates/base.html:215 kitsune/users/templates/users/profile.html:117 kitsune/users/templates/users/mobile/edit_profile.html:44
 #: kitsune/users/templates/users/mobile/profile.html:80
 msgid "Facebook"
 msgstr "Facebook"
@@ -576,11 +588,11 @@ msgstr "Facebook"
 #
 #                   Помічники Firefox - Партнери ...
 #
-#: kitsune/community/templates/community/base.html:79 kitsune/sumo/templates/base.html:216
+#: kitsune/community/templates/community/base.html:74 kitsune/sumo/templates/base.html:216
 msgid "Firefox Affiliates"
 msgstr "Партнери Firefox"
 
-#: kitsune/community/templates/community/base.html:80 kitsune/sumo/templates/base.html:217
+#: kitsune/community/templates/community/base.html:75 kitsune/sumo/templates/base.html:217
 msgid "Switch to mobile site"
 msgstr "Перейти на мобільний сайт"
 
@@ -595,7 +607,46 @@ msgstr "Центр спільноти"
 msgid "Top Contributors"
 msgstr "Найкращі помічники"
 
-#: kitsune/community/templates/community/index.html:28 kitsune/questions/templates/questions/activate_watch.html:8 kitsune/questions/templates/questions/confirm_answer_delete.html:4
+# Топ помічників за останній тиждень - Найкращі помічники ....
+#: kitsune/community/templates/community/index.html:16
+#, fuzzy
+msgid "Filter Top Contributors by Locale"
+msgstr "Найкращі помічники - Локалізація"
+
+#: kitsune/community/templates/community/index.html:31 kitsune/community/templates/community/top_contributors.html:46
+#, fuzzy
+msgid "All locales"
+msgstr "Всі статті"
+
+# Топ помічників за останній тиждень - Найкращі помічники ....
+#: kitsune/community/templates/community/index.html:52 kitsune/community/templates/community/top_contributors.html:69
+#, fuzzy
+msgid "Filter Top Contributors by Product"
+msgstr "Найкращі помічники - Локалізація"
+
+# Пусто
+#: kitsune/community/templates/community/index.html:54 kitsune/community/templates/community/index.html:73 kitsune/community/templates/community/top_contributors.html:71
+#: kitsune/community/templates/community/top_contributors.html:90 kitsune/dashboards/templates/dashboards/contributors.html:4 kitsune/dashboards/templates/dashboards/localization.html:4
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:201 kitsune/dashboards/templates/dashboards/includes/macros.html:217 kitsune/dashboards/templates/dashboards/includes/macros.html:231
+#: kitsune/products/templates/products/documents.html:3 kitsune/products/templates/products/documents.html:11 kitsune/products/templates/products/documents.html:18
+#: kitsune/products/templates/products/product.html:4 kitsune/products/templates/products/product.html:10 kitsune/products/templates/products/product.html:17
+#: kitsune/products/templates/products/includes/product_macros.html:12 kitsune/products/templates/products/mobile/documents.html:10 kitsune/products/templates/products/mobile/documents.html:27
+#: kitsune/products/templates/products/mobile/product.html:3 kitsune/products/templates/products/mobile/product.html:8 kitsune/products/templates/products/mobile/products.html:13
+#: kitsune/questions/templates/questions/product_list.html:20 kitsune/questions/templates/questions/question_details.html:14 kitsune/questions/templates/questions/question_details.html:219
+#: kitsune/questions/templates/questions/question_list.html:19 kitsune/questions/templates/questions/question_list.html:210 kitsune/questions/templates/questions/mobile/product_list.html:14
+#: kitsune/questions/templates/questions/mobile/question_list.html:13 kitsune/questions/templates/questions/mobile/question_list.html:47 kitsune/search/views.py:489
+#: kitsune/search/templates/search/results.html:69 kitsune/wiki/templates/wiki/document.html:11 kitsune/wiki/templates/wiki/document.html:61
+#: kitsune/wiki/templates/wiki/email/ready_for_review_weekly_digest.html:32
+msgctxt "DB: products.Product.title"
+msgid "None"
+msgstr "Пусто"
+
+#: kitsune/community/templates/community/index.html:67 kitsune/community/templates/community/top_contributors.html:84
+#, fuzzy
+msgid "All products"
+msgstr "Всі продукти"
+
+#: kitsune/community/templates/community/index.html:83 kitsune/questions/templates/questions/activate_watch.html:8 kitsune/questions/templates/questions/confirm_answer_delete.html:4
 #: kitsune/questions/templates/questions/confirm_question_delete.html:4 kitsune/questions/templates/questions/edit_answer.html:8 kitsune/questions/templates/questions/edit_question.html:3
 #: kitsune/questions/templates/questions/metrics.html:4 kitsune/questions/templates/questions/product_list.html:5 kitsune/questions/templates/questions/product_list.html:7
 #: kitsune/questions/templates/questions/question_details.html:19 kitsune/questions/templates/questions/question_details.html:34 kitsune/questions/templates/questions/question_list.html:24
@@ -603,63 +654,41 @@ msgstr "Найкращі помічники"
 msgid "Support Forum"
 msgstr "Форум підтримки"
 
-#: kitsune/community/templates/community/index.html:33 kitsune/search/templates/search/form.html:19
+#: kitsune/community/templates/community/index.html:90 kitsune/search/templates/search/form.html:19
 msgid "Knowledge Base"
 msgstr "База знань"
 
-#: kitsune/community/templates/community/index.html:38 kitsune/dashboards/templates/dashboards/localization.html:92
+#: kitsune/community/templates/community/index.html:97 kitsune/dashboards/templates/dashboards/localization.html:92
 msgid "Localization"
 msgstr "Локалізація"
 
-#: kitsune/community/templates/community/index.html:43 kitsune/customercare/templates/customercare/landing.html:4
+#: kitsune/community/templates/community/index.html:104 kitsune/customercare/templates/customercare/landing.html:4
 msgid "Army of Awesome"
 msgstr "Наші помічники"
 
-#: kitsune/community/templates/community/index.html:49 kitsune/community/templates/community/search.html:14
+#: kitsune/community/templates/community/index.html:113 kitsune/community/templates/community/search.html:14
 msgid "Find your fellow contributors"
 msgstr "Знайдіть своїх колег помічників"
 
-#: kitsune/community/templates/community/index.html:73 kitsune/community/templates/community/search.html:38
+#: kitsune/community/templates/community/index.html:117 kitsune/community/templates/community/search.html:38
 msgid "Username or Display Name"
 msgstr "Ім'я користувача або відображуване ім'я"
 
-#: kitsune/community/templates/community/index.html:74 kitsune/community/templates/community/search.html:39 kitsune/gallery/templates/gallery/gallery.html:19
+#: kitsune/community/templates/community/index.html:118 kitsune/community/templates/community/search.html:39 kitsune/gallery/templates/gallery/gallery.html:19
 #: kitsune/gallery/templates/gallery/search.html:6 kitsune/gallery/templates/gallery/search.html:18 kitsune/search/templates/search/base.html:3 kitsune/search/templates/search/basic-form.html:20
 #: kitsune/search/templates/search/basic-form.html:36 kitsune/search/templates/search/basic-form.html:49 kitsune/search/templates/search/mobile/down.html:2
 #: kitsune/search/templates/search/mobile/results.html:3 kitsune/sumo/templates/includes/common_macros.html:16
 msgid "Search"
 msgstr "Пошук"
 
-#: kitsune/community/templates/community/index.html:79
-msgid "SUMO News"
-msgstr ""
-
-#: kitsune/community/templates/community/index.html:89
-msgid "Latest Discussions"
-msgstr "Останні обговорення"
-
-#: kitsune/community/templates/community/index.html:99
-msgid "The Weekly Meeting"
-msgstr ""
-
-#: kitsune/community/templates/community/index.html:101
-msgid ""
-"The SUMO community has a weekly meeting every Monday at <time datetime=\"17:00Z\">9:00AM <abbr title=\"Pacific Time\">PT</abbr></time>. You can find all of the details on how to join the meeting, "
-"meeting notes of previous meetings and more <a href=\"https://wiki.mozilla.org/Support/Weekly_Meetings\">on the wiki</a>."
-msgstr ""
-
-#: kitsune/community/templates/community/index.html:107
-msgid "Watch Our Last Meeting"
-msgstr ""
-
 #
 #                   {count} Активних помічників (протягом 90 днів) - Активний помічників (протягом 90 днів): {count}
 #
-#: kitsune/community/templates/community/index.html:119
+#: kitsune/community/templates/community/index.html:137
 msgid "{user} - {num} contributions in last 90 days"
 msgstr "{user} - допоміг {num} рази(ів) за останні 90 днів"
 
-#: kitsune/community/templates/community/index.html:128
+#: kitsune/community/templates/community/index.html:150
 msgid "See All"
 msgstr "Дивитись все"
 
@@ -685,14 +714,14 @@ msgstr ""
 #
 #                   Подивитись профіль - Глянути...
 #
-#: kitsune/community/templates/community/search.html:59 kitsune/community/templates/community/top_contributors.html:56 kitsune/sumo/templates/includes/common_macros.html:39
+#: kitsune/community/templates/community/search.html:59 kitsune/community/templates/community/top_contributors.html:110 kitsune/sumo/templates/includes/common_macros.html:39
 msgid "View Profile"
 msgstr "Глянути профіль"
 
 #
 #                   Особисте повідомлення - Приватне...
 #
-#: kitsune/community/templates/community/search.html:60 kitsune/community/templates/community/top_contributors.html:57
+#: kitsune/community/templates/community/search.html:60 kitsune/community/templates/community/top_contributors.html:111
 msgid "Private Message"
 msgstr "Приватне повідомлення"
 
@@ -717,14 +746,20 @@ msgstr "Найкращі помічники - Локалізація"
 msgid "Top Contributors - Army of Awesome"
 msgstr "Найкращі помічники - Армія помічників"
 
+# Топ помічників за останній тиждень - Найкращі помічники ....
+#: kitsune/community/templates/community/top_contributors.html:31
+#, fuzzy
+msgid "Select Top Contributors by Locale"
+msgstr "Найкращі помічники - Локалізація"
+
 #
 #                   {count} Активних помічників (протягом 90 днів) - Активний помічників (протягом 90 днів): {count}
 #
-#: kitsune/community/templates/community/top_contributors.html:55
+#: kitsune/community/templates/community/top_contributors.html:109
 msgid "Contributions in last 90 days: {count}"
 msgstr "Допомог за останні 90 днів: {count}"
 
-#: kitsune/customercare/views.py:29 kitsune/dashboards/readouts.py:349
+#: kitsune/customercare/views.py:29 kitsune/dashboards/readouts.py:352
 msgid "Most Recent"
 msgstr "Найостанніші"
 
@@ -833,16 +868,6 @@ msgid ""
 msgstr ""
 "В даний момент ми не можемо знайти відповідних твітів мовою: %(language)s. Будь ласка, зайдіть пізніше, виберіть з розміщеного вище меню інший тип твітів або подивіться твіти на інших мовах, "
 "використовуючи меню вибору мови внизу сторінки."
-
-# Топ помічників за останній тиждень - Найкращі помічники ....
-#: kitsune/customercare/templates/customercare/landing.html:109
-msgid "Top Contributors Last Week"
-msgstr "Найкращі помічники за останній тиждень"
-
-# Немає недавніх вкладів - треба переробити, вклади - незрозуміле. Може "відповідей"?
-#: kitsune/customercare/templates/customercare/landing.html:115
-msgid "No recent contributions"
-msgstr "Немає недавніх відповідей"
 
 #: kitsune/customercare/templates/customercare/reply_modal.html:1 kitsune/customercare/templates/customercare/reply_modal.html:50 kitsune/customercare/templates/customercare/tweets.html:18
 #: kitsune/kbforums/templates/kbforums/includes/post.html:38 kitsune/messages/templates/messages/read.html:19 kitsune/messages/templates/messages/mobile/read.html:14
@@ -1013,206 +1038,202 @@ msgid "Immediate Update Needed"
 msgstr "Потрібно оновити негайно"
 
 # Потрібно перекласти
-#: kitsune/dashboards/readouts.py:166
+#: kitsune/dashboards/readouts.py:169
 msgid "Translation Needed"
 msgstr "Потрібно перекласти"
 
-#: kitsune/dashboards/readouts.py:285
+#: kitsune/dashboards/readouts.py:288
 msgid "Top 20 Articles"
 msgstr "Топ 20 статей"
 
-#: kitsune/dashboards/readouts.py:290
+#: kitsune/dashboards/readouts.py:293
 msgid "These are the top 20 most visited articles in the last 30 days, which account for over 50% of the traffic to the Knowledge Base."
-msgstr ""
-"Це 20 найбільш відвідуваних статей за останні 30 днів, які загалом складають "
-"більш ніж 50% трафіку Бази Знань."
+msgstr "Це 20 найбільш відвідуваних статей за останні 30 днів, які загалом складають більш ніж 50% трафіку Бази Знань."
 
-#: kitsune/dashboards/readouts.py:295
+#: kitsune/dashboards/readouts.py:298
 msgid "Top 50 Articles"
 msgstr "Топ 50 статей"
 
-#: kitsune/dashboards/readouts.py:300
+#: kitsune/dashboards/readouts.py:303
 msgid "These are the top 50 most visited articles in the last 30 days."
 msgstr "Це 50 найбільш відвідуваних статей за останні 30 днів."
 
-#: kitsune/dashboards/readouts.py:304 kitsune/dashboards/templates/dashboards/includes/macros.html:38
+#: kitsune/dashboards/readouts.py:307 kitsune/dashboards/templates/dashboards/includes/macros.html:38
 msgid "Top 100 Articles"
 msgstr "Топ 100 статей"
 
-#: kitsune/dashboards/readouts.py:309
+#: kitsune/dashboards/readouts.py:312
 msgid "These are the top 100 most visited articles in the last 30 days, which account for over 99% of the traffic to the Knowledge Base."
-msgstr ""
-"Це 100 найбільш відвідуваних статей за останні 30 днів, які разом становлять "
-"більш ніж 99% трафіку в Базі Знань."
+msgstr "Це 100 найбільш відвідуваних статей за останні 30 днів, які разом становлять більш ніж 99% трафіку в Базі Знань."
 
-#: kitsune/dashboards/readouts.py:314 kitsune/dashboards/readouts.py:584 kitsune/dashboards/readouts.py:675 kitsune/dashboards/readouts.py:676 kitsune/wiki/config.py:55
+#: kitsune/dashboards/readouts.py:317 kitsune/dashboards/readouts.py:587 kitsune/dashboards/readouts.py:678 kitsune/dashboards/readouts.py:679 kitsune/wiki/config.py:55
 msgid "Templates"
 msgstr "Шаблони"
 
-#: kitsune/dashboards/readouts.py:319
+#: kitsune/dashboards/readouts.py:322
 msgid "Templates are a way of reusing pieces of content across KB articles. You can create and update a set of instructions in one place, and then refer to it in other pages."
 msgstr ""
 "Шаблони являють собою спосіб повторного використання шматків вмісту в статтях бази знань. Ви можете створювати і оновлювати набір інструкцій в одному місці, а потім посилатися на нього в інших "
 "сторінках."
 
-#: kitsune/dashboards/readouts.py:325
+#: kitsune/dashboards/readouts.py:328
 msgid "All Knowledge Base Articles"
 msgstr "Всі статті бази знань"
 
 #
 #                   Це кількість всіх статей Бази Знань, готових для локалізації. - бази знань
 #
-#: kitsune/dashboards/readouts.py:329
+#: kitsune/dashboards/readouts.py:332
 msgid "This is the number of all Knowledge Base articles that are ready to be localized."
 msgstr "Це кількість всіх статей бази знань, готових для локалізації."
 
-#: kitsune/dashboards/readouts.py:346
+#: kitsune/dashboards/readouts.py:349
 msgid "Visits in last 30 days"
 msgstr "Відвідувань за останні 30 днів"
 
-#: kitsune/dashboards/readouts.py:347 kitsune/wiki/templates/wiki/includes/revision_list.html:23
+#: kitsune/dashboards/readouts.py:350 kitsune/wiki/templates/wiki/includes/revision_list.html:23
 msgid "Status"
 msgstr "Статус"
 
-#: kitsune/dashboards/readouts.py:348 kitsune/dashboards/readouts.py:934
+#: kitsune/dashboards/readouts.py:351 kitsune/dashboards/readouts.py:937
 msgid "Most Viewed"
 msgstr "Найпопулярніші"
 
 # Найвідвідуваніші
-#: kitsune/dashboards/readouts.py:456 kitsune/dashboards/readouts.py:614
+#: kitsune/dashboards/readouts.py:459 kitsune/dashboards/readouts.py:617
 msgid "Most Visited"
 msgstr "Найвідвідуваніші"
 
-#: kitsune/dashboards/readouts.py:458
+#: kitsune/dashboards/readouts.py:461
 msgid "All knowledge base articles..."
 msgstr "Всі статті бази знань..."
 
-#: kitsune/dashboards/readouts.py:460 kitsune/dashboards/readouts.py:524
+#: kitsune/dashboards/readouts.py:463 kitsune/dashboards/readouts.py:527
 msgid "Visits"
 msgstr "Відвідувань"
 
 # Потрібно змінити
-#: kitsune/dashboards/readouts.py:565
+#: kitsune/dashboards/readouts.py:568
 msgid "Changes Needed"
 msgstr "Потрібно змінити"
 
-#: kitsune/dashboards/readouts.py:568 kitsune/dashboards/readouts.py:858
+#: kitsune/dashboards/readouts.py:571 kitsune/dashboards/readouts.py:861
 msgid "Changes Not Ready For Localization"
 msgstr "Зміни, які не готові для локалізації"
 
-#: kitsune/dashboards/readouts.py:586 kitsune/dashboards/readouts.py:678
+#: kitsune/dashboards/readouts.py:589 kitsune/dashboards/readouts.py:681
 msgid "All templates..."
 msgstr "Всі шаблони..."
 
-#: kitsune/dashboards/readouts.py:591
+#: kitsune/dashboards/readouts.py:594
 msgid "How To Contribute"
 msgstr "Як долучитись"
 
 # Всі статті про те, як допомагати...
-#: kitsune/dashboards/readouts.py:593
+#: kitsune/dashboards/readouts.py:596
 msgid "All How To Contribute articles..."
 msgstr "Всі статті про те, як допомагати..."
 
-#: kitsune/dashboards/readouts.py:598 kitsune/wiki/config.py:53
+#: kitsune/dashboards/readouts.py:601 kitsune/wiki/config.py:53
 msgid "Administration"
 msgstr "Адміністрування"
 
-#: kitsune/dashboards/readouts.py:600
+#: kitsune/dashboards/readouts.py:603
 msgid "All Administration articles..."
 msgstr "Всі адміністративні статті..."
 
-#: kitsune/dashboards/readouts.py:616
+#: kitsune/dashboards/readouts.py:619
 msgid "All translations..."
 msgstr "Всі переклади..."
 
 #. L10n: Not just changes to translations but also unreviewed changes to
 #. docs in this locale that are not translations
-#: kitsune/dashboards/readouts.py:735
+#: kitsune/dashboards/readouts.py:738
 msgid "Unreviewed Changes"
 msgstr "Непереглянуті зміни"
 
-#: kitsune/dashboards/readouts.py:737
+#: kitsune/dashboards/readouts.py:740
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "Непереглянуті"
 
-#: kitsune/dashboards/readouts.py:738
+#: kitsune/dashboards/readouts.py:741
 msgid "All articles requiring review..."
 msgstr "Всі статті що, потребують перегляду…"
 
-#: kitsune/dashboards/readouts.py:740
+#: kitsune/dashboards/readouts.py:743
 msgid "Changed"
 msgstr "Змінено"
 
-#: kitsune/dashboards/readouts.py:797
+#: kitsune/dashboards/readouts.py:800
 msgid "Unhelpful Documents"
 msgstr "Некорисні документи"
 
-#: kitsune/dashboards/readouts.py:799
+#: kitsune/dashboards/readouts.py:802
 msgctxt "document"
 msgid "Unhelpful"
 msgstr "Некорисно"
 
-#: kitsune/dashboards/readouts.py:800
+#: kitsune/dashboards/readouts.py:803
 msgid "All unhelpful articles..."
 msgstr "Всі некорисні статті..."
 
-#: kitsune/dashboards/readouts.py:802
+#: kitsune/dashboards/readouts.py:805
 msgid "Total Votes"
 msgstr "Всього голосів"
 
-#: kitsune/dashboards/readouts.py:803
+#: kitsune/dashboards/readouts.py:806
 msgid "Helpfulness"
 msgstr "Корисність"
 
 #
 #                   Статті, в яких підтверджені ревізії новіші останніх готових для локалізації - редакції, а не ревізії
 #
-#: kitsune/dashboards/readouts.py:859
+#: kitsune/dashboards/readouts.py:862
 msgid "Articles which have approved revisions newer than the latest ready-for-localization one"
 msgstr "Статті, в яких підтверджені редакції новіші останніх готових для локалізації"
 
-#: kitsune/dashboards/readouts.py:862
+#: kitsune/dashboards/readouts.py:865
 msgid "All articles with changes not ready for localization..."
 msgstr "Всі статті із змінами, неготовими для локалізації..."
 
-#: kitsune/dashboards/readouts.py:865 kitsune/dashboards/templates/dashboards/includes/macros.html:177 kitsune/wiki/templates/wiki/includes/revision_list.html:59
+#: kitsune/dashboards/readouts.py:868 kitsune/dashboards/templates/dashboards/includes/macros.html:177 kitsune/wiki/templates/wiki/includes/revision_list.html:59
 msgid "Approved"
 msgstr "Затверджена"
 
 # Потрібно змінити
-#: kitsune/dashboards/readouts.py:928
+#: kitsune/dashboards/readouts.py:931
 msgid "Need Changes"
 msgstr "Потрібно змінити"
 
 # Статті, що потребують змін. - статті не можуть вимагати. Вони пасивні, вони потребують.
-#: kitsune/dashboards/readouts.py:929
+#: kitsune/dashboards/readouts.py:932
 msgid "Articles that require changes."
 msgstr "Статті, що потребують змін."
 
 #
 #                   Всі статті, що потребують змін...
 #
-#: kitsune/dashboards/readouts.py:931
+#: kitsune/dashboards/readouts.py:934
 msgid "All articles that require changes..."
 msgstr "Всі статті, які потребують змін..."
 
-#: kitsune/dashboards/readouts.py:933 kitsune/wiki/templates/wiki/includes/recent_revisions_fragment.html:45 kitsune/wiki/templates/wiki/includes/revision_list.html:29
+#: kitsune/dashboards/readouts.py:936 kitsune/wiki/templates/wiki/includes/recent_revisions_fragment.html:45 kitsune/wiki/templates/wiki/includes/revision_list.html:29
 msgid "Comment"
 msgstr "Коментар"
 
-#: kitsune/dashboards/readouts.py:981 kitsune/wiki/config.py:56
+#: kitsune/dashboards/readouts.py:984 kitsune/wiki/config.py:56
 msgid "Canned Responses"
 msgstr "Типові відповіді"
 
-#: kitsune/dashboards/readouts.py:982
+#: kitsune/dashboards/readouts.py:985
 msgid "Localization status of all canned responses"
 msgstr "Статус локалізації всіх типових відповідей"
 
 #
 #                   Всі статті з типовими відповідями... - Всі статті типових відповідей... - тут мається на увазі, що "типові відповіді" є також статтями, які можна перекладати.
 #
-#: kitsune/dashboards/readouts.py:984
+#: kitsune/dashboards/readouts.py:987
 msgid "All canned responses articles..."
 msgstr "Всі статті типових відповідей..."
 
@@ -1248,21 +1269,6 @@ msgstr "{count} відвідувачів за останні 30 днів"
 msgid "[{product}] Knowledge Base Dashboard"
 msgstr "Панель бази знань [{product}]"
 
-# Пусто
-#: kitsune/dashboards/templates/dashboards/contributors.html:4 kitsune/dashboards/templates/dashboards/localization.html:4 kitsune/dashboards/templates/dashboards/includes/macros.html:201
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:217 kitsune/dashboards/templates/dashboards/includes/macros.html:231 kitsune/products/templates/products/documents.html:3
-#: kitsune/products/templates/products/documents.html:11 kitsune/products/templates/products/documents.html:18 kitsune/products/templates/products/product.html:4
-#: kitsune/products/templates/products/product.html:10 kitsune/products/templates/products/product.html:17 kitsune/products/templates/products/includes/product_macros.html:12
-#: kitsune/products/templates/products/mobile/documents.html:10 kitsune/products/templates/products/mobile/documents.html:27 kitsune/products/templates/products/mobile/product.html:3
-#: kitsune/products/templates/products/mobile/product.html:8 kitsune/products/templates/products/mobile/products.html:13 kitsune/questions/templates/questions/product_list.html:20
-#: kitsune/questions/templates/questions/question_details.html:14 kitsune/questions/templates/questions/question_details.html:219 kitsune/questions/templates/questions/question_list.html:19
-#: kitsune/questions/templates/questions/question_list.html:210 kitsune/questions/templates/questions/mobile/product_list.html:14 kitsune/questions/templates/questions/mobile/question_list.html:13
-#: kitsune/questions/templates/questions/mobile/question_list.html:47 kitsune/search/views.py:489 kitsune/search/templates/search/results.html:69 kitsune/wiki/templates/wiki/document.html:11
-#: kitsune/wiki/templates/wiki/document.html:61
-msgctxt "DB: products.Product.title"
-msgid "None"
-msgstr "Пусто"
-
 #: kitsune/dashboards/templates/dashboards/contributors.html:4 kitsune/dashboards/templates/dashboards/localization.html:4 kitsune/dashboards/templates/dashboards/includes/macros.html:198
 #: kitsune/dashboards/templates/dashboards/includes/macros.html:214 kitsune/dashboards/templates/dashboards/includes/macros.html:224 kitsune/questions/templates/questions/product_list.html:27
 #: kitsune/questions/templates/questions/question_details.html:14 kitsune/questions/templates/questions/question_list.html:15 kitsune/questions/templates/questions/mobile/product_list.html:21
@@ -1297,7 +1303,7 @@ msgstr "Голоси за корисність"
 msgid "[{locale}][{product}] Localization Dashboard"
 msgstr "[{locale}] Панель локалізації [{product}]"
 
-#: kitsune/dashboards/templates/dashboards/localization.html:25 kitsune/flagit/templates/flagit/includes/flagged_answer.html:25 kitsune/flagit/templates/flagit/includes/flagged_post.html:28
+#: kitsune/dashboards/templates/dashboards/localization.html:25 kitsune/flagit/templates/flagit/includes/flagged_answer.html:25 kitsune/flagit/templates/flagit/includes/flagged_post.html:29
 #: kitsune/flagit/templates/flagit/includes/flagged_question.html:25 kitsune/groups/templates/groups/profile.html:12 kitsune/kbforums/templates/kbforums/confirm_post_delete.html:28
 #: kitsune/kbforums/templates/kbforums/confirm_thread_delete.html:30 kitsune/messages/templates/messages/delete.html:28 kitsune/questions/templates/questions/confirm_answer_delete.html:25
 #: kitsune/questions/templates/questions/confirm_question_delete.html:27 kitsune/wiki/templates/wiki/confirm_document_delete.html:35 kitsune/wiki/templates/wiki/confirm_revision_delete.html:33
@@ -1316,7 +1322,7 @@ msgstr "Успішно створено"
 msgid "Create"
 msgstr "Створити"
 
-#: kitsune/dashboards/templates/dashboards/localization.html:61 kitsune/questions/templates/questions/metrics.html:20 kitsune/wiki/forms.py:300
+#: kitsune/dashboards/templates/dashboards/localization.html:61 kitsune/questions/templates/questions/metrics.html:20 kitsune/wiki/forms.py:308
 msgid "Locale:"
 msgstr "Локаль:"
 
@@ -1329,7 +1335,7 @@ msgid "Add announcement"
 msgstr "Додати оголошення"
 
 #: kitsune/dashboards/templates/dashboards/includes/announcement_list.html:9 kitsune/flagit/templates/flagit/includes/flagged_answer.html:22
-#: kitsune/flagit/templates/flagit/includes/flagged_post.html:25 kitsune/flagit/templates/flagit/includes/flagged_profile.html:15 kitsune/messages/templates/messages/mobile/inbox.html:20
+#: kitsune/flagit/templates/flagit/includes/flagged_post.html:26 kitsune/flagit/templates/flagit/includes/flagged_profile.html:15 kitsune/messages/templates/messages/mobile/inbox.html:20
 #: kitsune/messages/templates/messages/mobile/inbox.html:61 kitsune/messages/templates/messages/mobile/outbox.html:20 kitsune/messages/templates/messages/mobile/outbox.html:61
 msgid "Edit"
 msgstr "Редагувати"
@@ -1375,7 +1381,7 @@ msgstr "Підписатись..."
 msgid "Waiting for review"
 msgstr "Чекає перевірки"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:178 kitsune/wiki/forms.py:273 kitsune/wiki/templates/wiki/includes/revision_list.html:27
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:178 kitsune/wiki/forms.py:281 kitsune/wiki/templates/wiki/includes/revision_list.html:27
 msgid "Ready for localization"
 msgstr "Готово для локалізації"
 
@@ -1518,8 +1524,8 @@ msgid "View all deactivated users"
 msgstr "Дивитись всіх деактивованих користувачів"
 
 #: kitsune/flagit/templates/flagit/includes/flagged_answer.html:2 kitsune/flagit/templates/flagit/includes/flagged_post.html:4 kitsune/flagit/templates/flagit/includes/flagged_profile.html:2
-#: kitsune/flagit/templates/flagit/includes/flagged_question.html:4 kitsune/kbforums/forms.py:28 kitsune/kbforums/forms.py:50 kitsune/kbforums/forms.py:76 kitsune/questions/forms.py:266
-#: kitsune/wiki/forms.py:214 kitsune/wiki/templates/wiki/review_translation.html:66 kitsune/wiki/templates/wiki/includes/document_macros.html:144
+#: kitsune/flagit/templates/flagit/includes/flagged_question.html:4 kitsune/kbforums/forms.py:28 kitsune/kbforums/forms.py:50 kitsune/kbforums/forms.py:76 kitsune/questions/forms.py:268
+#: kitsune/wiki/forms.py:222 kitsune/wiki/templates/wiki/review_translation.html:66 kitsune/wiki/templates/wiki/includes/document_macros.html:144
 msgid "Content:"
 msgstr "Вміст:"
 
@@ -1529,23 +1535,23 @@ msgstr "Вміст:"
 msgid "Created:"
 msgstr "Створено:"
 
-#: kitsune/flagit/templates/flagit/includes/flagged_answer.html:9 kitsune/flagit/templates/flagit/includes/flagged_post.html:11 kitsune/flagit/templates/flagit/includes/flagged_question.html:11
+#: kitsune/flagit/templates/flagit/includes/flagged_answer.html:9 kitsune/flagit/templates/flagit/includes/flagged_post.html:12 kitsune/flagit/templates/flagit/includes/flagged_question.html:11
 msgid "Updated:"
 msgstr "Оновлено:"
 
 # Позначено:
-#: kitsune/flagit/templates/flagit/includes/flagged_answer.html:14 kitsune/flagit/templates/flagit/includes/flagged_post.html:16 kitsune/flagit/templates/flagit/includes/flagged_profile.html:7
+#: kitsune/flagit/templates/flagit/includes/flagged_answer.html:14 kitsune/flagit/templates/flagit/includes/flagged_post.html:17 kitsune/flagit/templates/flagit/includes/flagged_profile.html:7
 #: kitsune/flagit/templates/flagit/includes/flagged_question.html:16
 msgid "Flagged:"
 msgstr "Позначено:"
 
-#: kitsune/flagit/templates/flagit/includes/flagged_answer.html:18 kitsune/flagit/templates/flagit/includes/flagged_post.html:20 kitsune/flagit/templates/flagit/includes/flagged_profile.html:11
+#: kitsune/flagit/templates/flagit/includes/flagged_answer.html:18 kitsune/flagit/templates/flagit/includes/flagged_post.html:21 kitsune/flagit/templates/flagit/includes/flagged_profile.html:11
 #: kitsune/flagit/templates/flagit/includes/flagged_question.html:20
 msgid "Take Action:"
 msgstr "Дія:"
 
 #: kitsune/flagit/templates/flagit/includes/flagged_post.html:2 kitsune/flagit/templates/flagit/includes/flagged_question.html:2 kitsune/kbforums/forms.py:44 kitsune/kbforums/forms.py:62
-#: kitsune/wiki/forms.py:86 kitsune/wiki/templates/wiki/translate.html:82
+#: kitsune/wiki/forms.py:87 kitsune/wiki/templates/wiki/translate.html:82
 msgid "Title:"
 msgstr "Назва:"
 
@@ -1553,11 +1559,11 @@ msgstr "Назва:"
 msgid "%(date)s by <a href=\"%(url)s\">%(user)s</a>"
 msgstr "%(date)s від <a href=\"%(url)s\">%(user)s</a>"
 
-#: kitsune/gallery/forms.py:13 kitsune/kbforums/forms.py:9 kitsune/wiki/forms.py:18
+#: kitsune/gallery/forms.py:13 kitsune/kbforums/forms.py:9 kitsune/wiki/forms.py:19
 msgid "Please provide a title."
 msgstr "Вкажіть назву."
 
-#: kitsune/gallery/forms.py:14 kitsune/wiki/forms.py:19
+#: kitsune/gallery/forms.py:14 kitsune/wiki/forms.py:20
 msgid "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Назва закоротка (%(show_value)s символів). Довжина повинна бути як мінімум %(limit_value)s символів."
 
@@ -1790,7 +1796,7 @@ msgstr "Поступ"
 msgid "Continue Uploading Media"
 msgstr "Продовжити вивантажувати медіа"
 
-#: kitsune/groups/forms.py:27 kitsune/search/forms.py:111 kitsune/wiki/forms.py:290
+#: kitsune/groups/forms.py:27 kitsune/search/forms.py:111 kitsune/wiki/forms.py:298
 msgid "username"
 msgstr "Ім'я користувача"
 
@@ -1845,10 +1851,7 @@ msgstr "Ви дійсно хочете видалити аватар групи 
 
 #: kitsune/groups/templates/groups/confirm_avatar_delete.html:14
 msgid "You are about to permanently delete the avatar. <strong>This cannot be undone!</strong> You can always upload another avatar to replace the current one."
-msgstr ""
-"Ви збираєтесь вилучити цей аватар назавжди. <strong>Це незворотна "
-"дія!</strong> Але ви завжди зможете вивантажити інший аватар для заміни "
-"поточного."
+msgstr "Ви збираєтесь вилучити цей аватар назавжди. <strong>Це незворотна дія!</strong> Але ви завжди зможете вивантажити інший аватар для заміни поточного."
 
 #: kitsune/groups/templates/groups/confirm_avatar_delete.html:21 kitsune/groups/templates/groups/profile.html:12 kitsune/users/templates/users/confirm_avatar_delete.html:2
 #: kitsune/users/templates/users/confirm_avatar_delete.html:23
@@ -2121,7 +2124,7 @@ msgstr "нагороджено"
 msgid "Previous"
 msgstr "Назад"
 
-#: kitsune/kbadge/templates/badger/awards_list.html:54 kitsune/kbadge/templates/badger/badges_list.html:38 kitsune/questions/templates/questions/mobile/new_question.html:77
+#: kitsune/kbadge/templates/badger/awards_list.html:54 kitsune/kbadge/templates/badger/badges_list.html:38 kitsune/questions/templates/questions/mobile/new_question.html:78
 #: kitsune/sumo/templates/layout/paginator.html:30
 msgid "Next"
 msgstr "Далі"
@@ -2143,9 +2146,7 @@ msgstr "Всі доступні значки SUMO"
 
 #: kitsune/kbadge/templates/kbadge/email/award_notification.html:26
 msgid "<strong>%(awarder)s</strong> has awarded you the <strong>%(title)s</strong> badge!"
-msgstr ""
-"<strong>%(awarder)s</strong> нагородив вас значком <strong>%"
-"(title)s</strong>!"
+msgstr "<strong>%(awarder)s</strong> нагородив вас значком <strong>%(title)s</strong>!"
 
 #
 #                   Ви нагороджені! - Вас нагороджено значком!
@@ -2435,12 +2436,12 @@ msgid "Post a reply"
 msgstr "Відповісти"
 
 # Відповісти
-#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/question_details.html:426 kitsune/questions/templates/questions/mobile/question_details.html:44
+#: kitsune/kbforums/templates/kbforums/posts.html:97 kitsune/questions/templates/questions/question_details.html:429 kitsune/questions/templates/questions/mobile/question_details.html:44
 msgid "Post Reply"
 msgstr "Відповісти"
 
 # Продивитись відповідь
-#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/edit_answer.html:53 kitsune/questions/templates/questions/question_details.html:427
+#: kitsune/kbforums/templates/kbforums/posts.html:101 kitsune/questions/templates/questions/edit_answer.html:53 kitsune/questions/templates/questions/question_details.html:430
 msgid "Preview Reply"
 msgstr "Продивитись відповідь"
 
@@ -2745,9 +2746,7 @@ msgstr "Німецькою переглядають 10% наших відвід�
 #. dennis-ignore: *
 #: kitsune/kpi/templates/kpi/dashboard.html:215
 msgid "The 'how to set your home page' article makes up 2% of our top 50 visits"
-msgstr ""
-"Стаття 'Як налаштувати домашню сторінку' складає 2% із наших найпопулярніших "
-"50 відвідувань"
+msgstr "Стаття 'Як налаштувати домашню сторінку' складає 2% із наших найпопулярніших 50 відвідувань"
 
 #
 #                   Коли стаття про домашню сторінкою є єдиною локалізованої статтею і вона має актуальний переклад німецькою, то загальне покриття складатиме 2% від 10% = 0,2% в цілому (+ покриття англійською)
@@ -2755,17 +2754,12 @@ msgstr ""
 #. dennis-ignore: *
 #: kitsune/kpi/templates/kpi/dashboard.html:216
 msgid "When the Home page article is the only localized article and it's up to date in German, then our overall coverage is 2% of 10%=0.2% overall (+ the English coverage)"
-msgstr ""
-"Коли стаття про домашню сторінкою є єдиною локалізованої статтею і вона має "
-"актуальний переклад німецькою, то загальне покриття складатиме 2% від 10%"
-"=0,2% в цілому (+ покриття англійською)"
+msgstr "Коли стаття про домашню сторінкою є єдиною локалізованої статтею і вона має актуальний переклад німецькою, то загальне покриття складатиме 2% від 10%=0,2% в цілому (+ покриття англійською)"
 
 #. dennis-ignore: *
 #: kitsune/kpi/templates/kpi/dashboard.html:217
 msgid "When German misses a level 2 change, the coverage drops to 50%, so 1% of 10%= 0.1% overall"
-msgstr ""
-"Коли німецька пропускає зміну 2 рівня, то наше покриття знижується до 50%, "
-"так що 1% від 10%= 0.1% від загального"
+msgstr "Коли німецька пропускає зміну 2 рівня, то наше покриття знижується до 50%, так що 1% від 10%= 0.1% від загального"
 
 #
 #                   <b>Важливо:</ b> В даний час ми використовуємо спрощену модель, де кожна стаття становить 1/50 = 2% відвідувань на мову - чому В даний час з великої літери?
@@ -2773,9 +2767,7 @@ msgstr ""
 #. dennis-ignore: *
 #: kitsune/kpi/templates/kpi/dashboard.html:218
 msgid "<b>Important:</b> Currently we are using a simplified model, where each article accounts for 1/50=2% of visits per language"
-msgstr ""
-"<b>Важливо:</b> В даний час ми використовуємо спрощену модель, де кожна "
-"стаття становить 1/50=2% відвідувань на мову"
+msgstr "<b>Важливо:</b> В даний час ми використовуємо спрощену модель, де кожна стаття становить 1/50=2% відвідувань на мову"
 
 #
 #                   Результати опитування - ... при виході
@@ -2921,10 +2913,8 @@ msgid ""
 "If you like writing and teaching then the Knowledge Base is the place for you. We need contributors that can write, edit or proof read articles in English. Thousands of people are accessing our "
 "Knowledge Base every week. Imagine how many will be helped by you!"
 msgstr ""
-"Якщо вам подобається писати і навчати, то база знань це місце для вас. Нам "
-"потрібні помічники, які можуть писати, редагувати або вичитувати статті. "
-"Щотижня тисячі людей звертаються до бази знань. Уявіть собі, скільком із них "
-"ви допоможете!"
+"Якщо вам подобається писати і навчати, то база знань це місце для вас. Нам потрібні помічники, які можуть писати, редагувати або вичитувати статті. Щотижня тисячі людей звертаються до бази знань. "
+"Уявіть собі, скільком із них ви допоможете!"
 
 #
 #                   Написати статті довідки - Писати...
@@ -3029,10 +3019,8 @@ msgid ""
 "From hardcore web developers to \"how do I install Firefox\" first time users, everybody needs your help in the forum! Share your knowledge by pointing people to the right help articles and "
 "providing troubleshooting steps for their individual questions."
 msgstr ""
-"Від хардкорних веб-розробників до новачків, які запитують «як мені "
-"встановити Firefox», кожен на форумі потребує вашої допомоги! Поділіться "
-"своїми знаннями про Firefox, вказуючи людям правильні статті та пропонуючи "
-"шляхи вирішення індивідуальних питань."
+"Від хардкорних веб-розробників до новачків, які запитують «як мені встановити Firefox», кожен на форумі потребує вашої допомоги! Поділіться своїми знаннями про Firefox, вказуючи людям правильні "
+"статті та пропонуючи шляхи вирішення індивідуальних питань."
 
 #
 #                   Відповісти на питання на форумі - може просто: Відповідати на форумі (бо два рази на... на....)
@@ -3077,10 +3065,7 @@ msgstr "Нам потрібна ваша допомога!"
 #
 #: kitsune/landings/templates/landings/get-involved.html:13 kitsune/landings/templates/landings/mobile/get-involved.html:18
 msgid "Used by more than 400 million people, Mozilla support is fully powered by volunteers, and it’s more important than ever. This is where you come in."
-msgstr ""
-"Підтримка Mozilla, яку використовують більш ніж 400 мільйонів користувачів, "
-"повністю підтримується волонтерами, і це є важливішим ніж будь-коли. І тут "
-"ви можете стати в нагоді."
+msgstr "Підтримка Mozilla, яку використовують більш ніж 400 мільйонів користувачів, повністю підтримується волонтерами, і це є важливішим ніж будь-коли. І тут ви можете стати в нагоді."
 
 #
 #                   Чому я маю допомагати? - ти нікому нічого не маєш робити: Чому мені допомагати?
@@ -3114,7 +3099,7 @@ msgstr "Про нас"
 msgid "Mozilla Support is a community of enthusiastic volunteers and employees trying to support our users around the globe. Join us for an incredible adventure!"
 msgstr "Підтримка Mozilla - це спільнота ентузіастів і добровольців, які намагаються надати підтримку нашим користувачам по всьому світу. Приєднуйтесь до нас, щоб пережити неймовірні пригоди!"
 
-#: kitsune/landings/templates/landings/get-involved.html:76 kitsune/landings/templates/landings/mobile/get-involved.html:83 kitsune/questions/templates/questions/question_details.html:450
+#: kitsune/landings/templates/landings/get-involved.html:76 kitsune/landings/templates/landings/mobile/get-involved.html:83 kitsune/questions/templates/questions/question_details.html:453
 #: kitsune/sumo/templates/includes/common_macros.html:28 kitsune/sumo/templates/mobile/base.html:63 kitsune/users/templates/users/includes/auth.html:15
 msgid "Ask a question"
 msgstr "Поставити запитання"
@@ -3375,7 +3360,7 @@ msgstr "Приватність"
 msgid "Help Topics"
 msgstr "Теми довідки"
 
-#: kitsune/products/templates/products/products.html:3 kitsune/products/templates/products/mobile/products.html:3 kitsune/questions/templates/questions/mobile/new_question.html:22
+#: kitsune/products/templates/products/products.html:3 kitsune/products/templates/products/mobile/products.html:3 kitsune/questions/templates/questions/mobile/new_question.html:23
 #: kitsune/search/templates/search/mobile/results.html:26
 msgid "Products"
 msgstr "Продукти"
@@ -3626,7 +3611,7 @@ msgstr "Декілька разів на тиждень"
 msgid "Every time Firefox opened"
 msgstr "Завжди під час відкриття Firefox"
 
-#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/question_details.html:305
+#: kitsune/questions/forms.py:34 kitsune/questions/templates/questions/question_details.html:308
 msgid "This started when..."
 msgstr "Це почалось коли..."
 
@@ -3641,230 +3626,228 @@ msgstr "Питання"
 msgid "Details"
 msgstr "Подробиці"
 
-#
-#                   Чим більше інформації ви надасте, тим більше шанс, що на ваше запитання буде дана відповідь. - Чим більше ..., тик краще вірогідність того, що...
-#
-#: kitsune/questions/forms.py:37
-msgid "The more information you can provide the better chance your question will be answered."
-msgstr "Чим більше інформації ви надасте, тим краще вірогідність того, що на ваше запитання буде дана відповідь."
-
-#: kitsune/questions/forms.py:39 kitsune/users/templates/users/profile.html:99 kitsune/users/templates/users/mobile/change_email.html:22 kitsune/users/templates/users/mobile/edit_profile.html:25
+#: kitsune/questions/forms.py:37 kitsune/users/templates/users/profile.html:99 kitsune/users/templates/users/mobile/change_email.html:22 kitsune/users/templates/users/mobile/edit_profile.html:25
 #: kitsune/users/templates/users/mobile/profile.html:68
 msgid "Email"
 msgstr "Електронна пошта"
 
-#: kitsune/questions/forms.py:40
+#: kitsune/questions/forms.py:38
 msgid "A confirmation email will be sent to this address in order to post your question."
 msgstr "Щоб опублікувати ваше запитання, на цю адресу буде відправлено лист для підтвердження."
 
-#: kitsune/questions/forms.py:42
+#: kitsune/questions/forms.py:40
 msgid "Firefox version"
 msgstr "Версія Firefox"
 
-#: kitsune/questions/forms.py:43
+#: kitsune/questions/forms.py:41
 msgid "Operating system"
 msgstr "Операційна система"
 
-#: kitsune/questions/forms.py:44
+#: kitsune/questions/forms.py:42
 msgid "Installed plugins"
 msgstr "Встановлені плагіни"
 
 #
 #                   Додатки/плагіни, з якими у вас виникли проблеми - Розширення/....
 #
-#: kitsune/questions/forms.py:45
+#: kitsune/questions/forms.py:43
 msgid "Extension/plugin you are having trouble with"
 msgstr "Розширення/плагіни, з якими у вас виникли проблеми"
 
-#: kitsune/questions/forms.py:48
+#: kitsune/questions/forms.py:44
+#, fuzzy
+msgid "Mobile device"
+msgstr "Огляд"
+
+#: kitsune/questions/forms.py:47
 msgid "Please provide a question."
 msgstr "Будь ласка, напишіть запитання."
 
-#: kitsune/questions/forms.py:49
+#: kitsune/questions/forms.py:48
 msgid "Your question is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Ваше питання закоротке (%(show_value)s символів). Довжина повинна бути не менше ніж %(limit_value)s символів."
 
 #
 #                   Будь ласка, утримуйте довжину опитання в межах %(limit_value)s символів чи менше. Зараз довжина є %(show_value)s символів. - що за опитання? Чому не питання чи запитання?
 #
-#: kitsune/questions/forms.py:52
+#: kitsune/questions/forms.py:51
 msgid "Please keep the length of your question to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Будь ласка, утримуйте довжину питання в межах %(limit_value)s символів чи менше. Зараз довжина є %(show_value)s символів."
 
-#: kitsune/questions/forms.py:55 kitsune/wiki/forms.py:37
+#: kitsune/questions/forms.py:54 kitsune/wiki/forms.py:38
 msgid "Please provide content."
 msgstr "Впровадьте вміст."
 
-#: kitsune/questions/forms.py:56
+#: kitsune/questions/forms.py:55
 msgid "Your content is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Вміст закороткий (%(show_value)s символів). Він повинен бути не менше %(limit_value)s символів."
 
-#: kitsune/questions/forms.py:59
+#: kitsune/questions/forms.py:58
 msgid "Please keep the length of your content to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Будь ласка, утримуйте довжину тексту в межах %(limit_value)s символів чи менше. Зараз довжина складає %(show_value)s символів."
 
-#: kitsune/questions/forms.py:63
+#: kitsune/questions/forms.py:62
 msgid "Enter your reply here."
 msgstr "Напишіть тут вашу відповідь."
 
-#: kitsune/questions/forms.py:66
+#: kitsune/questions/forms.py:65
 msgid "Enter your email address here."
 msgstr "Напишіть тут вашу адресу електронної пошти."
 
 #
 #                   Вкажіть тут вашу тему. - чому вашу? Чому "назву теми", або просто "тему"?
 #
-#: kitsune/questions/forms.py:67
+#: kitsune/questions/forms.py:66
 msgid "Enter a subject here."
 msgstr "Вкажіть тут тему."
 
 #
 #                   Будь ласка, напишіть тему. - ..., вкажіть назву теми.
 #
-#: kitsune/questions/forms.py:68
+#: kitsune/questions/forms.py:67
 msgid "Please provide a subject."
 msgstr "Будь ласка, вкажіть назву теми."
 
 #
 #                   Ця тема закоротка (%(show_value)s символів). Вона повинна бути не менше %(limit_value)s символів. - Назва теми закоротка ...
 #
-#: kitsune/questions/forms.py:69
+#: kitsune/questions/forms.py:68
 msgid "The subject is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Назва теми закоротка (%(show_value)s символів). Вона повинна бути не менше %(limit_value)s символів."
 
 #
 #                   Будь-ласка, утримуйте довжину теми в межах %(limit_value)s символів чи менше. Зараз довжина складає %(show_value)s символів. - Будь ласка пишеться без дефісу і туй йдеться про довжину назви теми
 #
-#: kitsune/questions/forms.py:73
+#: kitsune/questions/forms.py:72
 msgid "Please keep the length of the subject to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Будь ласка, утримуйте довжину назви теми в межах %(limit_value)s символів чи менше. Зараз довжина складає %(show_value)s символів."
 
-#: kitsune/questions/forms.py:76
+#: kitsune/questions/forms.py:75
 msgid "Describe your issue here."
 msgstr "Опишіть тут свою проблему."
 
 #
 #                   Будь ласка, опишіть вашу проблему. - ... в тілі запитання.
 #
-#: kitsune/questions/forms.py:77
+#: kitsune/questions/forms.py:76
 msgid "Please describe your issue in the body."
 msgstr "Будь ласка, опишіть вашу проблему в тілі запитання."
 
-#: kitsune/questions/forms.py:78
+#: kitsune/questions/forms.py:77
 msgid "The body content is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Вміст закороткий (%(show_value)s символів). Він повинен бути не менше ніж %(limit_value)s символів."
 
-#: kitsune/questions/forms.py:81
+#: kitsune/questions/forms.py:80
 msgid "Please keep the length of the body content to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Будь ласка, утримуйте довжину тексту в межах %(limit_value)s символів чи менше. Зараз довжина складає %(show_value)s символів."
 
-#: kitsune/questions/forms.py:84
+#: kitsune/questions/forms.py:83
 msgid "Account Issues"
 msgstr "Проблеми з обліковим записом"
 
-#: kitsune/questions/forms.py:85
+#: kitsune/questions/forms.py:84
 msgid "Installation Issues"
 msgstr "Проблеми з інсталяцією"
 
-#: kitsune/questions/forms.py:86
+#: kitsune/questions/forms.py:85
 msgid "Payment Issues"
 msgstr "Проблеми з платежами"
 
 #
 #                   Проблеми з програмою - ... із застосунком
 #
-#: kitsune/questions/forms.py:87
+#: kitsune/questions/forms.py:86
 msgid "Application Issues"
 msgstr "Проблеми із застосунками"
 
-#: kitsune/questions/forms.py:90
+#: kitsune/questions/forms.py:89
 msgid "Enter the Transaction ID here."
 msgstr "Введіть тут ID транзакції."
 
 #
 #                   Будь ласка, введіть ID транзакції. - ... вкажіть ID ...
 #
-#: kitsune/questions/forms.py:91
+#: kitsune/questions/forms.py:90
 msgid "Please provide the Transaction ID."
 msgstr "Будь ласка, вкажіть ID транзакції."
 
 #
 #                   Несправне - Дефектне
 #
-#: kitsune/questions/forms.py:93
+#: kitsune/questions/forms.py:92
 msgid "Defective"
 msgstr "Дефектне"
 
-#: kitsune/questions/forms.py:94
+#: kitsune/questions/forms.py:93
 msgid "Malware"
 msgstr "Зловмисне програмне забезпечення"
 
 #
 #                   Не працює як очікувалося - кома перед як
 #
-#: kitsune/questions/forms.py:95
+#: kitsune/questions/forms.py:94
 msgid "Did not work as expected"
 msgstr "Не працює, як очікувалося"
 
-#: kitsune/questions/forms.py:97
+#: kitsune/questions/forms.py:96
 msgid "Seller will not provide support"
 msgstr "Продавець не надає підтримку"
 
-#: kitsune/questions/forms.py:102
+#: kitsune/questions/forms.py:101
 msgid "Account Administration"
 msgstr "Керування обліковим записом"
 
-#: kitsune/questions/forms.py:103
+#: kitsune/questions/forms.py:102
 msgid "Review Process"
 msgstr "Процес перевірки"
 
 #
 #                   Платежі/Розрахунки - розрахунки з малої літери
 #
-#: kitsune/questions/forms.py:104
+#: kitsune/questions/forms.py:103
 msgid "Payments/Settlement"
 msgstr "Платежі/розрахунки"
 
 #
 #                   Будь ласка, введіть адресу електронної пошти. - ..., вкажіть електронну пошту.
 #
-#: kitsune/questions/forms.py:299
+#: kitsune/questions/forms.py:301
 msgid "Please provide an email."
 msgstr "Будь ласка, вкажіть електронну пошту."
 
-#: kitsune/questions/forms.py:317 kitsune/users/templates/users/edit_profile.html:44
+#: kitsune/questions/forms.py:319 kitsune/users/templates/users/edit_profile.html:44
 msgid "Email:"
 msgstr "Електронна пошта:"
 
-#: kitsune/questions/forms.py:324
+#: kitsune/questions/forms.py:326
 msgid "Subject:"
 msgstr "Тема:"
 
 #
 #                   Предмет: - Вміст:
 #
-#: kitsune/questions/forms.py:333
+#: kitsune/questions/forms.py:335
 msgid "Body:"
 msgstr "Вміст:"
 
-#: kitsune/questions/forms.py:363 kitsune/questions/forms.py:376 kitsune/questions/forms.py:390 kitsune/questions/templates/questions/marketplace_category.html:12
-#: kitsune/questions/templates/questions/mobile/marketplace_category.html:15 kitsune/wiki/forms.py:128 kitsune/wiki/templates/wiki/history.html:17
+#: kitsune/questions/forms.py:365 kitsune/questions/forms.py:378 kitsune/questions/forms.py:392 kitsune/questions/templates/questions/marketplace_category.html:12
+#: kitsune/questions/templates/questions/mobile/marketplace_category.html:15 kitsune/wiki/forms.py:129 kitsune/wiki/templates/wiki/history.html:17
 msgid "Category:"
 msgstr "Категорія:"
 
-#: kitsune/questions/forms.py:369
+#: kitsune/questions/forms.py:371
 msgid "Transaction ID:"
 msgstr "ID транзакції:"
 
-#: kitsune/questions/forms.py:406
+#: kitsune/questions/forms.py:408
 msgid "Interval"
 msgstr "Інтервал"
 
-#: kitsune/questions/forms.py:408
+#: kitsune/questions/forms.py:410
 msgid "Start"
 msgstr "Початок"
 
-#: kitsune/questions/forms.py:409
+#: kitsune/questions/forms.py:411
 msgid "End"
 msgstr "Кінець"
 
@@ -4246,12 +4229,10 @@ msgstr "Це питання ще не було запропоновано ран
 msgid "Provide more details"
 msgstr "Надайте більше інформації"
 
-#
-#                   Введіть деталі вашого запитання. - Вкажіть подробиці свого питання.
-#
 #: kitsune/questions/templates/questions/new_question.html:76
-msgid "Fill in the details of your question."
-msgstr "Вкажіть подробиці свого питання."
+#, fuzzy
+msgid "Ask your question to our community of users"
+msgstr "Поставте запитання нашій спільноті підтримки"
 
 #: kitsune/questions/templates/questions/new_question.html:79 kitsune/questions/templates/questions/new_question_login.html:15
 msgid "Post Question"
@@ -4356,12 +4337,12 @@ msgstr "Читати цю відповідь у контексті"
 #
 #                   У мене теж є ця проблема - Я маю цю проблему також
 #
-#: kitsune/questions/templates/questions/question_details.html:140 kitsune/questions/templates/questions/question_details.html:446
+#: kitsune/questions/templates/questions/question_details.html:140 kitsune/questions/templates/questions/question_details.html:449
 #: kitsune/questions/templates/questions/mobile/question_details.html:32
 msgid "I have this problem, too"
 msgstr "Я маю цю проблему також"
 
-#: kitsune/questions/templates/questions/question_details.html:144 kitsune/questions/templates/questions/question_details.html:401 kitsune/questions/templates/questions/email/new_answer.html:22
+#: kitsune/questions/templates/questions/question_details.html:144 kitsune/questions/templates/questions/question_details.html:404 kitsune/questions/templates/questions/email/new_answer.html:22
 msgid "Post a Reply"
 msgstr "Відповісти"
 
@@ -4445,68 +4426,72 @@ msgstr "Тема"
 msgid "System Details"
 msgstr "Відомості про систему"
 
-#: kitsune/questions/templates/questions/question_details.html:275
+#: kitsune/questions/templates/questions/question_details.html:274
+msgid "Device:"
+msgstr ""
+
+#: kitsune/questions/templates/questions/question_details.html:278
 msgid "More system details"
 msgstr "Більше відомостей про систему"
 
-#: kitsune/questions/templates/questions/question_details.html:280
+#: kitsune/questions/templates/questions/question_details.html:283
 msgid "Edit details"
 msgstr "Редагувати подробиці"
 
-#: kitsune/questions/templates/questions/question_details.html:281
+#: kitsune/questions/templates/questions/question_details.html:284
 msgid "Save changes"
 msgstr "Зберегти зміни"
 
-#: kitsune/questions/templates/questions/question_details.html:290 kitsune/questions/templates/questions/question_details.html:291
+#: kitsune/questions/templates/questions/question_details.html:293 kitsune/questions/templates/questions/question_details.html:294
 msgid "Additional System Details"
 msgstr "Додаткові відомості про систему"
 
 #
 #                   Зачеплені сайти - Уражені сайти
 #
-#: kitsune/questions/templates/questions/question_details.html:293
+#: kitsune/questions/templates/questions/question_details.html:296
 msgid "Sites Affected"
 msgstr "Уражені сайти"
 
-#: kitsune/questions/templates/questions/question_details.html:297
+#: kitsune/questions/templates/questions/question_details.html:300
 msgid "Crash ID"
 msgstr "Номер звіту про аварію"
 
-#: kitsune/questions/templates/questions/question_details.html:301
+#: kitsune/questions/templates/questions/question_details.html:304
 msgid "This happened"
 msgstr "Це сталось"
 
-#: kitsune/questions/templates/questions/question_details.html:309
+#: kitsune/questions/templates/questions/question_details.html:312
 msgid "Installed Plug-ins"
 msgstr "Встановлені плагіни"
 
-#: kitsune/questions/templates/questions/question_details.html:316
+#: kitsune/questions/templates/questions/question_details.html:319
 msgid "Close"
 msgstr "Закрити"
 
-#: kitsune/questions/templates/questions/question_details.html:322 kitsune/questions/templates/questions/question_list.html:250 kitsune/search/forms.py:167
+#: kitsune/questions/templates/questions/question_details.html:325 kitsune/questions/templates/questions/question_list.html:250 kitsune/search/forms.py:167
 msgid "Tags"
 msgstr "Теги"
 
-#: kitsune/questions/templates/questions/question_details.html:362 kitsune/tags/forms.py:120
+#: kitsune/questions/templates/questions/question_details.html:365 kitsune/tags/forms.py:120
 msgid "Add"
 msgstr "Додати"
 
-#: kitsune/questions/templates/questions/question_details.html:390
+#: kitsune/questions/templates/questions/question_details.html:393
 msgid ""
 "In order to prevent spam, we are limiting the number of answers that can be posted within a short period of time. If you want to post more please create a post on the <a href=\"%(url)s"
 "\">contributors forum</a> requesting that you be white-listed."
 msgstr ""
 
-#: kitsune/questions/templates/questions/question_details.html:413
+#: kitsune/questions/templates/questions/question_details.html:416
 msgid "I am providing the requested information"
 msgstr ""
 
-#: kitsune/questions/templates/questions/question_details.html:418
+#: kitsune/questions/templates/questions/question_details.html:421
 msgid "Needs more information"
 msgstr "Потрібна додаткова інформація"
 
-#: kitsune/questions/templates/questions/question_details.html:454
+#: kitsune/questions/templates/questions/question_details.html:457
 msgid "You must <a href=\"{login_url}\">log in to your account</a> to reply to posts. Please <a href=\"{ask_url}\">start a new question</a>, if you do not have an account yet."
 msgstr ""
 
@@ -4692,10 +4677,8 @@ msgid ""
 "Did you know that %(answerer)s is a Firefox user just like you? Get started helping other Firefox users by <a href=\"https://%(host)s/questions?filter=unsolved\"> browsing questions</a> -- you "
 "might just make someone's day!"
 msgstr ""
-"Чи знаєте ви, що %(answerer)s є таким же як і ви користувачем Firefox? "
-"Почніть допомагати іншим користувачам Firefox, <a href=\"https://%"
-"(host)s/questions?filter=unsolved\"> переглядаючи питання</a> -- ви можете "
-"зробити чийсь день кращим!"
+"Чи знаєте ви, що %(answerer)s є таким же як і ви користувачем Firefox? Почніть допомагати іншим користувачам Firefox, <a href=\"https://%(host)s/questions?filter=unsolved\"> переглядаючи питання</"
+"a> -- ви можете зробити чийсь день кращим!"
 
 #: kitsune/questions/templates/questions/includes/aaq_macros.html:5
 msgid "Pick a product"
@@ -4798,10 +4781,7 @@ msgstr "Будь ласка, відвідайте <a href=\"https://www.paypal.c
 #
 #: kitsune/questions/templates/questions/includes/aaq_macros.html:164
 msgid "Please visit the Marketplace page for the application. There you can find the developers' contact information and contact them directly."
-msgstr ""
-"Відвідайте сторінку Marketplace для отримання відомостей про застосунок. Там "
-"ви можете знайти контактну інформацію розробників і зв'язатися з ними "
-"безпосередньо."
+msgstr "Відвідайте сторінку Marketplace для отримання відомостей про застосунок. Там ви можете знайти контактну інформацію розробників і зв'язатися з ними безпосередньо."
 
 #
 #                   Написати про проблему - Надіслати (просто Надіслати, без проблеми)
@@ -4826,9 +4806,7 @@ msgstr "У верхньому кутку відкриється вікно. На
 #
 #: kitsune/questions/templates/questions/includes/aaq_macros.html:199
 msgid "If the automated way doesn't work, <a class=\"expander\" href=\"{0}\">try these manual steps</a>."
-msgstr ""
-"Якщо автоматизований спосіб не працює, <a class=\"expander\" "
-"href=\"{0}\">спробуйте зробити ці дії вручну</a>."
+msgstr "Якщо автоматизований спосіб не працює, <a class=\"expander\" href=\"{0}\">спробуйте зробити ці дії вручну</a>."
 
 #
 #                   Це поле було заповнено автоматично за допомогою доповнення <em>Troubleshooter</em>. - ... за допомогою додатка...
@@ -4981,18 +4959,32 @@ msgid "Send Updates"
 msgstr "Надіслати оновлення"
 
 #: kitsune/questions/templates/questions/includes/question_editing_frame.html:48
-msgid "The more information you can provide, the better the chance your question will be answered."
-msgstr "Чим більше інформації ви надасте, тим більше шанс, що на ваше запитання буде дана відповідь."
+msgid "How to get the best and fastest answer:"
+msgstr ""
 
-#: kitsune/questions/templates/questions/includes/question_editing_frame.html:60
+#: kitsune/questions/templates/questions/includes/question_editing_frame.html:51
+msgid "Be nice. Our volunteers are Mozilla users just like you, who take the time out of their day to help."
+msgstr ""
+
+#: kitsune/questions/templates/questions/includes/question_editing_frame.html:57
+msgid ""
+"Be descriptive. Saying &quot;Playing video on YouTube is always choppy&quot; will help our volunteers identify your problem better than saying &quot;Something is wrong&quot; or &quot;Firefox is "
+"broken&quot;."
+msgstr ""
+
+#: kitsune/questions/templates/questions/includes/question_editing_frame.html:65
+msgid "Follow through. Sometimes, our volunteers would ask you for more information or to test out certain scenarios. The sooner you can do this, the sooner they would know how to fix it."
+msgstr ""
+
+#: kitsune/questions/templates/questions/includes/question_editing_frame.html:84
 msgid "We've made some educated guesses about your current browser and operating system."
 msgstr "Ми зробили деякі припущення щодо вашого поточного браузера і операційної системи."
 
-#: kitsune/questions/templates/questions/includes/question_editing_frame.html:61
+#: kitsune/questions/templates/questions/includes/question_editing_frame.html:85
 msgid "Show details &raquo;"
 msgstr "Показати подробиці &raquo;"
 
-#: kitsune/questions/templates/questions/includes/question_editing_frame.html:62
+#: kitsune/questions/templates/questions/includes/question_editing_frame.html:86
 msgid "Hide details &raquo;"
 msgstr "Сховати подробиці &raquo;"
 
@@ -5111,11 +5103,11 @@ msgstr "Поставити нове запитання"
 msgid "Ask A Question"
 msgstr "Поставити запитання"
 
-#: kitsune/questions/templates/questions/mobile/new_question.html:49
+#: kitsune/questions/templates/questions/mobile/new_question.html:50
 msgid "Try another topic"
 msgstr "Спробуйте іншу тему"
 
-#: kitsune/questions/templates/questions/mobile/new_question.html:56
+#: kitsune/questions/templates/questions/mobile/new_question.html:57
 msgid "Post a question"
 msgstr "Поставити запитання"
 
@@ -5454,15 +5446,9 @@ msgstr "Обговорення тільки для спільноти"
 #: kitsune/search/templates/search/results.html:83
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> for <strong>{product}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> for <strong>{product}</strong>"
-msgstr[0] ""
-"Знайдено <strong>{n}</strong> результат для <strong>{q}</strong> для "
-"<strong>{product}</strong>"
-msgstr[1] ""
-"Знайдено <strong>{n}</strong> результати для <strong>{q}</strong> для "
-"<strong>{product}</strong>"
-msgstr[2] ""
-"Знайдено <strong>{n}</strong> результатів для <strong>{q}</strong> для "
-"<strong>{product}</strong>"
+msgstr[0] "Знайдено <strong>{n}</strong> результат для <strong>{q}</strong> для <strong>{product}</strong>"
+msgstr[1] "Знайдено <strong>{n}</strong> результати для <strong>{q}</strong> для <strong>{product}</strong>"
+msgstr[2] "Знайдено <strong>{n}</strong> результатів для <strong>{q}</strong> для <strong>{product}</strong>"
 
 #. {q} is the search query, {l} is the language searched.
 #: kitsune/search/templates/search/results.html:98
@@ -6257,8 +6243,7 @@ msgstr "Firefox не зберігає налаштування чи не зап�
 #: kitsune/sumo/db_strings.py:195
 msgctxt "DB: products.Topic.description"
 msgid "Thunderbird won't save settings or remember information"
-msgstr ""
-"Thunderbird не буде зберігати налаштування чи запам'ятовувати інформацію"
+msgstr "Thunderbird не буде зберігати налаштування чи запам'ятовувати інформацію"
 
 #: kitsune/sumo/db_strings.py:198
 msgctxt "DB: products.Topic.title"
@@ -7005,7 +6990,7 @@ msgstr "Інструменти помічників"
 msgid "Edit Profile"
 msgstr "Редагувати профіль"
 
-#: kitsune/sumo/templates/includes/common_macros.html:41 kitsune/sumo/templates/mobile/base.html:79
+#: kitsune/sumo/templates/includes/common_macros.html:41 kitsune/sumo/templates/mobile/base.html:79 kitsune/users/templates/users/mobile/edit_settings.html:3
 msgid "Settings"
 msgstr "Налаштування"
 
@@ -7205,7 +7190,8 @@ msgid "We are having trouble reaching your email address. Please try a different
 msgstr "У нас виникла проблема з надсиланням на адресу вашої електронної пошти. Будь ласка, спробуйте використати іншу адресу або зв'яжіться з адміністратором."
 
 #: kitsune/users/forms.py:25
-msgid "Username may contain only letters, numbers and ./+/-/_ characters."
+#, fuzzy
+msgid "Username may contain only English letters, numbers and ./-/_ characters."
 msgstr "Ім'я користувача може складатись тільки з літер, цифр та символів: ./+/-/_"
 
 #: kitsune/users/forms.py:27
@@ -7276,7 +7262,8 @@ msgid "Username:"
 msgstr "Ім’я користувача:"
 
 #: kitsune/users/forms.py:88
-msgid "Required. 30 characters or fewer. Letters, digits and ./+/- only."
+#, fuzzy
+msgid "Required. 30 characters or fewer. Letters, digits and ./- only."
 msgstr "Обов'язкове. 30 чи менше символів. Тільки літери, цифри та @/./+/-/_."
 
 #: kitsune/users/forms.py:95 kitsune/users/forms.py:234 kitsune/users/forms.py:240 kitsune/users/forms.py:288
@@ -7320,9 +7307,7 @@ msgstr "Цей обліковий запис неактивний."
 #
 #: kitsune/users/forms.py:174
 msgid "Your Web browser doesn't appear to have cookies enabled. Cookies are required for logging in."
-msgstr ""
-"Схоже, що у вашому браузері не увімкнено куки. Для входу необхідно увімкнути "
-"куки."
+msgstr "Схоже, що у вашому браузері не увімкнено куки. Для входу необхідно увімкнути куки."
 
 #: kitsune/users/forms.py:196
 msgid "Please enter a twitter.com URL."
@@ -7477,14 +7462,14 @@ msgstr "Ваш обліковий запис вже активований, ув
 msgid "Account already activated"
 msgstr "Обліковий запис вже активований"
 
-#: kitsune/users/views.py:398
+#: kitsune/users/views.py:399
 msgid "Your settings have been saved."
 msgstr "Ваші налаштування були збережені."
 
 #
 #                   Ми надіслали вам лист з ім'ям користувача для будь-якого облікового запису, використовуючи {email}. - Ми надіслали лист з ім'ям користувача до облікового запису, в якому зазначена адреса електронної пошти {email}. (це робиться при відновлені паролю)
 #
-#: kitsune/users/views.py:683
+#: kitsune/users/views.py:682
 msgid "We've sent an email with the username to any account using {email}."
 msgstr "Ми надіслали лист з ім'ям користувача до облікового запису, в якому зазначена адреса електронної пошти {email}."
 
@@ -7648,6 +7633,7 @@ msgid ""
 msgstr ""
 
 #: kitsune/users/templates/users/edit_profile.html:51 kitsune/users/templates/users/edit_settings.html:15 kitsune/users/templates/users/pw_reset_confirm.html:26
+#: kitsune/users/templates/users/mobile/edit_settings.html:10
 msgid "Update"
 msgstr "Оновити"
 
@@ -7869,30 +7855,22 @@ msgstr "Натисніть тут, щоб дізнатися, де допомо�
 # Помічник на форумі - Відповідайте на запитання користувачів, які є найбільш популярними, але на які немає відповідей: - чому Відповідайте з великої літери? Дуже багато ком, спробуй так: ... популярними і на які ....
 #: kitsune/users/templates/users/email/contributor.html:32
 msgid "<a href=\"%(url)s\">Forum Contributor</a> - Answer user support questions that are most-requested but have no replies."
-msgstr ""
-"<a href=\"%(url)s\">Помічник на форумі</a> - Відповідайте на найчастіші "
-"запитання користувачів, які не мають відповідей."
+msgstr "<a href=\"%(url)s\">Помічник на форумі</a> - Відповідайте на найчастіші запитання користувачів, які не мають відповідей."
 
 # Помічник у Твіттері -відповідайте на твіти проFirefox: - відсутній пробіл перед тире, відсутній пробіл після "про"
 #: kitsune/users/templates/users/email/contributor.html:40
 msgid "<a href=\"%(url)s\">Twitter Contributor</a> - Respond to tweets about Firefox."
-msgstr ""
-"<a href=\"%(url)s\">Помічник у Твіттері</a> - Відповідайте на твіти про "
-"Firefox."
+msgstr "<a href=\"%(url)s\">Помічник у Твіттері</a> - Відповідайте на твіти про Firefox."
 
 # Редактор Бази Знань - Допомагайте оновлювати статті бази знань, які вимагають змін, або пишіть нові статті: - Редактор бази знань - допомагайте ....
 #: kitsune/users/templates/users/email/contributor.html:46
 msgid "<a href=\"%(url)s\">KB Editor</a> - Help to update knowledge base articles that need changes or write new articles."
-msgstr ""
-"<a href=\"%(url)s\">Редактор Бази Знань</a> - Допомагайте оновлювати статті "
-"бази знань, які необхідно змінити, або пишіть нові."
+msgstr "<a href=\"%(url)s\">Редактор Бази Знань</a> - Допомагайте оновлювати статті бази знань, які необхідно змінити, або пишіть нові."
 
 # Помічник у L10N - Допоможіть перекласти вміст довідки Firefox на свою мову: - чому Допоможіть з великої літери?
 #: kitsune/users/templates/users/email/contributor.html:53
 msgid "<a href=\"%(url)s\">L10N Contributor</a> - Help to translate Firefox Help content to your language."
-msgstr ""
-"<a href=\"%(url)s\">Помічник в L10N</a> - Допоможіть з перекладом довідки "
-"Firefox вашою мовою."
+msgstr "<a href=\"%(url)s\">Помічник в L10N</a> - Допоможіть з перекладом довідки Firefox вашою мовою."
 
 # Ви також можете подати заяву на участь в нашій buddy-програмі, щоб пройти навчання у наших більш досвідчених добровольців: - ... програмі друзів, щоб отримати настанови від більш досвідчених ...
 #: kitsune/users/templates/users/email/contributor.html:69
@@ -8130,6 +8108,10 @@ msgstr "%(old)s перенаправлення %(number)i"
 msgid "%(old)s-redirect-%(number)i"
 msgstr "%(old)s-перенаправлення-%(number)i"
 
+#: kitsune/wiki/cron.py:59
+msgid "[Reviews Pending: %s] SUMO needs your help!"
+msgstr ""
+
 #: kitsune/wiki/events.py:100
 msgid "{title} was edited by {creator}"
 msgstr "{title} відредагована {creator}"
@@ -8146,142 +8128,142 @@ msgstr "{title} має редакцію, готову для перекладу"
 msgid "{title} ({locale}) has a new approved revision ({reviewer})"
 msgstr "{title} ({locale}) має нову затверджену редакцію ({reviewer})"
 
-#: kitsune/wiki/forms.py:21
+#: kitsune/wiki/forms.py:22
 msgid "Please keep the length of the title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Будь-ласка, утримуйте довжину назви в межах %(limit_value)s символів чи менше. Довжина зараз складає %(show_value)s символів."
 
-#: kitsune/wiki/forms.py:24
+#: kitsune/wiki/forms.py:25
 msgid "Please provide a slug."
 msgstr "Вкажіть слаг."
 
-#: kitsune/wiki/forms.py:25
+#: kitsune/wiki/forms.py:26
 msgid "The slug provided is not valid."
 msgstr "Вказаний слаг нечинний."
 
-#: kitsune/wiki/forms.py:26
+#: kitsune/wiki/forms.py:27
 msgid "The slug is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Слаг закороткий (%(show_value)s символів). Він повинен бути не менше %(limit_value)s символів."
 
-#: kitsune/wiki/forms.py:28
+#: kitsune/wiki/forms.py:29
 msgid "Please keep the length of the slug to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Будь-ласка, утримуйте довжину слага в межах %(limit_value)s символів чи менше. Зараз довжина складає %(show_value)s символів."
 
-#: kitsune/wiki/forms.py:31
+#: kitsune/wiki/forms.py:32
 msgid "Please provide a summary."
 msgstr "Впровадьте короткий опис."
 
-#: kitsune/wiki/forms.py:32
+#: kitsune/wiki/forms.py:33
 msgid "The summary is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Короткий опис закороткий (%(show_value)s символів). Він повинен бути не менше %(limit_value)s символів."
 
-#: kitsune/wiki/forms.py:34
+#: kitsune/wiki/forms.py:35
 msgid "Please keep the length of the summary to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Будь-ласка, утримуйте довжину короткого опису в межах %(limit_value)s символів чи менше. Зараз довжина складає %(show_value)s символів."
 
-#: kitsune/wiki/forms.py:38
+#: kitsune/wiki/forms.py:39
 msgid "The content is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Вміст закороткий (%(show_value)s символів). Він повинен бути не менше %(limit_value)s символів."
 
-#: kitsune/wiki/forms.py:40
+#: kitsune/wiki/forms.py:41
 msgid "Please keep the length of the content to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Будь-ласка, утримуйте довжину вмісту в межах %(limit_value)s символів чи менше. Зараз довжина складає %(show_value)s символів."
 
-#: kitsune/wiki/forms.py:43
+#: kitsune/wiki/forms.py:44
 msgid "Please keep the length of the comment to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Будь-ласка, утримуйте довжину коментаря в межах %(limit_value)s символів чи менше. Зараз довжина складає %(show_value)s символів."
 
-#: kitsune/wiki/forms.py:46
+#: kitsune/wiki/forms.py:47
 msgid "Please select at least one product."
 msgstr "Будь ласка, оберіть не менше одного продукту."
 
-#: kitsune/wiki/forms.py:47
+#: kitsune/wiki/forms.py:48
 msgid "Please select at least one topic."
 msgstr "Будь ласка, оберіть не менше однієї теми."
 
-#: kitsune/wiki/forms.py:87
+#: kitsune/wiki/forms.py:88
 msgid "Title of article"
 msgstr "Назва статті"
 
-#: kitsune/wiki/forms.py:98 kitsune/wiki/templates/wiki/translate.html:92
+#: kitsune/wiki/forms.py:99 kitsune/wiki/templates/wiki/translate.html:92
 msgid "Slug:"
 msgstr "Слаг:"
 
-#: kitsune/wiki/forms.py:99
+#: kitsune/wiki/forms.py:100
 msgid "Article URL"
 msgstr "Адреса статті"
 
-#: kitsune/wiki/forms.py:105
+#: kitsune/wiki/forms.py:106
 msgid "Relevant to:"
 msgstr "Стосується:"
 
-#: kitsune/wiki/forms.py:111
+#: kitsune/wiki/forms.py:112
 msgid "Allow translations:"
 msgstr "Дозволити переклади:"
 
-#: kitsune/wiki/forms.py:115
+#: kitsune/wiki/forms.py:116
 msgid "Obsolete:"
 msgstr "Застаріло:"
 
 #
 #                   Дозволити обговорення в цій статті? - ... про цю статтю?
 #
-#: kitsune/wiki/forms.py:119
+#: kitsune/wiki/forms.py:120
 msgid "Allow discussion on this article?"
 msgstr "Дозволити обговорення в цій статті?"
 
-#: kitsune/wiki/forms.py:129
+#: kitsune/wiki/forms.py:130
 msgid "Type of article"
 msgstr "Тип статті"
 
-#: kitsune/wiki/forms.py:132
+#: kitsune/wiki/forms.py:133
 msgid "Topics:"
 msgstr "Теми:"
 
-#: kitsune/wiki/forms.py:139
+#: kitsune/wiki/forms.py:140
 msgid "Needs change:"
 msgstr "Потребує змін:"
 
-#: kitsune/wiki/forms.py:144 kitsune/wiki/forms.py:220 kitsune/wiki/forms.py:260 kitsune/wiki/forms.py:282 kitsune/wiki/templates/wiki/revision.html:32
+#: kitsune/wiki/forms.py:145 kitsune/wiki/forms.py:228 kitsune/wiki/forms.py:268 kitsune/wiki/forms.py:290 kitsune/wiki/templates/wiki/revision.html:32
 msgid "Comment:"
 msgstr "Коментар:"
 
-#: kitsune/wiki/forms.py:201 kitsune/wiki/templates/wiki/review_revision.html:40 kitsune/wiki/templates/wiki/review_translation.html:52 kitsune/wiki/templates/wiki/translate.html:150
+#: kitsune/wiki/forms.py:209 kitsune/wiki/templates/wiki/review_revision.html:40 kitsune/wiki/templates/wiki/review_translation.html:52 kitsune/wiki/templates/wiki/translate.html:150
 #: kitsune/wiki/templates/wiki/includes/document_macros.html:132
 msgid "Keywords:"
 msgstr "Ключові слова:"
 
-#: kitsune/wiki/forms.py:202
+#: kitsune/wiki/forms.py:210
 msgid "Affects search results"
 msgstr "Результати пошуку"
 
-#: kitsune/wiki/forms.py:206 kitsune/wiki/templates/wiki/translate.html:160
+#: kitsune/wiki/forms.py:214 kitsune/wiki/templates/wiki/translate.html:160
 msgid "Search result summary:"
 msgstr "Результати пошуку:"
 
-#: kitsune/wiki/forms.py:207
+#: kitsune/wiki/forms.py:215
 msgid "Only displayed on search results page"
 msgstr "Показано тільки на сторінці пошукових результатів"
 
-#: kitsune/wiki/forms.py:265
+#: kitsune/wiki/forms.py:273
 msgid "Significance:"
 msgstr "Значущість:"
 
-#: kitsune/wiki/forms.py:277
+#: kitsune/wiki/forms.py:285
 msgid "Needs change"
 msgstr "Потребує змін"
 
 #
 #                   Користувач: - ...чі:
 #
-#: kitsune/wiki/forms.py:302
+#: kitsune/wiki/forms.py:310
 msgid "Users:"
 msgstr "Користувачі:"
 
-#: kitsune/wiki/forms.py:303
+#: kitsune/wiki/forms.py:311
 msgid "Start:"
 msgstr "Початок:"
 
-#: kitsune/wiki/forms.py:304
+#: kitsune/wiki/forms.py:312
 msgid "End:"
 msgstr "Кінець:"
 
@@ -8312,11 +8294,11 @@ msgstr "Якщо відмічено, для цього документа доз
 msgid "If checked, this document needs updates."
 msgstr "Якщо відмічено, цей документ потребує оновлення."
 
-#: kitsune/wiki/models.py:209
+#: kitsune/wiki/models.py:212
 msgid "Please choose a category."
 msgstr "Оберіть категорію."
 
-#: kitsune/wiki/models.py:852
+#: kitsune/wiki/models.py:855
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Редакція повинна бути заснована на англійській статті. Редакція з ID %(id)s не підходить під цей критерій."
 
@@ -8338,19 +8320,19 @@ msgstr "Документ \"%s\" не існує."
 msgid "The template \"%s\" does not exist or has no approved revision."
 msgstr "Шаблон \"%s\" не існує або не має затвердженої редакції."
 
-#: kitsune/wiki/tasks.py:55
+#: kitsune/wiki/tasks.py:56
 msgid "Your revision has been approved: {title}"
 msgstr "Вашу редакцію затверджено: {title}"
 
-#: kitsune/wiki/tasks.py:57
+#: kitsune/wiki/tasks.py:58
 msgid "Your revision has been reviewed: {title}"
 msgstr "Вашу редакцію перевірено: {title}"
 
-#: kitsune/wiki/tasks.py:101
+#: kitsune/wiki/tasks.py:102
 msgid "A revision you contributed to has been approved: {title}"
 msgstr "Редакція, в яку ви внесли вклад, була схвалена: {title}"
 
-#: kitsune/wiki/tasks.py:104
+#: kitsune/wiki/tasks.py:105
 msgid "A revision you contributed to has been reviewed: {title}"
 msgstr "Редакція, в яку ви внесли вклад, була перевірена: {title}"
 
@@ -8558,6 +8540,11 @@ msgstr ""
 #: kitsune/wiki/templates/wiki/confirm_revision_delete.html:30
 msgid "You are about to permanently delete this revision. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "Ви збираєтесь вилучити цю редакцію назавжди. <strong>Це незворотна дія!</strong> Ви впевнені, що хочете продовжити?"
+
+#: kitsune/wiki/templates/wiki/document.html:76 kitsune/wiki/templates/wiki/mobile/document.html:43
+#, fuzzy
+msgid "Share this article: {link}"
+msgstr "Ця стаття допомогла?"
 
 #: kitsune/wiki/templates/wiki/edit.html:7
 msgid "Edit Article | {document}"
@@ -9066,6 +9053,18 @@ msgstr "Перекласти документ"
 msgid "Review this revision"
 msgstr "Перевірити цю редакцію"
 
+#: kitsune/wiki/templates/wiki/email/ready_for_review_weekly_digest.html:23
+msgid "If you have a moment please help us by reviewing these articles:"
+msgstr ""
+
+#: kitsune/wiki/templates/wiki/email/ready_for_review_weekly_digest.html:47
+msgid "Many thanks for your contribution in behalf of SUMO and the happy users who get help!"
+msgstr ""
+
+#: kitsune/wiki/templates/wiki/email/ready_for_review_weekly_digest.html:54
+msgid "Regards, <br />The SUMO team."
+msgstr ""
+
 #: kitsune/wiki/templates/wiki/email/reviewed.html:23 kitsune/wiki/templates/wiki/email/reviewed_contributors.html:21
 msgid "View the history of this document"
 msgstr "Глянути історію цього документу"
@@ -9562,6 +9561,32 @@ msgstr ""
 #: vendor/src/django-tidings/tidings/templates/tidings/unsubscribe_success.html:8
 msgid "Unsubscribed"
 msgstr "Відписано"
+
+#~ msgid "Latest Discussions"
+#~ msgstr "Останні обговорення"
+
+# Топ помічників за останній тиждень - Найкращі помічники ....
+#~ msgid "Top Contributors Last Week"
+#~ msgstr "Найкращі помічники за останній тиждень"
+
+# Немає недавніх вкладів - треба переробити, вклади - незрозуміле. Може "відповідей"?
+#~ msgid "No recent contributions"
+#~ msgstr "Немає недавніх відповідей"
+
+#
+#                   Чим більше інформації ви надасте, тим більше шанс, що на ваше запитання буде дана відповідь. - Чим більше ..., тик краще вірогідність того, що...
+#
+#~ msgid "The more information you can provide the better chance your question will be answered."
+#~ msgstr "Чим більше інформації ви надасте, тим краще вірогідність того, що на ваше запитання буде дана відповідь."
+
+#
+#                   Введіть деталі вашого запитання. - Вкажіть подробиці свого питання.
+#
+#~ msgid "Fill in the details of your question."
+#~ msgstr "Вкажіть подробиці свого питання."
+
+#~ msgid "The more information you can provide, the better the chance your question will be answered."
+#~ msgstr "Чим більше інформації ви надасте, тим більше шанс, що на ваше запитання буде дана відповідь."
 
 #
 #                   Пошук в Підтримці Mozilla - Шукати в під....
@@ -10975,9 +11000,6 @@ msgstr "Відписано"
 #~ msgid "Mobile"
 #~ msgstr "Мобільний"
 
-#~ msgid "Mobile Overview"
-#~ msgstr "Огляд"
-
 #~ msgid "Download"
 #~ msgstr "Завантаження"
 
@@ -11396,9 +11418,6 @@ msgstr "Відписано"
 #, fuzzy
 #~ msgid "Browse other articles about %(topics)s"
 #~ msgstr "Перегляньте інші статті про: <a href=\"{url}\">{category}</a>"
-
-#~ msgid "Ask our awesome support community for help"
-#~ msgstr "Поставте запитання нашій спільноті підтримки"
 
 #~ msgid "Or try searching:"
 #~ msgstr "Чи спробуйте шукати:"
