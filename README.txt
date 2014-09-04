@@ -4,16 +4,19 @@ Updating strings and translations
 =================================
 
 Instructions:
-1) ./manage.py extract 
+1) ./manage.py extract
    This extracts the localizable English strings into POT files.
 2) ./manage.py verbatimize --rename
-   This will copy the POT files created in step 1 to locale/templates/LC_MESSAGES
+   This will copy the POT files created in step 1 to
+   locale/templates/LC_MESSAGES
 3) ./manage.py merge
-   This will update the existing PO files (and create the missing ones) with changes to strings extracted in step 1.
+   This will update the existing PO files (and create the missing ones) with
+   changes to strings extracted in step 1.
 
 Optional:
 4) locale/compile-mo.sh locale
-   This will compile the PO files into MO files, which are what the server uses to serve translations.
+   This will compile the PO files into MO files, which are what the server uses
+   to serve translations.
 
 
 Adding new locales
