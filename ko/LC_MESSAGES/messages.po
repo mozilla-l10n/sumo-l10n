@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-26 12:35-0700\n"
+"POT-Creation-Date: 2015-06-01 15:13-0700\n"
 "PO-Revision-Date: 2015-05-07 02:38+0000\n"
 "Last-Translator: Hyeonseok <hyeonseok@gmail.com>\n"
 "Language-Team: Mozilla SUMO Korean Team\n"
@@ -1529,7 +1529,7 @@ msgstr "비활성 사용자 보기"
 
 #: kitsune/flagit/templates/flagit/includes/flagged_answer.html:2 kitsune/flagit/templates/flagit/includes/flagged_post.html:4 kitsune/flagit/templates/flagit/includes/flagged_profile.html:2
 #: kitsune/flagit/templates/flagit/includes/flagged_question.html:4 kitsune/kbforums/forms.py:28 kitsune/kbforums/forms.py:50 kitsune/kbforums/forms.py:76 kitsune/questions/forms.py:271
-#: kitsune/wiki/forms.py:231 kitsune/wiki/templates/wiki/review_translation.html:78 kitsune/wiki/templates/wiki/includes/document_macros.html:146
+#: kitsune/wiki/forms.py:231 kitsune/wiki/templates/wiki/review_translation.html:96 kitsune/wiki/templates/wiki/includes/document_macros.html:146
 msgid "Content:"
 msgstr "내용:"
 
@@ -3554,7 +3554,7 @@ msgstr "해법이 성공적으로 풀렸습니다."
 msgid "Glad to hear it!"
 msgstr "그렇다니 기쁩니다!"
 
-#: kitsune/questions/views.py:1046 kitsune/wiki/views.py:1034 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:5
+#: kitsune/questions/views.py:1046 kitsune/wiki/views.py:1042 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:5
 msgid "Sorry to hear that."
 msgstr "죄송합니다."
 
@@ -8017,7 +8017,7 @@ msgstr "변경 필요 사항:"
 msgid "Comment:"
 msgstr "댓글:"
 
-#: kitsune/wiki/forms.py:218 kitsune/wiki/templates/wiki/review_revision.html:52 kitsune/wiki/templates/wiki/review_translation.html:64 kitsune/wiki/templates/wiki/translate.html:150
+#: kitsune/wiki/forms.py:218 kitsune/wiki/templates/wiki/review_revision.html:70 kitsune/wiki/templates/wiki/review_translation.html:82 kitsune/wiki/templates/wiki/translate.html:150
 #: kitsune/wiki/templates/wiki/includes/document_macros.html:134
 msgid "Keywords:"
 msgstr "키워드:"
@@ -8169,43 +8169,43 @@ msgctxt "KB Topic"
 msgid "browserID"
 msgstr "BrowserID"
 
-#: kitsune/wiki/views.py:733
+#: kitsune/wiki/views.py:741
 msgid "You cannot translate this document."
 msgstr "본 문서를 번역할 수 없습니다."
 
-#: kitsune/wiki/views.py:1032
+#: kitsune/wiki/views.py:1040
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "감사합니다. &mdash; 계속 열심히 하겠습니다!"
 
-#: kitsune/wiki/views.py:1058
+#: kitsune/wiki/views.py:1066
 msgid "You already voted on this Article."
 msgstr "이미 본 문서를 추천했습니다."
 
-#: kitsune/wiki/views.py:1090
+#: kitsune/wiki/views.py:1098
 msgid "Thanks for making us better!"
 msgstr "등록해주셔서 감사합니다!"
 
-#: kitsune/wiki/views.py:1163
+#: kitsune/wiki/views.py:1171
 msgid "Revision %s"
 msgstr "변경사항 %s"
 
-#: kitsune/wiki/views.py:1172
+#: kitsune/wiki/views.py:1180
 msgid "Firefox Releases"
 msgstr "Firefox 출시"
 
-#: kitsune/wiki/views.py:1178
+#: kitsune/wiki/views.py:1186
 msgid "Article Revisions"
 msgstr "문서 버전"
 
-#: kitsune/wiki/views.py:1281
+#: kitsune/wiki/views.py:1289
 msgid "{users} added to the contributors successfully!"
 msgstr "그룹에 {users} 사용자 추가 성공!"
 
-#: kitsune/wiki/views.py:1288
+#: kitsune/wiki/views.py:1296
 msgid "There were errors adding new contributors, see below."
 msgstr "그룹에 멤버를 추가하는데 오류가 있었습니다. 아래를 참고 하세요."
 
-#: kitsune/wiki/views.py:1307
+#: kitsune/wiki/views.py:1315
 msgid "{user} removed from the contributors successfully!"
 msgstr "그룹에 {user} 사용자 제거 성공!"
 
@@ -8486,8 +8486,8 @@ msgstr "새 문서"
 msgid "Create a New Knowledge Base Article"
 msgstr "지식 기반에 새 문서를 작성"
 
-#: kitsune/wiki/templates/wiki/preview.html:2 kitsune/wiki/templates/wiki/review_revision.html:48 kitsune/wiki/templates/wiki/review_revision.html:83
-#: kitsune/wiki/templates/wiki/review_translation.html:93 kitsune/wiki/templates/wiki/review_translation.html:128 kitsune/wiki/templates/wiki/revision.html:101
+#: kitsune/wiki/templates/wiki/preview.html:2 kitsune/wiki/templates/wiki/review_revision.html:66 kitsune/wiki/templates/wiki/review_revision.html:101
+#: kitsune/wiki/templates/wiki/review_translation.html:111 kitsune/wiki/templates/wiki/review_translation.html:146 kitsune/wiki/templates/wiki/revision.html:101
 msgid "Article is for:"
 msgstr "문서 포함:"
 
@@ -8512,57 +8512,78 @@ msgstr "변경 사항 {id} 검토자: {user}"
 msgid "Revision Comment: {comment}"
 msgstr "변경 내용"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:21
+#: kitsune/wiki/templates/wiki/review_revision.html:21 kitsune/wiki/templates/wiki/review_translation.html:21
+#, fuzzy
+msgid "Unreviewed Revision:"
+msgid_plural "Unreviewed Revisions:"
+msgstr[0] "변경 사항 검토"
+
+#: kitsune/wiki/templates/wiki/review_revision.html:26 kitsune/wiki/templates/wiki/review_translation.html:26
+#, fuzzy
+msgid "Revision {id} by {user}"
+msgstr "변경 사항 {id} 검토자: {user}"
+
+#: kitsune/wiki/templates/wiki/review_revision.html:28 kitsune/wiki/templates/wiki/review_translation.html:28
+#, fuzzy
+msgid "<label>Revision Comment:</label> {comment}"
+msgstr "변경 내용"
+
+#: kitsune/wiki/templates/wiki/review_revision.html:30 kitsune/wiki/templates/wiki/review_translation.html:30
+#, fuzzy
+msgid "Review Revision {id}"
+msgstr "변경 사항 검토"
+
+#: kitsune/wiki/templates/wiki/review_revision.html:39
 msgid "This revision was already reviewed by {user} on {date}."
 msgstr "현재 변경 사항은 {user}가 {date}에 이미 검토하였습니다."
 
-#: kitsune/wiki/templates/wiki/review_revision.html:25
+#: kitsune/wiki/templates/wiki/review_revision.html:43
 #, fuzzy
 msgid "A newer revision has already been reviewed."
 msgstr "리비젼이 확인 되었습니다."
 
-#: kitsune/wiki/templates/wiki/review_revision.html:28
+#: kitsune/wiki/templates/wiki/review_revision.html:46
 msgid "But there is another latest revision which is waiting for review."
 msgstr ""
 
-#: kitsune/wiki/templates/wiki/review_revision.html:29
+#: kitsune/wiki/templates/wiki/review_revision.html:47
 #, fuzzy
 msgid "Please review the latest revision."
 msgstr "거래 ID를 준비해 주세요."
 
-#: kitsune/wiki/templates/wiki/review_revision.html:34
+#: kitsune/wiki/templates/wiki/review_revision.html:52
 msgid "Submitted Revision Changes"
 msgstr "제출된 번역 변경 사항"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:35
+#: kitsune/wiki/templates/wiki/review_revision.html:53
 msgid "Current public revision:"
 msgstr "현재 공개 변경 사항"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:35
+#: kitsune/wiki/templates/wiki/review_revision.html:53
 msgid "Submitted revision:"
 msgstr "제출된 변경 사항"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:38 kitsune/wiki/templates/wiki/revision.html:80
+#: kitsune/wiki/templates/wiki/review_revision.html:56 kitsune/wiki/templates/wiki/revision.html:80
 msgid "Revision Source"
 msgstr "변경 소스:"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:44 kitsune/wiki/templates/wiki/review_translation.html:89 kitsune/wiki/templates/wiki/revision.html:86
+#: kitsune/wiki/templates/wiki/review_revision.html:62 kitsune/wiki/templates/wiki/review_translation.html:107 kitsune/wiki/templates/wiki/revision.html:86
 msgid "Revision Content"
 msgstr "변경 내용"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:51
+#: kitsune/wiki/templates/wiki/review_revision.html:69
 msgid "This document does not have a current revision."
 msgstr "현재 문서는 변경 사항이 없습니다."
 
-#: kitsune/wiki/templates/wiki/review_revision.html:56 kitsune/wiki/templates/wiki/review_translation.html:71 kitsune/wiki/templates/wiki/includes/document_macros.html:140
+#: kitsune/wiki/templates/wiki/review_revision.html:74 kitsune/wiki/templates/wiki/review_translation.html:89 kitsune/wiki/templates/wiki/includes/document_macros.html:140
 msgid "Search results summary:"
 msgstr "검색 결과 요약"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:60
+#: kitsune/wiki/templates/wiki/review_revision.html:78
 msgid "Revision source:"
 msgstr "변경 사항 소스:"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:64
+#: kitsune/wiki/templates/wiki/review_revision.html:82
 msgid "Revision rendered html:"
 msgstr "HTML로 변경 사항 보기:"
 
@@ -8587,78 +8608,78 @@ msgstr "번역 검토 {id} 언어: {language}  사용자: {user}"
 msgid "Translation Comment: {comment}"
 msgstr "변경 내용"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:21
+#: kitsune/wiki/templates/wiki/review_translation.html:39
 msgid "This translation was already reviewed by {user} on {date}."
 msgstr "현재 번역은 이미 {user}가 {date}에 검토하였습니다."
 
-#: kitsune/wiki/templates/wiki/review_translation.html:25
+#: kitsune/wiki/templates/wiki/review_translation.html:43
 #, fuzzy
 msgid "A newer version has already been reviewed."
 msgstr "리비젼이 확인 되었습니다."
 
-#: kitsune/wiki/templates/wiki/review_translation.html:28
+#: kitsune/wiki/templates/wiki/review_translation.html:46
 msgid "But there is another latest version which is waiting for review."
 msgstr ""
 
-#: kitsune/wiki/templates/wiki/review_translation.html:29
+#: kitsune/wiki/templates/wiki/review_translation.html:47
 #, fuzzy
 msgid "Please review the latest version."
 msgstr "거래 ID를 준비해 주세요."
 
-#: kitsune/wiki/templates/wiki/review_translation.html:37
+#: kitsune/wiki/templates/wiki/review_translation.html:55
 msgid "Recent English Changes"
 msgstr "최신 영문 변경 사항"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:43
+#: kitsune/wiki/templates/wiki/review_translation.html:61
 msgid "Submitted Translation Changes"
 msgstr "제출된 번역 변경 사항"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:45
+#: kitsune/wiki/templates/wiki/review_translation.html:63
 msgid "Current public translation:"
 msgstr "현재 공개 번역 문서"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:45
+#: kitsune/wiki/templates/wiki/review_translation.html:63
 msgid "Submitted translation:"
 msgstr "제출된 번역:"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:48
+#: kitsune/wiki/templates/wiki/review_translation.html:66
 msgid "Full Article Sources"
 msgstr "모든 문서 소스"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:51
+#: kitsune/wiki/templates/wiki/review_translation.html:69
 msgid "The {default_locale} version has no approved content to show."
 msgstr "{default_locale} 버전은 아직 승인된 것이 없습니다."
 
-#: kitsune/wiki/templates/wiki/review_translation.html:57 kitsune/wiki/templates/wiki/translate.html:172
+#: kitsune/wiki/templates/wiki/review_translation.html:75 kitsune/wiki/templates/wiki/translate.html:172
 msgid "Approved {default_locale} version:"
 msgstr "승인된 {default_locale} 버전:"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:58 kitsune/wiki/templates/wiki/review_translation.html:62 kitsune/wiki/templates/wiki/includes/document_macros.html:119
+#: kitsune/wiki/templates/wiki/review_translation.html:76 kitsune/wiki/templates/wiki/review_translation.html:80 kitsune/wiki/templates/wiki/includes/document_macros.html:119
 #: kitsune/wiki/templates/wiki/includes/document_macros.html:131
 msgid "Revision {id} by {user} on {date}"
 msgstr "변경 사항 {id} 제공자: {user} 수정일: {date}"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:61
+#: kitsune/wiki/templates/wiki/review_translation.html:79
 msgid "Submitted {locale} translation:"
 msgstr "제출된 {locale} 번역:"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:96
+#: kitsune/wiki/templates/wiki/review_translation.html:114
 msgid "This document does not have a current translation."
 msgstr "현재 문서에 번역이 없습니다."
 
-#: kitsune/wiki/templates/wiki/review_translation.html:97
+#: kitsune/wiki/templates/wiki/review_translation.html:115
 msgid "Translation keywords:"
 msgstr "번역 키워드:"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:101
+#: kitsune/wiki/templates/wiki/review_translation.html:119
 msgid "Translation search results summary:"
 msgstr "번역 검색 결과 요약:"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:105
+#: kitsune/wiki/templates/wiki/review_translation.html:123
 msgid "Translation source:"
 msgstr "번역 원본:"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:109
+#: kitsune/wiki/templates/wiki/review_translation.html:127
 msgid "Translation rendered html:"
 msgstr "번역 HTML 문서:"
 

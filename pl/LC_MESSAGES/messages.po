@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-26 12:35-0700\n"
+"POT-Creation-Date: 2015-06-01 15:13-0700\n"
 "PO-Revision-Date: 2015-05-25 20:27+0000\n"
 "Last-Translator: Leszek <leszekz@gmail.com>\n"
 "Language-Team: Polish\n"
@@ -1536,7 +1536,7 @@ msgstr "Wyświetl wszystkich nieaktywnych użytkowników"
 
 #: kitsune/flagit/templates/flagit/includes/flagged_answer.html:2 kitsune/flagit/templates/flagit/includes/flagged_post.html:4 kitsune/flagit/templates/flagit/includes/flagged_profile.html:2
 #: kitsune/flagit/templates/flagit/includes/flagged_question.html:4 kitsune/kbforums/forms.py:28 kitsune/kbforums/forms.py:50 kitsune/kbforums/forms.py:76 kitsune/questions/forms.py:271
-#: kitsune/wiki/forms.py:231 kitsune/wiki/templates/wiki/review_translation.html:78 kitsune/wiki/templates/wiki/includes/document_macros.html:146
+#: kitsune/wiki/forms.py:231 kitsune/wiki/templates/wiki/review_translation.html:96 kitsune/wiki/templates/wiki/includes/document_macros.html:146
 msgid "Content:"
 msgstr "Treść:"
 
@@ -3561,7 +3561,7 @@ msgstr "Rozwiązanie zostało wycofane."
 msgid "Glad to hear it!"
 msgstr "Miło nam to słyszeć!"
 
-#: kitsune/questions/views.py:1046 kitsune/wiki/views.py:1034 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:5
+#: kitsune/questions/views.py:1046 kitsune/wiki/views.py:1042 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:5
 msgid "Sorry to hear that."
 msgstr "Przykro nam to słyszeć."
 
@@ -8015,7 +8015,7 @@ msgstr "Wymagające zmian:"
 msgid "Comment:"
 msgstr "Komentarz:"
 
-#: kitsune/wiki/forms.py:218 kitsune/wiki/templates/wiki/review_revision.html:52 kitsune/wiki/templates/wiki/review_translation.html:64 kitsune/wiki/templates/wiki/translate.html:150
+#: kitsune/wiki/forms.py:218 kitsune/wiki/templates/wiki/review_revision.html:70 kitsune/wiki/templates/wiki/review_translation.html:82 kitsune/wiki/templates/wiki/translate.html:150
 #: kitsune/wiki/templates/wiki/includes/document_macros.html:134
 msgid "Keywords:"
 msgstr "Słowa kluczowe:"
@@ -8167,43 +8167,43 @@ msgctxt "KB Topic"
 msgid "browserID"
 msgstr "ID przeglądarki"
 
-#: kitsune/wiki/views.py:733
+#: kitsune/wiki/views.py:741
 msgid "You cannot translate this document."
 msgstr "Nie możesz tłumaczyć tego artykułu."
 
-#: kitsune/wiki/views.py:1032
+#: kitsune/wiki/views.py:1040
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "Miło nam to słyszeć &ndash; dziękujemy za opinię!"
 
-#: kitsune/wiki/views.py:1058
+#: kitsune/wiki/views.py:1066
 msgid "You already voted on this Article."
 msgstr "Oddano już głos na ten artykuł."
 
-#: kitsune/wiki/views.py:1090
+#: kitsune/wiki/views.py:1098
 msgid "Thanks for making us better!"
 msgstr "Dziękujemy za twój wkład!"
 
-#: kitsune/wiki/views.py:1163
+#: kitsune/wiki/views.py:1171
 msgid "Revision %s"
 msgstr "Wersja %s"
 
-#: kitsune/wiki/views.py:1172
+#: kitsune/wiki/views.py:1180
 msgid "Firefox Releases"
 msgstr "Wydania Firefoksa"
 
-#: kitsune/wiki/views.py:1178
+#: kitsune/wiki/views.py:1186
 msgid "Article Revisions"
 msgstr "Wersje artykułu"
 
-#: kitsune/wiki/views.py:1281
+#: kitsune/wiki/views.py:1289
 msgid "{users} added to the contributors successfully!"
 msgstr "Użytkownicy {users} zostali dodani do grupy autorów!"
 
-#: kitsune/wiki/views.py:1288
+#: kitsune/wiki/views.py:1296
 msgid "There were errors adding new contributors, see below."
 msgstr "Podczas dodawania autorów wystąpiły błędy. Zobacz poniżej."
 
-#: kitsune/wiki/views.py:1307
+#: kitsune/wiki/views.py:1315
 msgid "{user} removed from the contributors successfully!"
 msgstr "Użytkownik {user} został usunięty z grupy autorów!"
 
@@ -8482,8 +8482,8 @@ msgstr "Nowy artykuł"
 msgid "Create a New Knowledge Base Article"
 msgstr "Utwórz nowy artykuł bazy wiedzy"
 
-#: kitsune/wiki/templates/wiki/preview.html:2 kitsune/wiki/templates/wiki/review_revision.html:48 kitsune/wiki/templates/wiki/review_revision.html:83
-#: kitsune/wiki/templates/wiki/review_translation.html:93 kitsune/wiki/templates/wiki/review_translation.html:128 kitsune/wiki/templates/wiki/revision.html:101
+#: kitsune/wiki/templates/wiki/preview.html:2 kitsune/wiki/templates/wiki/review_revision.html:66 kitsune/wiki/templates/wiki/review_revision.html:101
+#: kitsune/wiki/templates/wiki/review_translation.html:111 kitsune/wiki/templates/wiki/review_translation.html:146 kitsune/wiki/templates/wiki/revision.html:101
 msgid "Article is for:"
 msgstr "Artykuł dotyczy:"
 
@@ -8507,55 +8507,78 @@ msgstr "Recenzja wersji {id} wykonana przez {user}"
 msgid "Revision Comment: {comment}"
 msgstr "Komentarz do sprawdzenia: {comment}"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:21
+#: kitsune/wiki/templates/wiki/review_revision.html:21 kitsune/wiki/templates/wiki/review_translation.html:21
+#, fuzzy
+msgid "Unreviewed Revision:"
+msgid_plural "Unreviewed Revisions:"
+msgstr[0] "Recenzja wersji"
+msgstr[1] "Recenzja wersji"
+msgstr[2] "Recenzja wersji"
+
+#: kitsune/wiki/templates/wiki/review_revision.html:26 kitsune/wiki/templates/wiki/review_translation.html:26
+#, fuzzy
+msgid "Revision {id} by {user}"
+msgstr "Recenzja wersji {id} wykonana przez {user}"
+
+#: kitsune/wiki/templates/wiki/review_revision.html:28 kitsune/wiki/templates/wiki/review_translation.html:28
+#, fuzzy
+msgid "<label>Revision Comment:</label> {comment}"
+msgstr "Komentarz do sprawdzenia: {comment}"
+
+#: kitsune/wiki/templates/wiki/review_revision.html:30 kitsune/wiki/templates/wiki/review_translation.html:30
+#, fuzzy
+msgid "Review Revision {id}"
+msgstr "Recenzja wersji"
+
+#: kitsune/wiki/templates/wiki/review_revision.html:39
 msgid "This revision was already reviewed by {user} on {date}."
 msgstr "Ta wersja była już sprawdzana przez {user} w dniu {date}."
 
-#: kitsune/wiki/templates/wiki/review_revision.html:25
+#: kitsune/wiki/templates/wiki/review_revision.html:43
 msgid "A newer revision has already been reviewed."
 msgstr "Została już sprawdzona nowsza wersja."
 
-#: kitsune/wiki/templates/wiki/review_revision.html:28
+#: kitsune/wiki/templates/wiki/review_revision.html:46
 msgid "But there is another latest revision which is waiting for review."
 msgstr "Ale jest też nowsza wersja oczekująca na sprawdzenie."
 
-#: kitsune/wiki/templates/wiki/review_revision.html:29
+#: kitsune/wiki/templates/wiki/review_revision.html:47
 msgid "Please review the latest revision."
 msgstr "Proszę , sprawdź najnowszą wersję."
 
-#: kitsune/wiki/templates/wiki/review_revision.html:34
+#: kitsune/wiki/templates/wiki/review_revision.html:52
 msgid "Submitted Revision Changes"
 msgstr "Przesłane zmiany tłumaczenia"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:35
+#: kitsune/wiki/templates/wiki/review_revision.html:53
 msgid "Current public revision:"
 msgstr "Upubliczniona wersja:"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:35
+#: kitsune/wiki/templates/wiki/review_revision.html:53
 msgid "Submitted revision:"
 msgstr "Wysłana wersja:"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:38 kitsune/wiki/templates/wiki/revision.html:80
+#: kitsune/wiki/templates/wiki/review_revision.html:56 kitsune/wiki/templates/wiki/revision.html:80
 msgid "Revision Source"
 msgstr "Źródło wersji"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:44 kitsune/wiki/templates/wiki/review_translation.html:89 kitsune/wiki/templates/wiki/revision.html:86
+#: kitsune/wiki/templates/wiki/review_revision.html:62 kitsune/wiki/templates/wiki/review_translation.html:107 kitsune/wiki/templates/wiki/revision.html:86
 msgid "Revision Content"
 msgstr "Podgląd zawartości"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:51
+#: kitsune/wiki/templates/wiki/review_revision.html:69
 msgid "This document does not have a current revision."
 msgstr "Artykuł nie został jeszcze zaktualizowany."
 
-#: kitsune/wiki/templates/wiki/review_revision.html:56 kitsune/wiki/templates/wiki/review_translation.html:71 kitsune/wiki/templates/wiki/includes/document_macros.html:140
+#: kitsune/wiki/templates/wiki/review_revision.html:74 kitsune/wiki/templates/wiki/review_translation.html:89 kitsune/wiki/templates/wiki/includes/document_macros.html:140
 msgid "Search results summary:"
 msgstr "Wyniki wyszukiwania:"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:60
+#: kitsune/wiki/templates/wiki/review_revision.html:78
 msgid "Revision source:"
 msgstr "Źródło wersji:"
 
-#: kitsune/wiki/templates/wiki/review_revision.html:64
+#: kitsune/wiki/templates/wiki/review_revision.html:82
 msgid "Revision rendered html:"
 msgstr "Renderowany kod html wersji:"
 
@@ -8579,76 +8602,76 @@ msgstr "Recenzowanie tłumaczenia {id} w języku {language} wykonanego przez {us
 msgid "Translation Comment: {comment}"
 msgstr "Komentarz do tłumaczenia: {comment}"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:21
+#: kitsune/wiki/templates/wiki/review_translation.html:39
 msgid "This translation was already reviewed by {user} on {date}."
 msgstr "To tłumaczenie było już sprawdzane przez {user} w dniu {date}."
 
-#: kitsune/wiki/templates/wiki/review_translation.html:25
+#: kitsune/wiki/templates/wiki/review_translation.html:43
 msgid "A newer version has already been reviewed."
 msgstr "Została już sprawdzona nowsza wersja."
 
-#: kitsune/wiki/templates/wiki/review_translation.html:28
+#: kitsune/wiki/templates/wiki/review_translation.html:46
 msgid "But there is another latest version which is waiting for review."
 msgstr "Ale jest też jeszcze nowsza wersja oczekująca na sprawdzenie."
 
-#: kitsune/wiki/templates/wiki/review_translation.html:29
+#: kitsune/wiki/templates/wiki/review_translation.html:47
 msgid "Please review the latest version."
 msgstr "Proszę , sprawdź najnowszą wersję."
 
-#: kitsune/wiki/templates/wiki/review_translation.html:37
+#: kitsune/wiki/templates/wiki/review_translation.html:55
 msgid "Recent English Changes"
 msgstr "Ostatnio dokonane zmiany w wersji angielskiej"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:43
+#: kitsune/wiki/templates/wiki/review_translation.html:61
 msgid "Submitted Translation Changes"
 msgstr "Przesłane zmiany tłumaczenia"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:45
+#: kitsune/wiki/templates/wiki/review_translation.html:63
 msgid "Current public translation:"
 msgstr "Upublicznione tłumaczenie:"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:45
+#: kitsune/wiki/templates/wiki/review_translation.html:63
 msgid "Submitted translation:"
 msgstr "Przesłane tłumaczenie:"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:48
+#: kitsune/wiki/templates/wiki/review_translation.html:66
 msgid "Full Article Sources"
 msgstr "Teksty źródłowe artykułów"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:51
+#: kitsune/wiki/templates/wiki/review_translation.html:69
 msgid "The {default_locale} version has no approved content to show."
 msgstr "Wersja {default_locale} tego artykułu nie została jeszcze zatwierdzona do wyświetlania."
 
-#: kitsune/wiki/templates/wiki/review_translation.html:57 kitsune/wiki/templates/wiki/translate.html:172
+#: kitsune/wiki/templates/wiki/review_translation.html:75 kitsune/wiki/templates/wiki/translate.html:172
 msgid "Approved {default_locale} version:"
 msgstr "Zatwierdzona wersja w języku: {default_locale}"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:58 kitsune/wiki/templates/wiki/review_translation.html:62 kitsune/wiki/templates/wiki/includes/document_macros.html:119
+#: kitsune/wiki/templates/wiki/review_translation.html:76 kitsune/wiki/templates/wiki/review_translation.html:80 kitsune/wiki/templates/wiki/includes/document_macros.html:119
 #: kitsune/wiki/templates/wiki/includes/document_macros.html:131
 msgid "Revision {id} by {user} on {date}"
 msgstr "Wersja {id} wykonana przez {user} w dniu {date}"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:61
+#: kitsune/wiki/templates/wiki/review_translation.html:79
 msgid "Submitted {locale} translation:"
 msgstr "Przesłane tłumaczenie w języku {locale}:"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:96
+#: kitsune/wiki/templates/wiki/review_translation.html:114
 msgid "This document does not have a current translation."
 msgstr "Tłumaczenie artykułu jest nieaktualne."
 
-#: kitsune/wiki/templates/wiki/review_translation.html:97
+#: kitsune/wiki/templates/wiki/review_translation.html:115
 msgid "Translation keywords:"
 msgstr "Słowa kluczowe:"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:101
+#: kitsune/wiki/templates/wiki/review_translation.html:119
 msgid "Translation search results summary:"
 msgstr "Krótki opis wyświetlany w wynikach wyszukiwania:"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:105
+#: kitsune/wiki/templates/wiki/review_translation.html:123
 msgid "Translation source:"
 msgstr "Źródło tłumaczenia:"
 
-#: kitsune/wiki/templates/wiki/review_translation.html:109
+#: kitsune/wiki/templates/wiki/review_translation.html:127
 msgid "Translation rendered html:"
 msgstr "Renderowany kod html tłumaczenia:"
 
