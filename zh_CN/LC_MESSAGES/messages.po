@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-06 09:10-0700\n"
+"POT-Creation-Date: 2015-08-17 14:17-0700\n"
 "PO-Revision-Date: 2015-08-08 21:32+0000\n"
 "Last-Translator: yfdyh000 <yfdyh000@gmail.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -364,7 +364,7 @@ msgstr "您也可以通过我们的伙伴计划，获得我们更有经验的志
 #. #-#-#-#-#  messages.pot (PACKAGE VERSION)  #-#-#-#-#
 #. L10n: Thank you so much for your translation work! You're
 #. L10n: the best!
-#: kitsune/users/templates/users/email/contributor.ltxt:89 kitsune/users/models.py:462 kitsune/users/utils.py:91 kitsune/users/views.py:509 kitsune/users/templates/users/email/contributor.html:84
+#: kitsune/users/templates/users/email/contributor.ltxt:89 kitsune/users/models.py:462 kitsune/users/utils.py:91 kitsune/users/views.py:510 kitsune/users/templates/users/email/contributor.html:84
 msgid "Welcome to SUMO!"
 msgstr "欢迎来到 Mozilla 技术支持！"
 
@@ -730,7 +730,7 @@ msgstr "未答复"
 msgid "Answered"
 msgstr "已答复"
 
-#: kitsune/customercare/views.py:32 kitsune/dashboards/templates/dashboards/contributors.html:25 kitsune/questions/templates/questions/metrics.html:24
+#: kitsune/customercare/views.py:32 kitsune/dashboards/templates/dashboards/includes/macros.html:260 kitsune/questions/templates/questions/metrics.html:24
 #: kitsune/questions/templates/questions/metrics.html:26 kitsune/questions/templates/questions/question_list.html:198
 msgid "All"
 msgstr "所有"
@@ -1204,11 +1204,11 @@ msgstr "所有预装回应的本地化状态"
 msgid "All canned responses articles..."
 msgstr "所有预装回应的知识库文章..."
 
-#: kitsune/dashboards/views.py:60 kitsune/dashboards/views.py:74 kitsune/sumo/templates/includes/common_macros.html:110
+#: kitsune/dashboards/views.py:60 kitsune/dashboards/views.py:75 kitsune/sumo/templates/includes/common_macros.html:110
 msgid "Knowledge Base Dashboard"
 msgstr "知识库状态面板"
 
-#: kitsune/dashboards/views.py:86 kitsune/dashboards/templates/dashboards/includes/macros.html:258
+#: kitsune/dashboards/views.py:89 kitsune/dashboards/templates/dashboards/includes/macros.html:275
 msgid "Localization Dashboard"
 msgstr "本地化状态面板"
 
@@ -1252,19 +1252,15 @@ msgstr "[{product}] 知识库状态面板"
 msgid "All Products"
 msgstr "所有产品"
 
-#: kitsune/dashboards/templates/dashboards/contributors.html:23
-msgid "Filter by type:"
-msgstr "按类型筛选："
-
-#: kitsune/dashboards/templates/dashboards/contributors.html:35 kitsune/dashboards/templates/dashboards/contributors_old.html:20
+#: kitsune/dashboards/templates/dashboards/contributors.html:22 kitsune/dashboards/templates/dashboards/contributors_old.html:20
 msgid "Show information for:"
 msgstr "显示相关信息："
 
-#: kitsune/dashboards/templates/dashboards/contributors.html:61 kitsune/dashboards/templates/dashboards/includes/macros.html:35
+#: kitsune/dashboards/templates/dashboards/contributors.html:48 kitsune/dashboards/templates/dashboards/includes/macros.html:35
 msgid "Overview"
 msgstr "概况"
 
-#: kitsune/dashboards/templates/dashboards/contributors.html:74
+#: kitsune/dashboards/templates/dashboards/contributors.html:61
 msgid "Complete overview..."
 msgstr "完整的概况..."
 
@@ -1423,27 +1419,31 @@ msgctxt "DB: products.Topic.title"
 msgid "None"
 msgstr "无"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:256
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:258
+msgid "Filter by type:"
+msgstr "按类型筛选："
+
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:273
 msgid "KB Dashboard"
 msgstr "知识库仪表板"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:262
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:279
 msgid "Locale Metrics"
 msgstr "语种指标"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:267
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:284
 msgid "KB Team"
 msgstr "知识库团队"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:269
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:286
 msgid "Localization Team"
 msgstr "本地化团队"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:274 kitsune/sumo/templates/includes/common_macros.html:112 kitsune/wiki/templates/wiki/recent_revisions.html:3
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:291 kitsune/sumo/templates/includes/common_macros.html:112 kitsune/wiki/templates/wiki/recent_revisions.html:3
 msgid "Recent Revisions"
 msgstr "最新修订"
 
-#: kitsune/dashboards/templates/dashboards/includes/macros.html:279
+#: kitsune/dashboards/templates/dashboards/includes/macros.html:296
 msgid "Aggregated Metrics"
 msgstr "指标汇总"
 
@@ -2179,7 +2179,7 @@ msgstr "关注此语言"
 msgid "Watch"
 msgstr "关注"
 
-#: kitsune/kbforums/templates/kbforums/discussions.html:30 kitsune/kbforums/templates/kbforums/posts.html:46 kitsune/kbforums/templates/kbforums/threads.html:33 kitsune/questions/views.py:98
+#: kitsune/kbforums/templates/kbforums/discussions.html:30 kitsune/kbforums/templates/kbforums/posts.html:46 kitsune/kbforums/templates/kbforums/threads.html:33 kitsune/questions/views.py:99
 msgid "Replies"
 msgstr "回复"
 
@@ -2291,7 +2291,7 @@ msgstr "最后回复者为"
 msgid "Sticky"
 msgstr "置顶"
 
-#: kitsune/kbforums/templates/kbforums/posts.html:49 kitsune/questions/views.py:90 kitsune/questions/templates/questions/question_list.html:147 kitsune/search/__init__.py:33
+#: kitsune/kbforums/templates/kbforums/posts.html:49 kitsune/questions/views.py:91 kitsune/questions/templates/questions/question_list.html:147 kitsune/search/__init__.py:33
 #: kitsune/search/forms.py:130
 msgid "Locked"
 msgstr "已锁定"
@@ -2965,7 +2965,7 @@ msgstr "删除消息？"
 msgid "Trash"
 msgstr "垃圾"
 
-#: kitsune/messages/templates/messages/mobile/inbox.html:19 kitsune/messages/templates/messages/mobile/outbox.html:19 kitsune/questions/views.py:81
+#: kitsune/messages/templates/messages/mobile/inbox.html:19 kitsune/messages/templates/messages/mobile/outbox.html:19 kitsune/questions/views.py:82
 msgid "New"
 msgstr "新"
 
@@ -3496,108 +3496,108 @@ msgstr "应用程序"
 msgid "Account"
 msgstr "帐户"
 
-#: kitsune/questions/views.py:73
+#: kitsune/questions/views.py:74
 msgid "That tag does not exist."
 msgstr "该标签不存在。"
 
-#: kitsune/questions/views.py:74
+#: kitsune/questions/views.py:75
 msgid "Please provide a tag."
 msgstr "请提供一个标签。"
 
-#: kitsune/questions/views.py:78
+#: kitsune/questions/views.py:79
 msgid "Recently unanswered"
 msgstr "近期尚未回答"
 
-#: kitsune/questions/views.py:82
+#: kitsune/questions/views.py:83
 msgid "Answers didn't help"
 msgstr "答案没有帮助"
 
-#: kitsune/questions/views.py:85
+#: kitsune/questions/views.py:86
 msgid "Needs info"
 msgstr "需要信息"
 
-#: kitsune/questions/views.py:86
+#: kitsune/questions/views.py:87
 msgid "Solution provided"
 msgstr "已提供解决方案"
 
-#: kitsune/questions/views.py:89 kitsune/questions/templates/questions/question_list.html:141 kitsune/search/forms.py:138 kitsune/search/templates/search/includes/result.html:9
+#: kitsune/questions/views.py:90 kitsune/questions/templates/questions/question_list.html:141 kitsune/search/forms.py:138 kitsune/search/templates/search/includes/result.html:9
 msgid "Solved"
 msgstr "已解决"
 
-#: kitsune/questions/views.py:95
+#: kitsune/questions/views.py:96
 msgid "Updated"
 msgstr "最后更新于"
 
-#: kitsune/questions/views.py:96
+#: kitsune/questions/views.py:97
 msgid "Views"
 msgstr "次查看"
 
-#: kitsune/questions/views.py:97 kitsune/search/forms.py:150
+#: kitsune/questions/views.py:98 kitsune/search/forms.py:150
 msgid "Votes"
 msgstr "投票数"
 
-#: kitsune/questions/views.py:499
+#: kitsune/questions/views.py:504
 msgid "The questions forum isn't available in {old_lang}, we have redirected you to the {new_lang} questions forum."
 msgstr "问题论坛无法在 {old_lang} 下使用，我们已为您重定向到 {new_lang} 问题论坛。"
 
-#: kitsune/questions/views.py:536
+#: kitsune/questions/views.py:541
 msgid "The questions forum isn't available for {product} in {old_lang}, we have redirected you to the {new_lang} questions forum."
 msgstr "问题论坛无法在 {old_lang} 下对 {product} 使用，我们已为您重定向到 {new_lang} 的问题论坛。"
 
-#: kitsune/questions/views.py:652
+#: kitsune/questions/views.py:657
 msgid "Please confirm your Firefox Help question"
 msgstr "请确认您的 Firefox 帮助 问题"
 
 #. L10n: This shouldn't happen unless people tamper with POST data.
-#: kitsune/questions/views.py:663
+#: kitsune/questions/views.py:668
 msgid "Request type not recognized."
 msgstr "无法识别请求的类型。"
 
-#: kitsune/questions/views.py:734
+#: kitsune/questions/views.py:739
 msgid "Done! Your question is now posted on the Mozilla community support forum."
 msgstr "完成！您的问题已成功在 Mozilla 社区支持论坛上发布。"
 
-#: kitsune/questions/views.py:958
+#: kitsune/questions/views.py:963
 msgid "Thank you for choosing a solution!"
 msgstr "感谢您选了一个解决方案！"
 
-#: kitsune/questions/views.py:962
+#: kitsune/questions/views.py:967
 msgid "This question already has a solution."
 msgstr "此问题已经有了一个解决方案。"
 
-#: kitsune/questions/views.py:988
+#: kitsune/questions/views.py:993
 msgid "The solution was undone successfully."
 msgstr "该解决方案已成功撤销。"
 
-#: kitsune/questions/views.py:1061
+#: kitsune/questions/views.py:1066
 msgid "Glad to hear it!"
 msgstr "很高兴听到这个消息！"
 
-#: kitsune/questions/views.py:1063 kitsune/wiki/views.py:1041 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:5
+#: kitsune/questions/views.py:1068 kitsune/wiki/views.py:1050 kitsune/wiki/templates/wiki/includes/unhelpful_survey.html:5
 msgid "Sorry to hear that."
 msgstr "很抱歉听到这消息。"
 
-#: kitsune/questions/views.py:1084
+#: kitsune/questions/views.py:1089
 msgid "You already voted on this reply."
 msgstr "您已在此回答上投过票了。"
 
-#: kitsune/questions/views.py:1379
+#: kitsune/questions/views.py:1384
 msgid "Could not send a message to that email address."
 msgstr "不能向那个邮件地址发送邮件。"
 
-#: kitsune/questions/views.py:1384
+#: kitsune/questions/views.py:1389
 msgid "You will be notified of updates by email."
 msgstr "有更新时您会得到邮件通知。"
 
-#: kitsune/questions/views.py:1386
+#: kitsune/questions/views.py:1391
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "您很快会收到邮件确认您的订阅。"
 
-#: kitsune/questions/views.py:1466
+#: kitsune/questions/views.py:1471
 msgid "There was an error submitting the ticket. Please try again later."
 msgstr "提交票据时发生错误，请稍后再试。"
 
-#: kitsune/questions/views.py:1704
+#: kitsune/questions/views.py:1709
 msgid "I invited {user} to a screen sharing session, and I'll give an update here once we are done."
 msgstr "我已邀请 {user} 参与一个屏幕共享会话，一旦我得到新消息，我会在这里显示。"
 
@@ -4897,12 +4897,12 @@ msgstr[0] "本周的 {n} 个新內容"
 msgid "No results found"
 msgstr "找不到结果"
 
-#: kitsune/sumo/api.py:87
+#: kitsune/sumo/api.py:88
 msgctxt "None"
 msgid "None"
 msgstr "无"
 
-#: kitsune/sumo/db_strings.py:6 kitsune/sumo/db_strings.py:112 kitsune/sumo/db_strings.py:302
+#: kitsune/sumo/db_strings.py:6 kitsune/sumo/db_strings.py:112 kitsune/sumo/db_strings.py:306
 msgctxt "DB: products.Topic.title"
 msgid "Learn the Basics: get started"
 msgstr "学习基础知识：入门"
@@ -4952,7 +4952,7 @@ msgctxt "DB: products.Topic.description"
 msgid "Change how Firefox handles videos, animations, music and other interactive content"
 msgstr "调整 Firefox 如何处理视频、动画、音乐和互动内容"
 
-#: kitsune/sumo/db_strings.py:16 kitsune/sumo/db_strings.py:114 kitsune/sumo/db_strings.py:236
+#: kitsune/sumo/db_strings.py:16 kitsune/sumo/db_strings.py:114 kitsune/sumo/db_strings.py:240
 msgctxt "DB: products.Topic.title"
 msgid "Download, install and migration"
 msgstr "下载、安装与迁移"
@@ -5042,7 +5042,7 @@ msgctxt "DB: products.Topic.description"
 msgid "Connect on video and share pages with your network"
 msgstr "与您的圈子进行视频联络和分享页面"
 
-#: kitsune/sumo/db_strings.py:34 kitsune/sumo/db_strings.py:126 kitsune/sumo/db_strings.py:226
+#: kitsune/sumo/db_strings.py:34 kitsune/sumo/db_strings.py:126 kitsune/sumo/db_strings.py:230
 msgctxt "DB: products.Topic.title"
 msgid "Customize controls, options and add-ons"
 msgstr "定制控件、选项与附加组件"
@@ -5052,7 +5052,7 @@ msgctxt "DB: products.Topic.description"
 msgid "Make Firefox yours by adding and managing the features that you want."
 msgstr "添加和管理您想要的功能，让你的 Firefox 独具一格。"
 
-#: kitsune/sumo/db_strings.py:36 kitsune/sumo/db_strings.py:124 kitsune/sumo/db_strings.py:244
+#: kitsune/sumo/db_strings.py:36 kitsune/sumo/db_strings.py:124 kitsune/sumo/db_strings.py:248
 msgctxt "DB: products.Topic.title"
 msgid "Privacy and security settings"
 msgstr "隐私与安全设置"
@@ -5082,12 +5082,12 @@ msgctxt "DB: products.Topic.description"
 msgid "How to use Firefox's privacy and security features"
 msgstr "如何使用 Firefox 的隐私和安全功能"
 
-#: kitsune/sumo/db_strings.py:42 kitsune/sumo/db_strings.py:110 kitsune/sumo/db_strings.py:170 kitsune/sumo/db_strings.py:260 kitsune/sumo/db_strings.py:304
+#: kitsune/sumo/db_strings.py:42 kitsune/sumo/db_strings.py:110 kitsune/sumo/db_strings.py:170 kitsune/sumo/db_strings.py:264 kitsune/sumo/db_strings.py:308
 msgctxt "DB: products.Topic.title"
 msgid "Get community support"
 msgstr "获得社区支持"
 
-#: kitsune/sumo/db_strings.py:43 kitsune/sumo/db_strings.py:111 kitsune/sumo/db_strings.py:171 kitsune/sumo/db_strings.py:261 kitsune/sumo/db_strings.py:305
+#: kitsune/sumo/db_strings.py:43 kitsune/sumo/db_strings.py:111 kitsune/sumo/db_strings.py:171 kitsune/sumo/db_strings.py:265 kitsune/sumo/db_strings.py:309
 msgctxt "DB: products.Topic.description"
 msgid "Get community support"
 msgstr "获得社区支持"
@@ -5102,7 +5102,7 @@ msgctxt "DB: products.Topic.description"
 msgid "Make Firefox yours through customization settings and add-ons"
 msgstr "借助自定义的设置和附加组件，让 Firefox 更有您的风格"
 
-#: kitsune/sumo/db_strings.py:46 kitsune/sumo/db_strings.py:108 kitsune/sumo/db_strings.py:254
+#: kitsune/sumo/db_strings.py:46 kitsune/sumo/db_strings.py:108 kitsune/sumo/db_strings.py:258
 msgctxt "DB: products.Topic.title"
 msgid "Fix slowness, crashing, error messages and other problems"
 msgstr "解决速度缓慢、崩溃、错误提示及其他问题"
@@ -5172,12 +5172,12 @@ msgctxt "DB: products.Topic.description"
 msgid "Firefox controls and buttons"
 msgstr "Firefox 控件与按钮"
 
-#: kitsune/sumo/db_strings.py:60 kitsune/sumo/db_strings.py:240
+#: kitsune/sumo/db_strings.py:60 kitsune/sumo/db_strings.py:244
 msgctxt "DB: products.Topic.title"
 msgid "Tab settings"
 msgstr "标签页设置"
 
-#: kitsune/sumo/db_strings.py:61 kitsune/sumo/db_strings.py:241
+#: kitsune/sumo/db_strings.py:61 kitsune/sumo/db_strings.py:245
 msgctxt "DB: products.Topic.description"
 msgid "Tab settings"
 msgstr "标签页设置"
@@ -5222,7 +5222,7 @@ msgctxt "DB: products.Topic.description"
 msgid "Fix problems with websites (Facebook, YouTube, webmail etc.)"
 msgstr "修复网站问题（微博、邮箱、论坛等）修复网站问题（微博、邮箱、论坛等）"
 
-#: kitsune/sumo/db_strings.py:70 kitsune/sumo/db_strings.py:242
+#: kitsune/sumo/db_strings.py:70 kitsune/sumo/db_strings.py:246
 msgctxt "DB: products.Topic.title"
 msgid "Error messages: what they mean and how to fix"
 msgstr "错误信息：含义与解决方法"
@@ -5242,12 +5242,12 @@ msgctxt "DB: products.Topic.description"
 msgid "Unblock Firefox from connecting to the Internet"
 msgstr "解决 Firefox 无法联网的问题"
 
-#: kitsune/sumo/db_strings.py:74 kitsune/sumo/db_strings.py:176 kitsune/sumo/db_strings.py:252
+#: kitsune/sumo/db_strings.py:74 kitsune/sumo/db_strings.py:176 kitsune/sumo/db_strings.py:256
 msgctxt "DB: products.Topic.title"
 msgid "Procedures to diagnose and fix problems"
 msgstr "分析与解决问题的方案"
 
-#: kitsune/sumo/db_strings.py:75 kitsune/sumo/db_strings.py:177 kitsune/sumo/db_strings.py:253
+#: kitsune/sumo/db_strings.py:75 kitsune/sumo/db_strings.py:177 kitsune/sumo/db_strings.py:257
 msgctxt "DB: products.Topic.description"
 msgid "Procedures to diagnose and fix problems"
 msgstr "分析与解决问题的方案"
@@ -5292,42 +5292,42 @@ msgctxt "DB: products.Topic.description"
 msgid "Firefox won't save settings or remember information"
 msgstr "Firefox 无法保存设置或者记忆信息"
 
-#: kitsune/sumo/db_strings.py:84 kitsune/sumo/db_strings.py:264
+#: kitsune/sumo/db_strings.py:84 kitsune/sumo/db_strings.py:268
 msgctxt "DB: products.Topic.title"
 msgid "Problems with add-ons, plugins or unwanted software"
 msgstr "附加组件、插件或者不必要软件的问题"
 
-#: kitsune/sumo/db_strings.py:85 kitsune/sumo/db_strings.py:265
+#: kitsune/sumo/db_strings.py:85 kitsune/sumo/db_strings.py:269
 msgctxt "DB: products.Topic.description"
 msgid "Problems with add-ons, plugins or unwanted software"
 msgstr "附加组件、插件或者不必要软件的问题"
 
-#: kitsune/sumo/db_strings.py:86 kitsune/sumo/db_strings.py:138 kitsune/sumo/db_strings.py:178 kitsune/sumo/db_strings.py:306
+#: kitsune/sumo/db_strings.py:86 kitsune/sumo/db_strings.py:138 kitsune/sumo/db_strings.py:178 kitsune/sumo/db_strings.py:310
 msgctxt "DB: products.Topic.title"
 msgid "Mozilla Persona"
 msgstr "Mozilla Persona"
 
-#: kitsune/sumo/db_strings.py:87 kitsune/sumo/db_strings.py:139 kitsune/sumo/db_strings.py:179 kitsune/sumo/db_strings.py:307
+#: kitsune/sumo/db_strings.py:87 kitsune/sumo/db_strings.py:139 kitsune/sumo/db_strings.py:179 kitsune/sumo/db_strings.py:311
 msgctxt "DB: products.Topic.description"
 msgid "Mozilla Persona"
 msgstr "Mozilla Persona"
 
-#: kitsune/sumo/db_strings.py:88 kitsune/sumo/db_strings.py:180 kitsune/sumo/db_strings.py:308
+#: kitsune/sumo/db_strings.py:88 kitsune/sumo/db_strings.py:180 kitsune/sumo/db_strings.py:312
 msgctxt "DB: products.Topic.title"
 msgid "Hot topics"
 msgstr "热门主题"
 
-#: kitsune/sumo/db_strings.py:89 kitsune/sumo/db_strings.py:181 kitsune/sumo/db_strings.py:309
+#: kitsune/sumo/db_strings.py:89 kitsune/sumo/db_strings.py:181 kitsune/sumo/db_strings.py:313
 msgctxt "DB: products.Topic.description"
 msgid "Hot topics"
 msgstr "热门主题"
 
-#: kitsune/sumo/db_strings.py:90 kitsune/sumo/db_strings.py:142 kitsune/sumo/db_strings.py:268 kitsune/sumo/db_strings.py:300
+#: kitsune/sumo/db_strings.py:90 kitsune/sumo/db_strings.py:142 kitsune/sumo/db_strings.py:272 kitsune/sumo/db_strings.py:304
 msgctxt "DB: products.Topic.title"
 msgid "Other"
 msgstr "其他"
 
-#: kitsune/sumo/db_strings.py:91 kitsune/sumo/db_strings.py:143 kitsune/sumo/db_strings.py:269
+#: kitsune/sumo/db_strings.py:91 kitsune/sumo/db_strings.py:143 kitsune/sumo/db_strings.py:273
 msgctxt "DB: products.Topic.description"
 msgid "Other"
 msgstr "其他"
@@ -5542,7 +5542,7 @@ msgctxt "DB: products.Topic.description"
 msgid "Keep your information safe with Firefox OS locks, privacy features and more."
 msgstr "使用 Firefox OS 的锁定、隐私保护等功能保证您的信息安全性。"
 
-#: kitsune/sumo/db_strings.py:164 kitsune/sumo/db_strings.py:296
+#: kitsune/sumo/db_strings.py:164 kitsune/sumo/db_strings.py:300
 msgctxt "DB: products.Topic.title"
 msgid "Settings"
 msgstr "设置"
@@ -5728,589 +5728,613 @@ msgid "Access websites easily with bookmarks and tab features"
 msgstr "借助书签和标签页，轻松地访问网站"
 
 #: kitsune/sumo/db_strings.py:212
+#, fuzzy
+msgctxt "DB: products.Topic.title"
+msgid "Search"
+msgstr "搜索"
+
+#: kitsune/sumo/db_strings.py:213
+#, fuzzy
+msgctxt "DB: products.Topic.description"
+msgid "Customize your search settings in Firefox for iOS"
+msgstr "更改您的 Firefox for iOS 历史记录设置"
+
+#: kitsune/sumo/db_strings.py:214
 msgctxt "DB: products.Topic.title"
 msgid "Emails"
 msgstr "电子邮件"
 
-#: kitsune/sumo/db_strings.py:213
+#: kitsune/sumo/db_strings.py:215
 msgctxt "DB: products.Topic.description"
 msgid "Learn to set up accounts, read, send and manage emails"
 msgstr "了解如何设置账号，及收发和管理电子邮件"
 
-#: kitsune/sumo/db_strings.py:214
+#: kitsune/sumo/db_strings.py:216
 msgctxt "DB: products.Topic.title"
 msgid "Privacy"
 msgstr "隐私"
 
-#: kitsune/sumo/db_strings.py:215
+#: kitsune/sumo/db_strings.py:217
 msgctxt "DB: products.Topic.description"
 msgid "Protect your information with Firefox's privacy settings on iOS"
 msgstr "在 iOS 上使用 Firefox 的隐私设置保护您的信息"
 
-#: kitsune/sumo/db_strings.py:216
+#: kitsune/sumo/db_strings.py:218
 msgctxt "DB: products.Topic.title"
 msgid "News Feeds (RSS), Blogs and Social"
 msgstr "收取点（RSS）、博客及社交网络"
 
-#: kitsune/sumo/db_strings.py:217
+#: kitsune/sumo/db_strings.py:219
 msgctxt "DB: products.Topic.description"
 msgid "Stay up to date with news feeds, blogs and social features"
 msgstr "使用收取点、博客和社交网络随时获知最新消息"
 
-#: kitsune/sumo/db_strings.py:218
+#: kitsune/sumo/db_strings.py:220
 msgctxt "DB: products.Topic.title"
 msgid "Sharing"
 msgstr "分享"
 
-#: kitsune/sumo/db_strings.py:219
+#: kitsune/sumo/db_strings.py:221
 msgctxt "DB: products.Topic.description"
 msgid "Share web pages on Firefox for iOS"
 msgstr "在 Firefox for iOS 上分享网页"
 
-#: kitsune/sumo/db_strings.py:220
+#: kitsune/sumo/db_strings.py:222
+#, fuzzy
+msgctxt "DB: products.Topic.title"
+msgid "Customize preferences"
+msgstr "自定义设置和首选项"
+
+#: kitsune/sumo/db_strings.py:223
+#, fuzzy
+msgctxt "DB: products.Topic.description"
+msgid "Customize preferences for Firefox for iOS"
+msgstr "定制您的 Firefox OS 设备的屏幕。"
+
+#: kitsune/sumo/db_strings.py:224
 msgctxt "DB: products.Topic.title"
 msgid "Contacts"
 msgstr "联系人"
 
-#: kitsune/sumo/db_strings.py:221
+#: kitsune/sumo/db_strings.py:225
 msgctxt "DB: products.Topic.description"
 msgid "How to use the address book on Thunderbird"
 msgstr "如何使用 Thunderbird 上的通讯录"
 
-#: kitsune/sumo/db_strings.py:222
+#: kitsune/sumo/db_strings.py:226
 msgctxt "DB: products.Topic.title"
 msgid "Crashes, errors and other issues"
 msgstr "崩溃、错误及其他问题"
 
-#: kitsune/sumo/db_strings.py:223
+#: kitsune/sumo/db_strings.py:227
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot error message on Firefox for iOS"
 msgstr "解决 Firefox for iOS 上的错误信息"
 
-#: kitsune/sumo/db_strings.py:224
+#: kitsune/sumo/db_strings.py:228
 msgctxt "DB: products.Topic.title"
 msgid "Calendar"
 msgstr "日历"
 
-#: kitsune/sumo/db_strings.py:225
+#: kitsune/sumo/db_strings.py:229
 msgctxt "DB: products.Topic.description"
 msgid "Related to the Lightning add-on for Calendar"
 msgstr "与 Lightning 日历组件的有关问题"
 
-#: kitsune/sumo/db_strings.py:227
+#: kitsune/sumo/db_strings.py:231
 msgctxt "DB: products.Topic.description"
 msgid "Customize controls, options and add-ons"
 msgstr "定制控件、选项与附加组件"
 
-#: kitsune/sumo/db_strings.py:228
-msgctxt "DB: products.Topic.title"
-msgid "Thunderbird versions and languages"
-msgstr "Thunderbird 版本与语言"
-
-#: kitsune/sumo/db_strings.py:229
-msgctxt "DB: products.Topic.description"
-msgid "Thunderbird versions and languages"
-msgstr "Thunderbird 版本与语言"
-
-#: kitsune/sumo/db_strings.py:230
-msgctxt "DB: products.Topic.title"
-msgid "Passwords, forms and search"
-msgstr "密码、表单和搜索"
-
-#: kitsune/sumo/db_strings.py:231
-msgctxt "DB: products.Topic.description"
-msgid "Passwords, forms and search"
-msgstr "密码、表单和搜索"
-
 #: kitsune/sumo/db_strings.py:232
+msgctxt "DB: products.Topic.title"
+msgid "Thunderbird versions and languages"
+msgstr "Thunderbird 版本与语言"
+
+#: kitsune/sumo/db_strings.py:233
+msgctxt "DB: products.Topic.description"
+msgid "Thunderbird versions and languages"
+msgstr "Thunderbird 版本与语言"
+
+#: kitsune/sumo/db_strings.py:234
+msgctxt "DB: products.Topic.title"
+msgid "Passwords, forms and search"
+msgstr "密码、表单和搜索"
+
+#: kitsune/sumo/db_strings.py:235
+msgctxt "DB: products.Topic.description"
+msgid "Passwords, forms and search"
+msgstr "密码、表单和搜索"
+
+#: kitsune/sumo/db_strings.py:236
 msgctxt "DB: products.Topic.title"
 msgid "Thunderbird controls and buttons"
 msgstr "Thunderbird 控件和按钮"
 
-#: kitsune/sumo/db_strings.py:233
+#: kitsune/sumo/db_strings.py:237
 msgctxt "DB: products.Topic.description"
 msgid "Learn all about Thunderbird controls and functionality."
 msgstr "了解所有有关 Thunderbird 的控制部件和功能。"
 
-#: kitsune/sumo/db_strings.py:234
+#: kitsune/sumo/db_strings.py:238
 msgctxt "DB: products.Topic.title"
 msgid "Fix problems with email providers (gmail, Yahoo, etc.)"
 msgstr "修正有关电子邮件提供商的问题（如 Gmail、雅虎等邮箱）"
 
-#: kitsune/sumo/db_strings.py:235
+#: kitsune/sumo/db_strings.py:239
 msgctxt "DB: products.Topic.description"
 msgid "Learn how to fix problems with Gmail, Yahoo and other email providers"
 msgstr "了解如何修复有关 Gmail、Yahoo 等电子邮件服务提供商的问题。"
 
-#: kitsune/sumo/db_strings.py:237
+#: kitsune/sumo/db_strings.py:241
 msgctxt "DB: products.Topic.description"
 msgid "Download, install and Migration"
 msgstr "下载、安装和迁移"
 
-#: kitsune/sumo/db_strings.py:238
+#: kitsune/sumo/db_strings.py:242
 msgctxt "DB: products.Topic.title"
-msgid "Copy your personal information from one Thunderbird to another"
-msgstr "将您的个人信息从一个 Thunderbird 转移到另一个"
-
-#: kitsune/sumo/db_strings.py:239
-msgctxt "DB: products.Topic.description"
 msgid "Copy your personal information from one Thunderbird to another"
 msgstr "将您的个人信息从一个 Thunderbird 转移到另一个"
 
 #: kitsune/sumo/db_strings.py:243
 msgctxt "DB: products.Topic.description"
+msgid "Copy your personal information from one Thunderbird to another"
+msgstr "将您的个人信息从一个 Thunderbird 转移到另一个"
+
+#: kitsune/sumo/db_strings.py:247
+msgctxt "DB: products.Topic.description"
 msgid "Error messages: what they mean and how to fix"
 msgstr "错误信息：表示的含义以及解决方法"
 
-#: kitsune/sumo/db_strings.py:245
+#: kitsune/sumo/db_strings.py:249
 msgctxt "DB: products.Topic.description"
 msgid "Keep your information safe with password and security settings"
 msgstr "通过密码与安全设置保证您的信息安全性"
 
-#: kitsune/sumo/db_strings.py:246
-msgctxt "DB: products.Topic.title"
-msgid "Customize Thunderbird with add-ons, plugins, and extensions"
-msgstr "用附加组件、插件和扩展定制 Thunderbird"
-
-#: kitsune/sumo/db_strings.py:247
-msgctxt "DB: products.Topic.description"
-msgid "Customize Thunderbird with add-ons, plugins, and extensions"
-msgstr "用附加组件、插件和扩展定制 Thunderbird"
-
-#: kitsune/sumo/db_strings.py:248
-msgctxt "DB: products.Topic.title"
-msgid "Unblock Thunderbird from connecting to the Internet"
-msgstr "解决 Thunderbird 无法联网的问题"
-
-#: kitsune/sumo/db_strings.py:249
-msgctxt "DB: products.Topic.description"
-msgid "Unblock Thunderbird from connecting to the Internet"
-msgstr "解决 Thunderbird 无法联网的问题"
-
 #: kitsune/sumo/db_strings.py:250
 msgctxt "DB: products.Topic.title"
-msgid "Thunderbird options, preferences and settings"
-msgstr "Thunderbird 选项、首选项和设置"
+msgid "Customize Thunderbird with add-ons, plugins, and extensions"
+msgstr "用附加组件、插件和扩展定制 Thunderbird"
 
 #: kitsune/sumo/db_strings.py:251
 msgctxt "DB: products.Topic.description"
+msgid "Customize Thunderbird with add-ons, plugins, and extensions"
+msgstr "用附加组件、插件和扩展定制 Thunderbird"
+
+#: kitsune/sumo/db_strings.py:252
+msgctxt "DB: products.Topic.title"
+msgid "Unblock Thunderbird from connecting to the Internet"
+msgstr "解决 Thunderbird 无法联网的问题"
+
+#: kitsune/sumo/db_strings.py:253
+msgctxt "DB: products.Topic.description"
+msgid "Unblock Thunderbird from connecting to the Internet"
+msgstr "解决 Thunderbird 无法联网的问题"
+
+#: kitsune/sumo/db_strings.py:254
+msgctxt "DB: products.Topic.title"
 msgid "Thunderbird options, preferences and settings"
 msgstr "Thunderbird 选项、首选项和设置"
 
 #: kitsune/sumo/db_strings.py:255
 msgctxt "DB: products.Topic.description"
-msgid "Troubleshoot error messages on Thunderbird."
-msgstr "解决在 Thunderbird 上的错误信息。"
-
-#: kitsune/sumo/db_strings.py:256
-msgctxt "DB: products.Topic.title"
-msgid "Thunderbird is slow or stops working"
-msgstr "Thunderbird 缓慢或停止工作"
-
-#: kitsune/sumo/db_strings.py:257
-msgctxt "DB: products.Topic.description"
-msgid "Thunderbird is slow or stops working"
-msgstr "Thunderbird 缓慢或停止工作"
-
-#: kitsune/sumo/db_strings.py:258
-msgctxt "DB: products.Topic.title"
-msgid "Thunderbird crashes"
-msgstr "Thunderbird 崩溃"
+msgid "Thunderbird options, preferences and settings"
+msgstr "Thunderbird 选项、首选项和设置"
 
 #: kitsune/sumo/db_strings.py:259
 msgctxt "DB: products.Topic.description"
+msgid "Troubleshoot error messages on Thunderbird."
+msgstr "解决在 Thunderbird 上的错误信息。"
+
+#: kitsune/sumo/db_strings.py:260
+msgctxt "DB: products.Topic.title"
+msgid "Thunderbird is slow or stops working"
+msgstr "Thunderbird 缓慢或停止工作"
+
+#: kitsune/sumo/db_strings.py:261
+msgctxt "DB: products.Topic.description"
+msgid "Thunderbird is slow or stops working"
+msgstr "Thunderbird 缓慢或停止工作"
+
+#: kitsune/sumo/db_strings.py:262
+msgctxt "DB: products.Topic.title"
 msgid "Thunderbird crashes"
 msgstr "Thunderbird 崩溃"
 
-#: kitsune/sumo/db_strings.py:262
+#: kitsune/sumo/db_strings.py:263
+msgctxt "DB: products.Topic.description"
+msgid "Thunderbird crashes"
+msgstr "Thunderbird 崩溃"
+
+#: kitsune/sumo/db_strings.py:266
 msgctxt "DB: products.Topic.title"
 msgid "Thunderbird won't save settings or remember information"
 msgstr "Thunderbird 没有保存设置或者记住信息"
 
-#: kitsune/sumo/db_strings.py:263
+#: kitsune/sumo/db_strings.py:267
 msgctxt "DB: products.Topic.description"
 msgid "Thunderbird won't save settings or remember information"
 msgstr "Thunderbird 没有保存设置或者记住信息"
 
-#: kitsune/sumo/db_strings.py:266
+#: kitsune/sumo/db_strings.py:270
 msgctxt "DB: products.Topic.title"
 msgid "How To"
 msgstr "怎样"
 
-#: kitsune/sumo/db_strings.py:267
+#: kitsune/sumo/db_strings.py:271
 msgctxt "DB: products.Topic.description"
 msgid "Articles that tell you how you can do more with Thunderbird"
 msgstr "这些文章告诉您怎样更好地使用 Thunderbird"
 
-#: kitsune/sumo/db_strings.py:270
+#: kitsune/sumo/db_strings.py:274
 msgctxt "DB: products.Topic.title"
 msgid "Intro to Open Badges"
 msgstr "介绍开放徽章"
 
-#: kitsune/sumo/db_strings.py:271
+#: kitsune/sumo/db_strings.py:275
 msgctxt "DB: products.Topic.description"
 msgid "Learn the basic about Open Badges"
 msgstr "了解有关 Open Badges 的基本知识"
 
-#: kitsune/sumo/db_strings.py:272
+#: kitsune/sumo/db_strings.py:276
 msgctxt "DB: products.Topic.title"
 msgid "BadgeKit"
 msgstr "BadgeKit"
 
-#: kitsune/sumo/db_strings.py:273
+#: kitsune/sumo/db_strings.py:277
 msgctxt "DB: products.Topic.description"
 msgid "Learn how to create, assess and issue badges"
 msgstr "了解如何创建、评定和颁发徽章"
 
-#: kitsune/sumo/db_strings.py:274
+#: kitsune/sumo/db_strings.py:278
 msgctxt "DB: products.Topic.title"
 msgid "Get Involved"
 msgstr "参与"
 
-#: kitsune/sumo/db_strings.py:275
+#: kitsune/sumo/db_strings.py:279
 msgctxt "DB: products.Topic.description"
 msgid "Help the Open Badges community"
 msgstr "帮助 Open Badges 社区"
 
-#: kitsune/sumo/db_strings.py:276
+#: kitsune/sumo/db_strings.py:280
 msgctxt "DB: products.Topic.title"
 msgid "Earn Badges"
 msgstr "获取徽章"
 
-#: kitsune/sumo/db_strings.py:277
+#: kitsune/sumo/db_strings.py:281
 msgctxt "DB: products.Topic.description"
 msgid "Earn Badges for the skills you learn online and offline"
 msgstr "为您学到的线上与线下技能赚取徽章"
 
-#: kitsune/sumo/db_strings.py:278
+#: kitsune/sumo/db_strings.py:282
 msgctxt "DB: products.Topic.title"
 msgid "Issue Badges"
 msgstr "颁发徽章"
 
-#: kitsune/sumo/db_strings.py:279
+#: kitsune/sumo/db_strings.py:283
 msgctxt "DB: products.Topic.description"
 msgid "Issue digital badges to acknowledge new skills and achievements"
 msgstr "颁发数字徽章以表彰新的技能与成就"
 
-#: kitsune/sumo/db_strings.py:280
+#: kitsune/sumo/db_strings.py:284
 msgctxt "DB: products.Topic.title"
 msgid "Display Badges"
 msgstr "显示徽章"
 
-#: kitsune/sumo/db_strings.py:281
+#: kitsune/sumo/db_strings.py:285
 msgctxt "DB: products.Topic.description"
 msgid "Display your digital badges on your social networks, job sites and your own website."
 msgstr "在您的社交网络、招聘网站和您自己的网站上展示您已经得到的徽章。"
 
-#: kitsune/sumo/db_strings.py:282
+#: kitsune/sumo/db_strings.py:286
 msgctxt "DB: products.Topic.title"
 msgid "Limited Data"
 msgstr "数据限制"
 
-#: kitsune/sumo/db_strings.py:283
+#: kitsune/sumo/db_strings.py:287
 msgctxt "DB: products.Topic.description"
 msgid "Collect and retain information only when it is necessary to a project or task."
 msgstr "只在项目或任务必要时收集和保留信息。"
 
-#: kitsune/sumo/db_strings.py:284
+#: kitsune/sumo/db_strings.py:288
 msgctxt "DB: products.Topic.title"
 msgid "No Surprises"
 msgstr "不意外"
 
-#: kitsune/sumo/db_strings.py:285
+#: kitsune/sumo/db_strings.py:289
 msgctxt "DB: products.Topic.description"
 msgid "Only use and share information about our users for their benefit and as disclosed in our notices."
 msgstr "仅为了我们用户的利益和依照公告中披露的方式使用和共享我们用户的信息。"
 
-#: kitsune/sumo/db_strings.py:286
+#: kitsune/sumo/db_strings.py:290
 msgctxt "DB: products.Topic.title"
 msgid "User Control"
 msgstr "用户控制"
 
-#: kitsune/sumo/db_strings.py:287
+#: kitsune/sumo/db_strings.py:291
 msgctxt "DB: products.Topic.description"
 msgid "Do not disclose personal user information without the userâs consent."
 msgstr "未经用户同意，不要披露用户的信息。"
 
-#: kitsune/sumo/db_strings.py:288
+#: kitsune/sumo/db_strings.py:292
 msgctxt "DB: products.Topic.title"
 msgid "Sensible Settings"
 msgstr "合理设置"
 
-#: kitsune/sumo/db_strings.py:289
+#: kitsune/sumo/db_strings.py:293
 msgctxt "DB: products.Topic.description"
 msgid "Give our users actionable and informed choices by informing and educating at the point of collection and providing a choice to opt-out whenever possible."
 msgstr "在收集点提供并明确告知用户，给予用户知情权和选择权，尽可能允许用户选择不参与提供数据。"
 
-#: kitsune/sumo/db_strings.py:290
+#: kitsune/sumo/db_strings.py:294
 msgctxt "DB: products.Topic.title"
 msgid "Defense in Depth"
 msgstr "深度防护"
 
-#: kitsune/sumo/db_strings.py:291
+#: kitsune/sumo/db_strings.py:295
 msgctxt "DB: products.Topic.description"
 msgid "Make privacy a key factor in selecting and interacting with partners."
 msgstr "让隐私权成为选择伙伴及与伙伴互动时的关键因素。"
 
-#: kitsune/sumo/db_strings.py:292
+#: kitsune/sumo/db_strings.py:296
 msgctxt "DB: products.Topic.title"
 msgid "Knowledge Base"
 msgstr "知识库"
 
-#: kitsune/sumo/db_strings.py:293
+#: kitsune/sumo/db_strings.py:297
 msgctxt "DB: products.Topic.description"
 msgid "Windows 8 Touch support articles"
 msgstr "Windows 8 触控模式技术支持文章"
 
-#: kitsune/sumo/db_strings.py:294
+#: kitsune/sumo/db_strings.py:298
 msgctxt "DB: products.Topic.title"
 msgid "How does it work?"
 msgstr "他是怎样运转的？"
 
-#: kitsune/sumo/db_strings.py:295
+#: kitsune/sumo/db_strings.py:299
 msgctxt "DB: products.Topic.description"
 msgid "Basics to get started with Firefox for Windows 8 Touch."
 msgstr "Firefox Windows 8 触控版入门"
 
-#: kitsune/sumo/db_strings.py:297
+#: kitsune/sumo/db_strings.py:301
 msgctxt "DB: products.Topic.description"
 msgid "How to configure and customize Firefox for Windows 8 Touch."
 msgstr "如何配置和定制 Firefox Windows 8 触控版。"
 
-#: kitsune/sumo/db_strings.py:298
+#: kitsune/sumo/db_strings.py:302
 msgctxt "DB: products.Topic.title"
 msgid "Problems with websites"
 msgstr "网站的问题"
 
-#: kitsune/sumo/db_strings.py:299
+#: kitsune/sumo/db_strings.py:303
 msgctxt "DB: products.Topic.description"
 msgid "Problems with websites that don't work well in Firefox for Windows 8 Touch."
 msgstr "在 Firefox Windows 8 触控版下不正常的网站的问题。"
 
-#: kitsune/sumo/db_strings.py:301
+#: kitsune/sumo/db_strings.py:305
 msgctxt "DB: products.Topic.description"
 msgid "Other questions with Firefox for Windows 8 Touch."
 msgstr "Firefox Windows 8 触控版的其他问题"
 
-#: kitsune/sumo/db_strings.py:303
+#: kitsune/sumo/db_strings.py:307
 msgctxt "DB: products.Topic.description"
 msgid "Learn the Basics: get started"
 msgstr "学习基础知识：入门"
 
-#: kitsune/sumo/db_strings.py:310
+#: kitsune/sumo/db_strings.py:314
 msgctxt "DB: products.Product.title"
 msgid "Firefox"
 msgstr "Firefox"
 
-#: kitsune/sumo/db_strings.py:311
+#: kitsune/sumo/db_strings.py:315
 msgctxt "DB: products.Product.description"
 msgid "Web browser for Windows, Mac and Linux"
 msgstr "用于 Windows、Mac、Linux 的网页浏览器"
 
-#: kitsune/sumo/db_strings.py:312
+#: kitsune/sumo/db_strings.py:316
 msgctxt "DB: products.Product.title"
 msgid "Firefox for Android"
 msgstr "Firefox for Android"
 
-#: kitsune/sumo/db_strings.py:313
+#: kitsune/sumo/db_strings.py:317
 msgctxt "DB: products.Product.description"
 msgid "Web browser for Android smartphones and tablets"
 msgstr "用于 Android 智能手机和平板电脑的网页浏览器"
 
-#: kitsune/sumo/db_strings.py:314
+#: kitsune/sumo/db_strings.py:318
 msgctxt "DB: products.Product.title"
 msgid "Firefox OS"
 msgstr "Firefox OS"
 
-#: kitsune/sumo/db_strings.py:315
+#: kitsune/sumo/db_strings.py:319
 msgctxt "DB: products.Product.description"
 msgid "Mobile OS for smartphones"
 msgstr "智能手机操作系统"
 
-#: kitsune/sumo/db_strings.py:316
+#: kitsune/sumo/db_strings.py:320
 msgctxt "DB: products.Product.title"
 msgid "Webmaker"
 msgstr "Webmaker"
 
-#: kitsune/sumo/db_strings.py:317
+#: kitsune/sumo/db_strings.py:321
 msgctxt "DB: products.Product.description"
 msgid "Tools for creating and teaching the web"
 msgstr "Web 创建和教学的工具"
 
-#: kitsune/sumo/db_strings.py:318
+#: kitsune/sumo/db_strings.py:322
 msgctxt "DB: products.Product.title"
 msgid "Firefox for iOS"
 msgstr "Firefox for iOS"
 
-#: kitsune/sumo/db_strings.py:319
+#: kitsune/sumo/db_strings.py:323
 msgctxt "DB: products.Product.description"
 msgid "Firefox for iPhone, iPad and iPod touch devices"
 msgstr "Firefox for iPhone、iPad 及 iPod touch 设备"
 
-#: kitsune/sumo/db_strings.py:320
+#: kitsune/sumo/db_strings.py:324
 msgctxt "DB: products.Product.title"
 msgid "Thunderbird"
 msgstr "Thunderbird"
 
-#: kitsune/sumo/db_strings.py:321
+#: kitsune/sumo/db_strings.py:325
 msgctxt "DB: products.Product.description"
 msgid "Email software for Windows, Mac and Linux"
 msgstr "可用于 Windows、Mac 和 Linux 的电子邮件软件"
 
-#: kitsune/sumo/db_strings.py:322
+#: kitsune/sumo/db_strings.py:326
 msgctxt "DB: products.Product.title"
 msgid "Open Badges"
 msgstr "开放徽章"
 
-#: kitsune/sumo/db_strings.py:323
+#: kitsune/sumo/db_strings.py:327
 msgctxt "DB: products.Product.description"
 msgid "A new online standard to recognize and verify learning"
 msgstr "一套可用以识别学识的新的在线标准"
 
-#: kitsune/sumo/db_strings.py:324
+#: kitsune/sumo/db_strings.py:328
 msgctxt "DB: products.Product.title"
 msgid "Privacy and Security"
 msgstr "隐私与安全"
 
-#: kitsune/sumo/db_strings.py:325
+#: kitsune/sumo/db_strings.py:329
 msgctxt "DB: products.Product.description"
 msgid "Learn more about Mozilla's privacy and security practices."
 msgstr "详细了解有关 Mozilla 的隐私与安全惯例。"
 
-#: kitsune/sumo/db_strings.py:326
+#: kitsune/sumo/db_strings.py:330
 msgctxt "DB: products.Product.title"
 msgid "Firefox for Windows 8 Touch"
 msgstr "Firefox for Windows 8 Touch"
 
-#: kitsune/sumo/db_strings.py:327
+#: kitsune/sumo/db_strings.py:331
 msgctxt "DB: products.Product.description"
 msgid "Firefox for Windows 8 touch devices"
 msgstr "Firefox for Windows 8 触控设备"
 
-#: kitsune/sumo/db_strings.py:328
+#: kitsune/sumo/db_strings.py:332
 msgctxt "DB: products.Product.title"
 msgid "Contributors"
 msgstr "贡献者"
 
-#: kitsune/sumo/db_strings.py:329
+#: kitsune/sumo/db_strings.py:333
 msgctxt "DB: products.Product.description"
 msgid "Contributor articles"
 msgstr "贡献者文章"
 
-#: kitsune/sumo/db_strings.py:331
+#: kitsune/sumo/db_strings.py:335
 msgctxt "DB: karma.Title.name"
 msgid "Administrator"
 msgstr "管理员"
 
-#: kitsune/sumo/db_strings.py:333
+#: kitsune/sumo/db_strings.py:337
 msgctxt "DB: karma.Title.name"
 msgid "Moderator"
 msgstr "版主"
 
-#: kitsune/sumo/db_strings.py:335
+#: kitsune/sumo/db_strings.py:339
 msgctxt "DB: karma.Title.name"
 msgid "Top 10 Contributor"
 msgstr "前10名贡献者"
 
-#: kitsune/sumo/db_strings.py:337
+#: kitsune/sumo/db_strings.py:341
 msgctxt "DB: karma.Title.name"
 msgid "Top 25 Contributor"
 msgstr "前25名贡献者"
 
-#: kitsune/sumo/db_strings.py:338
+#: kitsune/sumo/db_strings.py:342
 msgctxt "DB: badger.Badge.title"
 msgid "2015 Support Forum Badge"
 msgstr "2015 支持论坛徽章"
 
-#: kitsune/sumo/db_strings.py:339
+#: kitsune/sumo/db_strings.py:343
 msgctxt "DB: badger.Badge.description"
 msgid "This badge is awarded to contributors with 30 support forum replies during 2015."
 msgstr "此徽章授予在 2015 年间有超过 30 条支持论坛回复的贡献者。"
 
-#: kitsune/sumo/db_strings.py:340
+#: kitsune/sumo/db_strings.py:344
 msgctxt "DB: badger.Badge.title"
 msgid "2015 Army of Awesome Badge"
 msgstr "2015 小狐狸了不起大军徽章"
 
-#: kitsune/sumo/db_strings.py:341
+#: kitsune/sumo/db_strings.py:345
 msgctxt "DB: badger.Badge.description"
 msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2015."
 msgstr "此徽章授予在 2015 年间有超过 50 篇已核准翻译的编辑贡献者。"
 
-#: kitsune/sumo/db_strings.py:342
+#: kitsune/sumo/db_strings.py:346
 msgctxt "DB: badger.Badge.title"
 msgid "2015 KB Badge"
 msgstr "2015 知识库徽章"
 
-#: kitsune/sumo/db_strings.py:343
+#: kitsune/sumo/db_strings.py:347
 msgctxt "DB: badger.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved English edits during 2015."
 msgstr "此徽章授予在 2015 年间有超过 10 篇已核准翻译的编辑贡献者。"
 
-#: kitsune/sumo/db_strings.py:344
+#: kitsune/sumo/db_strings.py:348
 msgctxt "DB: badger.Badge.title"
 msgid "2015 L10n Badge"
 msgstr "2015 本地化徽章"
 
-#: kitsune/sumo/db_strings.py:345
+#: kitsune/sumo/db_strings.py:349
 msgctxt "DB: badger.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2015."
 msgstr "此徽章授予在 2015 年间有超过 10 篇已核准翻译的编辑贡献者。"
 
-#: kitsune/sumo/db_strings.py:346
+#: kitsune/sumo/db_strings.py:350
 msgctxt "DB: badger.Badge.title"
 msgid "2014 Army of Awesome Badge"
 msgstr "2014 小狐狸了不起大军徽章"
 
-#: kitsune/sumo/db_strings.py:347
+#: kitsune/sumo/db_strings.py:351
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO Army of Awesome 2014 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2014; in this case: 50 Army of Awesome tweets. Congrats to all SUMO Army of Awesome 2014 "
 "badge earners for advancing the Mozilla Mission!"
 msgstr "SUMO 小狐狸大军 2014 迷你徽章是 SUMO 系列之一。它代表了2014年为 SUMO 的贡献。获得条件：50条小狐狸大军推文。感谢所有 SUMO 小狐狸大军 2014 徽章获得者为为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:348
+#: kitsune/sumo/db_strings.py:352
 msgctxt "DB: badger.Badge.title"
 msgid "2014 L10n Badge"
 msgstr "2014 本地化徽章"
 
-#: kitsune/sumo/db_strings.py:349
+#: kitsune/sumo/db_strings.py:353
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO L10n 2014 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2014; in this case: 10 approved translation edits of the SUMO Knowledge Base. Congrats to all SUMO "
 "L10n 2014 badge earners for advancing the Mozilla Mission!"
 msgstr "SUMO 本地化 2014 迷你徽章是 SUMO 系列之一。它代表了2014年为 SUMO 的贡献。获得条件：10项在 SUMO 已批准的翻译编辑。感谢所有 SUMO L10n 2014 徽章获得者为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:350
+#: kitsune/sumo/db_strings.py:354
 msgctxt "DB: badger.Badge.title"
 msgid "2014 KB Badge"
 msgstr "2014 知识库徽章"
 
-#: kitsune/sumo/db_strings.py:351
+#: kitsune/sumo/db_strings.py:355
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO KB 2014 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2014; in this case: 10 approved edits of the English SUMO Knowledge Base. Congrats to all SUMO KB 2014 "
 "badge earners for advancing the Mozilla Mission"
 msgstr "SUMO 知识库 2014 迷你徽章是 SUMO 系列之一。它代表了2014年为 SUMO 的贡献。获得条件：在英语 SUMO 知识库有10项已批准编辑。感谢所有 SUMO 论坛 2014 徽章获得者为为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:352
+#: kitsune/sumo/db_strings.py:356
 msgctxt "DB: badger.Badge.title"
 msgid "2014 Support Forum Badge"
 msgstr "2014 支持论坛徽章"
 
-#: kitsune/sumo/db_strings.py:353
+#: kitsune/sumo/db_strings.py:357
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO Forum 2014 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2014 in this case: 30 replies in the English SUMO Forum. Congrats to all SUMO Forum 2014 badge "
 "earners for advancing the Mozilla Mission!"
 msgstr "SUMO 论坛 2014 迷你徽章是 SUMO 系列之一。它代表了2014年为 SUMO 的贡献。获得条件：在英语 SUMO 论坛有30条回复。感谢所有 SUMO 论坛 2014 徽章获得者为为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:354
+#: kitsune/sumo/db_strings.py:358
 msgctxt "DB: badger.Badge.title"
 msgid "Firefox 29 Launch Team"
 msgstr "Firefox 29 发行团队"
 
-#: kitsune/sumo/db_strings.py:355
+#: kitsune/sumo/db_strings.py:359
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "Awarded to support contributors who contributed (KB article documentation, answering Forum Questions, localizing KB article documentation, tweets, etc) to the launch of Firefox 29, thanks! Firefox "
@@ -6320,224 +6344,224 @@ msgstr ""
 "授予 Firefox 29 发行时的贡献者（知识库文档、回答论坛问题、本地化知识库文章、发推文，等等），谢谢你们！Firefox 29 的功能有：1. Firefox 桌面版：全新的 Australis 界面，基于 Firefox 账号的新版“同步”功"
 "能。2. Firefox for Android：基于 Firefox 账号的新版“同步”功能。更多信息：https://sumo.etherpad.mozilla.org/sumo-australis-badges"
 
-#: kitsune/sumo/db_strings.py:356
+#: kitsune/sumo/db_strings.py:360
 msgctxt "DB: badger.Badge.title"
 msgid "2008 L10n Badge"
 msgstr "2008 本地化徽章"
 
-#: kitsune/sumo/db_strings.py:357
+#: kitsune/sumo/db_strings.py:361
 msgctxt "DB: badger.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2008."
 msgstr "此徽章授予在 2008 年间有超过 10 篇已核准翻译的编辑贡献者。"
 
-#: kitsune/sumo/db_strings.py:358
+#: kitsune/sumo/db_strings.py:362
 msgctxt "DB: badger.Badge.title"
 msgid "2009 L10n Badge"
 msgstr "2009 本地化徽章"
 
-#: kitsune/sumo/db_strings.py:359
+#: kitsune/sumo/db_strings.py:363
 msgctxt "DB: badger.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2009."
 msgstr "此徽章授予在 2009 年间有超过 10 篇已核准翻译的编辑贡献者。"
 
-#: kitsune/sumo/db_strings.py:360
+#: kitsune/sumo/db_strings.py:364
 msgctxt "DB: badger.Badge.title"
 msgid "2012 Army of Awesome Badge"
 msgstr "2012 小狐狸了不起大军徽章"
 
-#: kitsune/sumo/db_strings.py:361
+#: kitsune/sumo/db_strings.py:365
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO Army of Awesome 2012 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2012; in this case: 50 Army of Awesome tweets. Congrats to all SUMO Army of Awesome 2012 "
 "badge earners for advancing the Mozilla Mission!"
 msgstr "SUMO 小狐狸大军 2012 迷你徽章是 SUMO 系列之一。它代表了2012年为 SUMO 的贡献。获得条件：50条小狐狸大军推文。感谢所有 SUMO 小狐狸大军 2012 徽章获得者为为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:362
+#: kitsune/sumo/db_strings.py:366
 msgctxt "DB: badger.Badge.title"
 msgid "2013 Army of Awesome Badge"
 msgstr "2013 小狐狸了不起大军徽章"
 
-#: kitsune/sumo/db_strings.py:363
+#: kitsune/sumo/db_strings.py:367
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO Army of Awesome 2013 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2013; in this case: 50 Army of Awesome tweets. Congrats to all SUMO Army of Awesome 2013 "
 "badge earners for advancing the Mozilla Mission!"
 msgstr "SUMO 小狐狸大军 2013 迷你徽章是 SUMO 系列之一。它代表了2013年为 SUMO 的贡献。获得条件：50条小狐狸大军推文。感谢所有 SUMO 小狐狸大军 2013 徽章获得者为为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:364
+#: kitsune/sumo/db_strings.py:368
 msgctxt "DB: badger.Badge.title"
 msgid "2010 Army of Awesome Badge"
 msgstr "2010 小狐狸了不起大军徽章"
 
-#: kitsune/sumo/db_strings.py:365
+#: kitsune/sumo/db_strings.py:369
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO Army of Awesome 2010 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2010; in this case: 50 Army of Awesome tweets. Congrats to all SUMO Army of Awesome 2010 "
 "badge earners for advancing the Mozilla Mission!"
 msgstr "SUMO 小狐狸大军 2010 迷你徽章是 SUMO 系列之一。它代表了2010年为 SUMO 的贡献。获得条件：50条小狐狸大军推文。感谢所有 SUMO 小狐狸大军 2010 徽章获得者为为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:366
+#: kitsune/sumo/db_strings.py:370
 msgctxt "DB: badger.Badge.title"
 msgid "2011 Army of Awesome Badge"
 msgstr "2011 小狐狸了不起大军徽章"
 
-#: kitsune/sumo/db_strings.py:367
+#: kitsune/sumo/db_strings.py:371
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO Army of Awesome 2011 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2011; in this case: 50 Army of Awesome tweets. Congrats to all SUMO Army of Awesome 2011 "
 "badge earners for advancing the Mozilla Mission!"
 msgstr "SUMO 小狐狸大军 2011 迷你徽章是 SUMO 系列之一。它代表了2011年为 SUMO 的贡献。获得条件：50条小狐狸大军推文。感谢所有 SUMO 小狐狸大军 2011 徽章获得者为为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:368
+#: kitsune/sumo/db_strings.py:372
 msgctxt "DB: badger.Badge.title"
 msgid "2012 Support Forum Badge"
 msgstr "2012 支持论坛徽章"
 
-#: kitsune/sumo/db_strings.py:369
+#: kitsune/sumo/db_strings.py:373
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO Forum 2012 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2012 in this case: 30 replies in the English SUMO Forum. Congrats to all SUMO Forum 2012 badge "
 "earners for advancing the Mozilla Mission!"
 msgstr "SUMO 论坛 2012 迷你徽章是 SUMO 系列之一。它代表了2012年为 SUMO 的贡献。获得条件：在英语 SUMO 论坛有30条回复。感谢所有 SUMO 论坛 2012 徽章获得者为为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:370
+#: kitsune/sumo/db_strings.py:374
 msgctxt "DB: badger.Badge.title"
 msgid "2010 KB Badge"
 msgstr "2010 知识库徽章"
 
-#: kitsune/sumo/db_strings.py:371
+#: kitsune/sumo/db_strings.py:375
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO KB 2010 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2010; in this case: 10 approved edits of the English SUMO Knowledge Base. Congrats to all SUMO KB 2010 "
 "badge earners for advancing the Mozilla Mission"
 msgstr "SUMO 知识库 2010 迷你徽章是 SUMO 系列之一。它代表了2010年为 SUMO 的贡献。获得条件：在英语 SUMO 知识库有10项已批准编辑。感谢所有 SUMO 论坛 2010 徽章获得者为为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:372
+#: kitsune/sumo/db_strings.py:376
 msgctxt "DB: badger.Badge.title"
 msgid "2010 L10n Badge"
 msgstr "2010 本地化徽章"
 
-#: kitsune/sumo/db_strings.py:373
+#: kitsune/sumo/db_strings.py:377
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO L10n 2010 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2010; in this case: 10 approved translation edits of the SUMO Knowledge Base. Congrats to all SUMO "
 "L10n 2010 badge earners for advancing the Mozilla Mission!"
 msgstr "SUMO 本地化 2010 迷你徽章是 SUMO 系列之一。它代表了2010年为 SUMO 的贡献。获得条件：10项在 SUMO 已批准的翻译编辑。感谢所有 SUMO L10n 2010 徽章获得者为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:374
+#: kitsune/sumo/db_strings.py:378
 msgctxt "DB: badger.Badge.title"
 msgid "2010 Support Forum Badge"
 msgstr "2010 支持论坛徽章"
 
-#: kitsune/sumo/db_strings.py:375
+#: kitsune/sumo/db_strings.py:379
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO Forum 2010 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2010 in this case: 30 replies in the English SUMO Forum. Congrats to all SUMO Forum 2010 badge "
 "earners for advancing the Mozilla Mission!"
 msgstr "SUMO 论坛 2010 迷你徽章是 SUMO 系列之一。它代表了2010年为 SUMO 的贡献。获得条件：在英语 SUMO 论坛有30条回复。感谢所有 SUMO 论坛 2010 徽章获得者为为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:376
+#: kitsune/sumo/db_strings.py:380
 msgctxt "DB: badger.Badge.title"
 msgid "2011 KB Badge"
 msgstr "2011 知识库徽章"
 
-#: kitsune/sumo/db_strings.py:377
+#: kitsune/sumo/db_strings.py:381
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO KB 2011 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2011; in this case: 10 approved edits of the English SUMO Knowledge Base. Congrats to all SUMO KB 2011 "
 "badge earners for advancing the Mozilla Mission!"
 msgstr "SUMO 知识库 2011 迷你徽章是 SUMO 系列之一。它代表了2011年为 SUMO 的贡献。获得条件：在英语 SUMO 知识库有10项已批准编辑。感谢所有 SUMO 论坛 2011 徽章获得者为为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:378
+#: kitsune/sumo/db_strings.py:382
 msgctxt "DB: badger.Badge.title"
 msgid "2011 L10n Badge"
 msgstr "2011 本地化徽章"
 
-#: kitsune/sumo/db_strings.py:379
+#: kitsune/sumo/db_strings.py:383
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO L10n 2011 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2011; in this case: 10 approved translation edits of the SUMO Knowledge Base. Congrats to all SUMO "
 "L10n 2011 badge earners for advancing the Mozilla Mission!"
 msgstr "SUMO 本地化 2011 迷你徽章是 SUMO 系列之一。它代表了20101为 SUMO 的贡献。获得条件：10项在 SUMO 已批准的翻译编辑。感谢所有 SUMO L10n 2011 徽章获得者为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:380
+#: kitsune/sumo/db_strings.py:384
 msgctxt "DB: badger.Badge.title"
 msgid "2011 Support Forum Badge"
 msgstr "2011 支持论坛徽章"
 
-#: kitsune/sumo/db_strings.py:381
+#: kitsune/sumo/db_strings.py:385
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO Forum 2011 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2011 in this case: 30 replies in the English SUMO Forum. Congrats to all SUMO Forum 2011 badge "
 "earners for advancing the Mozilla Mission!"
 msgstr "SUMO 论坛 2011 迷你徽章是 SUMO 系列之一。它代表了2011年为 SUMO 的贡献。获得条件：在英语 SUMO 论坛有30条回复。感谢所有 SUMO 论坛 2011 徽章获得者为为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:382
+#: kitsune/sumo/db_strings.py:386
 msgctxt "DB: badger.Badge.title"
 msgid "2012 KB Badge"
 msgstr "2012 知识库徽章"
 
-#: kitsune/sumo/db_strings.py:383
+#: kitsune/sumo/db_strings.py:387
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO KB 2012 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2012; in this case: 10 approved edits of the English SUMO Knowledge Base. Congrats to all SUMO KB 2012 "
 "badge earners for advancing the Mozilla Mission!"
 msgstr "SUMO 知识库 2012 迷你徽章是 SUMO 系列之一。它代表了2012年为 SUMO 的贡献。获得条件：在英语 SUMO 知识库有10项已批准编辑。感谢所有 SUMO 论坛 2012 徽章获得者为为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:384
+#: kitsune/sumo/db_strings.py:388
 msgctxt "DB: badger.Badge.title"
 msgid "2013 KB Badge"
 msgstr "2013 知识库徽章"
 
-#: kitsune/sumo/db_strings.py:385
+#: kitsune/sumo/db_strings.py:389
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO KB 2013 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2013 in this case: 10 approved edits of the English SUMO Knowledge Base. Congrats to all SUMO KB 2013 "
 "badge earners for advancing the Mozilla Mission!"
 msgstr "SUMO 知识库 2013 迷你徽章是 SUMO 系列之一。它代表了2013年为 SUMO 的贡献。获得条件：在英语 SUMO 知识库有10项已批准编辑。感谢所有 SUMO 论坛 2013 徽章获得者为为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:386
+#: kitsune/sumo/db_strings.py:390
 msgctxt "DB: badger.Badge.title"
 msgid "2013 L10n Badge"
 msgstr "2013 本地化徽章"
 
-#: kitsune/sumo/db_strings.py:387
+#: kitsune/sumo/db_strings.py:391
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO L10n 2013 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2013 in this case: 10 approved translation edits of the SUMO Knowledge Base. Congrats to all SUMO "
 "L10n 2013 badge earners for advancing the Mozilla Mission!"
 msgstr "SUMO 本地化 2013 迷你徽章是 SUMO 系列之一。它代表了2013年为 SUMO 的贡献。获得条件：10项在 SUMO 已批准的翻译编辑。感谢所有 SUMO L10n 2013 徽章获得者为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:388
+#: kitsune/sumo/db_strings.py:392
 msgctxt "DB: badger.Badge.title"
 msgid "2013 Support Forum Badge"
 msgstr "2013 支持论坛徽章"
 
-#: kitsune/sumo/db_strings.py:389
+#: kitsune/sumo/db_strings.py:393
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO Forum 2013 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2013 in this case: 30 replies in the English SUMO Forum. Congrats to all SUMO Forum 2013 badge "
 "earners for advancing the Mozilla Mission"
 msgstr "SUMO 论坛 2013 迷你徽章是 SUMO 系列之一。它代表了2013年为 SUMO 的贡献。获得条件：在英语 SUMO 论坛有30条回复。感谢所有 SUMO 论坛 2013 徽章获得者为为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:390
+#: kitsune/sumo/db_strings.py:394
 msgctxt "DB: badger.Badge.title"
 msgid "2012 L10n Badge"
 msgstr "2012 本地化徽章"
 
-#: kitsune/sumo/db_strings.py:391
+#: kitsune/sumo/db_strings.py:395
 msgctxt "DB: badger.Badge.description"
 msgid ""
 "The SUMO L10n 2012 mini-badge is part of the SUMO series. It represents contribution to SUMO in 2012; in this case: 10 approved translation edits of the SUMO Knowledge Base. Congrats to all SUMO "
 "L10n 2012 badge earners for advancing the Mozilla Mission!"
 msgstr "SUMO 本地化 2012 迷你徽章是 SUMO 系列之一。它代表了2012年为 SUMO 的贡献。获得条件：10项在 SUMO 已批准的翻译编辑。感谢所有 SUMO L10n 2012 徽章获得者为 Mozilla 的使命所做的贡献！"
 
-#: kitsune/sumo/db_strings.py:392
+#: kitsune/sumo/db_strings.py:396
 msgctxt "DB: badger.Badge.title"
 msgid "Kitsune Contributor"
 msgstr "Kitsune 贡献者"
 
-#: kitsune/sumo/db_strings.py:393
+#: kitsune/sumo/db_strings.py:397
 msgctxt "DB: badger.Badge.description"
 msgid "Badge awarded to those who have contributed to the Kitsune code base."
 msgstr "本徽章授予那些为 Kitsune 代码库作出了贡献的人们。"
@@ -6650,45 +6674,50 @@ msgstr "此页面还没有为移动装置优化的版本。点击这里返回。
 msgid "Tap here to go to the mobile version of the site."
 msgstr "点击这里打开本站的移动版本。"
 
-#: kitsune/sumo/templates/base.html:188
+#: kitsune/sumo/templates/base.html:143
+#, fuzzy
+msgid "Download Firefox"
+msgstr "Mozilla Firefox"
+
+#: kitsune/sumo/templates/base.html:194
 msgid ""
 "Portions of this content are &copy;1998–2015 <br>by individual mozilla.org contributors. Content <br>available under a <a href=\"//www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
 msgstr "部份内容系版权所有©1998–2015，<br>由单独的 mozilla.org 贡献者所创作。<br>内容遵循<a href=\"//www.mozilla.org/foundation/licensing/website-content.html\">知识共享许可协议</a>进行授权。"
 
-#: kitsune/sumo/templates/base.html:198
+#: kitsune/sumo/templates/base.html:204
 msgid "Contact Us"
 msgstr "联系我们"
 
-#: kitsune/sumo/templates/base.html:199
+#: kitsune/sumo/templates/base.html:205
 msgid "Privacy Policy"
 msgstr "隐私政策"
 
-#: kitsune/sumo/templates/base.html:200
+#: kitsune/sumo/templates/base.html:206
 msgid "Legal Notices"
 msgstr "法律条款"
 
-#: kitsune/sumo/templates/base.html:201
+#: kitsune/sumo/templates/base.html:207
 msgid "Report Trademark Abuse"
 msgstr "报告商标滥用"
 
-#: kitsune/sumo/templates/base.html:202
+#: kitsune/sumo/templates/base.html:208
 msgid "Source Code"
 msgstr "源代码"
 
-#: kitsune/sumo/templates/base.html:207 kitsune/users/templates/users/profile.html:123 kitsune/users/templates/users/mobile/edit_profile.html:43 kitsune/users/templates/users/mobile/profile.html:76
+#: kitsune/sumo/templates/base.html:213 kitsune/users/templates/users/profile.html:123 kitsune/users/templates/users/mobile/edit_profile.html:43 kitsune/users/templates/users/mobile/profile.html:76
 msgid "Twitter"
 msgstr "Twitter"
 
-#: kitsune/sumo/templates/base.html:208 kitsune/users/templates/users/profile.html:129 kitsune/users/templates/users/mobile/edit_profile.html:46 kitsune/users/templates/users/mobile/profile.html:80
+#: kitsune/sumo/templates/base.html:214 kitsune/users/templates/users/profile.html:129 kitsune/users/templates/users/mobile/edit_profile.html:46 kitsune/users/templates/users/mobile/profile.html:80
 msgid "Facebook"
 msgstr "Facebook"
 
-#: kitsune/sumo/templates/base.html:209
+#: kitsune/sumo/templates/base.html:215
 msgid "Firefox Affiliates"
 msgstr "Firefox 伙伴计划"
 
-#: kitsune/sumo/templates/base.html:210
+#: kitsune/sumo/templates/base.html:216
 msgid "Switch to mobile site"
 msgstr "切换到移动版"
 
@@ -7159,31 +7188,31 @@ msgstr "注册信息"
 msgid "moderator"
 msgstr "版主"
 
-#: kitsune/users/views.py:168
+#: kitsune/users/views.py:169
 msgid "Your account is already activated, log in below."
 msgstr "您的帐户已被激活，请在下面登录。"
 
-#: kitsune/users/views.py:215 kitsune/users/views.py:225
+#: kitsune/users/views.py:216 kitsune/users/views.py:226
 msgid "Account already activated"
 msgstr "帐户已激活"
 
-#: kitsune/users/views.py:405
+#: kitsune/users/views.py:406
 msgid "Your settings have been saved."
 msgstr "您的设置已保存。"
 
-#: kitsune/users/views.py:730
+#: kitsune/users/views.py:731
 msgid "We've sent an email with the username to any account using {email}."
 msgstr "我们已经寄出了一封带有您用户名的电子邮件到 {email}。"
 
-#: kitsune/users/views.py:760
+#: kitsune/users/views.py:761
 msgid "Invalid field"
 msgstr "无效字段"
 
-#: kitsune/users/views.py:768
+#: kitsune/users/views.py:769
 msgid "This username is already taken!"
 msgstr "此用户名已被占用！"
 
-#: kitsune/users/views.py:774
+#: kitsune/users/views.py:775
 msgid "This email is already in use!"
 msgstr "此电子邮件地址已被使用！"
 
@@ -8094,43 +8123,43 @@ msgctxt "KB Topic"
 msgid "browserID"
 msgstr "浏览器ID"
 
-#: kitsune/wiki/views.py:740
+#: kitsune/wiki/views.py:749
 msgid "You cannot translate this document."
 msgstr "您不能翻译这篇文章。"
 
-#: kitsune/wiki/views.py:1039
+#: kitsune/wiki/views.py:1048
 msgid "Glad to hear it &mdash; thanks for the feedback!"
 msgstr "感谢您提供的反馈信息！"
 
-#: kitsune/wiki/views.py:1065
+#: kitsune/wiki/views.py:1074
 msgid "You already voted on this Article."
 msgstr "这篇文章您已经投过票了。"
 
-#: kitsune/wiki/views.py:1097
+#: kitsune/wiki/views.py:1106
 msgid "Thanks for making us better!"
 msgstr "感谢您让我们变得更好！"
 
-#: kitsune/wiki/views.py:1170
+#: kitsune/wiki/views.py:1179
 msgid "Revision %s"
 msgstr "修订 %s"
 
-#: kitsune/wiki/views.py:1179
+#: kitsune/wiki/views.py:1188
 msgid "Firefox Releases"
 msgstr "Firefox 正式版"
 
-#: kitsune/wiki/views.py:1185
+#: kitsune/wiki/views.py:1194
 msgid "Article Revisions"
 msgstr "文章修订"
 
-#: kitsune/wiki/views.py:1288
+#: kitsune/wiki/views.py:1297
 msgid "{users} added to the contributors successfully!"
 msgstr "{users} 已成功添加到贡献者中！"
 
-#: kitsune/wiki/views.py:1295
+#: kitsune/wiki/views.py:1304
 msgid "There were errors adding new contributors, see below."
 msgstr "添加新的贡献者时发生错误，详见下列信息。"
 
-#: kitsune/wiki/views.py:1314
+#: kitsune/wiki/views.py:1323
 msgid "{user} removed from the contributors successfully!"
 msgstr "{user} 已成功从贡献者中移除！"
 
@@ -10841,9 +10870,6 @@ msgstr "{t} | {c}"
 
 #~ msgid "Legal"
 #~ msgstr "法律声明"
-
-#~ msgid "Mozilla Firefox"
-#~ msgstr "Mozilla Firefox"
 
 #~ msgid "Desktop"
 #~ msgstr "桌面版"
