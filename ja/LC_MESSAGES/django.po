@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-30 10:09-0700\n"
+"POT-Creation-Date: 2016-03-30 11:31-0700\n"
 "PO-Revision-Date: 2016-03-25 11:57+0000\n"
 "Last-Translator: Kohei Yoshino <kohei.yoshino@gmail.com>\n"
 "Language-Team: Japanese\n"
@@ -14,6 +14,148 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pontoon\n"
 "X-POOTLE-MTIME: 1446025690.0\n"
+
+#: authority/admin.py:36 authority/models.py:45
+#, fuzzy
+msgid "permission"
+msgstr "リビジョン"
+
+#: authority/admin.py:102
+#, fuzzy, python-format
+msgid "Permissions for %s"
+msgstr "リビジョン %s"
+
+#: authority/admin.py:127
+#, python-format
+msgid "Edit permissions for selected %(verbose_name_plural)s"
+msgstr ""
+
+#: authority/admin.py:139
+msgid "Permitted"
+msgstr ""
+
+#: authority/admin.py:140
+#, fuzzy
+msgid "Creation"
+msgstr "作成者"
+
+#: authority/admin.py:168
+#, fuzzy, python-format
+msgid "%(count)d permission successfully approved."
+msgid_plural "%(count)d permissions successfully approved."
+msgstr[0] "アカウントが承認されました！"
+
+#: authority/admin.py:170
+#, fuzzy
+msgid "Approve selected permissions"
+msgstr "選択したリビジョンを比較します"
+
+#: authority/forms.py:16
+#, fuzzy
+msgid "Permission"
+msgstr "リビジョン"
+
+#: authority/forms.py:43 kitsune/users/models.py:42 kitsune/users/models.py:325
+msgid "User"
+msgstr "ユーザ"
+
+#: authority/forms.py:59
+#, fuzzy
+msgid "A user with that username does not exist."
+msgstr "このメールアドレスで登録されたユーザが既に存在します。"
+
+#: authority/forms.py:63
+#, python-format
+msgid "The user %(user)s do not need to request access to any permission as it is a super user."
+msgstr ""
+
+#: authority/forms.py:66
+#, python-format
+msgid "The user %(user)s already has the permission '%(perm)s' for %(object_name)s '%(obj)s'"
+msgstr ""
+
+#: authority/forms.py:69
+#, python-format
+msgid "The user %(user)s already requested the permission '%(perm)s' for %(object_name)s '%(obj)s'"
+msgstr ""
+
+#: authority/forms.py:83
+#, fuzzy
+msgid "Group"
+msgstr "グループ"
+
+#: authority/forms.py:94
+#, fuzzy
+msgid "A group with that name does not exist."
+msgstr "そのタグは存在しません。"
+
+#: authority/forms.py:98
+#, python-format
+msgid "This group already has the permission '%(perm)s' for %(object_name)s '%(obj)s'"
+msgstr ""
+
+#: authority/models.py:18
+#, fuzzy
+msgid "codename"
+msgstr "ユーザ名"
+
+#: authority/models.py:30
+#, fuzzy
+msgid "approved"
+msgstr "承認済み"
+
+#: authority/models.py:32
+msgid "Designates whether the permission has been approved and treated as active. Unselect this instead of deleting permissions."
+msgstr ""
+
+#: authority/models.py:35
+#, fuzzy
+msgid "date requested"
+msgstr "リクエスト数"
+
+#: authority/models.py:36
+#, fuzzy
+msgid "date approved"
+msgstr "承認済？"
+
+#: authority/models.py:46
+#, fuzzy
+msgid "permissions"
+msgstr "リビジョン %s"
+
+#: authority/sites.py:103
+#, python-format
+msgid "%(object_name)s permission '%(check)s'"
+msgstr ""
+
+#: authority/sites.py:113
+#, python-format
+msgid "Can %(check)s this %(object_name)s"
+msgstr ""
+
+#: authority/views.py:51
+#, fuzzy
+msgid "You added a permission request."
+msgstr "この操作を行う権限がありません。"
+
+#: authority/views.py:75
+#, fuzzy
+msgid "You approved the permission request."
+msgstr "この操作を行う権限がありません。"
+
+#: authority/views.py:88
+#, fuzzy
+msgid "You removed the permission."
+msgstr "この操作を行う権限がありません。"
+
+#: authority/views.py:90
+#, fuzzy
+msgid "You removed the permission request."
+msgstr "この操作を行う権限がありません。"
+
+#: authority/widgets.py:56
+msgid "Lookup"
+msgstr ""
 
 #: kitsune/announcements/forms.py:16
 msgid "Content"
@@ -31,9 +173,86 @@ msgstr "表示期限"
 msgid "New announcement for {group}"
 msgstr "{group} の新着アナウンス"
 
+#. This is at the end of an email.
+#: kitsune/announcements/jinja2/announcements/email/announcement.ltxt:7 kitsune/questions/jinja2/questions/email/activate_watch.ltxt:23 kitsune/users/jinja2/users/email/already_activated.ltxt:14
+#: kitsune/users/jinja2/users/email/confirm_email.ltxt:16
+msgid "The {domain} team"
+msgstr "{domain} チーム"
+
 #: kitsune/community/cron.py:43
 msgid "Thank you for your contribution to Mozilla Support!"
 msgstr "あなたの Mozilla Support への貢献に感謝します！"
+
+#: kitsune/community/jinja2/community/email/first_answer.ltxt:3
+msgid "Thank you for your first contribution to the Mozilla support forums! You just made somebody's day!"
+msgstr "Mozilla サポートフォーラムへの貢献ありがとうございます。あなたの貢献がユーザの助けになりました。"
+
+#: kitsune/community/jinja2/community/email/first_answer.ltxt:8
+msgid ""
+"Mozilla support is fully powered by our volunteer community that is helping hundreds of users everyday. This community is formed by passionate Firefox and Thunderbird users who take some of their "
+"spare time to help others. We couldn't do it without your passion and enthusiasm. Your contribution, as minor as it might seem, has tremendous value. Solving one issue in the support forums can "
+"help up to 1000 users a day!"
+msgstr ""
+"Mozilla サポートは、毎日数多くのユーザを助けているボランティアコミュニティの協力により運営されています。このコミュニティは、Firefox や Thunderbird の熱心なユーザから成り、空いた時間に他のユーザを助"
+"けています。私たちは、あなたの熱意なしではこのようなことを行えません。あなたの貢献は、ごく僅かであっても、大きな価値があります。サポートフォーラムで一つの問題を解決することにより、一日に 1000 人以上"
+"のユーザを助けることができます！"
+
+#: kitsune/community/jinja2/community/email/first_answer.ltxt:18
+msgid "Tell us about yourself!"
+msgstr "自己紹介してください！"
+
+#: kitsune/community/jinja2/community/email/first_answer.ltxt:20
+msgid ""
+"We are always very happy to hear from new people who like helping on the forums so if you haven’t met our community yet please take a minute to introduce yourself. If you want to stay low-profile, "
+"that’s also ok :). You can also find us all hanging out on IRC, on the #sumo channel on irc.mozilla.org."
+msgstr ""
+"私たちは、フォーラムで手助けするのが好きな新しい方が参加するのをいつも楽しみにしています。コミュニティに参加したばかりなら、少しだけ時間を取って、自己紹介をしてください。内容は短くても構いません。ま"
+"たは、IRC (irc.mozilla.org の #sumo チャンネル) でも私たちを見つけることができます。"
+
+#: kitsune/community/jinja2/community/email/first_answer.ltxt:30
+#, python-format
+msgid "The community forum is at %(url)s ."
+msgstr "コミュニティフォーラムは %(url)s です。"
+
+#: kitsune/community/jinja2/community/email/first_answer.ltxt:35
+msgid "Learn new things"
+msgstr "新しいことを学びましょう"
+
+#: kitsune/community/jinja2/community/email/first_answer.ltxt:37
+msgid ""
+"If you are interested in learning more about how this whole support thing works, check out our contributor training. This includes some cool troubleshooting info, guidelines, how-to questions, and "
+"info about where to find more help if stuck."
+msgstr ""
+"これらのサポート活動全体について学ぶことに興味がある方は、わたしたちの貢献者トレーニングプログラムを見てください。これには、いくつかのトラブルシューティング情報、ガイドライン、使い方の質問、助けを得"
+"られる場所についての情報が含まれます。"
+
+#: kitsune/community/jinja2/community/email/first_answer.ltxt:46
+msgid "Stay in touch"
+msgstr "連絡"
+
+#: kitsune/community/jinja2/community/email/first_answer.ltxt:48
+msgid "Finally, if you want to follow all news related to SUMO, don’t forget about our"
+msgstr "最後に、SUMO 関連のすべてのニュースを知りたい方は、"
+
+#: kitsune/community/jinja2/community/email/first_answer.ltxt:52
+msgid "Community forums"
+msgstr "コミュニティフォーラム"
+
+#: kitsune/community/jinja2/community/email/first_answer.ltxt:53
+msgid "Official blog"
+msgstr "公式ブログ"
+
+#: kitsune/community/jinja2/community/email/first_answer.ltxt:54
+msgid "Twitter account"
+msgstr "Twitter アカウント"
+
+#: kitsune/community/jinja2/community/email/first_answer.ltxt:55
+msgid "Weekly meetings"
+msgstr "Weekly Meeting"
+
+#: kitsune/community/jinja2/community/email/first_answer.ltxt:57
+msgid "Thank you once more. We are looking forward to seeing you more often around SUMO! Keep rocking!"
+msgstr "重ねて感謝いたします。SUMO でもっとお会いできるのを楽しみにしています。続けて参加してください！"
 
 #: kitsune/customercare/views.py:29 kitsune/dashboards/readouts.py:454
 msgid "Most Recent"
@@ -357,6 +576,29 @@ msgstr "このコンテンツには既にフラグが設定されています。
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr "このコンテンツにフラグを設定しました。近々モデレータが確認します。"
 
+#: kitsune/forums/jinja2/forums/email/new_post.ltxt:4 kitsune/kbforums/jinja2/kbforums/email/new_post.ltxt:4
+msgid "Reply to thread: {title}"
+msgstr "スレッドへの返信: {title}"
+
+#: kitsune/forums/jinja2/forums/email/new_post.ltxt:6 kitsune/kbforums/jinja2/kbforums/email/new_post.ltxt:6
+#, python-format
+msgid "%(author)s has replied to a thread you're watching. Here is their reply:"
+msgstr "監視中のスレッドに %(author)s さんが返信しました。以下はその返信です:"
+
+#: kitsune/forums/jinja2/forums/email/new_post.ltxt:17 kitsune/forums/jinja2/forums/email/new_thread.ltxt:17 kitsune/kbforums/jinja2/kbforums/email/new_post.ltxt:17
+#: kitsune/kbforums/jinja2/kbforums/email/new_thread.ltxt:17
+msgid "To view this post on the site, click the following link, or paste it into your browser's location bar:"
+msgstr "サイトでこの投稿を確認するには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
+
+#: kitsune/forums/jinja2/forums/email/new_thread.ltxt:4 kitsune/kbforums/jinja2/kbforums/email/new_thread.ltxt:4
+msgid "New thread: {title}"
+msgstr "新しいスレッド: {title}"
+
+#: kitsune/forums/jinja2/forums/email/new_thread.ltxt:6 kitsune/kbforums/jinja2/kbforums/email/new_thread.ltxt:6
+#, python-format
+msgid "%(author)s has posted a new thread in a forum you're watching. Here is the thread:"
+msgstr "監視中のフォーラムに %(author)s さんが新しいスレッドを立てました。以下はそのスレッドです:"
+
 #: kitsune/gallery/forms.py:12 kitsune/kbforums/forms.py:8 kitsune/wiki/forms.py:20
 msgid "Please provide a title."
 msgstr "タイトルを記入してください。"
@@ -477,6 +719,24 @@ msgstr "貢献者グループに参加しました！"
 msgid "You were awarded the '{title}' badge!"
 msgstr "'{title}' バッジが授与されました！"
 
+#: kitsune/kbadge/jinja2/kbadge/email/award_notification.ltxt:1
+msgid "Congratulations!"
+msgstr "おめでとうございます！"
+
+#: kitsune/kbadge/jinja2/kbadge/email/award_notification.ltxt:4
+#, python-format
+msgid "%(awarder)s has awarded you the %(title)s badge!"
+msgstr "%(awarder)s さんが、あなたに %(title)s バッジを授与しました！"
+
+#: kitsune/kbadge/jinja2/kbadge/email/award_notification.ltxt:8
+#, python-format
+msgid "You have been awarded the %(title)s badge!"
+msgstr "%(title)s バッジが授与されました！"
+
+#: kitsune/kbadge/jinja2/kbadge/email/award_notification.ltxt:17
+msgid "See all the details:"
+msgstr "詳細を見る:"
+
 #: kitsune/kbforums/events.py:26
 msgid "Re: {forum} - {thread}"
 msgstr "Re: {forum} - {thread}"
@@ -558,6 +818,18 @@ msgstr "メッセージが合いませんでした。再度試してください
 msgid "The message was deleted!"
 msgid_plural "The messages were deleted!"
 msgstr[0] "メッセージが削除されました！"
+
+#: kitsune/messages/jinja2/messages/email/private_message.ltxt:3
+msgid "{sender} sent you the following message:"
+msgstr "{sender} さんから次のメッセージを受け取りました:"
+
+#: kitsune/messages/jinja2/messages/email/private_message.ltxt:7
+msgid "View this message on the web:"
+msgstr "このメッセージを Web 上で見る:"
+
+#: kitsune/messages/jinja2/messages/email/private_message.ltxt:11
+msgid "Change your email preferences:"
+msgstr "メールアドレス設定を変更:"
 
 #: kitsune/products/api.py:89 kitsune/products/api.py:91
 #, fuzzy
@@ -1132,6 +1404,105 @@ msgstr "チケット送信中にエラーが発生しました。後でもう一
 #: kitsune/questions/views.py:1718
 msgid "I invited {user} to a screen sharing session, and I'll give an update here once we are done."
 msgstr "{user} さんを画面共有セッションに招待しました。セッションが完了したらここにその後の情報を提供します。"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/questions/jinja2/questions/email/activate_watch.ltxt:3
+msgid "You are about to subscribe to:"
+msgstr "購読対象:"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/questions/jinja2/questions/email/activate_watch.ltxt:11
+msgid "To confirm your subscription, please click the link below or copy and paste the whole thing into your browser's location bar:"
+msgstr "購読を確認するには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
+
+#. This is at the end of an email.
+#: kitsune/questions/jinja2/questions/email/activate_watch.ltxt:20 kitsune/users/jinja2/users/email/already_activated.ltxt:11 kitsune/users/jinja2/users/email/confirm_email.ltxt:13
+msgid "Thanks!"
+msgstr "ありがとうございます！"
+
+#. This is an email. Whitespace matters!
+#. This is an email.  Whitespace matters!
+#: kitsune/questions/jinja2/questions/email/new_answer.ltxt:5 kitsune/questions/jinja2/questions/email/new_answer_to_asker.ltxt:4 kitsune/questions/jinja2/questions/email/solution.ltxt:5
+#: kitsune/users/jinja2/users/email/activate.ltxt:3
+msgid "Hi {username},"
+msgstr "こんにちは、{username} さん。"
+
+#. This is an email. Whitespace matters!
+#: kitsune/questions/jinja2/questions/email/new_answer.ltxt:10
+msgid "{answerer} commented on a Firefox question on {host}:"
+msgstr "{answerer} さんが {host} サイトの Firefox の質問にコメントしました:"
+
+#. This is in an email.
+#: kitsune/questions/jinja2/questions/email/new_answer.ltxt:17 kitsune/questions/jinja2/questions/email/new_answer_to_asker.ltxt:9
+msgid "{answerer} wrote:"
+msgstr "{answerer} さんの回答:"
+
+#. This is in an email.
+#: kitsune/questions/jinja2/questions/email/new_answer.ltxt:21
+msgid "See the comment:"
+msgstr "コメントを見る:"
+
+#. This is in an email.
+#: kitsune/questions/jinja2/questions/email/new_answer.ltxt:25
+msgid "If this comment is helpful, vote on it:"
+msgstr "このコメントが役に立った場合は投票してください:"
+
+#. This is in an email.
+#: kitsune/questions/jinja2/questions/email/new_answer.ltxt:29 kitsune/questions/jinja2/questions/email/new_answer_to_asker.ltxt:20
+msgid "Help other Firefox users by browsing for unsolved questions on {host}:"
+msgstr "{host} の未解決の質問を見て他の Firefox ユーザを助けてください:"
+
+#. This is in an email.
+#: kitsune/questions/jinja2/questions/email/new_answer.ltxt:33 kitsune/questions/jinja2/questions/email/new_answer_to_asker.ltxt:23
+msgid "You might just make someone's day!"
+msgstr "あなたの回答が多くの人の役に立ちます！"
+
+#: kitsune/questions/jinja2/questions/email/new_answer_to_asker.ltxt:6
+msgid "{answerer} has posted an answer to your question on {host}:"
+msgstr "{answerer} さんが {host} サイトのあなたの質問に回答しました:"
+
+#: kitsune/questions/jinja2/questions/email/new_answer_to_asker.ltxt:12
+msgid "If this doesn't solve your problem, let {answerer} know by replying on the website:"
+msgstr "この回答で問題を解決できないときは、Web サイト上で返信して {answerer} さんに知らせてください:"
+
+#: kitsune/questions/jinja2/questions/email/new_answer_to_asker.ltxt:15
+msgid "If this answer solves your problem, please mark it as \"solved\":"
+msgstr "この回答で問題を解決できたときは \"解決済み\" のマークを付けてください:"
+
+#: kitsune/questions/jinja2/questions/email/new_answer_to_asker.ltxt:18
+msgid "This will help other Firefox users find good answers to their questions!"
+msgstr "これは他の Firefox ユーザが自分の疑問に対する良い回答を見つける助けになります！"
+
+#. This is an email. Whitespace matters!
+#: kitsune/questions/jinja2/questions/email/solution.ltxt:10
+#, python-format
+msgid "We just wanted to let you know that %(answerer)s has found a solution to a Firefox question that you're following."
+msgstr "%(answerer)s さんがあなたが監視中の質問に対する解決策を見つけました。"
+
+#: kitsune/questions/jinja2/questions/email/solution.ltxt:15
+msgid "The question:"
+msgstr "質問:"
+
+#: kitsune/questions/jinja2/questions/email/solution.ltxt:18
+msgid "was marked as solved by its asker, {asker}."
+msgstr "は質問者 {asker} により解決済みのマークが付けられました。"
+
+#: kitsune/questions/jinja2/questions/email/solution.ltxt:20
+msgid "You can view the solution using the link below."
+msgstr "以下のリンクから解決策を見ることができます。"
+
+#: kitsune/questions/jinja2/questions/email/solution.ltxt:22
+msgid "Did this answer also help you? Did you find another post more helpful? Let other Firefox users know by voting next to the answer."
+msgstr "この回答は役に立ちましたか？ 他の投稿のほうが役に立ちますか？ 他の Firefox ユーザに知らせるため、回答の隣から投票してください。"
+
+#: kitsune/questions/jinja2/questions/email/solution.ltxt:30
+#, python-format
+msgid ""
+"Did you know that %(answerer)s is a Firefox user just like you? Get started helping other Firefox users by browsing questions at https://%(host)s/questions?filter=unsolved -- you might just make "
+"someone's day!"
+msgstr ""
+"%(answerer)s さんがあなたと同じただの Firefox ユーザであることをご存知でしたか？ 未解決の質問を https://%(host)s/questions?filter=unsolved から探して、他の Firefox ユーザを助けましょう。あなたの回答"
+"が多くの人の役に立ちます！"
 
 #: kitsune/search/__init__.py:14 kitsune/search/__init__.py:42 kitsune/search/__init__.py:48
 msgid "Don't filter"
@@ -3238,6 +3609,10 @@ msgstr "\"%s\" というボタンテンプレートは存在しません。"
 msgid "Would you like to view this page in %(language)s instead?"
 msgstr "このページを %(language)s で表示しますか？"
 
+#: kitsune/sumo/jinja2/includes/unsubscribe_text.ltxt:3
+msgid "Unsubscribe from these emails:"
+msgstr "これらのメールからの通知を解除する:"
+
 #: kitsune/sumo/templatetags/jinja_helpers.py:124
 msgid "read more"
 msgstr "続きを読む"
@@ -3483,10 +3858,6 @@ msgstr "ハッシュ"
 msgid "You have been automatically logged in."
 msgstr "自動的にログインしました。"
 
-#: kitsune/users/models.py:42 kitsune/users/models.py:325
-msgid "User"
-msgstr "ユーザ"
-
 #: kitsune/users/models.py:44
 msgid "Display name"
 msgstr "表示名"
@@ -3558,7 +3929,8 @@ msgstr "値"
 
 #. L10n: Thank you so much for your translation work! You're
 #. L10n: the best!
-#: kitsune/users/models.py:464 kitsune/users/utils.py:91 kitsune/users/views.py:512
+#. This is at the end of an email.
+#: kitsune/users/models.py:464 kitsune/users/utils.py:91 kitsune/users/views.py:512 kitsune/users/jinja2/users/email/contributor.ltxt:89
 msgid "Welcome to SUMO!"
 msgstr "SUMO へようこそ！"
 
@@ -3609,6 +3981,161 @@ msgstr "このユーザ名は既に使用されています！"
 #: kitsune/users/views.py:780
 msgid "This email is already in use!"
 msgstr "このメールアドレスは既に使用されています！"
+
+#: kitsune/users/jinja2/users/email/activate.ltxt:5
+msgid "Thanks for joining Mozilla Support! To complete registration, you need to verify your email address."
+msgstr "Mozilla サポートへのご参加ありがとうございます！登録を完了するには、メールアドレスを認証してください。"
+
+#: kitsune/users/jinja2/users/email/activate.ltxt:10
+msgid "Verify your email address:"
+msgstr "メールアドレスを認証してください:"
+
+#: kitsune/users/jinja2/users/email/activate.ltxt:13
+msgid "Once you’ve clicked on the link, you can throw away this email."
+msgstr "認証のリンクをクリックしたら、このメールは破棄していただいて構いません。"
+
+#: kitsune/users/jinja2/users/email/activate.ltxt:15
+msgid "Thanks, The Mozilla Support team"
+msgstr "Mozilla サポートチーム"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/users/jinja2/users/email/already_activated.ltxt:3
+msgid "It seems your account has already been activated."
+msgstr "あなたのアカウントはすでに有効になっています。"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/users/jinja2/users/email/already_activated.ltxt:6
+msgid "You can log in at:"
+msgstr "次のリンクからログインしてください:"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/users/jinja2/users/email/confirm_email.ltxt:3
+msgid "Before we update your email, you must confirm it. Please click the link below or copy and paste the whole thing into your browser's location bar:"
+msgstr "私たちが最新情報をお届けする前に、ご確認をお願いします。以下のリンクをクリックするか、この URL をブラウザのロケーションバーにコピー＆ペーストして開いてください:"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/users/jinja2/users/email/contributor.ltxt:3 kitsune/wiki/jinja2/wiki/email/ready_for_review_weekly_digest.ltxt:3
+msgid "Hi {username}"
+msgstr "{username} さん、こんにちは"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/users/jinja2/users/email/contributor.ltxt:6
+msgid "Thanks so much for your interest in helping users of Mozilla technologies!"
+msgstr "Mozilla テクノロジ利用者への手助けにご関心をお寄せいただき、ありがとうございます。"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/users/jinja2/users/email/contributor.ltxt:13
+msgid ""
+"We would love to find a good place for you to help users, so please send us an email with your username and the area you would like to get involved. Please feel free to add all your skills, we will "
+"try to find the right use for them :)"
+msgstr ""
+"私たちは、あなたがユーザを助けるのに相応しい場所を見つけられるよう支援をします。あなたのユーザ名とメールアドレス、協力したい分野を教えてください。あなたの得意なことやスキルを生かすため、それらも自由"
+"に追記してください :)"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/users/jinja2/users/email/contributor.ltxt:22
+msgid "To help you find out where to help check this site:"
+msgstr "あなたが手助けできるところを見つけるため、次のサイトを見てください:"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/users/jinja2/users/email/contributor.ltxt:27
+msgid "There are several ways in which you can get involved:"
+msgstr "参加にはいくつかの方法があります:"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/users/jinja2/users/email/contributor.ltxt:30
+msgid "Forum Contributor - Answer user support questions that are most-requested but have no replies:"
+msgstr "フォーラム貢献者 - リクエストが多く、返信の無いユーザサポートの質問に答えます:"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/users/jinja2/users/email/contributor.ltxt:38
+msgid ""
+"As you get started answering questions that look easy you might run into a few questions. Like, what happens when an angry user does not want a work around or what happens next? The Contributor "
+"Quality Training may have these answered. It is possible to get started here:"
+msgstr ""
+"初めは、少数の簡単に答えられそうな質問に答えるとよいでしょう。困ったユーザが回避策を望まない時に何が起こるか、そしてその次に起こることは何か。貢献者品質訓練 (Contributor Quality Training) では、これ"
+"らの質問に答えます。こちらから始めてください:"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/users/jinja2/users/email/contributor.ltxt:49
+msgid "Twitter Contributor - Respond to tweets about Firefox:"
+msgstr "Twitter 貢献者 - Firefox に関するツイートにリプライします:"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/users/jinja2/users/email/contributor.ltxt:56
+msgid "KB Editor - Help to update knowledge base articles that need changes or write new articles:"
+msgstr "KB 編集者: 変更が必要なナレッジベース記事の更新や新しい記事の執筆を助けます:"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/users/jinja2/users/email/contributor.ltxt:64
+msgid "L10N Contributor - Help to translate Firefox Help content to your language:"
+msgstr "L10N 貢献者 - Firefox ヘルプのコンテンツをあなたの言語に翻訳することを助けます:"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/users/jinja2/users/email/contributor.ltxt:72
+msgid "Let us know which of the above you would be interested in and we’ll help you get started. It’s great to have you onboard!"
+msgstr "上記のどれに興味があるか教えてください。私たちはあなたの参加を支援します。ご協力ありがとうございます！"
+
+#. This is an email.  Whitespace matters!
+#: kitsune/users/jinja2/users/email/contributor.ltxt:79
+msgid ""
+"You can also apply to our Buddy Program and get guidance from our more experienced contributors. Just introduce yourself in the forum for New Contributors by starting a new thread. Put your name on "
+"the thread title and tell us a bit about yourself:"
+msgstr ""
+"私たちのバディプログラムに申し込むことにより、経験豊かなコントリビュータから指導を受けることもできます。新人コントリビュータのためのフォーラムで、タイトルにご自分の名前を付けて簡単に自己紹介してくだ"
+"さい:"
+
+#. This is an email. Whitespace matters!
+#: kitsune/users/jinja2/users/email/forgot_username.ltxt:3
+msgid "We've just received a request to send the username linked to this email address."
+msgstr "このメールアドレスにリンクされたユーザ名に送信するためのリクエストを受け取りました。"
+
+#. This is an email. Whitespace matters!
+#: kitsune/users/jinja2/users/email/forgot_username.ltxt:10
+msgid "Your username is:"
+msgstr "あなたのユーザ名:"
+
+#: kitsune/users/jinja2/users/email/forgot_username.ltxt:13
+msgid "You may log in at https://{domain}{login_url}"
+msgstr "https://{domain}{login_url} にログインしていました"
+
+#. This is an email. Whitespace matters!
+#: kitsune/users/jinja2/users/email/forgot_username.ltxt:16
+msgid "If you did not request this email, there is no need for further action."
+msgstr "このメールをリクエストしていない場合は、何もする必要はありません。"
+
+# メール文末。不要と思われる。空文字とする。
+#. This is at the end of an email.
+#. This is an email. Whitespace matters!
+#: kitsune/users/jinja2/users/email/forgot_username.ltxt:23 kitsune/users/jinja2/users/email/pw_reset.ltxt:20
+msgid "Thanks,"
+msgstr " "
+
+#. This is at the end of an email.
+#: kitsune/users/jinja2/users/email/forgot_username.ltxt:26 kitsune/users/jinja2/users/email/pw_reset.ltxt:23
+msgid "The {sitename} team"
+msgstr "{sitename} チーム"
+
+#. This is an email. Whitespace matters!
+#: kitsune/users/jinja2/users/email/pw_reset.ltxt:3
+msgid "{sitename} Password Reset"
+msgstr "{sitename} のパスワードをリセット"
+
+#. This is an email. Whitespace matters!
+#: kitsune/users/jinja2/users/email/pw_reset.ltxt:6
+#, python-format
+msgid "A request was received to reset the password for this account on %(sitename)s. To change this password please click on the following link, or paste it into your browser's location bar:"
+msgstr ""
+"%(sitename)s サイトでご利用のアカウントのパスワードリセットが要求されました。このパスワードを変更するには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
+
+#. This is an email. Whitespace matters!
+#: kitsune/users/jinja2/users/email/pw_reset.ltxt:17
+msgid "If you did not request this email there is no need for further action."
+msgstr "このメールをリクエストしていない場合は、何もする必要はありません。"
+
+#: kitsune/users/jinja2/users/email/pw_reset_subject.ltxt:1
+msgid "Password reset on {sitename}"
+msgstr "{sitename} のパスワードをリセット"
 
 #: kitsune/users/templatetags/jinja_helpers.py:95
 msgid "Private message"
@@ -4010,6 +4537,105 @@ msgstr "新しい貢献者を追加する時にエラーが発生しました。
 msgid "{user} removed from the contributors successfully!"
 msgstr "{user} さんが貢献者から削除されました。"
 
+#: kitsune/wiki/jinja2/wiki/email/approved.ltxt:4
+#, python-format
+msgid "%(reviewer)s has approved the revision to the document %(document_title)s."
+msgstr "%(reviewer)s さんが %(document_title)s のリビジョンを承認しました。"
+
+#: kitsune/wiki/jinja2/wiki/email/approved.ltxt:9
+msgid "To view the updated document, click the following link, or paste it into your browser's location bar:"
+msgstr "更新された記事を見るには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
+
+#. This is in an email.
+#: kitsune/wiki/jinja2/wiki/email/approved.ltxt:17 kitsune/wiki/jinja2/wiki/email/edited.ltxt:18 kitsune/wiki/jinja2/wiki/email/ready_for_review.ltxt:19
+msgid "Summary:"
+msgstr "要約:"
+
+#. This is in an email.
+#: kitsune/wiki/jinja2/wiki/email/approved.ltxt:21 kitsune/wiki/jinja2/wiki/email/edited.ltxt:22 kitsune/wiki/jinja2/wiki/email/ready_for_l10n.ltxt:19
+#: kitsune/wiki/jinja2/wiki/email/ready_for_review.ltxt:23
+msgid "Changes:"
+msgstr "変更点:"
+
+#: kitsune/wiki/jinja2/wiki/email/edited.ltxt:4
+#, python-format
+msgid "%(creator)s created a new revision to the document %(document_title)s."
+msgstr "%(creator)s さんが %(document_title)s の新しいリビジョンを作成しました。"
+
+#: kitsune/wiki/jinja2/wiki/email/edited.ltxt:10
+msgid "To view this document's history, click the following link, or paste it into your browser's location bar:"
+msgstr "この記事の履歴を見るには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
+
+#: kitsune/wiki/jinja2/wiki/email/ready_for_l10n.ltxt:4
+#, python-format
+msgid "The document %(document_title)s has a new revision that is ready for localization."
+msgstr "%(document_title)s の記事に翻訳準備が完了した新しいリビジョンがあります。"
+
+#: kitsune/wiki/jinja2/wiki/email/ready_for_l10n.ltxt:10
+msgid "To localize the document, click the following link, or paste it into your browser's location bar:"
+msgstr "この記事を翻訳するには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
+
+#: kitsune/wiki/jinja2/wiki/email/ready_for_l10n.ltxt:24
+msgid "Text of the new revision:"
+msgstr "新しいリビジョンの内容:"
+
+#: kitsune/wiki/jinja2/wiki/email/ready_for_review.ltxt:4
+#, python-format
+msgid "%(creator)s submitted a new revision to the document %(document_title)s."
+msgstr "%(creator)s さんが %(document_title)s の記事の新しいリビジョンを投稿しました。"
+
+#: kitsune/wiki/jinja2/wiki/email/ready_for_review.ltxt:11
+msgid "To review this revision, click the following link, or paste it into your browser's location bar:"
+msgstr "このリビジョンをレビューするには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
+
+#: kitsune/wiki/jinja2/wiki/email/ready_for_review_weekly_digest.ltxt:5
+msgid "Our contributors have been working hard on articles and it would be great if you could review them. The faster we get them published the faster they start helping users."
+msgstr "SUMO サイトの貢献者たちは、熱心に記事を作成、更新しています。これらの記事をレビューしていただければ、より早く記事を発行し、より早くユーザを助けることができます。"
+
+#: kitsune/wiki/jinja2/wiki/email/ready_for_review_weekly_digest.ltxt:11
+msgid "If you have a moment please review these articles:"
+msgstr "時間があればこれらの記事をレビューしてください:"
+
+#: kitsune/wiki/jinja2/wiki/email/ready_for_review_weekly_digest.ltxt:23
+msgid "Many thanks for your contribution on behalf of SUMO and the happy users who are helped by your work!"
+msgstr "SUMO へのご協力ありがとうございます。あなたの貢献によって助けられたユーザに代わりお礼申し上げます。"
+
+#: kitsune/wiki/jinja2/wiki/email/ready_for_review_weekly_digest.ltxt:28
+msgid "Regards, The SUMO team"
+msgstr "SUMO チームより"
+
+#: kitsune/wiki/jinja2/wiki/email/reviewed.ltxt:3
+msgid "Your revision has been reviewed."
+msgstr "あなたの編集リビジョンがレビューされました。"
+
+#: kitsune/wiki/jinja2/wiki/email/reviewed.ltxt:5
+#, python-format
+msgid "%(reviewer)s has approved your revision to the document %(document_title)s."
+msgstr "%(reviewer)s さんが %(document_title)s の記事のあなたの編集リビジョンを承認しました。"
+
+#: kitsune/wiki/jinja2/wiki/email/reviewed.ltxt:10
+#, python-format
+msgid "%(reviewer)s has reviewed your revision to the document %(document_title)s."
+msgstr "%(reviewer)s さんが %(document_title)s の記事のあなたの編集リビジョンをレビューしました。"
+
+#: kitsune/wiki/jinja2/wiki/email/reviewed.ltxt:15 kitsune/wiki/jinja2/wiki/email/reviewed_contributors.ltxt:16
+msgid "Message from the reviewer:"
+msgstr "レビュアからのメッセージ:"
+
+#: kitsune/wiki/jinja2/wiki/email/reviewed.ltxt:19 kitsune/wiki/jinja2/wiki/email/reviewed_contributors.ltxt:21
+msgid "To view the history of this document, click the following link, or paste it into your browser's location bar:"
+msgstr "この記事の履歴を見るには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
+
+#: kitsune/wiki/jinja2/wiki/email/reviewed_contributors.ltxt:4
+#, python-format
+msgid "A revision you contributed to has been approved.  %(reviewer)s has approved a revision to the document %(document_title)s."
+msgstr "あなたの貢献したリビジョンが承認されました。%(reviewer)s さんが %(document_title)s の記事のリビジョンを承認しました。"
+
+#: kitsune/wiki/jinja2/wiki/email/reviewed_contributors.ltxt:9
+#, python-format
+msgid "A revision you contributed to has been reviewed.  %(reviewer)s has reviewed a revision to the document %(document_title)s."
+msgstr "あなたの貢献したリビジョンがレビューされました。%(reviewer)s さんが %(document_title)s の記事のリビジョンをレビューしました。"
+
 #, fuzzy
 #~ msgid "Contributor Metrics"
 #~ msgstr "貢献者向けの記事"
@@ -4104,30 +4730,12 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ msgid "Contributions in last 90 days: {count}"
 #~ msgstr "最近 90 日以内の貢献数: {count} 件"
 
-#~ msgid "Thank you for your first contribution to the Mozilla support forums! You just made somebody's day!"
-#~ msgstr "Mozilla サポートフォーラムへの貢献ありがとうございます。あなたの貢献がユーザの助けになりました。"
-
-#~ msgid ""
-#~ "Mozilla support is fully powered by our volunteer community that is helping hundreds of users everyday. This community is formed by passionate Firefox and Thunderbird users who take some of "
-#~ "their spare time to help others. We couldn't do it without your passion and enthusiasm. Your contribution, as minor as it might seem, has tremendous value. Solving one issue in the support "
-#~ "forums can help up to 1000 users a day!"
-#~ msgstr ""
-#~ "Mozilla サポートは、毎日数多くのユーザを助けているボランティアコミュニティの協力により運営されています。このコミュニティは、Firefox や Thunderbird の熱心なユーザから成り、空いた時間に他のユーザを"
-#~ "助けています。私たちは、あなたの熱意なしではこのようなことを行えません。あなたの貢献は、ごく僅かであっても、大きな価値があります。サポートフォーラムで一つの問題を解決することにより、一日に 1000 "
-#~ "人以上のユーザを助けることができます！"
-
-#~ msgid "Tell us about yourself!"
-#~ msgstr "自己紹介してください！"
-
 #~ msgid ""
 #~ "We are always very happy to hear from new people who like helping on the forums so if you haven’t met our community yet <a href=\"%(intro_url)s\"> please take a minute to introduce yourself </"
 #~ "a>. If you want to stay low-profile, that’s also ok :). You can also find us all hanging out on IRC, on the <a href=\"%(irc_url)s\"> #sumo channel </a>."
 #~ msgstr ""
 #~ "私たちは、フォーラムで手助けするのが好きな方をいつでも歓迎します。まだ私たちのコミュニティを知らない方は、<a href=\"%(intro_url)s\">自己紹介してください</a>。短くても OK です :)。IRC チャットの "
 #~ "<a href=\"%(irc_url)s\">#sumo チャンネル</a> で私たちと会話することもできます。"
-
-#~ msgid "Learn new things"
-#~ msgstr "新しいことを学びましょう"
 
 #~ msgid ""
 #~ "If you are interested in learning more about how this whole support thing works, check out our <a href=\"%(training_url)s\"> contributor training </a>. This includes some cool troubleshooting "
@@ -4136,50 +4744,12 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ "サポート全体の仕組みを学ぶことに興味がある方は、 <a href=\"%(training_url)s\">貢献者トレーニング</a> を見てください。ここには、トラブルシューティング情報、ガイドライン、質問の仕方、行き詰ったとき"
 #~ "に助けを得る場所についての情報が書かれています。"
 
-#~ msgid "Stay in touch"
-#~ msgstr "連絡"
-
 #~ msgid ""
 #~ "Finally, if you want to follow all news related to SUMO, don’t forget about our <a href=\"%(forums_url)s\">community forums</a>, <a href=\"%(blog_url)s\">official blog</a> and <a href="
 #~ "\"%(twitter_url)s\">Twitter account</a>. We also <a href=\"%(meetings_url)s\"> meet almost every Monday </a> - and you can join us."
 #~ msgstr ""
 #~ "最後に、SUMO 関連のすべてのニュースについて知りたい方は、私たちの <a href=\"%(forums_url)s\">コミュニティフォーラム</a>、<a href=\"%(blog_url)s\">公式ブログ</a>、<a href=\"%(twitter_url)s"
 #~ "\">Twitter アカウント</a> も忘れずに見てください。また、<a href=\"%(meetings_url)s\">毎週月曜日</a> にミーティングがあり、あなたも参加することができます。"
-
-#~ msgid "Thank you once more. We are looking forward to seeing you more often around SUMO! Keep rocking!"
-#~ msgstr "重ねて感謝いたします。SUMO でもっとお会いできるのを楽しみにしています。続けて参加してください！"
-
-#~ msgid ""
-#~ "We are always very happy to hear from new people who like helping on the forums so if you haven’t met our community yet please take a minute to introduce yourself. If you want to stay low-"
-#~ "profile, that’s also ok :). You can also find us all hanging out on IRC, on the #sumo channel on irc.mozilla.org."
-#~ msgstr ""
-#~ "私たちは、フォーラムで手助けするのが好きな新しい方が参加するのをいつも楽しみにしています。コミュニティに参加したばかりなら、少しだけ時間を取って、自己紹介をしてください。内容は短くても構いませ"
-#~ "ん。または、IRC (irc.mozilla.org の #sumo チャンネル) でも私たちを見つけることができます。"
-
-#~ msgid "The community forum is at %(url)s ."
-#~ msgstr "コミュニティフォーラムは %(url)s です。"
-
-#~ msgid ""
-#~ "If you are interested in learning more about how this whole support thing works, check out our contributor training. This includes some cool troubleshooting info, guidelines, how-to questions, "
-#~ "and info about where to find more help if stuck."
-#~ msgstr ""
-#~ "これらのサポート活動全体について学ぶことに興味がある方は、わたしたちの貢献者トレーニングプログラムを見てください。これには、いくつかのトラブルシューティング情報、ガイドライン、使い方の質問、助け"
-#~ "を得られる場所についての情報が含まれます。"
-
-#~ msgid "Finally, if you want to follow all news related to SUMO, don’t forget about our"
-#~ msgstr "最後に、SUMO 関連のすべてのニュースを知りたい方は、"
-
-#~ msgid "Community forums"
-#~ msgstr "コミュニティフォーラム"
-
-#~ msgid "Official blog"
-#~ msgstr "公式ブログ"
-
-#~ msgid "Twitter account"
-#~ msgstr "Twitter アカウント"
-
-#~ msgid "Weekly meetings"
-#~ msgstr "Weekly Meeting"
 
 #~ msgid "Aggregated Localization Metrics"
 #~ msgstr "L10N 計測の総計"
@@ -4363,9 +4933,6 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ msgctxt "avatar"
 #~ msgid "Upload"
 #~ msgstr "アップロード"
-
-#~ msgid "Groups"
-#~ msgstr "グループ"
 
 #~ msgid "Add group profile"
 #~ msgstr "グループプロフィールを追加"
@@ -4565,9 +5132,6 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ msgid "Older"
 #~ msgstr "古い"
 
-#~ msgid "Unsubscribe from these emails:"
-#~ msgstr "これらのメールからの通知を解除する:"
-
 #~ msgid "Page {n}"
 #~ msgid_plural "Page {n}"
 #~ msgstr[0] "{n} ページ"
@@ -4607,9 +5171,6 @@ msgstr "{user} さんが貢献者から削除されました。"
 
 #~ msgid "Some features on this page are temporarily disabled while we perform website maintenance. Please try again a little later."
 #~ msgstr "サイトをメンテナンスしている間、このページの一部の機能は一時的に無効化されています。後で再度お試しください。"
-
-#~ msgid "Account successfully verified!"
-#~ msgstr "アカウントが承認されました！"
 
 #~ msgid "Something is wrong"
 #~ msgstr "どこかに間違いがあります"
@@ -4887,58 +5448,17 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ "ログインする前に、登録したメールアドレスのメールを確認してください。アカウント確認のためのリンクを記載したメールが <strong>%(email)s</strong> に送信されています。そのメールに書かれた確認のリンク"
 #~ "をクリックすると、あなたのアカウントが承認されます。"
 
-#~ msgid "Thanks for joining Mozilla Support! To complete registration, you need to verify your email address."
-#~ msgstr "Mozilla サポートへのご参加ありがとうございます！登録を完了するには、メールアドレスを認証してください。"
-
 #~ msgid "Click here to verify your email address"
 #~ msgstr "クリックしてあなたのメールアドレスを認証してください"
 
 #~ msgid "If the link above doesn’t work, click here:"
 #~ msgstr "上記のリンクが動作しないときは、こちらをクリックしてください:"
 
-#~ msgid "Once you’ve clicked on the link, you can throw away this email."
-#~ msgstr "認証のリンクをクリックしたら、このメールは破棄していただいて構いません。"
-
-# メール文末。不要と思われる。空文字とする。
-#~ msgid "Thanks,"
-#~ msgstr " "
-
 #~ msgid "The Mozilla Support team"
 #~ msgstr "Mozilla サポートチーム"
 
-#~ msgid "Verify your email address:"
-#~ msgstr "メールアドレスを認証してください:"
-
-#~ msgid "Thanks, The Mozilla Support team"
-#~ msgstr "Mozilla サポートチーム"
-
-#~ msgid "It seems your account has already been activated."
-#~ msgstr "あなたのアカウントはすでに有効になっています。"
-
-#~ msgid "You can log in at:"
-#~ msgstr "次のリンクからログインしてください:"
-
-#~ msgid "Before we update your email, you must confirm it. Please click the link below or copy and paste the whole thing into your browser's location bar:"
-#~ msgstr "私たちが最新情報をお届けする前に、ご確認をお願いします。以下のリンクをクリックするか、この URL をブラウザのロケーションバーにコピー＆ペーストして開いてください:"
-
-#~ msgid "Hi {username}"
-#~ msgstr "{username} さん、こんにちは"
-
-#~ msgid "Thanks so much for your interest in helping users of Mozilla technologies!"
-#~ msgstr "Mozilla テクノロジ利用者への手助けにご関心をお寄せいただき、ありがとうございます。"
-
-#~ msgid ""
-#~ "We would love to find a good place for you to help users, so please send us an email with your username and the area you would like to get involved. Please feel free to add all your skills, we "
-#~ "will try to find the right use for them :)"
-#~ msgstr ""
-#~ "私たちは、あなたがユーザを助けるのに相応しい場所を見つけられるよう支援をします。あなたのユーザ名とメールアドレス、協力したい分野を教えてください。あなたの得意なことやスキルを生かすため、それらも"
-#~ "自由に追記してください :)"
-
 #~ msgid "Click here to find out where to help."
 #~ msgstr "あなたが手助けできるところを見つけてください。"
-
-#~ msgid "There are several ways in which you can get involved:"
-#~ msgstr "参加にはいくつかの方法があります:"
 
 #~ msgid "<a href=\"%(url)s\">Forum Contributor</a> - Answer user support questions that are most-requested but have no replies."
 #~ msgstr "<a href=\"%(url)s\">フォーラム貢献者</a> - リクエストが多く、返信の無いユーザサポートの質問に答えます。"
@@ -4958,66 +5478,6 @@ msgstr "{user} さんが貢献者から削除されました。"
 
 #~ msgid "<a href=\"%(url)s\">L10N Contributor</a> - Help to translate Firefox Help content to your language."
 #~ msgstr "<a href=\"%(url)s\">L10N 貢献者</a> - Firefox ヘルプのコンテンツをあなたの言語に翻訳することを助けます。"
-
-#~ msgid "Let us know which of the above you would be interested in and we’ll help you get started. It’s great to have you onboard!"
-#~ msgstr "上記のどれに興味があるか教えてください。私たちはあなたの参加を支援します。ご協力ありがとうございます！"
-
-#~ msgid ""
-#~ "You can also apply to our Buddy Program and get guidance from our more experienced contributors. Just introduce yourself in the forum for New Contributors by starting a new thread. Put your name "
-#~ "on the thread title and tell us a bit about yourself:"
-#~ msgstr ""
-#~ "私たちのバディプログラムに申し込むことにより、経験豊かなコントリビュータから指導を受けることもできます。新人コントリビュータのためのフォーラムで、タイトルにご自分の名前を付けて簡単に自己紹介して"
-#~ "ください:"
-
-#~ msgid "To help you find out where to help check this site:"
-#~ msgstr "あなたが手助けできるところを見つけるため、次のサイトを見てください:"
-
-#~ msgid "Forum Contributor - Answer user support questions that are most-requested but have no replies:"
-#~ msgstr "フォーラム貢献者 - リクエストが多く、返信の無いユーザサポートの質問に答えます:"
-
-#~ msgid ""
-#~ "As you get started answering questions that look easy you might run into a few questions. Like, what happens when an angry user does not want a work around or what happens next? The Contributor "
-#~ "Quality Training may have these answered. It is possible to get started here:"
-#~ msgstr ""
-#~ "初めは、少数の簡単に答えられそうな質問に答えるとよいでしょう。困ったユーザが回避策を望まない時に何が起こるか、そしてその次に起こることは何か。貢献者品質訓練 (Contributor Quality Training) では、"
-#~ "これらの質問に答えます。こちらから始めてください:"
-
-#~ msgid "Twitter Contributor - Respond to tweets about Firefox:"
-#~ msgstr "Twitter 貢献者 - Firefox に関するツイートにリプライします:"
-
-#~ msgid "KB Editor - Help to update knowledge base articles that need changes or write new articles:"
-#~ msgstr "KB 編集者: 変更が必要なナレッジベース記事の更新や新しい記事の執筆を助けます:"
-
-#~ msgid "L10N Contributor - Help to translate Firefox Help content to your language:"
-#~ msgstr "L10N 貢献者 - Firefox ヘルプのコンテンツをあなたの言語に翻訳することを助けます:"
-
-#~ msgid "We've just received a request to send the username linked to this email address."
-#~ msgstr "このメールアドレスにリンクされたユーザ名に送信するためのリクエストを受け取りました。"
-
-#~ msgid "Your username is:"
-#~ msgstr "あなたのユーザ名:"
-
-#~ msgid "You may log in at https://{domain}{login_url}"
-#~ msgstr "https://{domain}{login_url} にログインしていました"
-
-#~ msgid "If you did not request this email, there is no need for further action."
-#~ msgstr "このメールをリクエストしていない場合は、何もする必要はありません。"
-
-#~ msgid "The {sitename} team"
-#~ msgstr "{sitename} チーム"
-
-#~ msgid "{sitename} Password Reset"
-#~ msgstr "{sitename} のパスワードをリセット"
-
-#~ msgid "A request was received to reset the password for this account on %(sitename)s. To change this password please click on the following link, or paste it into your browser's location bar:"
-#~ msgstr ""
-#~ "%(sitename)s サイトでご利用のアカウントのパスワードリセットが要求されました。このパスワードを変更するには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
-
-#~ msgid "If you did not request this email there is no need for further action."
-#~ msgstr "このメールをリクエストしていない場合は、何もする必要はありません。"
-
-#~ msgid "Password reset on {sitename}"
-#~ msgstr "{sitename} のパスワードをリセット"
 
 #~ msgid "Having trouble with Firefox and want some help? Our support forums are a great place to ask a question."
 #~ msgstr "Firefox で助けが必要な問題が起こったときは、サポートフォーラムで質問してください。"
@@ -5149,9 +5609,6 @@ msgstr "{user} さんが貢献者から削除されました。"
 
 #~ msgid "Create a new support account"
 #~ msgstr "新規サポートアカウントの作成"
-
-#~ msgid "The {domain} team"
-#~ msgstr "{domain} チーム"
 
 #~ msgid "Top Contributors"
 #~ msgstr "上位の貢献者"
@@ -5377,21 +5834,6 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ msgid "%(date)s by <a href=\"%(url)s\">%(user)s</a>"
 #~ msgstr "%(date)s by <a href=\"%(url)s\">%(user)s</a>"
 
-#~ msgid "Reply to thread: {title}"
-#~ msgstr "スレッドへの返信: {title}"
-
-#~ msgid "%(author)s has replied to a thread you're watching. Here is their reply:"
-#~ msgstr "監視中のスレッドに %(author)s さんが返信しました。以下はその返信です:"
-
-#~ msgid "To view this post on the site, click the following link, or paste it into your browser's location bar:"
-#~ msgstr "サイトでこの投稿を確認するには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
-
-#~ msgid "New thread: {title}"
-#~ msgstr "新しいスレッド: {title}"
-
-#~ msgid "%(author)s has posted a new thread in a forum you're watching. Here is the thread:"
-#~ msgstr "監視中のフォーラムに %(author)s さんが新しいスレッドを立てました。以下はそのスレッドです:"
-
 #~ msgid "Delete image"
 #~ msgstr "画像を削除"
 
@@ -5557,9 +5999,6 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ msgid "All available SUMO badges"
 #~ msgstr "すべての SUMO バッジ"
 
-#~ msgid "Congratulations!"
-#~ msgstr "おめでとうございます！"
-
 #~ msgid "<strong>%(awarder)s</strong> has awarded you the <strong>%(title)s</strong> badge!"
 #~ msgstr "<strong>%(awarder)s</strong> さんが、あなたに <strong>%(title)s</strong> バッジを授与しました！"
 
@@ -5568,15 +6007,6 @@ msgstr "{user} さんが貢献者から削除されました。"
 
 #~ msgid "See all the details..."
 #~ msgstr "詳細を見る..."
-
-#~ msgid "%(awarder)s has awarded you the %(title)s badge!"
-#~ msgstr "%(awarder)s さんが、あなたに %(title)s バッジを授与しました！"
-
-#~ msgid "You have been awarded the %(title)s badge!"
-#~ msgstr "%(title)s バッジが授与されました！"
-
-#~ msgid "See all the details:"
-#~ msgstr "詳細を見る:"
 
 #~ msgid "Delete Post | {t} | {d} Discussion | Knowledge Base"
 #~ msgstr "投稿削除 | {t} | {d} についての議論 | ナレッジベース"
@@ -5607,9 +6037,6 @@ msgstr "{user} さんが貢献者から削除されました。"
 
 #~ msgid "Are you sure you want to delete this thread?"
 #~ msgstr "本当にこのスレッドを削除してもよろしいですか？"
-
-#~ msgid "Creator"
-#~ msgstr "作成者"
 
 #~ msgid "Number of Replies"
 #~ msgstr "返信数"
@@ -6154,17 +6581,8 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ msgid "Read Message"
 #~ msgstr "メッセージを読む"
 
-#~ msgid "{sender} sent you the following message:"
-#~ msgstr "{sender} さんから次のメッセージを受け取りました:"
-
 #~ msgid "View this message on the web"
 #~ msgstr "このメッセージを Web 上で見る"
-
-#~ msgid "View this message on the web:"
-#~ msgstr "このメッセージを Web 上で見る:"
-
-#~ msgid "Change your email preferences:"
-#~ msgstr "メールアドレス設定を変更:"
 
 #~ msgid "System"
 #~ msgstr "システム"
@@ -6657,17 +7075,8 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ msgid "We could not unsubscribe you from this question: <a href=\"%(question_url)s\">%(question_title)s</a>. Please make sure you copied and pasted the unsubscribe link correctly."
 #~ msgstr "この質問の更新通知を解除できませんでした: <a href=\"%(question_url)s\">%(question_title)s</a>。更新通知解除のリンクを正しくコピー＆ペーストしてください。"
 
-#~ msgid "You are about to subscribe to:"
-#~ msgstr "購読対象:"
-
 #~ msgid "Confirm your subscription"
 #~ msgstr "購読確認"
-
-#~ msgid "Thanks!"
-#~ msgstr "ありがとうございます！"
-
-#~ msgid "To confirm your subscription, please click the link below or copy and paste the whole thing into your browser's location bar:"
-#~ msgstr "購読を確認するには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
 
 #~ msgid "Browse for unsolved questions and help a fellow user"
 #~ msgstr "未解決の質問に回答してユーザを助けましょう"
@@ -6681,27 +7090,6 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ "このメールはロボットにより自動的に送信されました。このロボットはユーザからの質問には応じません。質問には、フォーラムの貢献者が答えます！ 質問に答えたいときは、<a href=\"%(url)s\">ここをクリック</"
 #~ "a> してください。"
 
-#~ msgid "Hi {username},"
-#~ msgstr "こんにちは、{username} さん。"
-
-#~ msgid "{answerer} commented on a Firefox question on {host}:"
-#~ msgstr "{answerer} さんが {host} サイトの Firefox の質問にコメントしました:"
-
-#~ msgid "{answerer} wrote:"
-#~ msgstr "{answerer} さんの回答:"
-
-#~ msgid "See the comment:"
-#~ msgstr "コメントを見る:"
-
-#~ msgid "If this comment is helpful, vote on it:"
-#~ msgstr "このコメントが役に立った場合は投票してください:"
-
-#~ msgid "Help other Firefox users by browsing for unsolved questions on {host}:"
-#~ msgstr "{host} の未解決の質問を見て他の Firefox ユーザを助けてください:"
-
-#~ msgid "You might just make someone's day!"
-#~ msgstr "あなたの回答が多くの人の役に立ちます！"
-
 #~ msgid "Mark it as solved"
 #~ msgstr "選択したメッセージを解決済みにする"
 
@@ -6711,26 +7099,8 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ msgid "Browse for unsolved questions and help a Firefox user"
 #~ msgstr "未解決の質問に回答して Firefox ユーザを助けましょう"
 
-#~ msgid "{answerer} has posted an answer to your question on {host}:"
-#~ msgstr "{answerer} さんが {host} サイトのあなたの質問に回答しました:"
-
-#~ msgid "If this doesn't solve your problem, let {answerer} know by replying on the website:"
-#~ msgstr "この回答で問題を解決できないときは、Web サイト上で返信して {answerer} さんに知らせてください:"
-
-#~ msgid "If this answer solves your problem, please mark it as \"solved\":"
-#~ msgstr "この回答で問題を解決できたときは \"解決済み\" のマークを付けてください:"
-
-#~ msgid "This will help other Firefox users find good answers to their questions!"
-#~ msgstr "これは他の Firefox ユーザが自分の疑問に対する良い回答を見つける助けになります！"
-
-#~ msgid "We just wanted to let you know that %(answerer)s has found a solution to a Firefox question that you're following."
-#~ msgstr "%(answerer)s さんがあなたが監視中の質問に対する解決策を見つけました。"
-
 #~ msgid "The question: '{title}' was marked as solved by its asker, {asker}."
 #~ msgstr "'{title}' の質問は、質問者 {asker} により解決済みのマークが付けられました。"
-
-#~ msgid "Did this answer also help you? Did you find another post more helpful? Let other Firefox users know by voting next to the answer."
-#~ msgstr "この回答は役に立ちましたか？ 他の投稿のほうが役に立ちますか？ 他の Firefox ユーザに知らせるため、回答の隣から投票してください。"
 
 #~ msgid "View the solution"
 #~ msgstr "解決策を見る"
@@ -6741,22 +7111,6 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ msgstr ""
 #~ "%(answerer)s さんもあなたと同じ、ただの Firefox ユーザであることをご存知でしたか？ <a href=\"https://%(host)s/questions?filter=unsolved\">未解決の質問を探して</a>、他の Firefox ユーザを助けましょ"
 #~ "う。あなたの回答が多くの人の役に立ちます！"
-
-#~ msgid "The question:"
-#~ msgstr "質問:"
-
-#~ msgid "was marked as solved by its asker, {asker}."
-#~ msgstr "は質問者 {asker} により解決済みのマークが付けられました。"
-
-#~ msgid "You can view the solution using the link below."
-#~ msgstr "以下のリンクから解決策を見ることができます。"
-
-#~ msgid ""
-#~ "Did you know that %(answerer)s is a Firefox user just like you? Get started helping other Firefox users by browsing questions at https://%(host)s/questions?filter=unsolved -- you might just make "
-#~ "someone's day!"
-#~ msgstr ""
-#~ "%(answerer)s さんがあなたと同じただの Firefox ユーザであることをご存知でしたか？ 未解決の質問を https://%(host)s/questions?filter=unsolved から探して、他の Firefox ユーザを助けましょう。あなたの"
-#~ "回答が多くの人の役に立ちます！"
 
 #~ msgid "Pick a product"
 #~ msgstr "製品を選ぶ"
@@ -7571,9 +7925,6 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ msgid "Reviewed by:"
 #~ msgstr "査読者:"
 
-#~ msgid "Is approved?"
-#~ msgstr "承認済？"
-
 #~ msgid "Is current revision?"
 #~ msgstr "現在のリビジョン？"
 
@@ -7697,53 +8048,17 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ msgid "No other documents link to {title}."
 #~ msgstr "『{title}』にリンクしている文書はありません。"
 
-#~ msgid "%(reviewer)s has approved the revision to the document %(document_title)s."
-#~ msgstr "%(reviewer)s さんが %(document_title)s のリビジョンを承認しました。"
-
 #~ msgid "View the updated document"
 #~ msgstr "更新されたドキュメントを見る"
-
-#~ msgid "Summary:"
-#~ msgstr "要約:"
-
-#~ msgid "Changes:"
-#~ msgstr "変更点:"
-
-#~ msgid "To view the updated document, click the following link, or paste it into your browser's location bar:"
-#~ msgstr "更新された記事を見るには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
-
-#~ msgid "%(creator)s created a new revision to the document %(document_title)s."
-#~ msgstr "%(creator)s さんが %(document_title)s の新しいリビジョンを作成しました。"
 
 #~ msgid "View this document's history"
 #~ msgstr "ドキュメントの履歴を見る"
 
-#~ msgid "To view this document's history, click the following link, or paste it into your browser's location bar:"
-#~ msgstr "この記事の履歴を見るには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
-
-#~ msgid "The document %(document_title)s has a new revision that is ready for localization."
-#~ msgstr "%(document_title)s の記事に翻訳準備が完了した新しいリビジョンがあります。"
-
 #~ msgid "Localize the document"
 #~ msgstr "ドキュメントを翻訳する"
 
-#~ msgid "Text of the new revision:"
-#~ msgstr "新しいリビジョンの内容:"
-
-#~ msgid "To localize the document, click the following link, or paste it into your browser's location bar:"
-#~ msgstr "この記事を翻訳するには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
-
-#~ msgid "%(creator)s submitted a new revision to the document %(document_title)s."
-#~ msgstr "%(creator)s さんが %(document_title)s の記事の新しいリビジョンを投稿しました。"
-
 #~ msgid "Review this revision"
 #~ msgstr "このリビジョンをレビューする"
-
-#~ msgid "To review this revision, click the following link, or paste it into your browser's location bar:"
-#~ msgstr "このリビジョンをレビューするには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
-
-#~ msgid "Our contributors have been working hard on articles and it would be great if you could review them. The faster we get them published the faster they start helping users."
-#~ msgstr "SUMO サイトの貢献者たちは、熱心に記事を作成、更新しています。これらの記事をレビューしていただければ、より早く記事を発行し、より早くユーザを助けることができます。"
 
 #~ msgid "If you have a moment please help us by reviewing these articles:"
 #~ msgstr "お時間がありましたら、以下の記事をレビューしてください:"
@@ -7754,38 +8069,8 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ msgid "Regards, <br />The SUMO team."
 #~ msgstr "<br />SUMO チームより。"
 
-#~ msgid "If you have a moment please review these articles:"
-#~ msgstr "時間があればこれらの記事をレビューしてください:"
-
-#~ msgid "Many thanks for your contribution on behalf of SUMO and the happy users who are helped by your work!"
-#~ msgstr "SUMO へのご協力ありがとうございます。あなたの貢献によって助けられたユーザに代わりお礼申し上げます。"
-
-#~ msgid "Regards, The SUMO team"
-#~ msgstr "SUMO チームより"
-
-#~ msgid "Your revision has been reviewed."
-#~ msgstr "あなたの編集リビジョンがレビューされました。"
-
-#~ msgid "%(reviewer)s has approved your revision to the document %(document_title)s."
-#~ msgstr "%(reviewer)s さんが %(document_title)s の記事のあなたの編集リビジョンを承認しました。"
-
-#~ msgid "%(reviewer)s has reviewed your revision to the document %(document_title)s."
-#~ msgstr "%(reviewer)s さんが %(document_title)s の記事のあなたの編集リビジョンをレビューしました。"
-
-#~ msgid "Message from the reviewer:"
-#~ msgstr "レビュアからのメッセージ:"
-
 #~ msgid "View the history of this document"
 #~ msgstr "このドキュメントの履歴を見る"
-
-#~ msgid "To view the history of this document, click the following link, or paste it into your browser's location bar:"
-#~ msgstr "この記事の履歴を見るには、以下のリンクをクリックするか文字列全体をロケーションバーにコピー＆ペーストしてください:"
-
-#~ msgid "A revision you contributed to has been approved.  %(reviewer)s has approved a revision to the document %(document_title)s."
-#~ msgstr "あなたの貢献したリビジョンが承認されました。%(reviewer)s さんが %(document_title)s の記事のリビジョンを承認しました。"
-
-#~ msgid "A revision you contributed to has been reviewed.  %(reviewer)s has reviewed a revision to the document %(document_title)s."
-#~ msgstr "あなたの貢献したリビジョンがレビューされました。%(reviewer)s さんが %(document_title)s の記事のリビジョンをレビューしました。"
 
 #~ msgid "These fine people helped write this article: %(contributors)s. You can help too - <a href=\"%(link)s\">find out how</a>."
 #~ msgstr "この記事の貢献者: %(contributors)s。あなたも手助けしませんか？- <a href=\"%(link)s\">貢献するにはこちらから</a>"
@@ -7916,9 +8201,6 @@ msgstr "{user} さんが貢献者から削除されました。"
 #~ msgid "Close Diff"
 #~ msgstr "差分を閉じる"
 
-#~ msgid "Revision"
-#~ msgstr "リビジョン"
-
 #~ msgid "Editor"
 #~ msgstr "編集者"
 
@@ -7980,9 +8262,6 @@ msgstr "{user} さんが貢献者から削除されました。"
 
 #~ msgid "Compare Selected Translations"
 #~ msgstr "選択した翻訳を比較します"
-
-#~ msgid "Compare Selected Revisions"
-#~ msgstr "選択したリビジョンを比較します"
 
 #~ msgid "Significance - MT: Major Content Changes. M: Content Changes. Empty: Minor Changes."
 #~ msgstr "重要性 (S) - MT: 内容の大きな変更。M: 内容の変更。表記なし: 小さな変更。"
@@ -8778,9 +9057,6 @@ msgstr "{user} さんが貢献者から削除されました。"
 
 #~ msgid "Show"
 #~ msgstr "表示"
-
-#~ msgid "Most Requested"
-#~ msgstr "リクエスト数"
 
 #~ msgid "Unsolved"
 #~ msgstr "未解決"
