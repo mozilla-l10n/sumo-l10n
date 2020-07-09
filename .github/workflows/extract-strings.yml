@@ -1,0 +1,55 @@
+name: Extract Kitsune Strings
+
+on:
+  schedule:
+  - cron: "0 2 * * 1-5"
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install deps
+        run: sudo apt-get install gettext
+
+      - name: Install python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Checkout Kitsune
+        uses: actions/checkout@v2
+        with:
+          repository: mozilla/kitsune
+
+      - name: Checkout locales
+        uses: actions/checkout@v2
+        with:
+          path: locale
+      
+      - name: Install python packages
+        run: pip install --no-cache-dir --require-hashes -r requirements/default.txt
+
+      - name: Setup environment
+        run: cp .env-test .env
+
+      - name: Remove unparsable templates
+        run: |
+          rm -r kitsune/kadmin/templates/kadmin
+          rm -r kitsune/search/templates/admin
+          rm -r kitsune/sumo/templates/admin
+
+      - name: Extract strings
+        run: python manage.py extract
+
+      - name: Merge strings
+        run: python manage.py merge
+
+      - name: Commit strings
+        run: |
+          cd locale
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -am "extract strings at $(date -Iseconds -u)"
+          git push https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
