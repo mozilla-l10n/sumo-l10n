@@ -1,0 +1,25 @@
+name: Lint Strings
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Checkout locales
+        uses: actions/checkout@v2
+      
+      - name: Install dennis
+        run: pip install dennis~=0.9
+
+      - name: Run dennis
+        run: dennis-cmd lint --errorsonly .
