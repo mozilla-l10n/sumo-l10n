@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-11-11 02:54-0800\n"
+"POT-Creation-Date: 2020-12-23 06:07-0800\n"
 "PO-Revision-Date: 2020-09-21 03:44+0000\n"
 "Last-Translator: marsf <chimantaea_mirabilis@yahoo.co.jp>\n"
 "Language-Team: Japanese\n"
@@ -49,7 +49,8 @@ msgid "Find your fellow contributors"
 msgstr "貢献者仲間を見つける"
 
 #: kitsune/community/jinja2/community/index.html:16 kitsune/community/jinja2/community/search.html:18
-msgid "Username, Display Name or Twitter Handle"
+#, fuzzy
+msgid "Username or Display Name"
 msgstr "ユーザー名、表示名または Twitter アカウント名"
 
 #: kitsune/community/jinja2/community/index.html:17 kitsune/community/jinja2/community/search.html:19 kitsune/gallery/jinja2/gallery/gallery.html:38 kitsune/gallery/jinja2/gallery/search.html:6
@@ -169,28 +170,16 @@ msgid "Results for: {query}"
 msgstr "検索語句: {query}"
 
 #: kitsune/community/jinja2/community/search.html:26
-msgid "Sorry! Search is currently unavailable. Please try again soon."
-msgstr "申し訳ありませんが、検索システムは現在一時的に利用できません。少し後で再度検索してください。"
-
-#: kitsune/community/jinja2/community/search.html:29
 msgid "No users were found for your search query."
 msgstr "指定の検索語句でユーザーが見つかりませんでした。"
 
-#: kitsune/community/jinja2/community/search.html:43
-msgid "Twitter Handles:"
-msgstr "Twitter アカウント名:"
-
-#: kitsune/community/jinja2/community/search.html:49 kitsune/community/jinja2/community/top_contributors.html:115 kitsune/sumo/jinja2/includes/common_macros.html:174
+#: kitsune/community/jinja2/community/search.html:40 kitsune/community/jinja2/community/top_contributors.html:123 kitsune/sumo/jinja2/includes/common_macros.html:174
 msgid "View Profile"
 msgstr "プロファイルを表示"
 
-#: kitsune/community/jinja2/community/search.html:50 kitsune/community/jinja2/community/top_contributors.html:116
+#: kitsune/community/jinja2/community/search.html:41 kitsune/community/jinja2/community/top_contributors.html:124
 msgid "Private Message"
 msgstr "プライベートメッセージ"
-
-#: kitsune/community/jinja2/community/search.html:53 kitsune/community/jinja2/community/top_contributors.html:119
-msgid "Days since last activity:"
-msgstr "最後の活動からの経過日数:"
 
 #: kitsune/community/jinja2/community/top_contributors.html:4
 msgid "Top Contributors - Support Forum"
@@ -215,14 +204,23 @@ msgstr "上位貢献者 - Army of Awesome"
 msgid "Select by Locale"
 msgstr "ロケールを選択"
 
-#: kitsune/community/jinja2/community/top_contributors.html:99
+#: kitsune/community/jinja2/community/top_contributors.html:101
+#, fuzzy
+msgid "There are more than {total} users with at least one contribution in the last 90 days."
+msgstr "最近 90 日以内に少なくとも 1 つの貢献をしたユーザーは {total} 人です。"
+
+#: kitsune/community/jinja2/community/top_contributors.html:103
 msgid "There are {total} users with at least one contribution in the last 90 days."
 msgstr "最近 90 日以内に少なくとも 1 つの貢献をしたユーザーは {total} 人です。"
 
 # 貢献者メニュー見出し
-#: kitsune/community/jinja2/community/top_contributors.html:114
+#: kitsune/community/jinja2/community/top_contributors.html:122
 msgid "Contributions in last 90 days: {count}"
 msgstr "最近 90 日以内の貢献数: {count} 件"
+
+#: kitsune/community/jinja2/community/top_contributors.html:127
+msgid "Days since last activity:"
+msgstr "最後の活動からの経過日数:"
 
 #: kitsune/community/jinja2/community/email/first_answer.html:5 kitsune/community/jinja2/community/email/first_answer.ltxt:3
 msgid "Thank you for your first contribution to the Mozilla support forums! You just made somebody's day!"
@@ -856,7 +854,7 @@ msgstr "最近 30 日間の訪問者数 {count} 人"
 msgid "Show information for:"
 msgstr "情報の表示対象:"
 
-#: kitsune/dashboards/jinja2/dashboards/contributors.html:67
+#: kitsune/dashboards/jinja2/dashboards/contributors.html:68
 msgid "Complete overview..."
 msgstr "概要をすべて見る..."
 
@@ -866,8 +864,8 @@ msgstr "[{product}] ナレッジベースダッシュボード"
 
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:199 kitsune/dashboards/jinja2/dashboards/includes/macros.html:214
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:224 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/questions/jinja2/questions/product_list.html:41
-#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:99 kitsune/search/views.py:188
-#: kitsune/search/views.py:544
+#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:99 kitsune/search/v2/views.py:38
+#: kitsune/search/views.py:188 kitsune/search/views.py:544
 msgid "All Products"
 msgstr "すべての製品"
 
@@ -2760,16 +2758,18 @@ msgid "Games"
 msgstr "ゲーム"
 
 #: kitsune/products/jinja2/products/product.html:89
-msgid "Create rooms"
-msgstr "ルームの作成"
+msgid "Room size"
+msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:90
-msgid "Moderate"
-msgstr "モデレート"
+#: kitsune/products/jinja2/products/product.html:90 kitsune/questions/config.py:743
+#, fuzzy
+msgid "Avatars"
+msgstr "アバター"
 
 #: kitsune/products/jinja2/products/product.html:91
-msgid "Customize avatar"
-msgstr "アバターをカスタマイズ"
+#, fuzzy
+msgid "VR"
+msgstr "R"
 
 #: kitsune/products/jinja2/products/product.html:94
 msgid "Autocomplete"
@@ -3144,11 +3144,6 @@ msgstr "Hubs"
 #: kitsune/questions/config.py:731
 msgid "Virtual 3D meeting spaces for collaborating with friends, family, and colleagues on your browser or VR headset"
 msgstr ""
-
-#: kitsune/questions/config.py:743
-#, fuzzy
-msgid "Avatars"
-msgstr "アバター"
 
 #: kitsune/questions/config.py:759
 msgid "Rooms"
@@ -4330,6 +4325,10 @@ msgstr "回答数"
 msgid "Helpful votes"
 msgstr "役に立つ評価数"
 
+#: kitsune/search/__init__.py:81
+msgid "No pages matched the search criteria"
+msgstr "検索条件に一致するページはありません"
+
 #: kitsune/search/es_utils.py:882 kitsune/search/jinja2/search/down.html:5
 msgid "Search Unavailable"
 msgstr "検索システムは現在利用できません"
@@ -4387,13 +4386,9 @@ msgctxt "between search excerpts"
 msgid "..."
 msgstr "..."
 
-#: kitsune/search/views.py:151 kitsune/search/views.py:281
+#: kitsune/search/v2/views.py:22 kitsune/search/views.py:151 kitsune/search/views.py:281
 msgid "Invalid search data."
 msgstr "無効な検索データです。"
-
-#: kitsune/search/views.py:225 kitsune/search/views.py:582
-msgid "No pages matched the search criteria"
-msgstr "検索条件に一致するページはありません"
 
 #: kitsune/search/views.py:624
 msgid "No title"
@@ -6022,7 +6017,7 @@ msgstr "自分の貢献"
 
 #: kitsune/sumo/db_strings.py:371
 msgctxt "DB: products.Topic.description"
-msgid "Topic for any KB articles related to the contribution in general"
+msgid "Learn how you can contribute to SUMO in general"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:373
@@ -6061,9 +6056,10 @@ msgid "Topic for any KB articles related to the Localization contribution"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:380
+#, fuzzy
 msgctxt "DB: products.Topic.title"
-msgid "KB Contribution"
-msgstr "ナレッジベースへの貢献"
+msgid "Support articles"
+msgstr "サポート記事を検索"
 
 #: kitsune/sumo/db_strings.py:381
 msgctxt "DB: products.Topic.description"
@@ -6071,13 +6067,14 @@ msgid "Topic for any KB articles related to the KB articles contribution"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:382
+#, fuzzy
 msgctxt "DB: products.Topic.title"
-msgid "Respond tool"
-msgstr "返答ツール"
+msgid "Play Store Support"
+msgstr "フォーラムサポート"
 
 #: kitsune/sumo/db_strings.py:383
 msgctxt "DB: products.Topic.description"
-msgid "Topic for any KB articles related to the Respond Tool contribution"
+msgid "Topic for any KB articles related to the Play Store Support contribution"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:384 kitsune/sumo/db_strings.py:396 kitsune/sumo/db_strings.py:422
@@ -8110,7 +8107,12 @@ msgstr "ソルト"
 msgid "hash"
 msgstr "ハッシュ"
 
-#: kitsune/users/models.py:40 kitsune/users/models.py:339
+#: kitsune/users/models.py:31
+#, fuzzy
+msgid "Registered as contributor"
+msgstr "貢献者として登録"
+
+#: kitsune/users/models.py:40 kitsune/users/models.py:341
 msgid "User"
 msgstr "ユーザー"
 
@@ -8182,32 +8184,32 @@ msgstr "はじめてのナレッジベース編集に貢献したメールが送
 msgid "When the user was sent a community health survey"
 msgstr "ユーザーがコミュニティ現状調査を受け取ったとき"
 
-#: kitsune/users/models.py:297
+#: kitsune/users/models.py:299
 msgid "{displayname} ({username})"
 msgstr "{displayname} ({username})"
 
 # ？
-#: kitsune/users/models.py:343
+#: kitsune/users/models.py:345
 msgid "Value"
 msgstr "値"
 
-#: kitsune/users/models.py:380 kitsune/users/models.py:417 kitsune/users/models.py:430
+#: kitsune/users/models.py:382 kitsune/users/models.py:419 kitsune/users/models.py:432
 msgid "user"
 msgstr "ユーザー"
 
-#: kitsune/users/models.py:382 kitsune/users/models.py:419
+#: kitsune/users/models.py:384 kitsune/users/models.py:421
 msgid "activation key"
 msgstr "アクティベーションキー"
 
-#: kitsune/users/models.py:385
+#: kitsune/users/models.py:387
 msgid "registration profile"
 msgstr "登録プロファイル"
 
-#: kitsune/users/models.py:386
+#: kitsune/users/models.py:388
 msgid "registration profiles"
 msgstr "登録プロファイル"
 
-#: kitsune/users/models.py:435
+#: kitsune/users/models.py:437
 msgid "moderator"
 msgstr "モデレーター"
 
@@ -8414,6 +8416,11 @@ msgstr "このユーザーを無効化し、すべてのコンテンツをスパ
 #: kitsune/users/jinja2/users/profile.html:131
 msgid "This user has been deactivated."
 msgstr "このユーザーは無効化されています。"
+
+#: kitsune/users/jinja2/users/profile.html:137
+#, fuzzy
+msgid "Contributions"
+msgstr "自分の貢献"
 
 #: kitsune/users/jinja2/users/profile.html:141
 msgid "Involved with Mozilla since {date}"
@@ -8864,19 +8871,19 @@ msgstr "チェックを入れた場合、このドキュメントに関連付け
 msgid "If checked, this document needs updates."
 msgstr "チェックを入れた場合、このドキュメントは更新する必要があります。"
 
-#: kitsune/wiki/models.py:249
+#: kitsune/wiki/models.py:251
 msgid "Please choose a category."
 msgstr "カテゴリーを選択してください。"
 
-#: kitsune/wiki/models.py:258
+#: kitsune/wiki/models.py:260
 msgid "Documents in the Template category must have titles that start with \"{prefix}\". (Current title is \"{title}\")"
 msgstr "テンプレートカテゴリーのドキュメントのタイトルは、\"{prefix}\" で始めなければなりません。(現在のタイトルは \"{title}\")"
 
-#: kitsune/wiki/models.py:266
+#: kitsune/wiki/models.py:268
 msgid "Documents with titles that start with \"{prefix}\" must be in the templates category. (Current category is \"{category}\". Current title is \"{title}\".)"
 msgstr "タイトルが「{prefix}」で始まるドキュメントはテンプレートカテゴリーに含めなければなりません。(現在のカテゴリーは「{category}」で、タイトルは「{title}」となっています)"
 
-#: kitsune/wiki/models.py:979
+#: kitsune/wiki/models.py:981
 #, python-format
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "リビジョンは英語記事がベースでなければなりません。リビジョン ID %(id)s はこの基準に合いません。"
@@ -10154,6 +10161,29 @@ msgstr "詳しくお書きください。"
 msgid "Please provide more details"
 msgstr "詳細を記入してください"
 
+#~ msgid "Sorry! Search is currently unavailable. Please try again soon."
+#~ msgstr "申し訳ありませんが、検索システムは現在一時的に利用できません。少し後で再度検索してください。"
+
+#~ msgid "Twitter Handles:"
+#~ msgstr "Twitter アカウント名:"
+
+#~ msgid "Create rooms"
+#~ msgstr "ルームの作成"
+
+#~ msgid "Moderate"
+#~ msgstr "モデレート"
+
+#~ msgid "Customize avatar"
+#~ msgstr "アバターをカスタマイズ"
+
+#~ msgctxt "DB: products.Topic.title"
+#~ msgid "KB Contribution"
+#~ msgstr "ナレッジベースへの貢献"
+
+#~ msgctxt "DB: products.Topic.title"
+#~ msgid "Respond tool"
+#~ msgstr "返答ツール"
+
 #~ msgctxt "DB: products.Product.description"
 #~ msgid "Social virtual reality for headsets and browsers"
 #~ msgstr "ヘッドセットとブラウザー向けソーシャル仮想現実"
@@ -11307,9 +11337,6 @@ msgstr "詳細を記入してください"
 #~ msgid "See what you can do to help"
 #~ msgstr "手助けできることを確認する"
 
-#~ msgid "Register to be a Contributor"
-#~ msgstr "貢献者として登録"
-
 #~ msgid "You don't need to register to <a href=\"{url}\">ask a question</a>."
 #~ msgstr "<a href=\"{url}\">質問</a> のためにアカウント登録する必要はありません。"
 
@@ -11562,9 +11589,6 @@ msgstr "詳細を記入してください"
 
 #~ msgid "Contributors"
 #~ msgstr "貢献者"
-
-#~ msgid "Search support articles"
-#~ msgstr "サポート記事を検索"
 
 #~ msgctxt "S"
 #~ msgid "First letter of 'Significance'"
@@ -12256,9 +12280,6 @@ msgstr "詳細を記入してください"
 
 #~ msgid "No Replies"
 #~ msgstr "返信なし"
-
-#~ msgid "My Contributions"
-#~ msgstr "自分の貢献"
 
 #~ msgid "Enter a tag. For example: \"Firefox 14.0\", \"Windows 7\", \"crash\""
 #~ msgstr "タグを入力してください。 例: \"Firefox 14.0\", \"Windows 7\", \"クラッシュ\""
