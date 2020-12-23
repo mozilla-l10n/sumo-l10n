@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-11-11 02:54-0800\n"
+"POT-Creation-Date: 2020-12-23 06:07-0800\n"
 "PO-Revision-Date: 2018-07-02 09:47+0000\n"
 "Last-Translator: Nihad Suljić <nihad.suljic92@gmail.com>\n"
 "Language-Team: Bosnian\n"
@@ -47,7 +47,8 @@ msgid "Find your fellow contributors"
 msgstr "Pronađite kolege saradnike"
 
 #: kitsune/community/jinja2/community/index.html:16 kitsune/community/jinja2/community/search.html:18
-msgid "Username, Display Name or Twitter Handle"
+#, fuzzy
+msgid "Username or Display Name"
 msgstr "Korisničko ime, ime za prikaz ili Twitter Handle"
 
 #: kitsune/community/jinja2/community/index.html:17 kitsune/community/jinja2/community/search.html:19 kitsune/gallery/jinja2/gallery/gallery.html:38 kitsune/gallery/jinja2/gallery/search.html:6
@@ -167,28 +168,16 @@ msgid "Results for: {query}"
 msgstr "Rezultati za: {query}"
 
 #: kitsune/community/jinja2/community/search.html:26
-msgid "Sorry! Search is currently unavailable. Please try again soon."
-msgstr "Izvinjavamo se. Pretraga je trenutno nedostupna. Pokušajte ponovo za par minuta."
-
-#: kitsune/community/jinja2/community/search.html:29
 msgid "No users were found for your search query."
 msgstr "U vašoj pretrazi nema pronađenih korisnika."
 
-#: kitsune/community/jinja2/community/search.html:43
-msgid "Twitter Handles:"
-msgstr "Twitter Handles:"
-
-#: kitsune/community/jinja2/community/search.html:49 kitsune/community/jinja2/community/top_contributors.html:115 kitsune/sumo/jinja2/includes/common_macros.html:174
+#: kitsune/community/jinja2/community/search.html:40 kitsune/community/jinja2/community/top_contributors.html:123 kitsune/sumo/jinja2/includes/common_macros.html:174
 msgid "View Profile"
 msgstr "Vidi profil"
 
-#: kitsune/community/jinja2/community/search.html:50 kitsune/community/jinja2/community/top_contributors.html:116
+#: kitsune/community/jinja2/community/search.html:41 kitsune/community/jinja2/community/top_contributors.html:124
 msgid "Private Message"
 msgstr "Privatna poruka"
-
-#: kitsune/community/jinja2/community/search.html:53 kitsune/community/jinja2/community/top_contributors.html:119
-msgid "Days since last activity:"
-msgstr "Dana od posljednje aktivnosti:"
 
 #: kitsune/community/jinja2/community/top_contributors.html:4
 msgid "Top Contributors - Support Forum"
@@ -210,13 +199,22 @@ msgstr "Top saradnici - Vojska sjajnih"
 msgid "Select by Locale"
 msgstr "Odaberi po jeziku"
 
-#: kitsune/community/jinja2/community/top_contributors.html:99
+#: kitsune/community/jinja2/community/top_contributors.html:101
+#, fuzzy
+msgid "There are more than {total} users with at least one contribution in the last 90 days."
+msgstr "Ovo su {total} korisnika koji su imali barem jedan doprinos u posljednjih 90 dana."
+
+#: kitsune/community/jinja2/community/top_contributors.html:103
 msgid "There are {total} users with at least one contribution in the last 90 days."
 msgstr "Ovo su {total} korisnika koji su imali barem jedan doprinos u posljednjih 90 dana."
 
-#: kitsune/community/jinja2/community/top_contributors.html:114
+#: kitsune/community/jinja2/community/top_contributors.html:122
 msgid "Contributions in last 90 days: {count}"
 msgstr "Doprinosi u posljednjih 90 dana: {count}"
+
+#: kitsune/community/jinja2/community/top_contributors.html:127
+msgid "Days since last activity:"
+msgstr "Dana od posljednje aktivnosti:"
 
 #: kitsune/community/jinja2/community/email/first_answer.html:5 kitsune/community/jinja2/community/email/first_answer.ltxt:3
 msgid "Thank you for your first contribution to the Mozilla support forums! You just made somebody's day!"
@@ -851,7 +849,7 @@ msgstr "{count} posjetilaca u posljednjih 30 dana"
 msgid "Show information for:"
 msgstr "Prikaži informacije za:"
 
-#: kitsune/dashboards/jinja2/dashboards/contributors.html:67
+#: kitsune/dashboards/jinja2/dashboards/contributors.html:68
 msgid "Complete overview..."
 msgstr "Potpuni pregled..."
 
@@ -861,8 +859,8 @@ msgstr "[{product}] kontrolna tabla Baze znanja"
 
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:199 kitsune/dashboards/jinja2/dashboards/includes/macros.html:214
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:224 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/questions/jinja2/questions/product_list.html:41
-#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:99 kitsune/search/views.py:188
-#: kitsune/search/views.py:544
+#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:99 kitsune/search/v2/views.py:38
+#: kitsune/search/views.py:188 kitsune/search/views.py:544
 msgid "All Products"
 msgstr "Svi proizvodi"
 
@@ -2789,19 +2787,18 @@ msgid "Games"
 msgstr ""
 
 #: kitsune/products/jinja2/products/product.html:89
-#, fuzzy
-msgid "Create rooms"
-msgstr "Kreiraj"
+msgid "Room size"
+msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:90
+#: kitsune/products/jinja2/products/product.html:90 kitsune/questions/config.py:743
 #, fuzzy
-msgid "Moderate"
-msgstr "Moderator"
+msgid "Avatars"
+msgstr "Avatar"
 
 #: kitsune/products/jinja2/products/product.html:91
 #, fuzzy
-msgid "Customize avatar"
-msgstr "Prilagodite"
+msgid "VR"
+msgstr "R"
 
 #: kitsune/products/jinja2/products/product.html:94
 msgid "Autocomplete"
@@ -3214,11 +3211,6 @@ msgstr ""
 #: kitsune/questions/config.py:731
 msgid "Virtual 3D meeting spaces for collaborating with friends, family, and colleagues on your browser or VR headset"
 msgstr ""
-
-#: kitsune/questions/config.py:743
-#, fuzzy
-msgid "Avatars"
-msgstr "Avatar"
 
 #: kitsune/questions/config.py:759
 msgid "Rooms"
@@ -4436,6 +4428,10 @@ msgstr "Broj odgovora"
 msgid "Helpful votes"
 msgstr "Korisni glasovi"
 
+#: kitsune/search/__init__.py:81
+msgid "No pages matched the search criteria"
+msgstr "Nijedna stranica ne odgovara traženim kriterijima"
+
 #: kitsune/search/es_utils.py:882 kitsune/search/jinja2/search/down.html:5
 msgid "Search Unavailable"
 msgstr "Pretraga nedostupna"
@@ -4493,13 +4489,9 @@ msgctxt "between search excerpts"
 msgid "..."
 msgstr "..."
 
-#: kitsune/search/views.py:151 kitsune/search/views.py:281
+#: kitsune/search/v2/views.py:22 kitsune/search/views.py:151 kitsune/search/views.py:281
 msgid "Invalid search data."
 msgstr "Neispravno pretraživanje podataka."
-
-#: kitsune/search/views.py:225 kitsune/search/views.py:582
-msgid "No pages matched the search criteria"
-msgstr "Nijedna stranica ne odgovara traženim kriterijima"
 
 #: kitsune/search/views.py:624
 msgid "No title"
@@ -6183,7 +6175,7 @@ msgstr "Moji doprinosi"
 
 #: kitsune/sumo/db_strings.py:371
 msgctxt "DB: products.Topic.description"
-msgid "Topic for any KB articles related to the contribution in general"
+msgid "Learn how you can contribute to SUMO in general"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:373
@@ -6228,8 +6220,8 @@ msgstr ""
 #: kitsune/sumo/db_strings.py:380
 #, fuzzy
 msgctxt "DB: products.Topic.title"
-msgid "KB Contribution"
-msgstr "Doprinosi"
+msgid "Support articles"
+msgstr "Pretražite pitanja za podršku"
 
 #: kitsune/sumo/db_strings.py:381
 msgctxt "DB: products.Topic.description"
@@ -6239,12 +6231,12 @@ msgstr ""
 #: kitsune/sumo/db_strings.py:382
 #, fuzzy
 msgctxt "DB: products.Topic.title"
-msgid "Respond tool"
-msgstr "Odgovoreno"
+msgid "Play Store Support"
+msgstr "Podrška"
 
 #: kitsune/sumo/db_strings.py:383
 msgctxt "DB: products.Topic.description"
-msgid "Topic for any KB articles related to the Respond Tool contribution"
+msgid "Topic for any KB articles related to the Play Store Support contribution"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:384 kitsune/sumo/db_strings.py:396 kitsune/sumo/db_strings.py:422
@@ -8431,7 +8423,12 @@ msgstr "so"
 msgid "hash"
 msgstr "hash"
 
-#: kitsune/users/models.py:40 kitsune/users/models.py:339
+#: kitsune/users/models.py:31
+#, fuzzy
+msgid "Registered as contributor"
+msgstr "Registrujte se da biste bili volonter"
+
+#: kitsune/users/models.py:40 kitsune/users/models.py:341
 msgid "User"
 msgstr "Korisnik"
 
@@ -8503,31 +8500,31 @@ msgstr "Prvi odgovor doprinosioca je poslan."
 msgid "When the user was sent a community health survey"
 msgstr "Kada je korisniku poslana anketa zdravlja zajednice"
 
-#: kitsune/users/models.py:297
+#: kitsune/users/models.py:299
 msgid "{displayname} ({username})"
 msgstr "{displayname} ({username})"
 
-#: kitsune/users/models.py:343
+#: kitsune/users/models.py:345
 msgid "Value"
 msgstr "Vrijednost"
 
-#: kitsune/users/models.py:380 kitsune/users/models.py:417 kitsune/users/models.py:430
+#: kitsune/users/models.py:382 kitsune/users/models.py:419 kitsune/users/models.py:432
 msgid "user"
 msgstr "korisnik"
 
-#: kitsune/users/models.py:382 kitsune/users/models.py:419
+#: kitsune/users/models.py:384 kitsune/users/models.py:421
 msgid "activation key"
 msgstr "aktivacijski ključ"
 
-#: kitsune/users/models.py:385
+#: kitsune/users/models.py:387
 msgid "registration profile"
 msgstr "registracijski profil"
 
-#: kitsune/users/models.py:386
+#: kitsune/users/models.py:388
 msgid "registration profiles"
 msgstr "registracijski profili"
 
-#: kitsune/users/models.py:435
+#: kitsune/users/models.py:437
 msgid "moderator"
 msgstr "moderator"
 
@@ -8739,6 +8736,11 @@ msgstr "Deaktiviraj ovog korisnika i obilježi sav sadržaj kao spam"
 #: kitsune/users/jinja2/users/profile.html:131
 msgid "This user has been deactivated."
 msgstr "Ovaj korisnik je deaktiviran."
+
+#: kitsune/users/jinja2/users/profile.html:137
+#, fuzzy
+msgid "Contributions"
+msgstr "Za saradnike"
 
 #: kitsune/users/jinja2/users/profile.html:141
 msgid "Involved with Mozilla since {date}"
@@ -9198,19 +9200,19 @@ msgstr "Ako je označen, ovaj dokument omogućava raspravu u odgovarajućem foru
 msgid "If checked, this document needs updates."
 msgstr "Ako je označen, ovom dokumentu je potrebno ažuriranje."
 
-#: kitsune/wiki/models.py:249
+#: kitsune/wiki/models.py:251
 msgid "Please choose a category."
 msgstr "Molimo da izaberete kategoriju."
 
-#: kitsune/wiki/models.py:258
+#: kitsune/wiki/models.py:260
 msgid "Documents in the Template category must have titles that start with \"{prefix}\". (Current title is \"{title}\")"
 msgstr "Dokumenti u kategoriji Šabloni moraju da imaju naslov koji počinje sa \"{prefix}\". (Trenutni naslov je \"{title}\")"
 
-#: kitsune/wiki/models.py:266
+#: kitsune/wiki/models.py:268
 msgid "Documents with titles that start with \"{prefix}\" must be in the templates category. (Current category is \"{category}\". Current title is \"{title}\".)"
 msgstr "Dokumenti sa naslovima koji počinju sa \"{prefix}\" moraju biti u kategoriji šablona. (Trenutna kategorija je \"{category}\". Trenutni naslov je \"{title}\".)"
 
-#: kitsune/wiki/models.py:979
+#: kitsune/wiki/models.py:981
 #, python-format
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Revizija mora biti zasnovana na engleskom članku. ID revizije %(id)s ne odgovara ovom kriteriju."
@@ -10507,6 +10509,34 @@ msgstr "Recite nam više."
 msgid "Please provide more details"
 msgstr "Molimo navedite više detalja"
 
+#~ msgid "Sorry! Search is currently unavailable. Please try again soon."
+#~ msgstr "Izvinjavamo se. Pretraga je trenutno nedostupna. Pokušajte ponovo za par minuta."
+
+#~ msgid "Twitter Handles:"
+#~ msgstr "Twitter Handles:"
+
+#, fuzzy
+#~ msgid "Create rooms"
+#~ msgstr "Kreiraj"
+
+#, fuzzy
+#~ msgid "Moderate"
+#~ msgstr "Moderator"
+
+#, fuzzy
+#~ msgid "Customize avatar"
+#~ msgstr "Prilagodite"
+
+#, fuzzy
+#~ msgctxt "DB: products.Topic.title"
+#~ msgid "KB Contribution"
+#~ msgstr "Doprinosi"
+
+#, fuzzy
+#~ msgctxt "DB: products.Topic.title"
+#~ msgid "Respond tool"
+#~ msgstr "Odgovoreno"
+
 #, fuzzy
 #~ msgctxt "DB: products.Topic.title"
 #~ msgid "Features"
@@ -11625,9 +11655,6 @@ msgstr "Molimo navedite više detalja"
 #~ msgid "See what you can do to help"
 #~ msgstr "Vidite šta možete da učinite da biste pomogli"
 
-#~ msgid "Register to be a Contributor"
-#~ msgstr "Registrujte se da biste bili volonter"
-
 #~ msgid "You don't need to register to <a href=\"{url}\">ask a question</a>."
 #~ msgstr "Nije potrebno da se registrujete da biste <a href=\"{url}\">postavili pitanje</a>."
 
@@ -11853,9 +11880,6 @@ msgstr "Molimo navedite više detalja"
 
 #~ msgid "Contributors"
 #~ msgstr "Za saradnike"
-
-#~ msgid "Search support articles"
-#~ msgstr "Pretražite pitanja za podršku"
 
 #~ msgctxt "DB: products.Topic.description"
 #~ msgid ""
@@ -12121,9 +12145,6 @@ msgstr "Molimo navedite više detalja"
 
 #~ msgid "No Replies"
 #~ msgstr "Broj odgovora"
-
-#~ msgid "My Contributions"
-#~ msgstr "Za saradnike"
 
 #~ msgid "Get involved - Help other users"
 #~ msgstr "Sadrži odgovore koji su pomogli"
