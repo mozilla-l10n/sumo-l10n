@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT 1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-24 02:47-0700\n"
+"POT-Creation-Date: 2021-04-21 03:53-0700\n"
 "PO-Revision-Date: 2016-12-02 09:27+0000\n"
 "Last-Translator: Rhoslyn Prys <rprys@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -587,7 +587,7 @@ msgstr ""
 
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:199 kitsune/dashboards/jinja2/dashboards/includes/macros.html:214
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:224 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/questions/jinja2/questions/product_list.html:41
-#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:99 kitsune/search/v2/views.py:38
+#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:99 kitsune/search/v2/views.py:26
 #: kitsune/search/views.py:188 kitsune/search/views.py:544
 msgid "All Products"
 msgstr ""
@@ -865,7 +865,7 @@ msgid "View all deactivated users"
 msgstr ""
 
 #: kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:4 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:2
-#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:4 kitsune/kbforums/forms.py:35 kitsune/kbforums/forms.py:66 kitsune/kbforums/forms.py:102 kitsune/questions/forms.py:282
+#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:4 kitsune/kbforums/forms.py:35 kitsune/kbforums/forms.py:66 kitsune/kbforums/forms.py:102 kitsune/questions/forms.py:281
 #: kitsune/wiki/forms.py:261 kitsune/wiki/jinja2/wiki/includes/document_macros.html:184 kitsune/wiki/jinja2/wiki/review_translation.html:95
 msgid "Content:"
 msgstr ""
@@ -1156,7 +1156,7 @@ msgstr ""
 msgid "Your avatar will be resized to {size}x{size}"
 msgstr ""
 
-#: kitsune/groups/forms.py:46 kitsune/search/forms.py:153 kitsune/wiki/forms.py:363
+#: kitsune/groups/forms.py:46 kitsune/search/forms.py:137 kitsune/wiki/forms.py:363
 msgid "username"
 msgstr ""
 
@@ -1327,7 +1327,7 @@ msgid "You were awarded the '{title}' badge!"
 msgstr ""
 
 #: kitsune/kbadge/jinja2/badger/award_detail.html:3 kitsune/kbadge/jinja2/badger/awards_list.html:3 kitsune/kbadge/jinja2/badger/badge_detail.html:3 kitsune/kbadge/jinja2/badger/badges_list.html:3
-#: kitsune/users/jinja2/users/profile.html:193
+#: kitsune/users/jinja2/users/profile.html:192
 msgid "Badges"
 msgstr ""
 
@@ -1561,7 +1561,7 @@ msgstr ""
 msgid "Watch"
 msgstr ""
 
-#: kitsune/kbforums/jinja2/kbforums/discussions.html:36 kitsune/kbforums/jinja2/kbforums/posts.html:48 kitsune/kbforums/jinja2/kbforums/threads.html:37 kitsune/questions/views.py:106
+#: kitsune/kbforums/jinja2/kbforums/discussions.html:36 kitsune/kbforums/jinja2/kbforums/posts.html:48 kitsune/kbforums/jinja2/kbforums/threads.html:37 kitsune/questions/views.py:96
 msgid "Replies"
 msgstr ""
 
@@ -1674,7 +1674,7 @@ msgstr ""
 msgid "Sticky"
 msgstr ""
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:96 kitsune/search/__init__.py:33 kitsune/search/forms.py:199
+#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86 kitsune/search/__init__.py:33 kitsune/search/forms.py:183
 msgid "Locked"
 msgstr ""
 
@@ -2604,7 +2604,7 @@ msgstr ""
 msgid "Ask a Question"
 msgstr ""
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:84 kitsune/questions/jinja2/questions/metrics.html:60 kitsune/search/forms.py:104
+#: kitsune/products/jinja2/products/includes/topic_macros.html:84 kitsune/search/forms.py:88
 msgid "Topics"
 msgstr ""
 
@@ -2934,210 +2934,198 @@ msgstr ""
 msgid "Recent answers to %s"
 msgstr ""
 
-#: kitsune/questions/forms.py:16
+#: kitsune/questions/forms.py:15
 msgid "URL of affected site"
 msgstr ""
 
-#: kitsune/questions/forms.py:17
+#: kitsune/questions/forms.py:16
 msgid "Crash ID(s)"
 msgstr ""
 
-#: kitsune/questions/forms.py:18
+#: kitsune/questions/forms.py:17
 msgid ""
 "If you submit information to Mozilla when you crash, you'll be given a crash ID which uniquely identifies your crash and lets us look at details that may help identify the cause. To find your "
 "recently submitted crash IDs, go to <strong>about:crashes</strong> in your location bar. <a href='https://support.mozilla.com/en-US/kb/Firefox"
 "+crashes#Getting_the_most_accurate_help_with_your_Firefox_crash' target='_blank'>Click for detailed instructions</a>."
 msgstr ""
 
-#: kitsune/questions/forms.py:29
+#: kitsune/questions/forms.py:28
 msgid "Troubleshooting Information"
 msgstr ""
 
-#: kitsune/questions/forms.py:30 kitsune/questions/jinja2/questions/includes/aaq_macros.html:168
+#: kitsune/questions/forms.py:29 kitsune/questions/jinja2/questions/includes/aaq_macros.html:168
 msgid "This information gives details about the internal workings of your browser that will help in answering your question."
 msgstr ""
 
-#: kitsune/questions/forms.py:35
+#: kitsune/questions/forms.py:34
 msgid "This happens"
 msgstr ""
 
-#: kitsune/questions/forms.py:38
+#: kitsune/questions/forms.py:37
 msgid "Not sure how often"
 msgstr ""
 
-#: kitsune/questions/forms.py:39
+#: kitsune/questions/forms.py:38
 msgid "Just once or twice"
 msgstr ""
 
-#: kitsune/questions/forms.py:40
+#: kitsune/questions/forms.py:39
 msgid "A few times a week"
 msgstr ""
 
-#: kitsune/questions/forms.py:41
+#: kitsune/questions/forms.py:40
 msgid "Every time Firefox opened"
 msgstr ""
 
-#: kitsune/questions/forms.py:43 kitsune/questions/jinja2/questions/question_details.html:516
+#: kitsune/questions/forms.py:42 kitsune/questions/jinja2/questions/question_details.html:516
 msgid "This started when..."
 msgstr ""
 
-#: kitsune/questions/forms.py:44
+#: kitsune/questions/forms.py:43
 msgid "Subject"
 msgstr ""
 
-#: kitsune/questions/forms.py:45
+#: kitsune/questions/forms.py:44
 msgid "How can we help?"
 msgstr ""
 
-#: kitsune/questions/forms.py:46
+#: kitsune/questions/forms.py:45
 msgid "Firefox version"
 msgstr ""
 
-#: kitsune/questions/forms.py:47
+#: kitsune/questions/forms.py:46
 msgid "Operating system"
 msgstr ""
 
-#: kitsune/questions/forms.py:48
+#: kitsune/questions/forms.py:47
 msgid "Installed plugins"
 msgstr ""
 
-#: kitsune/questions/forms.py:49
+#: kitsune/questions/forms.py:48
 msgid "Extension/plugin you are having trouble with"
 msgstr ""
 
-#: kitsune/questions/forms.py:50
+#: kitsune/questions/forms.py:49
 msgid "Mobile device"
 msgstr ""
 
-#: kitsune/questions/forms.py:51
+#: kitsune/questions/forms.py:50
 msgid "Which topic best describes your question?"
 msgstr ""
 
-#: kitsune/questions/forms.py:52
+#: kitsune/questions/forms.py:51
 msgid "Email me when someone answers the thread"
 msgstr ""
 
-#: kitsune/questions/forms.py:54
+#: kitsune/questions/forms.py:53
 msgid "Enter your reply here."
 msgstr ""
 
-#: kitsune/questions/forms.py:55
+#: kitsune/questions/forms.py:54
 msgid "Enter your email address here."
 msgstr ""
 
-#: kitsune/questions/forms.py:169
+#: kitsune/questions/forms.py:168
 msgid " (optional):"
 msgstr ""
 
-#: kitsune/questions/forms.py:322
+#: kitsune/questions/forms.py:321
 msgid "Please provide an email."
 msgstr ""
 
-#: kitsune/questions/forms.py:336
-msgid "Interval"
-msgstr ""
-
-#: kitsune/questions/forms.py:339
-msgid "Start"
-msgstr ""
-
-#: kitsune/questions/forms.py:340
-msgid "End"
-msgstr ""
-
-#: kitsune/questions/views.py:71
+#: kitsune/questions/views.py:61
 msgid "That tag does not exist."
 msgstr ""
 
-#: kitsune/questions/views.py:72
+#: kitsune/questions/views.py:62
 msgid "Please provide a tag."
 msgstr ""
 
-#: kitsune/questions/views.py:78
+#: kitsune/questions/views.py:68
 msgid "Recently unanswered"
 msgstr ""
 
-#: kitsune/questions/views.py:83
+#: kitsune/questions/views.py:73
 msgid "New"
 msgstr ""
 
-#: kitsune/questions/views.py:84
+#: kitsune/questions/views.py:74
 msgid "Answers didn't help"
 msgstr ""
 
-#: kitsune/questions/views.py:89
+#: kitsune/questions/views.py:79
 msgid "Needs info"
 msgstr ""
 
-#: kitsune/questions/views.py:90
+#: kitsune/questions/views.py:80
 msgid "Solution provided"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/question_list.html:179 kitsune/questions/views.py:95 kitsune/search/forms.py:217 kitsune/search/jinja2/search/includes/result.html:20
+#: kitsune/questions/jinja2/questions/question_list.html:179 kitsune/questions/views.py:85 kitsune/search/forms.py:201 kitsune/search/jinja2/search/includes/result.html:23
 msgid "Solved"
 msgstr ""
 
-#: kitsune/questions/views.py:103
+#: kitsune/questions/views.py:93
 msgid "Updated"
 msgstr ""
 
-#: kitsune/questions/views.py:104
+#: kitsune/questions/views.py:94
 msgid "Views"
 msgstr ""
 
-#: kitsune/questions/views.py:105 kitsune/search/forms.py:243
+#: kitsune/questions/views.py:95 kitsune/search/forms.py:227
 msgid "Votes"
 msgstr ""
 
-#: kitsune/questions/views.py:486
+#: kitsune/questions/views.py:476
 msgid "The questions forum isn't available in {old_lang}, we have redirected you to the {new_lang} questions forum."
 msgstr ""
 
-#: kitsune/questions/views.py:532
+#: kitsune/questions/views.py:522
 msgid "The questions forum isn't available for {product} in {old_lang}, we have redirected you to the {new_lang} questions forum."
 msgstr ""
 
-#: kitsune/questions/views.py:583
+#: kitsune/questions/views.py:571
 msgid "Done! Your question is now posted on the Mozilla community support forum. You can see your post anytime by visiting the {a_open}My Questions{a_close} page in your profile."
 msgstr ""
 
-#: kitsune/questions/views.py:790
+#: kitsune/questions/views.py:778
 msgid "Thank you for choosing a solution!"
 msgstr ""
 
-#: kitsune/questions/views.py:793
+#: kitsune/questions/views.py:781
 msgid "This question already has a solution."
 msgstr ""
 
-#: kitsune/questions/views.py:815
+#: kitsune/questions/views.py:803
 msgid "The solution was undone successfully."
 msgstr ""
 
-#: kitsune/questions/views.py:895
+#: kitsune/questions/views.py:883
 msgid "Glad to hear it!"
 msgstr ""
 
-#: kitsune/questions/views.py:897 kitsune/wiki/views.py:1182
+#: kitsune/questions/views.py:885 kitsune/wiki/views.py:1182
 msgid "Sorry to hear that."
 msgstr ""
 
-#: kitsune/questions/views.py:917
+#: kitsune/questions/views.py:905
 msgid "You already voted on this reply."
 msgstr ""
 
-#: kitsune/questions/views.py:1200
+#: kitsune/questions/views.py:1188
 msgid "Could not send a message to that email address."
 msgstr ""
 
-#: kitsune/questions/views.py:1206
+#: kitsune/questions/views.py:1194
 msgid "You will be notified of updates by email."
 msgstr ""
 
-#: kitsune/questions/views.py:1208
+#: kitsune/questions/views.py:1196
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr ""
 
-#: kitsune/questions/views.py:1506
+#: kitsune/questions/views.py:1378
 msgid "A moderator must manually approve your post before it will be visible."
 msgstr ""
 
@@ -3264,10 +3252,6 @@ msgstr ""
 msgid "Metrics"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/metrics.html:89
-msgid "There is no topic data available for the current selections."
-msgstr ""
-
 #: kitsune/questions/jinja2/questions/new_question.html:30
 msgid "Ask your question"
 msgstr ""
@@ -3333,7 +3317,7 @@ msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
 
-#: kitsune/questions/jinja2/questions/question_details.html:91 kitsune/search/jinja2/search/includes/result.html:29
+#: kitsune/questions/jinja2/questions/question_details.html:91 kitsune/search/jinja2/search/includes/result.html:33
 msgid "No replies"
 msgstr ""
 
@@ -3454,7 +3438,7 @@ msgstr ""
 msgid "Subscribe to feed"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/question_details.html:378 kitsune/search/forms.py:249
+#: kitsune/questions/jinja2/questions/question_details.html:378 kitsune/search/forms.py:233
 msgid "Tags"
 msgstr ""
 
@@ -3577,7 +3561,7 @@ msgstr ""
 msgid "Contributed"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/question_list.html:208 kitsune/search/forms.py:208
+#: kitsune/questions/jinja2/questions/question_list.html:208 kitsune/search/forms.py:192
 msgid "Archived"
 msgstr ""
 
@@ -4088,51 +4072,51 @@ msgstr ""
 msgid "Search Unavailable"
 msgstr ""
 
-#: kitsune/search/forms.py:42 kitsune/search/forms.py:119
+#: kitsune/search/forms.py:43 kitsune/search/forms.py:103
 msgid "Relevant to"
 msgstr ""
 
-#: kitsune/search/forms.py:107 kitsune/sumo/jinja2/base.html:271 kitsune/sumo/jinja2/base.html:272
+#: kitsune/search/forms.py:91 kitsune/sumo/jinja2/base.html:271 kitsune/sumo/jinja2/base.html:272
 msgid "Language"
 msgstr ""
 
-#: kitsune/search/forms.py:113
+#: kitsune/search/forms.py:97
 msgid "Category"
 msgstr ""
 
-#: kitsune/search/forms.py:123
+#: kitsune/search/forms.py:107
 msgid "Include obsolete articles?"
 msgstr ""
 
-#: kitsune/search/forms.py:129 kitsune/search/forms.py:161 kitsune/search/forms.py:190
+#: kitsune/search/forms.py:113 kitsune/search/forms.py:145 kitsune/search/forms.py:174
 msgid "Sort results by"
 msgstr ""
 
-#: kitsune/search/forms.py:138
+#: kitsune/search/forms.py:122
 msgid "Created"
 msgstr ""
 
-#: kitsune/search/forms.py:148
+#: kitsune/search/forms.py:132
 msgid "Last updated"
 msgstr ""
 
-#: kitsune/search/forms.py:169
+#: kitsune/search/forms.py:153
 msgid "Thread type"
 msgstr ""
 
-#: kitsune/search/forms.py:177
+#: kitsune/search/forms.py:161
 msgid "Search in forum"
 msgstr ""
 
-#: kitsune/search/forms.py:226
+#: kitsune/search/forms.py:210
 msgid "Has answers"
 msgstr ""
 
-#: kitsune/search/forms.py:235
+#: kitsune/search/forms.py:219
 msgid "Has helpful answers"
 msgstr ""
 
-#: kitsune/search/forms.py:248
+#: kitsune/search/forms.py:232
 msgid "tag1, tag2"
 msgstr ""
 
@@ -4141,7 +4125,7 @@ msgctxt "between search excerpts"
 msgid "..."
 msgstr ""
 
-#: kitsune/search/v2/views.py:22 kitsune/search/views.py:151 kitsune/search/views.py:281
+#: kitsune/search/v2/views.py:38 kitsune/search/views.py:151 kitsune/search/views.py:281
 msgid "Invalid search data."
 msgstr ""
 
@@ -4248,7 +4232,7 @@ msgstr ""
 msgid "Advanced Search Results"
 msgstr ""
 
-#: kitsune/search/jinja2/search/results.html:9
+#: kitsune/search/jinja2/search/results.html:9 kitsune/search/jinja2/search/search-results.html:4
 msgid "Results"
 msgstr ""
 
@@ -4273,7 +4257,27 @@ msgstr ""
 msgid "Try searching again with a different keyword, or browse our featured articles and threads below instead."
 msgstr ""
 
-#: kitsune/search/jinja2/search/includes/result.html:26
+#. {n} is the number of search results, {q} is the search query, {product} is the
+#. product.
+#: kitsune/search/jinja2/search/search-results.html:11
+msgid "Found <strong>{n}</strong> result for <strong>{q}</strong>"
+msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong>"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: kitsune/search/jinja2/search/search-results.html:25
+msgid "Sorry! 0 results found for <strong>‘{q}’</strong>."
+msgstr ""
+
+#: kitsune/search/jinja2/search/search-results.html:28
+msgid "Try searching again with different keywords."
+msgstr ""
+
+#: kitsune/search/jinja2/search/includes/result.html:30
 msgid "1 reply"
 msgid_plural "{n} replies"
 msgstr[0] ""
@@ -4283,7 +4287,7 @@ msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
 
-#: kitsune/search/jinja2/search/includes/result.html:33
+#: kitsune/search/jinja2/search/includes/result.html:37
 msgid "1 person has this problem"
 msgid_plural "{n} people have this problem"
 msgstr[0] ""
@@ -4293,7 +4297,7 @@ msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
 
-#: kitsune/search/jinja2/search/includes/result.html:37
+#: kitsune/search/jinja2/search/includes/result.html:42
 msgid "1 new this week"
 msgid_plural "{n} new this week"
 msgstr[0] ""
@@ -4302,6 +4306,14 @@ msgstr[2] ""
 msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
+
+#: kitsune/search/v2/base.py:404
+msgid "That page number is not an integer"
+msgstr ""
+
+#: kitsune/search/v2/base.py:406
+msgid "That page number is less than 1"
+msgstr ""
 
 #: kitsune/sumo/db_strings.py:19
 msgctxt "DB: karma.Title.name"
@@ -4446,7 +4458,7 @@ msgstr ""
 
 #: kitsune/sumo/db_strings.py:53
 msgctxt "DB: products.Product.description"
-msgid "VPN for Windows 10, Android, and iOS devices"
+msgid "VPN for Windows 10, Mac, Linux, Android, and iOS devices"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:54
@@ -7330,7 +7342,7 @@ msgstr ""
 msgid "Source code"
 msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:232 kitsune/users/jinja2/users/profile.html:90
+#: kitsune/sumo/jinja2/base.html:232 kitsune/users/jinja2/users/profile.html:89
 msgid "Twitter"
 msgstr ""
 
@@ -7531,7 +7543,7 @@ msgstr ""
 msgid "Edit Profile"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:181
+#: kitsune/sumo/jinja2/includes/common_macros.html:181 kitsune/users/jinja2/users/questions_contributed.html:10
 msgid "My Questions"
 msgstr ""
 
@@ -7548,7 +7560,7 @@ msgstr ""
 msgid "Exchange messages with other contributors."
 msgstr "Gofynnwch i gyfranwyr eraill"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:216 kitsune/users/jinja2/users/profile.html:210
+#: kitsune/sumo/jinja2/includes/common_macros.html:216 kitsune/users/jinja2/users/profile.html:209
 msgid "Sign Out"
 msgstr ""
 
@@ -7910,7 +7922,7 @@ msgid ""
 "strong&#x3E; &#x3C;ul&#x3E;. Links are forbidden."
 msgstr ""
 
-#: kitsune/users/jinja2/users/profile.html:84 kitsune/users/models.py:68
+#: kitsune/users/jinja2/users/profile.html:83 kitsune/users/models.py:68
 msgid "Website"
 msgstr ""
 
@@ -7992,16 +8004,28 @@ msgstr ""
 msgid "Welcome to SUMO!"
 msgstr ""
 
-#: kitsune/users/views.py:71
-msgid "Continuing with Firefox Accounts means you have agreed with the {terms_open}Terms and Conditions{terms_close} and {privacy_open}Privacy Policy{privacy_close}."
-msgstr ""
-
-#: kitsune/users/views.py:216
+#: kitsune/users/views.py:242
 msgid "Your settings have been saved."
 msgstr ""
 
-#: kitsune/users/views.py:389
+#: kitsune/users/views.py:415
 msgid "This account is not active. Please contact an administrator if you believe this is an error"
+msgstr ""
+
+#: kitsune/users/jinja2/users/answers_contributed.html:2
+msgid "{user} | Latest Answers"
+msgstr ""
+
+#: kitsune/users/jinja2/users/answers_contributed.html:7
+msgid "Latest Answers"
+msgstr ""
+
+#: kitsune/users/jinja2/users/answers_contributed.html:10
+msgid "You haven't answered any questions yet."
+msgstr ""
+
+#: kitsune/users/jinja2/users/answers_contributed.html:12
+msgid "{user} hasn't answered any questions yet."
 msgstr ""
 
 #: kitsune/users/jinja2/users/auth.html:6
@@ -8021,23 +8045,21 @@ msgid "Never miss an answer. A free Firefox Account lets you view your question 
 msgstr ""
 
 #: kitsune/users/jinja2/users/auth.html:47
+#, python-format
 msgid ""
-"We upgraded our log-in system to replace Mozilla Support accounts with Firefox Accounts. Firefox Accounts\n"
-"                    offers one log-in for convenient and secure access to Mozilla services."
+"We've upgraded our log-in system to replace Mozilla Support accounts with Firefox Accounts. Firefox Accounts offers one log-in for convenient and secure access to Mozilla services. <a href=\"%(url)s"
+"\">See our FAQ</a> for more information."
 msgstr ""
 
-#: kitsune/users/jinja2/users/auth.html:49
-msgid "See our FAQ"
-msgstr ""
-
-#: kitsune/users/jinja2/users/auth.html:50
-msgid "for more information"
-msgstr ""
-
-#: kitsune/users/jinja2/users/auth.html:56
+#: kitsune/users/jinja2/users/auth.html:57
 #, fuzzy
 msgid "Continue with Firefox Accounts"
 msgstr "Cymedroi Cyfrifon Twitter"
+
+#: kitsune/users/jinja2/users/auth.html:61
+#, python-format
+msgid "Continuing with Firefox Accounts means you have agreed with the <a href=\"%(terms_url)s\">Terms and Conditions</a> and <a href=\"%(privacy_url)s\">Privacy Policy</a>."
+msgstr ""
 
 #: kitsune/users/jinja2/users/close_account.html:8
 msgid "Your account was sucessfully closed!"
@@ -8072,15 +8094,19 @@ msgstr ""
 msgid "{user} | Documents"
 msgstr ""
 
-#: kitsune/users/jinja2/users/documents_contributed.html:6
-msgid "Documents"
-msgstr ""
-
-#: kitsune/users/jinja2/users/documents_contributed.html:19
+#: kitsune/users/jinja2/users/documents_contributed.html:7
 msgid "Documents edited or translated"
 msgstr ""
 
-#: kitsune/users/jinja2/users/documents_contributed.html:33
+#: kitsune/users/jinja2/users/documents_contributed.html:10
+msgid "You haven't edited or translated any documents yet."
+msgstr ""
+
+#: kitsune/users/jinja2/users/documents_contributed.html:12
+msgid "{user} hasn't edited or translated any documents yet."
+msgstr ""
+
+#: kitsune/users/jinja2/users/documents_contributed.html:36
 msgid "Redirects"
 msgstr ""
 
@@ -8088,12 +8114,12 @@ msgstr ""
 msgid "Change Avatar"
 msgstr ""
 
-#: kitsune/users/jinja2/users/edit_profile.html:27 kitsune/users/jinja2/users/profile.html:16
+#: kitsune/users/jinja2/users/edit_profile.html:27 kitsune/users/jinja2/users/profile.html:15
 #, fuzzy
 msgid "Your Account"
 msgstr "Cymedroi Cyfrifon Twitter"
 
-#: kitsune/users/jinja2/users/edit_profile.html:30 kitsune/users/jinja2/users/profile.html:19
+#: kitsune/users/jinja2/users/edit_profile.html:30 kitsune/users/jinja2/users/profile.html:18
 #, python-format
 msgid "To change your email or avatar, visit the Firefox Accounts page, %(a_open)s learn more. %(a_close)s"
 msgstr ""
@@ -8155,58 +8181,58 @@ msgstr ""
 msgid "{user} | Profile"
 msgstr ""
 
-#: kitsune/users/jinja2/users/profile.html:35
+#: kitsune/users/jinja2/users/profile.html:34
 msgid "Edit user profile"
 msgstr ""
 
-#: kitsune/users/jinja2/users/profile.html:48
+#: kitsune/users/jinja2/users/profile.html:47
 #, python-format
 msgid "Your privacy is important to us, your username is always visible to the public, if you would like to edit your username %(a_open)s click here. %(a_close)s"
 msgstr ""
 
-#: kitsune/users/jinja2/users/profile.html:57
+#: kitsune/users/jinja2/users/profile.html:56
 msgid "{city}, {country}"
 msgstr ""
 
-#: kitsune/users/jinja2/users/profile.html:78
+#: kitsune/users/jinja2/users/profile.html:77
 msgid "Email"
 msgstr ""
 
-#: kitsune/users/jinja2/users/profile.html:96
+#: kitsune/users/jinja2/users/profile.html:95
 #, fuzzy
 msgid "Community Portal"
 msgstr "Canolbwynt y Gymuned"
 
-#: kitsune/users/jinja2/users/profile.html:102
+#: kitsune/users/jinja2/users/profile.html:101
 msgid "People Directory"
 msgstr ""
 
-#: kitsune/users/jinja2/users/profile.html:108
+#: kitsune/users/jinja2/users/profile.html:107
 msgid "Matrix"
 msgstr ""
 
-#: kitsune/users/jinja2/users/profile.html:123
+#: kitsune/users/jinja2/users/profile.html:122
 msgid "Deactivate this user"
 msgstr ""
 
-#: kitsune/users/jinja2/users/profile.html:128
+#: kitsune/users/jinja2/users/profile.html:127
 msgid "Deactivate this user and mark all content as spam"
 msgstr ""
 
-#: kitsune/users/jinja2/users/profile.html:131
+#: kitsune/users/jinja2/users/profile.html:130
 msgid "This user has been deactivated."
 msgstr ""
 
-#: kitsune/users/jinja2/users/profile.html:137
+#: kitsune/users/jinja2/users/profile.html:136
 #, fuzzy
 msgid "Contributions"
 msgstr "Prif Gyfrannwyr"
 
-#: kitsune/users/jinja2/users/profile.html:141
+#: kitsune/users/jinja2/users/profile.html:140
 msgid "Involved with Mozilla since {date}"
 msgstr ""
 
-#: kitsune/users/jinja2/users/profile.html:147
+#: kitsune/users/jinja2/users/profile.html:146
 msgid "{0} question"
 msgid_plural "{0} questions"
 msgstr[0] ""
@@ -8216,7 +8242,7 @@ msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
 
-#: kitsune/users/jinja2/users/profile.html:154
+#: kitsune/users/jinja2/users/profile.html:153
 msgid "{0} answer"
 msgid_plural "{0} answers"
 msgstr[0] ""
@@ -8226,7 +8252,7 @@ msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
 
-#: kitsune/users/jinja2/users/profile.html:160
+#: kitsune/users/jinja2/users/profile.html:159
 msgid "{0} solution"
 msgid_plural "{0} solutions"
 msgstr[0] ""
@@ -8236,7 +8262,7 @@ msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
 
-#: kitsune/users/jinja2/users/profile.html:166
+#: kitsune/users/jinja2/users/profile.html:165
 msgid "{0} document"
 msgid_plural "{0} documents"
 msgstr[0] ""
@@ -8246,16 +8272,32 @@ msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
 
-#: kitsune/users/jinja2/users/profile.html:177
+#: kitsune/users/jinja2/users/profile.html:176
 msgid "About {user}"
 msgstr ""
 
-#: kitsune/users/jinja2/users/profile.html:183
+#: kitsune/users/jinja2/users/profile.html:182
 msgid "{user}'s Groups"
 msgstr ""
 
-#: kitsune/users/jinja2/users/profile.html:195
+#: kitsune/users/jinja2/users/profile.html:194
 msgid "See all available SUMO badges"
+msgstr ""
+
+#: kitsune/users/jinja2/users/questions_contributed.html:2
+msgid "{user} | Questions"
+msgstr ""
+
+#: kitsune/users/jinja2/users/questions_contributed.html:12
+msgid "Questions Asked"
+msgstr ""
+
+#: kitsune/users/jinja2/users/questions_contributed.html:17
+msgid "You haven't posted any questions yet."
+msgstr ""
+
+#: kitsune/users/jinja2/users/questions_contributed.html:19
+msgid "{user} hasn't posted any questions yet."
 msgstr ""
 
 #: kitsune/users/jinja2/users/register_done.html:3 kitsune/users/jinja2/users/register_done.html:8
@@ -8375,6 +8417,10 @@ msgstr ""
 
 #: kitsune/users/jinja2/users/includes/macros.html:8
 msgid "Edit settings"
+msgstr ""
+
+#: kitsune/users/jinja2/users/includes/macros.html:10
+msgid "My questions"
 msgstr ""
 
 #: kitsune/users/jinja2/users/includes/notification_macros.html:4
@@ -8646,23 +8692,23 @@ msgstr ""
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr ""
 
-#: kitsune/wiki/models.py:144
+#: kitsune/wiki/models.py:146
 msgid "If checked, this document needs updates."
 msgstr ""
 
-#: kitsune/wiki/models.py:251
+#: kitsune/wiki/models.py:254
 msgid "Please choose a category."
 msgstr ""
 
-#: kitsune/wiki/models.py:260
+#: kitsune/wiki/models.py:263
 msgid "Documents in the Template category must have titles that start with \"{prefix}\". (Current title is \"{title}\")"
 msgstr ""
 
-#: kitsune/wiki/models.py:268
+#: kitsune/wiki/models.py:271
 msgid "Documents with titles that start with \"{prefix}\" must be in the templates category. (Current category is \"{category}\". Current title is \"{title}\".)"
 msgstr ""
 
-#: kitsune/wiki/models.py:981
+#: kitsune/wiki/models.py:984
 #, python-format
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr ""
