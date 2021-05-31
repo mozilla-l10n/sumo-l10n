@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-19 02:58-0700\n"
+"POT-Creation-Date: 2021-05-31 01:38-0700\n"
 "PO-Revision-Date: 2021-04-21 19:26+0000\n"
 "Last-Translator: Іhor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian team\n"
@@ -584,7 +584,7 @@ msgstr "Панель бази знань [{product}]"
 
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:199 kitsune/dashboards/jinja2/dashboards/includes/macros.html:214
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:224 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/questions/jinja2/questions/product_list.html:41
-#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/v2/views.py:26
+#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/views.py:73
 msgid "All Products"
 msgstr "Всі продукти"
 
@@ -673,12 +673,12 @@ msgid "Review Needed: {comment}"
 msgstr "Потрібний перегляд: {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:33 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:38 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:45
-#: kitsune/search/__init__.py:43 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
+#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
 msgid "Yes"
 msgstr "Так"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/search/__init__.py:44
-#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49 kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
 msgid "No"
 msgstr "Ні"
 
@@ -1667,11 +1667,11 @@ msgstr "Прикріпити цю тему"
 msgid "Last reply by"
 msgstr "Остання відповідь від"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:50 kitsune/search/__init__.py:32
+#: kitsune/kbforums/jinja2/kbforums/posts.html:50
 msgid "Sticky"
 msgstr "Прикріплено"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86 kitsune/search/__init__.py:33
+#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86
 msgid "Locked"
 msgstr "Замкнено"
 
@@ -4003,78 +4003,25 @@ msgstr "User Agent: {ua}"
 msgid "More Information"
 msgstr "Додаткова інформація"
 
-#: kitsune/search/__init__.py:14 kitsune/search/__init__.py:42 kitsune/search/__init__.py:48
-msgid "Don't filter"
-msgstr "Не фільтрувати"
-
-#: kitsune/search/__init__.py:15
-msgid "Before"
-msgstr "До"
-
-#: kitsune/search/__init__.py:16
-msgid "After"
-msgstr "Після"
-
-#: kitsune/search/__init__.py:22 kitsune/search/__init__.py:61 kitsune/search/__init__.py:74
-msgid "Relevance"
-msgstr "Доречність"
-
-#: kitsune/search/__init__.py:23
-msgid "Last post date"
-msgstr "Дата останнього допису"
-
-#: kitsune/search/__init__.py:24
-msgid "Original post date"
-msgstr "Дата початкового допису"
-
-#: kitsune/search/__init__.py:25
-msgid "Number of replies"
-msgstr "Кількість відповідей"
-
-#: kitsune/search/__init__.py:49
-msgid "Less than"
-msgstr "Менш ніж"
-
-#: kitsune/search/__init__.py:50
-msgid "More than"
-msgstr "Більш ніж"
-
-#: kitsune/search/__init__.py:62
-msgid "Last answer date"
-msgstr "Дата останньої відповіді"
-
-#: kitsune/search/__init__.py:63
-msgid "Question date"
-msgstr "Дата питання"
-
-#: kitsune/search/__init__.py:64
-msgid "Number of answers"
-msgstr "Кількість відповідей"
-
-#: kitsune/search/__init__.py:75
-msgid "Helpful votes"
-msgstr "Голоси за корисність"
-
-#: kitsune/search/__init__.py:81
+#: kitsune/search/__init__.py:12
 msgid "No pages matched the search criteria"
 msgstr "Немає сторінок, що відповідають критеріям пошуку"
 
-#: kitsune/search/es_utils.py:872 kitsune/search/jinja2/search/down.html:5
-msgid "Search Unavailable"
-msgstr "Пошук неможливий"
+#: kitsune/search/base.py:410
+msgid "That page number is not an integer"
+msgstr "Цей номер сторінки не є цілим числом"
+
+#: kitsune/search/base.py:412
+msgid "That page number is less than 1"
+msgstr "Номер цієї сторінки менш ніж 1"
 
 #: kitsune/search/forms.py:38
 msgid "Relevant to"
 msgstr "Стосується"
 
-#: kitsune/search/views.py:27
-msgctxt "between search excerpts"
-msgid "..."
-msgstr "..."
-
-#: kitsune/search/views.py:132
-msgid "No title"
-msgstr "Без назви"
+#: kitsune/search/views.py:85
+msgid "Invalid search data."
+msgstr "Недійсна пошукова інформація."
 
 #: kitsune/search/jinja2/search/basic-form.html:3
 msgid "Enter your terms in the form below and click <strong>Search</strong>"
@@ -4088,6 +4035,10 @@ msgstr "Шукати"
 #: kitsune/search/jinja2/search/basic-form.html:32 kitsune/search/jinja2/search/basic-form.html:44 kitsune/search/jinja2/search/includes/macros.html:12
 msgid "Search Mozilla Support"
 msgstr "Шукати в підтримці Mozilla"
+
+#: kitsune/search/jinja2/search/down.html:5
+msgid "Search Unavailable"
+msgstr "Пошук неможливий"
 
 #: kitsune/search/jinja2/search/down.html:7
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
@@ -4161,18 +4112,6 @@ msgid_plural "{n} new this week"
 msgstr[0] "1 нове на цьому тижні"
 msgstr[1] "{n} нових на цьому тижні"
 msgstr[2] "{n} нових на цьому тижні"
-
-#: kitsune/search/v2/base.py:404
-msgid "That page number is not an integer"
-msgstr "Цей номер сторінки не є цілим числом"
-
-#: kitsune/search/v2/base.py:406
-msgid "That page number is less than 1"
-msgstr "Номер цієї сторінки менш ніж 1"
-
-#: kitsune/search/v2/views.py:38
-msgid "Invalid search data."
-msgstr "Недійсна пошукова інформація."
 
 #: kitsune/sumo/db_strings.py:19
 msgctxt "DB: karma.Title.name"
@@ -7669,17 +7608,17 @@ msgstr "Вивантажити"
 msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
 msgstr "У нас виникла проблема з надсиланням на адресу вашої електронної пошти. Будь ласка, спробуйте використати іншу адресу або зв'яжіться з адміністратором."
 
-#: kitsune/users/auth.py:72
+#: kitsune/users/auth.py:74
 msgid "<strong>Welcome!</strong> You are now logged in using Firefox Accounts. {a_profile}Edit your profile.{a_close}<br>Already have a different Mozilla Support Account? {a_more}Read more.{a_close}"
 msgstr ""
 "<strong>Вітаємо!</strong> Ви увійшли за допомогою облікових записів Firefox. {a_profile}Керувати профілем.{a_close}<br>Ви вже маєте інший обліковий запис Mozilla Support? {a_more}Докладніше."
 "{a_close}"
 
-#: kitsune/users/auth.py:154
+#: kitsune/users/auth.py:156
 msgid "This Firefox Account is already used in another profile."
 msgstr "Цей обліковий запис Firefox вже використовується в іншому профілі."
 
-#: kitsune/users/auth.py:170
+#: kitsune/users/auth.py:172
 msgid "The email used with this Firefox Account is already linked in another profile."
 msgstr "Електронна адреса, яка використовується в цьому обліковому записі Firefox, вже прив’язана до іншого профілю."
 
@@ -8565,31 +8504,31 @@ msgstr "При додаванні користувачів сталися пом
 msgid "{user} removed from successfully!"
 msgstr "Користувач {user} успішно видалений!"
 
-#: kitsune/wiki/models.py:117
+#: kitsune/wiki/models.py:108
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "Якщо відмічено, ця вікісторінка не буде з'являтися в основному пошуку і на панелях. При перегляді, сторінка буде попереджати, що вона більше не оновлюється."
 
-#: kitsune/wiki/models.py:127
+#: kitsune/wiki/models.py:118
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "Якщо відмічено, для цього документа дозволяється вести обговорення у зв'язаному з ним форумі. Зніміть позначку, щоб приховати/відключити форум."
 
-#: kitsune/wiki/models.py:146
+#: kitsune/wiki/models.py:137
 msgid "If checked, this document needs updates."
 msgstr "Якщо відмічено, цей документ потребує оновлення."
 
-#: kitsune/wiki/models.py:254
+#: kitsune/wiki/models.py:245
 msgid "Please choose a category."
 msgstr "Оберіть категорію."
 
-#: kitsune/wiki/models.py:263
+#: kitsune/wiki/models.py:254
 msgid "Documents in the Template category must have titles that start with \"{prefix}\". (Current title is \"{title}\")"
 msgstr "Документи в категорії Шаблон повинні мати заголовки, які починаються з \"{prefix}\". (Поточний заголовок \"{title}\")"
 
-#: kitsune/wiki/models.py:271
+#: kitsune/wiki/models.py:262
 msgid "Documents with titles that start with \"{prefix}\" must be in the templates category. (Current category is \"{category}\". Current title is \"{title}\".)"
 msgstr "Документи із заголовками, які починаються з \"{prefix}\" повинні бути в категорії шаблонів. (Поточна категорія \"{category}\". Поточний заголовок \"{title}\".)"
 
-#: kitsune/wiki/models.py:984
+#: kitsune/wiki/models.py:819
 #, python-format
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Редакція повинна бути заснована на англійській статті. Редакція з ID %(id)s не підходить під цей критерій."
@@ -9875,6 +9814,52 @@ msgstr "Розкажіть більш детально."
 #: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:19
 msgid "Please provide more details"
 msgstr "Будь ласка, надайте більше інформації"
+
+#~ msgid "Don't filter"
+#~ msgstr "Не фільтрувати"
+
+#~ msgid "Before"
+#~ msgstr "До"
+
+#~ msgid "After"
+#~ msgstr "Після"
+
+#~ msgid "Relevance"
+#~ msgstr "Доречність"
+
+#~ msgid "Last post date"
+#~ msgstr "Дата останнього допису"
+
+#~ msgid "Original post date"
+#~ msgstr "Дата початкового допису"
+
+#~ msgid "Number of replies"
+#~ msgstr "Кількість відповідей"
+
+#~ msgid "Less than"
+#~ msgstr "Менш ніж"
+
+#~ msgid "More than"
+#~ msgstr "Більш ніж"
+
+#~ msgid "Last answer date"
+#~ msgstr "Дата останньої відповіді"
+
+#~ msgid "Question date"
+#~ msgstr "Дата питання"
+
+#~ msgid "Number of answers"
+#~ msgstr "Кількість відповідей"
+
+#~ msgid "Helpful votes"
+#~ msgstr "Голоси за корисність"
+
+#~ msgctxt "between search excerpts"
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "No title"
+#~ msgstr "Без назви"
 
 #~ msgid "Category"
 #~ msgstr "Категорія"

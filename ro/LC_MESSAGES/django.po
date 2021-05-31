@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-19 02:58-0700\n"
+"POT-Creation-Date: 2021-05-31 01:38-0700\n"
 "PO-Revision-Date: 2020-08-27 11:54+0000\n"
 "Last-Translator: Cristian Silaghi <cristian.silaghi@mozilla.ro>\n"
 "Language-Team: Romanian <LL@li.org>\n"
@@ -611,7 +611,7 @@ msgstr "[{product}] Tablou de bord al Bazei de cunoștințe"
 
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:199 kitsune/dashboards/jinja2/dashboards/includes/macros.html:214
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:224 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/questions/jinja2/questions/product_list.html:41
-#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/v2/views.py:26
+#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/views.py:73
 msgid "All Products"
 msgstr "Toate produsele"
 
@@ -700,12 +700,12 @@ msgid "Review Needed: {comment}"
 msgstr "Necesită revizuire: {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:33 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:38 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:45
-#: kitsune/search/__init__.py:43 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
+#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
 msgid "Yes"
 msgstr "Da"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/search/__init__.py:44
-#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49 kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
 msgid "No"
 msgstr "Nu"
 
@@ -1694,11 +1694,11 @@ msgstr "Lipește acest fir"
 msgid "Last reply by"
 msgstr "Ultimul răspuns de"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:50 kitsune/search/__init__.py:32
+#: kitsune/kbforums/jinja2/kbforums/posts.html:50
 msgid "Sticky"
 msgstr "Persistent"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86 kitsune/search/__init__.py:33
+#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86
 msgid "Locked"
 msgstr "Blocat"
 
@@ -4045,78 +4045,25 @@ msgstr "Agent utilizator: {ua}"
 msgid "More Information"
 msgstr "Mai multe informații:"
 
-#: kitsune/search/__init__.py:14 kitsune/search/__init__.py:42 kitsune/search/__init__.py:48
-msgid "Don't filter"
-msgstr "Fără filtru"
-
-#: kitsune/search/__init__.py:15
-msgid "Before"
-msgstr "Înainte"
-
-#: kitsune/search/__init__.py:16
-msgid "After"
-msgstr "După"
-
-#: kitsune/search/__init__.py:22 kitsune/search/__init__.py:61 kitsune/search/__init__.py:74
-msgid "Relevance"
-msgstr "Relevanță"
-
-#: kitsune/search/__init__.py:23
-msgid "Last post date"
-msgstr "Data ultimei postări"
-
-#: kitsune/search/__init__.py:24
-msgid "Original post date"
-msgstr "Data postării inițiale"
-
-#: kitsune/search/__init__.py:25
-msgid "Number of replies"
-msgstr "Număr de răspunsuri"
-
-#: kitsune/search/__init__.py:49
-msgid "Less than"
-msgstr "Mai puțin de"
-
-#: kitsune/search/__init__.py:50
-msgid "More than"
-msgstr "Mai mult de"
-
-#: kitsune/search/__init__.py:62
-msgid "Last answer date"
-msgstr "Data ultimului răspuns"
-
-#: kitsune/search/__init__.py:63
-msgid "Question date"
-msgstr "Data întrebării"
-
-#: kitsune/search/__init__.py:64
-msgid "Number of answers"
-msgstr "Număr de răspunsuri"
-
-#: kitsune/search/__init__.py:75
-msgid "Helpful votes"
-msgstr "Voturi pentru utilitate"
-
-#: kitsune/search/__init__.py:81
+#: kitsune/search/__init__.py:12
 msgid "No pages matched the search criteria"
 msgstr "Nicio pagină nu a corespuns acestui criteriu"
 
-#: kitsune/search/es_utils.py:872 kitsune/search/jinja2/search/down.html:5
-msgid "Search Unavailable"
-msgstr "Căutare indisponibilă"
+#: kitsune/search/base.py:410
+msgid "That page number is not an integer"
+msgstr ""
+
+#: kitsune/search/base.py:412
+msgid "That page number is less than 1"
+msgstr ""
 
 #: kitsune/search/forms.py:38
 msgid "Relevant to"
 msgstr "Relevantă pentru"
 
-#: kitsune/search/views.py:27
-msgctxt "between search excerpts"
-msgid "..."
-msgstr "..."
-
-#: kitsune/search/views.py:132
-msgid "No title"
-msgstr "Fără titlu"
+#: kitsune/search/views.py:85
+msgid "Invalid search data."
+msgstr "Căutare nevalidă de date."
 
 #: kitsune/search/jinja2/search/basic-form.html:3
 msgid "Enter your terms in the form below and click <strong>Search</strong>"
@@ -4130,6 +4077,10 @@ msgstr "Caută"
 #: kitsune/search/jinja2/search/basic-form.html:32 kitsune/search/jinja2/search/basic-form.html:44 kitsune/search/jinja2/search/includes/macros.html:12
 msgid "Search Mozilla Support"
 msgstr "Caută pe Mozilla Support"
+
+#: kitsune/search/jinja2/search/down.html:5
+msgid "Search Unavailable"
+msgstr "Căutare indisponibilă"
 
 #: kitsune/search/jinja2/search/down.html:7
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
@@ -4205,18 +4156,6 @@ msgid_plural "{n} new this week"
 msgstr[0] "1 nou în această săptămână"
 msgstr[1] "{n} noi în această săptămână"
 msgstr[2] "{n} noi în această săptămână"
-
-#: kitsune/search/v2/base.py:404
-msgid "That page number is not an integer"
-msgstr ""
-
-#: kitsune/search/v2/base.py:406
-msgid "That page number is less than 1"
-msgstr ""
-
-#: kitsune/search/v2/views.py:38
-msgid "Invalid search data."
-msgstr "Căutare nevalidă de date."
 
 #: kitsune/sumo/db_strings.py:19
 msgctxt "DB: karma.Title.name"
@@ -7738,17 +7677,17 @@ msgstr "Încarcă"
 msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
 msgstr "Avem probleme în conectarea cu serverul tău de e-mail. Te rugăm să încerci o altă adresă sau să contactezi administratorul de server."
 
-#: kitsune/users/auth.py:72
+#: kitsune/users/auth.py:74
 msgid "<strong>Welcome!</strong> You are now logged in using Firefox Accounts. {a_profile}Edit your profile.{a_close}<br>Already have a different Mozilla Support Account? {a_more}Read more.{a_close}"
 msgstr ""
 "<strong>Bine ai venit!</strong> Acum ești autentificat(ă) cu Firefox Accounts. {a_profile}Editează-ți profilul.{a_close}<br>Ai deja alt cont pentru Asistență Mozilla? {a_more}Citește mai mult."
 "{a_close}"
 
-#: kitsune/users/auth.py:154
+#: kitsune/users/auth.py:156
 msgid "This Firefox Account is already used in another profile."
 msgstr "Acest cont de Firefox este deja utilizat pentru un alt profil."
 
-#: kitsune/users/auth.py:170
+#: kitsune/users/auth.py:172
 msgid "The email used with this Firefox Account is already linked in another profile."
 msgstr "Adresa de email folosită cu acest cont de Firefox este deja legată de alt profil."
 
@@ -8649,31 +8588,31 @@ msgstr "Au fost întâmpinate erori la adăugarea utilizatorilor. Vezi mai jos."
 msgid "{user} removed from successfully!"
 msgstr "{user} eliminat cu succes din grup!"
 
-#: kitsune/wiki/models.py:117
+#: kitsune/wiki/models.py:108
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "Dacă este bifată, această pagină wiki va fi ascunsă în căutările de bază și tablourile de bord. Când este vizualizată, pagina va avertiza că nu mai este actualizată."
 
-#: kitsune/wiki/models.py:127
+#: kitsune/wiki/models.py:118
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "Dacă e bifat, acest document va permite discuția într-un forum asociat. Debifează pentru a ascunde sau pentru a dezactiva forumul."
 
-#: kitsune/wiki/models.py:146
+#: kitsune/wiki/models.py:137
 msgid "If checked, this document needs updates."
 msgstr "Bifarea specifică faptul că acest document necesită actualizări."
 
-#: kitsune/wiki/models.py:254
+#: kitsune/wiki/models.py:245
 msgid "Please choose a category."
 msgstr "Te rugăm să alegi o categorie."
 
-#: kitsune/wiki/models.py:263
+#: kitsune/wiki/models.py:254
 msgid "Documents in the Template category must have titles that start with \"{prefix}\". (Current title is \"{title}\")"
 msgstr "Documentele din categoria Șabloane (Template) trebuie să aibă titluri care încep cu „{prefix}”. (Titlul actual este „{title}”)"
 
-#: kitsune/wiki/models.py:271
+#: kitsune/wiki/models.py:262
 msgid "Documents with titles that start with \"{prefix}\" must be in the templates category. (Current category is \"{category}\". Current title is \"{title}\".)"
 msgstr "Documente cu titluri care încep cu „{prefix}” trebuie să fie în categoria „șabloane”. (Categoria actuală este „{category}”. Titlul actual este „{title}”.)"
 
-#: kitsune/wiki/models.py:984
+#: kitsune/wiki/models.py:819
 #, python-format
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "O revizuire trebuie să fie bazată pe articolul din limba engleză. Revizuirea ID %(id)s nu corespunde acestui criteriu."
@@ -9961,6 +9900,52 @@ msgstr "Spune-ne mai multe."
 #: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:19
 msgid "Please provide more details"
 msgstr "Te rugăm să precizezi mai multe detalii."
+
+#~ msgid "Don't filter"
+#~ msgstr "Fără filtru"
+
+#~ msgid "Before"
+#~ msgstr "Înainte"
+
+#~ msgid "After"
+#~ msgstr "După"
+
+#~ msgid "Relevance"
+#~ msgstr "Relevanță"
+
+#~ msgid "Last post date"
+#~ msgstr "Data ultimei postări"
+
+#~ msgid "Original post date"
+#~ msgstr "Data postării inițiale"
+
+#~ msgid "Number of replies"
+#~ msgstr "Număr de răspunsuri"
+
+#~ msgid "Less than"
+#~ msgstr "Mai puțin de"
+
+#~ msgid "More than"
+#~ msgstr "Mai mult de"
+
+#~ msgid "Last answer date"
+#~ msgstr "Data ultimului răspuns"
+
+#~ msgid "Question date"
+#~ msgstr "Data întrebării"
+
+#~ msgid "Number of answers"
+#~ msgstr "Număr de răspunsuri"
+
+#~ msgid "Helpful votes"
+#~ msgstr "Voturi pentru utilitate"
+
+#~ msgctxt "between search excerpts"
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "No title"
+#~ msgstr "Fără titlu"
 
 #~ msgid "Category"
 #~ msgstr "Categorie"

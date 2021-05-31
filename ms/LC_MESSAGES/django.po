@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-19 02:58-0700\n"
+"POT-Creation-Date: 2021-05-31 01:38-0700\n"
 "PO-Revision-Date: 2018-11-09 01:26+0000\n"
 "Last-Translator: Othman Wagiman <manxmensch@gmail.com>\n"
 "Language-Team: Malay\n"
@@ -581,7 +581,7 @@ msgstr "[{product}] Papan pemuka Pangkalan Pengetahuan"
 
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:199 kitsune/dashboards/jinja2/dashboards/includes/macros.html:214
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:224 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/questions/jinja2/questions/product_list.html:41
-#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/v2/views.py:26
+#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/views.py:73
 msgid "All Products"
 msgstr "Semua Produk"
 
@@ -670,12 +670,12 @@ msgid "Review Needed: {comment}"
 msgstr "Perlu Semakan: {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:33 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:38 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:45
-#: kitsune/search/__init__.py:43 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
+#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
 msgid "Yes"
 msgstr "Ya"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/search/__init__.py:44
-#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49 kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
 msgid "No"
 msgstr "Tidak"
 
@@ -1663,11 +1663,11 @@ msgstr "Pin thread ini"
 msgid "Last reply by"
 msgstr "Balasan terakhir oleh"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:50 kitsune/search/__init__.py:32
+#: kitsune/kbforums/jinja2/kbforums/posts.html:50
 msgid "Sticky"
 msgstr "Pin"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86 kitsune/search/__init__.py:33
+#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86
 msgid "Locked"
 msgstr "Dikunci"
 
@@ -4064,78 +4064,25 @@ msgstr "Ejen Pengguna: {ua}"
 msgid "More Information"
 msgstr "Makumat Lanjut"
 
-#: kitsune/search/__init__.py:14 kitsune/search/__init__.py:42 kitsune/search/__init__.py:48
-msgid "Don't filter"
-msgstr "Jangan tapis"
-
-#: kitsune/search/__init__.py:15
-msgid "Before"
-msgstr "Sebelum"
-
-#: kitsune/search/__init__.py:16
-msgid "After"
-msgstr "Selepas"
-
-#: kitsune/search/__init__.py:22 kitsune/search/__init__.py:61 kitsune/search/__init__.py:74
-msgid "Relevance"
-msgstr "Kaitan"
-
-#: kitsune/search/__init__.py:23
-msgid "Last post date"
-msgstr "Tarikh post terakhir"
-
-#: kitsune/search/__init__.py:24
-msgid "Original post date"
-msgstr "Tarikh post asal"
-
-#: kitsune/search/__init__.py:25
-msgid "Number of replies"
-msgstr "Bilangan balasan"
-
-#: kitsune/search/__init__.py:49
-msgid "Less than"
-msgstr "Kurang daripada"
-
-#: kitsune/search/__init__.py:50
-msgid "More than"
-msgstr "Lebih daripada"
-
-#: kitsune/search/__init__.py:62
-msgid "Last answer date"
-msgstr "Tarikh jawapan terakhir"
-
-#: kitsune/search/__init__.py:63
-msgid "Question date"
-msgstr "Tarikh soalan"
-
-#: kitsune/search/__init__.py:64
-msgid "Number of answers"
-msgstr "Bilangan jawapan"
-
-#: kitsune/search/__init__.py:75
-msgid "Helpful votes"
-msgstr "Undi Berguna"
-
-#: kitsune/search/__init__.py:81
+#: kitsune/search/__init__.py:12
 msgid "No pages matched the search criteria"
 msgstr "Tiada halaman sepadan dengan kriteria carian"
 
-#: kitsune/search/es_utils.py:872 kitsune/search/jinja2/search/down.html:5
-msgid "Search Unavailable"
-msgstr "Carian Tidak Disediakan"
+#: kitsune/search/base.py:410
+msgid "That page number is not an integer"
+msgstr ""
+
+#: kitsune/search/base.py:412
+msgid "That page number is less than 1"
+msgstr ""
 
 #: kitsune/search/forms.py:38
 msgid "Relevant to"
 msgstr "Kaitan dengan"
 
-#: kitsune/search/views.py:27
-msgctxt "between search excerpts"
-msgid "..."
-msgstr "..."
-
-#: kitsune/search/views.py:132
-msgid "No title"
-msgstr "Tiada tajuk"
+#: kitsune/search/views.py:85
+msgid "Invalid search data."
+msgstr "Data carian tidak sah."
 
 #: kitsune/search/jinja2/search/basic-form.html:3
 msgid "Enter your terms in the form below and click <strong>Search</strong>"
@@ -4149,6 +4096,10 @@ msgstr "Cari"
 #: kitsune/search/jinja2/search/basic-form.html:32 kitsune/search/jinja2/search/basic-form.html:44 kitsune/search/jinja2/search/includes/macros.html:12
 msgid "Search Mozilla Support"
 msgstr "Carian Sokongan Mozilla"
+
+#: kitsune/search/jinja2/search/down.html:5
+msgid "Search Unavailable"
+msgstr "Carian Tidak Disediakan"
 
 #: kitsune/search/jinja2/search/down.html:7
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
@@ -4213,18 +4164,6 @@ msgstr[0] "{n} orang ada masalah ini"
 msgid "1 new this week"
 msgid_plural "{n} new this week"
 msgstr[0] "{n} baru minggu ini"
-
-#: kitsune/search/v2/base.py:404
-msgid "That page number is not an integer"
-msgstr ""
-
-#: kitsune/search/v2/base.py:406
-msgid "That page number is less than 1"
-msgstr ""
-
-#: kitsune/search/v2/views.py:38
-msgid "Invalid search data."
-msgstr "Data carian tidak sah."
 
 #: kitsune/sumo/db_strings.py:19
 msgctxt "DB: karma.Title.name"
@@ -7808,15 +7747,15 @@ msgstr "Muat naik"
 msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
 msgstr "Kami menghadapi masalah mencapai alamat e-mel anda. Sila cuba alamat yang berbeza atau hubungi pentadbir."
 
-#: kitsune/users/auth.py:72
+#: kitsune/users/auth.py:74
 msgid "<strong>Welcome!</strong> You are now logged in using Firefox Accounts. {a_profile}Edit your profile.{a_close}<br>Already have a different Mozilla Support Account? {a_more}Read more.{a_close}"
 msgstr ""
 
-#: kitsune/users/auth.py:154
+#: kitsune/users/auth.py:156
 msgid "This Firefox Account is already used in another profile."
 msgstr ""
 
-#: kitsune/users/auth.py:170
+#: kitsune/users/auth.py:172
 msgid "The email used with this Firefox Account is already linked in another profile."
 msgstr ""
 
@@ -8704,31 +8643,31 @@ msgstr "Ada ralat semasa memasukkan pengguna, lihat di bawah."
 msgid "{user} removed from successfully!"
 msgstr "{user} berjaya disingkirkan!"
 
-#: kitsune/wiki/models.py:117
+#: kitsune/wiki/models.py:108
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "Jika ditanda, halaman wiki ini akan disorok daripaa carian asas dan papan pemuka. Apabila ditinjau, halam ini akan memaklumkan bahawa keadaan itu tidak akan diteruskan."
 
-#: kitsune/wiki/models.py:127
+#: kitsune/wiki/models.py:118
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "Jika ditanda, dokumen ini membolehkan perbincangan dalam forum yang berkaitan. Buang tanda untuk sorok/disable forum."
 
-#: kitsune/wiki/models.py:146
+#: kitsune/wiki/models.py:137
 msgid "If checked, this document needs updates."
 msgstr "Jika ditanda, dokumen ini perlu dikemaskini."
 
-#: kitsune/wiki/models.py:254
+#: kitsune/wiki/models.py:245
 msgid "Please choose a category."
 msgstr "Sila pilih kategori."
 
-#: kitsune/wiki/models.py:263
+#: kitsune/wiki/models.py:254
 msgid "Documents in the Template category must have titles that start with \"{prefix}\". (Current title is \"{title}\")"
 msgstr "Dokumen di dalam kategori Templat mesti ada tajuk bermula dengan \"{prefix}\". (Tajuk semasa ialah \"{title}\")"
 
-#: kitsune/wiki/models.py:271
+#: kitsune/wiki/models.py:262
 msgid "Documents with titles that start with \"{prefix}\" must be in the templates category. (Current category is \"{category}\". Current title is \"{title}\".)"
 msgstr "Dokumen yang bermula dengan tajuk \"{prefix}\" mesti berada dalam kategori templat. (Kategori semasa ialah \"{category}\". Tajuk semasa ialah \"{title}\".)"
 
-#: kitsune/wiki/models.py:984
+#: kitsune/wiki/models.py:819
 #, python-format
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Semakan mestilah berdasarkan artikel Bahasa Inggeris. ID Semakan %(id)s tidak sesuai dengan kriteria ini."
@@ -10023,6 +9962,52 @@ msgstr "Beritahu kami lebih lanjut."
 #: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:19
 msgid "Please provide more details"
 msgstr "Berikan lebih butiran"
+
+#~ msgid "Don't filter"
+#~ msgstr "Jangan tapis"
+
+#~ msgid "Before"
+#~ msgstr "Sebelum"
+
+#~ msgid "After"
+#~ msgstr "Selepas"
+
+#~ msgid "Relevance"
+#~ msgstr "Kaitan"
+
+#~ msgid "Last post date"
+#~ msgstr "Tarikh post terakhir"
+
+#~ msgid "Original post date"
+#~ msgstr "Tarikh post asal"
+
+#~ msgid "Number of replies"
+#~ msgstr "Bilangan balasan"
+
+#~ msgid "Less than"
+#~ msgstr "Kurang daripada"
+
+#~ msgid "More than"
+#~ msgstr "Lebih daripada"
+
+#~ msgid "Last answer date"
+#~ msgstr "Tarikh jawapan terakhir"
+
+#~ msgid "Question date"
+#~ msgstr "Tarikh soalan"
+
+#~ msgid "Number of answers"
+#~ msgstr "Bilangan jawapan"
+
+#~ msgid "Helpful votes"
+#~ msgstr "Undi Berguna"
+
+#~ msgctxt "between search excerpts"
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "No title"
+#~ msgstr "Tiada tajuk"
 
 #~ msgid "Category"
 #~ msgstr "Kategori"

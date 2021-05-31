@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-19 02:58-0700\n"
+"POT-Creation-Date: 2021-05-31 01:38-0700\n"
 "PO-Revision-Date: 2016-01-28 11:11+0000\n"
 "Last-Translator: Michał Dziewoński <mdziewonski@mozilla.com>\n"
 "Language-Team: Malagasy\n"
@@ -592,7 +592,7 @@ msgstr "Takelaka Fanamoriana Tobim-pahalalana [{product}]"
 
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:199 kitsune/dashboards/jinja2/dashboards/includes/macros.html:214
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:224 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/questions/jinja2/questions/product_list.html:41
-#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/v2/views.py:26
+#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/views.py:73
 msgid "All Products"
 msgstr "Vokatra Rehetra"
 
@@ -681,12 +681,12 @@ msgid "Review Needed: {comment}"
 msgstr "Fitsarana Ilaina: {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:33 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:38 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:45
-#: kitsune/search/__init__.py:43 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
+#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
 msgid "Yes"
 msgstr "Eny"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/search/__init__.py:44
-#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49 kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
 msgid "No"
 msgstr "Tsia"
 
@@ -1677,11 +1677,11 @@ msgstr "Handraikitra ity resaka mitohy ity"
 msgid "Last reply by"
 msgstr "Valiny farany nomen'i"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:50 kitsune/search/__init__.py:32
+#: kitsune/kbforums/jinja2/kbforums/posts.html:50
 msgid "Sticky"
 msgstr "Handraikitra"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86 kitsune/search/__init__.py:33
+#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86
 msgid "Locked"
 msgstr "Mihidy"
 
@@ -4109,78 +4109,25 @@ msgstr "Solotenan'ny Mpampiasa: {ua}"
 msgid "More Information"
 msgstr "Fampahalalana Bebe Kokoa"
 
-#: kitsune/search/__init__.py:14 kitsune/search/__init__.py:42 kitsune/search/__init__.py:48
-msgid "Don't filter"
-msgstr "Aza sivanina"
-
-#: kitsune/search/__init__.py:15
-msgid "Before"
-msgstr "Aloha"
-
-#: kitsune/search/__init__.py:16
-msgid "After"
-msgstr "Aoriana"
-
-#: kitsune/search/__init__.py:22 kitsune/search/__init__.py:61 kitsune/search/__init__.py:74
-msgid "Relevance"
-msgstr "Fifandraikany"
-
-#: kitsune/search/__init__.py:23
-msgid "Last post date"
-msgstr "Datin'ny petadrindrina farany"
-
-#: kitsune/search/__init__.py:24
-msgid "Original post date"
-msgstr "Datin'ny petadrindrina nifotorana"
-
-#: kitsune/search/__init__.py:25
-msgid "Number of replies"
-msgstr "Isan'ny valiny"
-
-#: kitsune/search/__init__.py:49
-msgid "Less than"
-msgstr "Latsaka ny"
-
-#: kitsune/search/__init__.py:50
-msgid "More than"
-msgstr "Mihoatra ny"
-
-#: kitsune/search/__init__.py:62
-msgid "Last answer date"
-msgstr "Datin'ny valiny farany"
-
-#: kitsune/search/__init__.py:63
-msgid "Question date"
-msgstr "Datin'ny fanontaniana"
-
-#: kitsune/search/__init__.py:64
-msgid "Number of answers"
-msgstr "Isan'ny valiny"
-
-#: kitsune/search/__init__.py:75
-msgid "Helpful votes"
-msgstr "Vato manampy"
-
-#: kitsune/search/__init__.py:81
+#: kitsune/search/__init__.py:12
 msgid "No pages matched the search criteria"
 msgstr "Tsisy pejy mifanandrify amin'ilay fepetra fikarohana"
 
-#: kitsune/search/es_utils.py:872 kitsune/search/jinja2/search/down.html:5
-msgid "Search Unavailable"
-msgstr "Tsy Vonona ny Fikarohana"
+#: kitsune/search/base.py:410
+msgid "That page number is not an integer"
+msgstr ""
+
+#: kitsune/search/base.py:412
+msgid "That page number is less than 1"
+msgstr ""
 
 #: kitsune/search/forms.py:38
 msgid "Relevant to"
 msgstr "Mifandraika @"
 
-#: kitsune/search/views.py:27
-msgctxt "between search excerpts"
-msgid "..."
-msgstr "…"
-
-#: kitsune/search/views.py:132
-msgid "No title"
-msgstr "Tsisy lohateny"
+#: kitsune/search/views.py:85
+msgid "Invalid search data."
+msgstr "Data fikarohana tsy mety."
 
 #: kitsune/search/jinja2/search/basic-form.html:3
 msgid "Enter your terms in the form below and click <strong>Search</strong>"
@@ -4194,6 +4141,10 @@ msgstr "Hikaroka"
 #: kitsune/search/jinja2/search/basic-form.html:32 kitsune/search/jinja2/search/basic-form.html:44 kitsune/search/jinja2/search/includes/macros.html:12
 msgid "Search Mozilla Support"
 msgstr "Hikaroka ao @ Fanampiana Mozilla"
+
+#: kitsune/search/jinja2/search/down.html:5
+msgid "Search Unavailable"
+msgstr "Tsy Vonona ny Fikarohana"
 
 #: kitsune/search/jinja2/search/down.html:7
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
@@ -4263,18 +4214,6 @@ msgid "1 new this week"
 msgid_plural "{n} new this week"
 msgstr[0] "Vaovao 1 t@ ity herinandro ity"
 msgstr[1] "Vaovao {n} t@ ity herinandro ity"
-
-#: kitsune/search/v2/base.py:404
-msgid "That page number is not an integer"
-msgstr ""
-
-#: kitsune/search/v2/base.py:406
-msgid "That page number is less than 1"
-msgstr ""
-
-#: kitsune/search/v2/views.py:38
-msgid "Invalid search data."
-msgstr "Data fikarohana tsy mety."
 
 #: kitsune/sumo/db_strings.py:19
 msgctxt "DB: karma.Title.name"
@@ -7988,15 +7927,15 @@ msgstr "Hampiakatra"
 msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
 msgstr "Sahirana izahay tsy mahatakatra ny adiresy mailakao. Manandrama adiresy hafa azafady na mifandraisa @ mpandrindra."
 
-#: kitsune/users/auth.py:72
+#: kitsune/users/auth.py:74
 msgid "<strong>Welcome!</strong> You are now logged in using Firefox Accounts. {a_profile}Edit your profile.{a_close}<br>Already have a different Mozilla Support Account? {a_more}Read more.{a_close}"
 msgstr ""
 
-#: kitsune/users/auth.py:154
+#: kitsune/users/auth.py:156
 msgid "This Firefox Account is already used in another profile."
 msgstr ""
 
-#: kitsune/users/auth.py:170
+#: kitsune/users/auth.py:172
 msgid "The email used with this Firefox Account is already linked in another profile."
 msgstr ""
 
@@ -8888,32 +8827,32 @@ msgstr "Nisy olana tsy nahafahana nanampy mpampiasa, jereo eto ambany."
 msgid "{user} removed from successfully!"
 msgstr "Nesorina tao soa aman-tsara i {user}!"
 
-#: kitsune/wiki/models.py:117
+#: kitsune/wiki/models.py:108
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "Raha voatiky, dia hafenina tsy hiseho @ ireo fikarohana tsotsotra sy takelaka fanamoriana ity pejy wiki ity. Rehefa jerena ilay pejy, dia hampitandrina fa tsy voakojakoja intsony izy."
 
-#: kitsune/wiki/models.py:127
+#: kitsune/wiki/models.py:118
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "Raha voatiky, ity tahirin-keitra ity dia hanome alàlana adihevitra ao fihaonambe mifandraika. Esory ny tiky raha hanafina/hampitsahatra ny fihaonambe."
 
-#: kitsune/wiki/models.py:146
+#: kitsune/wiki/models.py:137
 msgid "If checked, this document needs updates."
 msgstr "Raha voatiky, dia mila fanavaozana ity tahirin-kevitra ity."
 
-#: kitsune/wiki/models.py:254
+#: kitsune/wiki/models.py:245
 msgid "Please choose a category."
 msgstr "Mifidiana sokajy azafady."
 
-#: kitsune/wiki/models.py:263
+#: kitsune/wiki/models.py:254
 msgid "Documents in the Template category must have titles that start with \"{prefix}\". (Current title is \"{title}\")"
 msgstr "Tsy maintsy manana lohateny manomboka @ \"{prefix}\" ireo tahirin-kevitra ao @ sokajy Modely. (Ny lohateny ankehitriny dia \"{title}\")"
 
-#: kitsune/wiki/models.py:271
+#: kitsune/wiki/models.py:262
 #, fuzzy
 msgid "Documents with titles that start with \"{prefix}\" must be in the templates category. (Current category is \"{category}\". Current title is \"{title}\".)"
 msgstr "Tsy maintsy ao @ sokajy Modely ireo tahirin-kevitra manomboka @ \"{prefix}\". (Ny sokajy ankehitriny dia \"{category}\")"
 
-#: kitsune/wiki/models.py:984
+#: kitsune/wiki/models.py:819
 #, python-format
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Tsy maintsy mifototra @ lahatsoratra @ teny Anglisy ny fanitsiana. Tsy mahafeno an'io fepetra io ny ID an'ny fanitsiana %(id)s."
@@ -10222,6 +10161,52 @@ msgstr "Ilazao misimisy izahay."
 #: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:19
 msgid "Please provide more details"
 msgstr "Manomeza antsipiriany misimisy azafady"
+
+#~ msgid "Don't filter"
+#~ msgstr "Aza sivanina"
+
+#~ msgid "Before"
+#~ msgstr "Aloha"
+
+#~ msgid "After"
+#~ msgstr "Aoriana"
+
+#~ msgid "Relevance"
+#~ msgstr "Fifandraikany"
+
+#~ msgid "Last post date"
+#~ msgstr "Datin'ny petadrindrina farany"
+
+#~ msgid "Original post date"
+#~ msgstr "Datin'ny petadrindrina nifotorana"
+
+#~ msgid "Number of replies"
+#~ msgstr "Isan'ny valiny"
+
+#~ msgid "Less than"
+#~ msgstr "Latsaka ny"
+
+#~ msgid "More than"
+#~ msgstr "Mihoatra ny"
+
+#~ msgid "Last answer date"
+#~ msgstr "Datin'ny valiny farany"
+
+#~ msgid "Question date"
+#~ msgstr "Datin'ny fanontaniana"
+
+#~ msgid "Number of answers"
+#~ msgstr "Isan'ny valiny"
+
+#~ msgid "Helpful votes"
+#~ msgstr "Vato manampy"
+
+#~ msgctxt "between search excerpts"
+#~ msgid "..."
+#~ msgstr "…"
+
+#~ msgid "No title"
+#~ msgstr "Tsisy lohateny"
 
 #~ msgid "Category"
 #~ msgstr "Sokajy"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-19 02:58-0700\n"
+"POT-Creation-Date: 2021-05-31 01:38-0700\n"
 "PO-Revision-Date: 2021-03-26 20:39+0000\n"
 "Last-Translator: Isidora Jukić <barad.dur@yahoo.com>\n"
 "Language-Team: Serbian\n"
@@ -580,7 +580,7 @@ msgstr "[{product}] контролна табла Базе знања"
 
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:199 kitsune/dashboards/jinja2/dashboards/includes/macros.html:214
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:224 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/questions/jinja2/questions/product_list.html:41
-#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/v2/views.py:26
+#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/views.py:73
 msgid "All Products"
 msgstr "Сви производи"
 
@@ -669,12 +669,12 @@ msgid "Review Needed: {comment}"
 msgstr "Потребна рецензија: {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:33 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:38 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:45
-#: kitsune/search/__init__.py:43 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
+#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
 msgid "Yes"
 msgstr "Да"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/search/__init__.py:44
-#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49 kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
 msgid "No"
 msgstr "Не"
 
@@ -1662,11 +1662,11 @@ msgstr "Залепи ову тему"
 msgid "Last reply by"
 msgstr "Последњи одговор послао"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:50 kitsune/search/__init__.py:32
+#: kitsune/kbforums/jinja2/kbforums/posts.html:50
 msgid "Sticky"
 msgstr "Лепљива"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86 kitsune/search/__init__.py:33
+#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86
 msgid "Locked"
 msgstr "Закључана"
 
@@ -3988,78 +3988,25 @@ msgstr "Кориснички агент: {ua}"
 msgid "More Information"
 msgstr "Више информација"
 
-#: kitsune/search/__init__.py:14 kitsune/search/__init__.py:42 kitsune/search/__init__.py:48
-msgid "Don't filter"
-msgstr "Немој филтрирати"
-
-#: kitsune/search/__init__.py:15
-msgid "Before"
-msgstr "Пре"
-
-#: kitsune/search/__init__.py:16
-msgid "After"
-msgstr "После"
-
-#: kitsune/search/__init__.py:22 kitsune/search/__init__.py:61 kitsune/search/__init__.py:74
-msgid "Relevance"
-msgstr "Значај"
-
-#: kitsune/search/__init__.py:23
-msgid "Last post date"
-msgstr "Последњи датум поруке"
-
-#: kitsune/search/__init__.py:24
-msgid "Original post date"
-msgstr "Оригиналан датум поруке"
-
-#: kitsune/search/__init__.py:25
-msgid "Number of replies"
-msgstr "Број одговора"
-
-#: kitsune/search/__init__.py:49
-msgid "Less than"
-msgstr "Мање од"
-
-#: kitsune/search/__init__.py:50
-msgid "More than"
-msgstr "Више од"
-
-#: kitsune/search/__init__.py:62
-msgid "Last answer date"
-msgstr "Последњи датум одговора"
-
-#: kitsune/search/__init__.py:63
-msgid "Question date"
-msgstr "Датум питања"
-
-#: kitsune/search/__init__.py:64
-msgid "Number of answers"
-msgstr "Број одговора"
-
-#: kitsune/search/__init__.py:75
-msgid "Helpful votes"
-msgstr "Корисни гласови"
-
-#: kitsune/search/__init__.py:81
+#: kitsune/search/__init__.py:12
 msgid "No pages matched the search criteria"
 msgstr "Није било страница које се поклапају са критеријумом за претрагу"
 
-#: kitsune/search/es_utils.py:872 kitsune/search/jinja2/search/down.html:5
-msgid "Search Unavailable"
-msgstr "Претраживање је недоступно"
+#: kitsune/search/base.py:410
+msgid "That page number is not an integer"
+msgstr ""
+
+#: kitsune/search/base.py:412
+msgid "That page number is less than 1"
+msgstr ""
 
 #: kitsune/search/forms.py:38
 msgid "Relevant to"
 msgstr "Значајно за"
 
-#: kitsune/search/views.py:27
-msgctxt "between search excerpts"
-msgid "..."
-msgstr "..."
-
-#: kitsune/search/views.py:132
-msgid "No title"
-msgstr "Нема наслова"
+#: kitsune/search/views.py:85
+msgid "Invalid search data."
+msgstr "Неважећа претрага података."
 
 #: kitsune/search/jinja2/search/basic-form.html:3
 msgid "Enter your terms in the form below and click <strong>Search</strong>"
@@ -4073,6 +4020,10 @@ msgstr "Претражи"
 #: kitsune/search/jinja2/search/basic-form.html:32 kitsune/search/jinja2/search/basic-form.html:44 kitsune/search/jinja2/search/includes/macros.html:12
 msgid "Search Mozilla Support"
 msgstr "Претражи Mozilla подршку"
+
+#: kitsune/search/jinja2/search/down.html:5
+msgid "Search Unavailable"
+msgstr "Претраживање је недоступно"
 
 #: kitsune/search/jinja2/search/down.html:7
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
@@ -4147,18 +4098,6 @@ msgid_plural "{n} new this week"
 msgstr[0] "{n} нов ове недеље"
 msgstr[1] "{n} нових ове недеље"
 msgstr[2] "{n} нових ове недеље"
-
-#: kitsune/search/v2/base.py:404
-msgid "That page number is not an integer"
-msgstr ""
-
-#: kitsune/search/v2/base.py:406
-msgid "That page number is less than 1"
-msgstr ""
-
-#: kitsune/search/v2/views.py:38
-msgid "Invalid search data."
-msgstr "Неважећа претрага података."
 
 #: kitsune/sumo/db_strings.py:19
 msgctxt "DB: karma.Title.name"
@@ -7652,15 +7591,15 @@ msgstr "Отпремaње"
 msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
 msgstr "Имамо проблема са адресом е-поште. Покушајте са другом адресом е-пошта или контактирајте администратора."
 
-#: kitsune/users/auth.py:72
+#: kitsune/users/auth.py:74
 msgid "<strong>Welcome!</strong> You are now logged in using Firefox Accounts. {a_profile}Edit your profile.{a_close}<br>Already have a different Mozilla Support Account? {a_more}Read more.{a_close}"
 msgstr "<strong>Добродошли!</strong> Сада сте пријављени преко Firefox налога. {a_profile}Уредите ваш профил.{a_close}<br>Већ имате други налог за Mozilla подршку? {a_more}Прочитајте више.{a_close}"
 
-#: kitsune/users/auth.py:154
+#: kitsune/users/auth.py:156
 msgid "This Firefox Account is already used in another profile."
 msgstr "Овај Firefox налог се већ користи у другом профилу."
 
-#: kitsune/users/auth.py:170
+#: kitsune/users/auth.py:172
 msgid "The email used with this Firefox Account is already linked in another profile."
 msgstr "Адреса е-поште овог Firefox налога је већ повезана с једним другим профилом."
 
@@ -8549,31 +8488,31 @@ msgstr "Дошло је до грешке приликом додавања ко
 msgid "{user} removed from successfully!"
 msgstr "{user} успешно уклоњен!"
 
-#: kitsune/wiki/models.py:117
+#: kitsune/wiki/models.py:108
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "Ако се обележи, ова wiki страница ће бити сакривена из основне претраге и контролних табли. Када се страница погледа, стојаће обавештење да се више не одржава."
 
-#: kitsune/wiki/models.py:127
+#: kitsune/wiki/models.py:118
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "Ако се обележи, овај документ ће дозволити дискусију на повезаном форуму. Уклоните ознаку да бисте сакрили/онемогућили форум."
 
-#: kitsune/wiki/models.py:146
+#: kitsune/wiki/models.py:137
 msgid "If checked, this document needs updates."
 msgstr "Ако је обележено, овом документу је потребна допуна."
 
-#: kitsune/wiki/models.py:254
+#: kitsune/wiki/models.py:245
 msgid "Please choose a category."
 msgstr "Молимо Вас, изаберите категорију."
 
-#: kitsune/wiki/models.py:263
+#: kitsune/wiki/models.py:254
 msgid "Documents in the Template category must have titles that start with \"{prefix}\". (Current title is \"{title}\")"
 msgstr "Документи у категорију Шаблони морају да имају наслов који почиње са \"{prefix}\". (Тренутни наслов је \"{title}\")"
 
-#: kitsune/wiki/models.py:271
+#: kitsune/wiki/models.py:262
 msgid "Documents with titles that start with \"{prefix}\" must be in the templates category. (Current category is \"{category}\". Current title is \"{title}\".)"
 msgstr "Документи са насловима који почињу са \"{prefix}\" морају бити у категорији шаблона. (Тренутна категорија је \"{category}\". Тренутни наслов је \"{title}\".)"
 
-#: kitsune/wiki/models.py:984
+#: kitsune/wiki/models.py:819
 #, python-format
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Ревизија мора бити заснована на енглеској верзији. ID ревизије %(id)s не одговара овом услову."
@@ -9859,6 +9798,52 @@ msgstr "Реците нам више."
 #: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:19
 msgid "Please provide more details"
 msgstr "Доставите више детаља"
+
+#~ msgid "Don't filter"
+#~ msgstr "Немој филтрирати"
+
+#~ msgid "Before"
+#~ msgstr "Пре"
+
+#~ msgid "After"
+#~ msgstr "После"
+
+#~ msgid "Relevance"
+#~ msgstr "Значај"
+
+#~ msgid "Last post date"
+#~ msgstr "Последњи датум поруке"
+
+#~ msgid "Original post date"
+#~ msgstr "Оригиналан датум поруке"
+
+#~ msgid "Number of replies"
+#~ msgstr "Број одговора"
+
+#~ msgid "Less than"
+#~ msgstr "Мање од"
+
+#~ msgid "More than"
+#~ msgstr "Више од"
+
+#~ msgid "Last answer date"
+#~ msgstr "Последњи датум одговора"
+
+#~ msgid "Question date"
+#~ msgstr "Датум питања"
+
+#~ msgid "Number of answers"
+#~ msgstr "Број одговора"
+
+#~ msgid "Helpful votes"
+#~ msgstr "Корисни гласови"
+
+#~ msgctxt "between search excerpts"
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "No title"
+#~ msgstr "Нема наслова"
 
 #~ msgid "Category"
 #~ msgstr "Категорија"

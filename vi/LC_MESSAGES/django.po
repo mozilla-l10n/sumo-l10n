@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-19 02:58-0700\n"
+"POT-Creation-Date: 2021-05-31 01:38-0700\n"
 "PO-Revision-Date: 2021-04-25 04:10+0000\n"
 "Last-Translator: Quế Tùng <best.cloney.1301@gmail.com>\n"
 "Language-Team: Vietnamese\n"
@@ -579,7 +579,7 @@ msgstr "[{product}] Bảng điều khiển"
 
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:199 kitsune/dashboards/jinja2/dashboards/includes/macros.html:214
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:224 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/questions/jinja2/questions/product_list.html:41
-#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/v2/views.py:26
+#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/views.py:73
 msgid "All Products"
 msgstr "Tất cả sản phẩm"
 
@@ -668,12 +668,12 @@ msgid "Review Needed: {comment}"
 msgstr "Cần xét duyệt: {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:33 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:38 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:45
-#: kitsune/search/__init__.py:43 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
+#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
 msgid "Yes"
 msgstr "Có"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/search/__init__.py:44
-#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49 kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
 msgid "No"
 msgstr "Không"
 
@@ -1661,11 +1661,11 @@ msgstr "Đánh dấu chủ đề này"
 msgid "Last reply by"
 msgstr "Trả lời mới nhất được viết bởi"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:50 kitsune/search/__init__.py:32
+#: kitsune/kbforums/jinja2/kbforums/posts.html:50
 msgid "Sticky"
 msgstr "Chú ý"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86 kitsune/search/__init__.py:33
+#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86
 msgid "Locked"
 msgstr "Đã khóa"
 
@@ -3989,78 +3989,25 @@ msgstr "Chuỗi đại diện người dùng: {ua}"
 msgid "More Information"
 msgstr "Thông tin chi tiết"
 
-#: kitsune/search/__init__.py:14 kitsune/search/__init__.py:42 kitsune/search/__init__.py:48
-msgid "Don't filter"
-msgstr "Không lọc"
-
-#: kitsune/search/__init__.py:15
-msgid "Before"
-msgstr "Trước"
-
-#: kitsune/search/__init__.py:16
-msgid "After"
-msgstr "Sau"
-
-#: kitsune/search/__init__.py:22 kitsune/search/__init__.py:61 kitsune/search/__init__.py:74
-msgid "Relevance"
-msgstr "Mức độ liên quan"
-
-#: kitsune/search/__init__.py:23
-msgid "Last post date"
-msgstr "Ngày gửi cuối"
-
-#: kitsune/search/__init__.py:24
-msgid "Original post date"
-msgstr "Ngày đăng gốc"
-
-#: kitsune/search/__init__.py:25
-msgid "Number of replies"
-msgstr "Số lượng bài trả lời"
-
-#: kitsune/search/__init__.py:49
-msgid "Less than"
-msgstr "Ít hơn"
-
-#: kitsune/search/__init__.py:50
-msgid "More than"
-msgstr "Nhiều hơn"
-
-#: kitsune/search/__init__.py:62
-msgid "Last answer date"
-msgstr "Ngày trả lời cuối"
-
-#: kitsune/search/__init__.py:63
-msgid "Question date"
-msgstr "Ngày của câu hỏi"
-
-#: kitsune/search/__init__.py:64
-msgid "Number of answers"
-msgstr "Số lượng trả lời"
-
-#: kitsune/search/__init__.py:75
-msgid "Helpful votes"
-msgstr "Bình chọn hữu ích"
-
-#: kitsune/search/__init__.py:81
+#: kitsune/search/__init__.py:12
 msgid "No pages matched the search criteria"
 msgstr "Không có trang nào phù hợp với tiêu chí tìm kiếm của bạn"
 
-#: kitsune/search/es_utils.py:872 kitsune/search/jinja2/search/down.html:5
-msgid "Search Unavailable"
-msgstr "Tìm kiếm Không hoạt động"
+#: kitsune/search/base.py:410
+msgid "That page number is not an integer"
+msgstr "Số trang đó không phải là số nguyên"
+
+#: kitsune/search/base.py:412
+msgid "That page number is less than 1"
+msgstr "Số trang đó nhỏ hơn 1"
 
 #: kitsune/search/forms.py:38
 msgid "Relevant to"
 msgstr "Có liên quan đến"
 
-#: kitsune/search/views.py:27
-msgctxt "between search excerpts"
-msgid "..."
-msgstr "..."
-
-#: kitsune/search/views.py:132
-msgid "No title"
-msgstr "Không có tiêu đề"
+#: kitsune/search/views.py:85
+msgid "Invalid search data."
+msgstr "Dữ liệu tìm kiếm bất hợp lệ."
 
 #: kitsune/search/jinja2/search/basic-form.html:3
 msgid "Enter your terms in the form below and click <strong>Search</strong>"
@@ -4074,6 +4021,10 @@ msgstr "Tìm kiếm"
 #: kitsune/search/jinja2/search/basic-form.html:32 kitsune/search/jinja2/search/basic-form.html:44 kitsune/search/jinja2/search/includes/macros.html:12
 msgid "Search Mozilla Support"
 msgstr "Tìm kiếm trong Mozilla Support"
+
+#: kitsune/search/jinja2/search/down.html:5
+msgid "Search Unavailable"
+msgstr "Tìm kiếm Không hoạt động"
 
 #: kitsune/search/jinja2/search/down.html:7
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
@@ -4137,18 +4088,6 @@ msgstr[0] "Có {n} người có cùng vấn đề này"
 msgid "1 new this week"
 msgid_plural "{n} new this week"
 msgstr[0] "{n} mới trong tuần này"
-
-#: kitsune/search/v2/base.py:404
-msgid "That page number is not an integer"
-msgstr "Số trang đó không phải là số nguyên"
-
-#: kitsune/search/v2/base.py:406
-msgid "That page number is less than 1"
-msgstr "Số trang đó nhỏ hơn 1"
-
-#: kitsune/search/v2/views.py:38
-msgid "Invalid search data."
-msgstr "Dữ liệu tìm kiếm bất hợp lệ."
 
 #: kitsune/sumo/db_strings.py:19
 msgctxt "DB: karma.Title.name"
@@ -7631,16 +7570,16 @@ msgstr "Tải lên"
 msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
 msgstr "Chúng tôi gặp vấn đề khi truy tới địa chỉ email của bạn. Vui lòng thử một địa chỉ khác hoặc liên hệ quản trị viên."
 
-#: kitsune/users/auth.py:72
+#: kitsune/users/auth.py:74
 msgid "<strong>Welcome!</strong> You are now logged in using Firefox Accounts. {a_profile}Edit your profile.{a_close}<br>Already have a different Mozilla Support Account? {a_more}Read more.{a_close}"
 msgstr ""
 "<strong>Chào mừng bạn!</strong> Bạn hiện đang đăng nhập bằng tài khoản Firefox. {a_profile}Chỉnh sửa hồ sơ của bạn.{a_close}<br>Đã có tài khoản Mozilla Support khác? {a_more}Đọc thêm.{a_close}"
 
-#: kitsune/users/auth.py:154
+#: kitsune/users/auth.py:156
 msgid "This Firefox Account is already used in another profile."
 msgstr "Tài khoản Firefox này đã được sử dụng trong một hồ sơ khác."
 
-#: kitsune/users/auth.py:170
+#: kitsune/users/auth.py:172
 msgid "The email used with this Firefox Account is already linked in another profile."
 msgstr "Email được sử dụng với Tài khoản Firefox này đã được liên kết trong một hồ sơ khác."
 
@@ -8520,31 +8459,31 @@ msgstr "Có lỗi khi thêm người dùng, xem bên dưới."
 msgid "{user} removed from successfully!"
 msgstr "Đã gỡ bỏ {user} thành công!"
 
-#: kitsune/wiki/models.py:117
+#: kitsune/wiki/models.py:108
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "Nếu được chọn, trang wiki này sẽ bị ẩn khỏi các tìm kiếm và bảng điều khiển cơ bản. Khi xem, trang sẽ cảnh báo rằng nó không còn được duy trì."
 
-#: kitsune/wiki/models.py:127
+#: kitsune/wiki/models.py:118
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "Nếu được chọn, tài liệu này cho phép thảo luận trong một diễn đàn liên quan. Bỏ chọn để ẩn/vô hiệu hóa diễn đàn."
 
-#: kitsune/wiki/models.py:146
+#: kitsune/wiki/models.py:137
 msgid "If checked, this document needs updates."
 msgstr "Nếu được chọn, tài liệu này cần cập nhật."
 
-#: kitsune/wiki/models.py:254
+#: kitsune/wiki/models.py:245
 msgid "Please choose a category."
 msgstr "Vui lòng chọn một phân mục."
 
-#: kitsune/wiki/models.py:263
+#: kitsune/wiki/models.py:254
 msgid "Documents in the Template category must have titles that start with \"{prefix}\". (Current title is \"{title}\")"
 msgstr "Tài liệu trong danh mục mẫu phải có tiêu đề bắt đầu bằng \"{prefix}\". (Tiêu đề hiện tại là \"{title}\")"
 
-#: kitsune/wiki/models.py:271
+#: kitsune/wiki/models.py:262
 msgid "Documents with titles that start with \"{prefix}\" must be in the templates category. (Current category is \"{category}\". Current title is \"{title}\".)"
 msgstr "Các tài liệu có tiêu đề bắt đầu bằng \"{prefix}\" phải nằm trong danh mục mẫu. (Danh mục hiện tại là \"{category}\". Tiêu đề hiện tại là \"{title}\".)"
 
-#: kitsune/wiki/models.py:984
+#: kitsune/wiki/models.py:819
 #, python-format
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Một sửa đổi phải được dựa trên bài viết tiếng Anh. ID bản sửa đổi %(id)s không phù hợp với tiêu chuẩn này."
@@ -9834,6 +9773,52 @@ msgstr "Hãy cho chúng tôi biết thêm chi tiết."
 #: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:19
 msgid "Please provide more details"
 msgstr "Vui lòng cung cấp thêm chi tiết"
+
+#~ msgid "Don't filter"
+#~ msgstr "Không lọc"
+
+#~ msgid "Before"
+#~ msgstr "Trước"
+
+#~ msgid "After"
+#~ msgstr "Sau"
+
+#~ msgid "Relevance"
+#~ msgstr "Mức độ liên quan"
+
+#~ msgid "Last post date"
+#~ msgstr "Ngày gửi cuối"
+
+#~ msgid "Original post date"
+#~ msgstr "Ngày đăng gốc"
+
+#~ msgid "Number of replies"
+#~ msgstr "Số lượng bài trả lời"
+
+#~ msgid "Less than"
+#~ msgstr "Ít hơn"
+
+#~ msgid "More than"
+#~ msgstr "Nhiều hơn"
+
+#~ msgid "Last answer date"
+#~ msgstr "Ngày trả lời cuối"
+
+#~ msgid "Question date"
+#~ msgstr "Ngày của câu hỏi"
+
+#~ msgid "Number of answers"
+#~ msgstr "Số lượng trả lời"
+
+#~ msgid "Helpful votes"
+#~ msgstr "Bình chọn hữu ích"
+
+#~ msgctxt "between search excerpts"
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "No title"
+#~ msgstr "Không có tiêu đề"
 
 #~ msgid "Category"
 #~ msgstr "Phân mục"

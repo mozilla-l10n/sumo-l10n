@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-19 02:58-0700\n"
+"POT-Creation-Date: 2021-05-31 01:38-0700\n"
 "PO-Revision-Date: 2021-03-24 14:32+0000\n"
 "Last-Translator: వీవెన్ <veeven@gmail.com>\n"
 "Language-Team: Telugu\n"
@@ -578,7 +578,7 @@ msgstr "[{product}] నాలెడ్జ్‌బేస్ డాష్‌బ�
 
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:199 kitsune/dashboards/jinja2/dashboards/includes/macros.html:214
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:224 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/questions/jinja2/questions/product_list.html:41
-#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/v2/views.py:26
+#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/views.py:73
 msgid "All Products"
 msgstr "అన్ని ఉత్పత్తులు"
 
@@ -667,12 +667,12 @@ msgid "Review Needed: {comment}"
 msgstr "సమీక్షించాలి: {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:33 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:38 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:45
-#: kitsune/search/__init__.py:43 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
+#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
 msgid "Yes"
 msgstr "అవును"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/search/__init__.py:44
-#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49 kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
 msgid "No"
 msgstr "కాదు"
 
@@ -1660,11 +1660,11 @@ msgstr "ఈ థ్రెడ్ అంటించు"
 msgid "Last reply by"
 msgstr "చివరి సమాధానమిచ్చినది"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:50 kitsune/search/__init__.py:32
+#: kitsune/kbforums/jinja2/kbforums/posts.html:50
 msgid "Sticky"
 msgstr "స్టికీ"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86 kitsune/search/__init__.py:33
+#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86
 msgid "Locked"
 msgstr "తాళంవేయబడినది"
 
@@ -3966,78 +3966,25 @@ msgstr "వినియోగదారు ప్రతినిధి: {ua}"
 msgid "More Information"
 msgstr "మరింత సమాచారం"
 
-#: kitsune/search/__init__.py:14 kitsune/search/__init__.py:42 kitsune/search/__init__.py:48
-msgid "Don't filter"
-msgstr "వడగట్టవు"
-
-#: kitsune/search/__init__.py:15
-msgid "Before"
-msgstr "ముందు"
-
-#: kitsune/search/__init__.py:16
-msgid "After"
-msgstr "తరువాత"
-
-#: kitsune/search/__init__.py:22 kitsune/search/__init__.py:61 kitsune/search/__init__.py:74
-msgid "Relevance"
-msgstr "ఔచిత్యం"
-
-#: kitsune/search/__init__.py:23
-msgid "Last post date"
-msgstr "చివరి పోస్ట్ తేదీ"
-
-#: kitsune/search/__init__.py:24
-msgid "Original post date"
-msgstr "అసలు పోస్ట్ తేదీ"
-
-#: kitsune/search/__init__.py:25
-msgid "Number of replies"
-msgstr "ప్రత్యుత్తరాలు సంఖ్య"
-
-#: kitsune/search/__init__.py:49
-msgid "Less than"
-msgstr "కంటే తక్కువ"
-
-#: kitsune/search/__init__.py:50
-msgid "More than"
-msgstr "మించి"
-
-#: kitsune/search/__init__.py:62
-msgid "Last answer date"
-msgstr "చివరి సమాధానం తేదీ"
-
-#: kitsune/search/__init__.py:63
-msgid "Question date"
-msgstr "ప్రశ్న తేదీ"
-
-#: kitsune/search/__init__.py:64
-msgid "Number of answers"
-msgstr "సమాధానాలు సంఖ్య"
-
-#: kitsune/search/__init__.py:75
-msgid "Helpful votes"
-msgstr "ఉపయోగపడిన ఓట్లు"
-
-#: kitsune/search/__init__.py:81
+#: kitsune/search/__init__.py:12
 msgid "No pages matched the search criteria"
 msgstr "సెర్చ్ క్రైటీరియాకు సరిపోయే పేజీలు లేవు"
 
-#: kitsune/search/es_utils.py:872 kitsune/search/jinja2/search/down.html:5
-msgid "Search Unavailable"
-msgstr "శోధన అందుబాటులోలేదు"
+#: kitsune/search/base.py:410
+msgid "That page number is not an integer"
+msgstr ""
+
+#: kitsune/search/base.py:412
+msgid "That page number is less than 1"
+msgstr ""
 
 #: kitsune/search/forms.py:38
 msgid "Relevant to"
 msgstr "సంబంధిత"
 
-#: kitsune/search/views.py:27
-msgctxt "between search excerpts"
-msgid "..."
-msgstr "..."
-
-#: kitsune/search/views.py:132
-msgid "No title"
-msgstr "శీర్షిక లేదు"
+#: kitsune/search/views.py:85
+msgid "Invalid search data."
+msgstr "చెల్లని శోధన డేటా."
 
 #: kitsune/search/jinja2/search/basic-form.html:3
 msgid "Enter your terms in the form below and click <strong>Search</strong>"
@@ -4051,6 +3998,10 @@ msgstr "శోధన"
 #: kitsune/search/jinja2/search/basic-form.html:32 kitsune/search/jinja2/search/basic-form.html:44 kitsune/search/jinja2/search/includes/macros.html:12
 msgid "Search Mozilla Support"
 msgstr "మొజిల్లా తోడ్పాటులో వెతకండి"
+
+#: kitsune/search/jinja2/search/down.html:5
+msgid "Search Unavailable"
+msgstr "శోధన అందుబాటులోలేదు"
 
 #: kitsune/search/jinja2/search/down.html:7
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
@@ -4119,18 +4070,6 @@ msgid "1 new this week"
 msgid_plural "{n} new this week"
 msgstr[0] "1 కొత్త ఈ వారం"
 msgstr[1] "{n} కొత్త ఈ వారం"
-
-#: kitsune/search/v2/base.py:404
-msgid "That page number is not an integer"
-msgstr ""
-
-#: kitsune/search/v2/base.py:406
-msgid "That page number is less than 1"
-msgstr ""
-
-#: kitsune/search/v2/views.py:38
-msgid "Invalid search data."
-msgstr "చెల్లని శోధన డేటా."
 
 #: kitsune/sumo/db_strings.py:19
 msgctxt "DB: karma.Title.name"
@@ -7615,15 +7554,15 @@ msgstr "అప్‌లోడ్ చేయి"
 msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
 msgstr "మేము మీ ఇమెయిల్ చిరునామా చేరడానికి ఇబ్బంది కలిగి ఉన్నాము. దయచేసి వేరొక చిరునామాను ప్రయత్నించండి లేదా ఒక నిర్వాహకుని సంప్రదించండి."
 
-#: kitsune/users/auth.py:72
+#: kitsune/users/auth.py:74
 msgid "<strong>Welcome!</strong> You are now logged in using Firefox Accounts. {a_profile}Edit your profile.{a_close}<br>Already have a different Mozilla Support Account? {a_more}Read more.{a_close}"
 msgstr ""
 
-#: kitsune/users/auth.py:154
+#: kitsune/users/auth.py:156
 msgid "This Firefox Account is already used in another profile."
 msgstr ""
 
-#: kitsune/users/auth.py:170
+#: kitsune/users/auth.py:172
 msgid "The email used with this Firefox Account is already linked in another profile."
 msgstr ""
 
@@ -8485,31 +8424,31 @@ msgstr "వినియోగదారులు జోడించడంలో �
 msgid "{user} removed from successfully!"
 msgstr "{user} నుండి విజయవంతంగా తొలగించబడింది!"
 
-#: kitsune/wiki/models.py:117
+#: kitsune/wiki/models.py:108
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "తనిఖీ చేసుంటే, ఈ వికీ పేజీ ప్రాథమిక శోధనలు మరియు డాష్బోర్డ్ల నుండి దాగి ఉంటుంది. వీక్షించినప్పుడు, పేజీ ఇకపై నిర్వహించబడుదు అని హెచ్చరిస్తుంది."
 
-#: kitsune/wiki/models.py:127
+#: kitsune/wiki/models.py:118
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "తనిఖీ చేసుంటే, ఈ పత్రం ఒక సంబంధం ఫోరమ్ లో చర్చకు అనుమతిస్తుంది. ఫోరమ్ దాచడానికి /disable చెక్ ను తీసివేయండి."
 
-#: kitsune/wiki/models.py:146
+#: kitsune/wiki/models.py:137
 msgid "If checked, this document needs updates."
 msgstr "తనిఖీ చేసుంటే, ఈ పత్రముకు నవీకరణ అవసరం."
 
-#: kitsune/wiki/models.py:254
+#: kitsune/wiki/models.py:245
 msgid "Please choose a category."
 msgstr "దయచేసి ఒక వర్గాన్ని ఎంచుకోండి."
 
-#: kitsune/wiki/models.py:263
+#: kitsune/wiki/models.py:254
 msgid "Documents in the Template category must have titles that start with \"{prefix}\". (Current title is \"{title}\")"
 msgstr "టెంప్లేట్ కేటగిరిలో పత్రాలు \"{prefix}\" తో ప్రారంభమైన శీర్షికలు కలిగి ఉండాలి. (ప్రస్తుత టైటిల్ \"{title}\" ఉంది) "
 
-#: kitsune/wiki/models.py:271
+#: kitsune/wiki/models.py:262
 msgid "Documents with titles that start with \"{prefix}\" must be in the templates category. (Current category is \"{category}\". Current title is \"{title}\".)"
 msgstr "\"{prefix}\" తో ప్రారంభమైన టైటిల్స్ పత్రాలు టెంప్లేట్లు వర్గంలో ఉండాలి. (ప్రస్తుత వర్గం \"{category}\". ప్రస్తుత టైటిల్ \"{title}\" ఇది.)"
 
-#: kitsune/wiki/models.py:984
+#: kitsune/wiki/models.py:819
 #, python-format
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "ఒక పునర్విమర్శ ఇంగ్లీష్ వ్యాసం ఆధారంగా ఉండాలి. పునర్విమర్శ ID%(id)s ఈ ప్రమాణం సరిపోదు."
@@ -9790,6 +9729,52 @@ msgstr "మాకు మరింత తెలియజేయండి."
 #: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:19
 msgid "Please provide more details"
 msgstr "దయచేసి మరింత విషయాన్ని అందించండి"
+
+#~ msgid "Don't filter"
+#~ msgstr "వడగట్టవు"
+
+#~ msgid "Before"
+#~ msgstr "ముందు"
+
+#~ msgid "After"
+#~ msgstr "తరువాత"
+
+#~ msgid "Relevance"
+#~ msgstr "ఔచిత్యం"
+
+#~ msgid "Last post date"
+#~ msgstr "చివరి పోస్ట్ తేదీ"
+
+#~ msgid "Original post date"
+#~ msgstr "అసలు పోస్ట్ తేదీ"
+
+#~ msgid "Number of replies"
+#~ msgstr "ప్రత్యుత్తరాలు సంఖ్య"
+
+#~ msgid "Less than"
+#~ msgstr "కంటే తక్కువ"
+
+#~ msgid "More than"
+#~ msgstr "మించి"
+
+#~ msgid "Last answer date"
+#~ msgstr "చివరి సమాధానం తేదీ"
+
+#~ msgid "Question date"
+#~ msgstr "ప్రశ్న తేదీ"
+
+#~ msgid "Number of answers"
+#~ msgstr "సమాధానాలు సంఖ్య"
+
+#~ msgid "Helpful votes"
+#~ msgstr "ఉపయోగపడిన ఓట్లు"
+
+#~ msgctxt "between search excerpts"
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "No title"
+#~ msgstr "శీర్షిక లేదు"
 
 #~ msgid "Category"
 #~ msgstr "వర్గం"
