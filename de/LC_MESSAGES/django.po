@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-19 02:58-0700\n"
+"POT-Creation-Date: 2021-05-31 01:38-0700\n"
 "PO-Revision-Date: 2021-04-21 13:39+0000\n"
 "Last-Translator: Michael Köhler <michael.koehler1@gmx.de>\n"
 "Language-Team: German\n"
@@ -583,7 +583,7 @@ msgstr "[{product}] Übersicht über die Wissensdatenbank"
 
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:199 kitsune/dashboards/jinja2/dashboards/includes/macros.html:214
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:224 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/questions/jinja2/questions/product_list.html:41
-#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/v2/views.py:26
+#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/views.py:73
 msgid "All Products"
 msgstr "Alle Produkte"
 
@@ -672,12 +672,12 @@ msgid "Review Needed: {comment}"
 msgstr "Überprüfung benötigt: {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:33 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:38 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:45
-#: kitsune/search/__init__.py:43 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
+#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
 msgid "Yes"
 msgstr "Ja"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/search/__init__.py:44
-#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49 kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
 msgid "No"
 msgstr "Nein"
 
@@ -1667,11 +1667,11 @@ msgstr "Dieses Diskussionsthema anpinnen"
 msgid "Last reply by"
 msgstr "Letzte Antwort von"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:50 kitsune/search/__init__.py:32
+#: kitsune/kbforums/jinja2/kbforums/posts.html:50
 msgid "Sticky"
 msgstr "Wichtig"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86 kitsune/search/__init__.py:33
+#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86
 msgid "Locked"
 msgstr "Gesperrt"
 
@@ -4006,78 +4006,25 @@ msgstr "User-Agent: {ua}"
 msgid "More Information"
 msgstr "Weitere Informationen"
 
-#: kitsune/search/__init__.py:14 kitsune/search/__init__.py:42 kitsune/search/__init__.py:48
-msgid "Don't filter"
-msgstr "Nicht filtern"
-
-#: kitsune/search/__init__.py:15
-msgid "Before"
-msgstr "Vorherige"
-
-#: kitsune/search/__init__.py:16
-msgid "After"
-msgstr "Nächste"
-
-#: kitsune/search/__init__.py:22 kitsune/search/__init__.py:61 kitsune/search/__init__.py:74
-msgid "Relevance"
-msgstr "Relevanz"
-
-#: kitsune/search/__init__.py:23
-msgid "Last post date"
-msgstr "Datum des letzten Beitrags"
-
-#: kitsune/search/__init__.py:24
-msgid "Original post date"
-msgstr "Datum der Erstellung"
-
-#: kitsune/search/__init__.py:25
-msgid "Number of replies"
-msgstr "Anzahl der Antworten"
-
-#: kitsune/search/__init__.py:49
-msgid "Less than"
-msgstr "Weniger als"
-
-#: kitsune/search/__init__.py:50
-msgid "More than"
-msgstr "Mehr als"
-
-#: kitsune/search/__init__.py:62
-msgid "Last answer date"
-msgstr "Datum der letzten Antwort"
-
-#: kitsune/search/__init__.py:63
-msgid "Question date"
-msgstr "Datum der Fragestellung"
-
-#: kitsune/search/__init__.py:64
-msgid "Number of answers"
-msgstr "Anzahl der Antworten"
-
-#: kitsune/search/__init__.py:75
-msgid "Helpful votes"
-msgstr "Stimmen für „nützlich“"
-
-#: kitsune/search/__init__.py:81
+#: kitsune/search/__init__.py:12
 msgid "No pages matched the search criteria"
 msgstr "Keine passenden Seiten zum Suchkriterium"
 
-#: kitsune/search/es_utils.py:872 kitsune/search/jinja2/search/down.html:5
-msgid "Search Unavailable"
-msgstr "Suche nicht verfügbar"
+#: kitsune/search/base.py:410
+msgid "That page number is not an integer"
+msgstr "Diese Seitenzahl ist keine ganze Zahl"
+
+#: kitsune/search/base.py:412
+msgid "That page number is less than 1"
+msgstr "Diese Seitenzahl ist kleiner als 1"
 
 #: kitsune/search/forms.py:38
 msgid "Relevant to"
 msgstr "Relevant für"
 
-#: kitsune/search/views.py:27
-msgctxt "between search excerpts"
-msgid "..."
-msgstr "…"
-
-#: kitsune/search/views.py:132
-msgid "No title"
-msgstr "Kein Titel"
+#: kitsune/search/views.py:85
+msgid "Invalid search data."
+msgstr "Ungültige Suchdaten."
 
 #: kitsune/search/jinja2/search/basic-form.html:3
 msgid "Enter your terms in the form below and click <strong>Search</strong>"
@@ -4091,6 +4038,10 @@ msgstr "Suchen"
 #: kitsune/search/jinja2/search/basic-form.html:32 kitsune/search/jinja2/search/basic-form.html:44 kitsune/search/jinja2/search/includes/macros.html:12
 msgid "Search Mozilla Support"
 msgstr "Mozilla-Hilfe durchsuchen"
+
+#: kitsune/search/jinja2/search/down.html:5
+msgid "Search Unavailable"
+msgstr "Suche nicht verfügbar"
 
 #: kitsune/search/jinja2/search/down.html:7
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
@@ -4159,18 +4110,6 @@ msgid "1 new this week"
 msgid_plural "{n} new this week"
 msgstr[0] "1 Neue in dieser Woche"
 msgstr[1] "{n} Neue in dieser Woche"
-
-#: kitsune/search/v2/base.py:404
-msgid "That page number is not an integer"
-msgstr "Diese Seitenzahl ist keine ganze Zahl"
-
-#: kitsune/search/v2/base.py:406
-msgid "That page number is less than 1"
-msgstr "Diese Seitenzahl ist kleiner als 1"
-
-#: kitsune/search/v2/views.py:38
-msgid "Invalid search data."
-msgstr "Ungültige Suchdaten."
 
 #: kitsune/sumo/db_strings.py:19
 msgctxt "DB: karma.Title.name"
@@ -7675,17 +7614,17 @@ msgstr "Hochladen"
 msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
 msgstr "Wir haben Probleme, Ihre E-Mail-Adresse zu erreichen. Bitte versuchen Sie es mit einer anderen E-Mail-Adresse oder kontaktieren Sie einen Administrator."
 
-#: kitsune/users/auth.py:72
+#: kitsune/users/auth.py:74
 msgid "<strong>Welcome!</strong> You are now logged in using Firefox Accounts. {a_profile}Edit your profile.{a_close}<br>Already have a different Mozilla Support Account? {a_more}Read more.{a_close}"
 msgstr ""
 "<strong>Willkommen!</strong> Sie sind jetzt mit Firefox-Konten angemeldet. {a_profile}Bearbeiten Sie Ihr Profil.{a_close}<br>Haben Sie bereits ein anderes Konto bei der Mozilla-Hilfe? {a_more}Lesen "
 "Sie mehr.{a_close}"
 
-#: kitsune/users/auth.py:154
+#: kitsune/users/auth.py:156
 msgid "This Firefox Account is already used in another profile."
 msgstr "Dieses Firefox-Konto wird bereits in einem anderen Profil verwendet."
 
-#: kitsune/users/auth.py:170
+#: kitsune/users/auth.py:172
 msgid "The email used with this Firefox Account is already linked in another profile."
 msgstr "Die bei diesem Firefox-Konto verwendete E-Mail-Adresse ist bereits in einem anderen Profil verlinkt."
 
@@ -8570,33 +8509,33 @@ msgstr "Beim Hinzufügen neuer Benutzer sind folgende Fehler aufgetreten."
 msgid "{user} removed from successfully!"
 msgstr "{user} wurde erfolgreich entfernt!"
 
-#: kitsune/wiki/models.py:117
+#: kitsune/wiki/models.py:108
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr ""
 "Wenn diese Option ausgewählt ist, wird diese Wikiseite vor normalen Suchanfragen und den Übersichtsseiten versteckt. Wenn die Seite aufgerufen wird, wird sie den Leser warnen, dass die Seite nicht "
 "mehr gewartet wird."
 
-#: kitsune/wiki/models.py:127
+#: kitsune/wiki/models.py:118
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "Wenn diese Option aktiviert ist, wird die Diskussion zu diesem Dokument im zugehörigen Forum erlaubt. Deaktivieren Sie die Option, um das Forum zu verstecken/zu deaktivieren."
 
-#: kitsune/wiki/models.py:146
+#: kitsune/wiki/models.py:137
 msgid "If checked, this document needs updates."
 msgstr "Wenn diese Option aktiviert ist, benötigt dieses Dokument eine Aktualisierung."
 
-#: kitsune/wiki/models.py:254
+#: kitsune/wiki/models.py:245
 msgid "Please choose a category."
 msgstr "Bitte wählen Sie eine Kategorie."
 
-#: kitsune/wiki/models.py:263
+#: kitsune/wiki/models.py:254
 msgid "Documents in the Template category must have titles that start with \"{prefix}\". (Current title is \"{title}\")"
 msgstr "Dokumente in der Kategorie „Vorlage“ müssen Titel haben, die mit „{prefix}“ beginnen (der aktuelle Titel ist „{title}“)."
 
-#: kitsune/wiki/models.py:271
+#: kitsune/wiki/models.py:262
 msgid "Documents with titles that start with \"{prefix}\" must be in the templates category. (Current category is \"{category}\". Current title is \"{title}\".)"
 msgstr "Dokumente, deren Titel mit „{prefix}“ beginnen, müssen in der Kategorie „Vorlage“ sein (die aktuelle Kategorie ist „{category}“, der aktuelle Titel ist „{title}“)."
 
-#: kitsune/wiki/models.py:984
+#: kitsune/wiki/models.py:819
 #, python-format
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Eine Änderung muss auf dem englischen Artikel basieren. Version %(id)s erfüllt diese Voraussetzung nicht."
@@ -9891,6 +9830,52 @@ msgstr "Erzählen Sie uns mehr."
 #: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:19
 msgid "Please provide more details"
 msgstr "Bitte geben Sie weitere Details an"
+
+#~ msgid "Don't filter"
+#~ msgstr "Nicht filtern"
+
+#~ msgid "Before"
+#~ msgstr "Vorherige"
+
+#~ msgid "After"
+#~ msgstr "Nächste"
+
+#~ msgid "Relevance"
+#~ msgstr "Relevanz"
+
+#~ msgid "Last post date"
+#~ msgstr "Datum des letzten Beitrags"
+
+#~ msgid "Original post date"
+#~ msgstr "Datum der Erstellung"
+
+#~ msgid "Number of replies"
+#~ msgstr "Anzahl der Antworten"
+
+#~ msgid "Less than"
+#~ msgstr "Weniger als"
+
+#~ msgid "More than"
+#~ msgstr "Mehr als"
+
+#~ msgid "Last answer date"
+#~ msgstr "Datum der letzten Antwort"
+
+#~ msgid "Question date"
+#~ msgstr "Datum der Fragestellung"
+
+#~ msgid "Number of answers"
+#~ msgstr "Anzahl der Antworten"
+
+#~ msgid "Helpful votes"
+#~ msgstr "Stimmen für „nützlich“"
+
+#~ msgctxt "between search excerpts"
+#~ msgid "..."
+#~ msgstr "…"
+
+#~ msgid "No title"
+#~ msgstr "Kein Titel"
 
 #~ msgid "Category"
 #~ msgstr "Kategorie"

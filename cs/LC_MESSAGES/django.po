@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-19 02:58-0700\n"
+"POT-Creation-Date: 2021-05-31 01:38-0700\n"
 "PO-Revision-Date: 2021-05-07 19:07+0000\n"
 "Last-Translator: Michal Stanke <mstanke@mozilla.cz>\n"
 "Language-Team: Czech\n"
@@ -582,7 +582,7 @@ msgstr "[{product}] Nástěnka databáze znalostí"
 
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:199 kitsune/dashboards/jinja2/dashboards/includes/macros.html:214
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:224 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/questions/jinja2/questions/product_list.html:41
-#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/v2/views.py:26
+#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/views.py:73
 msgid "All Products"
 msgstr "Všechny produkty"
 
@@ -671,12 +671,12 @@ msgid "Review Needed: {comment}"
 msgstr "Vyžadována kontrola: {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:33 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:38 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:45
-#: kitsune/search/__init__.py:43 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
+#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
 msgid "Yes"
 msgstr "Ano"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/search/__init__.py:44
-#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49 kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
 msgid "No"
 msgstr "Ne"
 
@@ -1665,11 +1665,11 @@ msgstr "Označit vlákno"
 msgid "Last reply by"
 msgstr "Poslední odpověď od"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:50 kitsune/search/__init__.py:32
+#: kitsune/kbforums/jinja2/kbforums/posts.html:50
 msgid "Sticky"
 msgstr "Přilepené"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86 kitsune/search/__init__.py:33
+#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86
 msgid "Locked"
 msgstr "Uzamknuté"
 
@@ -3992,78 +3992,25 @@ msgstr "User agent: {ua}"
 msgid "More Information"
 msgstr "Více informací"
 
-#: kitsune/search/__init__.py:14 kitsune/search/__init__.py:42 kitsune/search/__init__.py:48
-msgid "Don't filter"
-msgstr "Nefiltrovat"
-
-#: kitsune/search/__init__.py:15
-msgid "Before"
-msgstr "Před"
-
-#: kitsune/search/__init__.py:16
-msgid "After"
-msgstr "Za"
-
-#: kitsune/search/__init__.py:22 kitsune/search/__init__.py:61 kitsune/search/__init__.py:74
-msgid "Relevance"
-msgstr "Relevance"
-
-#: kitsune/search/__init__.py:23
-msgid "Last post date"
-msgstr "Datum posledního příspěvku"
-
-#: kitsune/search/__init__.py:24
-msgid "Original post date"
-msgstr "Datum původního příspěvku"
-
-#: kitsune/search/__init__.py:25
-msgid "Number of replies"
-msgstr "Počet odpovědí"
-
-#: kitsune/search/__init__.py:49
-msgid "Less than"
-msgstr "Méně než"
-
-#: kitsune/search/__init__.py:50
-msgid "More than"
-msgstr "Více než"
-
-#: kitsune/search/__init__.py:62
-msgid "Last answer date"
-msgstr "Datum posledního příspěvku"
-
-#: kitsune/search/__init__.py:63
-msgid "Question date"
-msgstr "Datum dotazu"
-
-#: kitsune/search/__init__.py:64
-msgid "Number of answers"
-msgstr "Počet odpovědí"
-
-#: kitsune/search/__init__.py:75
-msgid "Helpful votes"
-msgstr "Hlasy o užitečnosti"
-
-#: kitsune/search/__init__.py:81
+#: kitsune/search/__init__.py:12
 msgid "No pages matched the search criteria"
 msgstr "Žádná stránka nesplňuje kritéria vyhledávání"
 
-#: kitsune/search/es_utils.py:872 kitsune/search/jinja2/search/down.html:5
-msgid "Search Unavailable"
-msgstr "Vyhledávání není dostupné"
+#: kitsune/search/base.py:410
+msgid "That page number is not an integer"
+msgstr "Číslo stránky není platné číslo"
+
+#: kitsune/search/base.py:412
+msgid "That page number is less than 1"
+msgstr "Číslo stránky je menší než 1"
 
 #: kitsune/search/forms.py:38
 msgid "Relevant to"
 msgstr "Relevantní k"
 
-#: kitsune/search/views.py:27
-msgctxt "between search excerpts"
-msgid "..."
-msgstr "..."
-
-#: kitsune/search/views.py:132
-msgid "No title"
-msgstr "Žádný nadpis"
+#: kitsune/search/views.py:85
+msgid "Invalid search data."
+msgstr "Neplatná data pro vyhledávání."
 
 #: kitsune/search/jinja2/search/basic-form.html:3
 msgid "Enter your terms in the form below and click <strong>Search</strong>"
@@ -4077,6 +4024,10 @@ msgstr "Hledat"
 #: kitsune/search/jinja2/search/basic-form.html:32 kitsune/search/jinja2/search/basic-form.html:44 kitsune/search/jinja2/search/includes/macros.html:12
 msgid "Search Mozilla Support"
 msgstr "Prohledat stránky podpory"
+
+#: kitsune/search/jinja2/search/down.html:5
+msgid "Search Unavailable"
+msgstr "Vyhledávání není dostupné"
 
 #: kitsune/search/jinja2/search/down.html:7
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
@@ -4150,18 +4101,6 @@ msgid_plural "{n} new this week"
 msgstr[0] "1 nový tento týden"
 msgstr[1] "{n} noví tento týden"
 msgstr[2] "{n} nových tento týden"
-
-#: kitsune/search/v2/base.py:404
-msgid "That page number is not an integer"
-msgstr "Číslo stránky není platné číslo"
-
-#: kitsune/search/v2/base.py:406
-msgid "That page number is less than 1"
-msgstr "Číslo stránky je menší než 1"
-
-#: kitsune/search/v2/views.py:38
-msgid "Invalid search data."
-msgstr "Neplatná data pro vyhledávání."
 
 #: kitsune/sumo/db_strings.py:19
 msgctxt "DB: karma.Title.name"
@@ -7652,17 +7591,17 @@ msgstr "Nahrát"
 msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
 msgstr "Při zpracování vaší e-mailové adresy nastala chyba. Zkuste jinou adresu nebo kontaktujte administrátora."
 
-#: kitsune/users/auth.py:72
+#: kitsune/users/auth.py:74
 msgid "<strong>Welcome!</strong> You are now logged in using Firefox Accounts. {a_profile}Edit your profile.{a_close}<br>Already have a different Mozilla Support Account? {a_more}Read more.{a_close}"
 msgstr ""
 "<strong>Vítejte.</strong> Přihlásili jste se pomocí účtu Firefoxu. {a_profile}Zde můžete nastavit svůj profil.{a_close}<br>Máte už na serveru podpory dříve založený samostatný účet? {a_more}Pak "
 "čtěte zde.{a_close}"
 
-#: kitsune/users/auth.py:154
+#: kitsune/users/auth.py:156
 msgid "This Firefox Account is already used in another profile."
 msgstr "Tento účet Firefoxu už se používá pro jiný profil."
 
-#: kitsune/users/auth.py:170
+#: kitsune/users/auth.py:172
 msgid "The email used with this Firefox Account is already linked in another profile."
 msgstr "E-mailová adresa tohoto účtu Firefoxu už se používá pro jiný profil."
 
@@ -8544,31 +8483,31 @@ msgstr "Při přidávání nových členů se vyskytly chyby, viz níže."
 msgid "{user} removed from successfully!"
 msgstr "Uživatel {user} byl úspěšně odstraněn!"
 
-#: kitsune/wiki/models.py:117
+#: kitsune/wiki/models.py:108
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "Pokud je zaškrtnuto, bude tato stránka skryta v základním vyhledávání a na nástěnkách. Pokud bude zobrazena, bude varovat, že již není aktuální."
 
-#: kitsune/wiki/models.py:127
+#: kitsune/wiki/models.py:118
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "Pokud je zaškrtnuto, je u tohoto dokumentu povolena diskuze v souvisejícím fóru. Odškrtnutím ji skryjete/zakážete."
 
-#: kitsune/wiki/models.py:146
+#: kitsune/wiki/models.py:137
 msgid "If checked, this document needs updates."
 msgstr "Pokud zaškrtnete, bude dokument potřeba aktualizovat."
 
-#: kitsune/wiki/models.py:254
+#: kitsune/wiki/models.py:245
 msgid "Please choose a category."
 msgstr "Zvolte prosím kategorii."
 
-#: kitsune/wiki/models.py:263
+#: kitsune/wiki/models.py:254
 msgid "Documents in the Template category must have titles that start with \"{prefix}\". (Current title is \"{title}\")"
 msgstr "Nadpisy dokumentů v kategorii Šablony musí začínat prefixem \"{prefix}\". (Současný nadpis je \"{title}\")"
 
-#: kitsune/wiki/models.py:271
+#: kitsune/wiki/models.py:262
 msgid "Documents with titles that start with \"{prefix}\" must be in the templates category. (Current category is \"{category}\". Current title is \"{title}\".)"
 msgstr "Nadpisy dokumentů začínající prefixem \"{prefix}\" musí být v kategorii šablon. (Aktuální kategorie je \"{category}\", aktuální nadpis je \"{title}\".)"
 
-#: kitsune/wiki/models.py:984
+#: kitsune/wiki/models.py:819
 #, python-format
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Revize musí být založena na článku v angličtině. Revize s ID %(id)s toto kritérium nesplňuje."
@@ -9855,6 +9794,52 @@ msgstr "Řekněte nám více."
 #: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:19
 msgid "Please provide more details"
 msgstr "Vložte prosím více informací"
+
+#~ msgid "Don't filter"
+#~ msgstr "Nefiltrovat"
+
+#~ msgid "Before"
+#~ msgstr "Před"
+
+#~ msgid "After"
+#~ msgstr "Za"
+
+#~ msgid "Relevance"
+#~ msgstr "Relevance"
+
+#~ msgid "Last post date"
+#~ msgstr "Datum posledního příspěvku"
+
+#~ msgid "Original post date"
+#~ msgstr "Datum původního příspěvku"
+
+#~ msgid "Number of replies"
+#~ msgstr "Počet odpovědí"
+
+#~ msgid "Less than"
+#~ msgstr "Méně než"
+
+#~ msgid "More than"
+#~ msgstr "Více než"
+
+#~ msgid "Last answer date"
+#~ msgstr "Datum posledního příspěvku"
+
+#~ msgid "Question date"
+#~ msgstr "Datum dotazu"
+
+#~ msgid "Number of answers"
+#~ msgstr "Počet odpovědí"
+
+#~ msgid "Helpful votes"
+#~ msgstr "Hlasy o užitečnosti"
+
+#~ msgctxt "between search excerpts"
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "No title"
+#~ msgstr "Žádný nadpis"
 
 #~ msgid "Category"
 #~ msgstr "Kategorie"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-19 02:58-0700\n"
+"POT-Creation-Date: 2021-05-31 01:38-0700\n"
 "PO-Revision-Date: 2021-04-21 13:13+0000\n"
 "Last-Translator: Pin-guang Chen <petercpg@mail.moztw.org>\n"
 "Language-Team: Chinese (traditional)\n"
@@ -575,7 +575,7 @@ msgstr "[{product}] 知識庫主控台"
 
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:199 kitsune/dashboards/jinja2/dashboards/includes/macros.html:214
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:224 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/questions/jinja2/questions/product_list.html:41
-#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/v2/views.py:26
+#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:89 kitsune/search/views.py:73
 msgid "All Products"
 msgstr "所有產品"
 
@@ -664,12 +664,12 @@ msgid "Review Needed: {comment}"
 msgstr "需要審核: {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:33 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:38 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:45
-#: kitsune/search/__init__.py:43 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
+#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:48 kitsune/wiki/jinja2/wiki/includes/document_macros.html:341
 msgid "Yes"
 msgstr "是"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/search/__init__.py:44
-#: kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49 kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:124 kitsune/sumo/templatetags/jinja_helpers.py:405 kitsune/sumo/views.py:49
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:342
 msgid "No"
 msgstr "否"
 
@@ -1657,11 +1657,11 @@ msgstr "將討論串置頂"
 msgid "Last reply by"
 msgstr "最近回覆由"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:50 kitsune/search/__init__.py:32
+#: kitsune/kbforums/jinja2/kbforums/posts.html:50
 msgid "Sticky"
 msgstr "置頂"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86 kitsune/search/__init__.py:33
+#: kitsune/kbforums/jinja2/kbforums/posts.html:51 kitsune/questions/jinja2/questions/question_list.html:198 kitsune/questions/views.py:86
 msgid "Locked"
 msgstr "被鎖定"
 
@@ -3951,78 +3951,25 @@ msgstr "User Agent: {ua}"
 msgid "More Information"
 msgstr "更多資訊"
 
-#: kitsune/search/__init__.py:14 kitsune/search/__init__.py:42 kitsune/search/__init__.py:48
-msgid "Don't filter"
-msgstr "不過濾"
-
-#: kitsune/search/__init__.py:15
-msgid "Before"
-msgstr "之前"
-
-#: kitsune/search/__init__.py:16
-msgid "After"
-msgstr "之後"
-
-#: kitsune/search/__init__.py:22 kitsune/search/__init__.py:61 kitsune/search/__init__.py:74
-msgid "Relevance"
-msgstr "相關性"
-
-#: kitsune/search/__init__.py:23
-msgid "Last post date"
-msgstr "最近修改日期"
-
-#: kitsune/search/__init__.py:24
-msgid "Original post date"
-msgstr "最初發文日期"
-
-#: kitsune/search/__init__.py:25
-msgid "Number of replies"
-msgstr "回應數量"
-
-#: kitsune/search/__init__.py:49
-msgid "Less than"
-msgstr "不超過"
-
-#: kitsune/search/__init__.py:50
-msgid "More than"
-msgstr "多於"
-
-#: kitsune/search/__init__.py:62
-msgid "Last answer date"
-msgstr "最新回應日期"
-
-#: kitsune/search/__init__.py:63
-msgid "Question date"
-msgstr "提出問題日期"
-
-#: kitsune/search/__init__.py:64
-msgid "Number of answers"
-msgstr "答案數量"
-
-#: kitsune/search/__init__.py:75
-msgid "Helpful votes"
-msgstr "有幫助的投票"
-
-#: kitsune/search/__init__.py:81
+#: kitsune/search/__init__.py:12
 msgid "No pages matched the search criteria"
 msgstr "無法依照要求的條件找到頁面"
 
-#: kitsune/search/es_utils.py:872 kitsune/search/jinja2/search/down.html:5
-msgid "Search Unavailable"
-msgstr "無法搜尋"
+#: kitsune/search/base.py:410
+msgid "That page number is not an integer"
+msgstr "頁數不是整數"
+
+#: kitsune/search/base.py:412
+msgid "That page number is less than 1"
+msgstr "頁數小於 1"
 
 #: kitsune/search/forms.py:38
 msgid "Relevant to"
 msgstr "相關於"
 
-#: kitsune/search/views.py:27
-msgctxt "between search excerpts"
-msgid "..."
-msgstr "..."
-
-#: kitsune/search/views.py:132
-msgid "No title"
-msgstr "無標題"
+#: kitsune/search/views.py:85
+msgid "Invalid search data."
+msgstr "無效的搜尋資料。"
 
 #: kitsune/search/jinja2/search/basic-form.html:3
 msgid "Enter your terms in the form below and click <strong>Search</strong>"
@@ -4036,6 +3983,10 @@ msgstr "搜尋"
 #: kitsune/search/jinja2/search/basic-form.html:32 kitsune/search/jinja2/search/basic-form.html:44 kitsune/search/jinja2/search/includes/macros.html:12
 msgid "Search Mozilla Support"
 msgstr "搜尋 Mozilla 技術支援網站"
+
+#: kitsune/search/jinja2/search/down.html:5
+msgid "Search Unavailable"
+msgstr "無法搜尋"
 
 #: kitsune/search/jinja2/search/down.html:7
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
@@ -4101,18 +4052,6 @@ msgstr[0] "{n} 個人有這個問題"
 msgid "1 new this week"
 msgid_plural "{n} new this week"
 msgstr[0] "本週的 {n} 個新內容"
-
-#: kitsune/search/v2/base.py:404
-msgid "That page number is not an integer"
-msgstr "頁數不是整數"
-
-#: kitsune/search/v2/base.py:406
-msgid "That page number is less than 1"
-msgstr "頁數小於 1"
-
-#: kitsune/search/v2/views.py:38
-msgid "Invalid search data."
-msgstr "無效的搜尋資料。"
 
 #: kitsune/sumo/db_strings.py:19
 msgctxt "DB: karma.Title.name"
@@ -7587,15 +7526,15 @@ msgstr "上傳"
 msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
 msgstr "我們在發信給您的時候遇到問題。請嘗試使用另一個地址，或是聯絡管理員。"
 
-#: kitsune/users/auth.py:72
+#: kitsune/users/auth.py:74
 msgid "<strong>Welcome!</strong> You are now logged in using Firefox Accounts. {a_profile}Edit your profile.{a_close}<br>Already have a different Mozilla Support Account? {a_more}Read more.{a_close}"
 msgstr "<strong>歡迎！</strong>您目前已使用 Firefox Account 登入，{a_profile}可於此處編輯個人資料。{a_close}<br>有另一組 Mozilla Support 帳號嗎？{a_more}了解更多。{a_close}"
 
-#: kitsune/users/auth.py:154
+#: kitsune/users/auth.py:156
 msgid "This Firefox Account is already used in another profile."
 msgstr "已有其他帳號與此 Firefox Account 連結。"
 
-#: kitsune/users/auth.py:170
+#: kitsune/users/auth.py:172
 msgid "The email used with this Firefox Account is already linked in another profile."
 msgstr "此 Firefox Account 使用的信箱，已與其它帳號連結。"
 
@@ -8459,31 +8398,31 @@ msgstr "新增使用者時發生問題，請見下列資訊。"
 msgid "{user} removed from successfully!"
 msgstr "已成功移除 {user}！"
 
-#: kitsune/wiki/models.py:117
+#: kitsune/wiki/models.py:108
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "若打勾，這個維基頁面將會自基礎搜尋與主控台當中被隱藏。被檢視時，頁面上也會警告此頁不再受維護。"
 
-#: kitsune/wiki/models.py:127
+#: kitsune/wiki/models.py:118
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "若打勾，這份文件將會被允許在相關聯的討論區當中進行討論。取消勾選以隱藏或停用討論區。"
 
-#: kitsune/wiki/models.py:146
+#: kitsune/wiki/models.py:137
 msgid "If checked, this document needs updates."
 msgstr "若打勾，代表這份文件需要更新。"
 
-#: kitsune/wiki/models.py:254
+#: kitsune/wiki/models.py:245
 msgid "Please choose a category."
 msgstr "請選擇一個分類。"
 
-#: kitsune/wiki/models.py:263
+#: kitsune/wiki/models.py:254
 msgid "Documents in the Template category must have titles that start with \"{prefix}\". (Current title is \"{title}\")"
 msgstr "範本分類中的文件標題必須以「{prefix}」開頭。（目前標題為「{title}」）"
 
-#: kitsune/wiki/models.py:271
+#: kitsune/wiki/models.py:262
 msgid "Documents with titles that start with \"{prefix}\" must be in the templates category. (Current category is \"{category}\". Current title is \"{title}\".)"
 msgstr "標題以「{prefix}」開頭的文件必須位於範本分類。（目前分類為「{category}」）"
 
-#: kitsune/wiki/models.py:984
+#: kitsune/wiki/models.py:819
 #, python-format
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "頁面更動必須基於英文文件的更動。更動 ID %(id)s 並不符合此條件。"
@@ -9762,6 +9701,52 @@ msgstr "告訴我們更多資訊。"
 #: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:19
 msgid "Please provide more details"
 msgstr "請提供更多詳情。"
+
+#~ msgid "Don't filter"
+#~ msgstr "不過濾"
+
+#~ msgid "Before"
+#~ msgstr "之前"
+
+#~ msgid "After"
+#~ msgstr "之後"
+
+#~ msgid "Relevance"
+#~ msgstr "相關性"
+
+#~ msgid "Last post date"
+#~ msgstr "最近修改日期"
+
+#~ msgid "Original post date"
+#~ msgstr "最初發文日期"
+
+#~ msgid "Number of replies"
+#~ msgstr "回應數量"
+
+#~ msgid "Less than"
+#~ msgstr "不超過"
+
+#~ msgid "More than"
+#~ msgstr "多於"
+
+#~ msgid "Last answer date"
+#~ msgstr "最新回應日期"
+
+#~ msgid "Question date"
+#~ msgstr "提出問題日期"
+
+#~ msgid "Number of answers"
+#~ msgstr "答案數量"
+
+#~ msgid "Helpful votes"
+#~ msgstr "有幫助的投票"
+
+#~ msgctxt "between search excerpts"
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "No title"
+#~ msgstr "無標題"
 
 #~ msgid "Category"
 #~ msgstr "分類"
