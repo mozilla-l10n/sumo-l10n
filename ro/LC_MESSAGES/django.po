@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: https://github.com/mozilla-l10n/sumo-l10n/issues\n"
-"POT-Creation-Date: 2024-07-17 06:20-0700\n"
+"POT-Creation-Date: 2024-07-29 01:45-0700\n"
 "PO-Revision-Date: 2023-06-13 18:08+0000\n"
 "Last-Translator: Cristian Silaghi <cristian.silaghi@mozilla.ro>\n"
 "Language-Team: Romanian <LL@li.org>\n"
@@ -185,7 +185,7 @@ msgstr "Rezultate pentru: {query}"
 msgid "No users were found for your search query."
 msgstr "Nu s-au găsit utilizatori pentru această căutare."
 
-#: kitsune/community/jinja2/community/search.html:40 kitsune/community/jinja2/community/top_contributors.html:117 kitsune/sumo/jinja2/includes/common_macros.html:631
+#: kitsune/community/jinja2/community/search.html:40 kitsune/community/jinja2/community/top_contributors.html:117 kitsune/sumo/jinja2/includes/common_macros.html:636
 msgid "View Profile"
 msgstr "Vezi profilul"
 
@@ -490,7 +490,7 @@ msgstr "Top 100 de articole"
 msgid "These are the top 100 most visited articles in the last 30 days, which account for over 99% of the traffic to the Knowledge Base."
 msgstr "Acesta este topul celor 100 cele mai vizitate articole din ultimele 30 de zile, care reprezintă peste 99% din traficul din Baza de cunoștințe."
 
-#: kitsune/dashboards/readouts.py:363 kitsune/dashboards/readouts.py:647 kitsune/dashboards/readouts.py:795 kitsune/dashboards/readouts.py:796 kitsune/sumo/jinja2/includes/common_macros.html:866
+#: kitsune/dashboards/readouts.py:363 kitsune/dashboards/readouts.py:647 kitsune/dashboards/readouts.py:795 kitsune/dashboards/readouts.py:796 kitsune/sumo/jinja2/includes/common_macros.html:874
 #: kitsune/wiki/config.py:99
 msgid "Templates"
 msgstr "Șabloane"
@@ -701,8 +701,9 @@ msgid "[{product}] Knowledge Base Dashboard"
 msgstr "[{product}] Tablou de bord al Bazei de cunoștințe"
 
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:196 kitsune/dashboards/jinja2/dashboards/includes/macros.html:211
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:221 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/questions/jinja2/questions/product_list.html:48
-#: kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8 kitsune/search/jinja2/search/results.html:88 kitsune/search/views.py:71
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:221 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/products/jinja2/products/includes/product_macros.html:33
+#: kitsune/questions/jinja2/questions/product_list.html:48 kitsune/questions/jinja2/questions/question_details.html:11 kitsune/questions/jinja2/questions/question_list.html:8
+#: kitsune/search/jinja2/search/results.html:88 kitsune/search/views.py:71
 msgid "All Products"
 msgstr "Toate produsele"
 
@@ -754,7 +755,7 @@ msgid "Add announcement"
 msgstr "Adaugă un anunț"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/announcement_list.html:9 kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:22 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:26
-#: kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:15
+#: kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:15 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:23
 msgid "Edit"
 msgstr "Editează"
 
@@ -856,9 +857,8 @@ msgstr "Toate subiectele"
 msgid "Filter by type:"
 msgstr "Filtrează după tip:"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:259 kitsune/products/jinja2/products/includes/topic_macros.html:74 kitsune/products/jinja2/products/includes/topic_macros.html:136
-#: kitsune/questions/jinja2/questions/metrics.html:25 kitsune/questions/jinja2/questions/metrics.html:27 kitsune/questions/jinja2/questions/question_list.html:138
-#: kitsune/questions/jinja2/questions/question_list.html:305
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:259 kitsune/products/jinja2/products/includes/topic_macros.html:136 kitsune/questions/jinja2/questions/metrics.html:25
+#: kitsune/questions/jinja2/questions/metrics.html:27 kitsune/questions/jinja2/questions/question_list.html:138 kitsune/questions/jinja2/questions/question_list.html:305
 msgid "All"
 msgstr "Toate"
 
@@ -958,6 +958,10 @@ msgstr "Semnalarea este validă și am soluționat problema."
 msgid "The flag is invalid."
 msgstr "Semnalarea este nevalidă."
 
+#: kitsune/flagit/jinja2/flagit/queue.html:34 kitsune/users/jinja2/users/edit_contributions.html:16 kitsune/users/jinja2/users/edit_settings.html:17 kitsune/users/jinja2/users/edit_watches.html:30
+msgid "Update"
+msgstr "Actualizează"
+
 #: kitsune/flagit/jinja2/flagit/queue.html:40
 msgid "There is no flagged content pending moderation."
 msgstr "Nu există conținut semnalat în așteptarea moderării."
@@ -990,6 +994,11 @@ msgstr "Semnalat:"
 #: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:20
 msgid "Take Action:"
 msgstr "Ia măsuri:"
+
+#: kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:20 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:23 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:13
+#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:22
+msgid "View"
+msgstr ""
 
 #: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:2 kitsune/kbforums/forms.py:57 kitsune/kbforums/forms.py:84
 #: kitsune/wiki/forms.py:112 kitsune/wiki/jinja2/wiki/translate.html:81
@@ -1155,8 +1164,8 @@ msgstr "Încărcate {date}"
 #: kitsune/questions/jinja2/questions/confirm_answer_delete.html:33 kitsune/questions/jinja2/questions/confirm_question_delete.html:35 kitsune/questions/jinja2/questions/edit_answer.html:64
 #: kitsune/questions/jinja2/questions/edit_question.html:28 kitsune/questions/jinja2/questions/includes/email_subscribe.html:30
 #: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:194 kitsune/tidings/jinja2/tidings/unsub.html:18 kitsune/users/jinja2/users/confirm_avatar_delete.html:23
-#: kitsune/wiki/jinja2/wiki/confirm_remove_contributor.html:15 kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:15 kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:11
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:72 kitsune/wiki/jinja2/wiki/includes/review_form.html:96
+#: kitsune/users/jinja2/users/edit_profile.html:80 kitsune/wiki/jinja2/wiki/confirm_remove_contributor.html:15 kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:15
+#: kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:11 kitsune/wiki/jinja2/wiki/includes/review_form.html:72 kitsune/wiki/jinja2/wiki/includes/review_form.html:96
 msgid "Cancel"
 msgstr "Renunță"
 
@@ -1180,7 +1189,7 @@ msgstr "Căutare în galerie"
 msgid "Show media for:"
 msgstr "Afișează elemente multimedia pentru:"
 
-#: kitsune/gallery/jinja2/gallery/gallery.html:58 kitsune/gallery/jinja2/gallery/search.html:32 kitsune/sumo/jinja2/base.html:321
+#: kitsune/gallery/jinja2/gallery/gallery.html:58 kitsune/gallery/jinja2/gallery/search.html:32 kitsune/sumo/jinja2/base.html:326
 msgid "Go"
 msgstr "Mergi la"
 
@@ -2087,11 +2096,11 @@ msgid "Exit Survey Results"
 msgstr "Rezultatele sondajului din momentul ieșirii"
 
 #: kitsune/landings/jinja2/landings/home.html:14 kitsune/questions/jinja2/questions/question_details.html:316 kitsune/questions/jinja2/questions/question_list.html:52
-#: kitsune/search/jinja2/search/form.html:13 kitsune/search/jinja2/search/results.html:13 kitsune/sumo/jinja2/base.html:176
+#: kitsune/search/jinja2/search/form.html:13 kitsune/search/jinja2/search/results.html:13 kitsune/sumo/jinja2/base.html:181
 msgid "Search Support"
 msgstr "Caută ajutor"
 
-#: kitsune/landings/jinja2/landings/home.html:18 kitsune/products/jinja2/products/product.html:37
+#: kitsune/landings/jinja2/landings/home.html:18 kitsune/products/jinja2/products/product.html:36
 msgid "Popular Searches:"
 msgstr "Căutări populare:"
 
@@ -2107,7 +2116,7 @@ msgstr "VPN"
 msgid "Tracking Protection"
 msgstr "Protecție împotriva urmăririi"
 
-#: kitsune/landings/jinja2/landings/home.html:33 kitsune/sumo/jinja2/base.html:304
+#: kitsune/landings/jinja2/landings/home.html:33 kitsune/sumo/jinja2/base.html:309
 msgid "Get Help"
 msgstr "Obține ajutor"
 
@@ -2115,7 +2124,7 @@ msgstr "Obține ajutor"
 msgid "Pick your product"
 msgstr "Alege un produs"
 
-#: kitsune/landings/jinja2/landings/home.html:41 kitsune/products/jinja2/products/product.html:158 kitsune/questions/jinja2/questions/includes/aaq_macros.html:177
+#: kitsune/landings/jinja2/landings/home.html:41 kitsune/products/jinja2/products/product.html:157 kitsune/questions/jinja2/questions/includes/aaq_macros.html:177
 msgid "Featured Articles"
 msgstr "Articole promovate"
 
@@ -2128,7 +2137,7 @@ msgid "Grow and share your expertise with others. Answer questions and improve o
 msgstr "Dezvoltă-te și împărtășește-ți cunoștințele cu ceilalți. Răspunde la întrebări și îmbunătățește-ne baza de cunoștințe."
 
 #: kitsune/landings/jinja2/landings/includes/join-our-community-callout.html:7 kitsune/landings/jinja2/landings/includes/volunteer-callout.html:7
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:58
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:58 kitsune/sumo/jinja2/includes/common_macros.html:46
 msgid "Learn More"
 msgstr "Află mai multe"
 
@@ -2211,7 +2220,7 @@ msgstr "Sigur vrei să ștergi aceste mesaje?"
 msgid "Are you sure you want to delete this message?"
 msgstr "Sigur vrei să ștergi acest mesaj?"
 
-#: kitsune/messages/jinja2/messages/inbox.html:3 kitsune/messages/jinja2/messages/includes/macros.html:26 kitsune/sumo/jinja2/includes/common_macros.html:670
+#: kitsune/messages/jinja2/messages/inbox.html:3 kitsune/messages/jinja2/messages/includes/macros.html:26 kitsune/sumo/jinja2/includes/common_macros.html:675
 msgid "Inbox"
 msgstr "Mesaje primite"
 
@@ -2319,11 +2328,11 @@ msgstr ""
 msgid "Message Preview:"
 msgstr "Previzualizarea mesajului:"
 
-#: kitsune/products/models.py:118
+#: kitsune/products/models.py:120
 msgid "Whether this topic is shown to users in the AAQ or not."
 msgstr "Dacă acest subiect este afișat utilizatorilor din AAQ sau nu."
 
-#: kitsune/products/jinja2/products/documents.html:21 kitsune/products/jinja2/products/product.html:13 kitsune/wiki/jinja2/wiki/document.html:20
+#: kitsune/products/jinja2/products/documents.html:21 kitsune/products/jinja2/products/product.html:12 kitsune/wiki/jinja2/wiki/document.html:20
 msgid "{product} Help"
 msgstr "Ajutor {product}"
 
@@ -2331,185 +2340,185 @@ msgstr "Ajutor {product}"
 msgid "In English"
 msgstr "În engleză"
 
-#: kitsune/products/jinja2/products/product.html:32
+#: kitsune/products/jinja2/products/product.html:31
 msgid "Support"
 msgstr "Asistență"
 
-#: kitsune/products/jinja2/products/product.html:40 kitsune/products/jinja2/products/product.html:110
+#: kitsune/products/jinja2/products/product.html:39 kitsune/products/jinja2/products/product.html:109
 msgid "Update Firefox"
 msgstr "Actualizează Firefox"
 
-#: kitsune/products/jinja2/products/product.html:41 kitsune/products/jinja2/products/product.html:111
+#: kitsune/products/jinja2/products/product.html:40 kitsune/products/jinja2/products/product.html:110
 msgid "Profiles"
 msgstr "Profiluri"
 
-#: kitsune/products/jinja2/products/product.html:42 kitsune/products/jinja2/products/product.html:45 kitsune/products/jinja2/products/product.html:112 kitsune/questions/config.py:111
+#: kitsune/products/jinja2/products/product.html:41 kitsune/products/jinja2/products/product.html:44 kitsune/products/jinja2/products/product.html:111 kitsune/questions/config.py:111
 #: kitsune/questions/config.py:215
 msgid "Firefox Sync"
 msgstr "Firefox Sync"
 
-#: kitsune/products/jinja2/products/product.html:46 kitsune/products/jinja2/products/product.html:81 kitsune/questions/config.py:79 kitsune/questions/config.py:183 kitsune/questions/config.py:277
+#: kitsune/products/jinja2/products/product.html:45 kitsune/products/jinja2/products/product.html:80 kitsune/questions/config.py:79 kitsune/questions/config.py:183 kitsune/questions/config.py:277
 msgid "Bookmarks"
 msgstr "Marcaje"
 
-#: kitsune/products/jinja2/products/product.html:47 kitsune/products/jinja2/products/product.html:50
+#: kitsune/products/jinja2/products/product.html:46 kitsune/products/jinja2/products/product.html:49
 msgid "Send tab"
 msgstr "Trimite fila"
 
-#: kitsune/products/jinja2/products/product.html:51
+#: kitsune/products/jinja2/products/product.html:50
 msgid "Night mode"
 msgstr "Mod nocturn"
 
-#: kitsune/products/jinja2/products/product.html:52
+#: kitsune/products/jinja2/products/product.html:51
 msgid "Block images"
 msgstr "Blochează imaginile"
 
-#: kitsune/products/jinja2/products/product.html:55
+#: kitsune/products/jinja2/products/product.html:54
 msgid "Policies"
 msgstr "Politici"
 
-#: kitsune/products/jinja2/products/product.html:56
+#: kitsune/products/jinja2/products/product.html:55
 msgid "Customization"
 msgstr "Personalizare"
 
-#: kitsune/products/jinja2/products/product.html:57
+#: kitsune/products/jinja2/products/product.html:56
 msgid "extensions"
 msgstr "extensii"
 
-#: kitsune/products/jinja2/products/product.html:60 kitsune/products/jinja2/products/product.html:85
+#: kitsune/products/jinja2/products/product.html:59 kitsune/products/jinja2/products/product.html:84
 msgid "Turbo mode"
 msgstr "Mod turbo"
 
-#: kitsune/products/jinja2/products/product.html:61
+#: kitsune/products/jinja2/products/product.html:60
 msgid "Voice commands"
 msgstr "Comenzi vocale"
 
-#: kitsune/products/jinja2/products/product.html:62
+#: kitsune/products/jinja2/products/product.html:61
 msgid "Receive tabs"
 msgstr "Primire file"
 
-#: kitsune/products/jinja2/products/product.html:65 kitsune/products/jinja2/products/product.html:72
+#: kitsune/products/jinja2/products/product.html:64 kitsune/products/jinja2/products/product.html:71
 msgid "Manage devices"
 msgstr "Administrează dispozitivele"
 
-#: kitsune/products/jinja2/products/product.html:66
+#: kitsune/products/jinja2/products/product.html:65
 #, fuzzy
 msgid "Download VPN"
 msgstr "Descarcă"
 
-#: kitsune/products/jinja2/products/product.html:67
+#: kitsune/products/jinja2/products/product.html:66
 msgid "Limits"
 msgstr "Limite"
 
-#: kitsune/products/jinja2/products/product.html:70
+#: kitsune/products/jinja2/products/product.html:69
 #, fuzzy
 msgid "Activate add-on"
 msgstr "Gestionare suplimente"
 
-#: kitsune/products/jinja2/products/product.html:71
+#: kitsune/products/jinja2/products/product.html:70
 #, fuzzy
 msgid "Update add-on"
 msgstr "Actualizată"
 
-#: kitsune/products/jinja2/products/product.html:75
+#: kitsune/products/jinja2/products/product.html:74
 msgid "Lockwise iOS"
 msgstr "Lockwise iOS"
 
-#: kitsune/products/jinja2/products/product.html:76
+#: kitsune/products/jinja2/products/product.html:75
 msgid "Lockwise Android"
 msgstr "Lockwise Android"
 
-#: kitsune/products/jinja2/products/product.html:77
+#: kitsune/products/jinja2/products/product.html:76
 msgid "Lockwise desktop"
 msgstr "Lockwise pentru desktop"
 
-#: kitsune/products/jinja2/products/product.html:80
+#: kitsune/products/jinja2/products/product.html:79
 msgid "Voice search"
 msgstr "Căutare vocală"
 
-#: kitsune/products/jinja2/products/product.html:82
+#: kitsune/products/jinja2/products/product.html:81
 msgid "Full screen"
 msgstr "Ecran complet"
 
-#: kitsune/products/jinja2/products/product.html:86
+#: kitsune/products/jinja2/products/product.html:85
 msgid "Rewards"
 msgstr "Recompense"
 
-#: kitsune/products/jinja2/products/product.html:87
+#: kitsune/products/jinja2/products/product.html:86
 msgid "Games"
 msgstr "Jocuri"
 
-#: kitsune/products/jinja2/products/product.html:90
+#: kitsune/products/jinja2/products/product.html:89
 msgid "Room size"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:91
+#: kitsune/products/jinja2/products/product.html:90
 #, fuzzy
 msgid "Avatars"
 msgstr "Avatar"
 
-#: kitsune/products/jinja2/products/product.html:92
+#: kitsune/products/jinja2/products/product.html:91
 #, fuzzy
 msgid "VR"
 msgstr "R"
 
-#: kitsune/products/jinja2/products/product.html:95
+#: kitsune/products/jinja2/products/product.html:94
 msgid "Autocomplete"
 msgstr "Completare automată"
 
-#: kitsune/products/jinja2/products/product.html:96
+#: kitsune/products/jinja2/products/product.html:95
 msgid "Default search"
 msgstr "Căutare implicită"
 
-#: kitsune/products/jinja2/products/product.html:97
+#: kitsune/products/jinja2/products/product.html:96
 msgid "Desktop view"
 msgstr "Versiune pentru desktop"
 
-#: kitsune/products/jinja2/products/product.html:100
+#: kitsune/products/jinja2/products/product.html:99
 msgid "Capture a screenshot"
 msgstr "Fă o captură de ecran"
 
-#: kitsune/products/jinja2/products/product.html:101
+#: kitsune/products/jinja2/products/product.html:100
 msgid "Organize a screenshot"
 msgstr "Organizează o captură de ecran"
 
-#: kitsune/products/jinja2/products/product.html:102
+#: kitsune/products/jinja2/products/product.html:101
 msgid "Create a collection"
 msgstr "Creează o colecție"
 
-#: kitsune/products/jinja2/products/product.html:105
+#: kitsune/products/jinja2/products/product.html:104
 msgid "Thunderbird profiles"
 msgstr "Profiluri Thunderbird"
 
-#: kitsune/products/jinja2/products/product.html:106
+#: kitsune/products/jinja2/products/product.html:105
 msgid "Migrate"
 msgstr "Migrează"
 
-#: kitsune/products/jinja2/products/product.html:107
+#: kitsune/products/jinja2/products/product.html:106
 msgid "Themes"
 msgstr "Teme"
 
-#: kitsune/products/jinja2/products/product.html:127
+#: kitsune/products/jinja2/products/product.html:126
 msgid "Frequent Topics"
 msgstr "Subiecte frecvente"
 
-#: kitsune/products/jinja2/products/product.html:128
+#: kitsune/products/jinja2/products/product.html:127
 msgid "Explore the knowledge base."
 msgstr "Explorează baza de cunoștințe."
 
-#: kitsune/products/jinja2/products/product.html:139
+#: kitsune/products/jinja2/products/product.html:138
 msgid "Download Thunderbird"
 msgstr "Descarcă Thunderbird"
 
-#: kitsune/products/jinja2/products/product.html:143 kitsune/sumo/jinja2/includes/common_macros.html:955
+#: kitsune/products/jinja2/products/product.html:142 kitsune/sumo/jinja2/includes/common_macros.html:963
 msgid "Systems and Languages"
 msgstr "Sisteme și limbi"
 
-#: kitsune/products/jinja2/products/product.html:144
+#: kitsune/products/jinja2/products/product.html:143
 msgid "Release Notes"
 msgstr "Note privind versiunea"
 
-#: kitsune/products/jinja2/products/product.html:145 kitsune/sumo/jinja2/base.html:340 kitsune/sumo/jinja2/includes/common_macros.html:957
+#: kitsune/products/jinja2/products/product.html:144 kitsune/sumo/jinja2/base.html:345 kitsune/sumo/jinja2/includes/common_macros.html:965
 msgid "Privacy"
 msgstr "Confidențialitate"
 
@@ -2564,6 +2573,10 @@ msgid "Ask the Community"
 msgstr "Întreabă comunitatea"
 
 #: kitsune/products/jinja2/products/includes/topic_macros.html:74
+msgid "Popular"
+msgstr ""
+
+#: kitsune/products/jinja2/products/includes/topic_macros.html:74
 msgid "Topics"
 msgstr "Subiecte"
 
@@ -2571,7 +2584,7 @@ msgstr "Subiecte"
 msgid "All articles and threads"
 msgstr "Toate articolele și subiectele"
 
-#: kitsune/questions/config.py:27 kitsune/sumo/jinja2/base.html:255
+#: kitsune/questions/config.py:27 kitsune/sumo/jinja2/base.html:260
 msgid "Firefox"
 msgstr "Firefox"
 
@@ -2603,7 +2616,7 @@ msgstr "Depanare"
 msgid "Tips and tricks"
 msgstr "Ponturi și trucuri"
 
-#: kitsune/questions/config.py:87 kitsune/questions/config.py:191 kitsune/sumo/jinja2/base.html:341
+#: kitsune/questions/config.py:87 kitsune/questions/config.py:191 kitsune/sumo/jinja2/base.html:346
 msgid "Cookies"
 msgstr "Cookie-uri"
 
@@ -2736,7 +2749,7 @@ msgstr "Firefox Focus pentru iOS"
 msgid "Firefox Focus for Android"
 msgstr "Firefox Focus pentru Android"
 
-#: kitsune/questions/config.py:527 kitsune/sumo/jinja2/base.html:277 kitsune/sumo/jinja2/includes/common_macros.html:483
+#: kitsune/questions/config.py:527 kitsune/sumo/jinja2/base.html:282 kitsune/sumo/jinja2/includes/common_macros.html:483
 msgid "Mozilla Account"
 msgstr ""
 
@@ -2964,7 +2977,7 @@ msgstr "Soluția a fost anulată cu succes."
 msgid "Glad to hear it!"
 msgstr "Ne bucurăm să auzim asta!"
 
-#: kitsune/questions/views.py:954 kitsune/wiki/views.py:1276
+#: kitsune/questions/views.py:954 kitsune/wiki/views.py:1289
 msgid "Sorry to hear that."
 msgstr "Ne pare rău să auzim asta."
 
@@ -3312,6 +3325,10 @@ msgstr "Abonează-te la flux"
 #: kitsune/questions/jinja2/questions/question_details.html:387
 msgid "Tags"
 msgstr "Etichete"
+
+#: kitsune/questions/jinja2/questions/question_details.html:425
+msgid "Add a tag"
+msgstr ""
 
 #: kitsune/questions/jinja2/questions/question_details.html:430 kitsune/tags/forms.py:125
 msgid "Add"
@@ -3764,6 +3781,14 @@ msgstr "Anulează"
 #: kitsune/questions/jinja2/questions/includes/answer_preview.html:3
 msgid "Reply Preview"
 msgstr "Previzualizarea răspunsului"
+
+#: kitsune/questions/jinja2/questions/includes/email_subscribe.html:19
+msgid "when anybody replies"
+msgstr ""
+
+#: kitsune/questions/jinja2/questions/includes/email_subscribe.html:23
+msgid "when a solution is found"
+msgstr ""
 
 #: kitsune/questions/jinja2/questions/includes/email_subscribe.html:28 kitsune/questions/jinja2/questions/includes/question_vote_thanks.html:23
 msgid "Send Updates"
@@ -7686,112 +7711,112 @@ msgstr "Sari la căutare"
 msgid "This is a staging site, the content gets overwritten on the 1st of every month.<br>The production site is <a href=\"https://support.mozilla.org\">here</a>."
 msgstr "Acesta este un site de prezentare, conținutul de aici se modifică pe data de 1 a fiecărei luni.<br>Site-ul oficial este <a href=\"https://support.mozilla.org\">aici</a>."
 
-#: kitsune/sumo/jinja2/base.html:232 kitsune/sumo/jinja2/base.html:335
+#: kitsune/sumo/jinja2/base.html:237 kitsune/sumo/jinja2/base.html:340
 msgid "Mozilla"
 msgstr "Mozilla"
 
-#: kitsune/sumo/jinja2/base.html:234
+#: kitsune/sumo/jinja2/base.html:239
 msgid "Report Trademark Abuse"
 msgstr "Raportează abuzul mărcilor înregistrate"
 
-#: kitsune/sumo/jinja2/base.html:235
+#: kitsune/sumo/jinja2/base.html:240
 msgid "Source code"
 msgstr "Cod sursă"
 
-#: kitsune/sumo/jinja2/base.html:236 kitsune/users/jinja2/users/profile.html:89
+#: kitsune/sumo/jinja2/base.html:241 kitsune/users/jinja2/users/profile.html:89
 msgid "Twitter"
 msgstr "Twitter:"
 
-#: kitsune/sumo/jinja2/base.html:241
+#: kitsune/sumo/jinja2/base.html:246
 msgid "Join our Community"
 msgstr "Intră în comunitatea noastră"
 
-#: kitsune/sumo/jinja2/base.html:248 kitsune/sumo/jinja2/includes/common_macros.html:57
+#: kitsune/sumo/jinja2/base.html:253 kitsune/sumo/jinja2/includes/common_macros.html:57
 msgid "Explore Help Articles"
 msgstr "Explorează articole de asistență"
 
-#: kitsune/sumo/jinja2/base.html:257
+#: kitsune/sumo/jinja2/base.html:262
 msgid "Download"
 msgstr "Descarcă"
 
-#: kitsune/sumo/jinja2/base.html:258
-msgid "Firefox Desktop"
-msgstr "Firefox pentru desktop"
+#: kitsune/sumo/jinja2/base.html:263 kitsune/sumo/jinja2/includes/common_macros.html:83 kitsune/sumo/jinja2/includes/common_macros.html:246 kitsune/sumo/jinja2/includes/common_macros.html:413
+msgid "Firefox desktop"
+msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:259
+#: kitsune/sumo/jinja2/base.html:264
 msgid "Android Browser"
 msgstr "Browser pentru Android"
 
-#: kitsune/sumo/jinja2/base.html:260
+#: kitsune/sumo/jinja2/base.html:265
 msgid "iOS Browser"
 msgstr "Browser pentru iOS"
 
-#: kitsune/sumo/jinja2/base.html:261
+#: kitsune/sumo/jinja2/base.html:266
 msgid "Focus Browser"
 msgstr "Browserul focus"
 
-#: kitsune/sumo/jinja2/base.html:266
+#: kitsune/sumo/jinja2/base.html:271
 msgid "Firefox for Developers"
 msgstr "Firefox pentru dezvoltatori"
 
-#: kitsune/sumo/jinja2/base.html:268
+#: kitsune/sumo/jinja2/base.html:273
 msgid "Developer Edition"
 msgstr "Developer Edition"
 
-#: kitsune/sumo/jinja2/base.html:269
+#: kitsune/sumo/jinja2/base.html:274
 msgid "Beta"
 msgstr "Beta"
 
-#: kitsune/sumo/jinja2/base.html:270
+#: kitsune/sumo/jinja2/base.html:275
 msgid "Beta for Android"
 msgstr "Beta pentru Android"
 
-#: kitsune/sumo/jinja2/base.html:271
+#: kitsune/sumo/jinja2/base.html:276
 msgid "Nightly"
 msgstr "Nightly"
 
-#: kitsune/sumo/jinja2/base.html:272
+#: kitsune/sumo/jinja2/base.html:277
 msgid "Nightly for Android"
 msgstr "Nightly pentru Android"
 
-#: kitsune/sumo/jinja2/base.html:280 kitsune/sumo/jinja2/includes/common_macros.html:693
+#: kitsune/sumo/jinja2/base.html:285 kitsune/sumo/jinja2/includes/common_macros.html:701
 msgid "Sign In/Up"
 msgstr "Autentificare/Înregistrare"
 
-#: kitsune/sumo/jinja2/base.html:286
+#: kitsune/sumo/jinja2/base.html:291
 msgid "What Is It?"
 msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:289
+#: kitsune/sumo/jinja2/base.html:294
 msgid "Reset Password"
 msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:294
+#: kitsune/sumo/jinja2/base.html:299
 msgid "Sync Your Data"
 msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:312 kitsune/sumo/jinja2/base.html:313
+#: kitsune/sumo/jinja2/base.html:317 kitsune/sumo/jinja2/base.html:318
 msgid "Language"
 msgstr "Limbă"
 
-#: kitsune/sumo/jinja2/base.html:338
+#: kitsune/sumo/jinja2/base.html:343
 msgid "mozilla.org"
 msgstr "mozilla.org"
 
-#: kitsune/sumo/jinja2/base.html:339
+#: kitsune/sumo/jinja2/base.html:344
 msgid "Terms of Service"
 msgstr "Termeni de utilizare a serviciilor"
 
-#: kitsune/sumo/jinja2/base.html:342
+#: kitsune/sumo/jinja2/base.html:347
 msgid "Contact"
 msgstr "Contact"
 
-#: kitsune/sumo/jinja2/base.html:348
+#: kitsune/sumo/jinja2/base.html:353
 #, fuzzy, python-format
 msgid "Visit %(moco_link_open)sMozilla Corporation’s%(link_close)s not-for-profit parent, the %(mofo_link_open)sMozilla Foundation%(link_close)s."
 msgstr "Firma-mamă nonprofit a Corporației Mozilla, Fundația Mozilla."
 
-#: kitsune/sumo/jinja2/base.html:358
+#: kitsune/sumo/jinja2/base.html:363
 #, fuzzy, python-format
 msgid "Portions of this content are ©1998–%(year)s by individual mozilla.org contributors. Content available under a %(link_open)sCreative Commons license%(link_close)s."
 msgstr "Porțiuni din acest conținut sunt c.1998–2019 de către colaboratori individuali mozilla.org. Conținutul este disponibil sub o licență Creative Common."
@@ -7853,16 +7878,12 @@ msgid "<strong>Avoid support scams.</strong> We will never ask you to call or te
 msgstr ""
 
 #: kitsune/sumo/jinja2/includes/common_macros.html:62 kitsune/sumo/jinja2/includes/common_macros.html:224 kitsune/sumo/jinja2/includes/common_macros.html:390
-#: kitsune/sumo/jinja2/includes/common_macros.html:549 kitsune/sumo/jinja2/includes/common_macros.html:621
+#: kitsune/sumo/jinja2/includes/common_macros.html:549 kitsune/sumo/jinja2/includes/common_macros.html:626
 msgid "Close Firefox menu"
 msgstr "Închide meniul Firefox"
 
 #: kitsune/sumo/jinja2/includes/common_macros.html:73
 msgid "Explore by product"
-msgstr ""
-
-#: kitsune/sumo/jinja2/includes/common_macros.html:83 kitsune/sumo/jinja2/includes/common_macros.html:246 kitsune/sumo/jinja2/includes/common_macros.html:413
-msgid "Firefox browser"
 msgstr ""
 
 #: kitsune/sumo/jinja2/includes/common_macros.html:130
@@ -7902,147 +7923,131 @@ msgstr ""
 msgid "Contribute"
 msgstr "Contribuite"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:563 kitsune/sumo/jinja2/includes/common_macros.html:740
+#: kitsune/sumo/jinja2/includes/common_macros.html:563 kitsune/sumo/jinja2/includes/common_macros.html:748
 msgid "Contributor discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:582 kitsune/sumo/jinja2/includes/common_macros.html:737
+#: kitsune/sumo/jinja2/includes/common_macros.html:582 kitsune/sumo/jinja2/includes/common_macros.html:745
 msgid "Contributor tools"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:605 kitsune/sumo/jinja2/includes/common_macros.html:952
+#: kitsune/sumo/jinja2/includes/common_macros.html:605 kitsune/sumo/jinja2/includes/common_macros.html:960
 msgid "Download Firefox"
 msgstr "Descarcă Firefox"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:633
+#: kitsune/sumo/jinja2/includes/common_macros.html:638
 msgid "Manage your information and see your contributions."
 msgstr "Gestionează-ți informațiile și vezi ce contribuții ai."
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:637 kitsune/users/jinja2/users/edit_profile.html:4
+#: kitsune/sumo/jinja2/includes/common_macros.html:642 kitsune/users/jinja2/users/edit_profile.html:4
 msgid "Edit Profile"
 msgstr "Editează profilul"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:638 kitsune/users/jinja2/users/questions_contributed.html:10
+#: kitsune/sumo/jinja2/includes/common_macros.html:643 kitsune/users/jinja2/users/questions_contributed.html:10
 msgid "My Questions"
 msgstr "Întrebările mele"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:653
+#: kitsune/sumo/jinja2/includes/common_macros.html:658
 msgid "Settings"
 msgstr "Setări"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:655
+#: kitsune/sumo/jinja2/includes/common_macros.html:660
 msgid "Manage your privacy and notification preferences."
 msgstr "Gestionează-ți confidențialitatea și preferințele pentru notificări."
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:672
+#: kitsune/sumo/jinja2/includes/common_macros.html:680
 #, fuzzy
 msgid "Exchange messages with other contributors."
 msgstr "Fă schimb de mesaje private cu alți colaboratori."
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:682 kitsune/users/jinja2/users/profile.html:209
+#: kitsune/sumo/jinja2/includes/common_macros.html:690 kitsune/users/jinja2/users/profile.html:209
 msgid "Sign Out"
 msgstr "Deconectează-te"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:756
+#: kitsune/sumo/jinja2/includes/common_macros.html:764
 msgid "SUMO community discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:763
+#: kitsune/sumo/jinja2/includes/common_macros.html:771
 msgid "Social support discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:770
+#: kitsune/sumo/jinja2/includes/common_macros.html:778
 msgid "Support forum discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:777
+#: kitsune/sumo/jinja2/includes/common_macros.html:785
 msgid "Article discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:784
+#: kitsune/sumo/jinja2/includes/common_macros.html:792
 msgid "Localization discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:792
+#: kitsune/sumo/jinja2/includes/common_macros.html:800
 msgid "View all discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:801
+#: kitsune/sumo/jinja2/includes/common_macros.html:809
 msgid "Mobile support discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:808
+#: kitsune/sumo/jinja2/includes/common_macros.html:816
 msgid "Knowledge base discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:816
+#: kitsune/sumo/jinja2/includes/common_macros.html:824
 msgid "Forum moderator discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:824
+#: kitsune/sumo/jinja2/includes/common_macros.html:832
 msgid "Off topic discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:831
+#: kitsune/sumo/jinja2/includes/common_macros.html:839
 msgid "Lost thread discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:843
+#: kitsune/sumo/jinja2/includes/common_macros.html:851
 msgid "Moderate forum content"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:851
+#: kitsune/sumo/jinja2/includes/common_macros.html:859
 msgid "Knowledge base dashboards"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:858
+#: kitsune/sumo/jinja2/includes/common_macros.html:866
 msgid "Guides"
 msgstr "Ghiduri"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:874
+#: kitsune/sumo/jinja2/includes/common_macros.html:882
 msgid "Media gallery"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:881
+#: kitsune/sumo/jinja2/includes/common_macros.html:889
 msgid "Recent revisions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:888
+#: kitsune/sumo/jinja2/includes/common_macros.html:896
 msgid "Community hub"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:897 kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/jinja2/wiki/locale_details.html:9
+#: kitsune/sumo/jinja2/includes/common_macros.html:905 kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/jinja2/wiki/locale_details.html:9
 #: kitsune/wiki/jinja2/wiki/locale_list.html:4 kitsune/wiki/jinja2/wiki/locale_list.html:10
 msgid "Locales"
 msgstr "Limbi"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:904
+#: kitsune/sumo/jinja2/includes/common_macros.html:912
 msgid "Locale metrics"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:910
+#: kitsune/sumo/jinja2/includes/common_macros.html:918
 msgid "Aggregated metrics"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:956
+#: kitsune/sumo/jinja2/includes/common_macros.html:964
 msgid "What's New"
 msgstr "Ce este nou"
-
-#: kitsune/sumo/jinja2/includes/common_macros.html:966
-msgid "Give Firefox a tune up"
-msgstr "Optimizează Firefox"
-
-#: kitsune/sumo/jinja2/includes/common_macros.html:968 kitsune/wiki/jinja2/wikiparser/hook_refresh_button.html:1
-msgid "Refresh Firefox"
-msgstr "Reîmprospătează Firefox"
-
-#: kitsune/sumo/jinja2/includes/common_macros.html:972
-msgid "How does it work?"
-msgstr "Cum funcționează?"
-
-#: kitsune/sumo/jinja2/includes/common_macros.html:976
-msgid "Download a fresh copy"
-msgstr "Descarcă o copie proaspătă"
 
 #: kitsune/sumo/jinja2/includes/quick_paginator.html:4 kitsune/sumo/jinja2/includes/simple_paginator.html:4
 msgid "Newer"
@@ -8225,6 +8230,10 @@ msgstr "Imagini încărcate:"
 #: kitsune/upload/jinja2/upload/attachments.html:46
 msgid "Add images (optional):"
 msgstr "Adaugă imagini (opțional):"
+
+#: kitsune/upload/jinja2/upload/attachments.html:48
+msgid "Browse"
+msgstr ""
 
 #: kitsune/upload/jinja2/upload/attachments.html:51
 msgid "Browse for an image to upload."
@@ -8587,10 +8596,6 @@ msgstr "Schimbă avatarul"
 #, fuzzy
 msgid "Edit Contribution Areas"
 msgstr "Editare colaboratori"
-
-#: kitsune/users/jinja2/users/edit_contributions.html:16 kitsune/users/jinja2/users/edit_settings.html:17 kitsune/users/jinja2/users/edit_watches.html:30
-msgid "Update"
-msgstr "Actualizează"
 
 #: kitsune/users/jinja2/users/edit_profile.html:27 kitsune/users/jinja2/users/profile.html:15
 msgid "Your Account"
@@ -9363,48 +9368,48 @@ msgstr "descarcă"
 msgid "browserID"
 msgstr "browserID"
 
-#: kitsune/wiki/views.py:927
+#: kitsune/wiki/views.py:940
 msgid "You cannot translate this document."
 msgstr "Nu poți traduce acest document."
 
-#: kitsune/wiki/views.py:1271
+#: kitsune/wiki/views.py:1284
 msgid "Great to hear &mdash; thanks for the feedback! <br /><span disabled class=helpful-button>&#x1F44D;</span>"
 msgstr "Ne pare bine să auzim asta &mdash; Îți mulțumim pentru feedback! <br /><span disabled class=helpful-button>&#x1F44D;</span>"
 
-#: kitsune/wiki/views.py:1299
+#: kitsune/wiki/views.py:1312
 msgid "You already voted on this Article."
 msgstr "Ai votat deja acest articol."
 
-#: kitsune/wiki/views.py:1327
+#: kitsune/wiki/views.py:1340
 msgid "Thanks for making us better!"
 msgstr "Mulțumim că ne-ai făcut mai buni!"
 
-#: kitsune/wiki/views.py:1400
+#: kitsune/wiki/views.py:1413
 #, python-format
 msgid "Revision %s"
 msgstr "Revizuirea %s"
 
-#: kitsune/wiki/views.py:1410
+#: kitsune/wiki/views.py:1423
 msgid "Firefox Releases"
 msgstr "Lansări Firefox"
 
-#: kitsune/wiki/views.py:1418
+#: kitsune/wiki/views.py:1431
 msgid "Article Revisions"
 msgstr "Revizuiri articol"
 
-#: kitsune/wiki/views.py:1539
+#: kitsune/wiki/views.py:1552
 msgid "{users} added to the contributors successfully!"
 msgstr "{users} adăugați la colaboratori cu succes!"
 
-#: kitsune/wiki/views.py:1546
+#: kitsune/wiki/views.py:1559
 msgid "There were errors adding new contributors, see below."
 msgstr "A apărut o eroare la adăugarea de noi colaboratori, vezi mai jos."
 
-#: kitsune/wiki/views.py:1566
+#: kitsune/wiki/views.py:1579
 msgid "{user} removed from the contributors successfully!"
 msgstr "{user} șters dintre colaboratori cu succes!"
 
-#: kitsune/wiki/views.py:1772
+#: kitsune/wiki/views.py:1797
 msgid "Sorry, that article wasn't found."
 msgstr ""
 
@@ -10600,6 +10605,22 @@ msgstr "Te rugăm să precizezi mai multe detalii."
 #, fuzzy
 msgid "Open Preferences"
 msgstr "Preferințe"
+
+#: kitsune/wiki/jinja2/wikiparser/hook_refresh_button.html:1
+msgid "Refresh Firefox"
+msgstr "Reîmprospătează Firefox"
+
+#~ msgid "Firefox Desktop"
+#~ msgstr "Firefox pentru desktop"
+
+#~ msgid "Give Firefox a tune up"
+#~ msgstr "Optimizează Firefox"
+
+#~ msgid "How does it work?"
+#~ msgstr "Cum funcționează?"
+
+#~ msgid "Download a fresh copy"
+#~ msgstr "Descarcă o copie proaspătă"
 
 #, fuzzy
 #~ msgid "Private Browsing mode"
