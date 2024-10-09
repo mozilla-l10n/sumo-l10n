@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/mozilla-l10n/sumo-l10n/issues\n"
-"POT-Creation-Date: 2024-09-17 04:09-0700\n"
+"POT-Creation-Date: 2024-10-09 02:13-0700\n"
 "PO-Revision-Date: 2015-05-27 13:12+0000\n"
 "Last-Translator: Devon <devon.bezuidenhout@rubric.com>\n"
 "Language-Team: ha <LL@li.org>\n"
@@ -698,7 +698,7 @@ msgstr "Ƙuri'u masu Taimakawa"
 msgid "[{locale}][{product}] Localization Dashboard"
 msgstr "[{locale}][{product}] Allon Fassara"
 
-#: kitsune/dashboards/jinja2/dashboards/localization.html:14 kitsune/questions/jinja2/questions/metrics.html:21 kitsune/wiki/forms.py:395
+#: kitsune/dashboards/jinja2/dashboards/localization.html:14 kitsune/questions/jinja2/questions/metrics.html:21 kitsune/wiki/forms.py:427
 msgid "Locale:"
 msgstr "Wuri:"
 
@@ -706,10 +706,10 @@ msgstr "Wuri:"
 msgid "Volunteer for Mozilla Support"
 msgstr "Mai aikin sa-kai domin Tallafawa Mozilla"
 
-#: kitsune/dashboards/jinja2/dashboards/localization.html:33 kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:25 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:29
-#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:25 kitsune/groups/jinja2/groups/profile.html:12 kitsune/kbforums/jinja2/kbforums/confirm_post_delete.html:28
-#: kitsune/kbforums/jinja2/kbforums/confirm_thread_delete.html:30 kitsune/messages/jinja2/messages/delete.html:28 kitsune/questions/jinja2/questions/confirm_answer_delete.html:32
-#: kitsune/questions/jinja2/questions/confirm_question_delete.html:34 kitsune/wiki/jinja2/wiki/confirm_document_delete.html:36 kitsune/wiki/jinja2/wiki/confirm_revision_delete.html:34
+#: kitsune/dashboards/jinja2/dashboards/localization.html:33 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:29 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:56
+#: kitsune/groups/jinja2/groups/profile.html:12 kitsune/kbforums/jinja2/kbforums/confirm_post_delete.html:28 kitsune/kbforums/jinja2/kbforums/confirm_thread_delete.html:30
+#: kitsune/messages/jinja2/messages/delete.html:28 kitsune/questions/jinja2/questions/confirm_answer_delete.html:32 kitsune/questions/jinja2/questions/confirm_question_delete.html:34
+#: kitsune/wiki/jinja2/wiki/confirm_document_delete.html:36 kitsune/wiki/jinja2/wiki/confirm_revision_delete.html:34
 msgid "Delete"
 msgstr "Goge"
 
@@ -729,8 +729,8 @@ msgstr "Ƙirƙiri"
 msgid "Add announcement"
 msgstr "Daɗa sanarwa"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/announcement_list.html:9 kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:22 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:26
-#: kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:15 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:23
+#: kitsune/dashboards/jinja2/dashboards/includes/announcement_list.html:9 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:26 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:15
+#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:47 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:52
 msgid "Edit"
 msgstr "Gyara"
 
@@ -811,7 +811,7 @@ msgstr "Yi sautu..."
 msgid "Waiting for review"
 msgstr "Jiran yin nazari"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:176 kitsune/wiki/forms.py:367 kitsune/wiki/jinja2/wiki/includes/revision_list.html:28
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:176 kitsune/wiki/forms.py:399 kitsune/wiki/jinja2/wiki/includes/revision_list.html:28
 msgid "Ready for localization"
 msgstr "Shiri domin fassarawa"
 
@@ -893,92 +893,141 @@ msgstr "An karɓa kuma an gyara"
 msgid "Rejected"
 msgstr "An ƙi amincewa"
 
-#: kitsune/flagit/views.py:42
+#: kitsune/flagit/views.py:50
 msgid "You already flagged this content."
 msgstr "Ka saka alamar tuta ga wannan abin ciki."
 
-#: kitsune/flagit/views.py:48
+#: kitsune/flagit/views.py:56
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr "Ka saka alamar tuta ga wannan abin ciki. Mai shiga tsakani zai yi nazarin miƙawarka ba da daɗewa ba."
 
-#: kitsune/flagit/jinja2/flagit/queue.html:3 kitsune/flagit/jinja2/flagit/queue.html:8
+#: kitsune/flagit/jinja2/flagit/queue.html:3
 msgid "Flagged Content Pending Moderation"
 msgstr "Abin ciki Mai Alamar tuta Wanda ba'a Kammala Shiga Tsakani ba"
 
-#: kitsune/flagit/jinja2/flagit/queue.html:15
+#: kitsune/flagit/jinja2/flagit/queue.html:9
+msgid "Content Pending Moderation"
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:16
 msgid "Flagged {t} (Reason: {r})"
 msgstr "An saka alamar tuta {t} (Dalili: {r})"
 
-#: kitsune/flagit/jinja2/flagit/queue.html:17
+#: kitsune/flagit/jinja2/flagit/queue.html:18
 msgid "Other reason:"
 msgstr "Sauran dalili:"
 
-#: kitsune/flagit/jinja2/flagit/queue.html:24
+#: kitsune/flagit/jinja2/flagit/queue.html:25
 msgid "{t} with id={id} no longer exists."
 msgstr "{t} tare da id={id} babu shi."
 
-#: kitsune/flagit/jinja2/flagit/queue.html:26
+#: kitsune/flagit/jinja2/flagit/queue.html:27
 msgid "Update Status:"
 msgstr "Sabunta Matsayi:"
 
-#: kitsune/flagit/jinja2/flagit/queue.html:30
+#: kitsune/flagit/jinja2/flagit/queue.html:31
 msgid "Please select..."
 msgstr "Zaɓi..."
 
-#: kitsune/flagit/jinja2/flagit/queue.html:31
-msgid "The flag is valid and I fixed the issue."
-msgstr "Sa alamar tuta ya dace kuma na gyara matsalar."
+#: kitsune/flagit/jinja2/flagit/queue.html:33
+msgid "Removed spam content."
+msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/queue.html:32
-msgid "The flag is invalid."
-msgstr "Sa alamar tuta bai dace ba."
+#: kitsune/flagit/jinja2/flagit/queue.html:34
+msgid "No spam found."
+msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/queue.html:34 kitsune/users/jinja2/users/edit_contributions.html:16 kitsune/users/jinja2/users/edit_settings.html:17 kitsune/users/jinja2/users/edit_watches.html:30
+#: kitsune/flagit/jinja2/flagit/queue.html:36
+msgid "Addressed abusive content."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:37
+msgid "No abuse detected."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:39
+msgid "Redirected support request."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:40
+msgid "Content is appropriately placed."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:42
+msgid "Corrected language."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:43
+msgid "Language is appropriate."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:45
+msgid "Issue resolved."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:46
+msgid "No issues found."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:50 kitsune/users/jinja2/users/edit_contributions.html:16 kitsune/users/jinja2/users/edit_settings.html:17 kitsune/users/jinja2/users/edit_watches.html:30
 msgid "Update"
 msgstr "Sabuntawa"
 
-#: kitsune/flagit/jinja2/flagit/queue.html:40
-msgid "There is no flagged content pending moderation."
-msgstr "Babu abin ciki da aka saka masa alama kafin a daidaita."
+#: kitsune/flagit/jinja2/flagit/queue.html:56
+msgid "There is no content pending moderation."
+msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/queue.html:44
+#: kitsune/flagit/jinja2/flagit/queue.html:61
 msgid "View all deactivated users"
 msgstr "Duba duk masu amfanin da ba'a farfaɗo da su ba"
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:4 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:2
-#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:4 kitsune/kbforums/forms.py:35 kitsune/kbforums/forms.py:66 kitsune/kbforums/forms.py:102 kitsune/questions/forms.py:221
-#: kitsune/wiki/forms.py:280 kitsune/wiki/jinja2/wiki/includes/document_macros.html:207 kitsune/wiki/jinja2/wiki/review_translation.html:99
+#: kitsune/flagit/jinja2/flagit/queue.html:74
+msgid "Filter by reason:"
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:76
+msgid "All reasons"
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:6 kitsune/kbforums/forms.py:57 kitsune/kbforums/forms.py:84
+#: kitsune/wiki/forms.py:74 kitsune/wiki/jinja2/wiki/translate.html:81
+msgid "Title:"
+msgstr "Take:"
+
+#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:4 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:10
+#: kitsune/kbforums/forms.py:35 kitsune/kbforums/forms.py:66 kitsune/kbforums/forms.py:102 kitsune/questions/forms.py:221 kitsune/wiki/forms.py:312
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:207 kitsune/wiki/jinja2/wiki/review_translation.html:99
 msgid "Content:"
 msgstr "Abin ciki:"
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:4 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:6 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:6
-#: kitsune/kbadge/jinja2/badger/award_detail.html:29 kitsune/kbadge/jinja2/badger/badge_detail.html:28 kitsune/questions/jinja2/questions/edit_answer.html:29 kitsune/wiki/jinja2/wiki/revision.html:28
+#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:6 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:13 kitsune/kbadge/jinja2/badger/award_detail.html:29
+#: kitsune/kbadge/jinja2/badger/badge_detail.html:28 kitsune/questions/jinja2/questions/edit_answer.html:29 kitsune/wiki/jinja2/wiki/revision.html:28
 msgid "Created:"
 msgstr "An Ƙirƙira:"
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:9 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:12 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:11
+#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:12 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:17
 msgid "Updated:"
 msgstr "An sabunta:"
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:14 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:17 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:7
-#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:16
+#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:17 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:7 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:21
 msgid "Flagged:"
 msgstr "An saka alamar tuta:"
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:18 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:21 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:11
-#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:20
+#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:21 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:11 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:25
 msgid "Take Action:"
 msgstr "Ɗauki Mataki:"
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:20 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:23 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:13
-#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:22
+#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:23 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:13 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:45
 msgid "View"
 msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:2 kitsune/kbforums/forms.py:57 kitsune/kbforums/forms.py:84
-#: kitsune/wiki/forms.py:78 kitsune/wiki/jinja2/wiki/translate.html:81
-msgid "Title:"
-msgstr "Take:"
+#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:27
+msgid "Current topic:"
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:34
+msgid "Change Topic:"
+msgstr ""
 
 #: kitsune/flagit/jinja2/flagit/includes/macros.html:2
 #, fuzzy, python-format
@@ -1008,11 +1057,11 @@ msgstr "Sabuwar tattaunawa: {title}"
 msgid "%(author)s has posted a new thread in a forum you're watching. Here is the thread:"
 msgstr "%(author)s sun aika sabuwar tattaunawa a dandalin da ka ke kallo. Ga tattaunawar:"
 
-#: kitsune/gallery/forms.py:10 kitsune/kbforums/forms.py:7 kitsune/wiki/forms.py:21
+#: kitsune/gallery/forms.py:10 kitsune/kbforums/forms.py:7 kitsune/wiki/forms.py:17
 msgid "Please provide a title."
 msgstr "Bayar da take."
 
-#: kitsune/gallery/forms.py:11 kitsune/wiki/forms.py:22
+#: kitsune/gallery/forms.py:11 kitsune/wiki/forms.py:18
 #, python-format
 msgid "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Take ya yi gajarta ƙwarai (%(show_value)s characters). Dole ya zama a ƙalla %(limit_value)s haruffa."
@@ -1235,7 +1284,7 @@ msgstr "Ci gaba"
 msgid "Your avatar will be resized to {size}x{size}"
 msgstr "Za'a sake girman hotonka zuwa {size}x{size}"
 
-#: kitsune/groups/forms.py:46 kitsune/wiki/forms.py:382
+#: kitsune/groups/forms.py:46 kitsune/wiki/forms.py:414
 msgid "username"
 msgstr "sunan mai amfani"
 
@@ -2794,47 +2843,47 @@ msgstr ""
 msgid "Done! Your question is now posted on the Mozilla community support forum. You can see your post anytime by visiting the {a_open}My Questions{a_close} page in your profile."
 msgstr ""
 
-#: kitsune/questions/views.py:847
+#: kitsune/questions/views.py:860
 msgid "Thank you for choosing a solution!"
 msgstr "Godiya gareka domin zaɓar mafita!"
 
-#: kitsune/questions/views.py:850
+#: kitsune/questions/views.py:863
 msgid "This question already has a solution."
 msgstr "Wannan tambayar tuni tana da mafita."
 
-#: kitsune/questions/views.py:872
+#: kitsune/questions/views.py:885
 msgid "The solution was undone successfully."
 msgstr "An sami nasara na rashin kammala mafita."
 
-#: kitsune/questions/views.py:951
+#: kitsune/questions/views.py:964
 msgid "Glad to hear it!"
 msgstr "Muna farin cikin jin haka!"
 
-#: kitsune/questions/views.py:953 kitsune/wiki/views.py:1277
+#: kitsune/questions/views.py:966 kitsune/wiki/views.py:1272
 msgid "Sorry to hear that."
 msgstr "Bamu ji daɗin jin haka ba."
 
-#: kitsune/questions/views.py:973
+#: kitsune/questions/views.py:986
 msgid "You already voted on this reply."
 msgstr "Ka riga ka zaɓi wannan amsa."
 
-#: kitsune/questions/views.py:1240
+#: kitsune/questions/views.py:1253
 msgid "We were unable to register your request. You've exceeded the limit for the number of questions allowed to watch in a day. Please try again tomorrow."
 msgstr ""
 
-#: kitsune/questions/views.py:1269
+#: kitsune/questions/views.py:1282
 msgid "Could not send a message to that email address."
 msgstr "Ba za'a iya aika saƙo zuwa wancan adireshin imel ba."
 
-#: kitsune/questions/views.py:1275
+#: kitsune/questions/views.py:1288
 msgid "You will be notified of updates by email."
 msgstr "Za'a sanar da kai sabuntawa ta imel."
 
-#: kitsune/questions/views.py:1277
+#: kitsune/questions/views.py:1290
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "Za ka sami imel cikin lokaci kaɗan domin tabbatar da sautunka."
 
-#: kitsune/questions/views.py:1462
+#: kitsune/questions/views.py:1475
 msgid "A moderator must manually approve your post before it will be visible."
 msgstr ""
 
@@ -8168,26 +8217,26 @@ msgstr "{username} ba sunan da ya dace ba ne."
 msgid "Invalid callback function."
 msgstr "Aikin kiran-baya marar inganci."
 
-#: kitsune/sumo/parser.py:354
+#: kitsune/sumo/parser.py:356
 msgid "Page does not exist."
 msgstr "Babu shafi."
 
-#: kitsune/sumo/parser.py:366
+#: kitsune/sumo/parser.py:368
 #, python-format
 msgid "The image \"%s\" does not exist."
 msgstr "Hoton \"%s\" babu shi."
 
-#: kitsune/sumo/parser.py:385
+#: kitsune/sumo/parser.py:387
 #, python-format
 msgid "The video \"%s\" does not exist."
 msgstr "Bidiyon \"%s\" babu ita."
 
-#: kitsune/sumo/parser.py:421
+#: kitsune/sumo/parser.py:423
 #, python-format
 msgid "Button of type \"%s\" does not exist."
 msgstr "Madanni mai yanayin \"%s\" babu shi."
 
-#: kitsune/sumo/parser.py:427
+#: kitsune/sumo/parser.py:429
 #, fuzzy, python-format
 msgid "The UI component \"%s\" does not exist."
 msgstr "Babu daftarin \"%s\"."
@@ -9644,168 +9693,168 @@ msgstr "{title} yana da nazari da ya shiya domin fassara"
 msgid "{title} ({locale}) has a new approved revision ({reviewer})"
 msgstr "{title} ({locale}) yana da abon nazari da aka amince da shi ({reviewer})"
 
-#: kitsune/wiki/forms.py:26
+#: kitsune/wiki/forms.py:22
 #, python-format
 msgid "Please keep the length of the title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Ajiye tsawon takenka zuwa haruffa %(limit_value)s ko ƙasa. A yanzu ya na haruffa %(show_value)s."
 
-#: kitsune/wiki/forms.py:31
+#: kitsune/wiki/forms.py:27
 msgid "Please provide a slug."
 msgstr "Bayar da tsari."
 
-#: kitsune/wiki/forms.py:32
+#: kitsune/wiki/forms.py:28
 msgid "The slug provided is not valid."
 msgstr "Tsarin da aka bayar ba shi da inganci."
 
-#: kitsune/wiki/forms.py:33
+#: kitsune/wiki/forms.py:29
 #, python-format
 msgid "The slug is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Tsarin ya yi gajarta sosai (%(show_value)s characters). Dole a ƙalla ya zama haruffa %(limit_value)s."
 
-#: kitsune/wiki/forms.py:37
+#: kitsune/wiki/forms.py:33
 #, python-format
 msgid "Please keep the length of the slug to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Ajiye tsawon tsarin ya zama zuwa haruffa %(limit_value)s ko ƙasa. A yanzu yana haruffa %(show_value)s."
 
-#: kitsune/wiki/forms.py:42
+#: kitsune/wiki/forms.py:38
 msgid "Please provide a summary."
 msgstr "Bayar da taƙaitaccen bayani."
 
-#: kitsune/wiki/forms.py:43
+#: kitsune/wiki/forms.py:39
 #, python-format
 msgid "The summary is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Taƙaitaccen bayanin ya yi gajarta sosai (%(show_value)s character). Dole a ƙalla ya zama haruffa %(limit_value)s."
 
-#: kitsune/wiki/forms.py:47
+#: kitsune/wiki/forms.py:43
 #, python-format
 msgid "Please keep the length of the summary to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Ka bar tsawon taƙaitaccen bayani zuwa haruffa %(limit_value)s ko ƙasa. A yanzu ya kai haruffa %(show_value)s."
 
-#: kitsune/wiki/forms.py:52
+#: kitsune/wiki/forms.py:48
 msgid "Please provide content."
 msgstr "Bayar da abin ciki."
 
-#: kitsune/wiki/forms.py:53
+#: kitsune/wiki/forms.py:49
 #, python-format
 msgid "The content is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "Abin ciki ya yi gajarta (%(show_value)s characters). Dole ya zama a ƙalla haruffa %(limit_value)s."
 
-#: kitsune/wiki/forms.py:57
+#: kitsune/wiki/forms.py:53
 #, python-format
 msgid "Please keep the length of the content to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Ka bar tsawon abin da ke ciki zuwa haruffa %(limit_value)s ko ƙasa. A yanzu ya na haruffa %(show_value)s."
 
-#: kitsune/wiki/forms.py:62
+#: kitsune/wiki/forms.py:58
 #, python-format
 msgid "Please keep the length of the comment to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "Ka bar tsawon sharhinka zuwa haruffa %(limit_value)s ko ƙasa. A yanzu ya na haruffa %(show_value)s."
 
-#: kitsune/wiki/forms.py:67
+#: kitsune/wiki/forms.py:63
 msgid "Please select at least one product."
 msgstr "Zaɓi a kalla kaya ɗaya."
 
-#: kitsune/wiki/forms.py:68
+#: kitsune/wiki/forms.py:64
 msgid "Please select at least one topic."
 msgstr "Zaɗi a ƙalla batu ɗaya."
 
-#: kitsune/wiki/forms.py:79
+#: kitsune/wiki/forms.py:75
 msgid "Title of article"
 msgstr "Taken maƙala"
 
-#: kitsune/wiki/forms.py:94 kitsune/wiki/jinja2/wiki/translate.html:91
+#: kitsune/wiki/forms.py:90 kitsune/wiki/jinja2/wiki/translate.html:91
 msgid "Slug:"
 msgstr "Tsari:"
 
-#: kitsune/wiki/forms.py:95
+#: kitsune/wiki/forms.py:91
 msgid "Article URL"
 msgstr "URL na Maƙala"
 
-#: kitsune/wiki/forms.py:104
+#: kitsune/wiki/forms.py:100
 msgid "Allow translations:"
 msgstr "Bar fassarori:"
 
-#: kitsune/wiki/forms.py:107
+#: kitsune/wiki/forms.py:103
 msgid "Obsolete:"
 msgstr "Tsoho:"
 
-#: kitsune/wiki/forms.py:112
+#: kitsune/wiki/forms.py:108
 msgid "The document will be restricted to members of the selected group(s)."
 msgstr ""
 
-#: kitsune/wiki/forms.py:113
+#: kitsune/wiki/forms.py:109
 msgid "The document will be visible only to users in the selected group(s)."
 msgstr ""
 
-#: kitsune/wiki/forms.py:117
+#: kitsune/wiki/forms.py:113
 msgid "Allow discussion on this article?"
 msgstr "A bar tattaunawa kan wannan maƙala?"
 
-#: kitsune/wiki/forms.py:125 kitsune/wiki/jinja2/wiki/history.html:18
+#: kitsune/wiki/forms.py:121 kitsune/wiki/jinja2/wiki/history.html:18
 msgid "Category:"
 msgstr "Jinsi:"
 
-#: kitsune/wiki/forms.py:126
+#: kitsune/wiki/forms.py:122
 msgid "Type of article"
 msgstr "Yanayin maƙala"
 
-#: kitsune/wiki/forms.py:130
+#: kitsune/wiki/forms.py:126
 msgid "Select topic(s)"
 msgstr ""
 
-#: kitsune/wiki/forms.py:136
+#: kitsune/wiki/forms.py:132
 msgid "Select product(s)"
 msgstr ""
 
-#: kitsune/wiki/forms.py:142
+#: kitsune/wiki/forms.py:138
 msgid "Related documents:"
 msgstr "Daftarori masa alaƙa:"
 
-#: kitsune/wiki/forms.py:147
+#: kitsune/wiki/forms.py:143
 msgid "Needs change:"
 msgstr "Yana bukatar canji:"
 
-#: kitsune/wiki/forms.py:150 kitsune/wiki/forms.py:291 kitsune/wiki/forms.py:351 kitsune/wiki/forms.py:373 kitsune/wiki/jinja2/wiki/revision.html:36
+#: kitsune/wiki/forms.py:146 kitsune/wiki/forms.py:323 kitsune/wiki/forms.py:383 kitsune/wiki/forms.py:405 kitsune/wiki/jinja2/wiki/revision.html:36
 msgid "Comment:"
 msgstr "Sharhi:"
 
-#: kitsune/wiki/forms.py:260 kitsune/wiki/jinja2/wiki/includes/document_macros.html:195 kitsune/wiki/jinja2/wiki/review_revision.html:73 kitsune/wiki/jinja2/wiki/review_translation.html:85
+#: kitsune/wiki/forms.py:292 kitsune/wiki/jinja2/wiki/includes/document_macros.html:195 kitsune/wiki/jinja2/wiki/review_revision.html:73 kitsune/wiki/jinja2/wiki/review_translation.html:85
 #: kitsune/wiki/jinja2/wiki/translate.html:154
 msgid "Keywords:"
 msgstr "Mahimman kalmomi:"
 
-#: kitsune/wiki/forms.py:261
+#: kitsune/wiki/forms.py:293
 msgid "Affects search results"
 msgstr "Ya shafi sakamakon bincike"
 
-#: kitsune/wiki/forms.py:268 kitsune/wiki/jinja2/wiki/translate.html:164
+#: kitsune/wiki/forms.py:300 kitsune/wiki/jinja2/wiki/translate.html:164
 msgid "Search result summary:"
 msgstr "Nemi taƙaitaccen bayanin sakamako:"
 
-#: kitsune/wiki/forms.py:269
+#: kitsune/wiki/forms.py:301
 msgid "Only displayed on search results page"
 msgstr "An nuna kawai a shafin sakamakon nema"
 
-#: kitsune/wiki/forms.py:289
+#: kitsune/wiki/forms.py:321
 msgid "Expiry date:"
 msgstr "Kwanan watan ƙarewa:"
 
-#: kitsune/wiki/forms.py:357
+#: kitsune/wiki/forms.py:389
 msgid "Significance:"
 msgstr "Amfani:"
 
-#: kitsune/wiki/forms.py:370
+#: kitsune/wiki/forms.py:402
 msgid "Needs change"
 msgstr "Ya na bukatar canji"
 
-#: kitsune/wiki/forms.py:396
+#: kitsune/wiki/forms.py:428
 msgid "Users:"
 msgstr "Masu Amfani:"
 
-#: kitsune/wiki/forms.py:397
+#: kitsune/wiki/forms.py:429
 msgid "Start:"
 msgstr "Fara:"
 
-#: kitsune/wiki/forms.py:398
+#: kitsune/wiki/forms.py:430
 msgid "End:"
 msgstr "Ƙarshe:"
 
@@ -9850,22 +9899,22 @@ msgstr ""
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Dole nazari ya zama a kan maƙalar Turanci. ID na nazari %(id)s bai dace da wannan tsari ba."
 
-#: kitsune/wiki/parser.py:63
+#: kitsune/wiki/parser.py:64
 msgid "Table of Contents"
 msgstr "Abubuwan da ke Ciki"
 
 #. L10n: This error is displayed if a template is included into itself.
-#: kitsune/wiki/parser.py:374
+#: kitsune/wiki/parser.py:375
 #, python-format
 msgid "[Recursive inclusion of \"%s\"]"
 msgstr "[Sake maimaitawa da ya haɗa da \"%s\"]"
 
-#: kitsune/wiki/parser.py:436
+#: kitsune/wiki/parser.py:437
 #, python-format
 msgid "The document \"%s\" does not exist."
 msgstr "Babu daftarin \"%s\"."
 
-#: kitsune/wiki/parser.py:463
+#: kitsune/wiki/parser.py:464
 #, python-format
 msgid "The template \"%s\" does not exist or has no approved revision."
 msgstr "Babu allon misali \"%s\" ko kuma ba shi da amincewa ta nazari."
@@ -9931,48 +9980,48 @@ msgstr "sauke"
 msgid "browserID"
 msgstr "ID na mai gewayawa"
 
-#: kitsune/wiki/views.py:928
+#: kitsune/wiki/views.py:923
 msgid "You cannot translate this document."
 msgstr "Ba za ka fassara wannan daftari ba."
 
-#: kitsune/wiki/views.py:1272
+#: kitsune/wiki/views.py:1267
 msgid "Great to hear &mdash; thanks for the feedback! <br /><span disabled class=helpful-button>&#x1F44D;</span>"
 msgstr ""
 
-#: kitsune/wiki/views.py:1300
+#: kitsune/wiki/views.py:1295
 msgid "You already voted on this Article."
 msgstr "Ka riga ka yi zaɓe a kan wannan Maƙala."
 
-#: kitsune/wiki/views.py:1328
+#: kitsune/wiki/views.py:1323
 msgid "Thanks for making us better!"
 msgstr "Mun gode sabo da mayar da mu ingantattu!"
 
-#: kitsune/wiki/views.py:1401
+#: kitsune/wiki/views.py:1396
 #, python-format
 msgid "Revision %s"
 msgstr "Nazari %s"
 
-#: kitsune/wiki/views.py:1411
+#: kitsune/wiki/views.py:1406
 msgid "Firefox Releases"
 msgstr "Abubuwan saki na Firefox"
 
-#: kitsune/wiki/views.py:1419
+#: kitsune/wiki/views.py:1414
 msgid "Article Revisions"
 msgstr "Nazarin Maƙaloli"
 
-#: kitsune/wiki/views.py:1540
+#: kitsune/wiki/views.py:1535
 msgid "{users} added to the contributors successfully!"
 msgstr "An sami nasarar daɗa {users} ga masu bayar da gudun mawa!"
 
-#: kitsune/wiki/views.py:1547
+#: kitsune/wiki/views.py:1542
 msgid "There were errors adding new contributors, see below."
 msgstr "Akwai kura-kurai wajen daɗa masu bayar da gudun mawa, duba ƙasa."
 
-#: kitsune/wiki/views.py:1567
+#: kitsune/wiki/views.py:1562
 msgid "{user} removed from the contributors successfully!"
 msgstr "An sami nasarar cire {user} daga masu bayar da gudun mawa!"
 
-#: kitsune/wiki/views.py:1785
+#: kitsune/wiki/views.py:1780
 msgid "Sorry, that article wasn't found."
 msgstr ""
 
@@ -11183,6 +11232,15 @@ msgstr "Bambance-bambance"
 #: kitsune/wiki/jinja2/wikiparser/hook_refresh_button.html:1
 msgid "Refresh Firefox"
 msgstr "Sabunta Firefox"
+
+#~ msgid "The flag is valid and I fixed the issue."
+#~ msgstr "Sa alamar tuta ya dace kuma na gyara matsalar."
+
+#~ msgid "The flag is invalid."
+#~ msgstr "Sa alamar tuta bai dace ba."
+
+#~ msgid "There is no flagged content pending moderation."
+#~ msgstr "Babu abin ciki da aka saka masa alama kafin a daidaita."
 
 #~ msgid "Relevant to:"
 #~ msgstr "Dacewa zuwa ga:"
