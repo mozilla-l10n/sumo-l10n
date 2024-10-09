@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: https://github.com/mozilla-l10n/sumo-l10n/issues\n"
-"POT-Creation-Date: 2024-09-17 04:09-0700\n"
+"POT-Creation-Date: 2024-10-09 02:13-0700\n"
 "PO-Revision-Date: 2024-08-12 05:39+0000\n"
 "Last-Translator: dskmori <ghoti.fish.dsk@gmail.com>\n"
 "Language-Team: Japanese\n"
@@ -698,7 +698,7 @@ msgstr "役に立った評価数"
 msgid "[{locale}][{product}] Localization Dashboard"
 msgstr "[{locale}][{product}] L10N ダッシュボード"
 
-#: kitsune/dashboards/jinja2/dashboards/localization.html:14 kitsune/questions/jinja2/questions/metrics.html:21 kitsune/wiki/forms.py:395
+#: kitsune/dashboards/jinja2/dashboards/localization.html:14 kitsune/questions/jinja2/questions/metrics.html:21 kitsune/wiki/forms.py:427
 msgid "Locale:"
 msgstr "言語:"
 
@@ -706,10 +706,10 @@ msgstr "言語:"
 msgid "Volunteer for Mozilla Support"
 msgstr "Mozilla サポートのボランティアに参加する"
 
-#: kitsune/dashboards/jinja2/dashboards/localization.html:33 kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:25 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:29
-#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:25 kitsune/groups/jinja2/groups/profile.html:12 kitsune/kbforums/jinja2/kbforums/confirm_post_delete.html:28
-#: kitsune/kbforums/jinja2/kbforums/confirm_thread_delete.html:30 kitsune/messages/jinja2/messages/delete.html:28 kitsune/questions/jinja2/questions/confirm_answer_delete.html:32
-#: kitsune/questions/jinja2/questions/confirm_question_delete.html:34 kitsune/wiki/jinja2/wiki/confirm_document_delete.html:36 kitsune/wiki/jinja2/wiki/confirm_revision_delete.html:34
+#: kitsune/dashboards/jinja2/dashboards/localization.html:33 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:29 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:56
+#: kitsune/groups/jinja2/groups/profile.html:12 kitsune/kbforums/jinja2/kbforums/confirm_post_delete.html:28 kitsune/kbforums/jinja2/kbforums/confirm_thread_delete.html:30
+#: kitsune/messages/jinja2/messages/delete.html:28 kitsune/questions/jinja2/questions/confirm_answer_delete.html:32 kitsune/questions/jinja2/questions/confirm_question_delete.html:34
+#: kitsune/wiki/jinja2/wiki/confirm_document_delete.html:36 kitsune/wiki/jinja2/wiki/confirm_revision_delete.html:34
 msgid "Delete"
 msgstr "削除"
 
@@ -729,8 +729,8 @@ msgstr "作成"
 msgid "Add announcement"
 msgstr "アナウンスを追加"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/announcement_list.html:9 kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:22 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:26
-#: kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:15 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:23
+#: kitsune/dashboards/jinja2/dashboards/includes/announcement_list.html:9 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:26 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:15
+#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:47 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:52
 msgid "Edit"
 msgstr "編集"
 
@@ -811,7 +811,7 @@ msgstr "購読..."
 msgid "Waiting for review"
 msgstr "レビュー待ち"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:176 kitsune/wiki/forms.py:367 kitsune/wiki/jinja2/wiki/includes/revision_list.html:28
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:176 kitsune/wiki/forms.py:399 kitsune/wiki/jinja2/wiki/includes/revision_list.html:28
 msgid "Ready for localization"
 msgstr "翻訳準備完了"
 
@@ -892,92 +892,141 @@ msgstr "承諾および修正済み"
 msgid "Rejected"
 msgstr "却下"
 
-#: kitsune/flagit/views.py:42
+#: kitsune/flagit/views.py:50
 msgid "You already flagged this content."
 msgstr "このコンテンツにはすでにフラグが設定されています。"
 
-#: kitsune/flagit/views.py:48
+#: kitsune/flagit/views.py:56
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr "このコンテンツにフラグを設定しました。近々モデレーターが確認します。"
 
-#: kitsune/flagit/jinja2/flagit/queue.html:3 kitsune/flagit/jinja2/flagit/queue.html:8
+#: kitsune/flagit/jinja2/flagit/queue.html:3
 msgid "Flagged Content Pending Moderation"
 msgstr "コンテンツにモデレーターの確認待ちフラグを立てました"
 
-#: kitsune/flagit/jinja2/flagit/queue.html:15
+#: kitsune/flagit/jinja2/flagit/queue.html:9
+msgid "Content Pending Moderation"
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:16
 msgid "Flagged {t} (Reason: {r})"
 msgstr "フラグが立てられました {t} (理由: {r})"
 
-#: kitsune/flagit/jinja2/flagit/queue.html:17
+#: kitsune/flagit/jinja2/flagit/queue.html:18
 msgid "Other reason:"
 msgstr "その他の理由:"
 
-#: kitsune/flagit/jinja2/flagit/queue.html:24
+#: kitsune/flagit/jinja2/flagit/queue.html:25
 msgid "{t} with id={id} no longer exists."
 msgstr "id={id} の {t} は存在しません。"
 
-#: kitsune/flagit/jinja2/flagit/queue.html:26
+#: kitsune/flagit/jinja2/flagit/queue.html:27
 msgid "Update Status:"
 msgstr "更新状態:"
 
-#: kitsune/flagit/jinja2/flagit/queue.html:30
+#: kitsune/flagit/jinja2/flagit/queue.html:31
 msgid "Please select..."
 msgstr "選択してください..."
 
-#: kitsune/flagit/jinja2/flagit/queue.html:31
-msgid "The flag is valid and I fixed the issue."
-msgstr "フラグは有効であり、問題を解決しました。"
+#: kitsune/flagit/jinja2/flagit/queue.html:33
+msgid "Removed spam content."
+msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/queue.html:32
-msgid "The flag is invalid."
-msgstr "フラグは無効です。"
+#: kitsune/flagit/jinja2/flagit/queue.html:34
+msgid "No spam found."
+msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/queue.html:34 kitsune/users/jinja2/users/edit_contributions.html:16 kitsune/users/jinja2/users/edit_settings.html:17 kitsune/users/jinja2/users/edit_watches.html:30
+#: kitsune/flagit/jinja2/flagit/queue.html:36
+msgid "Addressed abusive content."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:37
+msgid "No abuse detected."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:39
+msgid "Redirected support request."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:40
+msgid "Content is appropriately placed."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:42
+msgid "Corrected language."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:43
+msgid "Language is appropriate."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:45
+msgid "Issue resolved."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:46
+msgid "No issues found."
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:50 kitsune/users/jinja2/users/edit_contributions.html:16 kitsune/users/jinja2/users/edit_settings.html:17 kitsune/users/jinja2/users/edit_watches.html:30
 msgid "Update"
 msgstr "更新"
 
-#: kitsune/flagit/jinja2/flagit/queue.html:40
-msgid "There is no flagged content pending moderation."
-msgstr "モデレーターの確認待ちとしてフラグが立てられているコンテンツはありません。"
+#: kitsune/flagit/jinja2/flagit/queue.html:56
+msgid "There is no content pending moderation."
+msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/queue.html:44
+#: kitsune/flagit/jinja2/flagit/queue.html:61
 msgid "View all deactivated users"
 msgstr "すべての無効化されたユーザーを表示する"
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:4 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:2
-#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:4 kitsune/kbforums/forms.py:35 kitsune/kbforums/forms.py:66 kitsune/kbforums/forms.py:102 kitsune/questions/forms.py:221
-#: kitsune/wiki/forms.py:280 kitsune/wiki/jinja2/wiki/includes/document_macros.html:207 kitsune/wiki/jinja2/wiki/review_translation.html:99
+#: kitsune/flagit/jinja2/flagit/queue.html:74
+msgid "Filter by reason:"
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/queue.html:76
+msgid "All reasons"
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:6 kitsune/kbforums/forms.py:57 kitsune/kbforums/forms.py:84
+#: kitsune/wiki/forms.py:74 kitsune/wiki/jinja2/wiki/translate.html:81
+msgid "Title:"
+msgstr "タイトル:"
+
+#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:4 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:10
+#: kitsune/kbforums/forms.py:35 kitsune/kbforums/forms.py:66 kitsune/kbforums/forms.py:102 kitsune/questions/forms.py:221 kitsune/wiki/forms.py:312
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:207 kitsune/wiki/jinja2/wiki/review_translation.html:99
 msgid "Content:"
 msgstr "内容:"
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:4 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:6 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:6
-#: kitsune/kbadge/jinja2/badger/award_detail.html:29 kitsune/kbadge/jinja2/badger/badge_detail.html:28 kitsune/questions/jinja2/questions/edit_answer.html:29 kitsune/wiki/jinja2/wiki/revision.html:28
+#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:6 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:13 kitsune/kbadge/jinja2/badger/award_detail.html:29
+#: kitsune/kbadge/jinja2/badger/badge_detail.html:28 kitsune/questions/jinja2/questions/edit_answer.html:29 kitsune/wiki/jinja2/wiki/revision.html:28
 msgid "Created:"
 msgstr "作成日:"
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:9 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:12 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:11
+#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:12 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:17
 msgid "Updated:"
 msgstr "更新日:"
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:14 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:17 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:7
-#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:16
+#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:17 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:7 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:21
 msgid "Flagged:"
 msgstr "フラグ付き:"
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:18 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:21 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:11
-#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:20
+#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:21 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:11 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:25
 msgid "Take Action:"
 msgstr "操作:"
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_answer.html:20 kitsune/flagit/jinja2/flagit/includes/flagged_post.html:23 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:13
-#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:22
+#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:23 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:13 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:45
 msgid "View"
 msgstr "表示"
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:2 kitsune/kbforums/forms.py:57 kitsune/kbforums/forms.py:84
-#: kitsune/wiki/forms.py:78 kitsune/wiki/jinja2/wiki/translate.html:81
-msgid "Title:"
-msgstr "タイトル:"
+#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:27
+msgid "Current topic:"
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:34
+msgid "Change Topic:"
+msgstr ""
 
 #: kitsune/flagit/jinja2/flagit/includes/macros.html:2
 #, python-format
@@ -1007,11 +1056,11 @@ msgstr "新しいスレッド: {title}"
 msgid "%(author)s has posted a new thread in a forum you're watching. Here is the thread:"
 msgstr "監視中のフォーラムに %(author)s さんが新しいスレッドを立てました。以下はそのスレッドです:"
 
-#: kitsune/gallery/forms.py:10 kitsune/kbforums/forms.py:7 kitsune/wiki/forms.py:21
+#: kitsune/gallery/forms.py:10 kitsune/kbforums/forms.py:7 kitsune/wiki/forms.py:17
 msgid "Please provide a title."
 msgstr "タイトルを記入してください。"
 
-#: kitsune/gallery/forms.py:11 kitsune/wiki/forms.py:22
+#: kitsune/gallery/forms.py:11 kitsune/wiki/forms.py:18
 #, python-format
 msgid "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "タイトルが短すぎます (現在 %(show_value)s 文字)。 %(limit_value)s 文字以上にしてください。"
@@ -1233,7 +1282,7 @@ msgstr "進捗"
 msgid "Your avatar will be resized to {size}x{size}"
 msgstr "アバターは {size}x{size} にサイズ変更されます"
 
-#: kitsune/groups/forms.py:46 kitsune/wiki/forms.py:382
+#: kitsune/groups/forms.py:46 kitsune/wiki/forms.py:414
 msgid "username"
 msgstr "ユーザー名"
 
@@ -2739,47 +2788,47 @@ msgstr ""
 msgid "Done! Your question is now posted on the Mozilla community support forum. You can see your post anytime by visiting the {a_open}My Questions{a_close} page in your profile."
 msgstr "あなたの質問が Mozilla コミュニティのサポートフォーラムに投稿されました。この投稿は、あなたのプロファイルの {a_open}私の質問{a_close} ページからいつでも確認できます。"
 
-#: kitsune/questions/views.py:847
+#: kitsune/questions/views.py:860
 msgid "Thank you for choosing a solution!"
 msgstr "解決策を選んでいただきありがとうございます！"
 
-#: kitsune/questions/views.py:850
+#: kitsune/questions/views.py:863
 msgid "This question already has a solution."
 msgstr "この質問はすでに解決しています。"
 
-#: kitsune/questions/views.py:872
+#: kitsune/questions/views.py:885
 msgid "The solution was undone successfully."
 msgstr "解決策はうまくいきませんでした。"
 
-#: kitsune/questions/views.py:951
+#: kitsune/questions/views.py:964
 msgid "Glad to hear it!"
 msgstr "ありがとうございます！"
 
-#: kitsune/questions/views.py:953 kitsune/wiki/views.py:1277
+#: kitsune/questions/views.py:966 kitsune/wiki/views.py:1272
 msgid "Sorry to hear that."
 msgstr "お役に立てず申し訳ありません。"
 
-#: kitsune/questions/views.py:973
+#: kitsune/questions/views.py:986
 msgid "You already voted on this reply."
 msgstr "この返信にはすでに投票済みです。"
 
-#: kitsune/questions/views.py:1240
+#: kitsune/questions/views.py:1253
 msgid "We were unable to register your request. You've exceeded the limit for the number of questions allowed to watch in a day. Please try again tomorrow."
 msgstr ""
 
-#: kitsune/questions/views.py:1269
+#: kitsune/questions/views.py:1282
 msgid "Could not send a message to that email address."
 msgstr "指定されたメールアドレスにメッセージを送信できませんでした。"
 
-#: kitsune/questions/views.py:1275
+#: kitsune/questions/views.py:1288
 msgid "You will be notified of updates by email."
 msgstr "メールによる更新通知を受け取ります。"
 
-#: kitsune/questions/views.py:1277
+#: kitsune/questions/views.py:1290
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "購読を確認するためのメールを送信しました。"
 
-#: kitsune/questions/views.py:1462
+#: kitsune/questions/views.py:1475
 msgid "A moderator must manually approve your post before it will be visible."
 msgstr "公開される前に、モデレーターが手動で投稿を承認する必要があります。"
 
@@ -7839,26 +7888,26 @@ msgstr "{username} はアクティブユーザーではありません。"
 msgid "Invalid callback function."
 msgstr "無効なコールバック関数です。"
 
-#: kitsune/sumo/parser.py:354
+#: kitsune/sumo/parser.py:356
 msgid "Page does not exist."
 msgstr "ページが存在しません。"
 
-#: kitsune/sumo/parser.py:366
+#: kitsune/sumo/parser.py:368
 #, python-format
 msgid "The image \"%s\" does not exist."
 msgstr "画像 \"%s\" は存在しません。"
 
-#: kitsune/sumo/parser.py:385
+#: kitsune/sumo/parser.py:387
 #, python-format
 msgid "The video \"%s\" does not exist."
 msgstr "\"%s\" の動画は存在しません。"
 
-#: kitsune/sumo/parser.py:421
+#: kitsune/sumo/parser.py:423
 #, python-format
 msgid "Button of type \"%s\" does not exist."
 msgstr "\"%s\" というボタンテンプレートは存在しません。"
 
-#: kitsune/sumo/parser.py:427
+#: kitsune/sumo/parser.py:429
 #, python-format
 msgid "The UI component \"%s\" does not exist."
 msgstr "\"%s\" のドキュメントは存在しません。"
@@ -9255,170 +9304,170 @@ msgstr "{title} の記事に翻訳準備が完了したリビジョンがあり�
 msgid "{title} ({locale}) has a new approved revision ({reviewer})"
 msgstr "{title} ({locale}) に新たに承認されたリビジョンがあります ({reviewer})"
 
-#: kitsune/wiki/forms.py:26
+#: kitsune/wiki/forms.py:22
 #, python-format
 msgid "Please keep the length of the title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "タイトルが長すぎます (現在 %(show_value)s 文字)。 %(limit_value)s 文字以下にしてください。"
 
-#: kitsune/wiki/forms.py:31
+#: kitsune/wiki/forms.py:27
 msgid "Please provide a slug."
 msgstr "スラッグ (記事の URL) を記入してください。"
 
-#: kitsune/wiki/forms.py:32
+#: kitsune/wiki/forms.py:28
 msgid "The slug provided is not valid."
 msgstr "入力されたスラッグは正しくありません。"
 
-#: kitsune/wiki/forms.py:33
+#: kitsune/wiki/forms.py:29
 #, python-format
 msgid "The slug is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "スラッグが短すぎます (%(show_value)s 文字)。%(limit_value)s 文字以上にしてください。"
 
-#: kitsune/wiki/forms.py:37
+#: kitsune/wiki/forms.py:33
 #, python-format
 msgid "Please keep the length of the slug to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "スラッグが長すぎます (%(show_value)s 文字)。%(limit_value)s 文字以内にしてください。"
 
-#: kitsune/wiki/forms.py:42
+#: kitsune/wiki/forms.py:38
 msgid "Please provide a summary."
 msgstr "要約を記入してください。"
 
-#: kitsune/wiki/forms.py:43
+#: kitsune/wiki/forms.py:39
 #, python-format
 msgid "The summary is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "要約が短すぎます (現在 %(show_value)s 文字)。 %(limit_value)s 文字以上にしてください。"
 
-#: kitsune/wiki/forms.py:47
+#: kitsune/wiki/forms.py:43
 #, python-format
 msgid "Please keep the length of the summary to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "要約が長すぎます (現在 %(show_value)s 文字)。 %(limit_value)s 文字以下にしてください。"
 
-#: kitsune/wiki/forms.py:52
+#: kitsune/wiki/forms.py:48
 msgid "Please provide content."
 msgstr "記事本文を記入してください。"
 
-#: kitsune/wiki/forms.py:53
+#: kitsune/wiki/forms.py:49
 #, python-format
 msgid "The content is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "本文が短すぎます (現在 %(show_value)s 文字)。 %(limit_value)s 文字以上にしてください。"
 
-#: kitsune/wiki/forms.py:57
+#: kitsune/wiki/forms.py:53
 #, python-format
 msgid "Please keep the length of the content to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "本文が長すぎます (現在 %(show_value)s 文字)。 %(limit_value)s 文字以下にしてください。"
 
-#: kitsune/wiki/forms.py:62
+#: kitsune/wiki/forms.py:58
 #, python-format
 msgid "Please keep the length of the comment to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "コメントが長すぎます (現在 %(show_value)s 文字)。 %(limit_value)s 文字以下にしてください。"
 
-#: kitsune/wiki/forms.py:67
+#: kitsune/wiki/forms.py:63
 msgid "Please select at least one product."
 msgstr "少なくとも一つの製品を選択してください。"
 
-#: kitsune/wiki/forms.py:68
+#: kitsune/wiki/forms.py:64
 msgid "Please select at least one topic."
 msgstr "少なくとも一つのトピックを選択してください。"
 
-#: kitsune/wiki/forms.py:79
+#: kitsune/wiki/forms.py:75
 msgid "Title of article"
 msgstr "記事のタイトル"
 
-#: kitsune/wiki/forms.py:94 kitsune/wiki/jinja2/wiki/translate.html:91
+#: kitsune/wiki/forms.py:90 kitsune/wiki/jinja2/wiki/translate.html:91
 msgid "Slug:"
 msgstr "スラッグ:"
 
-#: kitsune/wiki/forms.py:95
+#: kitsune/wiki/forms.py:91
 msgid "Article URL"
 msgstr "記事の URL"
 
-#: kitsune/wiki/forms.py:104
+#: kitsune/wiki/forms.py:100
 msgid "Allow translations:"
 msgstr "翻訳を許可する:"
 
 # 「記事を廃棄」でもいいか
 # 削除はされないので「アーカイブ行き」とか
-#: kitsune/wiki/forms.py:107
+#: kitsune/wiki/forms.py:103
 msgid "Obsolete:"
 msgstr "廃止:"
 
-#: kitsune/wiki/forms.py:112
+#: kitsune/wiki/forms.py:108
 msgid "The document will be restricted to members of the selected group(s)."
 msgstr ""
 
-#: kitsune/wiki/forms.py:113
+#: kitsune/wiki/forms.py:109
 msgid "The document will be visible only to users in the selected group(s)."
 msgstr ""
 
-#: kitsune/wiki/forms.py:117
+#: kitsune/wiki/forms.py:113
 msgid "Allow discussion on this article?"
 msgstr "この記事の議論を許可する？"
 
-#: kitsune/wiki/forms.py:125 kitsune/wiki/jinja2/wiki/history.html:18
+#: kitsune/wiki/forms.py:121 kitsune/wiki/jinja2/wiki/history.html:18
 msgid "Category:"
 msgstr "カテゴリー:"
 
-#: kitsune/wiki/forms.py:126
+#: kitsune/wiki/forms.py:122
 msgid "Type of article"
 msgstr "記事の種類"
 
-#: kitsune/wiki/forms.py:130
+#: kitsune/wiki/forms.py:126
 msgid "Select topic(s)"
 msgstr ""
 
-#: kitsune/wiki/forms.py:136
+#: kitsune/wiki/forms.py:132
 msgid "Select product(s)"
 msgstr ""
 
-#: kitsune/wiki/forms.py:142
+#: kitsune/wiki/forms.py:138
 msgid "Related documents:"
 msgstr "関連文書:"
 
-#: kitsune/wiki/forms.py:147
+#: kitsune/wiki/forms.py:143
 msgid "Needs change:"
 msgstr "変更が必要:"
 
-#: kitsune/wiki/forms.py:150 kitsune/wiki/forms.py:291 kitsune/wiki/forms.py:351 kitsune/wiki/forms.py:373 kitsune/wiki/jinja2/wiki/revision.html:36
+#: kitsune/wiki/forms.py:146 kitsune/wiki/forms.py:323 kitsune/wiki/forms.py:383 kitsune/wiki/forms.py:405 kitsune/wiki/jinja2/wiki/revision.html:36
 msgid "Comment:"
 msgstr "コメント:"
 
-#: kitsune/wiki/forms.py:260 kitsune/wiki/jinja2/wiki/includes/document_macros.html:195 kitsune/wiki/jinja2/wiki/review_revision.html:73 kitsune/wiki/jinja2/wiki/review_translation.html:85
+#: kitsune/wiki/forms.py:292 kitsune/wiki/jinja2/wiki/includes/document_macros.html:195 kitsune/wiki/jinja2/wiki/review_revision.html:73 kitsune/wiki/jinja2/wiki/review_translation.html:85
 #: kitsune/wiki/jinja2/wiki/translate.html:154
 msgid "Keywords:"
 msgstr "キーワード:"
 
-#: kitsune/wiki/forms.py:261
+#: kitsune/wiki/forms.py:293
 msgid "Affects search results"
 msgstr "検索結果に影響します"
 
-#: kitsune/wiki/forms.py:268 kitsune/wiki/jinja2/wiki/translate.html:164
+#: kitsune/wiki/forms.py:300 kitsune/wiki/jinja2/wiki/translate.html:164
 msgid "Search result summary:"
 msgstr "検索結果に表示する要約:"
 
-#: kitsune/wiki/forms.py:269
+#: kitsune/wiki/forms.py:301
 msgid "Only displayed on search results page"
 msgstr "検索結果のページにのみ表示されます"
 
-#: kitsune/wiki/forms.py:289
+#: kitsune/wiki/forms.py:321
 msgid "Expiry date:"
 msgstr "有効期限:"
 
-#: kitsune/wiki/forms.py:357
+#: kitsune/wiki/forms.py:389
 msgid "Significance:"
 msgstr "重要性:"
 
-#: kitsune/wiki/forms.py:370
+#: kitsune/wiki/forms.py:402
 msgid "Needs change"
 msgstr "変更が必要"
 
-#: kitsune/wiki/forms.py:396
+#: kitsune/wiki/forms.py:428
 msgid "Users:"
 msgstr "ユーザー:"
 
-#: kitsune/wiki/forms.py:397
+#: kitsune/wiki/forms.py:429
 msgid "Start:"
 msgstr "開始日:"
 
-#: kitsune/wiki/forms.py:398
+#: kitsune/wiki/forms.py:430
 msgid "End:"
 msgstr "終了日:"
 
@@ -9464,22 +9513,22 @@ msgstr "タイトルが「{prefix}」で始まるドキュメントはテンプ�
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "リビジョンは英語記事がベースでなければなりません。リビジョン ID %(id)s はこの基準に合いません。"
 
-#: kitsune/wiki/parser.py:63
+#: kitsune/wiki/parser.py:64
 msgid "Table of Contents"
 msgstr "目次"
 
 #. L10n: This error is displayed if a template is included into itself.
-#: kitsune/wiki/parser.py:374
+#: kitsune/wiki/parser.py:375
 #, python-format
 msgid "[Recursive inclusion of \"%s\"]"
 msgstr "[Recursive inclusion of \"%s\"]"
 
-#: kitsune/wiki/parser.py:436
+#: kitsune/wiki/parser.py:437
 #, python-format
 msgid "The document \"%s\" does not exist."
 msgstr "\"%s\" のドキュメントは存在しません。"
 
-#: kitsune/wiki/parser.py:463
+#: kitsune/wiki/parser.py:464
 #, python-format
 msgid "The template \"%s\" does not exist or has no approved revision."
 msgstr "このテンプレート \"%s\" は存在しないか承認されていません。"
@@ -9536,48 +9585,48 @@ msgstr "ダウンロード"
 msgid "browserID"
 msgstr "BrowserID"
 
-#: kitsune/wiki/views.py:928
+#: kitsune/wiki/views.py:923
 msgid "You cannot translate this document."
 msgstr "このドキュメントは翻訳が許可されていません。"
 
-#: kitsune/wiki/views.py:1272
+#: kitsune/wiki/views.py:1267
 msgid "Great to hear &mdash; thanks for the feedback! <br /><span disabled class=helpful-button>&#x1F44D;</span>"
 msgstr "すばらしい &mdash; フィードバックをお寄せいただきありがとうございます！ <br /><span disabled class=helpful-button>&#x1F44D;</span>"
 
-#: kitsune/wiki/views.py:1300
+#: kitsune/wiki/views.py:1295
 msgid "You already voted on this Article."
 msgstr "この記事にはすでに投票済みです。"
 
-#: kitsune/wiki/views.py:1328
+#: kitsune/wiki/views.py:1323
 msgid "Thanks for making us better!"
 msgstr "ご投票ありがとうございます。"
 
-#: kitsune/wiki/views.py:1401
+#: kitsune/wiki/views.py:1396
 #, python-format
 msgid "Revision %s"
 msgstr "リビジョン %s"
 
-#: kitsune/wiki/views.py:1411
+#: kitsune/wiki/views.py:1406
 msgid "Firefox Releases"
 msgstr "Firefox リリース"
 
-#: kitsune/wiki/views.py:1419
+#: kitsune/wiki/views.py:1414
 msgid "Article Revisions"
 msgstr "記事のリビジョン"
 
-#: kitsune/wiki/views.py:1540
+#: kitsune/wiki/views.py:1535
 msgid "{users} added to the contributors successfully!"
 msgstr "{users} さんが貢献者に追加されました。"
 
-#: kitsune/wiki/views.py:1547
+#: kitsune/wiki/views.py:1542
 msgid "There were errors adding new contributors, see below."
 msgstr "新しい貢献者を追加する時にエラーが発生しました。以下を参照してください。"
 
-#: kitsune/wiki/views.py:1567
+#: kitsune/wiki/views.py:1562
 msgid "{user} removed from the contributors successfully!"
 msgstr "{user} さんが貢献者から削除されました。"
 
-#: kitsune/wiki/views.py:1785
+#: kitsune/wiki/views.py:1780
 msgid "Sorry, that article wasn't found."
 msgstr ""
 
@@ -10775,6 +10824,15 @@ msgstr "設定を開く"
 #: kitsune/wiki/jinja2/wikiparser/hook_refresh_button.html:1
 msgid "Refresh Firefox"
 msgstr "Firefox をリフレッシュ"
+
+#~ msgid "The flag is valid and I fixed the issue."
+#~ msgstr "フラグは有効であり、問題を解決しました。"
+
+#~ msgid "The flag is invalid."
+#~ msgstr "フラグは無効です。"
+
+#~ msgid "There is no flagged content pending moderation."
+#~ msgstr "モデレーターの確認待ちとしてフラグが立てられているコンテンツはありません。"
 
 #~ msgid "Relevant to:"
 #~ msgstr "関連性:"
