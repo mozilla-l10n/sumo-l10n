@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: https://github.com/mozilla-l10n/sumo-l10n/issues\n"
-"POT-Creation-Date: 2024-10-09 02:13-0700\n"
+"POT-Creation-Date: 2024-10-23 01:46-0700\n"
 "PO-Revision-Date: 2024-09-15 07:22+0000\n"
 "Last-Translator: Hyeonseok Shin <hyeonseok@gmail.com>\n"
 "Language-Team: Mozilla SUMO Korean Team\n"
@@ -404,19 +404,19 @@ msgstr "3개월"
 msgid "Last Year"
 msgstr "작년"
 
-#: kitsune/dashboards/models.py:110
+#: kitsune/dashboards/models.py:113
 msgid "Percent Localized: Top 20"
 msgstr "지역화 퍼센트: 상위 20"
 
-#: kitsune/dashboards/models.py:111
+#: kitsune/dashboards/models.py:114
 msgid "Percent Localized: Top 100"
 msgstr "지역화 퍼센트: 상위 100"
 
-#: kitsune/dashboards/models.py:112
+#: kitsune/dashboards/models.py:115
 msgid "Percent Localized: All"
 msgstr "지역화 퍼센트: 전체"
 
-#: kitsune/dashboards/models.py:113
+#: kitsune/dashboards/models.py:116
 msgid "Monthly Active Contributors"
 msgstr "월간 주요 활동 공헌자"
 
@@ -827,7 +827,7 @@ msgid "Filter by type:"
 msgstr "타입별 필터: "
 
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:259 kitsune/products/jinja2/products/includes/topic_macros.html:138 kitsune/questions/jinja2/questions/metrics.html:25
-#: kitsune/questions/jinja2/questions/metrics.html:27 kitsune/questions/jinja2/questions/question_list.html:138 kitsune/questions/jinja2/questions/question_list.html:305
+#: kitsune/questions/jinja2/questions/metrics.html:27 kitsune/questions/jinja2/questions/question_list.html:138 kitsune/questions/jinja2/questions/question_list.html:302
 msgid "All"
 msgstr "전체"
 
@@ -2327,6 +2327,14 @@ msgstr "받는 사람"
 msgid "Message Preview:"
 msgstr "메시지 미리보기"
 
+#: kitsune/products/models.py:108
+msgid "Whether this topic is shown to users in the AAQ or not."
+msgstr "이 주제는 AAQ에 사용자에게 표시되기도 하고, 그렇지 않기도 합니다."
+
+#: kitsune/products/models.py:112
+msgid "Whether this topic is shown in navigation menus."
+msgstr "이 주제가 탐색 메뉴에 표시되는지를 결정합니다."
+
 #: kitsune/products/jinja2/products/documents.html:21 kitsune/products/jinja2/products/product.html:12 kitsune/wiki/jinja2/wiki/document.html:27
 msgid "{product} Help"
 msgstr "{product} 도움말"
@@ -2570,14 +2578,6 @@ msgstr "주제"
 #: kitsune/products/jinja2/products/includes/topic_macros.html:139
 msgid "All articles and threads"
 msgstr "모든 문서 및 스레드"
-
-#: kitsune/products/models/models.py:110
-msgid "Whether this topic is shown to users in the AAQ or not."
-msgstr "이 주제는 AAQ에 사용자에게 표시되기도 하고, 그렇지 않기도 합니다."
-
-#: kitsune/products/models/models.py:114
-msgid "Whether this topic is shown in navigation menus."
-msgstr "이 주제가 탐색 메뉴에 표시되는지를 결정합니다."
 
 #: kitsune/questions/events.py:35
 msgid "Please confirm your email address"
@@ -3016,7 +3016,7 @@ msgid "Please ask a new question if you need help."
 msgstr "만약 도움이 필요하시면 새로운 질문을 올려주세요."
 
 #. {n} is the number of replies.
-#: kitsune/questions/jinja2/questions/question_details.html:90 kitsune/questions/jinja2/questions/question_list.html:235
+#: kitsune/questions/jinja2/questions/question_details.html:90 kitsune/questions/jinja2/questions/question_list.html:232
 msgid "reply"
 msgid_plural "replies"
 msgstr[0] "답장"
@@ -3030,7 +3030,7 @@ msgid "has this problem"
 msgid_plural "have this problem"
 msgstr[0] "이 문제를 만남"
 
-#: kitsune/questions/jinja2/questions/question_details.html:116 kitsune/questions/jinja2/questions/question_list.html:244
+#: kitsune/questions/jinja2/questions/question_details.html:116 kitsune/questions/jinja2/questions/question_list.html:241
 msgid "view"
 msgid_plural "views"
 msgstr[0] "보기"
@@ -3155,7 +3155,7 @@ msgstr "질문 상세"
 msgid "Product"
 msgstr "제품"
 
-#: kitsune/questions/jinja2/questions/question_details.html:462 kitsune/questions/jinja2/questions/question_list.html:310
+#: kitsune/questions/jinja2/questions/question_details.html:462 kitsune/questions/jinja2/questions/question_list.html:307
 msgid "Topic"
 msgstr "주제"
 
@@ -3257,39 +3257,43 @@ msgstr "공헌됨"
 msgid "Archived"
 msgstr "보존"
 
-#: kitsune/questions/jinja2/questions/question_list.html:239
+#: kitsune/questions/jinja2/questions/includes/answer.html:85 kitsune/questions/jinja2/questions/question_list.html:224
+msgid "Marked as spam"
+msgstr "스팸으로 표시됨"
+
+#: kitsune/questions/jinja2/questions/question_list.html:236
 msgid "votes this week"
 msgstr "금주 추천 수"
 
-#: kitsune/questions/jinja2/questions/question_list.html:256
+#: kitsune/questions/jinja2/questions/question_list.html:253
 msgid "Asked by <strong><a rel=\"nofollow\" href=\"{user_url}\">{username}</a></strong> {when}"
 msgstr "{when}에 <strong><a rel=\"nofollow\" href=\"{user_url}\">{username}</a></strong>님이 질문"
 
-#: kitsune/questions/jinja2/questions/question_list.html:260
+#: kitsune/questions/jinja2/questions/question_list.html:257
 msgid "Answered by <strong><a rel=\"nofollow\" href=\"{user_url}\">{username}</a></strong> {when}"
 msgstr "{when}에 <strong><a rel=\"nofollow\" href=\"{user_url}\">{username}</a></strong>님이 답변"
 
-#: kitsune/questions/jinja2/questions/question_list.html:265
+#: kitsune/questions/jinja2/questions/question_list.html:262
 msgid "<a href=\"{reply_url}\">Last reply</a> by <strong><a rel=\"nofollow\" href=\"{user_url}\">{username}</a></strong> {when}"
 msgstr "{when}에 <strong><a rel=\"nofollow\" href=\"{user_url}\">{username}</a></strong>님이 <a href=\"{reply_url}\">마지막 답변</a>"
 
-#: kitsune/questions/jinja2/questions/question_list.html:279
+#: kitsune/questions/jinja2/questions/question_list.html:276
 msgid "There are no questions that match the current filter settings."
 msgstr "현재 필터 설정에 해당하는 질문들이 없습니다."
 
-#: kitsune/questions/jinja2/questions/question_list.html:301
+#: kitsune/questions/jinja2/questions/question_list.html:298
 msgid "Filter by"
 msgstr "필터"
 
-#: kitsune/questions/jinja2/questions/question_list.html:330
+#: kitsune/questions/jinja2/questions/question_list.html:327
 msgid "Show me"
 msgstr "더 보기"
 
-#: kitsune/questions/jinja2/questions/question_list.html:331
+#: kitsune/questions/jinja2/questions/question_list.html:328
 msgid "Posts from everyone"
 msgstr "모든 글 보기"
 
-#: kitsune/questions/jinja2/questions/question_list.html:332
+#: kitsune/questions/jinja2/questions/question_list.html:329
 msgid "My contributions"
 msgstr "내 공헌 목록"
 
@@ -3542,10 +3546,6 @@ msgstr "질문자"
 #: kitsune/questions/jinja2/questions/includes/answer.html:76
 msgid "Chosen Solution"
 msgstr "선택된 해결법"
-
-#: kitsune/questions/jinja2/questions/includes/answer.html:85
-msgid "Marked as spam"
-msgstr "스팸으로 표시됨"
 
 #: kitsune/questions/jinja2/questions/includes/answer.html:116
 msgid "Helpful?"
@@ -8296,6 +8296,10 @@ msgstr "지역 통계"
 #: kitsune/sumo/jinja2/includes/common_macros.html:880
 msgid "Aggregated metrics"
 msgstr "총 통계"
+
+#: kitsune/sumo/jinja2/includes/common_macros.html:886
+msgid "Show More"
+msgstr ""
 
 #: kitsune/sumo/jinja2/includes/common_macros.html:926
 msgid "What's New"
