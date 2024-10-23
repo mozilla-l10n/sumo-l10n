@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: https://github.com/mozilla-l10n/sumo-l10n/issues\n"
-"POT-Creation-Date: 2024-10-09 02:13-0700\n"
+"POT-Creation-Date: 2024-10-23 01:46-0700\n"
 "PO-Revision-Date: 2024-09-01 13:10+0000\n"
 "Last-Translator: Cristian Silaghi <cristian.silaghi@mozilla.ro>\n"
 "Language-Team: Romanian <LL@li.org>\n"
@@ -432,19 +432,19 @@ msgstr "Ultimele 90 de zile"
 msgid "Last Year"
 msgstr "Săptămâna trecută"
 
-#: kitsune/dashboards/models.py:110
+#: kitsune/dashboards/models.py:113
 msgid "Percent Localized: Top 20"
 msgstr "Procent localizate: top 20"
 
-#: kitsune/dashboards/models.py:111
+#: kitsune/dashboards/models.py:114
 msgid "Percent Localized: Top 100"
 msgstr "Procent localizate: top 100"
 
-#: kitsune/dashboards/models.py:112
+#: kitsune/dashboards/models.py:115
 msgid "Percent Localized: All"
 msgstr "Procent localizate: toate"
 
-#: kitsune/dashboards/models.py:113
+#: kitsune/dashboards/models.py:116
 msgid "Monthly Active Contributors"
 msgstr "Colaboratori activi lunar"
 
@@ -858,7 +858,7 @@ msgid "Filter by type:"
 msgstr "Filtrează după tip:"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:259 kitsune/products/jinja2/products/includes/topic_macros.html:138 kitsune/questions/jinja2/questions/metrics.html:25
-#: kitsune/questions/jinja2/questions/metrics.html:27 kitsune/questions/jinja2/questions/question_list.html:138 kitsune/questions/jinja2/questions/question_list.html:305
+#: kitsune/questions/jinja2/questions/metrics.html:27 kitsune/questions/jinja2/questions/question_list.html:138 kitsune/questions/jinja2/questions/question_list.html:302
 msgid "All"
 msgstr "Toate"
 
@@ -2369,6 +2369,14 @@ msgstr ""
 msgid "Message Preview:"
 msgstr "Previzualizarea mesajului:"
 
+#: kitsune/products/models.py:108
+msgid "Whether this topic is shown to users in the AAQ or not."
+msgstr "Dacă acest subiect este afișat utilizatorilor din AAQ sau nu."
+
+#: kitsune/products/models.py:112
+msgid "Whether this topic is shown in navigation menus."
+msgstr ""
+
 #: kitsune/products/jinja2/products/documents.html:21 kitsune/products/jinja2/products/product.html:12 kitsune/wiki/jinja2/wiki/document.html:27
 msgid "{product} Help"
 msgstr "Ajutor {product}"
@@ -2619,14 +2627,6 @@ msgstr "Subiecte"
 #: kitsune/products/jinja2/products/includes/topic_macros.html:139
 msgid "All articles and threads"
 msgstr "Toate articolele și subiectele"
-
-#: kitsune/products/models/models.py:110
-msgid "Whether this topic is shown to users in the AAQ or not."
-msgstr "Dacă acest subiect este afișat utilizatorilor din AAQ sau nu."
-
-#: kitsune/products/models/models.py:114
-msgid "Whether this topic is shown in navigation menus."
-msgstr ""
 
 #: kitsune/questions/events.py:35
 msgid "Please confirm your email address"
@@ -3064,7 +3064,7 @@ msgid "Please ask a new question if you need help."
 msgstr "Adresează o întrebare nouă dacă ai nevoie de ajutor."
 
 #. {n} is the number of replies.
-#: kitsune/questions/jinja2/questions/question_details.html:90 kitsune/questions/jinja2/questions/question_list.html:235
+#: kitsune/questions/jinja2/questions/question_details.html:90 kitsune/questions/jinja2/questions/question_list.html:232
 msgid "reply"
 msgid_plural "replies"
 msgstr[0] "răspuns"
@@ -3082,7 +3082,7 @@ msgstr[0] "are această problemă"
 msgstr[1] "au această problemă"
 msgstr[2] "au această problemă"
 
-#: kitsune/questions/jinja2/questions/question_details.html:116 kitsune/questions/jinja2/questions/question_list.html:244
+#: kitsune/questions/jinja2/questions/question_details.html:116 kitsune/questions/jinja2/questions/question_list.html:241
 msgid "view"
 msgid_plural "views"
 msgstr[0] "vizualizare"
@@ -3213,7 +3213,7 @@ msgstr "Detalii întrebare"
 msgid "Product"
 msgstr "Produs"
 
-#: kitsune/questions/jinja2/questions/question_details.html:462 kitsune/questions/jinja2/questions/question_list.html:310
+#: kitsune/questions/jinja2/questions/question_details.html:462 kitsune/questions/jinja2/questions/question_list.html:307
 msgid "Topic"
 msgstr "Subiect"
 
@@ -3320,42 +3320,46 @@ msgstr "Contribuite"
 msgid "Archived"
 msgstr "Arhivate"
 
-#: kitsune/questions/jinja2/questions/question_list.html:239
+#: kitsune/questions/jinja2/questions/includes/answer.html:85 kitsune/questions/jinja2/questions/question_list.html:224
+msgid "Marked as spam"
+msgstr "Marcat ca spam"
+
+#: kitsune/questions/jinja2/questions/question_list.html:236
 msgid "votes this week"
 msgstr "voturi în această săptămână"
 
-#: kitsune/questions/jinja2/questions/question_list.html:256
+#: kitsune/questions/jinja2/questions/question_list.html:253
 #, fuzzy
 msgid "Asked by <strong><a rel=\"nofollow\" href=\"{user_url}\">{username}</a></strong> {when}"
 msgstr "Postată de <strong><a href=\"{user_url}\">{username}</a></strong> {when}"
 
-#: kitsune/questions/jinja2/questions/question_list.html:260
+#: kitsune/questions/jinja2/questions/question_list.html:257
 #, fuzzy
 msgid "Answered by <strong><a rel=\"nofollow\" href=\"{user_url}\">{username}</a></strong> {when}"
 msgstr "Cu răspuns de la <strong><a href=\"{user_url}\">{username}</a></strong> {when}"
 
-#: kitsune/questions/jinja2/questions/question_list.html:265
+#: kitsune/questions/jinja2/questions/question_list.html:262
 #, fuzzy
 msgid "<a href=\"{reply_url}\">Last reply</a> by <strong><a rel=\"nofollow\" href=\"{user_url}\">{username}</a></strong> {when}"
 msgstr "<a href=\"{reply_url}\">Ultimul răspuns</a> de la <strong><a href=\"{user_url}\">{username}</a></strong> {when}"
 
-#: kitsune/questions/jinja2/questions/question_list.html:279
+#: kitsune/questions/jinja2/questions/question_list.html:276
 msgid "There are no questions that match the current filter settings."
 msgstr "Nu sunt întrebări corespunzătoare filtrelor curente."
 
-#: kitsune/questions/jinja2/questions/question_list.html:301
+#: kitsune/questions/jinja2/questions/question_list.html:298
 msgid "Filter by"
 msgstr "Filtrează după"
 
-#: kitsune/questions/jinja2/questions/question_list.html:330
+#: kitsune/questions/jinja2/questions/question_list.html:327
 msgid "Show me"
 msgstr "Afișează"
 
-#: kitsune/questions/jinja2/questions/question_list.html:331
+#: kitsune/questions/jinja2/questions/question_list.html:328
 msgid "Posts from everyone"
 msgstr "Postări de la oricine"
 
-#: kitsune/questions/jinja2/questions/question_list.html:332
+#: kitsune/questions/jinja2/questions/question_list.html:329
 msgid "My contributions"
 msgstr "Contribuțiile mele"
 
@@ -3612,10 +3616,6 @@ msgstr "Deținătorul întrebării"
 #: kitsune/questions/jinja2/questions/includes/answer.html:76
 msgid "Chosen Solution"
 msgstr "Soluție aleasă"
-
-#: kitsune/questions/jinja2/questions/includes/answer.html:85
-msgid "Marked as spam"
-msgstr "Marcat ca spam"
 
 #: kitsune/questions/jinja2/questions/includes/answer.html:116
 msgid "Helpful?"
@@ -8447,6 +8447,10 @@ msgstr ""
 
 #: kitsune/sumo/jinja2/includes/common_macros.html:880
 msgid "Aggregated metrics"
+msgstr ""
+
+#: kitsune/sumo/jinja2/includes/common_macros.html:886
+msgid "Show More"
 msgstr ""
 
 #: kitsune/sumo/jinja2/includes/common_macros.html:926

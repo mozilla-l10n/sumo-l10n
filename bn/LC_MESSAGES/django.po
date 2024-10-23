@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  support.mozilla.com\n"
 "Report-Msgid-Bugs-To: https://github.com/mozilla-l10n/sumo-l10n/issues\n"
-"POT-Creation-Date: 2024-10-09 02:13-0700\n"
+"POT-Creation-Date: 2024-10-23 01:46-0700\n"
 "PO-Revision-Date: 2022-08-07 23:49+0000\n"
 "Last-Translator: আফতাবুজ্জামান <Leemon432@gmail.com>\n"
 "Language-Team: Bengali\n"
@@ -403,19 +403,19 @@ msgstr "গত ৯০ দিন"
 msgid "Last Year"
 msgstr "গত সপ্তাহ"
 
-#: kitsune/dashboards/models.py:110
+#: kitsune/dashboards/models.py:113
 msgid "Percent Localized: Top 20"
 msgstr "লোকালাইজ হয়েছে এমন শতাংশ : শীর্ষ ২০"
 
-#: kitsune/dashboards/models.py:111
+#: kitsune/dashboards/models.py:114
 msgid "Percent Localized: Top 100"
 msgstr "লোকালাইজ হয়েছে এমন শতাংশ : শীর্ষ 100"
 
-#: kitsune/dashboards/models.py:112
+#: kitsune/dashboards/models.py:115
 msgid "Percent Localized: All"
 msgstr "লোকালাইজ হয়েছে এমন শতাংশ : সব"
 
-#: kitsune/dashboards/models.py:113
+#: kitsune/dashboards/models.py:116
 msgid "Monthly Active Contributors"
 msgstr "মাসিক সক্রিয় অবদানকারী"
 
@@ -826,7 +826,7 @@ msgid "Filter by type:"
 msgstr "টাইপ অনুযায়ী ফিল্টার:"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:259 kitsune/products/jinja2/products/includes/topic_macros.html:138 kitsune/questions/jinja2/questions/metrics.html:25
-#: kitsune/questions/jinja2/questions/metrics.html:27 kitsune/questions/jinja2/questions/question_list.html:138 kitsune/questions/jinja2/questions/question_list.html:305
+#: kitsune/questions/jinja2/questions/metrics.html:27 kitsune/questions/jinja2/questions/question_list.html:138 kitsune/questions/jinja2/questions/question_list.html:302
 msgid "All"
 msgstr "সকল"
 
@@ -2335,6 +2335,14 @@ msgstr ""
 msgid "Message Preview:"
 msgstr "বার্তা নিরীক্ষণ:"
 
+#: kitsune/products/models.py:108
+msgid "Whether this topic is shown to users in the AAQ or not."
+msgstr "এই বিষয়টি ব্যাবহারকারীদের AAQ-তে দেখানো হয়েছে নাকি হয়নি।"
+
+#: kitsune/products/models.py:112
+msgid "Whether this topic is shown in navigation menus."
+msgstr ""
+
 #: kitsune/products/jinja2/products/documents.html:21 kitsune/products/jinja2/products/product.html:12 kitsune/wiki/jinja2/wiki/document.html:27
 msgid "{product} Help"
 msgstr "{product} সাহায্য"
@@ -2603,14 +2611,6 @@ msgstr "বিষয়"
 #, fuzzy
 msgid "All articles and threads"
 msgstr "সকল প্রবন্ধের পরিবর্তন করা দরকার"
-
-#: kitsune/products/models/models.py:110
-msgid "Whether this topic is shown to users in the AAQ or not."
-msgstr "এই বিষয়টি ব্যাবহারকারীদের AAQ-তে দেখানো হয়েছে নাকি হয়নি।"
-
-#: kitsune/products/models/models.py:114
-msgid "Whether this topic is shown in navigation menus."
-msgstr ""
 
 #: kitsune/questions/events.py:35
 msgid "Please confirm your email address"
@@ -3050,7 +3050,7 @@ msgid "Please ask a new question if you need help."
 msgstr "যদি আপনি সাহায্য চান তাহলে অনুগ্রহ করে একটি নতুন প্রশ্ন জিজ্ঞাসা করুন"
 
 #. {n} is the number of replies.
-#: kitsune/questions/jinja2/questions/question_details.html:90 kitsune/questions/jinja2/questions/question_list.html:235
+#: kitsune/questions/jinja2/questions/question_details.html:90 kitsune/questions/jinja2/questions/question_list.html:232
 msgid "reply"
 msgid_plural "replies"
 msgstr[0] "উত্তর"
@@ -3066,7 +3066,7 @@ msgid_plural "have this problem"
 msgstr[0] "এই সমস্যাটি আছে"
 msgstr[1] "এই সমস্যাটি আছে"
 
-#: kitsune/questions/jinja2/questions/question_details.html:116 kitsune/questions/jinja2/questions/question_list.html:244
+#: kitsune/questions/jinja2/questions/question_details.html:116 kitsune/questions/jinja2/questions/question_list.html:241
 msgid "view"
 msgid_plural "views"
 msgstr[0] "দেখুন"
@@ -3200,7 +3200,7 @@ msgstr "বিস্তারিত প্রশ্ন করুন"
 msgid "Product"
 msgstr "প্রোডাক্ট"
 
-#: kitsune/questions/jinja2/questions/question_details.html:462 kitsune/questions/jinja2/questions/question_list.html:310
+#: kitsune/questions/jinja2/questions/question_details.html:462 kitsune/questions/jinja2/questions/question_list.html:307
 msgid "Topic"
 msgstr "বিষয়"
 
@@ -3307,42 +3307,46 @@ msgstr "অবদান করা হয়েছে"
 msgid "Archived"
 msgstr "সংরক্ষণ করা হয়েছে"
 
-#: kitsune/questions/jinja2/questions/question_list.html:239
+#: kitsune/questions/jinja2/questions/includes/answer.html:85 kitsune/questions/jinja2/questions/question_list.html:224
+msgid "Marked as spam"
+msgstr "স্প্যাম হিসেবে চিহ্নিত করুন"
+
+#: kitsune/questions/jinja2/questions/question_list.html:236
 msgid "votes this week"
 msgstr "এই সপ্তাহের ভোট"
 
-#: kitsune/questions/jinja2/questions/question_list.html:256
+#: kitsune/questions/jinja2/questions/question_list.html:253
 #, fuzzy
 msgid "Asked by <strong><a rel=\"nofollow\" href=\"{user_url}\">{username}</a></strong> {when}"
 msgstr "<a href=\"{user_url}\">{username}</a> দ্বারা জিজ্ঞাসিত {when}"
 
-#: kitsune/questions/jinja2/questions/question_list.html:260
+#: kitsune/questions/jinja2/questions/question_list.html:257
 #, fuzzy
 msgid "Answered by <strong><a rel=\"nofollow\" href=\"{user_url}\">{username}</a></strong> {when}"
 msgstr "<a href=\"{user_url}\">{username}</a> দ্বারা জবাব দেওয়া হয়েছে {when}"
 
-#: kitsune/questions/jinja2/questions/question_list.html:265
+#: kitsune/questions/jinja2/questions/question_list.html:262
 #, fuzzy
 msgid "<a href=\"{reply_url}\">Last reply</a> by <strong><a rel=\"nofollow\" href=\"{user_url}\">{username}</a></strong> {when}"
 msgstr "<a href=\"{reply_url}\">শেষ উত্তর</a> দ্বারা <a href=\"{user_url}\">{username}</a> {when}"
 
-#: kitsune/questions/jinja2/questions/question_list.html:279
+#: kitsune/questions/jinja2/questions/question_list.html:276
 msgid "There are no questions that match the current filter settings."
 msgstr "বর্তমান ফিল্টার সেটিংসের সাথে মেলে এমন কোন প্রশ্ন নেই।"
 
-#: kitsune/questions/jinja2/questions/question_list.html:301
+#: kitsune/questions/jinja2/questions/question_list.html:298
 msgid "Filter by"
 msgstr "ফিল্টার করা হয়েছে"
 
-#: kitsune/questions/jinja2/questions/question_list.html:330
+#: kitsune/questions/jinja2/questions/question_list.html:327
 msgid "Show me"
 msgstr "আমাকে দেখান"
 
-#: kitsune/questions/jinja2/questions/question_list.html:331
+#: kitsune/questions/jinja2/questions/question_list.html:328
 msgid "Posts from everyone"
 msgstr "সবার পোস্ট"
 
-#: kitsune/questions/jinja2/questions/question_list.html:332
+#: kitsune/questions/jinja2/questions/question_list.html:329
 msgid "My contributions"
 msgstr "আমার অবদানসমূহ"
 
@@ -3603,10 +3607,6 @@ msgstr "প্রশ্নের মালিক"
 #: kitsune/questions/jinja2/questions/includes/answer.html:76
 msgid "Chosen Solution"
 msgstr "চয়ন করা সমাধান"
-
-#: kitsune/questions/jinja2/questions/includes/answer.html:85
-msgid "Marked as spam"
-msgstr "স্প্যাম হিসেবে চিহ্নিত করুন"
 
 #: kitsune/questions/jinja2/questions/includes/answer.html:116
 #, fuzzy
@@ -8383,6 +8383,10 @@ msgstr ""
 
 #: kitsune/sumo/jinja2/includes/common_macros.html:880
 msgid "Aggregated metrics"
+msgstr ""
+
+#: kitsune/sumo/jinja2/includes/common_macros.html:886
+msgid "Show More"
 msgstr ""
 
 #: kitsune/sumo/jinja2/includes/common_macros.html:926
