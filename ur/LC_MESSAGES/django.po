@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT 1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mozilla-l10n/sumo-l10n/issues\n"
-"POT-Creation-Date: 2024-12-10 00:58-0800\n"
+"POT-Creation-Date: 2025-01-21 02:19-0800\n"
 "PO-Revision-Date: 2023-06-20 08:16+0000\n"
 "Last-Translator: عمر <um.qshi@gmail.com>\n"
 "Language-Team: ur <LL@li.org>\n"
@@ -28,6 +28,14 @@ msgstr "کے بعد دکھائیں"
 #: kitsune/announcements/forms.py:22
 msgid "Show until"
 msgstr "تک دکھائیں"
+
+#: kitsune/announcements/tasks.py:34
+msgid "New announcement for {name}"
+msgstr ""
+
+#: kitsune/announcements/tasks.py:36
+msgid "New announcement for groups [{names}]"
+msgstr ""
 
 #. This is at the end of an email.
 #: kitsune/announcements/jinja2/announcements/email/announcement.html:6 kitsune/announcements/jinja2/announcements/email/announcement.ltxt:7
@@ -351,7 +359,7 @@ msgstr "Android"
 msgid "iOS"
 msgstr ""
 
-#: kitsune/customercare/forms.py:34 kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:11
+#: kitsune/customercare/forms.py:34 kitsune/wiki/views.py:1336 kitsune/wiki/views.py:1356
 msgid "Other"
 msgstr "دیگر"
 
@@ -428,187 +436,187 @@ msgstr "فوری تارہ کاری کی ضرورت ہے"
 msgid "Translation Needed"
 msgstr "ترجمہ کی ضرورت ہے"
 
-#: kitsune/dashboards/readouts.py:333
+#: kitsune/dashboards/readouts.py:379
 msgid "Top 20 Articles"
 msgstr "سرفہرست 20 مضامین"
 
-#: kitsune/dashboards/readouts.py:337
+#: kitsune/dashboards/readouts.py:383
 #, python-format
 msgid "These are the top 20 most visited articles in the last 30 days, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "یہ پچھلے 30 دنوں میں سب سے زیادہ دیکھے جانے والے 20 مضامین ہیں ، جن میں علم کی بنیاد پر آنے والی ٹریفک کا50 % سے زیادہ حصہ ہے۔"
 
-#: kitsune/dashboards/readouts.py:344
+#: kitsune/dashboards/readouts.py:390
 msgid "Top 50 Articles"
 msgstr "اوپر 50 مضامین"
 
-#: kitsune/dashboards/readouts.py:348
+#: kitsune/dashboards/readouts.py:394
 msgid "These are the top 50 most visited articles in the last 30 days."
 msgstr "یہ پچھلے 30 دنوں میں سب سے زیادہ دیکھنے والے بہترین 50 مضامین ہیں۔"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:44 kitsune/dashboards/readouts.py:351
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:44 kitsune/dashboards/readouts.py:397
 msgid "Top 100 Articles"
 msgstr "اوپر 100 مضامین"
 
-#: kitsune/dashboards/readouts.py:355
+#: kitsune/dashboards/readouts.py:401
 #, python-format
 msgid "These are the top 100 most visited articles in the last 30 days, which account for over 99% of the traffic to the Knowledge Base."
 msgstr "یہ پچھلے 30 دنوں میں سب سے زیادہ دیکھے جانے والے 100 مضامین ہیں ، جو علمی بنیاد پر آنے والی ٹریفک کا %99 سے زیادہ حصہ ہے۔"
 
-#: kitsune/dashboards/readouts.py:362 kitsune/dashboards/readouts.py:646 kitsune/dashboards/readouts.py:794 kitsune/dashboards/readouts.py:795 kitsune/sumo/jinja2/includes/common_macros.html:836
+#: kitsune/dashboards/readouts.py:408 kitsune/dashboards/readouts.py:692 kitsune/dashboards/readouts.py:840 kitsune/dashboards/readouts.py:841 kitsune/sumo/jinja2/includes/common_macros.html:836
 #: kitsune/wiki/config.py:99
 msgid "Templates"
 msgstr "ٹیمپلیٹس"
 
-#: kitsune/dashboards/readouts.py:367
+#: kitsune/dashboards/readouts.py:413
 msgid "Templates are a way of reusing pieces of content across KB articles. You can create and update a set of instructions in one place, and then refer to it in other pages."
 msgstr ""
 "سانچے کے بی (KB) مضامین میں مواد کے ٹکڑوں کو دوبارہ استعمال کرنے کا ایک طریقہ ہے۔ آپ ایک ہی جگہ پر ہدایات کا ایک سیٹ تیار اور اپڈیٹ کرسکتے ہیں ، اور پھر دوسرے صفحات میں اس کا حوالہ دے سکتے ہیں۔"
 
-#: kitsune/dashboards/readouts.py:375
+#: kitsune/dashboards/readouts.py:421
 msgid "All Knowledge Base Articles"
 msgstr "تمام علمی اساس کے مضامین"
 
-#: kitsune/dashboards/readouts.py:379
+#: kitsune/dashboards/readouts.py:425
 msgid "This is the number of all Knowledge Base articles that are ready to be localized."
 msgstr "یہ علم کی بنیاد کے تمام مضامین کی تعداد ہے جو لوکلایز ہونے کے لئے تیار ہیں۔"
 
-#: kitsune/dashboards/readouts.py:399
+#: kitsune/dashboards/readouts.py:445
 msgid "Visits in last 30 days"
 msgstr "آخری 30 دنوں میں دورے"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:5 kitsune/dashboards/readouts.py:400 kitsune/wiki/jinja2/wiki/includes/revision_list.html:24
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:5 kitsune/dashboards/readouts.py:446 kitsune/wiki/jinja2/wiki/includes/revision_list.html:24
 msgid "Status"
 msgstr "سٹیٹس"
 
-#: kitsune/dashboards/readouts.py:401 kitsune/dashboards/readouts.py:1089
+#: kitsune/dashboards/readouts.py:447 kitsune/dashboards/readouts.py:1135
 msgid "Most Viewed"
 msgstr "سب سے زیادہ دیکھا گیا"
 
-#: kitsune/dashboards/readouts.py:401
+#: kitsune/dashboards/readouts.py:447
 msgid "Most Recent"
 msgstr "سب سے حالیہ"
 
-#: kitsune/dashboards/readouts.py:503 kitsune/dashboards/readouts.py:677
+#: kitsune/dashboards/readouts.py:549 kitsune/dashboards/readouts.py:723
 msgid "Most Visited"
 msgstr "سب سے زیادہ ملاحظہ کردہ"
 
-#: kitsune/dashboards/readouts.py:505
+#: kitsune/dashboards/readouts.py:551
 msgid "All knowledge base articles..."
 msgstr "تمام علمی بنیاد کے مضامین ..."
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:4 kitsune/dashboards/readouts.py:507 kitsune/dashboards/readouts.py:573
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:4 kitsune/dashboards/readouts.py:553 kitsune/dashboards/readouts.py:619
 msgid "Visits"
 msgstr "دورے"
 
-#: kitsune/dashboards/readouts.py:628
+#: kitsune/dashboards/readouts.py:674
 msgid "Changes Needed"
 msgstr "تبدیلیوں کی ضرورت ہے"
 
-#: kitsune/dashboards/readouts.py:631 kitsune/dashboards/readouts.py:1007
+#: kitsune/dashboards/readouts.py:677 kitsune/dashboards/readouts.py:1053
 msgid "Changes Not Ready For Localization"
 msgstr "تبدیلیاں جو لوکلائزیشن کے لئے تیار نہیں ہیں"
 
-#: kitsune/dashboards/readouts.py:648 kitsune/dashboards/readouts.py:797
+#: kitsune/dashboards/readouts.py:694 kitsune/dashboards/readouts.py:843
 msgid "All templates..."
 msgstr "تمام ٹیمپلیٹس..."
 
-#: kitsune/dashboards/readouts.py:653
+#: kitsune/dashboards/readouts.py:699
 msgid "How To Contribute"
 msgstr "تعاون کس طرح کریں"
 
-#: kitsune/dashboards/readouts.py:655
+#: kitsune/dashboards/readouts.py:701
 msgid "All How To Contribute articles..."
 msgstr "تعاون کرنے کے طریقہ کے متعلق  تمام  مضامین  ..."
 
-#: kitsune/dashboards/readouts.py:660 kitsune/wiki/config.py:97
+#: kitsune/dashboards/readouts.py:706 kitsune/wiki/config.py:97
 msgid "Administration"
 msgstr "انتظامیہ"
 
-#: kitsune/dashboards/readouts.py:662
+#: kitsune/dashboards/readouts.py:708
 msgid "All Administration articles..."
 msgstr "منتظمین کے تمام مضامین..."
 
-#: kitsune/dashboards/readouts.py:679
+#: kitsune/dashboards/readouts.py:725
 msgid "All translations..."
 msgstr "تمام ترجمے..."
 
 #. L10n: Not just changes to translations but also unreviewed changes to
 #. docs in this locale that are not translations
-#: kitsune/dashboards/readouts.py:877
+#: kitsune/dashboards/readouts.py:923
 msgid "Unreviewed Changes"
 msgstr ""
 
-#: kitsune/dashboards/readouts.py:879
+#: kitsune/dashboards/readouts.py:925
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "جائزہ نہیں لیا گیا"
 
-#: kitsune/dashboards/readouts.py:880
+#: kitsune/dashboards/readouts.py:926
 msgid "All articles requiring review..."
 msgstr "تمام مضامین کو نظرثانی کی ضرورت ہے..."
 
-#: kitsune/dashboards/readouts.py:882
+#: kitsune/dashboards/readouts.py:928
 msgid "Changed"
 msgstr "تبدیل شدہ"
 
-#: kitsune/dashboards/readouts.py:944
+#: kitsune/dashboards/readouts.py:990
 msgid "Unhelpful Documents"
 msgstr "غیر مددگار دستاویزات"
 
-#: kitsune/dashboards/readouts.py:946
+#: kitsune/dashboards/readouts.py:992
 msgctxt "document"
 msgid "Unhelpful"
 msgstr "غیر مددگار"
 
-#: kitsune/dashboards/readouts.py:947
+#: kitsune/dashboards/readouts.py:993
 msgid "All unhelpful articles..."
 msgstr "تمام غیر مددگار مضامین مضامین ..."
 
-#: kitsune/dashboards/readouts.py:949
+#: kitsune/dashboards/readouts.py:995
 msgid "Total Votes"
 msgstr "کل ووٹس"
 
-#: kitsune/dashboards/readouts.py:950
+#: kitsune/dashboards/readouts.py:996
 msgid "Helpfulness"
 msgstr "مددگار"
 
-#: kitsune/dashboards/readouts.py:1008
+#: kitsune/dashboards/readouts.py:1054
 msgid "Articles which have approved revisions newer than the latest ready-for-localization one"
 msgstr "مضامین جن میں منظور شدہ ترامیم  مقامیانے کے لیے تیار ترامیم کے مقابلے میں جدید تر ہے۔"
 
-#: kitsune/dashboards/readouts.py:1013
+#: kitsune/dashboards/readouts.py:1059
 msgid "All articles with changes not ready for localization..."
 msgstr "تمام مضامین تبدیلی کے ساتھ جو لوکلائزیشن کے لئے تیار نہیں"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:175 kitsune/dashboards/readouts.py:1015 kitsune/wiki/jinja2/wiki/includes/revision_list.html:71
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:175 kitsune/dashboards/readouts.py:1061 kitsune/wiki/jinja2/wiki/includes/revision_list.html:71
 msgid "Approved"
 msgstr "منظور شدہ"
 
-#: kitsune/dashboards/readouts.py:1083
+#: kitsune/dashboards/readouts.py:1129
 msgid "Need Changes"
 msgstr "تبدیلیوں کی ضرورت ہے"
 
-#: kitsune/dashboards/readouts.py:1084
+#: kitsune/dashboards/readouts.py:1130
 msgid "Articles that require changes."
 msgstr "مضامین جن میں تبدیلی کی ضرورت نہیں۔"
 
-#: kitsune/dashboards/readouts.py:1086
+#: kitsune/dashboards/readouts.py:1132
 msgid "All articles that require changes..."
 msgstr "تمام مضامین جن میں تبدیلی... کی ضرورت پے"
 
-#: kitsune/dashboards/readouts.py:1088 kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:45 kitsune/wiki/jinja2/wiki/includes/revision_list.html:30
+#: kitsune/dashboards/readouts.py:1134 kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:45 kitsune/wiki/jinja2/wiki/includes/revision_list.html:30
 msgid "Comment"
 msgstr "تبصرہ"
 
-#: kitsune/dashboards/readouts.py:1127 kitsune/wiki/config.py:100
+#: kitsune/dashboards/readouts.py:1173 kitsune/wiki/config.py:100
 msgid "Canned Responses"
 msgstr "طے شدہ جوابات"
 
-#: kitsune/dashboards/readouts.py:1128
+#: kitsune/dashboards/readouts.py:1174
 msgid "Localization status of all canned responses"
 msgstr "تمام کن شدہ جوابات کی لوکلائزیشن کی حیثیت"
 
-#: kitsune/dashboards/readouts.py:1130
+#: kitsune/dashboards/readouts.py:1176
 msgid "All canned responses articles..."
 msgstr "تمام کن شدہ جوابی مضامین.."
 
@@ -751,12 +759,12 @@ msgid "Review Needed: {comment}"
 msgstr "جائزہ کی ضرورت ہے: {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:33 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:38 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:45
-#: kitsune/sumo/templatetags/jinja_helpers.py:422 kitsune/sumo/views.py:62 kitsune/wiki/jinja2/wiki/includes/document_macros.html:362
+#: kitsune/sumo/templatetags/jinja_helpers.py:422 kitsune/sumo/views.py:62 kitsune/wiki/jinja2/wiki/includes/document_macros.html:369
 msgid "Yes"
 msgstr "ہاں"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:125 kitsune/sumo/templatetags/jinja_helpers.py:422 kitsune/sumo/views.py:63
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:363
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:373
 msgid "No"
 msgstr "نہیں"
 
@@ -819,7 +827,7 @@ msgstr "تمام موضوعات"
 msgid "Filter by type:"
 msgstr "قسم کے لحاظ سے فلٹر کریں:"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:259 kitsune/products/jinja2/products/includes/topic_macros.html:138 kitsune/questions/jinja2/questions/metrics.html:25
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:259 kitsune/products/jinja2/products/includes/topic_macros.html:151 kitsune/questions/jinja2/questions/metrics.html:25
 #: kitsune/questions/jinja2/questions/metrics.html:27 kitsune/questions/jinja2/questions/question_list.html:138 kitsune/questions/jinja2/questions/question_list.html:302
 msgid "All"
 msgstr "تمام"
@@ -876,11 +884,11 @@ msgstr "تسلیم  شدہ اور ٹھیک"
 msgid "Rejected"
 msgstr "مسترد"
 
-#: kitsune/flagit/views.py:84
+#: kitsune/flagit/views.py:86
 msgid "You already flagged this content."
 msgstr "آپ نے پہلے ہی اس مواد کو نشان زد کیا ہے۔"
 
-#: kitsune/flagit/views.py:86
+#: kitsune/flagit/views.py:88
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr "آپ نے اس مواد کو پرچم زد کیا ہے۔ ایک منتظم جلد ہی آپ کے جمع کردہ کا جائزہ لے گا۔"
 
@@ -900,24 +908,28 @@ msgstr "id = {id} کے ساتھ {t} اب موجود نہیں ہے۔"
 msgid "Update Status:"
 msgstr "حیثیت کی تازہکاری"
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:28 kitsune/flagit/jinja2/flagit/queue.html:24
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:33 kitsune/flagit/jinja2/flagit/queue.html:24
 msgid "Please select..."
 msgstr "براہ مہربانی منتخب کریں..."
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:29
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:34
 msgid "Content categorization is updated."
 msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:30
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:35
 msgid "Content is appropriately categorized."
 msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:33 kitsune/flagit/jinja2/flagit/queue.html:40 kitsune/users/jinja2/users/edit_contributions.html:16
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:38 kitsune/flagit/jinja2/flagit/queue.html:40 kitsune/users/jinja2/users/edit_contributions.html:16
 #: kitsune/users/jinja2/users/edit_settings.html:17 kitsune/users/jinja2/users/edit_watches.html:30
 msgid "Update"
 msgstr "تازہ کاری کریں"
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:39 kitsune/flagit/jinja2/flagit/queue.html:46
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:39 kitsune/wiki/jinja2/wiki/includes/document_macros.html:374 kitsune/wiki/jinja2/wiki/includes/survey_form.html:14
+msgid "Please wait..."
+msgstr "برائے مہربانی انتظار کریں..."
+
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:45 kitsune/flagit/jinja2/flagit/queue.html:46
 msgid "There is no content pending moderation."
 msgstr ""
 
@@ -1170,6 +1182,7 @@ msgstr "اپلوڈ  شدہ  {date}"
 #: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:191 kitsune/tidings/jinja2/tidings/unsub.html:18 kitsune/users/jinja2/users/confirm_avatar_delete.html:23
 #: kitsune/users/jinja2/users/edit_profile.html:80 kitsune/wiki/jinja2/wiki/confirm_remove_contributor.html:15 kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:15
 #: kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:11 kitsune/wiki/jinja2/wiki/includes/review_form.html:72 kitsune/wiki/jinja2/wiki/includes/review_form.html:96
+#: kitsune/wiki/jinja2/wiki/includes/survey_form.html:42
 msgid "Cancel"
 msgstr "منسوخ کریں"
 
@@ -2488,9 +2501,9 @@ msgstr "نقل مکانی کریں"
 msgid "Themes"
 msgstr "تھیمز"
 
-#: kitsune/products/jinja2/products/product.html:126
-msgid "Frequent Topics"
-msgstr "عمومی  عنوانات"
+#: kitsune/products/jinja2/products/includes/topic_macros.html:88 kitsune/products/jinja2/products/product.html:126
+msgid "Topics"
+msgstr "موضوعات"
 
 #: kitsune/products/jinja2/products/product.html:127
 msgid "Explore the knowledge base."
@@ -2536,39 +2549,31 @@ msgstr "ابھی ڈائونلوڈ کریں"
 msgid "Filter by product"
 msgstr ""
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:14
-msgid "See all"
-msgstr "تمام دیکھیں"
-
-#: kitsune/products/jinja2/products/includes/topic_macros.html:45 kitsune/wiki/jinja2/wiki/includes/document_macros.html:447
+#: kitsune/products/jinja2/products/includes/topic_macros.html:58 kitsune/wiki/jinja2/wiki/includes/document_macros.html:457
 msgid "Still need help?"
 msgstr "اببھی مدد کی ضرورت ہے؟"
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:49
+#: kitsune/products/jinja2/products/includes/topic_macros.html:62
 msgid "We’re here for you! If you haven’t found a solution after exploring our help articles, you can get in touch with our support team."
 msgstr ""
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:51
+#: kitsune/products/jinja2/products/includes/topic_macros.html:64
 msgid "We’re here for you. Post a question to our support forums and get answers from our community of experts."
 msgstr "ہم آپ کے لئے حاضر ہیں۔ ہمارے سپورٹ فورمز پر ایک سوال پوسٹ کریں اور  ہماری کمیونٹی  کے  ماہرین سے جوابات حاصل کریں۔"
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:62 kitsune/questions/jinja2/questions/includes/aaq_macros.html:76 kitsune/questions/jinja2/questions/new_question.html:4
+#: kitsune/products/jinja2/products/includes/topic_macros.html:75 kitsune/questions/jinja2/questions/includes/aaq_macros.html:76 kitsune/questions/jinja2/questions/new_question.html:4
 msgid "Get Support"
 msgstr "معاونت حاصل کریں"
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:64 kitsune/questions/jinja2/questions/question_list.html:113
+#: kitsune/products/jinja2/products/includes/topic_macros.html:77 kitsune/questions/jinja2/questions/question_list.html:113
 msgid "Ask the Community"
 msgstr "برادری سے پوچھیں"
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:75
+#: kitsune/products/jinja2/products/includes/topic_macros.html:88
 msgid "Popular"
 msgstr ""
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:75
-msgid "Topics"
-msgstr "موضوعات"
-
-#: kitsune/products/jinja2/products/includes/topic_macros.html:139
+#: kitsune/products/jinja2/products/includes/topic_macros.html:152
 msgid "All articles and threads"
 msgstr "تمام مضامین اور تھریڈز"
 
@@ -2789,7 +2794,7 @@ msgstr "حل کامیابی کے ساتھ ختم کردیا گیا۔"
 msgid "Glad to hear it!"
 msgstr "یہ سن کر خوشی ہوئی!"
 
-#: kitsune/questions/views.py:979 kitsune/wiki/views.py:1276
+#: kitsune/questions/views.py:979
 msgid "Sorry to hear that."
 msgstr "یہ سن کر افسوس ہوا."
 
@@ -2940,7 +2945,7 @@ msgstr "سپورٹ فورم میٹرکس"
 msgid "Metrics"
 msgstr "میٹرکس"
 
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:5 kitsune/questions/jinja2/questions/new_question.html:32 kitsune/wiki/jinja2/wiki/includes/document_macros.html:459
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:5 kitsune/questions/jinja2/questions/new_question.html:32 kitsune/wiki/jinja2/wiki/includes/document_macros.html:469
 msgid "Contact Support"
 msgstr "سپورٹ سے رابطہ کریں۔"
 
@@ -2949,7 +2954,7 @@ msgid "Ask your question"
 msgstr "اپنا سوال پوچھیں"
 
 #: kitsune/questions/jinja2/questions/new_question.html:40 kitsune/wiki/jinja2/wiki/includes/document_macros.html:269 kitsune/wiki/jinja2/wiki/includes/flag_form.html:34
-#: kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:10 kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:23 kitsune/wiki/jinja2/wiki/recent_revisions.html:31
+#: kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:10 kitsune/wiki/jinja2/wiki/includes/survey_form.html:46 kitsune/wiki/jinja2/wiki/recent_revisions.html:31
 msgid "Submit"
 msgstr "جمع کریں"
 
@@ -7832,6 +7837,10 @@ msgstr "بیج ان لوگوں کو دیا گیا جنہوں نے کٹیسون �
 msgid "To field is required."
 msgstr "یہ قطعہ درکار ہے۔"
 
+#: kitsune/sumo/form_fields.py:110
+msgid "{name} is not a valid username."
+msgstr ""
+
 #: kitsune/sumo/json_utils.py:74
 msgid "Invalid callback function."
 msgstr "ناجایز کال بیک بیک فنکشن۔"
@@ -9549,44 +9558,76 @@ msgstr "browserID"
 msgid "You cannot translate this document."
 msgstr "آپ اس دستاویز کا ترجمہ نہیں کرسکتے ہیں۔"
 
-#: kitsune/wiki/views.py:1271
-msgid "Great to hear &mdash; thanks for the feedback! <br /><span disabled class=helpful-button>&#x1F44D;</span>"
+#: kitsune/wiki/views.py:1257 kitsune/wiki/views.py:1276
+msgid "Thanks for your feedback!"
 msgstr ""
 
-#: kitsune/wiki/views.py:1299
-msgid "You already voted on this Article."
-msgstr "آپ پہلے ہی اس مضمون پر ووٹ دے چکے ہیں۔"
+#: kitsune/wiki/views.py:1324
+msgid "You voted \"Yes 👍\" Please tell us more"
+msgstr ""
 
-#: kitsune/wiki/views.py:1327
-msgid "Thanks for making us better!"
-msgstr "ہمیں بہتر بنانے کے لئے شکریہ!"
+#: kitsune/wiki/views.py:1326
+msgid "Article is accurate"
+msgstr ""
 
-#: kitsune/wiki/views.py:1400
+#: kitsune/wiki/views.py:1329
+msgid "Article is easy to understand"
+msgstr ""
+
+#: kitsune/wiki/views.py:1331
+msgid "The visuals are helpful"
+msgstr ""
+
+#: kitsune/wiki/views.py:1334
+msgid "Article provided the information I needed"
+msgstr ""
+
+#: kitsune/wiki/views.py:1344
+msgid "You voted \"No 👎\" Please tell us more"
+msgstr ""
+
+#: kitsune/wiki/views.py:1346
+msgid "Article is inaccurate"
+msgstr ""
+
+#: kitsune/wiki/views.py:1347
+msgid "Article is confusing"
+msgstr ""
+
+#: kitsune/wiki/views.py:1350
+msgid "Missing, unclear, or unhelpful visuals"
+msgstr ""
+
+#: kitsune/wiki/views.py:1354
+msgid "Article didn't provide the information I needed"
+msgstr ""
+
+#: kitsune/wiki/views.py:1437
 #, python-format
 msgid "Revision %s"
 msgstr "نظر ثانی  %s"
 
-#: kitsune/wiki/views.py:1410
+#: kitsune/wiki/views.py:1447
 msgid "Firefox Releases"
 msgstr "Firefox ریلیز"
 
-#: kitsune/wiki/views.py:1418
+#: kitsune/wiki/views.py:1455
 msgid "Article Revisions"
 msgstr "مضمون کی نظرسنیاں"
 
-#: kitsune/wiki/views.py:1539
+#: kitsune/wiki/views.py:1576
 msgid "{users} added to the contributors successfully!"
 msgstr "{users} کو شراکت کاروں کو کامیابی کے ساتھ شامل کر لیا!"
 
-#: kitsune/wiki/views.py:1546
+#: kitsune/wiki/views.py:1583
 msgid "There were errors adding new contributors, see below."
 msgstr ""
 
-#: kitsune/wiki/views.py:1566
+#: kitsune/wiki/views.py:1603
 msgid "{user} removed from the contributors successfully!"
 msgstr "{user} کو شراکت داروں سے کامیابی کے ساتھ ہٹا دیا گیا!"
 
-#: kitsune/wiki/views.py:1782
+#: kitsune/wiki/views.py:1819
 msgid "Sorry, that article wasn't found."
 msgstr ""
 
@@ -9725,7 +9766,7 @@ msgstr "<label> تہدلی کی ضرورت ہے:</label>%(comment)s"
 msgid "For help with writing articles, check out the <a href=\"%(url)s\">Support Document Guide</a>."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/edit.html:58 kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:16 kitsune/wiki/jinja2/wiki/new_document.html:73 kitsune/wiki/jinja2/wiki/translate.html:170
+#: kitsune/wiki/jinja2/wiki/edit.html:58 kitsune/wiki/jinja2/wiki/includes/survey_form.html:36 kitsune/wiki/jinja2/wiki/new_document.html:73 kitsune/wiki/jinja2/wiki/translate.html:170
 msgid "characters remaining."
 msgstr "حرف باقی ہیں"
 
@@ -10509,36 +10550,32 @@ msgstr "اس مضمون کو مخصوص بنائیں"
 msgid "Was this article helpful?"
 msgstr "کیا یہ مضمون مددگار تھا؟"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:364
-msgid "Please wait..."
-msgstr "برائے مہربانی انتظار کریں..."
-
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:374
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:384
 msgid "Leave a message for {contributor}: "
 msgstr "{contributor} کیلئے پیغام چھوڑیں:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:376
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:386
 msgid "Leave a message for {rest} and {last}:"
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:385
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:395
 #, python-format
 msgid "Warning: This page is also being edited by %(user)s!"
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:388
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:398
 msgid "If you know what you are doing, you can edit the document anyway."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:392
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:402
 msgid "Edit anyway"
 msgstr "بہر حال تدوین کریں"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:404
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:414
 msgid "Related Articles"
 msgstr "متعلقہ مضامین"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:450
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:460
 msgid "If you've tried the steps above and you're still unable to sign in, send a message to our support team."
 msgstr ""
 
@@ -10748,33 +10785,21 @@ msgstr ""
 msgid "Related products"
 msgstr "متعلقہ مصنوعات"
 
-#: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:6
-msgid "Sorry to hear that, please tell us why?"
-msgstr "یہ سن کر افسوس ہوا ، براہ مہربانی ہمیں بتائیں کیوں؟"
-
-#: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:8
-msgid "Confusing"
+#: kitsune/wiki/jinja2/wiki/includes/survey_form.html:30
+msgid "Comments"
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:9
-msgid "Solution didn't work"
-msgstr "حل  نےکام نہیں کیا"
+#: kitsune/wiki/jinja2/wiki/includes/survey_form.html:31
+msgid "Required"
+msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:10
-msgid "Too long"
-msgstr "بہت لمبا ہے"
+#: kitsune/wiki/jinja2/wiki/includes/survey_form.html:34
+msgid "To protect your privacy, please do not include any personal information."
+msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:12
-msgid "I have feedback about Firefox"
-msgstr "میرے پاس Firefox کے متعلق  رایے ہے"
-
-#: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:14
-msgid "Tell us more."
-msgstr "ہمیں مزید بتائیں۔"
-
-#: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:20
-msgid "Please provide more details"
-msgstr "بارہ مہربانی مزید تفصیلات فراہم کریں"
+#: kitsune/wiki/jinja2/wiki/includes/survey_form.html:38
+msgid "Please provide more details."
+msgstr ""
 
 #: kitsune/wiki/jinja2/wikiparser/hook_preferences_button.html:1
 msgid "Open Preferences"
@@ -10783,6 +10808,36 @@ msgstr "ترجیحات"
 #: kitsune/wiki/jinja2/wikiparser/hook_refresh_button.html:1
 msgid "Refresh Firefox"
 msgstr "Firefox کو تازہ کریں"
+
+#~ msgid "Frequent Topics"
+#~ msgstr "عمومی  عنوانات"
+
+#~ msgid "See all"
+#~ msgstr "تمام دیکھیں"
+
+#~ msgid "You already voted on this Article."
+#~ msgstr "آپ پہلے ہی اس مضمون پر ووٹ دے چکے ہیں۔"
+
+#~ msgid "Thanks for making us better!"
+#~ msgstr "ہمیں بہتر بنانے کے لئے شکریہ!"
+
+#~ msgid "Sorry to hear that, please tell us why?"
+#~ msgstr "یہ سن کر افسوس ہوا ، براہ مہربانی ہمیں بتائیں کیوں؟"
+
+#~ msgid "Solution didn't work"
+#~ msgstr "حل  نےکام نہیں کیا"
+
+#~ msgid "Too long"
+#~ msgstr "بہت لمبا ہے"
+
+#~ msgid "I have feedback about Firefox"
+#~ msgstr "میرے پاس Firefox کے متعلق  رایے ہے"
+
+#~ msgid "Tell us more."
+#~ msgstr "ہمیں مزید بتائیں۔"
+
+#~ msgid "Please provide more details"
+#~ msgstr "بارہ مہربانی مزید تفصیلات فراہم کریں"
 
 #~ msgid "Add"
 #~ msgstr "شامل کریں"
