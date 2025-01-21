@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: support.mozilla.com\n"
 "Report-Msgid-Bugs-To: https://github.com/mozilla-l10n/sumo-l10n/issues\n"
-"POT-Creation-Date: 2024-12-10 00:58-0800\n"
+"POT-Creation-Date: 2025-01-21 02:19-0800\n"
 "PO-Revision-Date: 2024-08-18 15:56+0000\n"
 "Last-Translator: Merike Sell <merikes@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -27,6 +27,14 @@ msgstr "Kuva peale"
 #: kitsune/announcements/forms.py:22
 msgid "Show until"
 msgstr "Kuvatakse kuni"
+
+#: kitsune/announcements/tasks.py:34
+msgid "New announcement for {name}"
+msgstr ""
+
+#: kitsune/announcements/tasks.py:36
+msgid "New announcement for groups [{names}]"
+msgstr ""
 
 #. This is at the end of an email.
 #: kitsune/announcements/jinja2/announcements/email/announcement.html:6 kitsune/announcements/jinja2/announcements/email/announcement.ltxt:7
@@ -365,7 +373,7 @@ msgstr "Android"
 msgid "iOS"
 msgstr ""
 
-#: kitsune/customercare/forms.py:34 kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:11
+#: kitsune/customercare/forms.py:34 kitsune/wiki/views.py:1336 kitsune/wiki/views.py:1356
 msgid "Other"
 msgstr "Muu"
 
@@ -442,186 +450,186 @@ msgstr "Vajab kohest uuendamist"
 msgid "Translation Needed"
 msgstr "Ootab tõlkimist"
 
-#: kitsune/dashboards/readouts.py:333
+#: kitsune/dashboards/readouts.py:379
 msgid "Top 20 Articles"
 msgstr "20 populaarsemat teemat"
 
-#: kitsune/dashboards/readouts.py:337
+#: kitsune/dashboards/readouts.py:383
 #, fuzzy, python-format
 msgid "These are the top 20 most visited articles in the last 30 days, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "Need viimase 30 päeva jooksul 20 enimkülastatud teemat moodustavad enam kui 50% kogu teadmusbaasi liiklusest."
 
-#: kitsune/dashboards/readouts.py:344
+#: kitsune/dashboards/readouts.py:390
 msgid "Top 50 Articles"
 msgstr "50 populaarsemat teemat"
 
-#: kitsune/dashboards/readouts.py:348
+#: kitsune/dashboards/readouts.py:394
 msgid "These are the top 50 most visited articles in the last 30 days."
 msgstr ""
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:44 kitsune/dashboards/readouts.py:351
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:44 kitsune/dashboards/readouts.py:397
 msgid "Top 100 Articles"
 msgstr "100 populaarsemat teemat"
 
-#: kitsune/dashboards/readouts.py:355
+#: kitsune/dashboards/readouts.py:401
 #, fuzzy, python-format
 msgid "These are the top 100 most visited articles in the last 30 days, which account for over 99% of the traffic to the Knowledge Base."
 msgstr "Need viimase 30 päeva jooksul 100 enimkülastatud teemat moodustavad enam kui 99% kogu teadmusbaasi liiklusest."
 
-#: kitsune/dashboards/readouts.py:362 kitsune/dashboards/readouts.py:646 kitsune/dashboards/readouts.py:794 kitsune/dashboards/readouts.py:795 kitsune/sumo/jinja2/includes/common_macros.html:836
+#: kitsune/dashboards/readouts.py:408 kitsune/dashboards/readouts.py:692 kitsune/dashboards/readouts.py:840 kitsune/dashboards/readouts.py:841 kitsune/sumo/jinja2/includes/common_macros.html:836
 #: kitsune/wiki/config.py:99
 msgid "Templates"
 msgstr "Mallid"
 
-#: kitsune/dashboards/readouts.py:367
+#: kitsune/dashboards/readouts.py:413
 msgid "Templates are a way of reusing pieces of content across KB articles. You can create and update a set of instructions in one place, and then refer to it in other pages."
 msgstr ""
 
-#: kitsune/dashboards/readouts.py:375
+#: kitsune/dashboards/readouts.py:421
 msgid "All Knowledge Base Articles"
 msgstr "Kõik teadmusbaasi teemad"
 
-#: kitsune/dashboards/readouts.py:379
+#: kitsune/dashboards/readouts.py:425
 msgid "This is the number of all Knowledge Base articles that are ready to be localized."
 msgstr ""
 
-#: kitsune/dashboards/readouts.py:399
+#: kitsune/dashboards/readouts.py:445
 msgid "Visits in last 30 days"
 msgstr "Külastused viimase 30 päeva jooksul"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:5 kitsune/dashboards/readouts.py:400 kitsune/wiki/jinja2/wiki/includes/revision_list.html:24
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:5 kitsune/dashboards/readouts.py:446 kitsune/wiki/jinja2/wiki/includes/revision_list.html:24
 msgid "Status"
 msgstr "Olek"
 
-#: kitsune/dashboards/readouts.py:401 kitsune/dashboards/readouts.py:1089
+#: kitsune/dashboards/readouts.py:447 kitsune/dashboards/readouts.py:1135
 msgid "Most Viewed"
 msgstr "Enim külastatud"
 
-#: kitsune/dashboards/readouts.py:401
+#: kitsune/dashboards/readouts.py:447
 msgid "Most Recent"
 msgstr "Kõige värskemad"
 
-#: kitsune/dashboards/readouts.py:503 kitsune/dashboards/readouts.py:677
+#: kitsune/dashboards/readouts.py:549 kitsune/dashboards/readouts.py:723
 msgid "Most Visited"
 msgstr "Enim külastatud"
 
-#: kitsune/dashboards/readouts.py:505
+#: kitsune/dashboards/readouts.py:551
 msgid "All knowledge base articles..."
 msgstr "Kõik teadmusbaasi teemad..."
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:4 kitsune/dashboards/readouts.py:507 kitsune/dashboards/readouts.py:573
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:4 kitsune/dashboards/readouts.py:553 kitsune/dashboards/readouts.py:619
 msgid "Visits"
 msgstr "Külastusi"
 
-#: kitsune/dashboards/readouts.py:628
+#: kitsune/dashboards/readouts.py:674
 msgid "Changes Needed"
 msgstr "Vajab uuendamist"
 
-#: kitsune/dashboards/readouts.py:631 kitsune/dashboards/readouts.py:1007
+#: kitsune/dashboards/readouts.py:677 kitsune/dashboards/readouts.py:1053
 msgid "Changes Not Ready For Localization"
 msgstr "Muudatused pole lokaliseerimiseks valmis"
 
-#: kitsune/dashboards/readouts.py:648 kitsune/dashboards/readouts.py:797
+#: kitsune/dashboards/readouts.py:694 kitsune/dashboards/readouts.py:843
 msgid "All templates..."
 msgstr "Kõik mallid..."
 
-#: kitsune/dashboards/readouts.py:653
+#: kitsune/dashboards/readouts.py:699
 msgid "How To Contribute"
 msgstr "Kuidas kaastööd teha"
 
-#: kitsune/dashboards/readouts.py:655
+#: kitsune/dashboards/readouts.py:701
 msgid "All How To Contribute articles..."
 msgstr ""
 
-#: kitsune/dashboards/readouts.py:660 kitsune/wiki/config.py:97
+#: kitsune/dashboards/readouts.py:706 kitsune/wiki/config.py:97
 msgid "Administration"
 msgstr "Administreerimine"
 
-#: kitsune/dashboards/readouts.py:662
+#: kitsune/dashboards/readouts.py:708
 msgid "All Administration articles..."
 msgstr ""
 
-#: kitsune/dashboards/readouts.py:679
+#: kitsune/dashboards/readouts.py:725
 msgid "All translations..."
 msgstr "Kõik tõlked..."
 
 #. L10n: Not just changes to translations but also unreviewed changes to
 #. docs in this locale that are not translations
-#: kitsune/dashboards/readouts.py:877
+#: kitsune/dashboards/readouts.py:923
 msgid "Unreviewed Changes"
 msgstr "Üle vaatamata muudatused"
 
-#: kitsune/dashboards/readouts.py:879
+#: kitsune/dashboards/readouts.py:925
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "Üle vaatamata"
 
-#: kitsune/dashboards/readouts.py:880
+#: kitsune/dashboards/readouts.py:926
 msgid "All articles requiring review..."
 msgstr "Kõik üle vaatamist vajavad teemad..."
 
-#: kitsune/dashboards/readouts.py:882
+#: kitsune/dashboards/readouts.py:928
 msgid "Changed"
 msgstr "Muudetud"
 
-#: kitsune/dashboards/readouts.py:944
+#: kitsune/dashboards/readouts.py:990
 msgid "Unhelpful Documents"
 msgstr "Dokumendid, millest polnud kasu"
 
-#: kitsune/dashboards/readouts.py:946
+#: kitsune/dashboards/readouts.py:992
 msgctxt "document"
 msgid "Unhelpful"
 msgstr "Ei aidanud"
 
-#: kitsune/dashboards/readouts.py:947
+#: kitsune/dashboards/readouts.py:993
 msgid "All unhelpful articles..."
 msgstr "Kõik teemad, mis ei aidanud..."
 
-#: kitsune/dashboards/readouts.py:949
+#: kitsune/dashboards/readouts.py:995
 msgid "Total Votes"
 msgstr "Häälte koguarv"
 
-#: kitsune/dashboards/readouts.py:950
+#: kitsune/dashboards/readouts.py:996
 msgid "Helpfulness"
 msgstr "Kasulikkus"
 
-#: kitsune/dashboards/readouts.py:1008
+#: kitsune/dashboards/readouts.py:1054
 msgid "Articles which have approved revisions newer than the latest ready-for-localization one"
 msgstr "Teemad, millel on heakskiidetud versioon, mis on uuem kui viimane lokaliseerimiseks valmis versioon"
 
-#: kitsune/dashboards/readouts.py:1013
+#: kitsune/dashboards/readouts.py:1059
 msgid "All articles with changes not ready for localization..."
 msgstr "Kõik muudatustega teemad, mis pole tõlkimiseks valmis..."
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:175 kitsune/dashboards/readouts.py:1015 kitsune/wiki/jinja2/wiki/includes/revision_list.html:71
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:175 kitsune/dashboards/readouts.py:1061 kitsune/wiki/jinja2/wiki/includes/revision_list.html:71
 msgid "Approved"
 msgstr "Heakskiidetud"
 
-#: kitsune/dashboards/readouts.py:1083
+#: kitsune/dashboards/readouts.py:1129
 msgid "Need Changes"
 msgstr "Ootab uuendamist"
 
-#: kitsune/dashboards/readouts.py:1084
+#: kitsune/dashboards/readouts.py:1130
 msgid "Articles that require changes."
 msgstr "Uuendamist vajavad teemad."
 
-#: kitsune/dashboards/readouts.py:1086
+#: kitsune/dashboards/readouts.py:1132
 msgid "All articles that require changes..."
 msgstr "Kõik uuendamist vajavad teemad..."
 
-#: kitsune/dashboards/readouts.py:1088 kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:45 kitsune/wiki/jinja2/wiki/includes/revision_list.html:30
+#: kitsune/dashboards/readouts.py:1134 kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:45 kitsune/wiki/jinja2/wiki/includes/revision_list.html:30
 msgid "Comment"
 msgstr "Kommentaar"
 
-#: kitsune/dashboards/readouts.py:1127 kitsune/wiki/config.py:100
+#: kitsune/dashboards/readouts.py:1173 kitsune/wiki/config.py:100
 msgid "Canned Responses"
 msgstr ""
 
-#: kitsune/dashboards/readouts.py:1128
+#: kitsune/dashboards/readouts.py:1174
 msgid "Localization status of all canned responses"
 msgstr ""
 
-#: kitsune/dashboards/readouts.py:1130
+#: kitsune/dashboards/readouts.py:1176
 msgid "All canned responses articles..."
 msgstr ""
 
@@ -765,12 +773,12 @@ msgid "Review Needed: {comment}"
 msgstr "Üle vaatamist vajavad: {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:33 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:38 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:45
-#: kitsune/sumo/templatetags/jinja_helpers.py:422 kitsune/sumo/views.py:62 kitsune/wiki/jinja2/wiki/includes/document_macros.html:362
+#: kitsune/sumo/templatetags/jinja_helpers.py:422 kitsune/sumo/views.py:62 kitsune/wiki/jinja2/wiki/includes/document_macros.html:369
 msgid "Yes"
 msgstr "Jah"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:125 kitsune/sumo/templatetags/jinja_helpers.py:422 kitsune/sumo/views.py:63
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:363
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:373
 msgid "No"
 msgstr "Ei"
 
@@ -833,7 +841,7 @@ msgstr "Kõik abiteemad"
 msgid "Filter by type:"
 msgstr "Filtreeri tüübi põhjal:"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:259 kitsune/products/jinja2/products/includes/topic_macros.html:138 kitsune/questions/jinja2/questions/metrics.html:25
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:259 kitsune/products/jinja2/products/includes/topic_macros.html:151 kitsune/questions/jinja2/questions/metrics.html:25
 #: kitsune/questions/jinja2/questions/metrics.html:27 kitsune/questions/jinja2/questions/question_list.html:138 kitsune/questions/jinja2/questions/question_list.html:302
 msgid "All"
 msgstr "Kõik"
@@ -890,11 +898,11 @@ msgstr "Aktsepteeritud ja parandatud"
 msgid "Rejected"
 msgstr "Tagasi lükatud"
 
-#: kitsune/flagit/views.py:84
+#: kitsune/flagit/views.py:86
 msgid "You already flagged this content."
 msgstr ""
 
-#: kitsune/flagit/views.py:86
+#: kitsune/flagit/views.py:88
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr ""
 
@@ -914,24 +922,28 @@ msgstr "{t} id-ga {id} ei ole enam."
 msgid "Update Status:"
 msgstr "Uuendamise olek:"
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:28 kitsune/flagit/jinja2/flagit/queue.html:24
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:33 kitsune/flagit/jinja2/flagit/queue.html:24
 msgid "Please select..."
 msgstr "Palun vali..."
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:29
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:34
 msgid "Content categorization is updated."
 msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:30
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:35
 msgid "Content is appropriately categorized."
 msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:33 kitsune/flagit/jinja2/flagit/queue.html:40 kitsune/users/jinja2/users/edit_contributions.html:16
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:38 kitsune/flagit/jinja2/flagit/queue.html:40 kitsune/users/jinja2/users/edit_contributions.html:16
 #: kitsune/users/jinja2/users/edit_settings.html:17 kitsune/users/jinja2/users/edit_watches.html:30
 msgid "Update"
 msgstr "Uuenda"
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:39 kitsune/flagit/jinja2/flagit/queue.html:46
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:39 kitsune/wiki/jinja2/wiki/includes/document_macros.html:374 kitsune/wiki/jinja2/wiki/includes/survey_form.html:14
+msgid "Please wait..."
+msgstr "Palun oota..."
+
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:45 kitsune/flagit/jinja2/flagit/queue.html:46
 msgid "There is no content pending moderation."
 msgstr ""
 
@@ -1185,6 +1197,7 @@ msgstr "Üles laaditud {date}"
 #: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:191 kitsune/tidings/jinja2/tidings/unsub.html:18 kitsune/users/jinja2/users/confirm_avatar_delete.html:23
 #: kitsune/users/jinja2/users/edit_profile.html:80 kitsune/wiki/jinja2/wiki/confirm_remove_contributor.html:15 kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:15
 #: kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:11 kitsune/wiki/jinja2/wiki/includes/review_form.html:72 kitsune/wiki/jinja2/wiki/includes/review_form.html:96
+#: kitsune/wiki/jinja2/wiki/includes/survey_form.html:42
 msgid "Cancel"
 msgstr "Katkesta"
 
@@ -2538,10 +2551,9 @@ msgstr ""
 msgid "Themes"
 msgstr "Teemad"
 
-#: kitsune/products/jinja2/products/product.html:126
-#, fuzzy
-msgid "Frequent Topics"
-msgstr "Päevakajalised teemad"
+#: kitsune/products/jinja2/products/includes/topic_macros.html:88 kitsune/products/jinja2/products/product.html:126
+msgid "Topics"
+msgstr "Teemad"
 
 #: kitsune/products/jinja2/products/product.html:127
 #, fuzzy
@@ -2590,43 +2602,34 @@ msgstr "Allalaadimine"
 msgid "Filter by product"
 msgstr ""
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:14
-#, fuzzy
-msgid "See all"
-msgstr "Vaata kõiki"
-
-#: kitsune/products/jinja2/products/includes/topic_macros.html:45 kitsune/wiki/jinja2/wiki/includes/document_macros.html:447
+#: kitsune/products/jinja2/products/includes/topic_macros.html:58 kitsune/wiki/jinja2/wiki/includes/document_macros.html:457
 #, fuzzy
 msgid "Still need help?"
 msgstr "Ootab uuendamist"
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:49
+#: kitsune/products/jinja2/products/includes/topic_macros.html:62
 msgid "We’re here for you! If you haven’t found a solution after exploring our help articles, you can get in touch with our support team."
 msgstr ""
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:51
+#: kitsune/products/jinja2/products/includes/topic_macros.html:64
 msgid "We’re here for you. Post a question to our support forums and get answers from our community of experts."
 msgstr ""
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:62 kitsune/questions/jinja2/questions/includes/aaq_macros.html:76 kitsune/questions/jinja2/questions/new_question.html:4
+#: kitsune/products/jinja2/products/includes/topic_macros.html:75 kitsune/questions/jinja2/questions/includes/aaq_macros.html:76 kitsune/questions/jinja2/questions/new_question.html:4
 #, fuzzy
 msgid "Get Support"
 msgstr "Kasutajatugi"
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:64 kitsune/questions/jinja2/questions/question_list.html:113
+#: kitsune/products/jinja2/products/includes/topic_macros.html:77 kitsune/questions/jinja2/questions/question_list.html:113
 #, fuzzy
 msgid "Ask the Community"
 msgstr "Küsi teistelt kaastöötajatelt"
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:75
+#: kitsune/products/jinja2/products/includes/topic_macros.html:88
 msgid "Popular"
 msgstr "Populaarsed"
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:75
-msgid "Topics"
-msgstr "Teemad"
-
-#: kitsune/products/jinja2/products/includes/topic_macros.html:139
+#: kitsune/products/jinja2/products/includes/topic_macros.html:152
 #, fuzzy
 msgid "All articles and threads"
 msgstr "Kõik uuendamist vajavad teemad..."
@@ -2848,7 +2851,7 @@ msgstr "Lahenduse eemaldamine õnnestus."
 msgid "Glad to hear it!"
 msgstr ""
 
-#: kitsune/questions/views.py:979 kitsune/wiki/views.py:1276
+#: kitsune/questions/views.py:979
 msgid "Sorry to hear that."
 msgstr "Seda on kahju kuulda."
 
@@ -3003,7 +3006,7 @@ msgstr "Kasutajatoe foorumi statistika"
 msgid "Metrics"
 msgstr "Meetrika"
 
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:5 kitsune/questions/jinja2/questions/new_question.html:32 kitsune/wiki/jinja2/wiki/includes/document_macros.html:459
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:5 kitsune/questions/jinja2/questions/new_question.html:32 kitsune/wiki/jinja2/wiki/includes/document_macros.html:469
 #, fuzzy
 msgid "Contact Support"
 msgstr "Otsi Mozilla kasutajatoest"
@@ -3014,7 +3017,7 @@ msgid "Ask your question"
 msgstr "Küsimuse postitamine"
 
 #: kitsune/questions/jinja2/questions/new_question.html:40 kitsune/wiki/jinja2/wiki/includes/document_macros.html:269 kitsune/wiki/jinja2/wiki/includes/flag_form.html:34
-#: kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:10 kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:23 kitsune/wiki/jinja2/wiki/recent_revisions.html:31
+#: kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:10 kitsune/wiki/jinja2/wiki/includes/survey_form.html:46 kitsune/wiki/jinja2/wiki/recent_revisions.html:31
 msgid "Submit"
 msgstr "Postita"
 
@@ -8133,6 +8136,10 @@ msgstr "See märk antakse neile, kes on teinud kaastööd Kitsune lähtekoodis."
 msgid "To field is required."
 msgstr "Saaja sisestamine on kohustuslik."
 
+#: kitsune/sumo/form_fields.py:110
+msgid "{name} is not a valid username."
+msgstr ""
+
 #: kitsune/sumo/json_utils.py:74
 msgid "Invalid callback function."
 msgstr "Vigane \"callback\"-funktsioon."
@@ -9897,44 +9904,76 @@ msgstr ""
 msgid "You cannot translate this document."
 msgstr "Sa ei saa seda dokumenti tõlkida."
 
-#: kitsune/wiki/views.py:1271
-msgid "Great to hear &mdash; thanks for the feedback! <br /><span disabled class=helpful-button>&#x1F44D;</span>"
+#: kitsune/wiki/views.py:1257 kitsune/wiki/views.py:1276
+msgid "Thanks for your feedback!"
 msgstr ""
 
-#: kitsune/wiki/views.py:1299
-msgid "You already voted on this Article."
-msgstr "Sa oled selles teemas juba hääletanud."
-
-#: kitsune/wiki/views.py:1327
-msgid "Thanks for making us better!"
+#: kitsune/wiki/views.py:1324
+msgid "You voted \"Yes 👍\" Please tell us more"
 msgstr ""
 
-#: kitsune/wiki/views.py:1400
+#: kitsune/wiki/views.py:1326
+msgid "Article is accurate"
+msgstr ""
+
+#: kitsune/wiki/views.py:1329
+msgid "Article is easy to understand"
+msgstr ""
+
+#: kitsune/wiki/views.py:1331
+msgid "The visuals are helpful"
+msgstr ""
+
+#: kitsune/wiki/views.py:1334
+msgid "Article provided the information I needed"
+msgstr ""
+
+#: kitsune/wiki/views.py:1344
+msgid "You voted \"No 👎\" Please tell us more"
+msgstr ""
+
+#: kitsune/wiki/views.py:1346
+msgid "Article is inaccurate"
+msgstr ""
+
+#: kitsune/wiki/views.py:1347
+msgid "Article is confusing"
+msgstr ""
+
+#: kitsune/wiki/views.py:1350
+msgid "Missing, unclear, or unhelpful visuals"
+msgstr ""
+
+#: kitsune/wiki/views.py:1354
+msgid "Article didn't provide the information I needed"
+msgstr ""
+
+#: kitsune/wiki/views.py:1437
 #, python-format
 msgid "Revision %s"
 msgstr "Versioon %s"
 
-#: kitsune/wiki/views.py:1410
+#: kitsune/wiki/views.py:1447
 msgid "Firefox Releases"
 msgstr "Firefoxi väljalasked"
 
-#: kitsune/wiki/views.py:1418
+#: kitsune/wiki/views.py:1455
 msgid "Article Revisions"
 msgstr ""
 
-#: kitsune/wiki/views.py:1539
+#: kitsune/wiki/views.py:1576
 msgid "{users} added to the contributors successfully!"
 msgstr "{users} lisati edukalt kaastöötajate gruppi!"
 
-#: kitsune/wiki/views.py:1546
+#: kitsune/wiki/views.py:1583
 msgid "There were errors adding new contributors, see below."
 msgstr "Kaastöötajate gruppi lisamisel tekkis alljärgnev viga."
 
-#: kitsune/wiki/views.py:1566
+#: kitsune/wiki/views.py:1603
 msgid "{user} removed from the contributors successfully!"
 msgstr "{user} eemaldamine kaastöötajate grupist õnnestus!"
 
-#: kitsune/wiki/views.py:1782
+#: kitsune/wiki/views.py:1819
 msgid "Sorry, that article wasn't found."
 msgstr ""
 
@@ -10073,7 +10112,7 @@ msgstr "<label>Versiooni kommentaar:</label> {comment}"
 msgid "For help with writing articles, check out the <a href=\"%(url)s\">Support Document Guide</a>."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/edit.html:58 kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:16 kitsune/wiki/jinja2/wiki/new_document.html:73 kitsune/wiki/jinja2/wiki/translate.html:170
+#: kitsune/wiki/jinja2/wiki/edit.html:58 kitsune/wiki/jinja2/wiki/includes/survey_form.html:36 kitsune/wiki/jinja2/wiki/new_document.html:73 kitsune/wiki/jinja2/wiki/translate.html:170
 msgid "characters remaining."
 msgstr "tähemärki on jäänud."
 
@@ -10878,37 +10917,33 @@ msgstr "Teema kohandamine"
 msgid "Was this article helpful?"
 msgstr "Kas see teema oli abiks?"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:364
-msgid "Please wait..."
-msgstr "Palun oota..."
-
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:374
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:384
 #, fuzzy
 msgid "Leave a message for {contributor}: "
 msgstr "Jäta kasutajale {contributor} teade:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:376
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:386
 msgid "Leave a message for {rest} and {last}:"
 msgstr "Jäta kaastöötajatele {rest} ja {last} teade:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:385
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:395
 #, python-format
 msgid "Warning: This page is also being edited by %(user)s!"
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:388
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:398
 msgid "If you know what you are doing, you can edit the document anyway."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:392
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:402
 msgid "Edit anyway"
 msgstr "Toimeta ikkagi"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:404
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:414
 msgid "Related Articles"
 msgstr "Seotud teemad"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:450
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:460
 msgid "If you've tried the steps above and you're still unable to sign in, send a message to our support team."
 msgstr ""
 
@@ -11119,35 +11154,21 @@ msgstr "Telli voog"
 msgid "Related products"
 msgstr "Seotud tooted"
 
-#: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:6
-#, fuzzy
-msgid "Sorry to hear that, please tell us why?"
-msgstr "Seda on kahju kuulda."
-
-#: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:8
-msgid "Confusing"
+#: kitsune/wiki/jinja2/wiki/includes/survey_form.html:30
+msgid "Comments"
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:9
-msgid "Solution didn't work"
+#: kitsune/wiki/jinja2/wiki/includes/survey_form.html:31
+msgid "Required"
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:10
-msgid "Too long"
+#: kitsune/wiki/jinja2/wiki/includes/survey_form.html:34
+msgid "To protect your privacy, please do not include any personal information."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:12
-msgid "I have feedback about Firefox"
+#: kitsune/wiki/jinja2/wiki/includes/survey_form.html:38
+msgid "Please provide more details."
 msgstr ""
-
-#: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:14
-msgid "Tell us more."
-msgstr ""
-
-#: kitsune/wiki/jinja2/wiki/includes/unhelpful_survey.html:20
-#, fuzzy
-msgid "Please provide more details"
-msgstr "Palun sisesta e-postiaadress."
 
 #: kitsune/wiki/jinja2/wikiparser/hook_preferences_button.html:1
 #, fuzzy
@@ -11157,6 +11178,25 @@ msgstr "Erinevused"
 #: kitsune/wiki/jinja2/wikiparser/hook_refresh_button.html:1
 msgid "Refresh Firefox"
 msgstr "Värskenda Firefoxi"
+
+#, fuzzy
+#~ msgid "Frequent Topics"
+#~ msgstr "Päevakajalised teemad"
+
+#, fuzzy
+#~ msgid "See all"
+#~ msgstr "Vaata kõiki"
+
+#~ msgid "You already voted on this Article."
+#~ msgstr "Sa oled selles teemas juba hääletanud."
+
+#, fuzzy
+#~ msgid "Sorry to hear that, please tell us why?"
+#~ msgstr "Seda on kahju kuulda."
+
+#, fuzzy
+#~ msgid "Please provide more details"
+#~ msgstr "Palun sisesta e-postiaadress."
 
 #~ msgid "Add"
 #~ msgstr "Lisa"
