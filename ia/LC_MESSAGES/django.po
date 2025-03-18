@@ -893,11 +893,15 @@ msgstr "Acceptate e corrigite"
 msgid "Rejected"
 msgstr "Rejectate"
 
-#: kitsune/flagit/views.py:97
+#: kitsune/flagit/views.py:78
+msgid "System account content cannot be flagged."
+msgstr ""
+
+#: kitsune/flagit/views.py:104
 msgid "You already flagged this content."
 msgstr "Tu ha ja signalate iste contento."
 
-#: kitsune/flagit/views.py:99
+#: kitsune/flagit/views.py:106
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr "Tu ha signalate iste contento. Un moderator revidera tu invio tra breve."
 
@@ -1501,7 +1505,7 @@ msgid "You were awarded the '{title}' badge!"
 msgstr "Tu ha ganiate le insignia de '{title}'!"
 
 #: kitsune/kbadge/jinja2/badger/award_detail.html:3 kitsune/kbadge/jinja2/badger/awards_list.html:3 kitsune/kbadge/jinja2/badger/badge_detail.html:3 kitsune/kbadge/jinja2/badger/badges_list.html:3
-#: kitsune/users/jinja2/users/profile.html:192
+#: kitsune/users/jinja2/users/profile.html:194
 msgid "Badges"
 msgstr "Insignias"
 
@@ -8776,7 +8780,7 @@ msgstr "Reportar abuso de marca registrate"
 msgid "Source code"
 msgstr "Codice fonte"
 
-#: kitsune/sumo/jinja2/base.html:241 kitsune/users/jinja2/users/profile.html:89
+#: kitsune/sumo/jinja2/base.html:241 kitsune/users/jinja2/users/profile.html:91
 msgid "Twitter"
 msgstr "Twitter"
 
@@ -9053,7 +9057,7 @@ msgstr "Gere tu preferentias de confidentialitate e avisos."
 msgid "Exchange messages with other contributors."
 msgstr "Excambia messages con altere collaboratores."
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:657 kitsune/users/jinja2/users/profile.html:209
+#: kitsune/sumo/jinja2/includes/common_macros.html:657 kitsune/users/jinja2/users/profile.html:212
 msgid "Sign Out"
 msgstr "Clauder session"
 
@@ -9328,9 +9332,13 @@ msgstr "Navigar"
 msgid "Browse for an image to upload."
 msgstr "Selige un imagine a incargar."
 
-#: kitsune/users/__init__.py:4
-msgid "We are having trouble reaching your email address. Please try a different address or contact an administrator."
-msgstr "Nos non ha succedite a attinger tu adresse de e-mail. Per favor prova un altere adresse o contacta un administrator."
+#: kitsune/users/__init__.py:3
+msgid ""
+"SUMO Bot is a system tool used by the Customer Experience team to provide and maintain content on the Mozilla Support website. You might see SUMO Bot appear in the forums as a placeholder for users "
+"whose Mozilla Account was deleted, due to inactivity or user request, but whose contributed content is kept in order to preserve important context in the forum post. SUMO Bot might also be used to "
+"make announcements or provide additional information in various support channels. Please note that SUMO Bot is not an active user account and will not respond to direct mentions, private messages, "
+"or forum thread replies."
+msgstr ""
 
 #: kitsune/users/auth.py:122
 msgid ""
@@ -9428,7 +9436,7 @@ msgstr ""
 "                Iste valor pote continer solo litteras, numeros, e characteres @/./+/-/_.\n"
 "                "
 
-#: kitsune/users/forms.py:136 kitsune/users/models.py:110
+#: kitsune/users/forms.py:136 kitsune/users/models.py:131
 msgid "Involved with Mozilla from"
 msgstr "Voluntario de Mozilla desde"
 
@@ -9436,118 +9444,134 @@ msgstr "Voluntario de Mozilla desde"
 msgid "The user name you entered is inappropriate. Please pick another and consider that our helpers are other Firefox users just like you."
 msgstr "Le nomine de usator que tu ha inserite es inappropriate. Per favor elige uno altere e considera que nostre adjutores es altere usatores de Firefox justo como te."
 
-#: kitsune/users/models.py:28
+#: kitsune/users/models.py:30
 msgid "KB Contributors"
 msgstr "Collaboratores de base de cognoscentia"
 
-#: kitsune/users/models.py:29
+#: kitsune/users/models.py:31
 msgid "L10n Contributors"
 msgstr "Collaboratores L10n"
 
-#: kitsune/users/models.py:30
+#: kitsune/users/models.py:32
 msgid "Forum Contributors"
 msgstr "Collaboratores del foro"
 
-#: kitsune/users/models.py:31
+#: kitsune/users/models.py:33
 msgid "Social media Contributors"
 msgstr "Collaboratores del medios social"
 
-#: kitsune/users/models.py:32
+#: kitsune/users/models.py:34
 msgid "Mobile support Contributors"
 msgstr "Collaboratores al supporto apps mobile"
 
-#: kitsune/users/models.py:57 kitsune/users/models.py:233
+#: kitsune/users/models.py:59
+msgid "Regular User Account"
+msgstr ""
+
+#: kitsune/users/models.py:60
+msgid "System Account"
+msgstr ""
+
+#: kitsune/users/models.py:61
+msgid "Admin Account"
+msgstr ""
+
+#: kitsune/users/models.py:71 kitsune/users/models.py:284
 msgid "User"
 msgstr "Usator"
 
-#: kitsune/users/models.py:60
+#: kitsune/users/models.py:78
+msgid "Account Type"
+msgstr ""
+
+#: kitsune/users/models.py:81
 msgid "Display name"
 msgstr "Nomine a monstrar"
 
-#: kitsune/users/models.py:63
+#: kitsune/users/models.py:84
 msgid "Make my email address visible to signed in users"
 msgstr "Render mi adresse email visibile al usatores con authenticate"
 
-#: kitsune/users/models.py:68
+#: kitsune/users/models.py:89
 msgid "Biography"
 msgstr "Biographia"
 
-#: kitsune/users/models.py:69
+#: kitsune/users/models.py:90
 msgid ""
 "Some HTML supported: &#x3C;abbr title&#x3E; &#x3C;blockquote&#x3E; &#x3C;code&#x3E; &#x3C;em&#x3E; &#x3C;i&#x3E; &#x3C;li&#x3E; &#x3C;ol&#x3E; &#x3C;strong&#x3E; &#x3C;ul&#x3E;. Links are forbidden."
 msgstr ""
 "Alcun codices HTML supportate: &#x3C;abbr title&#x3E; &#x3C;blockquote&#x3E; &#x3C;code&#x3E; &#x3C;em&#x3E; &#x3C;i&#x3E; &#x3C;li&#x3E; &#x3C;ol&#x3E; &#x3C;strong&#x3E; &#x3C;ul&#x3E;. Le "
 "ligamines es prohibite."
 
-#: kitsune/users/jinja2/users/profile.html:83 kitsune/users/models.py:77
+#: kitsune/users/jinja2/users/profile.html:85 kitsune/users/models.py:98
 msgid "Website"
 msgstr "Sito web"
 
-#: kitsune/users/models.py:83
+#: kitsune/users/models.py:104
 msgid "Twitter Username"
 msgstr "Nomine de usator de Twitter"
 
-#: kitsune/users/models.py:86
+#: kitsune/users/models.py:107
 msgid "Community Portal Username"
 msgstr "Nomine de usator del portal del communitate"
 
-#: kitsune/users/models.py:89
+#: kitsune/users/models.py:110
 msgid "People Directory Username"
 msgstr "Nomine de usator del directorio del personas"
 
-#: kitsune/users/models.py:92
+#: kitsune/users/models.py:113
 msgid "Matrix Nickname"
 msgstr "Pseudonymo in Matrix"
 
-#: kitsune/users/models.py:95
+#: kitsune/users/models.py:116
 msgid "Timezone"
 msgstr "Fuso horari"
 
-#: kitsune/users/models.py:98
+#: kitsune/users/models.py:119
 msgid "Country"
 msgstr "Pais"
 
-#: kitsune/users/models.py:101
+#: kitsune/users/models.py:122
 msgid "City"
 msgstr "Citate"
 
-#: kitsune/users/models.py:102
+#: kitsune/users/models.py:123
 msgid "Preferred language"
 msgstr "Lingua preferite"
 
-#: kitsune/users/models.py:104
+#: kitsune/users/models.py:125
 msgid "Has been sent a first answer contribution email."
 msgstr "Ha essite inviate le email de prime collaboration al responsa."
 
-#: kitsune/users/models.py:107
+#: kitsune/users/models.py:128
 msgid "Has been sent a first revision contribution email."
 msgstr "Ha essite inviate le email de prime collaboration al revision."
 
-#: kitsune/users/models.py:115
+#: kitsune/users/models.py:136
 msgid "When the user was sent a community health survey"
 msgstr "Quando al usator ha essite inviate un questionario de salute del communitate"
 
-#: kitsune/users/models.py:237
+#: kitsune/users/models.py:288
 msgid "Value"
 msgstr "Valor"
 
-#: kitsune/users/models.py:274 kitsune/users/models.py:311 kitsune/users/models.py:324
+#: kitsune/users/models.py:325 kitsune/users/models.py:362 kitsune/users/models.py:375
 msgid "user"
 msgstr "usator"
 
-#: kitsune/users/models.py:276 kitsune/users/models.py:313
+#: kitsune/users/models.py:327 kitsune/users/models.py:364
 msgid "activation key"
 msgstr "clave de activation"
 
-#: kitsune/users/models.py:279
+#: kitsune/users/models.py:330
 msgid "registration profile"
 msgstr "profilo de registration"
 
-#: kitsune/users/models.py:280
+#: kitsune/users/models.py:331
 msgid "registration profiles"
 msgstr "profilos de registration"
 
-#: kitsune/users/models.py:329
+#: kitsune/users/models.py:380
 msgid "moderator"
 msgstr "moderator"
 
@@ -9555,15 +9579,15 @@ msgstr "moderator"
 msgid "Welcome to SUMO!"
 msgstr "Benvenite a SUMO!"
 
-#: kitsune/users/views.py:254
+#: kitsune/users/views.py:262
 msgid "Your settings have been saved."
 msgstr "Tu parametros ha essite salvate."
 
-#: kitsune/users/views.py:284
+#: kitsune/users/views.py:292
 msgid "Your preferences have been saved."
 msgstr "Tu preferentias ha essite salvate."
 
-#: kitsune/users/views.py:436
+#: kitsune/users/views.py:444
 msgid "This account is not active. Please contact an administrator if you believe this is an error"
 msgstr "Iste conto non es active. Per favor contacta un administrator si tu crede isto es un error."
 
@@ -9733,84 +9757,84 @@ msgstr "Pro cambiar tu adresse email o tu avatar, visita le pagina del contos Mo
 msgid "Edit user profile"
 msgstr "Rediger le profilo del usator"
 
-#: kitsune/users/jinja2/users/profile.html:47
+#: kitsune/users/jinja2/users/profile.html:49
 #, python-format
 msgid "Your privacy is important to us. Your username is always visible to the public - if you would like to edit your username, %(a_open)s click here. %(a_close)s"
 msgstr "Tu confidentialitate es importante pro nos, tu nomine de usator es sempre visibile al public, si tu vole rediger tu nomine de usator %(a_open)s clicca hic. %(a_close)s"
 
-#: kitsune/users/jinja2/users/profile.html:56
+#: kitsune/users/jinja2/users/profile.html:58
 msgid "{city}, {country}"
 msgstr "{city}, {country}"
 
-#: kitsune/users/jinja2/users/profile.html:77
+#: kitsune/users/jinja2/users/profile.html:79
 msgid "Email"
 msgstr "Email"
 
-#: kitsune/users/jinja2/users/profile.html:95
+#: kitsune/users/jinja2/users/profile.html:97
 msgid "Community Portal"
 msgstr "Portal del communitate"
 
-#: kitsune/users/jinja2/users/profile.html:101
+#: kitsune/users/jinja2/users/profile.html:103
 msgid "People Directory"
 msgstr "Directorio del personas"
 
-#: kitsune/users/jinja2/users/profile.html:107
+#: kitsune/users/jinja2/users/profile.html:109
 msgid "Matrix"
 msgstr "Matrix"
 
-#: kitsune/users/jinja2/users/profile.html:122
+#: kitsune/users/jinja2/users/profile.html:124
 msgid "Deactivate this user"
 msgstr "Disactivar iste usator"
 
-#: kitsune/users/jinja2/users/profile.html:127
+#: kitsune/users/jinja2/users/profile.html:129
 msgid "Deactivate this user and mark all content as spam"
 msgstr "Disactivar iste usator e marcar tote le contento como spam"
 
-#: kitsune/users/jinja2/users/profile.html:130
+#: kitsune/users/jinja2/users/profile.html:132
 msgid "This user has been deactivated."
 msgstr "Iste usator ha essite disactivate."
 
-#: kitsune/users/jinja2/users/profile.html:136
+#: kitsune/users/jinja2/users/profile.html:138
 msgid "Contributions"
 msgstr "Contributiones"
 
-#: kitsune/users/jinja2/users/profile.html:140
+#: kitsune/users/jinja2/users/profile.html:142
 msgid "Involved with Mozilla since {date}"
 msgstr "Voluntario de Mozilla desde {date}"
 
-#: kitsune/users/jinja2/users/profile.html:146
+#: kitsune/users/jinja2/users/profile.html:148
 msgid "{0} question"
 msgid_plural "{0} questions"
 msgstr[0] "{0} question"
 msgstr[1] "{0} questiones"
 
-#: kitsune/users/jinja2/users/profile.html:153
+#: kitsune/users/jinja2/users/profile.html:155
 msgid "{0} answer"
 msgid_plural "{0} answers"
 msgstr[0] "{0} responsa"
 msgstr[1] "{0} responsas"
 
-#: kitsune/users/jinja2/users/profile.html:159
+#: kitsune/users/jinja2/users/profile.html:161
 msgid "{0} solution"
 msgid_plural "{0} solutions"
 msgstr[0] "{0} solution"
 msgstr[1] "{0} solutiones"
 
-#: kitsune/users/jinja2/users/profile.html:165
+#: kitsune/users/jinja2/users/profile.html:167
 msgid "{0} document"
 msgid_plural "{0} documents"
 msgstr[0] "{0} documento"
 msgstr[1] "{0} documentos"
 
-#: kitsune/users/jinja2/users/profile.html:176
+#: kitsune/users/jinja2/users/profile.html:178
 msgid "About {user}"
 msgstr "A proposito de {user}"
 
-#: kitsune/users/jinja2/users/profile.html:182
+#: kitsune/users/jinja2/users/profile.html:184
 msgid "{user}'s Groups"
 msgstr "Gruppos de {user}"
 
-#: kitsune/users/jinja2/users/profile.html:194
+#: kitsune/users/jinja2/users/profile.html:196
 msgid "See all available SUMO badges"
 msgstr "Vider tote le insignias disponibile de SUMO"
 
