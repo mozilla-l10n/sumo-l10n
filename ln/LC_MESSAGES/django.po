@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/mozilla-l10n/sumo-l10n/issues\n"
-"POT-Creation-Date: 2025-11-03 09:20-0800\n"
+"POT-Creation-Date: 2025-12-03 02:09-0800\n"
 "PO-Revision-Date: 2016-01-28 13:02+0000\n"
 "Last-Translator: Michał Dziewoński <mdziewonski@mozilla.com>\n"
 "Language-Team: ln <LL@li.org>\n"
@@ -30,6 +30,10 @@ msgstr ""
 #, python-brace-format
 msgid "The {domain} team"
 msgstr "{domain} equipe"
+
+#: kitsune/community/tasks.py:53
+msgid "Congrats on your first forum reply!"
+msgstr ""
 
 #: kitsune/community/jinja2/community/index.html:3 kitsune/community/jinja2/community/index.html:8 kitsune/community/jinja2/community/metrics.html:4 kitsune/community/jinja2/community/search.html:4
 #: kitsune/community/jinja2/community/top_contributors.html:10
@@ -367,61 +371,81 @@ msgstr ""
 msgid "Kind Regards, The Mozilla Support Community Team"
 msgstr ""
 
-#: kitsune/customercare/forms.py:12
+#: kitsune/customercare/forms.py:16
 #, fuzzy
 msgid "Select platform"
 msgstr "Pona lokota"
 
-#: kitsune/customercare/forms.py:13
+#: kitsune/customercare/forms.py:17
 msgid "Windows"
 msgstr ""
 
-#: kitsune/customercare/forms.py:14
+#: kitsune/customercare/forms.py:18
 msgid "Mac OS"
 msgstr ""
 
-#: kitsune/customercare/forms.py:15
+#: kitsune/customercare/forms.py:19
 msgid "Linux"
 msgstr ""
 
-#: kitsune/customercare/forms.py:16
+#: kitsune/customercare/forms.py:20
 #, fuzzy
 msgid "Android"
 msgstr "Android"
 
-#: kitsune/customercare/forms.py:17
+#: kitsune/customercare/forms.py:21
 msgid "iOS"
 msgstr ""
 
-#: kitsune/customercare/forms.py:18 kitsune/wiki/views.py:1377 kitsune/wiki/views.py:1397
+#: kitsune/customercare/forms.py:22 kitsune/wiki/views.py:1377 kitsune/wiki/views.py:1397
 msgid "Other"
 msgstr "Mosusu"
 
-#: kitsune/customercare/forms.py:30
+#: kitsune/customercare/forms.py:34
 msgid "Contact e-mail"
 msgstr ""
 
-#: kitsune/customercare/forms.py:33
+#: kitsune/customercare/forms.py:37
 #, fuzzy
 msgid "What do you need help with?"
 msgstr "Produit nini olingi kokotisela motuna?"
 
-#: kitsune/customercare/forms.py:36
+#: kitsune/customercare/forms.py:40
 msgid "What operating system does your device use?"
 msgstr ""
 
-#: kitsune/customercare/forms.py:40 kitsune/questions/forms.py:44
+#: kitsune/customercare/forms.py:44 kitsune/questions/forms.py:46
 #, fuzzy
 msgid "Subject"
 msgstr "Moboku:"
 
-#: kitsune/customercare/forms.py:41
+#: kitsune/customercare/forms.py:45
 msgid "Tell us more"
 msgstr ""
 
-#: kitsune/customercare/forms.py:59
+#: kitsune/customercare/forms.py:63
 msgid "Select a reason for contacting"
 msgstr ""
+
+#: kitsune/customercare/forms.py:91
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: kitsune/customercare/models.py:18 kitsune/flagit/models.py:38
+msgid "Pending"
+msgstr "Eza kozela"
+
+#: kitsune/customercare/models.py:19
+msgid "Sent"
+msgstr ""
+
+#: kitsune/customercare/models.py:20
+msgid "Flagged for Review"
+msgstr ""
+
+#: kitsune/customercare/models.py:21 kitsune/flagit/models.py:40
+msgid "Rejected"
+msgstr "Ebwakisami"
 
 #: kitsune/customercare/zendesk.py:8
 msgid "No response provided."
@@ -460,204 +484,339 @@ msgstr "Pourcent Localisé: Nionso"
 msgid "Monthly Active Contributors"
 msgstr "Bacontributeur Actif na Sanza"
 
-#: kitsune/dashboards/readouts.py:47
+#. This is a KB article localization status. It may be displayed on
+#. https://support.mozilla.org/localization or
+#. https://support.mozilla.org/localization/most-visited-translations (for
+#. non-en-US locales).
+#. Note: the article may already be translated; the status is displayed if there is
+#. at least one unreviewed revision.
+#: kitsune/dashboards/readouts.py:51
 msgid "Review Needed"
 msgstr "Esengeli Komanyolama"
 
-#: kitsune/dashboards/readouts.py:51
+#. This is a KB article localization status. It may be displayed on
+#. https://support.mozilla.org/localization or
+#. https://support.mozilla.org/localization/most-visited-translations (for
+#. non-en-US locales).
+#: kitsune/dashboards/readouts.py:55
+msgid "Up to Date"
+msgstr ""
+
+#. This is a KB article localization status. It may be displayed on
+#. https://support.mozilla.org/localization or
+#. https://support.mozilla.org/localization/most-visited-translations (for
+#. non-en-US locales).
+#: kitsune/dashboards/readouts.py:61
 msgid "Update Needed"
 msgstr "Esengeli na Mise à jour"
 
-#: kitsune/dashboards/readouts.py:52
+#. This is a KB article localization status. It may be displayed on
+#. https://support.mozilla.org/localization or
+#. https://support.mozilla.org/localization/most-visited-translations (for
+#. non-en-US locales).
+#: kitsune/dashboards/readouts.py:65
 msgid "Immediate Update Needed"
 msgstr "Esengeli na Mise à jour Sik'oyo"
 
-#: kitsune/dashboards/readouts.py:117
+#. This is a KB article localization status. It may be displayed on
+#. https://support.mozilla.org/localization or
+#. https://support.mozilla.org/localization/most-visited-translations (for
+#. non-en-US locales).
+#: kitsune/dashboards/readouts.py:133
 msgid "Translation Needed"
 msgstr "Esengeli na Ndimbola"
 
-#: kitsune/dashboards/readouts.py:379
+#. This is an entry header for the Overview table, displayed on
+#. https://support.mozilla.org/localization (for non-en-US locales).
+#: kitsune/dashboards/readouts.py:397
 msgid "Top 20 Articles"
 msgstr "Baarticle 20 ya Likolo"
 
-#: kitsune/dashboards/readouts.py:384
+#. This is an entry description for the Overview table, displayed on
+#. https://support.mozilla.org/localization (for non-en-US locales).
+#: kitsune/dashboards/readouts.py:403
 #, fuzzy, python-format
 msgid "These are the top 20 most visited articles in the last 30 days, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "Oyo eza baarticle 20 ya likolo eye etalemi mingi na mikolo 30 mileki, yango etali koleka 50% ya traffic na Oyo etali Boyebi."
 
-#: kitsune/dashboards/readouts.py:390
+#. This is an entry header for the Overview table, displayed on
+#. https://support.mozilla.org/localization (for non-en-US locales).
+#: kitsune/dashboards/readouts.py:408
 msgid "Top 50 Articles"
 msgstr "Baartilce 50 ya Likolo"
 
-#: kitsune/dashboards/readouts.py:394
+#. This is an entry description for the Overview table, displayed on
+#. https://support.mozilla.org/localization (for non-en-US locales).
+#: kitsune/dashboards/readouts.py:414
 msgid "These are the top 50 most visited articles in the last 30 days."
 msgstr "Oyo eza baarticle 50 ya likolo eye etalemi mingi na mikolo 30 mileki."
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:44 kitsune/dashboards/readouts.py:397
+#. This is an entry header for the Overview table, displayed on
+#. https://support.mozilla.org/localization (for non-en-US locales).
+#: kitsune/dashboards/readouts.py:419
 msgid "Top 100 Articles"
 msgstr "Baarticle 100 ya Likolo"
 
-#: kitsune/dashboards/readouts.py:402
+#. This is an entry description for the Overview table, displayed on
+#. https://support.mozilla.org/localization (for non-en-US locales).
+#: kitsune/dashboards/readouts.py:425
 #, fuzzy, python-format
 msgid "These are the top 100 most visited articles in the last 30 days, which account for over 99% of the traffic to the Knowledge Base."
 msgstr "Oyo eza baarticle 100 ya likolo eye etalemi mingi na mikolo 30 mileki, yango etali koleka 99% ya traffic na Oyo Etali Boyebi."
 
-#: kitsune/dashboards/readouts.py:408 kitsune/dashboards/readouts.py:692 kitsune/dashboards/readouts.py:840 kitsune/dashboards/readouts.py:841 kitsune/sumo/jinja2/includes/common_macros.html:822
+#: kitsune/dashboards/readouts.py:429 kitsune/dashboards/readouts.py:731 kitsune/dashboards/readouts.py:898 kitsune/dashboards/readouts.py:899 kitsune/sumo/jinja2/includes/common_macros.html:822
 #: kitsune/wiki/config.py:101
 msgid "Templates"
 msgstr "Bamodele"
 
-#: kitsune/dashboards/readouts.py:414
+#. This is an entry description for the Overview table, displayed on
+#. https://support.mozilla.org/localization (for non-en-US locales).
+#: kitsune/dashboards/readouts.py:436
 msgid "Templates are a way of reusing pieces of content across KB articles. You can create and update a set of instructions in one place, and then refer to it in other pages."
 msgstr ""
 "Bamodele eza nzela ya kosalela lisusu biteni ya contenu nakati ya baarticle ya Oyo Etali Boyebi. Okoki kokela mpe kosala mise à jour ya mopiko ya mitindo na esika moko, mpe na sima komiréférer "
 "nayango na makasa misusu."
 
-#: kitsune/dashboards/readouts.py:421
+#. This is an entry header for the Overview table, displayed on
+#. https://support.mozilla.org/localization (for non-en-US locales).
+#: kitsune/dashboards/readouts.py:441
 msgid "All Knowledge Base Articles"
 msgstr "Baarticle Nionso Ya Oyo Etali Boyebi"
 
-#: kitsune/dashboards/readouts.py:426
+#. This is an entry description for the Overview table, displayed on
+#. https://support.mozilla.org/localization (for non-en-US locales).
+#: kitsune/dashboards/readouts.py:447
 msgid "This is the number of all Knowledge Base articles that are ready to be localized."
 msgstr "Oyo ezali motango ya baarticle nionso ya Oyo Etali Boyebi eye elengelami mpo na kolimbola."
 
-#: kitsune/dashboards/readouts.py:445
+#. This is a column header for an abstract Localization Dashboard table. It refers
+#. to articles.
+#: kitsune/dashboards/readouts.py:466
 msgid "Visits in last 30 days"
 msgstr "Bavisite na mikolo 30 mileki"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:5 kitsune/dashboards/readouts.py:446 kitsune/wiki/jinja2/wiki/includes/revision_list.html:24
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:6 kitsune/dashboards/readouts.py:468 kitsune/wiki/jinja2/wiki/includes/revision_list.html:24
 msgid "Status"
 msgstr "Lolenge"
 
-#: kitsune/dashboards/readouts.py:447 kitsune/dashboards/readouts.py:1134
+#. This is a sorting option for an abstract Localization Dashboard table. It refers
+#. to articles.
+#: kitsune/dashboards/readouts.py:471
 msgid "Most Viewed"
 msgstr "Oyo batali mingi"
 
-#: kitsune/dashboards/readouts.py:447
+#. This is a sorting option for an abstract Localization Dashboard table. It refers
+#. to articles.
+#: kitsune/dashboards/readouts.py:473
 msgid "Most Recent"
 msgstr "Ya kala mingi te"
 
-#: kitsune/dashboards/readouts.py:549 kitsune/dashboards/readouts.py:723
+#. This refers to articles.
+#: kitsune/dashboards/readouts.py:577 kitsune/dashboards/readouts.py:776
 msgid "Most Visited"
 msgstr "Oyo bavisiter mingi"
 
-#: kitsune/dashboards/readouts.py:551
+#. Unused. A link to be displayed under the Most Visited overview table,
+#. which redirects users to the full Most Visited table
+#. (https://support.mozilla.org/contributors/most-visited).
+#: kitsune/dashboards/readouts.py:581
 msgid "All knowledge base articles..."
 msgstr "Baarticle nionso ya oyo etali boyebi..."
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:4 kitsune/dashboards/readouts.py:553 kitsune/dashboards/readouts.py:619
+#. This is a table column header that refers to article visit count.
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:5 kitsune/dashboards/readouts.py:584 kitsune/dashboards/readouts.py:651
 msgid "Visits"
 msgstr "Bavisite"
 
-#: kitsune/dashboards/readouts.py:674
+#. This is a KB article status. It may be displayed on
+#. https://support.mozilla.org/localization#template-translations,
+#. https://support.mozilla.org/contributors/templates,
+#. https://support.mozilla.org/contributors/how-to-contribute or
+#. https://support.mozilla.org/contributors/administration.
+#: kitsune/dashboards/readouts.py:711
 msgid "Changes Needed"
 msgstr "Esengeli na mbongwama"
 
-#: kitsune/dashboards/readouts.py:677 kitsune/dashboards/readouts.py:1052
+#. This refers to articles.
+#: kitsune/dashboards/readouts.py:715 kitsune/dashboards/readouts.py:1140
 msgid "Changes Not Ready For Localization"
 msgstr "Mbongwana Naino Elengelami Te Mpo Na Kolimbola"
 
-#: kitsune/dashboards/readouts.py:694 kitsune/dashboards/readouts.py:843
+#. This is a link displayed under the Templates overview table
+#. (https://support.mozilla.org/localization#template-translations for non-en-US
+#. locales),
+#. which redirects users to the full Templates table
+#. (https://support.mozilla.org/localization/template-translations).
+#: kitsune/dashboards/readouts.py:738 kitsune/dashboards/readouts.py:904
 msgid "All templates..."
 msgstr "Bamodele Nionso..."
 
-#: kitsune/dashboards/readouts.py:699
+#. This is a table header displayed on
+#. https://support.mozilla.org/contributors/how-to-contribute. It refers to the
+#. article topic.
+#: kitsune/dashboards/readouts.py:745
 msgid "How To Contribute"
 msgstr "Ndenge Ya Kocontribuer"
 
-#: kitsune/dashboards/readouts.py:701
+#. Unused. A link to be displayed under the How To Contribute overview table,
+#. which redirects users to the full How To Contribute table.
+#: kitsune/dashboards/readouts.py:749
 msgid "All How To Contribute articles..."
 msgstr "Baarticle Nionso Ya Ndenge Ya Kocontribuer..."
 
-#: kitsune/dashboards/readouts.py:706 kitsune/wiki/config.py:99
+#. This is a table header displayed on
+#. https://support.mozilla.org/contributors/administration. It refers to the
+#. article topic.
+#: kitsune/dashboards/readouts.py:756 kitsune/wiki/config.py:99
 msgid "Administration"
 msgstr "Administration"
 
-#: kitsune/dashboards/readouts.py:708
+#. Unused. A link to be displayed under the Administration overview table,
+#. which redirects users to the full Administration table.
+#: kitsune/dashboards/readouts.py:760
 msgid "All Administration articles..."
 msgstr "Baarticle Nionso Ya Administration..."
 
-#: kitsune/dashboards/readouts.py:725
+#. This is a link displayed under the Most Visited overview table
+#. (https://support.mozilla.org/uk/localization#most-visited-translations for
+#. non-en-US locales),
+#. which redirects users to the full Most Visited table
+#. (https://support.mozilla.org/localization/most-visited-translations for
+#. non-en-US locales).
+#: kitsune/dashboards/readouts.py:782
 msgid "All translations..."
 msgstr "Nionso oyo elimbolami..."
 
-#. L10n: Not just changes to translations but also unreviewed changes to
-#. docs in this locale that are not translations
-#: kitsune/dashboards/readouts.py:923
+#. This is a table header displayed on
+#. https://support.mozilla.org/localization#unreviewed (for non-en-US locales)
+#. and https://support.mozilla.org/localization/unreviewed.
+#. It refers not just to changes to translations but also to unreviewed changes to
+#. docs in this locale that are not translations.
+#: kitsune/dashboards/readouts.py:987
 msgid "Unreviewed Changes"
 msgstr "Mbongwana oyo emanyolami te"
 
-#: kitsune/dashboards/readouts.py:925
+#. Unused. This is a short name for the Unreviewed Changes table,
+#. displayed on https://support.mozilla.org/localization#unreviewed (for non-en-US
+#. locales)
+#. and https://support.mozilla.org/localization/unreviewed.
+#. It refers not just to changes to translations but also to unreviewed changes to
+#. docs in this locale that are not translations.
+#: kitsune/dashboards/readouts.py:994
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "Emanyolami te"
 
-#: kitsune/dashboards/readouts.py:926
+#. This is a link displayed under the Unreviewed Changes overview table
+#. (https://support.mozilla.org/localization#unreviewed for non-en-US locales),
+#. which redirects users to the full Unreviewed Changes table
+#. (https://support.mozilla.org/localization/unreviewed).
+#: kitsune/dashboards/readouts.py:998
 msgid "All articles requiring review..."
 msgstr "Baarticle nionso oyo esengeli komanyolama..."
 
-#: kitsune/dashboards/readouts.py:928
+#. This is a column header for the Unreviewed Changes table, displayed on
+#. https://support.mozilla.org/localization#unreviewed (for non-en-US locales)
+#. and https://support.mozilla.org/localization/unreviewed.
+#. It refers to the time an article was last changed.
+#: kitsune/dashboards/readouts.py:1004
 msgid "Changed"
 msgstr "Ebongwami"
 
-#: kitsune/dashboards/readouts.py:990
+#. This is a table header displayed on
+#. https://support.mozilla.org/contributors/unhelpful.
+#: kitsune/dashboards/readouts.py:1067
 msgid "Unhelpful Documents"
 msgstr "Badocument ya ntina te"
 
-#: kitsune/dashboards/readouts.py:992
+#. Unused. This is a short name for the Unhelpful Documents table,
+#. displayed on https://support.mozilla.org/contributors/unhelpful.
+#: kitsune/dashboards/readouts.py:1071
 msgctxt "document"
 msgid "Unhelpful"
 msgstr "Ya ntina te"
 
-#: kitsune/dashboards/readouts.py:993
+#. Unused. This is a link to be displayed under the Unhelpful Documents overview
+#. table,
+#. which redirects users to the full Unhelpful Documents table
+#. (https://support.mozilla.org/contributors/unhelpful).
+#: kitsune/dashboards/readouts.py:1074
 msgid "All unhelpful articles..."
 msgstr "Baarticle nionso ya ntina te..."
 
-#: kitsune/dashboards/readouts.py:995
+#. This is a column header for the Unhelpful Documents table, displayed on
+#. https://support.mozilla.org/contributors/unhelpful.
+#. It refers to the article's helpful/unhelpful vote count.
+#: kitsune/dashboards/readouts.py:1079
 msgid "Total Votes"
 msgstr "Bavote Nionso"
 
-#: kitsune/dashboards/readouts.py:996
+#. This is a column header for the Unhelpful Documents table, displayed on
+#. https://support.mozilla.org/contributors/unhelpful.
+#. It refers to the article's helpful vote percentage (out of total
+#. helpful/unhelpful vote count).
+#: kitsune/dashboards/readouts.py:1083
 msgid "Helpfulness"
 msgstr "Bopesi ntina"
 
-#: kitsune/dashboards/readouts.py:1054
+#. Unused. This is a description for the Changes Not Ready For Localization table,
+#. displayed on https://support.mozilla.org/contributors/unready.
+#: kitsune/dashboards/readouts.py:1143
 msgid "Articles which have approved revisions newer than the latest ready-for-localization one"
 msgstr "Baarticle eye eza na barevision oyo endimami sika mpeza koleka oyo elengelami-mpo na- kolimbolama"
 
-#: kitsune/dashboards/readouts.py:1058
+#. Unused. This is a link to be displayed under the Changes Not Ready For
+#. Localization overview table,
+#. which redirects users to the full Changes Not Ready For Localization table
+#. (https://support.mozilla.org/contributors/unready).
+#: kitsune/dashboards/readouts.py:1147
 msgid "All articles with changes not ready for localization..."
 msgstr "Baarticle nionso eye eza na mbogwana oyo elengelami te mpo na kolimbolama..."
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:175 kitsune/dashboards/readouts.py:1060 kitsune/wiki/jinja2/wiki/includes/revision_list.html:71
+#. This refers to article revisions.
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:155 kitsune/dashboards/readouts.py:1150 kitsune/wiki/jinja2/wiki/includes/revision_list.html:73
 msgid "Approved"
 msgstr "Endimami"
 
-#: kitsune/dashboards/readouts.py:1128
+#. This is a table header displayed on
+#. https://support.mozilla.org/contributors/need-changes.
+#: kitsune/dashboards/readouts.py:1219
 msgid "Need Changes"
 msgstr "Esengeli na mbongwama"
 
-#: kitsune/dashboards/readouts.py:1129
+#. Unused. This is a description for the Need Changes table,
+#. displayed on https://support.mozilla.org/contributors/need-changes.
+#: kitsune/dashboards/readouts.py:1222
 msgid "Articles that require changes."
 msgstr "Baarticle nionso oyo esengeli na mbongwama."
 
-#: kitsune/dashboards/readouts.py:1131
+#. Unused. This is a link to be displayed under the Need Changes overview table,
+#. which redirects users to the full Need Changes table
+#. (https://support.mozilla.org/contributors/need-changes).
+#: kitsune/dashboards/readouts.py:1226
 msgid "All articles that require changes..."
 msgstr "Baarticle nionso oyo esengeli na mbongwama..."
 
-#: kitsune/dashboards/readouts.py:1133 kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:45 kitsune/wiki/jinja2/wiki/includes/revision_list.html:30
+#. A noun. There are comments for articles in general (on
+#. https://support.mozilla.org/contributors/need-changes) and every article
+#. revision.
+#: kitsune/dashboards/readouts.py:1229 kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:46 kitsune/wiki/jinja2/wiki/includes/revision_list.html:31
 msgid "Comment"
 msgstr "Commentaire"
 
-#: kitsune/dashboards/readouts.py:1172 kitsune/wiki/config.py:102
+#: kitsune/dashboards/readouts.py:1267 kitsune/wiki/config.py:102
 msgid "Canned Responses"
 msgstr "Biyano Biye Bilengelami"
 
-#: kitsune/dashboards/readouts.py:1173
+#. Unused. This is a description for the Canned Responses table.
+#: kitsune/dashboards/readouts.py:1269
 msgid "Localization status of all canned responses"
 msgstr "Lolenge ya Ndimbola ya biyano binso biye bilengelami"
 
-#: kitsune/dashboards/readouts.py:1175
+#. Unused. This is a link to be displayed under the Canned Responses overview
+#. table,
+#. which redirects users to the full Canned Responses table.
+#: kitsune/dashboards/readouts.py:1273
 msgid "All canned responses articles..."
 msgstr "Baarticle nionso ya biyano biye bilengelami..."
 
@@ -665,7 +824,7 @@ msgstr "Baarticle nionso ya biyano biye bilengelami..."
 msgid "Knowledge Base Dashboard"
 msgstr "Tableau de bord ya Oyo Etali Boyebi"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:278 kitsune/dashboards/views.py:111
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:258 kitsune/dashboards/views.py:111
 msgid "Localization Dashboard"
 msgstr "Tableau de bord ya Ndimbola"
 
@@ -714,8 +873,8 @@ msgstr "Aperçu général ya mobimba..."
 msgid "[{product}] Knowledge Base Dashboard"
 msgstr "[{product}] Tableau de bord ya Oyo Etali Boyebi"
 
-#: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:196 kitsune/dashboards/jinja2/dashboards/includes/macros.html:211
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:221 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/products/jinja2/products/includes/product_macros.html:34
+#: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:176 kitsune/dashboards/jinja2/dashboards/includes/macros.html:191
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:201 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/products/jinja2/products/includes/product_macros.html:34
 #: kitsune/questions/jinja2/questions/product_list.html:48 kitsune/questions/jinja2/questions/question_details.html:13 kitsune/questions/jinja2/questions/question_list.html:8
 #: kitsune/search/jinja2/search/results.html:88 kitsune/search/views.py:71
 msgid "All Products"
@@ -755,42 +914,42 @@ msgstr "Sala volontariat mpo na Mozilla Support"
 msgid "Article"
 msgstr "Article"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:6
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:7
 msgid "Needs Update"
 msgstr "Esengeli na mise à jour"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:7
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:8
 msgid "Ready for L10N"
 msgstr "Elengelami mpo na L10N"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:8
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:9
 msgid "Stale"
 msgstr "Esili ngala"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:9
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:10
 msgid "Expiry Date"
 msgstr "Mokolo ngala ekosila "
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:26
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:27
 msgid "Live"
 msgstr "Na bomoyi"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:28
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:29
 #, python-brace-format
 msgid "Review Needed: {comment}"
 msgstr "Esengeli Komanyolama: {comment}"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:33 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:38 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:45
-#: kitsune/questions/jinja2/questions/includes/answer.html:120 kitsune/sumo/templatetags/jinja_helpers.py:423 kitsune/sumo/views.py:62 kitsune/wiki/jinja2/wiki/includes/document_macros.html:381
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:34 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:39 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:46
+#: kitsune/questions/jinja2/questions/includes/answer.html:120 kitsune/sumo/templatetags/jinja_helpers.py:424 kitsune/sumo/views.py:62 kitsune/wiki/jinja2/wiki/includes/document_macros.html:381
 msgid "Yes"
 msgstr "Iyo"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:40 kitsune/questions/jinja2/questions/includes/answer.html:126 kitsune/questions/jinja2/questions/includes/answer.html:130
-#: kitsune/sumo/templatetags/jinja_helpers.py:423 kitsune/sumo/views.py:63 kitsune/wiki/jinja2/wiki/includes/document_macros.html:385
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:41 kitsune/questions/jinja2/questions/includes/answer.html:126 kitsune/questions/jinja2/questions/includes/answer.html:130
+#: kitsune/sumo/templatetags/jinja_helpers.py:424 kitsune/sumo/views.py:63 kitsune/wiki/jinja2/wiki/includes/document_macros.html:385
 msgid "No"
 msgstr "Te"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:55 kitsune/wiki/jinja2/wiki/show_translations.html:5
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:56 kitsune/wiki/jinja2/wiki/show_translations.html:5
 msgid "Show translations"
 msgstr "Lakisa oyo elimbolami"
 
@@ -803,80 +962,80 @@ msgstr "ebongolami na {users}"
 msgid "Overview"
 msgstr "Aperçu général"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:51 kitsune/dashboards/jinja2/dashboards/includes/macros.html:70
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:50
 #, python-format
 msgid "%(numerator)s <small>of %(denominator)s</small>"
 msgstr "%(numerator)s <small>ya %(denominator)s</small>"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:86
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:65
 msgid "User Interface"
 msgstr "Interface ya Mosaleli"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:88
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:67
 msgid "https://pontoon.mozilla.org/projects/sumo/"
 msgstr ""
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:88
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:67
 #, python-format
 msgid "A fully translated user interface improves the experience for site visitors in your language. Help <a href=\"%(url)s\">translate the interface</a>."
 msgstr "Interface ya mosaleli oyo elimbolami mobimba nayango enetolaka experience mpo na bavisiteur ya site na lokota nayo. Salisa <a href=\"%(url)s\">kolimbola interface</a>."
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:160
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:139
 msgctxt "l10n dashboard"
 msgid "Subscribe..."
 msgstr "Mikomisa..."
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:174
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:153
 msgid "Waiting for review"
 msgstr "Eza kozela bomanyolami"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:176 kitsune/wiki/forms.py:428 kitsune/wiki/jinja2/wiki/includes/revision_list.html:28
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:156 kitsune/wiki/forms.py:428 kitsune/wiki/jinja2/wiki/includes/revision_list.html:28
 msgid "Ready for localization"
 msgstr "Elengelami mpo na kolimbola"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:182
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:162
 msgid "Please note that these selections are specific to the current product selected."
 msgstr "Yeba ete biye biponami awa biza bobele mpo na produit oyo oponami sik'oyo."
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:184
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:164
 msgid "Please note that you will be subscribed to these notifications for all products. If you are only interested in specific products, please go to the dashboard for that product."
 msgstr "Yeaba ete bakokomisa mpo na mayebisi oyo mpo na baproduit nionso. Soki osepeli kaka na baproduit ya lolenge songolo, kende na tableau de bord mpo na produit wana."
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:240 kitsune/products/api.py:99 kitsune/products/api.py:101 kitsune/questions/jinja2/questions/question_list.html:323
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:220 kitsune/products/api.py:99 kitsune/products/api.py:101 kitsune/questions/jinja2/questions/question_list.html:322
 msgid "All Topics"
 msgstr "Basujet Nionso"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:257
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:237
 #, fuzzy
 msgid "Filter by type:"
 msgstr "Filtrer na"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:259 kitsune/products/jinja2/products/includes/topic_macros.html:152 kitsune/questions/jinja2/questions/metrics.html:25
-#: kitsune/questions/jinja2/questions/metrics.html:27 kitsune/questions/jinja2/questions/question_list.html:138 kitsune/questions/jinja2/questions/question_list.html:313
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:239 kitsune/products/jinja2/products/includes/topic_macros.html:152 kitsune/questions/jinja2/questions/metrics.html:25
+#: kitsune/questions/jinja2/questions/metrics.html:27 kitsune/questions/jinja2/questions/question_list.html:138 kitsune/questions/jinja2/questions/question_list.html:312
 msgid "All"
 msgstr "Nionso"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:276
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:256
 msgid "KB Dashboard"
 msgstr "Tableau de bord ya Oyo Etali Boyebi"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:282
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:262
 msgid "Locale Metrics"
 msgstr "Bamesure ya Lokota"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:287
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:267
 msgid "KB Team"
 msgstr "Equipe ya Oyo Etali Boyebi"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:289
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:269
 msgid "Localization Team"
 msgstr "Equipe ya Ndimbola"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:294 kitsune/wiki/jinja2/wiki/recent_revisions.html:5
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:274 kitsune/wiki/jinja2/wiki/recent_revisions.html:5
 msgid "Recent Revisions"
 msgstr "Barivision ya kala te"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:297
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:277
 msgid "Aggregated Metrics"
 msgstr "Bamesure oyo Endimami"
 
@@ -896,27 +1055,19 @@ msgstr "Contenu ya mabe"
 msgid "Other (please specify)"
 msgstr "Mosusu (sembola)"
 
-#: kitsune/flagit/models.py:38
-msgid "Pending"
-msgstr "Eza kozela"
-
 #: kitsune/flagit/models.py:39
 msgid "Accepted and Fixed"
 msgstr "Endimami mpe Ebongisami"
 
-#: kitsune/flagit/models.py:40
-msgid "Rejected"
-msgstr "Ebwakisami"
-
-#: kitsune/flagit/views.py:78
+#: kitsune/flagit/views.py:90
 msgid "System account content cannot be flagged."
 msgstr ""
 
-#: kitsune/flagit/views.py:104
+#: kitsune/flagit/views.py:116
 msgid "You already flagged this content."
 msgstr "Osi otiyaki bendele na contenu oyo."
 
-#: kitsune/flagit/views.py:106
+#: kitsune/flagit/views.py:118
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr "Otiyaki bendele na contenu oyo. Moderateur moko akomanyola etinda nayo kala mingi te."
 
@@ -924,7 +1075,7 @@ msgstr "Otiyaki bendele na contenu oyo. Moderateur moko akomanyola etinda nayo k
 msgid "Topic and Tag Moderation Tool"
 msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:4 kitsune/sumo/jinja2/base.html:24 kitsune/wiki/jinja2/wiki/document.html:27
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:4 kitsune/flagit/jinja2/flagit/zendesk_spam.html:3 kitsune/sumo/jinja2/base.html:24 kitsune/wiki/jinja2/wiki/document.html:28
 msgctxt "site_title"
 msgid "Mozilla Support"
 msgstr "Lisungi Ya Mozilla"
@@ -944,19 +1095,20 @@ msgid "Unassigned"
 msgstr ""
 
 #: kitsune/flagit/jinja2/flagit/content_moderation.html:27 kitsune/flagit/jinja2/flagit/content_moderation.html:29 kitsune/flagit/jinja2/flagit/queue.html:11
+#: kitsune/flagit/jinja2/flagit/zendesk_spam.html:16
 msgid "Additional notes:"
 msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:37 kitsune/flagit/jinja2/flagit/queue.html:18
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:37 kitsune/flagit/jinja2/flagit/queue.html:18 kitsune/flagit/jinja2/flagit/zendesk_spam.html:23
 #, python-brace-format
 msgid "{t} with id={id} no longer exists."
 msgstr "{t} with id={id} eza lisusu te."
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:39 kitsune/flagit/jinja2/flagit/queue.html:20
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:39 kitsune/flagit/jinja2/flagit/queue.html:20 kitsune/flagit/jinja2/flagit/zendesk_spam.html:25
 msgid "Update Status:"
 msgstr "Sala mise à jour ya lolenge:"
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:48 kitsune/flagit/jinja2/flagit/queue.html:24
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:48 kitsune/flagit/jinja2/flagit/queue.html:24 kitsune/flagit/jinja2/flagit/zendesk_spam.html:29
 msgid "Please select..."
 msgstr "Pona..."
 
@@ -968,8 +1120,8 @@ msgstr ""
 msgid "Content is appropriately categorized."
 msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:53 kitsune/flagit/jinja2/flagit/queue.html:40 kitsune/users/jinja2/users/edit_contributions.html:16
-#: kitsune/users/jinja2/users/edit_settings.html:17 kitsune/users/jinja2/users/edit_watches.html:30
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:53 kitsune/flagit/jinja2/flagit/queue.html:40 kitsune/flagit/jinja2/flagit/zendesk_spam.html:34
+#: kitsune/users/jinja2/users/edit_contributions.html:16 kitsune/users/jinja2/users/edit_settings.html:17 kitsune/users/jinja2/users/edit_watches.html:30
 msgid "Update"
 msgstr "Mise à jour"
 
@@ -977,7 +1129,7 @@ msgstr "Mise à jour"
 msgid "Please wait..."
 msgstr "Zela..."
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:60 kitsune/flagit/jinja2/flagit/queue.html:46
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:60 kitsune/flagit/jinja2/flagit/queue.html:46 kitsune/flagit/jinja2/flagit/zendesk_spam.html:40
 msgid "There is no content pending moderation."
 msgstr ""
 
@@ -1005,16 +1157,16 @@ msgstr ""
 msgid "View all deactivated users"
 msgstr "Tala basaleli nionso baye baza désactivé"
 
-#: kitsune/flagit/jinja2/flagit/queue.html:9
+#: kitsune/flagit/jinja2/flagit/queue.html:9 kitsune/flagit/jinja2/flagit/zendesk_spam.html:14
 #, python-brace-format
 msgid "Flagged {t} (Reason: {r})"
 msgstr "Etiyami bendele {t} (Ntina: {r})"
 
-#: kitsune/flagit/jinja2/flagit/queue.html:26
+#: kitsune/flagit/jinja2/flagit/queue.html:26 kitsune/flagit/jinja2/flagit/zendesk_spam.html:30
 msgid "Removed spam content."
 msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/queue.html:27
+#: kitsune/flagit/jinja2/flagit/queue.html:27 kitsune/flagit/jinja2/flagit/zendesk_spam.html:31
 msgid "No spam found."
 msgstr ""
 
@@ -1042,19 +1194,23 @@ msgstr ""
 msgid "No issues found."
 msgstr ""
 
+#: kitsune/flagit/jinja2/flagit/zendesk_spam.html:3 kitsune/flagit/jinja2/flagit/zendesk_spam.html:6
+msgid "Zendesk Spam Queue"
+msgstr ""
+
 #: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:6 kitsune/kbforums/forms.py:56 kitsune/kbforums/forms.py:83
 #: kitsune/wiki/forms.py:84 kitsune/wiki/jinja2/wiki/translate.html:81
 msgid "Title:"
 msgstr "Titre:"
 
 #: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:4 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:10
-#: kitsune/kbforums/forms.py:34 kitsune/kbforums/forms.py:65 kitsune/kbforums/forms.py:101 kitsune/questions/forms.py:221 kitsune/wiki/forms.py:349
+#: kitsune/kbforums/forms.py:34 kitsune/kbforums/forms.py:65 kitsune/kbforums/forms.py:101 kitsune/questions/forms.py:233 kitsune/wiki/forms.py:349
 #: kitsune/wiki/jinja2/wiki/includes/document_macros.html:219 kitsune/wiki/jinja2/wiki/review_translation.html:99
 msgid "Content:"
 msgstr "Contenu:"
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:6 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:13 kitsune/kbadge/jinja2/badger/award_detail.html:29
-#: kitsune/kbadge/jinja2/badger/badge_detail.html:28 kitsune/questions/jinja2/questions/edit_answer.html:29 kitsune/wiki/jinja2/wiki/revision.html:28
+#: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:6 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:13 kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:14
+#: kitsune/kbadge/jinja2/badger/award_detail.html:29 kitsune/kbadge/jinja2/badger/badge_detail.html:28 kitsune/questions/jinja2/questions/edit_answer.html:29 kitsune/wiki/jinja2/wiki/revision.html:28
 msgid "Created:"
 msgstr "Esalemaki:"
 
@@ -1063,10 +1219,12 @@ msgid "Updated:"
 msgstr "Ezwaki mise à jour:"
 
 #: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:17 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:7 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:21
+#: kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:21
 msgid "Flagged:"
 msgstr "Etiyamaki bendele:"
 
 #: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:21 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:11 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:25
+#: kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:25
 msgid "Take Action:"
 msgstr "Sala eloko:"
 
@@ -1086,16 +1244,44 @@ msgstr "Bongisa"
 msgid "Delete"
 msgstr "Boma"
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:27
+#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:27 kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:27
 msgid "Current topic:"
 msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:33
+#: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:33 kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:33
 msgid "Change Topic:"
 msgstr ""
 
 #: kitsune/flagit/jinja2/flagit/includes/flagged_question.html:43
 msgid "Assign Tags:"
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:3
+msgid "Subject:"
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:6 kitsune/kbadge/jinja2/badger/award_detail.html:20 kitsune/kbadge/jinja2/badger/badge_detail.html:19
+msgid "Description:"
+msgstr "Description:"
+
+#: kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:9
+msgid "Email:"
+msgstr "Email:"
+
+#: kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:10
+msgid "Product:"
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:11 kitsune/wiki/forms.py:131 kitsune/wiki/jinja2/wiki/history.html:18
+msgid "Category:"
+msgstr "Categorie:"
+
+#: kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:12
+msgid "Status:"
+msgstr ""
+
+#: kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:48
+msgid "View in Admin"
 msgstr ""
 
 #: kitsune/flagit/jinja2/flagit/includes/macros.html:2
@@ -1172,7 +1358,7 @@ msgstr "Kotisa yango kati ya wiki syntax na [[Image:title]]"
 msgid "Provide a brief description of this media."
 msgstr "Pesa na bokuse description ya media oyo."
 
-#: kitsune/gallery/forms.py:41 kitsune/questions/jinja2/questions/question_details.html:477 kitsune/wiki/jinja2/wiki/confirm_document_delete.html:24
+#: kitsune/gallery/forms.py:41 kitsune/questions/jinja2/questions/question_details.html:476 kitsune/wiki/jinja2/wiki/confirm_document_delete.html:24
 msgid "Locale"
 msgstr "Lokota"
 
@@ -1372,39 +1558,39 @@ msgstr "nkombo ya bosaleli"
 msgid "Avatar"
 msgstr "Avatar"
 
-#: kitsune/groups/views.py:69
+#: kitsune/groups/views.py:59
 msgid "Group information updated successfully!"
 msgstr "Mise à jour ya bansango ya groupe esalemi malamu!"
 
-#: kitsune/groups/views.py:144
+#: kitsune/groups/views.py:134
 #, python-brace-format
 msgid "{users} added to the group successfully!"
 msgstr "{users} babakisami malamu na groupe!"
 
-#: kitsune/groups/views.py:148
+#: kitsune/groups/views.py:138
 msgid "There were errors adding members to the group, see below."
 msgstr "Baerreur esalemaki tango ya kobakisa bamembre na groupe, tala awa na se."
 
-#: kitsune/groups/views.py:168
+#: kitsune/groups/views.py:158
 #, python-brace-format
 msgid "{user} removed from the group successfully!"
 msgstr "{user} alongolami malamu na groupe!"
 
-#: kitsune/groups/views.py:191
+#: kitsune/groups/views.py:181
 #, python-brace-format
 msgid "{users} added to the group leaders successfully!"
 msgstr "{users} babakisami malamu na bakambi ya groupe!"
 
-#: kitsune/groups/views.py:197
+#: kitsune/groups/views.py:187
 msgid "There were errors adding leaders to the group, see below."
 msgstr "Baerreur esalemaki tango ya kobakisa bakambi ya groupe, tala awa na se."
 
-#: kitsune/groups/views.py:214
+#: kitsune/groups/views.py:204
 #, python-brace-format
 msgid "{user} removed from the group leaders successfully!"
 msgstr "{user} alongolami malamu na bakambi ya groupe!"
 
-#: kitsune/groups/views.py:229
+#: kitsune/groups/views.py:219
 msgid "You are now part of the Contributors group!"
 msgstr "Sik'oyo oza nakati ya groupe ya Bacontributeur!"
 
@@ -1531,19 +1717,6 @@ msgstr "Bakisa Mambre"
 msgid "Remove user from group"
 msgstr "Longola mosaleli kati ya groupe"
 
-#: kitsune/groups/jinja2/groups/profile.html:85
-msgid "previous"
-msgstr "Oyo eleki"
-
-#: kitsune/groups/jinja2/groups/profile.html:88
-#, python-brace-format
-msgid "Page {0} of {1}."
-msgstr "Lokasa {0} na {1}."
-
-#: kitsune/groups/jinja2/groups/profile.html:91
-msgid "next"
-msgstr "oyo elandi"
-
 #: kitsune/inproduct/admin.py:13
 msgid "KB article"
 msgstr ""
@@ -1578,10 +1751,6 @@ msgstr "Badge oyo epesami: %(badge_name)s"
 #: kitsune/kbadge/jinja2/badger/award_detail.html:15 kitsune/kbadge/jinja2/badger/badge_detail.html:14
 msgid "Image:"
 msgstr "Elili:"
-
-#: kitsune/kbadge/jinja2/badger/award_detail.html:20 kitsune/kbadge/jinja2/badger/badge_detail.html:19
-msgid "Description:"
-msgstr "Description:"
 
 #: kitsune/kbadge/jinja2/badger/award_detail.html:25 kitsune/kbadge/jinja2/badger/badge_detail.html:24 kitsune/wiki/jinja2/wiki/revision.html:32
 msgid "Creator:"
@@ -1623,14 +1792,6 @@ msgstr "Babadge oyo epesami kala te"
 #: kitsune/kbadge/jinja2/badger/awards_list.html:32
 msgid "awarded to"
 msgstr "epesami epayi ya"
-
-#: kitsune/kbadge/jinja2/badger/awards_list.html:54 kitsune/kbadge/jinja2/badger/badges_list.html:48 kitsune/sumo/jinja2/layout/paginator.html:11
-msgid "Previous"
-msgstr "Oyo eleki"
-
-#: kitsune/kbadge/jinja2/badger/awards_list.html:61 kitsune/kbadge/jinja2/badger/badges_list.html:55 kitsune/sumo/jinja2/layout/paginator.html:35
-msgid "Next"
-msgstr "Oyo elandi"
 
 #: kitsune/kbadge/jinja2/badger/badge_detail.html:7
 #, python-format
@@ -1808,7 +1969,9 @@ msgstr "Kolanda lokota oyo"
 msgid "Watch"
 msgstr "Kolanda"
 
-#: kitsune/kbforums/jinja2/kbforums/discussions.html:36 kitsune/kbforums/jinja2/kbforums/posts.html:47 kitsune/kbforums/jinja2/kbforums/threads.html:37 kitsune/questions/views.py:125
+#. This is a question sort option. It is a part of a drop-down menu with no
+#. heading.
+#: kitsune/kbforums/jinja2/kbforums/discussions.html:36 kitsune/kbforums/jinja2/kbforums/posts.html:47 kitsune/kbforums/jinja2/kbforums/threads.html:37 kitsune/questions/views.py:138
 msgid "Replies"
 msgstr "Biyano"
 
@@ -1927,7 +2090,8 @@ msgstr "Eyano yasuka ya"
 msgid "Sticky"
 msgstr "Bavisite ebele"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:50 kitsune/questions/jinja2/questions/question_list.html:210 kitsune/questions/views.py:107
+#. This is a question filter option for the Done tab.
+#: kitsune/kbforums/jinja2/kbforums/posts.html:50 kitsune/questions/jinja2/questions/question_list.html:210 kitsune/questions/views.py:116
 msgid "Locked"
 msgstr "Eza bloquer"
 
@@ -2233,7 +2397,7 @@ msgstr "Bima na Baresultat ya Enquete"
 msgid "Search Support"
 msgstr "Luka Lisungi Ya Mozilla"
 
-#: kitsune/landings/jinja2/landings/home.html:18 kitsune/products/jinja2/products/product.html:36
+#: kitsune/landings/jinja2/landings/home.html:18 kitsune/products/jinja2/products/product.html:37
 #, fuzzy
 msgid "Popular Searches:"
 msgstr "Baarticle ya contributeur"
@@ -2250,7 +2414,7 @@ msgstr ""
 msgid "Tracking Protection"
 msgstr ""
 
-#: kitsune/landings/jinja2/landings/home.html:22 kitsune/products/jinja2/products/product.html:42
+#: kitsune/landings/jinja2/landings/home.html:22 kitsune/products/jinja2/products/product.html:43
 msgid "Windows 10"
 msgstr ""
 
@@ -2264,7 +2428,7 @@ msgstr "Ya Ntina Te"
 msgid "Pick your product"
 msgstr "Pona produit "
 
-#: kitsune/landings/jinja2/landings/home.html:42 kitsune/products/jinja2/products/product.html:153 kitsune/questions/jinja2/questions/includes/aaq_macros.html:175
+#: kitsune/landings/jinja2/landings/home.html:42 kitsune/products/jinja2/products/product.html:154 kitsune/questions/jinja2/questions/includes/aaq_macros.html:175
 #, fuzzy
 msgid "Featured Articles"
 msgstr "Limbola Article"
@@ -2474,216 +2638,204 @@ msgstr ""
 msgid "Message Preview:"
 msgstr "Emoniselo Yambo Message:"
 
-#: kitsune/products/models.py:29
-msgid "Data useful for things like LLM prompts."
-msgstr ""
-
-#: kitsune/products/models.py:124
-msgid "Whether this topic is shown to users in the AAQ or not."
-msgstr ""
-
-#: kitsune/products/models.py:128
-msgid "Whether this topic is shown in navigation menus."
-msgstr ""
-
-#: kitsune/products/jinja2/products/documents.html:21 kitsune/products/jinja2/products/product.html:12 kitsune/wiki/jinja2/wiki/document.html:27
+#: kitsune/products/jinja2/products/documents.html:22 kitsune/products/jinja2/products/product.html:13 kitsune/wiki/jinja2/wiki/document.html:28
 #, python-brace-format
 msgid "{product} Help"
 msgstr "{product} Lisalisi"
 
-#: kitsune/products/jinja2/products/documents.html:82
+#: kitsune/products/jinja2/products/documents.html:83
 msgid "In English"
 msgstr "Na Angele"
 
-#: kitsune/products/jinja2/products/product.html:31
+#: kitsune/products/jinja2/products/product.html:32
 #, fuzzy
 msgid "Support"
 msgstr "Forum ya Lisungi"
 
-#: kitsune/products/jinja2/products/product.html:39 kitsune/products/jinja2/products/product.html:105
+#: kitsune/products/jinja2/products/product.html:40 kitsune/products/jinja2/products/product.html:106
 #, fuzzy
 msgid "Update Firefox"
 msgstr "Sala mise à jour ya mulongo"
 
-#: kitsune/products/jinja2/products/product.html:40 kitsune/products/jinja2/products/product.html:106
+#: kitsune/products/jinja2/products/product.html:41 kitsune/products/jinja2/products/product.html:107
 #, fuzzy
 msgid "Profiles"
 msgstr "Profile"
 
-#: kitsune/products/jinja2/products/product.html:41 kitsune/products/jinja2/products/product.html:45 kitsune/products/jinja2/products/product.html:107
+#: kitsune/products/jinja2/products/product.html:42 kitsune/products/jinja2/products/product.html:46 kitsune/products/jinja2/products/product.html:108
 msgid "Firefox Sync"
 msgstr "Sync Firefox"
 
-#: kitsune/products/jinja2/products/product.html:46 kitsune/products/jinja2/products/product.html:76
+#: kitsune/products/jinja2/products/product.html:47 kitsune/products/jinja2/products/product.html:77
 msgid "Bookmarks"
 msgstr "Bookmarks"
 
-#: kitsune/products/jinja2/products/product.html:47 kitsune/products/jinja2/products/product.html:50
+#: kitsune/products/jinja2/products/product.html:48 kitsune/products/jinja2/products/product.html:51
 #, fuzzy
 msgid "Send tab"
 msgstr "Tinda"
 
-#: kitsune/products/jinja2/products/product.html:51
+#: kitsune/products/jinja2/products/product.html:52
 msgid "Night mode"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:52
+#: kitsune/products/jinja2/products/product.html:53
 #, fuzzy
 msgid "Block images"
 msgstr "Bilili biye biza téléchargé:"
 
-#: kitsune/products/jinja2/products/product.html:55
+#: kitsune/products/jinja2/products/product.html:56
 #, fuzzy
 msgid "Policies"
 msgstr "Aperçu général ya mobimba..."
 
-#: kitsune/products/jinja2/products/product.html:56
+#: kitsune/products/jinja2/products/product.html:57
 #, fuzzy
 msgid "Customization"
 msgstr "Ndimbola"
 
-#: kitsune/products/jinja2/products/product.html:57
+#: kitsune/products/jinja2/products/product.html:58
 #, fuzzy
 msgid "extensions"
 msgstr "Baextension"
 
-#: kitsune/products/jinja2/products/product.html:60 kitsune/products/jinja2/products/product.html:80
+#: kitsune/products/jinja2/products/product.html:61 kitsune/products/jinja2/products/product.html:81
 msgid "Turbo mode"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:61
+#: kitsune/products/jinja2/products/product.html:62
 #, fuzzy
 msgid "Voice commands"
 msgstr "Article eza na"
 
-#: kitsune/products/jinja2/products/product.html:62
+#: kitsune/products/jinja2/products/product.html:63
 msgid "Receive tabs"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:65
+#: kitsune/products/jinja2/products/product.html:66
 #, fuzzy
 msgid "Manage devices"
 msgstr "Appareil mobile"
 
-#: kitsune/products/jinja2/products/product.html:66
+#: kitsune/products/jinja2/products/product.html:67
 #, fuzzy
 msgid "Download VPN"
 msgstr "téléchargement"
 
-#: kitsune/products/jinja2/products/product.html:67
+#: kitsune/products/jinja2/products/product.html:68
 msgid "Limits"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:70
+#: kitsune/products/jinja2/products/product.html:71
 msgid "Lockwise iOS"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:71
+#: kitsune/products/jinja2/products/product.html:72
 msgid "Lockwise Android"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:72
+#: kitsune/products/jinja2/products/product.html:73
 #, fuzzy
 msgid "Lockwise desktop"
 msgstr "Bloquer motuna oyo"
 
-#: kitsune/products/jinja2/products/product.html:75
+#: kitsune/products/jinja2/products/product.html:76
 #, fuzzy
 msgid "Voice search"
 msgstr "Salela boluki ya base"
 
-#: kitsune/products/jinja2/products/product.html:77
+#: kitsune/products/jinja2/products/product.html:78
 msgid "Full screen"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:81
+#: kitsune/products/jinja2/products/product.html:82
 #, fuzzy
 msgid "Rewards"
 msgstr "Baye bazwi babadge kala te"
 
-#: kitsune/products/jinja2/products/product.html:82
+#: kitsune/products/jinja2/products/product.html:83
 msgid "Games"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:85
+#: kitsune/products/jinja2/products/product.html:86
 msgid "Room size"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:86
+#: kitsune/products/jinja2/products/product.html:87
 #, fuzzy
 msgid "Avatars"
 msgstr "Avatar"
 
-#: kitsune/products/jinja2/products/product.html:87
+#: kitsune/products/jinja2/products/product.html:88
 #, fuzzy
 msgid "VR"
 msgstr "R"
 
-#: kitsune/products/jinja2/products/product.html:90
+#: kitsune/products/jinja2/products/product.html:91
 msgid "Autocomplete"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:91
+#: kitsune/products/jinja2/products/product.html:92
 #, fuzzy
 msgid "Default search"
 msgstr "Salela boluki ya base"
 
-#: kitsune/products/jinja2/products/product.html:92
+#: kitsune/products/jinja2/products/product.html:93
 #, fuzzy
 msgid "Desktop view"
 msgstr "ordinateur ya bureau"
 
-#: kitsune/products/jinja2/products/product.html:95
+#: kitsune/products/jinja2/products/product.html:96
 #, fuzzy
 msgid "Capture a screenshot"
 msgstr "Bafoto sur écran jointes"
 
-#: kitsune/products/jinja2/products/product.html:96
+#: kitsune/products/jinja2/products/product.html:97
 #, fuzzy
 msgid "Organize a screenshot"
 msgstr "Bafoto sur écran jointes"
 
-#: kitsune/products/jinja2/products/product.html:97
+#: kitsune/products/jinja2/products/product.html:98
 #, fuzzy
 msgid "Create a collection"
 msgstr "Kela compte nangai"
 
-#: kitsune/products/jinja2/products/product.html:100
+#: kitsune/products/jinja2/products/product.html:101
 #, fuzzy
 msgid "Thunderbird profiles"
 msgstr "Makama ya Thunderbird"
 
-#: kitsune/products/jinja2/products/product.html:101
+#: kitsune/products/jinja2/products/product.html:102
 msgid "Migrate"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:102
+#: kitsune/products/jinja2/products/product.html:103
 msgid "Themes"
 msgstr ""
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:89 kitsune/products/jinja2/products/product.html:122 kitsune/questions/jinja2/questions/includes/aaq_macros.html:183
+#: kitsune/products/jinja2/products/includes/topic_macros.html:89 kitsune/products/jinja2/products/product.html:123 kitsune/questions/jinja2/questions/includes/aaq_macros.html:183
 msgid "Topics"
 msgstr "Basujet"
 
-#: kitsune/products/jinja2/products/product.html:123
+#: kitsune/products/jinja2/products/product.html:124
 #, fuzzy
 msgid "Explore the knowledge base."
 msgstr "Luka Oyo Etali Boyebi"
 
-#: kitsune/products/jinja2/products/product.html:134
+#: kitsune/products/jinja2/products/product.html:135
 #, fuzzy
 msgid "Download Thunderbird"
 msgstr "Thunderbird"
 
-#: kitsune/products/jinja2/products/product.html:138 kitsune/sumo/jinja2/includes/common_macros.html:914
+#: kitsune/products/jinja2/products/product.html:139 kitsune/sumo/jinja2/includes/common_macros.html:914
 msgid "Systems and Languages"
 msgstr "Basysteme na Bankota"
 
-#: kitsune/products/jinja2/products/product.html:139
+#: kitsune/products/jinja2/products/product.html:140
 msgid "Release Notes"
 msgstr "Mayebisi"
 
-#: kitsune/products/jinja2/products/product.html:140 kitsune/sumo/jinja2/base.html:345 kitsune/sumo/jinja2/includes/common_macros.html:916
+#: kitsune/products/jinja2/products/product.html:141 kitsune/sumo/jinja2/base.html:345 kitsune/sumo/jinja2/includes/common_macros.html:916
 msgid "Privacy"
 msgstr "Confidentialité"
 
@@ -2726,7 +2878,7 @@ msgstr ""
 msgid "We’re here for you. Post a question to our support forums and get answers from our community of experts."
 msgstr ""
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:76 kitsune/questions/jinja2/questions/includes/aaq_macros.html:76 kitsune/questions/jinja2/questions/new_question.html:4
+#: kitsune/products/jinja2/products/includes/topic_macros.html:76 kitsune/questions/jinja2/questions/includes/aaq_macros.html:76 kitsune/questions/jinja2/questions/new_question.html:5
 #, fuzzy
 msgid "Get Support"
 msgstr "Forum ya Lisungi"
@@ -2787,15 +2939,15 @@ msgstr ""
 msgid "Recent answers to %s"
 msgstr "Biyano ya kala te na %s"
 
-#: kitsune/questions/forms.py:16
+#: kitsune/questions/forms.py:18
 msgid "URL of affected site"
 msgstr "URL ya site affecté"
 
-#: kitsune/questions/forms.py:17
+#: kitsune/questions/forms.py:19
 msgid "Crash ID(s)"
 msgstr "Identifiant ya Likama"
 
-#: kitsune/questions/forms.py:19
+#: kitsune/questions/forms.py:21
 #, fuzzy
 msgid ""
 "If you submit information to Mozilla when you crash, you'll be given a crash ID which uniquely identifies your crash and lets us look at details that may help identify the cause. To find your "
@@ -2806,84 +2958,88 @@ msgstr ""
 "ya likama. Mpo na kozwa baidentifiant ya likama eye otindaki kala te, kende na <strong>maye matali:makama</strong> na barre nayo ya adresse. <a href='http://support.mozilla.com/en-US/kb/"
 "Firefox+crashes#Getting_the_most_accurate_help_with_your_Firefox_crash' target='_blank'>Cliquer mpo na kozwa bainstruction misusu</a>."
 
-#: kitsune/questions/forms.py:29
+#: kitsune/questions/forms.py:31
 msgid "Troubleshooting Information"
 msgstr "Bainfo ya dépannage"
 
-#: kitsune/questions/forms.py:31 kitsune/questions/jinja2/questions/includes/aaq_macros.html:209
+#: kitsune/questions/forms.py:33 kitsune/questions/jinja2/questions/includes/aaq_macros.html:209
 msgid "This information gives details about the internal workings of your browser that will help in answering your question."
 msgstr "Bainfo oyo eza kopesa badétail na maye matali lolenge ya misala yakati ya navigateur nayo oyo ekosalisa na boyanoli motuna nayo. "
 
-#: kitsune/questions/forms.py:35
+#: kitsune/questions/forms.py:37
 msgid "This happens"
 msgstr "Oyo eza kosalema"
 
-#: kitsune/questions/forms.py:38
+#: kitsune/questions/forms.py:40
 msgid "Not sure how often"
 msgstr "Eyebani malamu te mbala boni"
 
-#: kitsune/questions/forms.py:39
+#: kitsune/questions/forms.py:41
 msgid "Just once or twice"
 msgstr "Kaka mbala moko to mibale"
 
-#: kitsune/questions/forms.py:40
+#: kitsune/questions/forms.py:42
 msgid "A few times a week"
 msgstr "Mua bambala na poso"
 
-#: kitsune/questions/forms.py:41
+#: kitsune/questions/forms.py:43
 msgid "Every time Firefox opened"
 msgstr "Tango inso Firefox efungwami"
 
-#: kitsune/questions/forms.py:43 kitsune/questions/jinja2/questions/question_details.html:521
+#: kitsune/questions/forms.py:45 kitsune/questions/jinja2/questions/question_details.html:520
 msgid "This started when..."
 msgstr "Yango ebandaki tango..."
 
-#: kitsune/questions/forms.py:45
+#: kitsune/questions/forms.py:47
 msgid "How can we help?"
 msgstr ""
 
-#: kitsune/questions/forms.py:46
+#: kitsune/questions/forms.py:48
 msgid "Firefox version"
 msgstr "version Firefox"
 
-#: kitsune/questions/forms.py:47
+#: kitsune/questions/forms.py:49
 msgid "Operating system"
 msgstr "Système d'exploitation"
 
-#: kitsune/questions/forms.py:48
+#: kitsune/questions/forms.py:50
 msgid "Installed plugins"
 msgstr "Bibakisi biye bizali installé "
 
-#: kitsune/questions/forms.py:49
+#: kitsune/questions/forms.py:51
 msgid "Extension/plugin you are having trouble with"
 msgstr "Extension/bibakisi oyo eza kopesa yo nkokoso"
 
-#: kitsune/questions/forms.py:50
+#: kitsune/questions/forms.py:52
 msgid "Mobile device"
 msgstr "Appareil mobile"
 
-#: kitsune/questions/forms.py:51
+#: kitsune/questions/forms.py:53
 #, fuzzy
 msgid "Which topic best describes your question?"
 msgstr "Categorie nini eza kolakisa malamu nkokoso nayo?"
 
-#: kitsune/questions/forms.py:52
+#: kitsune/questions/forms.py:54
 msgid "Email me when someone answers the thread"
 msgstr ""
 
-#: kitsune/questions/forms.py:54
+#: kitsune/questions/forms.py:56
 msgid "Enter your reply here."
 msgstr "Koma eyano nayo awa."
 
-#: kitsune/questions/forms.py:55
+#: kitsune/questions/forms.py:57
 msgid "Enter your email address here."
 msgstr "Koma adresse email nayo awa."
 
-#: kitsune/questions/forms.py:109
+#: kitsune/questions/forms.py:111
 msgid " (optional):"
 msgstr ""
 
-#: kitsune/questions/forms.py:261
+#: kitsune/questions/forms.py:120
+msgid "Question content cannot be empty."
+msgstr ""
+
+#: kitsune/questions/forms.py:273
 msgid "Please provide an email."
 msgstr "Pesa email."
 
@@ -2891,126 +3047,129 @@ msgstr "Pesa email."
 msgid "This question has been locked because the original author has deleted their account. While you can no longer post new replies, the existing content remains available for reference."
 msgstr ""
 
-#: kitsune/questions/views.py:82
+#: kitsune/questions/views.py:86
 msgid "That tag does not exist."
 msgstr "Tag wana eza te."
 
-#: kitsune/questions/views.py:83
+#: kitsune/questions/views.py:87
 msgid "Please provide a tag."
 msgstr "Pesa tag."
 
-#: kitsune/questions/views.py:89
+#. This is a question filter option for the All tab.
+#: kitsune/questions/views.py:94
 msgid "Recently unanswered"
 msgstr "Oyo eyanolami te kala te"
 
-#: kitsune/questions/views.py:94
+#. This is a question filter option for the Attention needed tab.
+#: kitsune/questions/views.py:100
 msgid "New"
 msgstr "Yasika"
 
-#: kitsune/questions/views.py:95
+#. This is a question filter option for the Attention needed tab.
+#: kitsune/questions/views.py:102
 msgid "Answers didn't help"
 msgstr "Biyano bisalisaki te"
 
-#: kitsune/questions/views.py:100
+#. This is a question filter option for the Responded tab.
+#: kitsune/questions/views.py:108
 msgid "Needs info"
 msgstr "Esengeli na bainfo"
 
-#: kitsune/questions/views.py:101
-msgid "Solution provided"
-msgstr "Solution epesamaki"
-
-#: kitsune/questions/jinja2/questions/question_list.html:191 kitsune/questions/views.py:106 kitsune/search/jinja2/search/includes/result.html:31
+#. This is a question filter option for the Done tab.
+#: kitsune/questions/jinja2/questions/question_list.html:191 kitsune/questions/views.py:114 kitsune/search/jinja2/search/includes/result.html:31
 msgid "Solved"
 msgstr "Eyanolami"
 
-#. L10n: This filter option is for the Spam tab, thus "marked" refers to "marked as
-#. spam".
-#: kitsune/questions/views.py:113
+#. This is a question filter option for the Spam tab, thus "marked" refers to
+#. "marked as spam".
+#: kitsune/questions/views.py:122
 msgid "Marked automatically"
 msgstr ""
 
-#. L10n: This filter option is for the Spam tab, thus "marked" refers to "marked as
-#. spam".
-#: kitsune/questions/views.py:115
+#. This is a question filter option for the Spam tab, thus "marked" refers to
+#. "marked as spam".
+#: kitsune/questions/views.py:124
 msgid "Marked manually"
 msgstr ""
 
-#: kitsune/questions/views.py:122
+#. This is a question sort option. It is a part of a drop-down menu with no
+#. heading.
+#: kitsune/questions/views.py:132
 msgid "Updated"
 msgstr "Esalemi mise à jour"
 
-#: kitsune/questions/views.py:123
+#. This is a question sort option. It is a part of a drop-down menu with no
+#. heading.
+#: kitsune/questions/views.py:134
 msgid "Views"
 msgstr "Ba vues"
 
-#: kitsune/questions/views.py:124
+#. This is a question sort option. It is a part of a drop-down menu with no
+#. heading.
+#: kitsune/questions/views.py:136
 msgid "Votes"
 msgstr "Bavote"
 
-#: kitsune/questions/views.py:626
+#: kitsune/questions/views.py:655
 #, python-brace-format
 msgid "The questions forum isn't available for {product} in {old_lang}, we have redirected you to the {new_lang} questions forum."
 msgstr "Mituna ya forum ezwami te mpo na {product} na {old_lang}, totindi yo na mituna ya forum {new_lang}."
 
-#: kitsune/questions/views.py:652
+#: kitsune/questions/views.py:681
 #, python-brace-format
-msgid "Done! Thank you for reaching out Mozilla Support. We've sent a confirmation email to {email}"
+msgid "Thank you for reaching out to Mozilla Support. We're reviewing your submission and will send a confirmation email to {email} shortly."
 msgstr ""
 
-#: kitsune/questions/views.py:662
-msgid "That didn't work. Please try again."
-msgstr ""
-
-#: kitsune/questions/views.py:670
+#: kitsune/questions/views.py:693
 msgid "You've exceeded the number of submissions for today."
 msgstr ""
 
-#: kitsune/questions/views.py:702
+#: kitsune/questions/views.py:725
 #, python-brace-format
 msgid "Done! Your question is now posted on the Mozilla community support forum. You can see your post anytime by visiting the {a_open}My Questions{a_close} page in your profile."
 msgstr ""
 
-#: kitsune/questions/views.py:962
+#: kitsune/questions/views.py:985
 msgid "Thank you for choosing a solution!"
 msgstr "Matondo mpo na boponi solution!"
 
-#: kitsune/questions/views.py:965
+#: kitsune/questions/views.py:988
 msgid "This question already has a solution."
 msgstr "Motuna oyo eza déjà na solution."
 
-#: kitsune/questions/views.py:986
+#: kitsune/questions/views.py:1009
 msgid "The solution was undone successfully."
 msgstr "Solution elongolami malamu."
 
-#: kitsune/questions/views.py:1066
+#: kitsune/questions/views.py:1089
 msgid "Glad to hear it!"
 msgstr "Esengo koyoka yango!"
 
-#: kitsune/questions/views.py:1068
+#: kitsune/questions/views.py:1091
 msgid "Sorry to hear that."
 msgstr "Mawa koyoka yango."
 
-#: kitsune/questions/views.py:1083
+#: kitsune/questions/views.py:1106
 msgid "You already voted on this reply."
 msgstr "Osi ovoter na eyano oyo."
 
-#: kitsune/questions/views.py:1374
+#: kitsune/questions/views.py:1397
 msgid "We were unable to register your request. You've exceeded the limit for the number of questions allowed to watch in a day. Please try again tomorrow."
 msgstr ""
 
-#: kitsune/questions/views.py:1402
+#: kitsune/questions/views.py:1425
 msgid "Could not send a message to that email address."
 msgstr "Ekoki te kotinda message na adresse email wana."
 
-#: kitsune/questions/views.py:1408
+#: kitsune/questions/views.py:1431
 msgid "You will be notified of updates by email."
 msgstr "Okozwa mayebisi ya ba mise à jour na nzela ya email."
 
-#: kitsune/questions/views.py:1410
+#: kitsune/questions/views.py:1433
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "Esengeli oyamba email moko kala mingi te mpo na koconfirmer inscription nayo."
 
-#: kitsune/questions/views.py:1606
+#: kitsune/questions/views.py:1649
 msgid "A moderator must manually approve your post before it will be visible."
 msgstr ""
 
@@ -3140,17 +3299,17 @@ msgstr "Bamesure Ya Forum Ya Lisungi"
 msgid "Metrics"
 msgstr "Bamesure"
 
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:5 kitsune/questions/jinja2/questions/new_question.html:35 kitsune/wiki/jinja2/wiki/includes/document_macros.html:480
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:5 kitsune/questions/jinja2/questions/new_question.html:36 kitsune/wiki/jinja2/wiki/includes/document_macros.html:480
 #, fuzzy
 msgid "Contact Support"
 msgstr "Luka Lisungi Ya Mozilla"
 
-#: kitsune/questions/jinja2/questions/new_question.html:37
+#: kitsune/questions/jinja2/questions/new_question.html:38
 #, fuzzy
 msgid "Ask your question"
 msgstr "Tuna motuna"
 
-#: kitsune/questions/jinja2/questions/new_question.html:43 kitsune/wiki/jinja2/wiki/includes/document_macros.html:281 kitsune/wiki/jinja2/wiki/includes/flag_form.html:34
+#: kitsune/questions/jinja2/questions/new_question.html:44 kitsune/wiki/jinja2/wiki/includes/document_macros.html:281 kitsune/wiki/jinja2/wiki/includes/flag_form.html:34
 #: kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:10 kitsune/wiki/jinja2/wiki/includes/survey_form.html:46 kitsune/wiki/jinja2/wiki/recent_revisions.html:31
 msgid "Submit"
 msgstr "Tinda"
@@ -3211,7 +3370,7 @@ msgid "Please ask a new question if you need help."
 msgstr "Tuna motuna mosusu soki osengeli na lisalisi"
 
 #. {n} is the number of replies.
-#: kitsune/questions/jinja2/questions/question_details.html:92 kitsune/questions/jinja2/questions/question_list.html:241
+#: kitsune/questions/jinja2/questions/question_details.html:92 kitsune/questions/jinja2/questions/question_list.html:240
 msgid "reply"
 msgid_plural "replies"
 msgstr[0] "eyano"
@@ -3227,7 +3386,7 @@ msgid_plural "have this problem"
 msgstr[0] "eza na nkokoso oyo"
 msgstr[1] "eza na bankokoso oyo"
 
-#: kitsune/questions/jinja2/questions/question_details.html:118 kitsune/questions/jinja2/questions/question_list.html:250
+#: kitsune/questions/jinja2/questions/question_details.html:118 kitsune/questions/jinja2/questions/question_list.html:249
 #, fuzzy
 msgid "view"
 msgid_plural "views"
@@ -3355,56 +3514,56 @@ msgstr "Mikomisa na feed"
 msgid "Tags"
 msgstr "Ba tags"
 
-#: kitsune/questions/jinja2/questions/question_details.html:439
+#: kitsune/questions/jinja2/questions/question_details.html:438
 #, fuzzy
 msgid "Question Details"
 msgstr "Badétail ya motuna"
 
-#: kitsune/questions/jinja2/questions/question_details.html:445
+#: kitsune/questions/jinja2/questions/question_details.html:444
 msgid "Product"
 msgstr "Produit"
 
-#: kitsune/questions/jinja2/questions/question_details.html:461 kitsune/questions/jinja2/questions/question_list.html:318
+#: kitsune/questions/jinja2/questions/question_details.html:460 kitsune/questions/jinja2/questions/question_list.html:317
 msgid "Topic"
 msgstr "Sujet"
 
-#: kitsune/questions/jinja2/questions/question_details.html:487
+#: kitsune/questions/jinja2/questions/question_details.html:486
 msgid "Save changes"
 msgstr "Bomba mbongwana"
 
-#: kitsune/questions/jinja2/questions/question_details.html:492
+#: kitsune/questions/jinja2/questions/question_details.html:491
 msgid "System Details"
 msgstr "Badétail ya Systeme"
 
-#: kitsune/questions/jinja2/questions/question_details.html:504
+#: kitsune/questions/jinja2/questions/question_details.html:503
 msgid "Device:"
 msgstr "Appareil:"
 
-#: kitsune/questions/jinja2/questions/question_details.html:508
+#: kitsune/questions/jinja2/questions/question_details.html:507
 msgid "More system details"
 msgstr "Badétail misusu ya systeme"
 
-#: kitsune/questions/jinja2/questions/question_details.html:510 kitsune/questions/jinja2/questions/question_details.html:511
+#: kitsune/questions/jinja2/questions/question_details.html:509 kitsune/questions/jinja2/questions/question_details.html:510
 msgid "Additional System Details"
 msgstr "Badétail Mosusu Ya Systeme"
 
-#: kitsune/questions/jinja2/questions/question_details.html:513
+#: kitsune/questions/jinja2/questions/question_details.html:512
 msgid "Crash ID"
 msgstr "Identifiant ya Likama"
 
-#: kitsune/questions/jinja2/questions/question_details.html:517
+#: kitsune/questions/jinja2/questions/question_details.html:516
 msgid "This happened"
 msgstr "Oyo esalemaki"
 
-#: kitsune/questions/jinja2/questions/question_details.html:525
+#: kitsune/questions/jinja2/questions/question_details.html:524
 msgid "Installed Plug-ins"
 msgstr "Bibakisi oyo eza installé"
 
-#: kitsune/questions/jinja2/questions/question_details.html:536
+#: kitsune/questions/jinja2/questions/question_details.html:535
 msgid "Edit details"
 msgstr "Bongisa badétail"
 
-#: kitsune/questions/jinja2/questions/question_details.html:547
+#: kitsune/questions/jinja2/questions/question_details.html:546
 #, fuzzy
 msgid "See also"
 msgstr "Tala mpe:"
@@ -3476,47 +3635,47 @@ msgstr "Ezwi contribution"
 msgid "Archived"
 msgstr "Eza archivé"
 
-#: kitsune/questions/jinja2/questions/includes/answer.html:86 kitsune/questions/jinja2/questions/question_list.html:233
+#: kitsune/questions/jinja2/questions/includes/answer.html:86 kitsune/questions/jinja2/questions/question_list.html:232
 msgid "Marked as spam"
 msgstr "Etiyami elembo bo spam"
 
-#: kitsune/questions/jinja2/questions/question_list.html:245
+#: kitsune/questions/jinja2/questions/question_list.html:244
 msgid "votes this week"
 msgstr "bavote ya poso oyo"
 
-#: kitsune/questions/jinja2/questions/question_list.html:262
+#: kitsune/questions/jinja2/questions/question_list.html:261
 #, fuzzy, python-brace-format
 msgid "Asked by <strong><a rel=\"nofollow\" href=\"{user_url}\">{username}</a></strong> {when}"
 msgstr "etunami na <a href=\"{user_url}\">{username}</a> {when}"
 
-#: kitsune/questions/jinja2/questions/question_list.html:266
+#: kitsune/questions/jinja2/questions/question_list.html:265
 #, fuzzy, python-brace-format
 msgid "Answered by <strong><a rel=\"nofollow\" href=\"{user_url}\">{username}</a></strong> {when}"
 msgstr "eyanolami na <a href=\"{user_url}\">{username}</a> {when}"
 
-#: kitsune/questions/jinja2/questions/question_list.html:271
+#: kitsune/questions/jinja2/questions/question_list.html:270
 #, fuzzy, python-brace-format
 msgid "<a href=\"{reply_url}\">Last reply</a> by <strong><a rel=\"nofollow\" href=\"{user_url}\">{username}</a></strong> {when}"
 msgstr "<a href=\"{reply_url}\">last reply</a> na <a href=\"{user_url}\">{username}</a> {when}"
 
-#: kitsune/questions/jinja2/questions/question_list.html:285
+#: kitsune/questions/jinja2/questions/question_list.html:284
 #, fuzzy
 msgid "There are no questions that match the current filter settings."
 msgstr "Sujet ata moko te eza mpo na oyo eponami sik'oyo."
 
-#: kitsune/questions/jinja2/questions/question_list.html:309
+#: kitsune/questions/jinja2/questions/question_list.html:308
 msgid "Filter by"
 msgstr "Filtrer na"
 
-#: kitsune/questions/jinja2/questions/question_list.html:339
+#: kitsune/questions/jinja2/questions/question_list.html:338
 msgid "Show me"
 msgstr "Lakisa ngai"
 
-#: kitsune/questions/jinja2/questions/question_list.html:340
+#: kitsune/questions/jinja2/questions/question_list.html:339
 msgid "Posts from everyone"
 msgstr "Baarticle kowuta na mutu nionso"
 
-#: kitsune/questions/jinja2/questions/question_list.html:341
+#: kitsune/questions/jinja2/questions/question_list.html:340
 msgid "My contributions"
 msgstr "Bacontribution nangai"
 
@@ -3620,8 +3779,8 @@ msgid "You might just make someone's day!"
 msgstr "Tango mosusu okoki kobongisa mokolo ya mutu songolo to pakala!"
 
 #: kitsune/questions/jinja2/questions/email/new_answer_to_asker.html:36
-msgid "Mark it as solved"
-msgstr "Tiya elembo bo eyanolami"
+msgid "This solves my problem"
+msgstr ""
 
 #: kitsune/questions/jinja2/questions/email/new_answer_to_asker.html:37
 msgid "View the reply"
@@ -3642,8 +3801,8 @@ msgid "If this doesn't solve your problem, let {answerer} know by replying on th
 msgstr "Soki eyanoli nkokoso nayo te, yebisa {answerer} na boyanoli na site web:"
 
 #: kitsune/questions/jinja2/questions/email/new_answer_to_asker.ltxt:19
-msgid "If this answer solves your problem, please mark it as \"solved\":"
-msgstr "Soki eyano oyo esilisi nkokoso nayo, tiya elembo neti \"endimbolami\":"
+msgid "If this answer solves your problem, please mark it as a solution:"
+msgstr ""
 
 #: kitsune/questions/jinja2/questions/email/new_answer_to_asker.ltxt:22
 msgid "This will help other Firefox users find good answers to their questions!"
@@ -4086,29 +4245,29 @@ msgstr[1] "{n} yasika poso oyo"
 
 #: kitsune/sumo/db_strings.py:19
 msgctxt "DB: karma.Title.name"
-msgid "Top 10 Contributor"
-msgstr "Bacontributeur 10 Ya Likolo"
+msgid "Top 25 Contributor"
+msgstr "Bacontributeur 25 Ya Likolo"
 
 #: kitsune/sumo/db_strings.py:21
+msgctxt "DB: karma.Title.name"
+msgid "SUMO Warrior"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:23
 #, fuzzy
 msgctxt "DB: karma.Title.name"
 msgid "Locale Leader"
 msgstr "Bakambi Ya Lokota"
 
-#: kitsune/sumo/db_strings.py:23
-msgctxt "DB: karma.Title.name"
-msgid "Moderator"
-msgstr "Moderateur"
-
 #: kitsune/sumo/db_strings.py:25
 msgctxt "DB: karma.Title.name"
-msgid "SUMO Warrior"
+msgid "Buddy of the Month! (10/2015)"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:27
 msgctxt "DB: karma.Title.name"
-msgid "Buddy of the Month! (10/2015)"
-msgstr ""
+msgid "Moderator"
+msgstr "Moderateur"
 
 #: kitsune/sumo/db_strings.py:29
 msgctxt "DB: karma.Title.name"
@@ -4117,8 +4276,8 @@ msgstr "Mokambi"
 
 #: kitsune/sumo/db_strings.py:31
 msgctxt "DB: karma.Title.name"
-msgid "Top 25 Contributor"
-msgstr "Bacontributeur 25 Ya Likolo"
+msgid "Top 10 Contributor"
+msgstr "Bacontributeur 10 Ya Likolo"
 
 #: kitsune/sumo/db_strings.py:32
 msgctxt "DB: products.Product.title"
@@ -4464,601 +4623,599 @@ msgstr ""
 
 #: kitsune/sumo/db_strings.py:96
 msgctxt "DB: products.Topic.title"
-msgid "About Data Sharing"
+msgid "Abuse"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:97
 msgctxt "DB: products.Topic.description"
-msgid ""
-"In order to process or provide our products and services to you, we share your information with the following business partners. These entities are contractually obligated to handle the data in "
-"ways that are approved by Mozilla."
+msgid "Tools to make your event a safe place for your guests"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:98
 msgctxt "DB: products.Topic.title"
-msgid "Abuse"
+msgid "Accessibility"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:99
 msgctxt "DB: products.Topic.description"
-msgid "Tools to make your event a safe place for your guests"
+msgid "Learn about Mozilla products’ accessibility features and settings for better usability."
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:100
 msgctxt "DB: products.Topic.title"
-msgid "Accessibility"
+msgid "Account management"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:101
 msgctxt "DB: products.Topic.description"
-msgid "Learn about Mozilla products’ accessibility features and settings for better usability."
+msgid "Manage your account settings and preferences."
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:102
 msgctxt "DB: products.Topic.title"
-msgid "Account management"
+msgid "Account recovery"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:103
 msgctxt "DB: products.Topic.description"
-msgid "Manage your account settings and preferences."
-msgstr ""
-
-#: kitsune/sumo/db_strings.py:104
-msgctxt "DB: products.Topic.title"
-msgid "Account recovery"
-msgstr ""
-
-#: kitsune/sumo/db_strings.py:105
-msgctxt "DB: products.Topic.description"
 msgid "Recover your account if you lose access to it or encounter issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:106 kitsune/sumo/db_strings.py:108 kitsune/sumo/db_strings.py:110
+#: kitsune/sumo/db_strings.py:104 kitsune/sumo/db_strings.py:106 kitsune/sumo/db_strings.py:108
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "Accounts"
 msgstr "Compte"
 
-#: kitsune/sumo/db_strings.py:107
+#: kitsune/sumo/db_strings.py:105
 msgctxt "DB: products.Topic.description"
 msgid "Change account and settings for Private Network."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:109
+#: kitsune/sumo/db_strings.py:107
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "Manage your Firefox Monitor account"
 msgstr "Connecter compte nayo ya Twitter"
 
-#: kitsune/sumo/db_strings.py:111
+#: kitsune/sumo/db_strings.py:109
 msgctxt "DB: products.Topic.description"
 msgid "Manage your accounts and profiles for Mozilla’s products and services."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:112 kitsune/sumo/db_strings.py:114 kitsune/sumo/db_strings.py:116 kitsune/sumo/db_strings.py:118
+#: kitsune/sumo/db_strings.py:110 kitsune/sumo/db_strings.py:112 kitsune/sumo/db_strings.py:114 kitsune/sumo/db_strings.py:116
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "Accounts & Sign-in"
 msgstr "Compte"
 
-#: kitsune/sumo/db_strings.py:113
+#: kitsune/sumo/db_strings.py:111
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "How to sign in and activate more features"
 msgstr "Ndenge ya kosalela bacaractéristique ya Firefox ya confidentialité mpe bokengi "
 
-#: kitsune/sumo/db_strings.py:115
+#: kitsune/sumo/db_strings.py:113
 msgctxt "DB: products.Topic.description"
 msgid "Manage your Firefox Relay account."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:117
+#: kitsune/sumo/db_strings.py:115
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "Manage your MDN Plus account."
 msgstr "Connecter compte nayo ya Twitter"
 
-#: kitsune/sumo/db_strings.py:119
+#: kitsune/sumo/db_strings.py:117
 msgctxt "DB: products.Topic.description"
 msgid "Find solutions on managing your account"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:120
+#: kitsune/sumo/db_strings.py:118
 msgctxt "DB: products.Topic.title"
 msgid "Add device"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:121
+#: kitsune/sumo/db_strings.py:119
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot add device issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:122
+#: kitsune/sumo/db_strings.py:120
 msgctxt "DB: products.Topic.title"
 msgid "Add-ons, extensions, and themes"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:123
+#: kitsune/sumo/db_strings.py:121
 msgctxt "DB: products.Topic.description"
 msgid "Enhance product functionality with add-ons, extensions, and themes."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:124
+#: kitsune/sumo/db_strings.py:122
 msgctxt "DB: products.Topic.title"
 msgid "Advanced and experimental features"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:125
+#: kitsune/sumo/db_strings.py:123
 msgctxt "DB: products.Topic.description"
 msgid "Learn tips beyond the basics and try features before they're released to the public."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:126
+#: kitsune/sumo/db_strings.py:124
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "Advanced Settings"
 msgstr "Boluki avancé"
 
-#: kitsune/sumo/db_strings.py:127
+#: kitsune/sumo/db_strings.py:125
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "Do more with Firefox Preview"
 msgstr "Message ya dépannage erreur na Firefox mpo na iOS"
 
-#: kitsune/sumo/db_strings.py:128
+#: kitsune/sumo/db_strings.py:126
 msgctxt "DB: products.Topic.title"
 msgid "Alerts"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:129
+#: kitsune/sumo/db_strings.py:127
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot alerts issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:130
+#: kitsune/sumo/db_strings.py:128
 msgctxt "DB: products.Topic.title"
 msgid "App crash"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:131
+#: kitsune/sumo/db_strings.py:129
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot app crash issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:132
+#: kitsune/sumo/db_strings.py:130
 msgctxt "DB: products.Topic.title"
 msgid "App responsiveness"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:133
+#: kitsune/sumo/db_strings.py:131
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot app responsiveness issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:134
+#: kitsune/sumo/db_strings.py:132
 msgctxt "DB: products.Topic.title"
 msgid "Article View"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:135 kitsune/sumo/db_strings.py:735
+#: kitsune/sumo/db_strings.py:133 kitsune/sumo/db_strings.py:735
 msgctxt "DB: products.Topic.description"
 msgid "Comfortably read web pages without distractions."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:136
+#: kitsune/sumo/db_strings.py:134
 msgctxt "DB: products.Topic.title"
 msgid "Attachments"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:137
+#: kitsune/sumo/db_strings.py:135
 msgctxt "DB: products.Topic.description"
 msgid "Learn how to use and manage email attachments."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:138
+#: kitsune/sumo/db_strings.py:136
 msgctxt "DB: products.Topic.title"
 msgid "Audio and Video"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:139
+#: kitsune/sumo/db_strings.py:137
 msgctxt "DB: products.Topic.description"
 msgid "Everything you need to know about audio and video."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:140
+#: kitsune/sumo/db_strings.py:138
 msgctxt "DB: products.Topic.title"
 msgid "Autoconfiguration"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:141
+#: kitsune/sumo/db_strings.py:139
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "How to configure Firefox for Enterprise"
 msgstr "Firefox mpo na Android"
 
-#: kitsune/sumo/db_strings.py:142
+#: kitsune/sumo/db_strings.py:140
 msgctxt "DB: products.Topic.title"
 msgid "Autofill"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:143
+#: kitsune/sumo/db_strings.py:141
 msgctxt "DB: products.Topic.description"
 msgid "Automatically fill your personal information into form fields and more."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:144
+#: kitsune/sumo/db_strings.py:142
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "Avatars"
 msgstr "Avatar"
 
-#: kitsune/sumo/db_strings.py:145
+#: kitsune/sumo/db_strings.py:143
 msgctxt "DB: products.Topic.description"
 msgid "How to set up and navigate using your virtual identity"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:146
+#: kitsune/sumo/db_strings.py:144
 msgctxt "DB: products.Topic.title"
 msgid "Backup data"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:147
+#: kitsune/sumo/db_strings.py:145
 msgctxt "DB: products.Topic.description"
 msgid "From passwords to bookmarks, discover ways to back up your important data."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:148
+#: kitsune/sumo/db_strings.py:146
 msgctxt "DB: products.Topic.title"
 msgid "Backup, recovery, and sync"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:149
+#: kitsune/sumo/db_strings.py:147
 msgctxt "DB: products.Topic.description"
 msgid "Sync your data across different platforms and devices, backup what’s important, and recover it if it’s lost."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:150
+#: kitsune/sumo/db_strings.py:148
 msgctxt "DB: products.Topic.title"
 msgid "Back up your data"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:151
+#: kitsune/sumo/db_strings.py:149
 msgctxt "DB: products.Topic.description"
 msgid "Use Firefox Sync to backup and transfer your data."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:152
+#: kitsune/sumo/db_strings.py:150
 msgctxt "DB: products.Topic.title"
 msgid "BadgeKit"
 msgstr "BadgeKit"
 
-#: kitsune/sumo/db_strings.py:153
+#: kitsune/sumo/db_strings.py:151
 msgctxt "DB: products.Topic.description"
 msgid "Learn how to create, assess and issue badges"
 msgstr "Yekola ndenge ya kokela, kosembola mpe kopesa ba badges"
 
-#: kitsune/sumo/db_strings.py:154 kitsune/sumo/db_strings.py:156
+#: kitsune/sumo/db_strings.py:152 kitsune/sumo/db_strings.py:154
 msgctxt "DB: products.Topic.title"
 msgid "Basic browsing"
 msgstr "Navigation ya ebandeli"
 
-#: kitsune/sumo/db_strings.py:155
+#: kitsune/sumo/db_strings.py:153
 msgctxt "DB: products.Topic.description"
 msgid "How to use bookmarks, tabs and basic Firefox features on your iOS device"
 msgstr "Ndenge ya kosalela ba bookmarks, ba tabs mpe bacarctèristique ya base ya Firefox na appareil nayo iOS"
 
-#: kitsune/sumo/db_strings.py:157
+#: kitsune/sumo/db_strings.py:155
 msgctxt "DB: products.Topic.description"
 msgid "Search and navigate easily with these essential features"
 msgstr "Luka mpe naviguer na bopete nionso bacaractéristique oyo ya litomba"
 
-#: kitsune/sumo/db_strings.py:158
+#: kitsune/sumo/db_strings.py:156
 msgctxt "DB: products.Topic.title"
 msgid "Basic Features"
 msgstr "Bacaractèristique ya base"
 
-#: kitsune/sumo/db_strings.py:159
+#: kitsune/sumo/db_strings.py:157
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "Learn the basic functionality for your Firefox OS phone. "
 msgstr "Yekola fonctionnalité ya base mpo na telefone nayo Firefox OS."
 
-#: kitsune/sumo/db_strings.py:160
+#: kitsune/sumo/db_strings.py:158
 msgctxt "DB: products.Topic.title"
 msgid "Billing and subscriptions"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:161
+#: kitsune/sumo/db_strings.py:159
 msgctxt "DB: products.Topic.description"
 msgid "Manage your subscriptions and payment details for Mozilla’s premium products."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:162
+#: kitsune/sumo/db_strings.py:160
 msgctxt "DB: products.Topic.title"
 msgid "Billing inquiry"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:163
+#: kitsune/sumo/db_strings.py:161
 msgctxt "DB: products.Topic.description"
 msgid "Inquire about your billing."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:164 kitsune/sumo/db_strings.py:166 kitsune/sumo/db_strings.py:168 kitsune/sumo/db_strings.py:170
+#: kitsune/sumo/db_strings.py:162 kitsune/sumo/db_strings.py:164 kitsune/sumo/db_strings.py:166 kitsune/sumo/db_strings.py:168
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "Billing & Payments"
 msgstr "Bofuti"
 
-#: kitsune/sumo/db_strings.py:165
+#: kitsune/sumo/db_strings.py:163
 msgctxt "DB: products.Topic.description"
 msgid "Manage your subscription to Firefox Relay Premium"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:167 kitsune/sumo/db_strings.py:171 kitsune/sumo/db_strings.py:641
+#: kitsune/sumo/db_strings.py:165 kitsune/sumo/db_strings.py:169 kitsune/sumo/db_strings.py:641
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "Manage your payment and subscription"
 msgstr "Kokamba bapréférence mpe bibakisi"
 
-#: kitsune/sumo/db_strings.py:169
+#: kitsune/sumo/db_strings.py:167
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "Manage your MDN Plus subscription."
 msgstr "Kokamba bapréférence mpe bibakisi"
 
-#: kitsune/sumo/db_strings.py:172
+#: kitsune/sumo/db_strings.py:170
 msgctxt "DB: products.Topic.title"
 msgid "Blocked application/service/website"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:173
+#: kitsune/sumo/db_strings.py:171
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot blocked application/service/website issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:174
+#: kitsune/sumo/db_strings.py:172
 msgctxt "DB: products.Topic.title"
 msgid "Bookmark options"
 msgstr "Baoption ya bookmark"
 
-#: kitsune/sumo/db_strings.py:175
+#: kitsune/sumo/db_strings.py:173
 msgctxt "DB: products.Topic.description"
 msgid "Bookmark options"
 msgstr "Baoption ya bookmark"
 
-#: kitsune/sumo/db_strings.py:176 kitsune/sumo/db_strings.py:178
+#: kitsune/sumo/db_strings.py:174 kitsune/sumo/db_strings.py:176
 msgctxt "DB: products.Topic.title"
 msgid "Bookmarks"
 msgstr "Bookmarks"
 
-#: kitsune/sumo/db_strings.py:177
+#: kitsune/sumo/db_strings.py:175
 msgctxt "DB: products.Topic.description"
 msgid "Back up your Firefox bookmarks."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:179
+#: kitsune/sumo/db_strings.py:177
 msgctxt "DB: products.Topic.description"
 msgid "Save and organize your favorite web content with bookmarks."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:180 kitsune/sumo/db_strings.py:182
+#: kitsune/sumo/db_strings.py:178 kitsune/sumo/db_strings.py:180
 msgctxt "DB: products.Topic.title"
 msgid "Bookmarks and tabs"
 msgstr "Ba bookmarks na ba tabs"
 
-#: kitsune/sumo/db_strings.py:181
+#: kitsune/sumo/db_strings.py:179
 msgctxt "DB: products.Topic.description"
 msgid "Access and organize your favorite webpages easily with bookmarks and tabs"
 msgstr "Ingela mpe bongisa na bopete nionso ba webpages nayo olingaka na ba bookmarks mpe ba tabs"
 
-#: kitsune/sumo/db_strings.py:183
+#: kitsune/sumo/db_strings.py:181
 msgctxt "DB: products.Topic.description"
 msgid "Access websites easily with bookmarks and tab features"
 msgstr "Ingela na ba sites web na bopete na bacaractèristique ya bookmarks mpe tab"
 
-#: kitsune/sumo/db_strings.py:184
+#: kitsune/sumo/db_strings.py:182
 msgctxt "DB: products.Topic.title"
 msgid "Browse"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:185
+#: kitsune/sumo/db_strings.py:183
 msgctxt "DB: products.Topic.description"
 msgid "Explore how to navigate the web efficiently and effectively with Mozilla’s products."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:186
+#: kitsune/sumo/db_strings.py:184
 msgctxt "DB: products.Topic.title"
 msgid "Browser appearance"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:187
+#: kitsune/sumo/db_strings.py:185
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot browser appearance issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:188
+#: kitsune/sumo/db_strings.py:186
 msgctxt "DB: products.Topic.title"
 msgid "Browser security"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:189
+#: kitsune/sumo/db_strings.py:187
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot browser security issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:190
+#: kitsune/sumo/db_strings.py:188
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "Browsing"
 msgstr "Navigation ya ebandeli"
 
-#: kitsune/sumo/db_strings.py:191
+#: kitsune/sumo/db_strings.py:189
 msgctxt "DB: products.Topic.description"
 msgid "Surf and navigate the Web on Firefox Preview"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:192 kitsune/sumo/db_strings.py:194
+#: kitsune/sumo/db_strings.py:190 kitsune/sumo/db_strings.py:192
 msgctxt "DB: products.Topic.title"
 msgid "Calendar"
 msgstr "Manaka"
 
-#: kitsune/sumo/db_strings.py:193
+#: kitsune/sumo/db_strings.py:191
 msgctxt "DB: products.Topic.description"
 msgid "Integrated calendar component of Thunderbird"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:195
+#: kitsune/sumo/db_strings.py:193
 msgctxt "DB: products.Topic.description"
 msgid "Manage your calendar events and schedules."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:196
+#: kitsune/sumo/db_strings.py:194
 msgctxt "DB: products.Topic.title"
 msgid "Calling and Contacts"
 msgstr "Kobenga mpe Bacontact"
 
-#: kitsune/sumo/db_strings.py:197
+#: kitsune/sumo/db_strings.py:195
 msgctxt "DB: products.Topic.description"
 msgid "Learn how to add and manage contacts, as well as make one-to-one or conference calls on your Firefox OS phone."
 msgstr "Yekola ndenge ya kobakisa mpe kokamba bacontact, na mpe kosala baappel ya moko-na-moko to ya conference na telefone nayo Firefox OS."
 
-#: kitsune/sumo/db_strings.py:198
+#: kitsune/sumo/db_strings.py:196
 msgctxt "DB: products.Topic.title"
 msgid "Camera (point of view)"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:199
+#: kitsune/sumo/db_strings.py:197
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "How to change your camera settings in Hubs"
 msgstr "Kokamba bapréférence mpe bibakisi"
 
-#: kitsune/sumo/db_strings.py:200
+#: kitsune/sumo/db_strings.py:198
 msgctxt "DB: products.Topic.title"
 msgid "Cancellation"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:201
+#: kitsune/sumo/db_strings.py:199
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot cancellation issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:202
+#: kitsune/sumo/db_strings.py:200
 msgctxt "DB: products.Topic.title"
 msgid "Can't select server"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:203
+#: kitsune/sumo/db_strings.py:201
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot can't select server issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:204
+#: kitsune/sumo/db_strings.py:202
 msgctxt "DB: products.Topic.title"
 msgid "Cast to your TV"
 msgstr "Lakisa na TV nayo"
 
-#: kitsune/sumo/db_strings.py:205
+#: kitsune/sumo/db_strings.py:203
 msgctxt "DB: products.Topic.description"
 msgid "Learn how to view content on another screen"
 msgstr "Yekola ndenge ya kotala contenu na écran mosusu"
 
-#: kitsune/sumo/db_strings.py:206
+#: kitsune/sumo/db_strings.py:204
 msgctxt "DB: products.Topic.title"
 msgid "Changing your settings"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:207
+#: kitsune/sumo/db_strings.py:205
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "Change Firefox's behavior."
 msgstr "Baoption, bapréférence mpe baparamètre ya Firefofox"
 
-#: kitsune/sumo/db_strings.py:208
+#: kitsune/sumo/db_strings.py:206
 msgctxt "DB: products.Topic.title"
 msgid "Chat and share"
 msgstr "Solola mpe kabola"
 
-#: kitsune/sumo/db_strings.py:209
+#: kitsune/sumo/db_strings.py:207
 msgctxt "DB: products.Topic.description"
 msgid "Connect on video and share pages with your network"
 msgstr "Koconnecter na vidéo mpe kokabola makasa na réseau nayo"
 
-#: kitsune/sumo/db_strings.py:210
+#: kitsune/sumo/db_strings.py:208
 msgctxt "DB: products.Topic.title"
 msgid "Connection failure"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:211
+#: kitsune/sumo/db_strings.py:209
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot connection failure issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:212 kitsune/sumo/db_strings.py:214
+#: kitsune/sumo/db_strings.py:210 kitsune/sumo/db_strings.py:212
 msgctxt "DB: products.Topic.title"
 msgid "Connectivity"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:213
+#: kitsune/sumo/db_strings.py:211
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot connectivity issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:215
+#: kitsune/sumo/db_strings.py:213
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot issues with connectivity."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:216 kitsune/sumo/db_strings.py:218
+#: kitsune/sumo/db_strings.py:214 kitsune/sumo/db_strings.py:216
 msgctxt "DB: products.Topic.title"
 msgid "Contacts"
 msgstr "Bacontact"
 
-#: kitsune/sumo/db_strings.py:217
+#: kitsune/sumo/db_strings.py:215
 msgctxt "DB: products.Topic.description"
 msgid "How to use the address book on Thunderbird"
 msgstr "Ndenge ya kosalela répertoire na Thunderbird"
 
-#: kitsune/sumo/db_strings.py:219
+#: kitsune/sumo/db_strings.py:217
 msgctxt "DB: products.Topic.description"
 msgid "Manage your email contacts."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:220
+#: kitsune/sumo/db_strings.py:218
 msgctxt "DB: products.Topic.title"
 msgid "Controls (movement)"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:221
+#: kitsune/sumo/db_strings.py:219
 msgctxt "DB: products.Topic.description"
 msgid "How to navigate through virtual spaces"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:222 kitsune/sumo/db_strings.py:224
+#: kitsune/sumo/db_strings.py:220 kitsune/sumo/db_strings.py:222
 msgctxt "DB: products.Topic.title"
+msgid "Cookies"
+msgstr "Ba cookies"
+
+#: kitsune/sumo/db_strings.py:221
+msgctxt "DB: products.Topic.description"
 msgid "Cookies"
 msgstr "Ba cookies"
 
 #: kitsune/sumo/db_strings.py:223
 msgctxt "DB: products.Topic.description"
-msgid "Cookies"
-msgstr "Ba cookies"
-
-#: kitsune/sumo/db_strings.py:225
-msgctxt "DB: products.Topic.description"
-msgid "Troubleshoot cookies issues."
+msgid "Cookies as they relate to browser history"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:226
+#: kitsune/sumo/db_strings.py:224
 msgctxt "DB: products.Topic.title"
 msgid "Cookies and cache"
 msgstr "Ba cookies mpe cache"
 
-#: kitsune/sumo/db_strings.py:227
+#: kitsune/sumo/db_strings.py:225
 msgctxt "DB: products.Topic.description"
 msgid "Control the information that Firefox saves"
 msgstr "Contrôler bainfo eye Firefox eza kobomba"
+
+#: kitsune/sumo/db_strings.py:226
+msgctxt "DB: products.Topic.title"
+msgid "Cookies as trackers"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:227
+msgctxt "DB: products.Topic.description"
+msgid "Troubleshoot cookies issues."
+msgstr ""
 
 #: kitsune/sumo/db_strings.py:228
 msgctxt "DB: products.Topic.title"
@@ -7643,1119 +7800,1245 @@ msgid "Troubleshoot slow connection issues."
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:806
+msgctxt "DB: products.Topic.title"
+msgid "SMS Recovery"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:807
+msgctxt "DB: products.Topic.description"
+msgid "Use SMS messages as a method for account recovery and two-factor authentication."
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:808
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "Social Support"
 msgstr "Lisungi Ya Mozilla"
 
-#: kitsune/sumo/db_strings.py:807
+#: kitsune/sumo/db_strings.py:809
 msgctxt "DB: products.Topic.description"
 msgid "Topic for any articles related to the Social Support Program."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:808
+#: kitsune/sumo/db_strings.py:810
 msgctxt "DB: products.Topic.title"
 msgid "Stay connected"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:809
+#: kitsune/sumo/db_strings.py:811
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "Sync information across devices"
 msgstr "Sync bainfo nayo na baappareil nayo nionso"
 
-#: kitsune/sumo/db_strings.py:810
+#: kitsune/sumo/db_strings.py:812
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "Stay private and secure"
 msgstr "Confidentialité mpe bokengi"
 
-#: kitsune/sumo/db_strings.py:811
+#: kitsune/sumo/db_strings.py:813
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "Keep your family's information private and secure"
 msgstr "Batela bainfo nayo malamu na bacaractèristique ya liloba ya sekele mpe bokengi"
 
-#: kitsune/sumo/db_strings.py:812
+#: kitsune/sumo/db_strings.py:814
 msgctxt "DB: products.Topic.title"
 msgid "Subscriptions & billing"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:813
+#: kitsune/sumo/db_strings.py:815
 msgctxt "DB: products.Topic.description"
 msgid "Manage your Mozilla subscriptions and payment methods."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:814
+#: kitsune/sumo/db_strings.py:816
 msgctxt "DB: products.Topic.title"
 msgid "Suggested tags"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:815
+#: kitsune/sumo/db_strings.py:817
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot suggested tags issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:816
+#: kitsune/sumo/db_strings.py:818
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "Support Forum"
 msgstr "Forum ya Lisungi"
 
-#: kitsune/sumo/db_strings.py:817
+#: kitsune/sumo/db_strings.py:819
 msgctxt "DB: products.Topic.description"
 msgid "Topic for any articles related to support forum contribution."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:818 kitsune/sumo/db_strings.py:820
+#: kitsune/sumo/db_strings.py:820 kitsune/sumo/db_strings.py:822
 msgctxt "DB: products.Topic.title"
 msgid "Sync"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:819
+#: kitsune/sumo/db_strings.py:821
 msgctxt "DB: products.Topic.description"
 msgid "Sync your Firefox data."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:821
+#: kitsune/sumo/db_strings.py:823
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "Sync your browsing information across other devices."
 msgstr "Sync bainfo nayo na baappareil nayo nionso"
 
-#: kitsune/sumo/db_strings.py:822
+#: kitsune/sumo/db_strings.py:824
 msgctxt "DB: products.Topic.title"
 msgid "Sync and backup confusion"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:823
+#: kitsune/sumo/db_strings.py:825
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot sync and backup confusion."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:824 kitsune/sumo/db_strings.py:826 kitsune/sumo/db_strings.py:828
+#: kitsune/sumo/db_strings.py:826 kitsune/sumo/db_strings.py:828 kitsune/sumo/db_strings.py:830
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "Sync and save"
 msgstr "Solola mpe kabola"
 
-#: kitsune/sumo/db_strings.py:825
+#: kitsune/sumo/db_strings.py:827
 msgctxt "DB: products.Topic.description"
 msgid "Save, share and synchronize content with other devices"
 msgstr "Bomba, kabola mpe synchroniser contenu na baappareil misusu"
 
-#: kitsune/sumo/db_strings.py:827
+#: kitsune/sumo/db_strings.py:829
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "Sync information on all your devices"
 msgstr "Sync bainfo nayo na baappareil nayo nionso"
 
-#: kitsune/sumo/db_strings.py:829
+#: kitsune/sumo/db_strings.py:831
 msgctxt "DB: products.Topic.description"
 msgid "Share web pages on Firefox for iOS"
 msgstr "Kabola ba web pages na Firefox mpo na iOS"
 
-#: kitsune/sumo/db_strings.py:830
+#: kitsune/sumo/db_strings.py:832
 msgctxt "DB: products.Topic.title"
 msgid "Sync configuration"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:831
+#: kitsune/sumo/db_strings.py:833
 msgctxt "DB: products.Topic.description"
 msgid "Change your sync configuration."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:832
+#: kitsune/sumo/db_strings.py:834
 msgctxt "DB: products.Topic.title"
 msgid "Sync data"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:833
+#: kitsune/sumo/db_strings.py:835
 msgctxt "DB: products.Topic.description"
 msgid "Sync your data across different platforms and devices."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:834
+#: kitsune/sumo/db_strings.py:836
 msgctxt "DB: products.Topic.title"
 msgid "Sync devices & services"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:835
+#: kitsune/sumo/db_strings.py:837
 msgctxt "DB: products.Topic.description"
 msgid "Sync information on all your devices."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:836
+#: kitsune/sumo/db_strings.py:838
 msgctxt "DB: products.Topic.title"
 msgid "Sync failure"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:837
+#: kitsune/sumo/db_strings.py:839
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot sync issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:838
+#: kitsune/sumo/db_strings.py:840
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "Sync, share and save"
 msgstr "Solola mpe kabola"
 
-#: kitsune/sumo/db_strings.py:839
+#: kitsune/sumo/db_strings.py:841
 msgctxt "DB: products.Topic.description"
 msgid "Sync browsing information and content across multiple devices with Firefox Accounts."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:840
+#: kitsune/sumo/db_strings.py:842
 msgctxt "DB: products.Topic.title"
 msgid "Tab basics"
 msgstr "Mateya ya ebandeli mpo na tab"
 
-#: kitsune/sumo/db_strings.py:841
+#: kitsune/sumo/db_strings.py:843
 msgctxt "DB: products.Topic.description"
 msgid "Tab basics"
 msgstr "Mateya ya ebandeli mpo na tab"
 
-#: kitsune/sumo/db_strings.py:842
+#: kitsune/sumo/db_strings.py:844
 msgctxt "DB: products.Topic.title"
 msgid "Tabs"
 msgstr "Ba tabs"
 
-#: kitsune/sumo/db_strings.py:843
+#: kitsune/sumo/db_strings.py:845
 msgctxt "DB: products.Topic.description"
 msgid "Organize and manage your tabs for better browsing."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:844 kitsune/sumo/db_strings.py:846
+#: kitsune/sumo/db_strings.py:846 kitsune/sumo/db_strings.py:848
 msgctxt "DB: products.Topic.title"
 msgid "Tab settings"
 msgstr "Baparamètre ya tab"
 
-#: kitsune/sumo/db_strings.py:845 kitsune/sumo/db_strings.py:847
+#: kitsune/sumo/db_strings.py:847 kitsune/sumo/db_strings.py:849
 msgctxt "DB: products.Topic.description"
 msgid "Tab settings"
 msgstr "Baparamètre ya tab"
 
-#: kitsune/sumo/db_strings.py:848
+#: kitsune/sumo/db_strings.py:850
 msgctxt "DB: products.Topic.title"
 msgid "Tags"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:849
+#: kitsune/sumo/db_strings.py:851
 msgctxt "DB: products.Topic.description"
 msgid "Categorize and organize efficiently with tags."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:850 kitsune/sumo/db_strings.py:852
+#: kitsune/sumo/db_strings.py:852 kitsune/sumo/db_strings.py:854
 msgctxt "DB: products.Topic.title"
 msgid "Technical"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:851
+#: kitsune/sumo/db_strings.py:853
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "Find solutions for how to use the Firefox Private Network add-on."
 msgstr "Sync Firefox"
 
-#: kitsune/sumo/db_strings.py:853
+#: kitsune/sumo/db_strings.py:855
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "Learn how to use all Firefox Relay features."
 msgstr "Firefox mpo na Android"
 
-#: kitsune/sumo/db_strings.py:854
+#: kitsune/sumo/db_strings.py:856
 msgctxt "DB: products.Topic.title"
 msgid "Text-to-speech"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:855
+#: kitsune/sumo/db_strings.py:857
 msgctxt "DB: products.Topic.description"
 msgid "Read web pages aloud."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:856
+#: kitsune/sumo/db_strings.py:858
 msgctxt "DB: products.Topic.title"
 msgid "Themes"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:857
+#: kitsune/sumo/db_strings.py:859
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot themes issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:858
+#: kitsune/sumo/db_strings.py:860
 msgctxt "DB: products.Topic.title"
 msgid "Thimble"
 msgstr "Thimble"
 
-#: kitsune/sumo/db_strings.py:859
+#: kitsune/sumo/db_strings.py:861
 msgctxt "DB: products.Topic.description"
 msgid "Learn how to create and share your own webpages quickly and easily."
 msgstr "Yekola ndenge ya kokela mpe kokabola ba webpages nayo mei na lombango mpe bopete."
 
-#: kitsune/sumo/db_strings.py:860
+#: kitsune/sumo/db_strings.py:862
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "Thunderbird controls and buttons "
 msgstr "Bacontrôle mpe ba boutons ya Thunderbird"
 
-#: kitsune/sumo/db_strings.py:861
+#: kitsune/sumo/db_strings.py:863
 msgctxt "DB: products.Topic.description"
 msgid "Learn all about Thunderbird controls and functionality."
 msgstr "Yekola nionso na maye matali bacontrôle mpe fonctionnalité ya Thunderbird"
 
-#: kitsune/sumo/db_strings.py:862
-msgctxt "DB: products.Topic.title"
-msgid "Thunderbird crashes"
-msgstr "Makama ya Thunderbird"
-
-#: kitsune/sumo/db_strings.py:863
-msgctxt "DB: products.Topic.description"
-msgid "Thunderbird crashes"
-msgstr "Makama ya Thunderbird"
-
 #: kitsune/sumo/db_strings.py:864
 msgctxt "DB: products.Topic.title"
-msgid "Thunderbird is slow or stops working"
-msgstr "Thunderbird ezosala malembe to etiki kosala"
+msgid "Thunderbird crashes"
+msgstr "Makama ya Thunderbird"
 
 #: kitsune/sumo/db_strings.py:865
 msgctxt "DB: products.Topic.description"
+msgid "Thunderbird crashes"
+msgstr "Makama ya Thunderbird"
+
+#: kitsune/sumo/db_strings.py:866
+msgctxt "DB: products.Topic.title"
 msgid "Thunderbird is slow or stops working"
 msgstr "Thunderbird ezosala malembe to etiki kosala"
 
-#: kitsune/sumo/db_strings.py:866
-#, fuzzy
-msgctxt "DB: products.Topic.title"
-msgid "Thunderbird options, preferences and settings "
-msgstr "Baparamètre, baoption mpe bapréférence ya Thunderbird"
-
 #: kitsune/sumo/db_strings.py:867
-#, fuzzy
 msgctxt "DB: products.Topic.description"
-msgid "Thunderbird options, preferences and settings "
-msgstr "Baparamètre, baoption mpe bapréférence ya Thunderbird"
+msgid "Thunderbird is slow or stops working"
+msgstr "Thunderbird ezosala malembe to etiki kosala"
 
 #: kitsune/sumo/db_strings.py:868
+#, fuzzy
 msgctxt "DB: products.Topic.title"
-msgid "Thunderbird versions and languages"
-msgstr "Baversion ya Thunderbird mpe bankota"
+msgid "Thunderbird options, preferences and settings "
+msgstr "Baparamètre, baoption mpe bapréférence ya Thunderbird"
 
 #: kitsune/sumo/db_strings.py:869
+#, fuzzy
 msgctxt "DB: products.Topic.description"
-msgid "Thunderbird versions and languages"
-msgstr "Baversion ya Thunderbird mpe bankota"
+msgid "Thunderbird options, preferences and settings "
+msgstr "Baparamètre, baoption mpe bapréférence ya Thunderbird"
 
 #: kitsune/sumo/db_strings.py:870
 msgctxt "DB: products.Topic.title"
+msgid "Thunderbird versions and languages"
+msgstr "Baversion ya Thunderbird mpe bankota"
+
+#: kitsune/sumo/db_strings.py:871
+msgctxt "DB: products.Topic.description"
+msgid "Thunderbird versions and languages"
+msgstr "Baversion ya Thunderbird mpe bankota"
+
+#: kitsune/sumo/db_strings.py:872
+msgctxt "DB: products.Topic.title"
 msgid "Thunderbird won't save settings or remember information"
 msgstr "Thunderbird ekokoka te kobomba baparamètre to kokanisa bainfo"
 
-#: kitsune/sumo/db_strings.py:871
+#: kitsune/sumo/db_strings.py:873
 msgctxt "DB: products.Topic.description"
 msgid "Thunderbird won't save settings or remember information"
 msgstr "Thunderbird ekokoka te kobomba baparamètre to kokanisa bainfo"
 
-#: kitsune/sumo/db_strings.py:872 kitsune/sumo/db_strings.py:874 kitsune/sumo/db_strings.py:876
+#: kitsune/sumo/db_strings.py:874 kitsune/sumo/db_strings.py:876 kitsune/sumo/db_strings.py:878
 msgctxt "DB: products.Topic.title"
 msgid "Tips and tricks"
 msgstr "Mayele mpe buanya"
 
-#: kitsune/sumo/db_strings.py:873
+#: kitsune/sumo/db_strings.py:875
 msgctxt "DB: products.Topic.description"
 msgid "Learn tips and shortcuts to help you work faster"
 msgstr "Yekola mayele mpe ba raccourcis mpo na kosalisa yo osalaka na lombango"
 
-#: kitsune/sumo/db_strings.py:875
+#: kitsune/sumo/db_strings.py:877
 msgctxt "DB: products.Topic.description"
 msgid "Go beyond the basics with these shortcuts and other tips."
 msgstr "Leka niveau ya ebandeli na ba raccourcis oyo mpe mayele misusu."
 
-#: kitsune/sumo/db_strings.py:877
+#: kitsune/sumo/db_strings.py:879
 msgctxt "DB: products.Topic.description"
 msgid "Tips and tricks"
 msgstr "Mayele mpe buanya"
 
-#: kitsune/sumo/db_strings.py:878 kitsune/sumo/db_strings.py:880
+#: kitsune/sumo/db_strings.py:880 kitsune/sumo/db_strings.py:882
 msgctxt "DB: products.Topic.title"
 msgid "Tracking protection"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:879
+#: kitsune/sumo/db_strings.py:881
 msgctxt "DB: products.Topic.description"
 msgid "Prevent websites from tracking you as you browse."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:881
+#: kitsune/sumo/db_strings.py:883
 msgctxt "DB: products.Topic.description"
 msgid "Enable tracking protection to enhance your privacy."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:882
+#: kitsune/sumo/db_strings.py:884
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "Troubleshoot"
 msgstr "Dépannage"
 
-#: kitsune/sumo/db_strings.py:883
+#: kitsune/sumo/db_strings.py:885
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "Fix problems with Firefox Accounts"
 msgstr "Message ya dépannage erreur na Firefox mpo na iOS"
 
-#: kitsune/sumo/db_strings.py:884 kitsune/sumo/db_strings.py:886 kitsune/sumo/db_strings.py:888 kitsune/sumo/db_strings.py:890 kitsune/sumo/db_strings.py:892 kitsune/sumo/db_strings.py:894
-#: kitsune/sumo/db_strings.py:896 kitsune/sumo/db_strings.py:898 kitsune/sumo/db_strings.py:900 kitsune/sumo/db_strings.py:902
+#: kitsune/sumo/db_strings.py:886 kitsune/sumo/db_strings.py:888 kitsune/sumo/db_strings.py:890 kitsune/sumo/db_strings.py:892 kitsune/sumo/db_strings.py:894 kitsune/sumo/db_strings.py:896
+#: kitsune/sumo/db_strings.py:898 kitsune/sumo/db_strings.py:900 kitsune/sumo/db_strings.py:902 kitsune/sumo/db_strings.py:904
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "Troubleshooting"
 msgstr "Dépannage"
 
-#: kitsune/sumo/db_strings.py:885 kitsune/sumo/db_strings.py:887 kitsune/sumo/db_strings.py:889 kitsune/sumo/db_strings.py:893 kitsune/sumo/db_strings.py:895 kitsune/sumo/db_strings.py:897
-#: kitsune/sumo/db_strings.py:899 kitsune/sumo/db_strings.py:903
+#: kitsune/sumo/db_strings.py:887 kitsune/sumo/db_strings.py:889 kitsune/sumo/db_strings.py:891 kitsune/sumo/db_strings.py:895 kitsune/sumo/db_strings.py:897 kitsune/sumo/db_strings.py:899
+#: kitsune/sumo/db_strings.py:901 kitsune/sumo/db_strings.py:905
 msgctxt "DB: products.Topic.description"
 msgid "Discover solutions for common issues and explore best practices to diagnose and resolve problems."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:891
+#: kitsune/sumo/db_strings.py:893
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshooting"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:901
+#: kitsune/sumo/db_strings.py:903
 msgctxt "DB: products.Topic.description"
 msgid "Fix slowness, crashing, error messages and other problems"
 msgstr "Kobongisa bolembu, makama, bamessage ya erreur mpe bankokoso misusu"
 
-#: kitsune/sumo/db_strings.py:904
+#: kitsune/sumo/db_strings.py:906
 msgctxt "DB: products.Topic.title"
 msgid "Troubleshoot issues"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:905
+#: kitsune/sumo/db_strings.py:907
 msgctxt "DB: products.Topic.description"
 msgid "Resolve problems you're having with your account"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:906
+#: kitsune/sumo/db_strings.py:908
 msgctxt "DB: products.Topic.title"
 msgid "Two-factor authentication"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:907
+#: kitsune/sumo/db_strings.py:909
 msgctxt "DB: products.Topic.description"
 msgid "Use two-factor authentication to add an extra layer of security when signing in."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:908
+#: kitsune/sumo/db_strings.py:910
 msgctxt "DB: products.Topic.title"
 msgid "Two-factor lockout"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:909
+#: kitsune/sumo/db_strings.py:911
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot two-factor lockout issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:910
-msgctxt "DB: products.Topic.title"
-msgid "Unblock Firefox from connecting to the Internet"
-msgstr "Kodébloquer Firefox emiconnecter na Internet"
-
-#: kitsune/sumo/db_strings.py:911
-msgctxt "DB: products.Topic.description"
-msgid "Unblock Firefox from connecting to the Internet"
-msgstr "Kodébloquer Firefox emiconnecter na Internet"
-
 #: kitsune/sumo/db_strings.py:912
 msgctxt "DB: products.Topic.title"
-msgid "Unblock Thunderbird from connecting to the Internet"
-msgstr "Débloquer Thunderbird komiconnecter na Internet"
+msgid "Unblock Firefox from connecting to the Internet"
+msgstr "Kodébloquer Firefox emiconnecter na Internet"
 
 #: kitsune/sumo/db_strings.py:913
 msgctxt "DB: products.Topic.description"
-msgid "Unblock Thunderbird from connecting to the Internet"
-msgstr "Débloquer Thunderbird komiconnecter na Internet"
+msgid "Unblock Firefox from connecting to the Internet"
+msgstr "Kodébloquer Firefox emiconnecter na Internet"
 
 #: kitsune/sumo/db_strings.py:914
 msgctxt "DB: products.Topic.title"
-msgid "Update"
-msgstr ""
+msgid "Unblock Thunderbird from connecting to the Internet"
+msgstr "Débloquer Thunderbird komiconnecter na Internet"
 
 #: kitsune/sumo/db_strings.py:915
 msgctxt "DB: products.Topic.description"
-msgid "Keep the Mozilla products you use up to date with the latest features and improvements."
-msgstr ""
+msgid "Unblock Thunderbird from connecting to the Internet"
+msgstr "Débloquer Thunderbird komiconnecter na Internet"
 
 #: kitsune/sumo/db_strings.py:916
 msgctxt "DB: products.Topic.title"
-msgid "Update account settings"
+msgid "Undefined"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:917
 msgctxt "DB: products.Topic.description"
-msgid "Change your password, email address, and more."
+msgid "A topic that can be applied to content that is spam or non-actionable"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:918
 msgctxt "DB: products.Topic.title"
-msgid "Update billing & payment methods"
+msgid "Update"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:919
 msgctxt "DB: products.Topic.description"
-msgid "Update billing information for your Mozilla subscriptions."
+msgid "Keep the Mozilla products you use up to date with the latest features and improvements."
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:920
 msgctxt "DB: products.Topic.title"
-msgid "Update failure"
+msgid "Update account settings"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:921
 msgctxt "DB: products.Topic.description"
-msgid "Troubleshoot update failure issues."
+msgid "Change your password, email address, and more."
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:922
 msgctxt "DB: products.Topic.title"
-msgid "Upgrade/downgrade subscription"
+msgid "Update billing & payment methods"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:923
 msgctxt "DB: products.Topic.description"
-msgid "Troubleshoot upgrade/downgrade subscription issues."
+msgid "Update billing information for your Mozilla subscriptions."
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:924
 msgctxt "DB: products.Topic.title"
+msgid "Update failure"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:925
+msgctxt "DB: products.Topic.description"
+msgid "Troubleshoot update failure issues."
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:926
+msgctxt "DB: products.Topic.title"
+msgid "Upgrade/downgrade subscription"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:927
+msgctxt "DB: products.Topic.description"
+msgid "Troubleshoot upgrade/downgrade subscription issues."
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:928
+msgctxt "DB: products.Topic.title"
 msgid "Use bookmarks"
 msgstr "Salela ba bookmarks"
 
-#: kitsune/sumo/db_strings.py:925
+#: kitsune/sumo/db_strings.py:929
 msgctxt "DB: products.Topic.description"
 msgid "The basics of using bookmarks"
 msgstr "Mateya ya ebandeli mpo na kosalela ba bookmarks"
 
-#: kitsune/sumo/db_strings.py:926
+#: kitsune/sumo/db_strings.py:930
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "Use extensions and add-ons"
 msgstr "Personnaliser bacontrôle, baoption mpe bibakisi"
 
-#: kitsune/sumo/db_strings.py:927
+#: kitsune/sumo/db_strings.py:931
 msgctxt "DB: products.Topic.description"
 msgid "Enhance your family's Firefox browsing experience"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:928
+#: kitsune/sumo/db_strings.py:932
 msgctxt "DB: products.Topic.title"
 msgid "Video, audio and interactive settings"
 msgstr "Baparamètre interactif ya vidéo mpe audio"
 
-#: kitsune/sumo/db_strings.py:929
+#: kitsune/sumo/db_strings.py:933
 msgctxt "DB: products.Topic.description"
 msgid "Change how Firefox handles videos, animations, music and other interactive content"
 msgstr "Bongola lolenge Firefox eza kosalela bavidéo, baanimation, miziki mpe contenu interactif mosusu"
 
-#: kitsune/sumo/db_strings.py:930
+#: kitsune/sumo/db_strings.py:934
 msgctxt "DB: products.Topic.title"
 msgid "Videos, sound, pictures and animations don't work"
 msgstr "Bavidéo, son, bilili mpe baanimation eza kosala te"
 
-#: kitsune/sumo/db_strings.py:931
+#: kitsune/sumo/db_strings.py:935
 msgctxt "DB: products.Topic.description"
 msgid "Videos, sound, pictures and animations don't work"
 msgstr "Bavidéo, son, bilili mpe baanimation eza kosala te"
 
-#: kitsune/sumo/db_strings.py:932
+#: kitsune/sumo/db_strings.py:936
 msgctxt "DB: products.Topic.title"
 msgid "View all Firefox OS articles"
 msgstr "Tala baarticle nionso ya Firefox OS"
 
-#: kitsune/sumo/db_strings.py:933
+#: kitsune/sumo/db_strings.py:937
 msgctxt "DB: products.Topic.description"
 msgid "View a list of all Firefox OS articles"
 msgstr "Tala liste ya baarticle nionso ya Firefox OS"
 
-#: kitsune/sumo/db_strings.py:934
+#: kitsune/sumo/db_strings.py:938
 msgctxt "DB: products.Topic.title"
 msgid "Web certificates"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:935
+#: kitsune/sumo/db_strings.py:939
 msgctxt "DB: products.Topic.description"
 msgid "Troubleshoot web certificates issues."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:936
+#: kitsune/sumo/db_strings.py:940
 msgctxt "DB: products.Topic.title"
 msgid "Web compatibility"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:937
-msgctxt "DB: products.Topic.description"
-msgid "Troubleshoot web compatibility issues."
-msgstr ""
-
-#: kitsune/sumo/db_strings.py:938
-#, fuzzy
-msgctxt "DB: products.Topic.title"
-msgid "Webmaker for Android"
-msgstr "Firefox mpo na Android"
-
-#: kitsune/sumo/db_strings.py:939
-#, fuzzy
-msgctxt "DB: products.Topic.description"
-msgid "Get help with the Webmaker app for Android."
-msgstr "Firefox mpo na Android"
-
-#: kitsune/sumo/db_strings.py:940
-#, fuzzy
-msgctxt "DB: products.Topic.title"
-msgid "Website breakages"
-msgstr "Ba site web"
-
 #: kitsune/sumo/db_strings.py:941
 msgctxt "DB: products.Topic.description"
-msgid "Fix site breakage issues."
+msgid "Troubleshoot web compatibility issues."
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:942
 #, fuzzy
 msgctxt "DB: products.Topic.title"
-msgid "What's new in Firefox for Android"
+msgid "Webmaker for Android"
 msgstr "Firefox mpo na Android"
 
 #: kitsune/sumo/db_strings.py:943
+#, fuzzy
+msgctxt "DB: products.Topic.description"
+msgid "Get help with the Webmaker app for Android."
+msgstr "Firefox mpo na Android"
+
+#: kitsune/sumo/db_strings.py:944
+#, fuzzy
+msgctxt "DB: products.Topic.title"
+msgid "Website breakages"
+msgstr "Ba site web"
+
+#: kitsune/sumo/db_strings.py:945
+msgctxt "DB: products.Topic.description"
+msgid "Fix site breakage issues."
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:946
+#, fuzzy
+msgctxt "DB: products.Topic.title"
+msgid "What's new in Firefox for Android"
+msgstr "Firefox mpo na Android"
+
+#: kitsune/sumo/db_strings.py:947
 msgctxt "DB: products.Topic.description"
 msgid "See what new features are available in each release"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:944
+#: kitsune/sumo/db_strings.py:948
 #, fuzzy
 msgctxt "DB: products.Topic.title"
 msgid "What's new in Firefox for iOS"
 msgstr "Kabola ba web pages na Firefox mpo na iOS"
 
-#: kitsune/sumo/db_strings.py:945
+#: kitsune/sumo/db_strings.py:949
 msgctxt "DB: products.Topic.description"
 msgid "See what features are available in each release."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:946
+#: kitsune/sumo/db_strings.py:950
 msgctxt "DB: products.Topic.title"
 msgid "Windows"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:947
+#: kitsune/sumo/db_strings.py:951
 #, fuzzy
 msgctxt "DB: products.Topic.description"
 msgid "Deploying Firefox on Windows computers."
 msgstr "Firefox mpo na Windows 8 Touch"
 
-#: kitsune/sumo/db_strings.py:948
+#: kitsune/sumo/db_strings.py:952
 msgctxt "DB: products.Topic.title"
 msgid "Working with messages"
 msgstr "Kosala na bamessage"
 
-#: kitsune/sumo/db_strings.py:949
+#: kitsune/sumo/db_strings.py:953
 msgctxt "DB: products.Topic.description"
 msgid "Firefox OS SMS & email"
 msgstr "SMS & email Firefox OS"
 
-#: kitsune/sumo/db_strings.py:950
+#: kitsune/sumo/db_strings.py:954
 msgctxt "DB: products.Topic.title"
 msgid "X-Ray Goggles"
 msgstr "Rayon-X Goggles"
 
-#: kitsune/sumo/db_strings.py:951
+#: kitsune/sumo/db_strings.py:955
 msgctxt "DB: products.Topic.description"
 msgid "Learn how to inspect the code behind every webpage."
 msgstr "Yekola ndenge ya koinspecter code oyo eza sima ya webpage nionso."
 
-#: kitsune/sumo/db_strings.py:952
+#: kitsune/sumo/db_strings.py:956
 msgctxt "DB: products.Topic.title"
 msgid "Your Pocket Account"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:953
+#: kitsune/sumo/db_strings.py:957
 msgctxt "DB: products.Topic.description"
 msgid "Signup, login, password reset and more."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:954
-msgctxt "DB: kbadge.Badge.title"
-msgid "2025 KB Badge"
-msgstr ""
-
-#: kitsune/sumo/db_strings.py:955
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved English edits during 2025."
-msgstr ""
-
-#: kitsune/sumo/db_strings.py:956
-msgctxt "DB: kbadge.Badge.title"
-msgid "2025 L10n Badge"
-msgstr ""
-
-#: kitsune/sumo/db_strings.py:957
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved translations edits during 2025."
-msgstr ""
-
 #: kitsune/sumo/db_strings.py:958
 msgctxt "DB: kbadge.Badge.title"
-msgid "2025 Support Forum Badge"
+msgid "Thunderbolt hunt"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:959
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 30 support forum replies during 2025."
+msgid "This badge is awarded to contributors who can find 5 thunderbolts emoji ⚡ in the Firefox KB articles during the Ask a Fox event"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:960
 msgctxt "DB: kbadge.Badge.title"
-msgid "Firefox 20th Anniversary Badge"
+msgid "Fox hunt"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:961
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with >=100 contributions within 2024, when we celebrate Firefox 20th anniversary on November 9, 2024."
+msgid "This badge is awarded to contributors who can find 5 fox emoji 🦊 in the Firefox KB articles during the Ask a Fox event"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:962
 msgctxt "DB: kbadge.Badge.title"
-msgid "2024 KB Badge"
+msgid "Ask a Fox"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:963
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved English edits during 2024."
+msgid "This badge is awarded to contributors who replied to 5 or more questions during the Ask a Fox event."
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:964
 msgctxt "DB: kbadge.Badge.title"
-msgid "2024 L10n Badge"
+msgid "Forum Moderator Training"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:965
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved translations edits during 2024."
+msgid "This badge is awarded to Forum Moderators who completed the Moderator Training in Teachable."
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:966
 msgctxt "DB: kbadge.Badge.title"
-msgid "2024 Support Forum Badge"
+msgid "2025 Support Forum Badge"
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:967
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 30 support forum replies during 2024."
+msgid "This badge is awarded to contributors with 30 support forum replies during 2025."
 msgstr ""
 
 #: kitsune/sumo/db_strings.py:968
-#, fuzzy
 msgctxt "DB: kbadge.Badge.title"
-msgid "2023 KB Badge"
-msgstr "Badge Ya KB 2013"
+msgid "2024 Support Forum Badge"
+msgstr ""
 
 #: kitsune/sumo/db_strings.py:969
-#, fuzzy
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved English edits during 2023."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
+msgid "This badge is awarded to contributors with 30 support forum replies during 2024."
+msgstr ""
 
 #: kitsune/sumo/db_strings.py:970
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2023 L10n Badge"
-msgstr "Badge Ya L10n 2013"
-
-#: kitsune/sumo/db_strings.py:971
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved translations edits during 2023."
-msgstr "Badge oyo epesami na bacontributeur baye baza na ndimbola 10 eye ebongisami mpe endimami na mobu 2008."
-
-#: kitsune/sumo/db_strings.py:972
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2023 Support Forum Badge"
 msgstr "Badge Ya Forum Ya Lisungi 2013"
 
-#: kitsune/sumo/db_strings.py:973
+#: kitsune/sumo/db_strings.py:971
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 30 support forum replies during 2023."
 msgstr "Badge oyo epesami na bacontributeur oyo baza na biyano 30 na forum ya lisungi na mobu 2015."
 
-#: kitsune/sumo/db_strings.py:974
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2021 KB Badge"
-msgstr "Badge Ya KB 2011"
-
-#: kitsune/sumo/db_strings.py:975
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved English edits during 2021."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
-
-#: kitsune/sumo/db_strings.py:976
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2022 L10n Badge"
-msgstr "Badge Ya L10n 2012"
-
-#: kitsune/sumo/db_strings.py:977
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved translations edits during 2022."
-msgstr "Badge oyo epesami na bacontributeur baye baza na ndimbola 10 eye ebongisami mpe endimami na mobu 2008."
-
-#: kitsune/sumo/db_strings.py:978
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2022 KB Badge"
-msgstr "Badge Ya KB 2012"
-
-#: kitsune/sumo/db_strings.py:979
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved English edits during 2022."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
-
-#: kitsune/sumo/db_strings.py:980
+#: kitsune/sumo/db_strings.py:972
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2022 Support Forum Badge"
 msgstr "Badge Ya Forum Ya Lisungi 2012"
 
-#: kitsune/sumo/db_strings.py:981
+#: kitsune/sumo/db_strings.py:973
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 30 support forum replies during 2022."
 msgstr "Badge oyo epesami na bacontributeur oyo baza na biyano 30 na forum ya lisungi na mobu 2015."
 
-#: kitsune/sumo/db_strings.py:982
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2021 L10n Badge"
-msgstr "Badge Ya L10n 2011"
-
-#: kitsune/sumo/db_strings.py:983
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved translations edits during 2021."
-msgstr "Badge oyo epesami na bacontributeur baye baza na ndimbola 10 eye ebongisami mpe endimami na mobu 2008."
-
-#: kitsune/sumo/db_strings.py:984
+#: kitsune/sumo/db_strings.py:974
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2021 Support Forum Badge"
 msgstr "Badge Ya Forum Ya Lisungi 2011"
 
-#: kitsune/sumo/db_strings.py:985
+#: kitsune/sumo/db_strings.py:975
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 30 support forum replies during 2021."
 msgstr "Badge oyo epesami na bacontributeur oyo baza na biyano 30 na forum ya lisungi na mobu 2015."
 
-#: kitsune/sumo/db_strings.py:986
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2020 KB Badge"
-msgstr "Badge Ya KB 2010"
-
-#: kitsune/sumo/db_strings.py:987
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved English edits during 2020."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
-
-#: kitsune/sumo/db_strings.py:988
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2019 KB Badge"
-msgstr "Badge Ya Oyo Etali Boyebi 2015"
-
-#: kitsune/sumo/db_strings.py:989
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved English edits during 2019."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
-
-#: kitsune/sumo/db_strings.py:990
+#: kitsune/sumo/db_strings.py:976
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2020 Support Forum Badge"
 msgstr "Badge Ya Forum Ya Lisungi 2010"
 
-#: kitsune/sumo/db_strings.py:991
-#, fuzzy
+#: kitsune/sumo/db_strings.py:977
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 20 support forum replies during 2020."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na biyano 30 na forum ya lisungi na mobu 2015."
+msgid "This badge is awarded to contributors with 30 support forum replies during 2020."
+msgstr ""
 
-#: kitsune/sumo/db_strings.py:992
+#: kitsune/sumo/db_strings.py:978
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2019 Support Forum Badge"
 msgstr "Badge Ya Forum Ya Lisungi 2015"
 
-#: kitsune/sumo/db_strings.py:993
-#, fuzzy
+#: kitsune/sumo/db_strings.py:979
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 20 support forum replies during 2019."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na biyano 30 na forum ya lisungi na mobu 2015."
+msgid "This badge is awarded to contributors with 30 support forum replies during 2019."
+msgstr ""
 
-#: kitsune/sumo/db_strings.py:994
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2020 Army of Awesome Badge"
-msgstr "Badge Ya Army of Awesome 2010"
-
-#: kitsune/sumo/db_strings.py:995
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2020."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na ba tweets 50 na Army of Awesome na mobu 2015."
-
-#: kitsune/sumo/db_strings.py:996
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2019 Army of Awesome Badge"
-msgstr "Badge Ya Army of Awesome 2015"
-
-#: kitsune/sumo/db_strings.py:997
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2019."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na ba tweets 50 na Army of Awesome na mobu 2015."
-
-#: kitsune/sumo/db_strings.py:998
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2020 L10n Badge"
-msgstr "Badge Ya L10n"
-
-#: kitsune/sumo/db_strings.py:999
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved translations edits during 2020."
-msgstr "Badge oyo epesami na bacontributeur baye baza na ndimbola 10 eye ebongisami mpe endimami na mobu 2008."
-
-#: kitsune/sumo/db_strings.py:1000
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2019 L10n Badge"
-msgstr "Badge Ya L10n 2009"
-
-#: kitsune/sumo/db_strings.py:1001
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved translations edits during 2019."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na ndimbola 10 eye babongisaki mpe endimamaki na mobu 2015."
-
-#: kitsune/sumo/db_strings.py:1002
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2018 L10n Badge"
-msgstr "Badge Ya Ln10 2008"
-
-#: kitsune/sumo/db_strings.py:1003
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved translations edits during 2018."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na ndimbola 10 eye babongisaki mpe endimamaki na mobu 2015."
-
-#: kitsune/sumo/db_strings.py:1004
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2018 KB Badge"
-msgstr "Badge Ya Oyo Etali Boyebi 2015"
-
-#: kitsune/sumo/db_strings.py:1005
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved English edits during 2018."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
-
-#: kitsune/sumo/db_strings.py:1006
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2018 Army of Awesome Badge"
-msgstr "Badge Ya Army of Awesome 2015"
-
-#: kitsune/sumo/db_strings.py:1007
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2018."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na ba tweets 50 na Army of Awesome na mobu 2015."
-
-#: kitsune/sumo/db_strings.py:1008
+#: kitsune/sumo/db_strings.py:980
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2018 Support Forum Badge"
 msgstr "Badge Ya Forum Ya Lisungi 2015"
 
-#: kitsune/sumo/db_strings.py:1009
-#, fuzzy
+#: kitsune/sumo/db_strings.py:981
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 20 support forum replies during 2018."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na biyano 30 na forum ya lisungi na mobu 2015."
+msgid "This badge is awarded to contributors with 30 support forum replies during 2018."
+msgstr ""
 
-#: kitsune/sumo/db_strings.py:1010
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2017 L10n Badge"
-msgstr "Badge Ya L10n"
-
-#: kitsune/sumo/db_strings.py:1011
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved translations edits during 2017."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na ndimbola 10 eye babongisaki mpe endimamaki na mobu 2015."
-
-#: kitsune/sumo/db_strings.py:1012
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2017 KB Badge"
-msgstr "Badge Ya Oyo Etali Boyebi 2015"
-
-#: kitsune/sumo/db_strings.py:1013
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved English edits during 2017."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
-
-#: kitsune/sumo/db_strings.py:1014
-#, fuzzy
-msgctxt "DB: kbadge.Badge.title"
-msgid "2017 Army of Awesome Badge"
-msgstr "Badge Ya Army of Awesome 2015"
-
-#: kitsune/sumo/db_strings.py:1015
-#, fuzzy
-msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2017."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na ba tweets 50 na Army of Awesome na mobu 2015."
-
-#: kitsune/sumo/db_strings.py:1016
+#: kitsune/sumo/db_strings.py:982
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2017 Support Forum Badge"
 msgstr "Badge Ya Forum Ya Lisungi 2015"
 
-#: kitsune/sumo/db_strings.py:1017
-#, fuzzy
+#: kitsune/sumo/db_strings.py:983
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 20 support forum replies during 2017."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na biyano 30 na forum ya lisungi na mobu 2015."
+msgid "This badge is awarded to contributors with 30 support forum replies during 2017."
+msgstr ""
 
-#: kitsune/sumo/db_strings.py:1018
+#: kitsune/sumo/db_strings.py:984
+msgctxt "DB: kbadge.Badge.title"
+msgid "2025 L10n Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:985
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved translations edits during 2025."
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:986
+msgctxt "DB: kbadge.Badge.title"
+msgid "2025 KB Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:987
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved English edits during 2025."
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:988
+msgctxt "DB: kbadge.Badge.title"
+msgid "2024 L10n Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:989
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved translations edits during 2024."
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:990
+msgctxt "DB: kbadge.Badge.title"
+msgid "2024 KB Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:991
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved English edits during 2024."
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:992
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
-msgid "2016 L10n Badge"
-msgstr "Badge Ya L10n"
+msgid "2023 L10n Badge"
+msgstr "Badge Ya L10n 2013"
 
-#: kitsune/sumo/db_strings.py:1019
+#: kitsune/sumo/db_strings.py:993
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved translations edits during 2016."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na ndimbola 10 eye babongisaki mpe endimamaki na mobu 2015."
+msgid "This badge is awarded to contributors with 10 approved translations edits during 2023."
+msgstr "Badge oyo epesami na bacontributeur baye baza na ndimbola 10 eye ebongisami mpe endimami na mobu 2008."
+
+#: kitsune/sumo/db_strings.py:994
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2023 KB Badge"
+msgstr "Badge Ya KB 2013"
+
+#: kitsune/sumo/db_strings.py:995
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved English edits during 2023."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:996
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2022 L10n Badge"
+msgstr "Badge Ya L10n 2012"
+
+#: kitsune/sumo/db_strings.py:997
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved translations edits during 2022."
+msgstr "Badge oyo epesami na bacontributeur baye baza na ndimbola 10 eye ebongisami mpe endimami na mobu 2008."
+
+#: kitsune/sumo/db_strings.py:998
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2022 KB Badge"
+msgstr "Badge Ya KB 2012"
+
+#: kitsune/sumo/db_strings.py:999
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved English edits during 2022."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:1000
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2021 L10n Badge"
+msgstr "Badge Ya L10n 2011"
+
+#: kitsune/sumo/db_strings.py:1001
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved translations edits during 2021."
+msgstr "Badge oyo epesami na bacontributeur baye baza na ndimbola 10 eye ebongisami mpe endimami na mobu 2008."
+
+#: kitsune/sumo/db_strings.py:1002
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2021 KB Badge"
+msgstr "Badge Ya KB 2011"
+
+#: kitsune/sumo/db_strings.py:1003
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved English edits during 2021."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:1004
+msgctxt "DB: kbadge.Badge.title"
+msgid "Honorary badge for Social Support and Mobile Store Support contributors"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1005
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to those who left significant impact to the Social Support and Mobile Store Support programs"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1006
+msgctxt "DB: kbadge.Badge.title"
+msgid "2025 Top Social Support Contributor Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1007
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to top 3 contributors of the Social Support program in 2025"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1008
+msgctxt "DB: kbadge.Badge.title"
+msgid "2025 Top Mobile Store Support Contributor Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1009
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to top 3 contributors of the Mobile Store Support program in 2025"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1010
+msgctxt "DB: kbadge.Badge.title"
+msgid "2024 Top Social Support Contributor Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1011
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to top 3 contributors of the Social Support program in 2024"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1012
+msgctxt "DB: kbadge.Badge.title"
+msgid "2024 Top Mobile Store Support Contributor Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1013
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to top 3 contributors of the Mobile Store Support program in 2024"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1014
+msgctxt "DB: kbadge.Badge.title"
+msgid "2023 Top Social Support Contributor Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1015
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to top 3 contributors of the Social Support program in 2023"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1016
+msgctxt "DB: kbadge.Badge.title"
+msgid "2023 Top Mobile Store Support Contributor Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1017
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to top 3 contributors of the Mobile Store Support program in 2023"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1018
+msgctxt "DB: kbadge.Badge.title"
+msgid "Firefox 20th Anniversary Badge"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1019
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with >=100 contributions within 2024, when we celebrate Firefox 20th anniversary on November 9, 2024."
+msgstr ""
 
 #: kitsune/sumo/db_strings.py:1020
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
-msgid "2016 Support Forum Badge"
-msgstr "Badge Ya Forum Ya Lisungi 2015"
+msgid "2020 KB Badge"
+msgstr "Badge Ya KB 2010"
 
 #: kitsune/sumo/db_strings.py:1021
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 30 support forum replies during 2016."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na biyano 30 na forum ya lisungi na mobu 2015."
+msgid "This badge is awarded to contributors with 10 approved English edits during 2020."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
 
 #: kitsune/sumo/db_strings.py:1022
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
-msgid "2016 KB Badge"
+msgid "2019 KB Badge"
 msgstr "Badge Ya Oyo Etali Boyebi 2015"
 
 #: kitsune/sumo/db_strings.py:1023
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved English edits during 2016."
+msgid "This badge is awarded to contributors with 10 approved English edits during 2019."
 msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
 
 #: kitsune/sumo/db_strings.py:1024
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
-msgid "2016 Army of Awesome Badge"
-msgstr "Badge Ya Army of Awesome 2015"
+msgid "2020 Army of Awesome Badge"
+msgstr "Badge Ya Army of Awesome 2010"
 
 #: kitsune/sumo/db_strings.py:1025
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2016."
+msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2020."
 msgstr "Badge oyo epesami na bacontributeur oyo baza na ba tweets 50 na Army of Awesome na mobu 2015."
 
 #: kitsune/sumo/db_strings.py:1026
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
-msgid "2015 Support Forum Badge"
-msgstr "Badge Ya Forum Ya Lisungi 2015"
+msgid "2019 Army of Awesome Badge"
+msgstr "Badge Ya Army of Awesome 2015"
 
 #: kitsune/sumo/db_strings.py:1027
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 30 support forum replies during 2015."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na biyano 30 na forum ya lisungi na mobu 2015."
+msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2019."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na ba tweets 50 na Army of Awesome na mobu 2015."
 
 #: kitsune/sumo/db_strings.py:1028
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
-msgid "2015 Army of Awesome Badge"
-msgstr "Badge Ya Army of Awesome 2015"
+msgid "2020 L10n Badge"
+msgstr "Badge Ya L10n"
 
 #: kitsune/sumo/db_strings.py:1029
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2015."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na ba tweets 50 na Army of Awesome na mobu 2015."
+msgid "This badge is awarded to contributors with 10 approved translations edits during 2020."
+msgstr "Badge oyo epesami na bacontributeur baye baza na ndimbola 10 eye ebongisami mpe endimami na mobu 2008."
 
 #: kitsune/sumo/db_strings.py:1030
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
-msgid "2015 KB Badge"
-msgstr "Badge Ya Oyo Etali Boyebi 2015"
+msgid "2019 L10n Badge"
+msgstr "Badge Ya L10n 2009"
 
 #: kitsune/sumo/db_strings.py:1031
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved English edits during 2015."
-msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
+msgid "This badge is awarded to contributors with 10 approved translations edits during 2019."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na ndimbola 10 eye babongisaki mpe endimamaki na mobu 2015."
 
 #: kitsune/sumo/db_strings.py:1032
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
-msgid "2015 L10n Badge"
-msgstr "Badge Ya L10n"
+msgid "2018 L10n Badge"
+msgstr "Badge Ya Ln10 2008"
 
 #: kitsune/sumo/db_strings.py:1033
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
-msgid "This badge is awarded to contributors with 10 approved translations edits during 2015."
+msgid "This badge is awarded to contributors with 10 approved translations edits during 2018."
 msgstr "Badge oyo epesami na bacontributeur oyo baza na ndimbola 10 eye babongisaki mpe endimamaki na mobu 2015."
 
 #: kitsune/sumo/db_strings.py:1034
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
+msgid "2018 KB Badge"
+msgstr "Badge Ya Oyo Etali Boyebi 2015"
+
+#: kitsune/sumo/db_strings.py:1035
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved English edits during 2018."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:1036
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2018 Army of Awesome Badge"
+msgstr "Badge Ya Army of Awesome 2015"
+
+#: kitsune/sumo/db_strings.py:1037
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2018."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na ba tweets 50 na Army of Awesome na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:1038
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2017 L10n Badge"
+msgstr "Badge Ya L10n"
+
+#: kitsune/sumo/db_strings.py:1039
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved translations edits during 2017."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na ndimbola 10 eye babongisaki mpe endimamaki na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:1040
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2017 KB Badge"
+msgstr "Badge Ya Oyo Etali Boyebi 2015"
+
+#: kitsune/sumo/db_strings.py:1041
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved English edits during 2017."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:1042
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2017 Army of Awesome Badge"
+msgstr "Badge Ya Army of Awesome 2015"
+
+#: kitsune/sumo/db_strings.py:1043
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2017."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na ba tweets 50 na Army of Awesome na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:1044
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2016 L10n Badge"
+msgstr "Badge Ya L10n"
+
+#: kitsune/sumo/db_strings.py:1045
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved translations edits during 2016."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na ndimbola 10 eye babongisaki mpe endimamaki na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:1046
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2016 Support Forum Badge"
+msgstr "Badge Ya Forum Ya Lisungi 2015"
+
+#: kitsune/sumo/db_strings.py:1047
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 30 support forum replies during 2016."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na biyano 30 na forum ya lisungi na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:1048
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2016 KB Badge"
+msgstr "Badge Ya Oyo Etali Boyebi 2015"
+
+#: kitsune/sumo/db_strings.py:1049
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved English edits during 2016."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:1050
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2016 Army of Awesome Badge"
+msgstr "Badge Ya Army of Awesome 2015"
+
+#: kitsune/sumo/db_strings.py:1051
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2016."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na ba tweets 50 na Army of Awesome na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:1052
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2015 Support Forum Badge"
+msgstr "Badge Ya Forum Ya Lisungi 2015"
+
+#: kitsune/sumo/db_strings.py:1053
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 30 support forum replies during 2015."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na biyano 30 na forum ya lisungi na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:1054
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2015 Army of Awesome Badge"
+msgstr "Badge Ya Army of Awesome 2015"
+
+#: kitsune/sumo/db_strings.py:1055
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2015."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na ba tweets 50 na Army of Awesome na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:1056
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2015 KB Badge"
+msgstr "Badge Ya Oyo Etali Boyebi 2015"
+
+#: kitsune/sumo/db_strings.py:1057
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved English edits during 2015."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na makoma 10 oyo babongisaki na lokota ya Angele na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:1058
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
+msgid "2015 L10n Badge"
+msgstr "Badge Ya L10n"
+
+#: kitsune/sumo/db_strings.py:1059
+#, fuzzy
+msgctxt "DB: kbadge.Badge.description"
+msgid "This badge is awarded to contributors with 10 approved translations edits during 2015."
+msgstr "Badge oyo epesami na bacontributeur oyo baza na ndimbola 10 eye babongisaki mpe endimamaki na mobu 2015."
+
+#: kitsune/sumo/db_strings.py:1060
+#, fuzzy
+msgctxt "DB: kbadge.Badge.title"
 msgid "2014 Army of Awesome Badge"
 msgstr "Badge Ya Army of Awesome 2014"
 
-#: kitsune/sumo/db_strings.py:1035
+#: kitsune/sumo/db_strings.py:1061
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -8766,13 +9049,13 @@ msgstr ""
 "Mini-badge ya SUMO Army of Awesome 2014 eza moko ya ba series ya SUMO. Eza kolakisa contribution na SUMO na mobu 2014; mpo na yango: 50 tweets na Army of Awesome. Longonia na baye banso bazwaki "
 "badge SUMO Army of Awesome 2014 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1038
+#: kitsune/sumo/db_strings.py:1064
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2014 L10n Badge"
 msgstr "Badge L10n"
 
-#: kitsune/sumo/db_strings.py:1039
+#: kitsune/sumo/db_strings.py:1065
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -8783,13 +9066,13 @@ msgstr ""
 "Mini-badge SUMO L10n eza moko ya ba series ya SUMO. Eza kolakisa contribution na SUMO na mobu 2014; mpo na yango: ndimbola 10 eye ebongisami mpe endimami na Oyo Etali Boyebi ya SUMO. Longonia na "
 "baye banso bazwaki badge SUMO L10n 2014 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1042
+#: kitsune/sumo/db_strings.py:1068
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2014 KB Badge"
 msgstr "Badge KB 2014"
 
-#: kitsune/sumo/db_strings.py:1043
+#: kitsune/sumo/db_strings.py:1069
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -8800,13 +9083,13 @@ msgstr ""
 "Mini-badge SUMO KB 2014 eza moko ya ba series ya SUMO. Eza kolakisa contribution na SUMO na mobu 2014; mpo na yango: ndimbola 10 eye ebongisami mpe endimami na Oyo Etali Boyebi ya SUMO na lokota ya "
 "Angele. Longonia na baye banso bazwaki badge SUMO KB 2014 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1046
+#: kitsune/sumo/db_strings.py:1072
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2014 Support Forum Badge"
 msgstr "Badge Ya Forum Ya Lisungi"
 
-#: kitsune/sumo/db_strings.py:1047
+#: kitsune/sumo/db_strings.py:1073
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -8817,13 +9100,13 @@ msgstr ""
 "Mini-badge ya Forum SUMO 2014 eza moko ya ba serie ya SUMO. Eza kolakisa contribution na SUMO na mobu 2014 mpo na yango: biyano 30 na Forum SUMO na lokota ya Angele. Longonia na baye banso bazwaki "
 "badge Forum SUMO 2014 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1050
+#: kitsune/sumo/db_strings.py:1076
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "Firefox 29 Launch Team"
 msgstr "Equipe ya lancement Firefox 29"
 
-#: kitsune/sumo/db_strings.py:1051
+#: kitsune/sumo/db_strings.py:1077
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -8844,37 +9127,37 @@ msgstr ""
 "matondo! Bacaractèristique ya Firefox 29: 1. Firefox Ordinateur Ya Bureau: Australis yasika MPE bacompte sync ya Firefox 2. Firefox mpo na Android: bacompte sync MOAR ya Firefox: https://sumo."
 "etherpad.mozilla.org/sumo-australis-badges"
 
-#: kitsune/sumo/db_strings.py:1063
+#: kitsune/sumo/db_strings.py:1089
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2008 L10n Badge"
 msgstr "Badge Ya Ln10 2008"
 
-#: kitsune/sumo/db_strings.py:1064
+#: kitsune/sumo/db_strings.py:1090
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2008."
 msgstr "Badge oyo epesami na bacontributeur baye baza na ndimbola 10 eye ebongisami mpe endimami na mobu 2008."
 
-#: kitsune/sumo/db_strings.py:1065
+#: kitsune/sumo/db_strings.py:1091
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2009 L10n Badge"
 msgstr "Badge Ya L10n 2009"
 
-#: kitsune/sumo/db_strings.py:1066
+#: kitsune/sumo/db_strings.py:1092
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2009."
 msgstr "Badge oyo epesami na bacontributeur oyo baza na ndimbola 10 eye ebongisami mpe endimami na mobu 2009."
 
-#: kitsune/sumo/db_strings.py:1067
+#: kitsune/sumo/db_strings.py:1093
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2012 Army of Awesome Badge"
 msgstr "Badge Ya Army of Awesome 2012"
 
-#: kitsune/sumo/db_strings.py:1068
+#: kitsune/sumo/db_strings.py:1094
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -8885,13 +9168,13 @@ msgstr ""
 "Mini-badge ya SUMO Army of Awesome 2012 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2012; mpo nayango: ba tweets 50 na Army of Awesome. Longonia na baye banso bazwaki "
 "badge ya SUMO Army of Awesome 2012 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1071
+#: kitsune/sumo/db_strings.py:1097
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2013 Army of Awesome Badge"
 msgstr "Badge Ya Army of Awesome 2013"
 
-#: kitsune/sumo/db_strings.py:1072
+#: kitsune/sumo/db_strings.py:1098
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -8902,13 +9185,13 @@ msgstr ""
 "Mini-badge ya SUMO Army of Awesome 2013 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2013; mpo nayango: ba tweets 50 na Army of Awesome. Longonia na baye banso bazwaki "
 "badge ya SUMO Army of Awesome 2013 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1075
+#: kitsune/sumo/db_strings.py:1101
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2010 Army of Awesome Badge"
 msgstr "Badge Ya Army of Awesome 2010"
 
-#: kitsune/sumo/db_strings.py:1076
+#: kitsune/sumo/db_strings.py:1102
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -8919,13 +9202,13 @@ msgstr ""
 "Mini-badge ya SUMO Army of Awesome 2010 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2010; mpo na yango: ba tweets 50 na Army of Awesome. Longonia na baye banso bazwaki "
 "badge ya SUMO Army of Awesome 2010 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1079
+#: kitsune/sumo/db_strings.py:1105
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2011 Army of Awesome Badge"
 msgstr "Badge Ya Army of Awesome 2011"
 
-#: kitsune/sumo/db_strings.py:1080
+#: kitsune/sumo/db_strings.py:1106
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -8936,13 +9219,13 @@ msgstr ""
 "Mini-badge ya SUMO Army of Awesome 2011 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2011; mpo na yango: ba tweets 50 na Army of Awesome. Longonia na baye banso bazwaki "
 "badge ya SUMO Army of Awesome 2011 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1083
+#: kitsune/sumo/db_strings.py:1109
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2012 Support Forum Badge"
 msgstr "Badge Ya Forum Ya Lisungi 2012"
 
-#: kitsune/sumo/db_strings.py:1084
+#: kitsune/sumo/db_strings.py:1110
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -8953,13 +9236,13 @@ msgstr ""
 "Mini-badge ya Forum SUMO 2012 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2012; mpo na yango: biyano 30 replies na Forum SUMO na lokota ya Angele. Longonia na baye banso "
 "bazwaki badge ya Forum SUMO 2012 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1087
+#: kitsune/sumo/db_strings.py:1113
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2010 KB Badge"
 msgstr "Badge Ya KB 2010"
 
-#: kitsune/sumo/db_strings.py:1088
+#: kitsune/sumo/db_strings.py:1114
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -8970,13 +9253,13 @@ msgstr ""
 "Mini-badge ya KB SUMO 2010 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2010; mpo na yango: makoma 10 maye mobongisami na lokota ya Angele na Oyo Etali Boyebi ya SUMO. "
 "Longonia na baye banso bazwaki badge KB SUMO 2010 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1091
+#: kitsune/sumo/db_strings.py:1117
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2010 L10n Badge"
 msgstr "Badge Ya L10n"
 
-#: kitsune/sumo/db_strings.py:1092
+#: kitsune/sumo/db_strings.py:1118
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -8987,13 +9270,13 @@ msgstr ""
 "Mini-badge ya SUMO L10n 2010 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2010; mpo na yango: ndimbola 10 eye ebongisami mpe endimami na Oyo Etali Botebi ya SUMO. Longonia "
 "na baye banso bazwaki badge ya SUMO L10n 2010 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1095
+#: kitsune/sumo/db_strings.py:1121
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2010 Support Forum Badge"
 msgstr "Badge Ya Forum Ya Lisungi 2010"
 
-#: kitsune/sumo/db_strings.py:1096
+#: kitsune/sumo/db_strings.py:1122
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -9004,13 +9287,13 @@ msgstr ""
 "Mini-badge ya Forum SUMO 2010 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2010; mpo na yango: biyano 30 na Forum SUMO na lokota ya Angele. Longonia na baye banso bazwaki "
 "badge ya Forum SUMO 2010 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1099
+#: kitsune/sumo/db_strings.py:1125
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2011 KB Badge"
 msgstr "Badge Ya KB 2011"
 
-#: kitsune/sumo/db_strings.py:1100
+#: kitsune/sumo/db_strings.py:1126
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -9021,13 +9304,13 @@ msgstr ""
 "Mini-badge ya KB SUMO 2011 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2011; mpo na yango: makoma 10 maye mabongisami mpe mandimami na Oyo Etali Boyebi ya SUMO na lokota "
 "ya Angele. Longonia na baye banso bazwaki badge ya KB SUMO 2011 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1103
+#: kitsune/sumo/db_strings.py:1129
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2011 L10n Badge"
 msgstr "Badge Ya L10n 2011"
 
-#: kitsune/sumo/db_strings.py:1104
+#: kitsune/sumo/db_strings.py:1130
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -9038,13 +9321,13 @@ msgstr ""
 "Mini-badge ya SUMO L10n 2011 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2011; mpo na yango: ndimbola 10 eye ebongisami mpe endimami na Oyo Etali Boyebi ya SUMO. Longonia "
 "na baye banso bazwaki badge ya SUMO L10n 2011 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1107
+#: kitsune/sumo/db_strings.py:1133
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2011 Support Forum Badge"
 msgstr "Badge Ya Forum Ya Lisungi 2011"
 
-#: kitsune/sumo/db_strings.py:1108
+#: kitsune/sumo/db_strings.py:1134
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -9055,13 +9338,13 @@ msgstr ""
 "Mini-badge ya Forum SUMO 2011 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2011; mpo na yango: biyano 30 na Forum SUMO na lokota ya Angele. Longonia na baye banso bazwaki "
 "badge ya Forum SUMO 2011 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1112
+#: kitsune/sumo/db_strings.py:1138
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2012 KB Badge"
 msgstr "Badge Ya KB 2012"
 
-#: kitsune/sumo/db_strings.py:1113
+#: kitsune/sumo/db_strings.py:1139
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -9072,13 +9355,13 @@ msgstr ""
 "Mini-badge ya KB SUMO 2012 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2012; mpo na yango: makoma 10 maye mabongisami mpe mandimami na Oyo Etali Boyebi SUMO na lokota ya "
 "Angele. Longonia na baye banso bazwaki badge KB SUMO 2012 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1116
+#: kitsune/sumo/db_strings.py:1142
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2013 KB Badge"
 msgstr "Badge Ya KB 2013"
 
-#: kitsune/sumo/db_strings.py:1117
+#: kitsune/sumo/db_strings.py:1143
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -9089,13 +9372,13 @@ msgstr ""
 "Mini-badge ya KB SUMO 2013 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2013; mpo na yango: makoma 10 maye mabongisami na Oyo Etali Boyebi SUMO na lokota ya Angele. "
 "Longonia na baye bazwaki badge ya KB SUMO 2013 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1120
+#: kitsune/sumo/db_strings.py:1146
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2013 L10n Badge"
 msgstr "Badge Ya L10n 2013"
 
-#: kitsune/sumo/db_strings.py:1121
+#: kitsune/sumo/db_strings.py:1147
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -9106,13 +9389,13 @@ msgstr ""
 "Mini-badge ya SUMO L10n 2013 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2013; mpo na yango: ndimbola 10 eye ebongisami mpe endimami na Oyo Etali Boyebi SUMO. Longonia na "
 "baye banso bazwaki badge ya SUMO L10n 2013 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1124
+#: kitsune/sumo/db_strings.py:1150
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2013 Support Forum Badge"
 msgstr "Badge Ya Forum Ya Lisungi 2013"
 
-#: kitsune/sumo/db_strings.py:1125
+#: kitsune/sumo/db_strings.py:1151
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -9123,13 +9406,13 @@ msgstr ""
 "Mini-badge ya Forum SUMO 2013 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2013; mpo na yango: biyano 30 Forum SUMO na lokota ya Angele. Longonia na baye banso bazwaki "
 "badge ya Forum SUMO 2013 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1128
+#: kitsune/sumo/db_strings.py:1154
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2012 L10n Badge"
 msgstr "Badge Ya L10n 2012"
 
-#: kitsune/sumo/db_strings.py:1129
+#: kitsune/sumo/db_strings.py:1155
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -9140,13 +9423,13 @@ msgstr ""
 "Mini-badge ya SUMO L10n 2012 eza moko ya ba series SUMO. Eza kolakisa contribution na SUMO na mobu 2012; mpo na yango: ndimbola 10 eye ebongisami mpe endimami na Oyo Etali Boyebi SUMO. Longonia na "
 "baye banso bazwaki badge ya SUMO L10n 2012 mpo na komema Mission ya Mozilla o boso!"
 
-#: kitsune/sumo/db_strings.py:1132
+#: kitsune/sumo/db_strings.py:1158
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "Kitsune Contributor"
 msgstr "Contributeur Kitsune"
 
-#: kitsune/sumo/db_strings.py:1133
+#: kitsune/sumo/db_strings.py:1159
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "Badge awarded to those who have contributed to the Kitsune code base."
@@ -9542,15 +9825,15 @@ msgid "Localization discussions"
 msgstr ""
 
 #: kitsune/sumo/jinja2/includes/common_macros.html:755
-msgid "View all discussions"
+msgid "Forum moderator discussions"
 msgstr ""
 
 #: kitsune/sumo/jinja2/includes/common_macros.html:764
-msgid "Knowledge base discussions"
+msgid "View all discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:772
-msgid "Forum moderator discussions"
+#: kitsune/sumo/jinja2/includes/common_macros.html:773
+msgid "Knowledge base discussions"
 msgstr ""
 
 #: kitsune/sumo/jinja2/includes/common_macros.html:780
@@ -9617,13 +9900,21 @@ msgstr "Yasika"
 #: kitsune/sumo/jinja2/includes/readonly_annoucement.html:1
 #, python-format
 msgid ""
-"This site will have limited functionality while we undergo maintenance to improve your experience. If an article doesn't solve your issue and you want to ask a question, we have our support "
-"community waiting to help you at <a href=\"%(reddit)s\">/r/firefox</a> on Reddit."
+"This site will have limited functionality while we undergo maintenance to improve your experience. If an article doesn't solve your issue and you want to ask a question, you may reach out to us on "
+"<a href=\"%(mastodon)s\">Mastodon</a>, or ask the <a href=\"%(reddit)s\">Firefox community on Reddit</a>."
 msgstr ""
 
 #: kitsune/sumo/jinja2/includes/unsubscribe_text.ltxt:3
 msgid "Unsubscribe from these emails:"
 msgstr "Longola inscription nangai na ba email oyo:"
+
+#: kitsune/sumo/jinja2/layout/paginator.html:11
+msgid "Previous"
+msgstr "Oyo eleki"
+
+#: kitsune/sumo/jinja2/layout/paginator.html:35
+msgid "Next"
+msgstr "Oyo elandi"
 
 #: kitsune/sumo/jinja2/sumo/deprecated.html:2
 msgid "Redirecting"
@@ -9649,58 +9940,58 @@ msgstr "Caractèristique oyo eza desactivé mpo na mua ngonga tango toza kosala 
 msgid "Some features on this page are temporarily disabled while we perform website maintenance. Please try again a little later."
 msgstr "Bacaractèristique songolo na lokasa oyo eza desactivé mpo na mua ngonga tango toza kosala entretien ya site web. Meka lisusu sima moke."
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:159
+#: kitsune/sumo/templatetags/jinja_helpers.py:160
 msgid "read more"
 msgstr "ebele ya kotanga"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:286
+#: kitsune/sumo/templatetags/jinja_helpers.py:287
 #, python-format
 msgid "Today at %s"
 msgstr "Lelo na %s"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:373
+#: kitsune/sumo/templatetags/jinja_helpers.py:374
 #, python-format
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "mobu %(number)d eleki"
 msgstr[1] "mibu %(number)d mileki"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:377
+#: kitsune/sumo/templatetags/jinja_helpers.py:378
 #, python-format
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "sanza %(number)d eleki"
 msgstr[1] "basanza %(number)d eleki"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:381
+#: kitsune/sumo/templatetags/jinja_helpers.py:382
 #, python-format
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "poso %(number)d eleki"
 msgstr[1] "baposo %(number)d eleki"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:385
+#: kitsune/sumo/templatetags/jinja_helpers.py:386
 #, python-format
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "mokolo %(number)d moleki"
 msgstr[1] "mikolo %(number)d mileki"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:389
+#: kitsune/sumo/templatetags/jinja_helpers.py:390
 #, python-format
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "ngonga %(number)d eleki"
 msgstr[1] "bangonga %(number)d eleki"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:391
+#: kitsune/sumo/templatetags/jinja_helpers.py:392
 #, python-format
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "monuti %(number)d moleki"
 msgstr[1] "minuti %(number)d mileki"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:392
+#: kitsune/sumo/templatetags/jinja_helpers.py:393
 #, python-format
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
@@ -9909,26 +10200,6 @@ msgstr "Bongisa bacontributeur"
 msgid "Forum Contributors"
 msgstr "Mpo na Bacontributeur"
 
-#: kitsune/users/models.py:57
-msgid "Regular User Account"
-msgstr ""
-
-#: kitsune/users/models.py:58
-msgid "System Account"
-msgstr ""
-
-#: kitsune/users/models.py:59
-msgid "Admin Account"
-msgstr ""
-
-#: kitsune/users/models.py:69 kitsune/users/models.py:291
-msgid "User"
-msgstr "Mosaleli"
-
-#: kitsune/users/models.py:76
-msgid "Account Type"
-msgstr ""
-
 #: kitsune/users/models.py:79
 msgid "Display name"
 msgstr "Nkombo ya komimonisa"
@@ -9982,42 +10253,6 @@ msgstr "Engumba"
 #: kitsune/users/models.py:129
 msgid "Preferred language"
 msgstr "Lokota oyo olingi"
-
-#: kitsune/users/models.py:131
-msgid "Has been sent a first answer contribution email."
-msgstr "Atindelami email ya yambo ya contribution ya eyano."
-
-#: kitsune/users/models.py:134
-msgid "Has been sent a first revision contribution email."
-msgstr "Atindelami email ya yambo ya contribution ya revision."
-
-#: kitsune/users/models.py:142
-msgid "When the user was sent a community health survey"
-msgstr ""
-
-#: kitsune/users/models.py:295
-msgid "Value"
-msgstr "Valeur"
-
-#: kitsune/users/models.py:332 kitsune/users/models.py:369 kitsune/users/models.py:382
-msgid "user"
-msgstr "mosaleli"
-
-#: kitsune/users/models.py:334 kitsune/users/models.py:371
-msgid "activation key"
-msgstr "fungola ya activation"
-
-#: kitsune/users/models.py:337
-msgid "registration profile"
-msgstr "inscription ya profile"
-
-#: kitsune/users/models.py:338
-msgid "registration profiles"
-msgstr "inscription ya baprofile"
-
-#: kitsune/users/models.py:387
-msgid "moderator"
-msgstr "moderateur"
 
 #: kitsune/users/utils.py:98
 msgid "Welcome to Mozilla Support Community! 🎉"
@@ -10759,10 +10994,6 @@ msgstr ""
 msgid "Allow discussion on this article?"
 msgstr "Kondima masolo na article oyo?"
 
-#: kitsune/wiki/forms.py:131 kitsune/wiki/jinja2/wiki/history.html:18
-msgid "Category:"
-msgstr "Categorie:"
-
 #: kitsune/wiki/forms.py:132
 msgid "Type of article"
 msgstr "Lolenge ya article"
@@ -10832,19 +11063,75 @@ msgstr "Ebandeli:"
 msgid "End:"
 msgstr "Suka:"
 
-#: kitsune/wiki/locale_views.py:71
+#. A message displayed after adding users to locale leaders (only accounts with
+#. corresponding permissions can do that!).
+#. {users} is a list of usernames separated by commas, {locale} is a locale code.
+#: kitsune/wiki/locale_views.py:77
+#, python-brace-format
+msgid "{users} added to {locale} leaders successfully!"
+msgstr ""
+
+#. A message displayed after adding users to locale reviewers (only accounts with
+#. corresponding permissions can do that!).
+#. {users} is a list of usernames separated by commas, {locale} is a locale code.
+#: kitsune/wiki/locale_views.py:81
+#, python-brace-format
+msgid "{users} added to {locale} reviewers successfully!"
+msgstr ""
+
+#. A message displayed after adding users to locale editors (only accounts with
+#. corresponding permissions can do that!).
+#. {users} is a list of usernames separated by commas, {locale} is a locale code.
+#: kitsune/wiki/locale_views.py:85
+#, python-brace-format
+msgid "{users} added to {locale} editors successfully!"
+msgstr ""
+
+#. A message displayed after adding users to a locale role (only accounts with
+#. corresponding permissions can do that!).
+#. {users} is a list of usernames separated by commas.
+#: kitsune/wiki/locale_views.py:89
 #, python-brace-format
 msgid "{users} added successfully!"
 msgstr "{users} abakisami malamu!"
 
-#: kitsune/wiki/locale_views.py:75
+#. A message displayed in case of errors when adding users to locale role (only
+#. accounts with corresponding permissions can do that!).
+#: kitsune/wiki/locale_views.py:94
 msgid "There were errors adding users, see below."
 msgstr "erreur esalemaki na bobakisi basaleli, tala awa na se."
 
-#: kitsune/wiki/locale_views.py:92
+#. A message displayed after removing a user from locale leaders (only accounts
+#. with corresponding permissions can do that!).
+#. {user} is a username, {locale} is a locale code.
+#: kitsune/wiki/locale_views.py:116
 #, python-brace-format
-msgid "{user} removed from successfully!"
-msgstr "{user} alongolami malamu!"
+msgid "{user} removed from {locale} leaders successfully!"
+msgstr ""
+
+#. A message displayed after removing a user from locale reviewers (only accounts
+#. with corresponding permissions can do that!).
+#. {user} is a username, {locale} is a locale code.
+#: kitsune/wiki/locale_views.py:120
+#, python-brace-format
+msgid "{user} removed from {locale} reviewers successfully!"
+msgstr ""
+
+#. A message displayed after removing a user from locale editors (only accounts
+#. with corresponding permissions can do that!).
+#. {user} is a username, {locale} is a locale code.
+#: kitsune/wiki/locale_views.py:124
+#, python-brace-format
+msgid "{user} removed from {locale} editors successfully!"
+msgstr ""
+
+#. A message displayed after removing a user from a locale role (only accounts with
+#. corresponding permissions can do that!).
+#. {user} is a username.
+#: kitsune/wiki/locale_views.py:128
+#, python-brace-format
+msgid "{user} removed successfully!"
+msgstr ""
 
 #: kitsune/wiki/models.py:118
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
@@ -10881,7 +11168,7 @@ msgstr "Revision esengeli ezala basé na artcile ya lokota ya Angele. Identifian
 msgid "Table of Contents"
 msgstr "Table des matières"
 
-#. L10n: This error is displayed if a template is included into itself.
+#. This error is displayed if a template is included into itself.
 #: kitsune/wiki/parser.py:375
 #, python-format
 msgid "[Recursive inclusion of \"%s\"]"
@@ -10897,25 +11184,34 @@ msgstr "Document oyo \"%s\" eza te."
 msgid "The template \"%s\" does not exist or has no approved revision."
 msgstr "Modele oyo \"%s\" eza te to ezangi revision eye endimami."
 
-#: kitsune/wiki/tasks.py:84
+#: kitsune/wiki/tasks.py:94
 #, python-brace-format
 msgid "Your revision has been approved: {title}"
 msgstr "Revision nayo endimami: {title}"
 
-#: kitsune/wiki/tasks.py:86
+#: kitsune/wiki/tasks.py:96
 #, python-brace-format
 msgid "Your revision has been reviewed: {title}"
 msgstr "Revision nayo emanyolami: {title}"
 
-#: kitsune/wiki/tasks.py:150
+#: kitsune/wiki/tasks.py:160
 #, python-brace-format
 msgid "A revision you contributed to has been approved: {title}"
 msgstr "Contribution osalaki na revision endimami: {title}"
 
-#: kitsune/wiki/tasks.py:152
+#: kitsune/wiki/tasks.py:162
 #, python-brace-format
 msgid "A revision you contributed to has been reviewed: {title}"
 msgstr "Contribution osalaki na revision endimami: {title}"
+
+#: kitsune/wiki/tasks.py:491
+#, python-format
+msgid "[Reviews Pending: %s] SUMO needs your help!"
+msgstr "[Reviews Pending: %s] SUMO esengeli na lisalisi nayo!"
+
+#: kitsune/wiki/tasks.py:547
+msgid "Other products"
+msgstr "Baproduit misusu"
 
 #: kitsune/wiki/topic_strings.py:7
 #, fuzzy
@@ -11154,11 +11450,11 @@ msgstr "<strong>Keba:</strong> Revision oyo eza na bavote ya Ntina na Oyo Etali 
 msgid "You are about to permanently delete this revision. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "Oza pene ya koboma revision oyo mpo na libela. <strong>Ekoki kozongelama te!</strong> Oza sure olingi kokoba?"
 
-#: kitsune/wiki/jinja2/wiki/document.html:93 kitsune/wiki/jinja2/wiki/edit.html:23
+#: kitsune/wiki/jinja2/wiki/document.html:94 kitsune/wiki/jinja2/wiki/edit.html:23
 msgid "This document is restricted."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/document.html:112
+#: kitsune/wiki/jinja2/wiki/document.html:113
 #, python-brace-format
 msgid "Share this article: {link}"
 msgstr "Kabola article oyo: {link}"
@@ -11588,7 +11884,7 @@ msgstr "Elengelamaki mpo na ndimbola:"
 msgid "Readied for localization by:"
 msgstr "Elengelamaki mpo na ndimbola na:"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:123 kitsune/wiki/jinja2/wiki/revision.html:78
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:125 kitsune/wiki/jinja2/wiki/revision.html:78
 msgid "Edit article based on this revision"
 msgstr "Bongisa article kolandana na revision oyo"
 
@@ -12102,7 +12398,7 @@ msgstr "Kanga Diff"
 msgid "Revision"
 msgstr "Revision %s"
 
-#: kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:46 kitsune/wiki/jinja2/wiki/includes/revision_list.html:26
+#: kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:47 kitsune/wiki/jinja2/wiki/includes/revision_list.html:26
 msgid "Editor"
 msgstr "Editeur"
 
@@ -12182,11 +12478,11 @@ msgstr "Tinda na eleko mosusu"
 msgid "Show Helpfulness Votes Chart"
 msgstr "Lakisa Graphique Ya Bavotes Ya Ntina"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:8 kitsune/wiki/jinja2/wiki/includes/revision_list.html:140
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:8 kitsune/wiki/jinja2/wiki/includes/revision_list.html:142
 msgid "Compare Selected Translations"
 msgstr "Comparer Ndimbola Oyo Eponami"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:8 kitsune/wiki/jinja2/wiki/includes/revision_list.html:140
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:8 kitsune/wiki/jinja2/wiki/includes/revision_list.html:142
 #, fuzzy
 msgid "Compare Selected Revisions"
 msgstr "Comparer Ndimbola Oyo Eponami"
@@ -12205,52 +12501,52 @@ msgctxt "First letter of 'Ready for localization'"
 msgid "R"
 msgstr "R"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:63
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:64
 msgid "Review"
 msgstr "Revision"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:65
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:66
 msgctxt "revision"
 msgid "Unreviewed"
 msgstr "Emanyolami te"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:69
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:70
 msgid "Current"
 msgstr "Oyo eza sik'oyo"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:73
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:75
 msgid "Reviewed"
 msgstr "Emanyolami"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:95
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:97
 msgid "This revision is ready for localization."
 msgstr "Revision oyo elengelami mpo na kolimbolama."
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:100 kitsune/wiki/jinja2/wiki/includes/revision_list.html:103
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:102 kitsune/wiki/jinja2/wiki/includes/revision_list.html:105
 msgid "This revision is not ready for localization."
 msgstr "Revision oyo elengelami te mpo na kolimbolama."
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:106
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:108
 msgid "This revision is not approved yet."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:108
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:110
 msgid "This revision has trivial changes only."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:110
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:112
 msgid "This revision cannot be marked ready for localization."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:115
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:117
 msgid "This is a translated document."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:128
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:130
 msgid "Delete this revision"
 msgstr "Boma revision oyo"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:145
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:147
 msgid "This document has no revisions."
 msgstr "Document oyo eza na revision ata moko te."
 
@@ -12314,6 +12610,76 @@ msgstr "Bokeseni"
 #: kitsune/wiki/jinja2/wikiparser/hook_refresh_button.html:1
 msgid "Refresh Firefox"
 msgstr "Rafraîchir Firefox"
+
+#~ msgid "previous"
+#~ msgstr "Oyo eleki"
+
+#, python-brace-format
+#~ msgid "Page {0} of {1}."
+#~ msgstr "Lokasa {0} na {1}."
+
+#~ msgid "next"
+#~ msgstr "oyo elandi"
+
+#~ msgid "Solution provided"
+#~ msgstr "Solution epesamaki"
+
+#~ msgid "Mark it as solved"
+#~ msgstr "Tiya elembo bo eyanolami"
+
+#~ msgid "If this answer solves your problem, please mark it as \"solved\":"
+#~ msgstr "Soki eyano oyo esilisi nkokoso nayo, tiya elembo neti \"endimbolami\":"
+
+#, fuzzy
+#~ msgctxt "DB: kbadge.Badge.description"
+#~ msgid "This badge is awarded to contributors with 20 support forum replies during 2020."
+#~ msgstr "Badge oyo epesami na bacontributeur oyo baza na biyano 30 na forum ya lisungi na mobu 2015."
+
+#, fuzzy
+#~ msgctxt "DB: kbadge.Badge.description"
+#~ msgid "This badge is awarded to contributors with 20 support forum replies during 2019."
+#~ msgstr "Badge oyo epesami na bacontributeur oyo baza na biyano 30 na forum ya lisungi na mobu 2015."
+
+#, fuzzy
+#~ msgctxt "DB: kbadge.Badge.description"
+#~ msgid "This badge is awarded to contributors with 20 support forum replies during 2018."
+#~ msgstr "Badge oyo epesami na bacontributeur oyo baza na biyano 30 na forum ya lisungi na mobu 2015."
+
+#, fuzzy
+#~ msgctxt "DB: kbadge.Badge.description"
+#~ msgid "This badge is awarded to contributors with 20 support forum replies during 2017."
+#~ msgstr "Badge oyo epesami na bacontributeur oyo baza na biyano 30 na forum ya lisungi na mobu 2015."
+
+#~ msgid "User"
+#~ msgstr "Mosaleli"
+
+#~ msgid "Has been sent a first answer contribution email."
+#~ msgstr "Atindelami email ya yambo ya contribution ya eyano."
+
+#~ msgid "Has been sent a first revision contribution email."
+#~ msgstr "Atindelami email ya yambo ya contribution ya revision."
+
+#~ msgid "Value"
+#~ msgstr "Valeur"
+
+#~ msgid "user"
+#~ msgstr "mosaleli"
+
+#~ msgid "activation key"
+#~ msgstr "fungola ya activation"
+
+#~ msgid "registration profile"
+#~ msgstr "inscription ya profile"
+
+#~ msgid "registration profiles"
+#~ msgstr "inscription ya baprofile"
+
+#~ msgid "moderator"
+#~ msgstr "moderateur"
+
+#, python-brace-format
+#~ msgid "{user} removed from successfully!"
+#~ msgstr "{user} alongolami malamu!"
 
 #~ msgid "Show after"
 #~ msgstr "Lakisa sima"
@@ -13583,9 +13949,6 @@ msgstr "Rafraîchir Firefox"
 #~ msgid "Payments/Settlement"
 #~ msgstr "Bofuti/Boyokani"
 
-#~ msgid "Email:"
-#~ msgstr "Email:"
-
 #~ msgid "Body:"
 #~ msgstr "Ya kati-kati:"
 
@@ -14435,12 +14798,6 @@ msgstr "Rafraîchir Firefox"
 
 #~ msgid "Create a new support account"
 #~ msgstr "Kela compte yasika ya lisungi"
-
-#~ msgid "[Reviews Pending: %s] SUMO needs your help!"
-#~ msgstr "[Reviews Pending: %s] SUMO esengeli na lisalisi nayo!"
-
-#~ msgid "Other products"
-#~ msgstr "Baproduit misusu"
 
 #~ msgid "Firefox OS"
 #~ msgstr "Firefox OS"
