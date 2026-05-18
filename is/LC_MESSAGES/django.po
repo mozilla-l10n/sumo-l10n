@@ -95,7 +95,7 @@ msgstr "Allur hugbúnaður"
 
 #: kitsune/community/jinja2/community/index.html:129 kitsune/questions/jinja2/questions/activate_watch.html:8 kitsune/questions/jinja2/questions/confirm_answer_delete.html:4
 #: kitsune/questions/jinja2/questions/confirm_question_delete.html:4 kitsune/questions/jinja2/questions/edit_answer.html:8 kitsune/questions/jinja2/questions/edit_question.html:3
-#: kitsune/questions/jinja2/questions/metrics.html:4 kitsune/questions/jinja2/questions/question_details.html:19 kitsune/questions/jinja2/questions/unsubscribe_watch.html:8
+#: kitsune/questions/jinja2/questions/metrics.html:4 kitsune/questions/jinja2/questions/question_details.html:24 kitsune/questions/jinja2/questions/unsubscribe_watch.html:8
 msgid "Support Forums"
 msgstr "Aðstoðarspjallsvæði"
 
@@ -428,54 +428,80 @@ msgstr "Veldu ástæðu fyrir því að þú hefur samband"
 msgid "Please enter a valid email address."
 msgstr ""
 
-#: kitsune/customercare/models.py:20
+#: kitsune/customercare/models.py:21
 msgid "Ticket Pending Classification"
 msgstr ""
 
-#: kitsune/customercare/models.py:21
+#: kitsune/customercare/models.py:22
 msgid "Ticket Sent"
 msgstr ""
 
-#: kitsune/customercare/models.py:22
+#: kitsune/customercare/models.py:23
 msgid "Ticket under Review"
 msgstr ""
 
-#: kitsune/customercare/models.py:23
+#: kitsune/customercare/models.py:24
 msgid "Ticket Rejected"
 msgstr ""
 
-#: kitsune/customercare/models.py:24
+#: kitsune/customercare/models.py:25
 msgid "Ticket Processing Failed"
 msgstr ""
 
-#: kitsune/customercare/models.py:37 kitsune/questions/jinja2/questions/question_details.html:141 kitsune/sumo/jinja2/sumo/includes/question_entry.html:145
+#: kitsune/customercare/models.py:38 kitsune/sumo/jinja2/sumo/includes/question_entry.html:137
 msgid "Open"
 msgstr ""
 
-#: kitsune/customercare/models.py:38 kitsune/flagit/models.py:38
+#: kitsune/customercare/models.py:39 kitsune/flagit/models.py:40
 msgid "Pending"
 msgstr "Í bið"
 
-#: kitsune/customercare/models.py:39
+#: kitsune/customercare/models.py:40
 msgid "Waiting"
 msgstr ""
 
 #. This is a question filter option for the Done tab.
-#: kitsune/customercare/models.py:40 kitsune/questions/jinja2/questions/question_details.html:135 kitsune/questions/views.py:117 kitsune/search/jinja2/search/includes/result.html:31
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:133
+#: kitsune/customercare/models.py:41 kitsune/questions/views.py:118 kitsune/search/jinja2/search/includes/result.html:31 kitsune/sumo/jinja2/sumo/includes/question_entry.html:125
 msgid "Solved"
 msgstr "Leyst"
 
-#: kitsune/customercare/models.py:41
+#: kitsune/customercare/models.py:42
 msgid "Closed"
 msgstr ""
 
-#: kitsune/customercare/models.py:111
+#: kitsune/customercare/models.py:120
 msgid "processing"
 msgstr ""
 
-#: kitsune/customercare/models.py:113
+#: kitsune/customercare/models.py:122
 msgid "submitted"
+msgstr ""
+
+#: kitsune/customercare/jinja2/customercare/ticket_detail.html:14
+msgid "Our support team has replied and is waiting for your response. Please check your email to reply."
+msgstr ""
+
+#: kitsune/customercare/jinja2/customercare/ticket_detail.html:37
+msgid "Fetching latest replies…"
+msgstr ""
+
+#: kitsune/customercare/jinja2/customercare/includes/ticket_replies.html:5
+msgid "We could not fetch the latest replies. Please try again later."
+msgstr ""
+
+#: kitsune/customercare/jinja2/customercare/includes/ticket_replies.html:11
+#, python-format
+msgid "%(count)s Reply"
+msgid_plural "%(count)s Replies"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kitsune/customercare/jinja2/customercare/includes/ticket_replies.html:33
+msgid "Support Agent"
+msgstr ""
+
+#: kitsune/customercare/jinja2/customercare/includes/ticket_replies.html:45
+msgid "No replies yet."
 msgstr ""
 
 #: kitsune/dashboards/__init__.py:9
@@ -899,7 +925,7 @@ msgstr "Stjórnborð [{product}] KB-þekkingargrunns"
 
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:176 kitsune/dashboards/jinja2/dashboards/includes/macros.html:191
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:201 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/products/jinja2/products/includes/product_macros.html:34
-#: kitsune/questions/jinja2/questions/product_list.html:48 kitsune/questions/jinja2/questions/question_details.html:13 kitsune/questions/jinja2/questions/question_list.html:10
+#: kitsune/questions/jinja2/questions/product_list.html:48 kitsune/questions/jinja2/questions/question_details.html:18 kitsune/questions/jinja2/questions/question_list.html:12
 #: kitsune/search/jinja2/search/results.html:88 kitsune/search/views.py:74
 msgid "All Products"
 msgstr "Allur hugbúnaður"
@@ -964,12 +990,11 @@ msgid "Review Needed: {comment}"
 msgstr "Þarfnast yfirferðar: {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:34 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:39 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:46
-#: kitsune/questions/jinja2/questions/includes/answer.html:128 kitsune/sumo/templatetags/jinja_helpers.py:437 kitsune/sumo/views.py:62 kitsune/wiki/jinja2/wiki/includes/document_macros.html:381
+#: kitsune/sumo/templatetags/jinja_helpers.py:439 kitsune/sumo/views.py:62 kitsune/wiki/jinja2/wiki/includes/document_macros.html:381
 msgid "Yes"
 msgstr "Já"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:41 kitsune/questions/jinja2/questions/includes/answer.html:134 kitsune/questions/jinja2/questions/includes/answer.html:138
-#: kitsune/sumo/templatetags/jinja_helpers.py:437 kitsune/sumo/views.py:63 kitsune/wiki/jinja2/wiki/includes/document_macros.html:385
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:41 kitsune/sumo/templatetags/jinja_helpers.py:439 kitsune/sumo/views.py:63 kitsune/wiki/jinja2/wiki/includes/document_macros.html:385
 msgid "No"
 msgstr "Nei"
 
@@ -1025,7 +1050,7 @@ msgstr "Athugaðu að valið er sértækt miðað við hvaða hugbúnaður eða 
 msgid "Please note that you will be subscribed to these notifications for all products. If you are only interested in specific products, please go to the dashboard for that product."
 msgstr "Athugaðu að þú verður í áskrift að þessu tilkynningum fyrir allan hugbúnað og þjónustur. Ef þú hefur aðeins áhuga á tilteknum atriðum, skaltu fara í stjórnborðið fyrir viðkomandi þátt."
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:220 kitsune/products/api.py:99 kitsune/products/api.py:101 kitsune/questions/jinja2/questions/question_list.html:251
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:220 kitsune/products/api.py:102 kitsune/products/api.py:104 kitsune/questions/jinja2/questions/question_list.html:295
 msgid "All Topics"
 msgstr "Öll umræðuefni"
 
@@ -1036,8 +1061,8 @@ msgid "Filter by type:"
 msgstr "Sía"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:239 kitsune/products/jinja2/products/includes/topic_macros.html:170 kitsune/questions/jinja2/questions/metrics.html:25
-#: kitsune/questions/jinja2/questions/metrics.html:27 kitsune/questions/jinja2/questions/question_list.html:157 kitsune/questions/jinja2/questions/question_list.html:241
-#: kitsune/users/jinja2/users/questions_contributed.html:21
+#: kitsune/questions/jinja2/questions/metrics.html:27 kitsune/questions/jinja2/questions/question_list.html:196 kitsune/questions/jinja2/questions/question_list.html:280
+#: kitsune/users/jinja2/users/questions_contributed.html:22 kitsune/users/jinja2/users/questions_contributed.html:40
 msgid "All"
 msgstr "Allt"
 
@@ -1065,27 +1090,27 @@ msgstr "Nýlegar útgáfur"
 msgid "Aggregated Metrics"
 msgstr "Samantekt á tölfræði"
 
-#: kitsune/flagit/models.py:27 kitsune/wiki/jinja2/wiki/includes/flag_form.html:9
+#: kitsune/flagit/models.py:29 kitsune/wiki/jinja2/wiki/includes/flag_form.html:9
 msgid "Spam or other unrelated content"
 msgstr "Ruslpóstur eða annað ótengt efni"
 
-#: kitsune/flagit/models.py:28 kitsune/wiki/jinja2/wiki/includes/flag_form.html:13
+#: kitsune/flagit/models.py:30 kitsune/wiki/jinja2/wiki/includes/flag_form.html:13
 msgid "Inappropriate language/dialog"
 msgstr "Óviðeigandi tungumál/gluggi"
 
-#: kitsune/flagit/models.py:29 kitsune/wiki/jinja2/wiki/includes/flag_form.html:23
+#: kitsune/flagit/models.py:31 kitsune/wiki/jinja2/wiki/includes/flag_form.html:23
 msgid "Abusive content"
 msgstr "Ærumeiðandi efni"
 
-#: kitsune/flagit/models.py:30 kitsune/wiki/jinja2/wiki/includes/flag_form.html:27
+#: kitsune/flagit/models.py:32 kitsune/wiki/jinja2/wiki/includes/flag_form.html:27
 msgid "Other (please specify)"
 msgstr "Annað (tilgreindu nákvæmlega)"
 
-#: kitsune/flagit/models.py:39
+#: kitsune/flagit/models.py:41
 msgid "Accepted and Fixed"
 msgstr "Samþykkt og lagað"
 
-#: kitsune/flagit/models.py:40
+#: kitsune/flagit/models.py:42
 msgid "Rejected"
 msgstr "Hafnað"
 
@@ -1329,7 +1354,7 @@ msgstr "Flokkur:"
 msgid "Status:"
 msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:48
+#: kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:50
 msgid "View in Admin"
 msgstr ""
 
@@ -1407,7 +1432,7 @@ msgstr "Notaðu þetta á wiki-sniði með [[%(type)s:title]]"
 msgid "Provide a brief description of this media."
 msgstr "Settu inn stutta lýsingu á þessu efni."
 
-#: kitsune/gallery/forms.py:41 kitsune/questions/jinja2/questions/question_details.html:494 kitsune/wiki/jinja2/wiki/confirm_document_delete.html:24
+#: kitsune/gallery/forms.py:41 kitsune/questions/jinja2/questions/question_details.html:453 kitsune/wiki/jinja2/wiki/confirm_document_delete.html:24
 msgid "Locale"
 msgstr "Staðfærsla"
 
@@ -1429,15 +1454,15 @@ msgstr "Mynd"
 msgid "Accepted formats include: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Learn more...</a>"
 msgstr "Eftirfarandi tegundir er hægt að nota: PNG, JPEG, GIF. <a target=\"_blank\" href=\"{learn_more}\">Fræðast meira...</a>"
 
-#: kitsune/gallery/views.py:96
+#: kitsune/gallery/views.py:97
 msgid "Unrecognized request or nothing to cancel."
 msgstr "Óþekkjanleg beiðni eða ekkert sem hægt er að hætta við."
 
-#: kitsune/gallery/views.py:232
+#: kitsune/gallery/views.py:233
 msgid "Unrecognized media type."
 msgstr "Óþekkt tegund gagna."
 
-#: kitsune/gallery/views.py:241
+#: kitsune/gallery/views.py:242
 msgid "Could not upload your image."
 msgstr "Gat ekki hlaðið inn mynd."
 
@@ -1498,7 +1523,7 @@ msgstr "Hlaðið inn {date}"
 #: kitsune/kbforums/jinja2/kbforums/new_thread.html:48 kitsune/messages/jinja2/messages/delete.html:29 kitsune/messages/jinja2/messages/new.html:26
 #: kitsune/questions/jinja2/questions/confirm_answer_delete.html:33 kitsune/questions/jinja2/questions/confirm_question_delete.html:35 kitsune/questions/jinja2/questions/edit_answer.html:64
 #: kitsune/questions/jinja2/questions/edit_question.html:29 kitsune/questions/jinja2/questions/includes/email_subscribe.html:30
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:194 kitsune/questions/jinja2/questions/question_details.html:505 kitsune/tidings/jinja2/tidings/unsub.html:18
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:194 kitsune/questions/jinja2/questions/question_details.html:470 kitsune/tidings/jinja2/tidings/unsub.html:18
 #: kitsune/users/jinja2/users/confirm_avatar_delete.html:23 kitsune/users/jinja2/users/edit_profile.html:90 kitsune/wiki/jinja2/wiki/confirm_remove_contributor.html:15
 #: kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:15 kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:11 kitsune/wiki/jinja2/wiki/includes/review_form.html:73
 #: kitsune/wiki/jinja2/wiki/includes/review_form.html:98 kitsune/wiki/jinja2/wiki/includes/survey_form.html:42
@@ -1603,7 +1628,7 @@ msgstr ""
 msgid "username"
 msgstr "notandi"
 
-#: kitsune/groups/models.py:46
+#: kitsune/groups/models.py:48
 msgid "Avatar"
 msgstr "Auðkennismynd"
 
@@ -2095,7 +2120,7 @@ msgstr "Fylgjast með"
 
 #. This is a question sort option. It is a part of a drop-down menu with no
 #. heading.
-#: kitsune/kbforums/jinja2/kbforums/discussions.html:36 kitsune/kbforums/jinja2/kbforums/posts.html:47 kitsune/kbforums/jinja2/kbforums/threads.html:37 kitsune/questions/views.py:141
+#: kitsune/kbforums/jinja2/kbforums/discussions.html:36 kitsune/kbforums/jinja2/kbforums/posts.html:47 kitsune/kbforums/jinja2/kbforums/threads.html:37 kitsune/questions/views.py:142
 msgid "Replies"
 msgstr "Svör"
 
@@ -2206,7 +2231,7 @@ msgstr "Losa þennan þráð"
 msgid "Sticky this thread"
 msgstr "Festa þennan þráð"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:48 kitsune/questions/jinja2/questions/question_details.html:124
+#: kitsune/kbforums/jinja2/kbforums/posts.html:48
 msgid "Last reply by"
 msgstr "Seinasta svar frá"
 
@@ -2215,7 +2240,7 @@ msgid "Sticky"
 msgstr "Fest"
 
 #. This is a question filter option for the Done tab.
-#: kitsune/kbforums/jinja2/kbforums/posts.html:50 kitsune/questions/jinja2/questions/question_details.html:137 kitsune/questions/views.py:119 kitsune/sumo/jinja2/sumo/includes/question_entry.html:137
+#: kitsune/kbforums/jinja2/kbforums/posts.html:50 kitsune/questions/views.py:120 kitsune/sumo/jinja2/sumo/includes/question_entry.html:129
 msgid "Locked"
 msgstr "Læst"
 
@@ -2231,15 +2256,15 @@ msgstr "Fylgjast með þessum þræði"
 msgid "Oh, no! Looks like there are no posts!"
 msgstr "Ó nei! Svo virðist sem það séu engar færslur!"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:85 kitsune/questions/jinja2/questions/question_details.html:53
+#: kitsune/kbforums/jinja2/kbforums/posts.html:85 kitsune/questions/jinja2/questions/question_details.html:56
 msgid "Post a reply"
 msgstr "Senda svar"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:99 kitsune/questions/jinja2/questions/question_details.html:305
+#: kitsune/kbforums/jinja2/kbforums/posts.html:99 kitsune/questions/jinja2/questions/question_details.html:245
 msgid "Post Reply"
 msgstr "Senda svar"
 
-#: kitsune/kbforums/jinja2/kbforums/posts.html:103 kitsune/questions/jinja2/questions/edit_answer.html:60 kitsune/questions/jinja2/questions/question_details.html:307
+#: kitsune/kbforums/jinja2/kbforums/posts.html:103 kitsune/questions/jinja2/questions/edit_answer.html:60 kitsune/questions/jinja2/questions/question_details.html:248
 msgid "Preview Reply"
 msgstr "Forskoða svar"
 
@@ -2318,15 +2343,15 @@ msgid_plural "{0} posts"
 msgstr[0] "1 færsla"
 msgstr[1] "{0} færslur"
 
-#: kitsune/kbforums/jinja2/kbforums/includes/post.html:40 kitsune/questions/jinja2/questions/includes/answer.html:67
+#: kitsune/kbforums/jinja2/kbforums/includes/post.html:40 kitsune/questions/jinja2/questions/includes/answer.html:73
 msgid "Edit this post"
 msgstr "Breyta þessari færslu"
 
-#: kitsune/kbforums/jinja2/kbforums/includes/post.html:43 kitsune/questions/jinja2/questions/includes/answer.html:72
+#: kitsune/kbforums/jinja2/kbforums/includes/post.html:43 kitsune/questions/jinja2/questions/includes/answer.html:78
 msgid "Delete this post"
 msgstr "Eyða þessari færslu"
 
-#: kitsune/kbforums/jinja2/kbforums/includes/post.html:47 kitsune/questions/jinja2/questions/includes/answer.html:53 kitsune/questions/jinja2/questions/question_details.html:195
+#: kitsune/kbforums/jinja2/kbforums/includes/post.html:47 kitsune/questions/jinja2/questions/includes/answer.html:59 kitsune/questions/jinja2/questions/question_details.html:134
 msgid "Quote"
 msgstr "Tilvitnun"
 
@@ -2511,7 +2536,7 @@ msgstr "<b>Mikilvægt:</b> Núna er verið að nota einfalt módel, þar sem hve
 msgid "Exit Survey Results"
 msgstr "Fara út úr niðurstöðum könnunar"
 
-#: kitsune/landings/jinja2/landings/home.html:14 kitsune/questions/jinja2/questions/question_details.html:343 kitsune/questions/jinja2/questions/question_list.html:54
+#: kitsune/landings/jinja2/landings/home.html:14 kitsune/questions/jinja2/questions/question_details.html:287 kitsune/questions/jinja2/questions/question_list.html:56
 #: kitsune/search/jinja2/search/form.html:13 kitsune/search/jinja2/search/results.html:13 kitsune/sumo/jinja2/base.html:181
 msgid "Search Support"
 msgstr "Leita í aðstoðargáttinni"
@@ -2918,7 +2943,7 @@ msgstr "Kannaðu KB-þekkingargrunninn"
 msgid "Download Thunderbird"
 msgstr "Sækja Thunderbird"
 
-#: kitsune/products/jinja2/products/product.html:144 kitsune/sumo/jinja2/includes/common_macros.html:920
+#: kitsune/products/jinja2/products/product.html:144 kitsune/sumo/jinja2/includes/common_macros.html:922
 msgid "Systems and Languages"
 msgstr "Stýrikerfi og tungumál"
 
@@ -2926,7 +2951,7 @@ msgstr "Stýrikerfi og tungumál"
 msgid "Release Notes"
 msgstr "Útgáfuupplýsingar"
 
-#: kitsune/products/jinja2/products/product.html:146 kitsune/sumo/jinja2/base.html:364 kitsune/sumo/jinja2/includes/common_macros.html:922
+#: kitsune/products/jinja2/products/product.html:146 kitsune/sumo/jinja2/base.html:364 kitsune/sumo/jinja2/includes/common_macros.html:924
 msgid "Privacy"
 msgstr "Friðhelgi"
 
@@ -3007,7 +3032,7 @@ msgstr ""
 msgid "Talk to an Expert"
 msgstr ""
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:96 kitsune/questions/jinja2/questions/question_list.html:115
+#: kitsune/products/jinja2/products/includes/topic_macros.html:96 kitsune/questions/jinja2/questions/question_list.html:117
 msgid "Ask the Community"
 msgstr "Spurðu aðra þátttakendur"
 
@@ -3266,144 +3291,144 @@ msgstr "Gefðu upp tölvupóstfang."
 msgid "This question has been locked because the original author has deleted their account. While you can no longer post new replies, the existing content remains available for reference."
 msgstr ""
 
-#: kitsune/questions/views.py:89
+#: kitsune/questions/views.py:90
 msgid "That tag does not exist."
 msgstr "Þetta merki er ekki til."
 
-#: kitsune/questions/views.py:90
+#: kitsune/questions/views.py:91
 msgid "Please provide a tag."
 msgstr "Gefðu upp merki."
 
 #. This is a question filter option for the All tab.
-#: kitsune/questions/views.py:97
+#: kitsune/questions/views.py:98
 msgid "Recently unanswered"
 msgstr "Nýlega ósvarað"
 
 #. This is a question filter option for the Attention needed tab.
-#: kitsune/questions/views.py:103
+#: kitsune/questions/views.py:104
 msgid "New"
 msgstr "Nýtt"
 
 #. This is a question filter option for the Attention needed tab.
-#: kitsune/questions/views.py:105
+#: kitsune/questions/views.py:106
 msgid "Answers didn't help"
 msgstr "Svör voru ekki hjálpleg"
 
 #. This is a question filter option for the Responded tab.
-#: kitsune/questions/views.py:111
+#: kitsune/questions/views.py:112
 msgid "Needs info"
 msgstr "Þarfnast upplýsinga"
 
 #. This is a question filter option for the Spam tab, thus "marked" refers to
 #. "marked as spam".
-#: kitsune/questions/views.py:125
+#: kitsune/questions/views.py:126
 msgid "Marked automatically"
 msgstr ""
 
 #. This is a question filter option for the Spam tab, thus "marked" refers to
 #. "marked as spam".
-#: kitsune/questions/views.py:127
+#: kitsune/questions/views.py:128
 msgid "Marked manually"
 msgstr ""
 
 #. This is a question sort option. It is a part of a drop-down menu with no
 #. heading.
-#: kitsune/questions/views.py:135
+#: kitsune/questions/views.py:136 kitsune/sumo/jinja2/sumo/includes/thread_post.html:121
 msgid "Updated"
 msgstr "Uppfært"
 
 #. This is a question sort option. It is a part of a drop-down menu with no
 #. heading.
-#: kitsune/questions/views.py:137
+#: kitsune/questions/views.py:138
 msgid "Views"
 msgstr "Innlit"
 
 #. This is a question sort option. It is a part of a drop-down menu with no
 #. heading.
-#: kitsune/questions/views.py:139
+#: kitsune/questions/views.py:140
 msgid "Votes"
 msgstr "Atkvæði"
 
-#: kitsune/questions/views.py:891
+#: kitsune/questions/views.py:915
 #, python-brace-format
 msgid "Support is not configured for {product}. Please contact an administrator."
 msgstr ""
 
-#: kitsune/questions/views.py:933
+#: kitsune/questions/views.py:957
 #, python-brace-format
 msgid "The questions forum isn't available for {product} in {old_lang}, we have redirected you to the {new_lang} questions forum."
 msgstr "Spurningavefspjall fyrir {product} á tungumálinu {old_lang} er ekki tiltækt, þér verður endurbeint á vefspjall fyrir spurningar á tungumálinu {new_lang}."
 
-#: kitsune/questions/views.py:938
+#: kitsune/questions/views.py:962
 #, python-brace-format
 msgid "Mozilla Support isn't available for {product} in {old_lang}, we have redirected you to Mozilla Support in {new_lang}."
 msgstr ""
 
-#: kitsune/questions/views.py:964
+#: kitsune/questions/views.py:988
 #, python-brace-format
 msgid "Continue in {language}"
 msgstr ""
 
-#: kitsune/questions/views.py:994
+#: kitsune/questions/views.py:1018
 #, python-brace-format
 msgid "Thank you for reaching out to Mozilla Support. We're reviewing your submission and will send a confirmation email to {email} shortly."
 msgstr ""
 
-#: kitsune/questions/views.py:1006
+#: kitsune/questions/views.py:1030
 msgid "You've exceeded the number of submissions for today."
 msgstr "Þú hefur farið yfir hámarksfjölda innsendinga í dag."
 
-#: kitsune/questions/views.py:1038
+#: kitsune/questions/views.py:1062
 #, python-brace-format
 msgid "Done! Your question is now posted on the Mozilla community support forum. You can see your post anytime by visiting the {a_open}My Questions{a_close} page in your profile."
 msgstr ""
 "Klárt! Spurningin þín birtist núna á aðstoðargátt Mozilla samfélagsins. Þú getur séð færsluna þína hvenær sem er með því að fara á síðuna {a_open}Spurningarnar mínar{a_close} á notandasniðinu þínu."
 
-#: kitsune/questions/views.py:1298
+#: kitsune/questions/views.py:1322
 msgid "Thank you for choosing a solution!"
 msgstr "Takk fyrir að velja lausn!"
 
-#: kitsune/questions/views.py:1301
+#: kitsune/questions/views.py:1325
 msgid "This question already has a solution."
 msgstr "Þessi spurning er þegar með lausn."
 
-#: kitsune/questions/views.py:1322
+#: kitsune/questions/views.py:1346
 msgid "The solution was undone successfully."
 msgstr "Tókst að afturkalla spurninguna."
 
-#: kitsune/questions/views.py:1338 kitsune/questions/views.py:1403
+#: kitsune/questions/views.py:1362 kitsune/questions/views.py:1427
 msgid "You've hit your voting limit for now. Please try again later."
 msgstr ""
 
-#: kitsune/questions/views.py:1413
+#: kitsune/questions/views.py:1437
 msgid "Glad to hear it!"
 msgstr "Glöð að heyra þetta!"
 
-#: kitsune/questions/views.py:1415
+#: kitsune/questions/views.py:1439
 msgid "Sorry to hear that."
 msgstr "Leitt að heyra."
 
-#: kitsune/questions/views.py:1430
+#: kitsune/questions/views.py:1454
 msgid "You already voted on this reply."
 msgstr "Þú hefur þegar kosið þetta svar."
 
-#: kitsune/questions/views.py:1721
+#: kitsune/questions/views.py:1745
 msgid "We were unable to register your request. You've exceeded the limit for the number of questions allowed to watch in a day. Please try again tomorrow."
 msgstr "Við gátum ekki skráð beiðnina þína. Þú hefur farið yfir mörkin yfir fjölda spurninga sem leyfilegt er að skoða á dag. Reyndu aftur á morgun."
 
-#: kitsune/questions/views.py:1749
+#: kitsune/questions/views.py:1773
 msgid "Could not send a message to that email address."
 msgstr "Ekki var hægt að senda skilaboð á þetta tölvupóstfang"
 
-#: kitsune/questions/views.py:1755
+#: kitsune/questions/views.py:1779
 msgid "You will be notified of updates by email."
 msgstr "Þú verður látin/n vita um uppfærslur í tölvupósti."
 
-#: kitsune/questions/views.py:1757
+#: kitsune/questions/views.py:1781
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "Þú ættir fljótlega að fá sendan tölvupóst til staðfestingar á áskriftinni þinni."
 
-#: kitsune/questions/views.py:1978
+#: kitsune/questions/views.py:1998
 msgid "A moderator must manually approve your post before it will be visible."
 msgstr "Umsjónarmaður verður að samþykkja handvirkt færsluna þína áður en hún verður sýnileg."
 
@@ -3547,7 +3572,7 @@ msgstr "Spurðu spurningar"
 msgid "Submit"
 msgstr "Senda"
 
-#: kitsune/questions/jinja2/questions/product_list.html:4 kitsune/questions/jinja2/questions/product_list.html:5 kitsune/questions/jinja2/questions/question_list.html:20
+#: kitsune/questions/jinja2/questions/product_list.html:4 kitsune/questions/jinja2/questions/product_list.html:5 kitsune/questions/jinja2/questions/question_list.html:22
 #: kitsune/sumo/jinja2/includes/common_macros.html:247
 msgid "Community Forums"
 msgstr "Spjallsvæði notenda"
@@ -3566,113 +3591,69 @@ msgstr "Spjallsvæði <strong>{product}</strong>"
 msgid "{product} Community Forums"
 msgstr "Spjallsvæði {product}"
 
-#: kitsune/questions/jinja2/questions/question_details.html:14
-msgid "no product specified"
-msgstr "Enginn hugbúnaður tilgreindur"
-
 #. {q} is the title of the question.
-#: kitsune/questions/jinja2/questions/question_details.html:17
+#: kitsune/questions/jinja2/questions/question_details.html:22
 #, python-brace-format
 msgid "{q} | {product} Support Forum"
 msgstr "{q} | {product} aðstoð á vefspjalli"
 
-#: kitsune/questions/jinja2/questions/question_details.html:52
+#: kitsune/questions/jinja2/questions/question_details.html:55
 #, python-brace-format
 msgid "{user} is currently working on this problem."
 msgstr "{user} er núna að vinna í þessu vandamáli."
 
-#: kitsune/questions/jinja2/questions/question_details.html:54
+#: kitsune/questions/jinja2/questions/question_details.html:57
 msgid "View other questions that need attention."
 msgstr "Skoða aðrar spurningar sem krefjast athygli."
 
-#: kitsune/questions/jinja2/questions/question_details.html:66
+#: kitsune/questions/jinja2/questions/question_details.html:69
 msgid "This thread was closed."
 msgstr "Þessum spjallþræði var lokað."
 
-#: kitsune/questions/jinja2/questions/question_details.html:68
+#: kitsune/questions/jinja2/questions/question_details.html:71
 msgid "This thread was archived."
 msgstr "Þessi spjallþráður var settur í safn."
 
-#: kitsune/questions/jinja2/questions/question_details.html:70
+#: kitsune/questions/jinja2/questions/question_details.html:73
 msgid "This thread was closed and archived."
 msgstr "Þessum spjallþræði var lokað og hann settur í safn."
 
-#: kitsune/questions/jinja2/questions/question_details.html:74
+#: kitsune/questions/jinja2/questions/question_details.html:75
 msgid "Please ask a new question if you need help."
 msgstr "Spurðu nýrrar spurningar ef þú þarft hjálp."
 
-#. {n} is the number of replies.
-#: kitsune/questions/jinja2/questions/question_details.html:92
-msgid "reply"
-msgid_plural "replies"
-msgstr[0] "svar"
-msgstr[1] "svör"
-
-#: kitsune/questions/jinja2/questions/question_details.html:101 kitsune/search/jinja2/search/includes/result.html:41
-msgid "No replies"
-msgstr "Ekkert svar"
-
-#: kitsune/questions/jinja2/questions/question_details.html:107
-msgid "has this problem"
-msgid_plural "have this problem"
-msgstr[0] "er með þetta vandamál"
-msgstr[1] "eru með þetta vandamál"
-
-#: kitsune/questions/jinja2/questions/question_details.html:118
-msgid "view"
-msgid_plural "views"
-msgstr[0] "innlit"
-msgstr[1] "innlit"
-
-#: kitsune/questions/jinja2/questions/question_details.html:139 kitsune/sumo/jinja2/sumo/includes/question_entry.html:141
-msgid "Archived"
-msgstr "Í safni"
-
-#: kitsune/questions/jinja2/questions/question_details.html:153
+#: kitsune/questions/jinja2/questions/question_details.html:82
 #, python-format
 msgid "Marked as spam by %(marked_by)s at %(marked_time)s"
 msgstr "Merkt sem ruslpóstur af %(marked_by)s %(marked_time)s"
 
-#: kitsune/questions/jinja2/questions/question_details.html:157
+#: kitsune/questions/jinja2/questions/question_details.html:86
 #, python-format
 msgid "Marked as spam at %(marked_time)s"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/includes/answer.html:44 kitsune/questions/jinja2/questions/question_details.html:189
+#: kitsune/questions/jinja2/questions/includes/answer.html:50 kitsune/questions/jinja2/questions/question_details.html:124
 msgid "more options"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/question_details.html:208
+#: kitsune/questions/jinja2/questions/question_details.html:150
 msgid "Attached screenshots"
 msgstr "Viðhengdar skjámyndir"
 
-#: kitsune/questions/jinja2/questions/includes/answer.html:115 kitsune/questions/jinja2/questions/question_details.html:219
+#: kitsune/questions/jinja2/questions/includes/answer.html:122 kitsune/questions/jinja2/questions/question_details.html:159
 #, python-brace-format
 msgid "Modified {datetime} by {name}"
 msgstr "Breytt þann {datetime} af {name}"
 
-#: kitsune/questions/jinja2/questions/includes/answer.html:84 kitsune/questions/jinja2/questions/question_details.html:226
-#, python-brace-format
-msgid "Solution chosen by {user}"
-msgstr "Lausnir"
-
-#: kitsune/questions/jinja2/questions/question_details.html:226
-msgid "Chosen solution"
-msgstr "Valin lausn"
-
-#: kitsune/questions/jinja2/questions/question_details.html:233
-msgid "Read this answer in context"
-msgstr "Lesa þetta svar í samhengi"
-
-#: kitsune/questions/jinja2/questions/question_details.html:246 kitsune/questions/jinja2/questions/question_details.html:322
+#: kitsune/questions/jinja2/questions/question_details.html:176 kitsune/questions/jinja2/questions/question_details.html:263
 msgid "I have this problem, too"
 msgstr "Ég er líka með þetta vandamál"
 
-#: kitsune/questions/jinja2/questions/question_details.html:255
+#: kitsune/questions/jinja2/questions/question_details.html:195
 msgid "All Replies"
 msgstr "Öll svör"
 
-#: kitsune/questions/jinja2/questions/question_details.html:267
+#: kitsune/questions/jinja2/questions/question_details.html:209
 #, python-format
 msgid ""
 "In order to prevent spam, we are limiting the number of answers that can be posted within a short period of time. If you want to post more please create a post on the <a "
@@ -3681,185 +3662,193 @@ msgstr ""
 "Til að komast fyrir ruslpóstsendingar, takmörkum við fjölda svara sem hægt er að senda innan tiltekinna tímamarka. Ef þú þarft að senda inn fleiri svör, ættirðu að útbúa færslu á <a "
 "href=\"%(url)s\">þátttakendaspjallinu</a> þar sem þú biður um að vera sett/ur á sérlista (white-list)."
 
-#: kitsune/questions/jinja2/questions/email/new_answer.html:29 kitsune/questions/jinja2/questions/question_details.html:277
+#: kitsune/questions/jinja2/questions/email/new_answer.html:29 kitsune/questions/jinja2/questions/question_details.html:219
 msgid "Post a Reply"
 msgstr "Setja inn svar"
 
-#: kitsune/questions/jinja2/questions/question_details.html:287
+#: kitsune/questions/jinja2/questions/question_details.html:231
 msgid "I am providing the requested information"
 msgstr "Ég er að gefa umbeðnar upplýsingar"
 
-#: kitsune/questions/jinja2/questions/question_details.html:292
+#: kitsune/questions/jinja2/questions/question_details.html:236
 msgid "Needs more information from the user"
 msgstr "Þarfnast frekari upplýsinga frá notandanum"
 
-#: kitsune/questions/jinja2/questions/question_details.html:319
+#: kitsune/questions/jinja2/questions/question_details.html:259
 msgid "Ask a question"
 msgstr "Spyrja spurningar"
 
-#: kitsune/questions/jinja2/questions/question_details.html:327
+#: kitsune/questions/jinja2/questions/question_details.html:269
 #, python-brace-format
 msgid "You must <a rel=\"nofollow\" href=\"{login_url}\">log in to your account</a> to reply to posts. Please <a href=\"{ask_url}\">start a new question</a>, if you do not have an account yet."
 msgstr "Þú þarft að <a rel=\"nofollow\" href=\"{login_url}\">skrá þig inn á reikninginn þinn</a> til að geta svarað færslum. Byrjaðu <a href=\"{ask_url}\">nýja spurningu</a> ef þú ert ekki ennþá með aðgang."
 
-#: kitsune/questions/jinja2/questions/question_details.html:352
+#: kitsune/questions/jinja2/questions/question_details.html:296
 msgid "Question Tools"
 msgstr "Spurningaverkfæri"
 
-#: kitsune/questions/jinja2/questions/question_details.html:355
+#: kitsune/questions/jinja2/questions/question_details.html:299
 msgid "Edit this question"
 msgstr "Breyta þessari spurningu"
 
-#: kitsune/questions/jinja2/questions/question_details.html:360
+#: kitsune/questions/jinja2/questions/question_details.html:304
 msgid "Delete this question"
 msgstr "Eyða þessari spurningu"
 
-#: kitsune/questions/jinja2/questions/question_details.html:366
+#: kitsune/questions/jinja2/questions/question_details.html:310
 msgid "Unlock this question"
 msgstr "Aflæsa þessari spurningu"
 
-#: kitsune/questions/jinja2/questions/question_details.html:367
+#: kitsune/questions/jinja2/questions/question_details.html:311
 msgid "Lock this question"
 msgstr "Læsa þessari spurningu"
 
-#: kitsune/questions/jinja2/questions/question_details.html:378
+#: kitsune/questions/jinja2/questions/question_details.html:323
 msgid "Unarchive this question"
 msgstr "Taka þessa spurningu úr safni"
 
-#: kitsune/questions/jinja2/questions/question_details.html:380
+#: kitsune/questions/jinja2/questions/question_details.html:324
 msgid "Archive this question"
 msgstr "Setja þessa spurningu í safn"
 
-#: kitsune/questions/jinja2/questions/question_details.html:391
+#: kitsune/questions/jinja2/questions/question_details.html:335
 msgid "Stop email updates"
 msgstr "Hætta uppfærslum spurningar í tölvupósti"
 
-#: kitsune/questions/jinja2/questions/includes/email_subscribe.html:2 kitsune/questions/jinja2/questions/question_details.html:396
+#: kitsune/questions/jinja2/questions/includes/email_subscribe.html:2 kitsune/questions/jinja2/questions/question_details.html:342
 msgid "Get email updates"
 msgstr "Fá uppfærslur spurningar í tölvupósti"
 
-#: kitsune/questions/jinja2/questions/question_details.html:401
+#: kitsune/questions/jinja2/questions/question_details.html:347
 msgid "Subscribe to feed"
 msgstr "Gerast áskrifandi að tilkynningum um breytingar"
 
-#: kitsune/questions/jinja2/questions/includes/tag_filter.html:4 kitsune/questions/jinja2/questions/question_details.html:414
+#: kitsune/questions/jinja2/questions/includes/tag_filter.html:6 kitsune/questions/jinja2/questions/question_details.html:360
 msgid "Tags"
 msgstr "Flokkar"
 
-#: kitsune/questions/jinja2/questions/question_details.html:456
+#: kitsune/questions/jinja2/questions/question_details.html:407
 msgid "Question Details"
 msgstr "Nánar um spurningu"
 
-#: kitsune/questions/jinja2/questions/question_details.html:462
+#: kitsune/questions/jinja2/questions/question_details.html:414
 msgid "Product"
 msgstr "Hugbúnaður"
 
-#: kitsune/questions/jinja2/questions/question_details.html:478 kitsune/questions/jinja2/questions/question_list.html:247
+#: kitsune/questions/jinja2/questions/question_details.html:434 kitsune/questions/jinja2/questions/question_list.html:286
 msgid "Topic"
 msgstr "Umræðuefni"
 
-#: kitsune/questions/jinja2/questions/question_details.html:504
+#: kitsune/questions/jinja2/questions/question_details.html:467
 msgid "Save changes"
 msgstr "Vista breytingar"
 
-#: kitsune/questions/jinja2/questions/question_details.html:510
+#: kitsune/questions/jinja2/questions/question_details.html:477
 msgid "System Details"
 msgstr "Nánari upplýsingar um kerfi"
 
-#: kitsune/questions/jinja2/questions/question_details.html:525
+#: kitsune/questions/jinja2/questions/question_details.html:490
 msgid "Device:"
 msgstr "Tæki:"
 
-#: kitsune/questions/jinja2/questions/question_details.html:529
+#: kitsune/questions/jinja2/questions/question_details.html:495
 msgid "More system details"
 msgstr "Frekari kerfisupplýsingar"
 
-#: kitsune/questions/jinja2/questions/question_details.html:531 kitsune/questions/jinja2/questions/question_details.html:532
+#: kitsune/questions/jinja2/questions/question_details.html:498 kitsune/questions/jinja2/questions/question_details.html:500
 msgid "Additional System Details"
 msgstr "Viðbótaratriði varðandi kerfi"
 
-#: kitsune/questions/jinja2/questions/question_details.html:557
+#: kitsune/questions/jinja2/questions/question_details.html:525
 msgid "Edit details"
 msgstr "Breyta upplýsingum"
 
-#: kitsune/questions/jinja2/questions/question_details.html:568
+#: kitsune/questions/jinja2/questions/question_details.html:536
 msgid "See also"
 msgstr "Sjá einnig"
 
-#: kitsune/questions/jinja2/questions/question_list.html:12
+#: kitsune/questions/jinja2/questions/question_list.html:14
 msgid "Multiple Products"
 msgstr "Margskonar hugbúnaður"
 
 #. {title} will normally be the Product title, but sometimes can be 'All Products'
 #. or 'Multiple Products'
-#: kitsune/questions/jinja2/questions/question_list.html:18
+#: kitsune/questions/jinja2/questions/question_list.html:20
 #, python-brace-format
 msgid "{title} Community Forum"
 msgstr "{title} spjallsvæði"
 
-#: kitsune/questions/jinja2/questions/question_list.html:74
+#: kitsune/questions/jinja2/questions/question_list.html:76
 #, python-format
 msgid "%(recent_unanswered_count)s question in the last 24 hours has no reply. <a href=\"%(url)s\">Help solve it!</a>"
 msgid_plural "%(recent_unanswered_count)s questions in the last 24 hours have no reply. <a href=\"%(url)s\">Help solve them!</a>"
 msgstr[0] "%(recent_unanswered_count)s spurning seinustu 24 er ekki með svar. <a href=\"%(url)s\">Hjálpaðu við að leysa þetta!</a>"
 msgstr[1] "%(recent_unanswered_count)s spurningar seinustu 24 eru ekki með svar. <a href=\"%(url)s\">Hjálpaðu við að leysa þetta!</a>"
 
-#: kitsune/questions/jinja2/questions/question_list.html:82
+#: kitsune/questions/jinja2/questions/question_list.html:84
 #, python-format
 msgid "%(recent_unanswered_count)s question in the last 24 hours has no reply. <a href=\"/contribute/forum\">Learn how to help solve it!</a>"
 msgid_plural "%(recent_unanswered_count)s questions in the last 24 hours have no reply. <a href=\"/contribute/forum\">Learn how to help solve them!</a>"
 msgstr[0] "%(recent_unanswered_count)s spurning síðustu 24 tíma er ekki með svar. <a href=\"/contribute/forum\">Sjáðu hvernig þú getur hjálpað!</a>"
 msgstr[1] "%(recent_unanswered_count)s spurningar síðustu 24 tíma eru ekki með svar. <a href=\"/contribute/forum\">Sjáðu hvernig þú getur hjálpað!</a>"
 
-#: kitsune/questions/jinja2/questions/question_list.html:92
+#: kitsune/questions/jinja2/questions/question_list.html:94
 msgid "0 questions in the last 24 hours have no reply. Good job!"
 msgstr "0 spurningar seinustu 24 tímana eru ekki með svar. Þvílík vinnusemi!"
 
-#: kitsune/questions/jinja2/questions/question_list.html:96
+#: kitsune/questions/jinja2/questions/question_list.html:98
 msgid "0 questions in the last 24 hours have no reply. <a href=\"/contribute/forum\">Learn how to help!</a>"
 msgstr "Engar spurningar síðustu 24 tíma eru ekki með svar. <a href=\"/contribute/forum\">Sjáðu hvernig þú getur hjálpað!</a>"
 
-#: kitsune/questions/jinja2/questions/question_list.html:127
+#: kitsune/questions/jinja2/questions/question_list.html:133
+msgid "Showing questions for topic:"
+msgstr ""
+
+#: kitsune/questions/jinja2/questions/question_list.html:152
+msgid "Clear topic filter"
+msgstr ""
+
+#: kitsune/questions/jinja2/questions/question_list.html:166
 msgid "Showing questions tagged:"
 msgstr "Sýna spurningar merktar:"
 
-#: kitsune/questions/jinja2/questions/question_list.html:141
+#: kitsune/questions/jinja2/questions/question_list.html:180
 msgid "Clear all tag filters"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/question_list.html:162
+#: kitsune/questions/jinja2/questions/question_list.html:201
 msgid "Attention needed"
 msgstr "Þarfnast þýðingar"
 
-#: kitsune/questions/jinja2/questions/question_list.html:167
+#: kitsune/questions/jinja2/questions/question_list.html:206
 msgid "Responded"
 msgstr "Mælt með"
 
-#: kitsune/questions/jinja2/questions/question_list.html:172
+#: kitsune/questions/jinja2/questions/question_list.html:211
 msgid "Done"
 msgstr "Búið!"
 
-#: kitsune/questions/jinja2/questions/question_list.html:178 kitsune/sumo/jinja2/sumo/includes/question_entry.html:152
+#: kitsune/questions/jinja2/questions/question_list.html:217 kitsune/sumo/jinja2/sumo/includes/question_entry.html:181 kitsune/users/jinja2/users/questions_contributed.html:47
 msgid "Spam"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/question_list.html:212
+#: kitsune/questions/jinja2/questions/question_list.html:251
 msgid "There are no questions that match the current filter settings."
 msgstr "Það eru engar spurningar sem passa við núverandi síustillingar."
 
-#: kitsune/questions/jinja2/questions/question_list.html:240
+#: kitsune/questions/jinja2/questions/question_list.html:279
 msgid "Filter by"
 msgstr "Sía eftir:"
 
-#: kitsune/questions/jinja2/questions/question_list.html:279
+#: kitsune/questions/jinja2/questions/question_list.html:323
 msgid "Show me"
 msgstr "Sýna mér"
 
-#: kitsune/questions/jinja2/questions/question_list.html:280
+#: kitsune/questions/jinja2/questions/question_list.html:324
 msgid "Posts from everyone"
 msgstr "Færslur frá öllum"
 
-#: kitsune/questions/jinja2/questions/question_list.html:281
+#: kitsune/questions/jinja2/questions/question_list.html:325
 msgid "My contributions"
 msgstr "Framlögin mín"
 
@@ -4189,41 +4178,46 @@ msgid "Follow through. Sometimes, our volunteers would ask you for more informat
 msgstr ""
 "Sinntu málum alla leið. Stundum biðja sjálfboðaliðarnir þig um frekari upplýsingar eða að prófa ákveðnar aðstæður. Því fyrr sem þú getur gert þetta, því fyrr geta þeir vitað hvernig á að laga það."
 
-#: kitsune/questions/jinja2/questions/includes/answer.html:85
+#: kitsune/questions/jinja2/questions/includes/answer.html:7
+msgid "Pinned chosen solution"
+msgstr ""
+
+#: kitsune/questions/jinja2/questions/includes/answer.html:39
+msgid "Read this answer in context"
+msgstr "Lesa þetta svar í samhengi"
+
+#: kitsune/questions/jinja2/questions/includes/answer.html:91
+#, python-brace-format
+msgid "Solution chosen by {user}"
+msgstr "Lausnir"
+
+#: kitsune/questions/jinja2/questions/includes/answer.html:92
 msgid "Chosen Solution"
 msgstr "Valin lausn"
 
-#: kitsune/questions/jinja2/questions/includes/answer.html:94
+#: kitsune/questions/jinja2/questions/includes/answer.html:101
 msgid "Marked as spam"
 msgstr "Merkt sem ruslpóstur"
 
-#: kitsune/questions/jinja2/questions/includes/answer.html:125
+#: kitsune/questions/jinja2/questions/includes/answer.html:135
 msgid "Helpful?"
 msgstr "Hjálplegt?"
 
-#: kitsune/questions/jinja2/questions/includes/answer.html:159
-msgid "Did this reply solve your problem?"
-msgstr "Leysir þetta svar vandamálið þitt?"
+#: kitsune/questions/jinja2/questions/includes/answer.html:137
+msgid "Yes, this was helpful"
+msgstr ""
 
-#: kitsune/questions/jinja2/questions/includes/answer.html:160
-msgid "Solved the problem"
-msgstr "Leysti þetta vandamál"
+#: kitsune/questions/jinja2/questions/includes/answer.html:147
+msgid "No, this was not helpful"
+msgstr ""
 
-#: kitsune/questions/jinja2/questions/includes/answer.html:162
-msgid "Does this reply solve the problem?"
-msgstr "Leysir þetta svar vandamálið?"
+#: kitsune/questions/jinja2/questions/includes/answer.html:170
+msgid "Mark as solution"
+msgstr ""
 
-#: kitsune/questions/jinja2/questions/includes/answer.html:163
-msgid "Solves the problem"
-msgstr "Leysir þetta vandamál"
-
-#: kitsune/questions/jinja2/questions/includes/answer.html:173
-msgid "Solution chosen"
-msgstr "Valin lausn"
-
-#: kitsune/questions/jinja2/questions/includes/answer.html:176
-msgid "Undo"
-msgstr "Afturkalla"
+#: kitsune/questions/jinja2/questions/includes/answer.html:177
+msgid "Undo solution"
+msgstr ""
 
 #: kitsune/questions/jinja2/questions/includes/answer_preview.html:3
 msgid "Reply Preview"
@@ -4421,28 +4415,28 @@ msgstr "Kennistrengur: {ua}"
 msgid "More Information"
 msgstr "Nánari upplýsingar"
 
-#: kitsune/questions/jinja2/questions/includes/tag_filter.html:9
+#: kitsune/questions/jinja2/questions/includes/tag_filter.html:11
 msgid "Active"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/includes/tag_filter.html:17
+#: kitsune/questions/jinja2/questions/includes/tag_filter.html:19
 msgid "Clear all"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/includes/tag_filter.html:32 kitsune/questions/jinja2/questions/includes/tag_filter.html:33
+#: kitsune/questions/jinja2/questions/includes/tag_filter.html:34 kitsune/questions/jinja2/questions/includes/tag_filter.html:35
 #, python-brace-format
 msgid "{tag} — click to remove"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/includes/tag_filter.html:50
+#: kitsune/questions/jinja2/questions/includes/tag_filter.html:52
 msgid "Search tags…"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/includes/tag_filter.html:51
+#: kitsune/questions/jinja2/questions/includes/tag_filter.html:53
 msgid "Search tags"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/includes/tag_filter.html:80
+#: kitsune/questions/jinja2/questions/includes/tag_filter.html:82
 msgid "No tags match your search."
 msgstr ""
 
@@ -4542,6 +4536,10 @@ msgid "1 reply"
 msgid_plural "{n} replies"
 msgstr[0] "1 svar"
 msgstr[1] "{n} svör"
+
+#: kitsune/search/jinja2/search/includes/result.html:41
+msgid "No replies"
+msgstr "Ekkert svar"
 
 #: kitsune/search/jinja2/search/includes/result.html:45
 #, python-brace-format
@@ -9816,7 +9814,7 @@ msgstr "Umræður þátttakenda"
 msgid "Contributor tools"
 msgstr "Verkfæri þátttakenda"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:572 kitsune/sumo/jinja2/includes/common_macros.html:917
+#: kitsune/sumo/jinja2/includes/common_macros.html:572 kitsune/sumo/jinja2/includes/common_macros.html:919
 msgid "Download Firefox"
 msgstr "Sækja Firefox"
 
@@ -9929,7 +9927,7 @@ msgstr "Samantekt á tölfræði"
 msgid "Show More"
 msgstr "Sýna meira"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:921
+#: kitsune/sumo/jinja2/includes/common_macros.html:923
 msgid "What's New"
 msgstr "Nýtt á döfinni"
 
@@ -9993,156 +9991,180 @@ msgid_plural "%(count)s replies"
 msgstr[0] ""
 msgstr[1] ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:45
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:45 kitsune/sumo/jinja2/sumo/includes/question_entry.html:62
 #, python-format
 msgid "%(count)s person has this problem"
 msgid_plural "%(count)s people have this problem"
 msgstr[0] ""
 msgstr[1] ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:63
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:79
 #, python-format
 msgid "%(count)s view"
 msgid_plural "%(count)s views"
 msgstr[0] ""
 msgstr[1] ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:105
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:96
 msgid "This question was submitted via Direct Support"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:106 kitsune/users/jinja2/users/questions_contributed.html:27
+#. A label/tab for questions that are Premium support tickets handled by paid
+#. support agents.
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:98 kitsune/users/jinja2/users/questions_contributed.html:30
 msgid "Direct Support"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:110
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:102
 msgid "Your ticket has been resolved"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:113
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:105
 msgid "Your ticket has been closed"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:116
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:108
 msgid "Your ticket is open and being reviewed by our team"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:119
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:111
 msgid "Our team has responded and is awaiting your reply"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:122
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:114
 msgid "Your ticket is waiting for a response from our team"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:125
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:117
 msgid "Your ticket has been submitted and is being processed"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:128
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:120
 msgid "Submitted"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:133
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:125
 msgid "This question has a verified solution"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:137
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:129
 msgid "This question has been locked"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:141
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:133
 msgid "This question has been archived"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:145
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:133
+msgid "Archived"
+msgstr "Í safni"
+
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:137
 msgid "This question is open and awaiting a reply"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:152
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:181
 msgid "This question has been marked as spam"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:160
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:190 kitsune/sumo/jinja2/sumo/includes/thread_post.html:65
 #, python-brace-format
 msgid "{product} questions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:173
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:211 kitsune/sumo/jinja2/sumo/includes/thread_post.html:83
 #, python-brace-format
 msgid "{topic} questions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:189
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:227
 msgid "asked by"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:194
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:232 kitsune/sumo/jinja2/sumo/includes/thread_post.html:101
 #, python-brace-format
 msgid "asked {when}"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:199
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:238 kitsune/sumo/jinja2/sumo/includes/thread_post.html:107
 #, python-brace-format
 msgid "Last reply by {user}"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:206
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:245 kitsune/sumo/jinja2/sumo/includes/thread_post.html:114
 msgid "replied"
 msgstr ""
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:168
+#: kitsune/sumo/jinja2/sumo/includes/thread_post.html:26
+msgid "reply"
+msgid_plural "replies"
+msgstr[0] "svar"
+msgstr[1] "svör"
+
+#: kitsune/sumo/jinja2/sumo/includes/thread_post.html:39
+msgid "has this problem"
+msgid_plural "have this problem"
+msgstr[0] "er með þetta vandamál"
+msgstr[1] "eru með þetta vandamál"
+
+#: kitsune/sumo/jinja2/sumo/includes/thread_post.html:50
+msgid "view"
+msgid_plural "views"
+msgstr[0] "innlit"
+msgstr[1] "innlit"
+
+#: kitsune/sumo/templatetags/jinja_helpers.py:170
 msgid "read more"
 msgstr "lesa meira"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:300
+#: kitsune/sumo/templatetags/jinja_helpers.py:302
 #, python-format
 msgid "Today at %s"
 msgstr "Í dag klukkan %s"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:387
+#: kitsune/sumo/templatetags/jinja_helpers.py:389
 #, python-format
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "%(number)d ári síðan"
 msgstr[1] "%(number)d árum síðan"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:391
+#: kitsune/sumo/templatetags/jinja_helpers.py:393
 #, python-format
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "%(number)d mánuði síðan"
 msgstr[1] "%(number)d mánuðum síðan"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:395
+#: kitsune/sumo/templatetags/jinja_helpers.py:397
 #, python-format
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "%(number)d viku síðan"
 msgstr[1] "%(number)d vikum síðan"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:399
+#: kitsune/sumo/templatetags/jinja_helpers.py:401
 #, python-format
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "%(number)d degi síðan"
 msgstr[1] "%(number)d dögum síðan"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:403
+#: kitsune/sumo/templatetags/jinja_helpers.py:405
 #, python-format
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "%(number)d klukkustund síðan"
 msgstr[1] "%(number)d klukkustundum síðan"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:405
+#: kitsune/sumo/templatetags/jinja_helpers.py:407
 #, python-format
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "%(number)d mínútu síðan"
 msgstr[1] "%(number)d mínútum síðan"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:406
+#: kitsune/sumo/templatetags/jinja_helpers.py:408
 #, python-format
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
@@ -10339,7 +10361,7 @@ msgstr ""
 "                Þetta gildi má aðeins innihalda bókstafi, tölur og staftáknin @/./+/-/_ .\n"
 "                "
 
-#: kitsune/users/forms.py:136 kitsune/users/models.py:137
+#: kitsune/users/forms.py:136 kitsune/users/models.py:136
 msgid "Involved with Mozilla from"
 msgstr "Hefur tekið þátt í Mozilla síðan"
 
@@ -10372,45 +10394,42 @@ msgid "Biography"
 msgstr "Æviágrip"
 
 #: kitsune/users/models.py:89
-msgid ""
-"Some HTML supported: &#x3C;abbr title&#x3E; &#x3C;blockquote&#x3E; &#x3C;code&#x3E; &#x3C;em&#x3E; &#x3C;i&#x3E; &#x3C;li&#x3E; &#x3C;ol&#x3E; &#x3C;strong&#x3E; &#x3C;ul&#x3E;. Links are forbidden."
+msgid "Some HTML supported: &#x3C;abbr title&#x3E; &#x3C;blockquote&#x3E; &#x3C;code&#x3E; &#x3C;em&#x3E; &#x3C;i&#x3E; &#x3C;li&#x3E; &#x3C;ol&#x3E; &#x3C;strong&#x3E; &#x3C;ul&#x3E;."
 msgstr ""
-"Sum HTML-einindi eru studd: &#x3C;abbr title&#x3E; &#x3C;blockquote&#x3E; &#x3C;code&#x3E; &#x3C;em&#x3E; &#x3C;i&#x3E; &#x3C;li&#x3E; &#x3C;ol&#x3E; &#x3C;strong&#x3E; &#x3C;ul&#x3E;. Tenglar eru "
-"bannaðir."
 
-#: kitsune/users/jinja2/users/profile.html:106 kitsune/users/models.py:96
+#: kitsune/users/jinja2/users/profile.html:106 kitsune/users/models.py:95
 msgid "Website"
 msgstr "Vefsvæði"
 
-#: kitsune/users/models.py:102
+#: kitsune/users/models.py:101
 msgid "Twitter Username"
 msgstr "Twitter-notandanafn"
 
-#: kitsune/users/models.py:109
+#: kitsune/users/models.py:108
 msgid "Community Portal Username"
 msgstr "Notandanafn í samfélagsgátt"
 
-#: kitsune/users/models.py:116
+#: kitsune/users/models.py:115
 msgid "People Directory Username"
 msgstr "Notandanafn í nafnaskrá"
 
-#: kitsune/users/models.py:119
+#: kitsune/users/models.py:118
 msgid "Matrix Nickname"
 msgstr "Gælunafn á Matrix"
 
-#: kitsune/users/models.py:122
+#: kitsune/users/models.py:121
 msgid "Timezone"
 msgstr "Tímabelti"
 
-#: kitsune/users/models.py:125
+#: kitsune/users/models.py:124
 msgid "Country"
 msgstr "Land"
 
-#: kitsune/users/models.py:128
+#: kitsune/users/models.py:127
 msgid "City"
 msgstr "Borg"
 
-#: kitsune/users/models.py:129
+#: kitsune/users/models.py:128
 msgid "Preferred language"
 msgstr "Umbeðið tungumál"
 
@@ -10422,15 +10441,15 @@ msgstr ""
 msgid "Confirmation failed. Account not deleted."
 msgstr ""
 
-#: kitsune/users/views.py:339
+#: kitsune/users/views.py:355
 msgid "Your settings have been saved."
 msgstr "Stillingarnar þínar voru vistaðar."
 
-#: kitsune/users/views.py:369
+#: kitsune/users/views.py:385
 msgid "Your preferences have been saved."
 msgstr "Kjörstillingarnar þínar hafa verið vistaðar."
 
-#: kitsune/users/views.py:532
+#: kitsune/users/views.py:548
 msgid "This account is not active. Please contact an administrator if you believe this is an error"
 msgstr "Þessi notandaaðgangur er óvirkur. Hafðu samband við kerfisstjóra ef þú telur að hér sé um villu að ræða"
 
@@ -10722,19 +10741,32 @@ msgstr "Skoða alla tiltæka SUMO-skildi"
 msgid "{user} | Questions"
 msgstr "{user} | Spurningar"
 
-#: kitsune/users/jinja2/users/questions_contributed.html:13
+#. This is a title for user questions pages (like
+#. https://support.mozilla.org/user/kelimuttu/questions), displayed when a page is
+#. viewed by someone other than the profile owner. The page lists questions
+#. authored by the user.
+#: kitsune/users/jinja2/users/questions_contributed.html:14
 msgid "Questions Asked"
 msgstr "Spurðar spurningar"
 
-#: kitsune/users/jinja2/users/questions_contributed.html:24
+#. Displayed for users viewing their own questions. This is a label for a tab that
+#. lists community forum questions authored by the user.
+#: kitsune/users/jinja2/users/questions_contributed.html:26
 msgid "Forum"
 msgstr ""
 
-#: kitsune/users/jinja2/users/questions_contributed.html:36
+#. Displayed for moderators only on user questions pages (like
+#. https://support.mozilla.org/user/kelimuttu/questions). This is a label for a tab
+#. that lists all non-spam forum questions authored by the user.
+#: kitsune/users/jinja2/users/questions_contributed.html:44
+msgid "Valid"
+msgstr ""
+
+#: kitsune/users/jinja2/users/questions_contributed.html:56
 msgid "You haven't posted any questions yet."
 msgstr "Þú hefur ekki ennþá sent inn neinar spurningar."
 
-#: kitsune/users/jinja2/users/questions_contributed.html:38
+#: kitsune/users/jinja2/users/questions_contributed.html:58
 #, python-brace-format
 msgid "{user} hasn't posted any questions yet."
 msgstr "{user} hefur ekki ennþá sent inn neinar spurningar."
@@ -11303,33 +11335,33 @@ msgstr ""
 msgid "{user} removed successfully!"
 msgstr ""
 
-#: kitsune/wiki/models.py:118
+#: kitsune/wiki/models.py:119
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "Ef merkt er við þetta, verður þessi wiki-síða falin fyrir einföldum leitum og stjórnborðum. Ef síðan er skoðuð, mun síðan vara við að henni sé ekki lengur viðhaldið."
 
-#: kitsune/wiki/models.py:128
+#: kitsune/wiki/models.py:129
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "Ef merkt er við þetta, mun þetta skjal leyfa umræður á tengdu spjallsvæði. Taktu merkið úr til að fela/slökkva á spjallsvæðinu."
 
-#: kitsune/wiki/models.py:146
+#: kitsune/wiki/models.py:147
 msgid "If checked, this document needs updates."
 msgstr "Ef merkt er við þetta, þá þarfnast þetta skjal uppfærslna."
 
-#: kitsune/wiki/models.py:257
+#: kitsune/wiki/models.py:258
 msgid "Please choose a category."
 msgstr "Veldu flokk."
 
-#: kitsune/wiki/models.py:267
+#: kitsune/wiki/models.py:268
 #, python-brace-format
 msgid "Documents in the Template category must have titles that start with \"{prefix}\". (Current title is \"{title}\")"
 msgstr "Skjöl í flokknum Sniðmát verða að vera með titla sem byrja á \"{prefix}\". (Fyrirliggjandi titill er \"{title}\")"
 
-#: kitsune/wiki/models.py:275
+#: kitsune/wiki/models.py:276
 #, python-brace-format
 msgid "Documents with titles that start with \"{prefix}\" must be in the templates category. (Current category is \"{category}\". Current title is \"{title}\".)"
 msgstr "Skjöl með titla sem byrja á \"{prefix}\" verða að vera í flokknum Sniðmát. Fyrirliggjandi titill er \"{title}\"."
 
-#: kitsune/wiki/models.py:904
+#: kitsune/wiki/models.py:906
 #, python-format
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "Útgáfa verður að vera byggð á ensku útgáfu greinarinnar. Útgáfuauðkennið %(id)s passar ekki við þessi skilyrði."
@@ -11354,32 +11386,32 @@ msgstr "Skjalið \"%s\" er ekki til."
 msgid "The template \"%s\" does not exist or has no approved revision."
 msgstr "Sniðmátið \"%s\" er ekki til eða er ekki með samþykkta útgáfu."
 
-#: kitsune/wiki/tasks.py:96
+#: kitsune/wiki/tasks.py:95
 #, python-brace-format
 msgid "Your revision has been approved: {title}"
 msgstr "Útgáfan þín var samþykkt: {title}"
 
-#: kitsune/wiki/tasks.py:98
+#: kitsune/wiki/tasks.py:97
 #, python-brace-format
 msgid "Your revision has been reviewed: {title}"
 msgstr "Búið er að fara yfir þína útgáfu: {title}"
 
-#: kitsune/wiki/tasks.py:162
+#: kitsune/wiki/tasks.py:161
 #, python-brace-format
 msgid "A revision you contributed to has been approved: {title}"
 msgstr "Útgáfan sem þú hjálpaðir til með var samþykkt: {title}"
 
-#: kitsune/wiki/tasks.py:164
+#: kitsune/wiki/tasks.py:163
 #, python-brace-format
 msgid "A revision you contributed to has been reviewed: {title}"
 msgstr "Búið er að fara yfir útgáfuna sem þú hjálpaðir til með: {title}"
 
-#: kitsune/wiki/tasks.py:493
+#: kitsune/wiki/tasks.py:492
 #, python-format
 msgid "[Reviews Pending: %s] SUMO needs your help!"
 msgstr ""
 
-#: kitsune/wiki/tasks.py:549
+#: kitsune/wiki/tasks.py:548
 msgid "Other products"
 msgstr ""
 
@@ -11423,82 +11455,82 @@ msgstr "browserID"
 msgid "You cannot translate this document."
 msgstr "Þú getur ekki þýtt þetta skjal."
 
-#: kitsune/wiki/views.py:1308 kitsune/wiki/views.py:1327
+#: kitsune/wiki/views.py:1311 kitsune/wiki/views.py:1330
 msgid "Thanks for your feedback!"
 msgstr ""
 
-#: kitsune/wiki/views.py:1375
+#: kitsune/wiki/views.py:1387
 msgid "You voted \"Yes 👍\" Please tell us more"
 msgstr ""
 
-#: kitsune/wiki/views.py:1377
+#: kitsune/wiki/views.py:1389
 msgid "Article is accurate"
 msgstr ""
 
-#: kitsune/wiki/views.py:1380
+#: kitsune/wiki/views.py:1392
 msgid "Article is easy to understand"
 msgstr ""
 
-#: kitsune/wiki/views.py:1382
+#: kitsune/wiki/views.py:1394
 msgid "The visuals are helpful"
 msgstr ""
 
-#: kitsune/wiki/views.py:1385
+#: kitsune/wiki/views.py:1397
 msgid "Article provided the information I needed"
 msgstr ""
 
-#: kitsune/wiki/views.py:1387 kitsune/wiki/views.py:1407
+#: kitsune/wiki/views.py:1399 kitsune/wiki/views.py:1419
 msgid "Other"
 msgstr "Annað"
 
-#: kitsune/wiki/views.py:1395
+#: kitsune/wiki/views.py:1407
 msgid "You voted \"No 👎\" Please tell us more"
 msgstr ""
 
-#: kitsune/wiki/views.py:1397
+#: kitsune/wiki/views.py:1409
 msgid "Article is inaccurate"
 msgstr ""
 
-#: kitsune/wiki/views.py:1398
+#: kitsune/wiki/views.py:1410
 msgid "Article is confusing"
 msgstr ""
 
-#: kitsune/wiki/views.py:1401
+#: kitsune/wiki/views.py:1413
 msgid "Missing, unclear, or unhelpful visuals"
 msgstr ""
 
-#: kitsune/wiki/views.py:1405
+#: kitsune/wiki/views.py:1417
 msgid "Article didn't provide the information I needed"
 msgstr ""
 
-#: kitsune/wiki/views.py:1490
+#: kitsune/wiki/views.py:1502
 #, python-format
 msgid "Revision %s"
 msgstr "Útgáfa %s"
 
-#: kitsune/wiki/views.py:1500
+#: kitsune/wiki/views.py:1512
 msgid "Firefox Releases"
 msgstr "Firefox-útgáfur"
 
-#: kitsune/wiki/views.py:1508
+#: kitsune/wiki/views.py:1520
 msgid "Article Revisions"
 msgstr "Undirútgáfur greinar"
 
-#: kitsune/wiki/views.py:1624
+#: kitsune/wiki/views.py:1636
 #, python-brace-format
 msgid "{users} added to the contributors successfully!"
 msgstr "Tókst að bæta {users} við þátttakendur!"
 
-#: kitsune/wiki/views.py:1631
+#: kitsune/wiki/views.py:1643
 msgid "There were errors adding new contributors, see below."
 msgstr "Upp komu villur við að bæta við nýjum þátttakendum, sjá fyrir neðan."
 
-#: kitsune/wiki/views.py:1651
+#: kitsune/wiki/views.py:1663
 #, python-brace-format
 msgid "{user} removed from the contributors successfully!"
 msgstr "Tókst að fjarlægja {user} úr hópi þátttakenda!"
 
-#: kitsune/wiki/views.py:1913
+#: kitsune/wiki/views.py:1925
 msgid "Sorry, that article wasn't found."
 msgstr "Því miður fannst þessi grein ekki."
 
