@@ -6,6 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kitsune 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/mozilla-l10n/sumo-l10n/issues\n"
+"POT-Creation-Date: 2026-09-04 01:02-0700\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,13 +27,13 @@ msgstr "Fehler beim Löschen"
 msgid "Please check you are signed in, and try again."
 msgstr "Bitte vergewissern Sie sich, dass Sie angemeldet sind, und versuchen Sie es erneut."
 
-#: kitsune/sumo/static/sumo/js/ajaxupload.js:130 kitsune/sumo/static/sumo/js/reportabuse.js:33 kitsune/sumo/static/sumo/js/upload.js:13
+#: kitsune/sumo/static/sumo/js/ajaxupload.js:130 kitsune/sumo/static/sumo/js/reportabuse.js:43 kitsune/sumo/static/sumo/js/upload.js:13
 msgid "There was an error. Please try again in a moment."
 msgstr "Ein Fehler ist aufgetreten. Bitte warten Sie einen Moment und versuchen Sie es dann erneut."
 
 #: kitsune/sumo/static/sumo/js/ajaxupload.js:143
-msgid "Are you sure you want delete the image?"
-msgstr "Soll diese Grafik wirklich gelöscht werden?"
+msgid "Are you sure you want to delete this image?"
+msgstr ""
 
 #: kitsune/sumo/static/sumo/js/ajaxvote.js:84
 msgid "There was an error submitting your vote."
@@ -244,8 +246,8 @@ msgstr "Um den Einrichtungsassistenten zu verwenden oder auf die Einstellungen f
 #: kitsune/sumo/static/sumo/js/form-wizard.js:80
 #, javascript-format
 msgid ""
-"The setup assistant is currently unavailable for your version of Firefox. However, you can still perform a manual backup of your data by following the steps outlined in <a href='%s'>this "
-"article.</a>"
+"The setup assistant is currently unavailable for your version of Firefox. However, you can still perform a manual backup of your data by following the steps outlined in <a href='%s'>this article.</"
+"a>"
 msgstr ""
 "Der Einrichtungsassistent ist für Ihre Firefox-Version derzeit nicht verfügbar. Sie können jedoch weiterhin eine manuelle Sicherungskopie Ihrer Daten durchführen, indem Sie den Schritten in <a "
 "href='%s'>diesem Artikel</a> folgen."
@@ -398,28 +400,28 @@ msgid "Knowledge Base Article"
 msgstr "Wissensdatenbank-Artikel"
 
 #: kitsune/sumo/static/sumo/js/markup.js:762
-msgid "Insert media..."
-msgstr "Medien einfügen…"
+msgid "Insert image..."
+msgstr ""
 
 #: kitsune/sumo/static/sumo/js/markup.js:766
-msgid "media"
-msgstr "Medien"
+msgid "image"
+msgstr ""
 
 #: kitsune/sumo/static/sumo/js/markup.js:796 kitsune/sumo/static/sumo/js/markup.js:797 kitsune/sumo/static/sumo/js/markup.js:798
 msgid "Search Gallery"
 msgstr "Galerie durchsuchen"
 
 #: kitsune/sumo/static/sumo/js/markup.js:800
-msgid "Show media for:"
-msgstr "Medien anzeigen für:"
+msgid "Show images for:"
+msgstr ""
 
 #: kitsune/sumo/static/sumo/js/markup.js:805
-msgid "Insert Media"
-msgstr "Medien einfügen"
+msgid "Insert Image"
+msgstr ""
 
 #: kitsune/sumo/static/sumo/js/markup.js:807
-msgid "Upload Media"
-msgstr "Medien hochladen"
+msgid "Upload Image"
+msgstr ""
 
 #: kitsune/sumo/static/sumo/js/markup.js:866
 msgid "Please select an image to insert."
@@ -510,6 +512,10 @@ msgid_plural "Show %(n)s more tags"
 msgstr[0] "%(n)s weiteres Schlagwort anzeigen"
 msgstr[1] "%(n)s weitere Schlagwörter anzeigen"
 
+#: kitsune/sumo/static/sumo/js/reportabuse.js:25
+msgid "Please select one of these reasons."
+msgstr ""
+
 #: kitsune/sumo/static/sumo/js/sumo-tabs.js:20
 msgid "More"
 msgstr "Mehr"
@@ -584,95 +590,104 @@ msgid "No related documents."
 msgstr "Keine verwandten Dokumente."
 
 #. This is a question status.
-#: kitsune/sumo/static/sumo/tpl/macros.njk:27
+#: kitsune/sumo/static/sumo/tpl/macros.njk:36
 msgid "Solved"
 msgstr "Gelöst"
 
-#: kitsune/sumo/static/sumo/tpl/macros.njk:31
+#: kitsune/sumo/static/sumo/tpl/macros.njk:40
 #, python-format
 msgid "1 reply"
 msgid_plural "%s replies"
 msgstr[0] "Eine Antwort"
 msgstr[1] "%s Antworten"
 
-#: kitsune/sumo/static/sumo/tpl/macros.njk:33
+#: kitsune/sumo/static/sumo/tpl/macros.njk:42
 msgid "No replies"
 msgstr "Keine Antworten"
 
-#: kitsune/sumo/static/sumo/tpl/macros.njk:37
+#: kitsune/sumo/static/sumo/tpl/macros.njk:46
 #, python-format
 msgid "1 person has this problem"
 msgid_plural "%s people have this problem"
 msgstr[0] "Eine Person hat dieses Problem"
 msgstr[1] "%s Personen haben dieses Problem"
 
-#: kitsune/sumo/static/sumo/tpl/macros.njk:41
+#: kitsune/sumo/static/sumo/tpl/macros.njk:50
 #, python-format
 msgid "1 new this week"
 msgid_plural "%s new this week"
 msgstr[0] "Eine neue in dieser Woche"
 msgstr[1] "%s neue in dieser Woche"
 
+#. Hybrid search shows a bounded ranking; {n} approximates all potential matches,
+#. not pageable results.
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:7
+#, python-format
+msgid "Showing the most relevant result for ‘<span>%(q)s</span>’ in ‘<span>%(product)s</span>’ from about %(n)s potential match"
+msgid_plural "Showing the most relevant results for ‘<span>%(q)s</span>’ in ‘<span>%(product)s</span>’ from about %(n)s potential matches"
+msgstr[0] ""
+msgstr[1] ""
+
 #. {n} is the number of search results, {q} is the search query, {product} is the
 #. product.
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:6
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:14
 #, python-format
 msgid "Found %(n)s result for ‘<span>%(q)s</span>’ for ‘<span>%(product)s</span>’"
 msgid_plural "Found %(n)s results for ‘<span>%(q)s</span>’ for ‘<span>%(product)s</span>’"
 msgstr[0] "%(n)s Ergebnis für „<span>%(q)s</span>“ für „<span>%(product)s</span>“ gefunden"
 msgstr[1] "%(n)s Ergebnisse für „<span>%(q)s</span>“ für „<span>%(product)s</span>“ gefunden"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:12
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:21
 #, python-format
 msgid "Sorry! 0 results found for ‘<span>%(q)s</span>’ for ‘<span>%(product)s</span>’"
 msgstr "Entschuldigung! Keine Ergebnisse gefunden für „<span>%(q)s</span>“ für „<span>%(product)s</span>“"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:21
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:30
 msgid "View All"
 msgstr "Alle ansehen"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:26
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:35
 msgid "Help Articles Only"
 msgstr "Nur Hilfeartikel"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:31
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:40
 msgid "Community Discussion Only"
 msgstr "Nur Diskussionen der Gemeinschaft"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:44
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:53
 msgid "Try searching again with a different keyword, or browse our featured articles below instead."
 msgstr "Versuchen Sie erneut, mit einem anderen Schlüsselwort zu suchen, oder durchsuchen Sie stattdessen unsere unten aufgeführten Artikel."
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:72
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:87
 #, python-format
 msgid "Page %(current)s of %(total)s"
 msgstr "Seite %(current)s von %(total)s"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:85
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:101
 msgid "Previous"
 msgstr "Vorheriges"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:109
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:127
 msgid "Next"
 msgstr "Nächstes"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:136
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:154
 msgid "Still need help?"
 msgstr "Benötigen Sie weitere Hilfe?"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:141
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:159
 msgid "We’re here for you! If you haven’t found a solution after exploring our help articles, you can get in touch with our support team."
 msgstr "Wir sind für Sie da! Wenn Sie nach dem Durchsuchen unserer Hilfeartikel keine Lösung gefunden haben, können Sie sich an unser Hilfeteam wenden."
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:143
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:161
 msgid "We’re here for you. Post a question to our support forums and get answers from our community of experts."
 msgstr "Wir sind für Sie da. Stellen Sie eine Frage in unseren Support-Foren und erhalten Sie Antworten von unserer Expertengemeinschaft."
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:153
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:171
 msgid "Contact Support"
 msgstr "Support kontaktieren"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:155
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:173
 msgid "Ask the Community"
 msgstr "Die Gemeinschaft fragen"
 
@@ -696,7 +711,7 @@ msgstr "Mozilla-Hilfe"
 msgid "Support forum"
 msgstr "Hilfeforum"
 
-#: svelte/contribute/Contribute.svelte:63 svelte/contribute/Contribute.svelte:117 svelte/contribute/Contribute.svelte:173
+#: svelte/contribute/Contribute.svelte:63 svelte/contribute/Contribute.svelte:114 svelte/contribute/Contribute.svelte:170
 msgid "Learn the basic guidelines"
 msgstr "Lernen Sie die grundlegenden Richtlinien"
 
@@ -730,80 +745,75 @@ msgstr "Wo das Wesentliche passiert"
 
 #: svelte/contribute/Contribute.svelte:95
 msgid ""
-"From hardcore web developers to \"how do I install Firefox\"\n"
-"                    first time users, everybody needs your help in the forum!\n"
-"                    Share your knowledge by pointing people to the right help\n"
-"                    articles and providing troubleshooting steps for their\n"
-"                    individual questions."
+"From hardcore web developers to \"how do I install Firefox\" first-time users, everybody needs your help in the forum! Share your knowledge by pointing people to the right help articles and "
+"providing troubleshooting steps for their individual questions."
 msgstr ""
-"Von fortgeschrittenen Web-Entwicklern zu Neulingen, die fragen, wie Sie Firefox installieren, jeder braucht Ihre Hilfe im Forum! Teilen Sie Ihr Wissen, indem Sie anderen die richtigen Hilfeartikel "
-"zeigen und bei individuellen Fragen Schritte zur Problemlösung anbieten."
 
-#: svelte/contribute/Contribute.svelte:105
+#: svelte/contribute/Contribute.svelte:102
 msgid "Help articles"
 msgstr "Hilfeartikel"
 
-#: svelte/contribute/Contribute.svelte:124
+#: svelte/contribute/Contribute.svelte:121
 msgid "Explore the Knowledge Base Dashboard"
 msgstr "Erkunden Sie die Übersicht der Wissensdatenbank"
 
-#: svelte/contribute/Contribute.svelte:133
+#: svelte/contribute/Contribute.svelte:130
 msgid "Check the Needs Update column and start editing articles!"
 msgstr "Überprüfen Sie die Spalte „Aktualisierung erforderlich“ und beginnen Sie mit der Bearbeitung von Artikeln!"
 
-#: svelte/contribute/Contribute.svelte:142
+#: svelte/contribute/Contribute.svelte:139
 msgid "Learn more about KB contribution"
 msgstr "Weitere Informationen zum Mitwirken an der Wissensdatenbank"
 
-#: svelte/contribute/Contribute.svelte:147 svelte/contribute/Contribute.svelte:203
+#: svelte/contribute/Contribute.svelte:144 svelte/contribute/Contribute.svelte:200
 msgid "400 → 70+"
 msgstr "400 → 70+"
 
-#: svelte/contribute/Contribute.svelte:148 svelte/contribute/Contribute.svelte:204
+#: svelte/contribute/Contribute.svelte:145 svelte/contribute/Contribute.svelte:201
 msgid "One article can be viewed by 400 million users and translated into 70+ languages"
 msgstr "Ein Artikel kann von 400 Millionen Anwendern gelesen und in über 70 Sprachen übersetzt werden"
 
-#: svelte/contribute/Contribute.svelte:154
+#: svelte/contribute/Contribute.svelte:151
 msgid "Help us write help articles"
 msgstr "Helfen Sie uns, Hilfeartikel zu schreiben"
 
-#: svelte/contribute/Contribute.svelte:155
+#: svelte/contribute/Contribute.svelte:152
 msgid "Share your wisdom with the world!"
 msgstr "Teilen Sie Ihre Weisheit mit der Welt!"
 
-#: svelte/contribute/Contribute.svelte:157
+#: svelte/contribute/Contribute.svelte:154
 msgid ""
-"If you like writing and teaching, then the Knowledge Base (KB) is the place for you. We need contributors that can write, edit or proofread articles in English. Thousands of people are accessing our"
-" Knowledge Base every week. Imagine how many will be helped by you!"
+"If you like writing and teaching, then the Knowledge Base (KB) is the place for you. We need contributors that can write, edit or proofread articles in English. Thousands of people are accessing "
+"our Knowledge Base every week. Imagine how many will be helped by you!"
 msgstr ""
 "Wenn Sie gerne Schreiben und Lehren, sind Sie bei der Wissensdatenbank (KB) genau richtig. Wir brauchen Mitwirkende, die Artikel schreiben, bearbeiten oder korrekturlesen. Tausende von Menschen "
 "rufen jede Woche unsere Wissensdatenbank auf. Stellen Sie sich vor, wie viele von Ihnen geholfen bekommen!"
 
-#: svelte/contribute/Contribute.svelte:165
+#: svelte/contribute/Contribute.svelte:162
 msgid "Localization"
 msgstr "Lokalisierung"
 
-#: svelte/contribute/Contribute.svelte:180
+#: svelte/contribute/Contribute.svelte:177
 msgid "Check if your locale is available and go to your localization dashboard"
 msgstr "Überprüfen Sie, ob Ihre Sprache verfügbar ist, und gehen Sie zu Ihrer Lokalisierungs-Übersicht"
 
-#: svelte/contribute/Contribute.svelte:189
+#: svelte/contribute/Contribute.svelte:186
 msgid "Start localizing an article!"
 msgstr "Beginnen Sie mit der Lokalisierung eines Artikels!"
 
-#: svelte/contribute/Contribute.svelte:196
+#: svelte/contribute/Contribute.svelte:193
 msgid "Learn more about localization contribution"
 msgstr "Weitere Informationen zum Mitwirken bei der Lokalisierung"
 
-#: svelte/contribute/Contribute.svelte:210
+#: svelte/contribute/Contribute.svelte:207
 msgid "Help us localize support articles"
 msgstr "Helfen Sie uns, Hilfeartikel zu lokalisieren"
 
-#: svelte/contribute/Contribute.svelte:212
+#: svelte/contribute/Contribute.svelte:209
 msgid "Let’s make Mozilla Support speak your language!"
 msgstr "Lassen wir die Mozilla-Hilfe Ihre Sprache sprechen!"
 
-#: svelte/contribute/Contribute.svelte:215
+#: svelte/contribute/Contribute.svelte:212
 msgid "Help articles are not available in your language yet? You want to join the amazing team translating them? You will help millions of users in your language. Pretty heroic, right?"
 msgstr ""
 "Es gibt einen Hilfeartikel noch nicht in Ihrer Sprache? Sie möchten sich dem wunderbaren Team anschließen, das sie übersetzt? Damit helfen Sie Millionen von Anwendern in Ihrer Sprache. Ziemlich "
@@ -820,8 +830,8 @@ msgstr "Retten Sie die Welt von Ihrem bequemen Sofa aus"
 #: svelte/contribute/Landing.svelte:21
 msgid "Help millions of users get the most out of their favorite browser. Your contributions will reach millions of users worldwide, and you can do it from the comfort of your couch!"
 msgstr ""
-"Helfen Sie Millionen von Anwendern auf der ganzen Welt, das Beste aus ihrem Lieblingsbrowser zu machen. Ihre Beiträge erreichen Millionen von Anwendern weltweit und Sie können das von Ihrem bequemen"
-" Sofa aus tun!"
+"Helfen Sie Millionen von Anwendern auf der ganzen Welt, das Beste aus ihrem Lieblingsbrowser zu machen. Ihre Beiträge erreichen Millionen von Anwendern weltweit und Sie können das von Ihrem "
+"bequemen Sofa aus tun!"
 
 #: svelte/contribute/Landing.svelte:26
 msgid "We need your help!"
@@ -872,3 +882,31 @@ msgstr "Als Freiwilliger registrieren"
 #: svelte/contribute/Steps.svelte:42
 msgid "Take the contributor's CPG training."
 msgstr "Nehmen Sie an der CPG-Schulung für Mitwirkende teil."
+
+#~ msgid "Are you sure you want delete the image?"
+#~ msgstr "Soll diese Grafik wirklich gelöscht werden?"
+
+#~ msgid "Insert media..."
+#~ msgstr "Medien einfügen…"
+
+#~ msgid "media"
+#~ msgstr "Medien"
+
+#~ msgid "Show media for:"
+#~ msgstr "Medien anzeigen für:"
+
+#~ msgid "Insert Media"
+#~ msgstr "Medien einfügen"
+
+#~ msgid "Upload Media"
+#~ msgstr "Medien hochladen"
+
+#~ msgid ""
+#~ "From hardcore web developers to \"how do I install Firefox\"\n"
+#~ "                    first time users, everybody needs your help in the forum!\n"
+#~ "                    Share your knowledge by pointing people to the right help\n"
+#~ "                    articles and providing troubleshooting steps for their\n"
+#~ "                    individual questions."
+#~ msgstr ""
+#~ "Von fortgeschrittenen Web-Entwicklern zu Neulingen, die fragen, wie Sie Firefox installieren, jeder braucht Ihre Hilfe im Forum! Teilen Sie Ihr Wissen, indem Sie anderen die richtigen "
+#~ "Hilfeartikel zeigen und bei individuellen Fragen Schritte zur Problemlösung anbieten."

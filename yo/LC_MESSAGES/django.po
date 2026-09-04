@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/mozilla-l10n/sumo-l10n/issues\n"
-"POT-Creation-Date: 2026-07-28 02:37-0700\n"
+"POT-Creation-Date: 2026-09-04 01:02-0700\n"
 "PO-Revision-Date: 2015-06-02 14:54+0000\n"
 "Last-Translator: Tersha <tersha.smith@rubric.com>\n"
 "Language-Team: yo <LL@li.org>\n"
@@ -153,7 +153,7 @@ msgstr "Àwọn Èsì fun: {query}"
 msgid "No users were found for your search query."
 msgstr "Akòrí àwọn olùṣàmúlò fún wíwá aṣèbéèré rẹ."
 
-#: kitsune/community/jinja2/community/search.html:40 kitsune/community/jinja2/community/top_contributors.html:117 kitsune/sumo/jinja2/includes/common_macros.html:603
+#: kitsune/community/jinja2/community/search.html:40 kitsune/community/jinja2/community/top_contributors.html:117 kitsune/sumo/jinja2/includes/common_macros.html:551
 msgid "View Profile"
 msgstr "Wo ìrísí Olùlò"
 
@@ -191,11 +191,14 @@ msgstr "Àwọn ìdasí ní 90 ọjọ́ sẹ́hìn: {count}"
 msgid "Days since last activity:"
 msgstr "Àwọn ọjọ́ láti ìgbà iṣẹ́ ṣíṣe ìkẹhìn:"
 
+#. This is an email. Whitespace matters!
 #. This is an email.  Whitespace matters!
-#: kitsune/community/jinja2/community/email/first_answer.html:4 kitsune/community/jinja2/community/email/first_answer.ltxt:3 kitsune/users/jinja2/users/email/contributor.html:4
-#: kitsune/users/jinja2/users/email/contributor.ltxt:3
-msgid "Hi"
-msgstr ""
+#: kitsune/community/jinja2/community/email/first_answer.html:4 kitsune/community/jinja2/community/email/first_answer.ltxt:3 kitsune/questions/jinja2/questions/email/new_answer.ltxt:5
+#: kitsune/questions/jinja2/questions/email/new_answer_to_asker.ltxt:4 kitsune/questions/jinja2/questions/email/solution.html:5 kitsune/questions/jinja2/questions/email/solution.ltxt:5
+#: kitsune/users/jinja2/users/email/contributor.html:4 kitsune/users/jinja2/users/email/contributor.ltxt:3 kitsune/wiki/jinja2/wiki/email/ready_for_review_weekly_digest.html:11
+#, python-brace-format
+msgid "Hi {username},"
+msgstr "Báwo {username},"
 
 #: kitsune/community/jinja2/community/email/first_answer.html:7 kitsune/community/jinja2/community/email/first_answer.ltxt:5
 msgid "Thank you and congratulations on your first contribution to the Mozilla Support Community Forums! You just made somebody's day, and we're so glad you're here."
@@ -234,6 +237,10 @@ msgstr ""
 msgid "Keep yourself updated"
 msgstr ""
 
+#: kitsune/community/jinja2/community/email/first_answer.html:36 kitsune/users/jinja2/users/includes/macros.html:8
+msgid "Edit settings"
+msgstr "Ṣàtúntò ààtò"
+
 #: kitsune/community/jinja2/community/email/first_answer.html:39
 #, python-format
 msgid "Consider updating your <a href=\"%(prefs_url)s\">notification preferences</a> to make sure you stay in the loop on threads you've participated in."
@@ -257,6 +264,10 @@ msgstr ""
 
 #: kitsune/community/jinja2/community/email/first_answer.html:56 kitsune/community/jinja2/community/email/first_answer.ltxt:68
 msgid "Stay updated"
+msgstr ""
+
+#: kitsune/community/jinja2/community/email/first_answer.html:58 kitsune/sumo/jinja2/includes/common_macros.html:687
+msgid "Support forum discussions"
 msgstr ""
 
 #: kitsune/community/jinja2/community/email/first_answer.html:61
@@ -397,45 +408,65 @@ msgstr "Android"
 msgid "iOS"
 msgstr ""
 
-#: kitsune/customercare/forms.py:89
+#: kitsune/customercare/forms.py:50
+msgid "Select urgency"
+msgstr ""
+
+#: kitsune/customercare/forms.py:54
+msgid "Normal - Non-critical Firefox issue, minor defect, or integration/deployment question"
+msgstr ""
+
+#: kitsune/customercare/forms.py:60
+msgid "High - Key functionality is degraded for multiple users or teams, but a workaround exists"
+msgstr ""
+
+#: kitsune/customercare/forms.py:67
+msgid "Critical - Production outage, critical blockage, or material security risk with no workaround"
+msgstr ""
+
+#: kitsune/customercare/forms.py:119
 msgid "Contact e-mail"
 msgstr ""
 
-#: kitsune/customercare/forms.py:92
+#: kitsune/customercare/forms.py:122
 #, fuzzy
 msgid "What do you need help with?"
 msgstr "Àbájáde wo ni o fẹ́ fi ìbéèrè fọ̀rọ̀ránṣẹ́ nípa?"
 
-#: kitsune/customercare/forms.py:95
+#: kitsune/customercare/forms.py:125
+msgid "What is the impact to your org?"
+msgstr ""
+
+#: kitsune/customercare/forms.py:131
 msgid "What operating system does your device use?"
 msgstr ""
 
-#: kitsune/customercare/forms.py:111 kitsune/groups/jinja2/groups/includes/_tickets_content.html:52
+#: kitsune/customercare/forms.py:147 kitsune/groups/jinja2/groups/includes/_tickets_content.html:52
 #, fuzzy
 msgid "Subject"
 msgstr "Orí ọ̀rọ̀:"
 
-#: kitsune/customercare/forms.py:112
+#: kitsune/customercare/forms.py:148
 msgid "Tell us more"
 msgstr ""
 
-#: kitsune/customercare/forms.py:146
+#: kitsune/customercare/forms.py:182
 msgid "Select a reason for contacting"
 msgstr ""
 
-#: kitsune/customercare/forms.py:185
+#: kitsune/customercare/forms.py:226
 msgid "Please enter a valid email address."
 msgstr ""
 
-#: kitsune/customercare/forms.py:260 kitsune/messages/jinja2/messages/read.html:19
+#: kitsune/customercare/forms.py:306 kitsune/messages/jinja2/messages/read.html:19
 msgid "Reply"
 msgstr "Fèsì"
 
-#: kitsune/customercare/forms.py:264
+#: kitsune/customercare/forms.py:310
 msgid "Please enter a reply."
 msgstr ""
 
-#: kitsune/customercare/forms.py:265
+#: kitsune/customercare/forms.py:311
 #, python-format
 msgid "Replies are limited to %(limit_value)d characters."
 msgstr ""
@@ -500,31 +531,31 @@ msgstr ""
 msgid "This ticket has been closed"
 msgstr ""
 
-#: kitsune/customercare/models.py:264 kitsune/groups/jinja2/groups/profile.html:228
+#: kitsune/customercare/models.py:265 kitsune/groups/jinja2/groups/profile.html:228
 msgid "Inactive"
 msgstr ""
 
-#: kitsune/customercare/models.py:265
+#: kitsune/customercare/models.py:266
 msgid "Submitted"
 msgstr ""
 
-#: kitsune/customercare/models.py:280
+#: kitsune/customercare/models.py:281
 msgid "This ticket is no longer active and can no longer receive replies"
 msgstr ""
 
-#: kitsune/customercare/models.py:284
+#: kitsune/customercare/models.py:285
 msgid "This ticket has been submitted and is being processed"
 msgstr ""
 
-#: kitsune/customercare/views.py:49
+#: kitsune/customercare/views.py:50
 msgid "Reply here to reopen this ticket."
 msgstr ""
 
-#: kitsune/customercare/views.py:217 kitsune/groups/jinja2/groups/profile.html:135 kitsune/groups/jinja2/groups/tickets.html:4 kitsune/groups/jinja2/groups/tickets.html:25
+#: kitsune/customercare/views.py:218 kitsune/groups/jinja2/groups/profile.html:135 kitsune/groups/jinja2/groups/tickets.html:4 kitsune/groups/jinja2/groups/tickets.html:25
 msgid "Tickets"
 msgstr ""
 
-#: kitsune/customercare/views.py:222 kitsune/sumo/jinja2/includes/common_macros.html:610 kitsune/users/jinja2/users/questions_contributed.html:16
+#: kitsune/customercare/views.py:223 kitsune/sumo/jinja2/includes/common_macros.html:558 kitsune/users/jinja2/users/questions_contributed.html:16
 msgid "My Questions"
 msgstr "Àwọn Ìbéèrè Mi"
 
@@ -667,96 +698,96 @@ msgstr "Àwọn Àròkọ 20 tógajù"
 
 #. This is an entry description for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:403
+#: kitsune/dashboards/readouts.py:404
 #, fuzzy, python-format
 msgid "These are the top 20 most visited articles in the last 30 days, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "Àwọn àrokọ àbẹ̀wò 20 tógajù wà ní 30 ọjọ́ sẹ́hìn, tí ó ṣe àkọ́ọ́lẹ̀ fún ìdá 50 ti ìrinnà ọkọ̀ sí Ìpilẹ̀ Ìmọ̀."
 
 #. This is an entry header for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:408
+#: kitsune/dashboards/readouts.py:410
 msgid "Top 50 Articles"
 msgstr "Àwọn Àròkọ 50 tó gajù"
 
 #. This is an entry description for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:414
+#: kitsune/dashboards/readouts.py:416
 msgid "These are the top 50 most visited articles in the last 30 days."
 msgstr "Àwọn wọ̀nyí ni àròkọ 50 tí a bèwò jùlọ ní 30 ọjọ́ tó kọjá."
 
 #. This is an entry header for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:419
+#: kitsune/dashboards/readouts.py:421
 msgid "Top 100 Articles"
 msgstr "Àwọn Àròkọ 100 tó gajù"
 
 #. This is an entry description for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:425
+#: kitsune/dashboards/readouts.py:428
 #, fuzzy, python-format
 msgid "These are the top 100 most visited articles in the last 30 days, which account for over 99% of the traffic to the Knowledge Base."
 msgstr "Àwọn wọ̀nyí ni àròkọ 100 tí a bèwò jùlọ ní 30 ọjọ́ tó kọjá, tí ó fihàn 99% ti ìrìnà ọkọ̀ fún Ìpìlẹ̀ Ìmọ̀."
 
-#: kitsune/dashboards/readouts.py:429 kitsune/dashboards/readouts.py:731 kitsune/dashboards/readouts.py:898 kitsune/dashboards/readouts.py:899 kitsune/sumo/jinja2/includes/common_macros.html:828
+#: kitsune/dashboards/readouts.py:433 kitsune/dashboards/readouts.py:739 kitsune/dashboards/readouts.py:906 kitsune/dashboards/readouts.py:907 kitsune/sumo/jinja2/includes/common_macros.html:776
 #: kitsune/wiki/config.py:102
 msgid "Templates"
 msgstr "Àwọn Àwòṣe"
 
 #. This is an entry description for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:436
+#: kitsune/dashboards/readouts.py:441
 msgid "Templates are a way of reusing pieces of content across KB articles. You can create and update a set of instructions in one place, and then refer to it in other pages."
 msgstr "Àwọn Àwòṣe jẹ́ ọ̀nà àtúnlò àkóónú kékeké káákíri àrokọ KB. O lè ṣẹ̀dá àti ṣàfílọlẹ̀ àwọn ìlànà ní ọ̀nà kan, kí o tún tọ́kasí ni àwọn ojú ewé míìràn."
 
 #. This is an entry header for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:441
+#: kitsune/dashboards/readouts.py:447
 msgid "All Knowledge Base Articles"
 msgstr "Gbogbo Ìpìlẹ̀ Àrokọ Imọ̀"
 
 #. This is an entry description for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:447
+#: kitsune/dashboards/readouts.py:454
 msgid "This is the number of all Knowledge Base articles that are ready to be localized."
 msgstr "Èyí ni nọ́ńbà gbogbo Ìpìlẹ̀ Àrokọ Imọ̀ tí ó ṣetán fún ìsọdibílẹ̀."
 
 #. This is a column header for an abstract Localization Dashboard table. It refers
 #. to articles.
-#: kitsune/dashboards/readouts.py:466
+#: kitsune/dashboards/readouts.py:474
 msgid "Visits in last 30 days"
 msgstr "Ìbẹ̀wò ní 30 ọjọ́ tó kọjá"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:6 kitsune/dashboards/readouts.py:468 kitsune/groups/jinja2/groups/includes/_tickets_content.html:54
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:6 kitsune/dashboards/readouts.py:476 kitsune/groups/jinja2/groups/includes/_tickets_content.html:54
 #: kitsune/wiki/jinja2/wiki/includes/revision_list.html:23
 msgid "Status"
 msgstr "Ìdúrópàtó"
 
 #. This is a sorting option for an abstract Localization Dashboard table. It refers
 #. to articles.
-#: kitsune/dashboards/readouts.py:471
+#: kitsune/dashboards/readouts.py:479
 msgid "Most Viewed"
 msgstr "Tó Wò Jù"
 
 #. This is a sorting option for an abstract Localization Dashboard table. It refers
 #. to articles.
-#: kitsune/dashboards/readouts.py:473
+#: kitsune/dashboards/readouts.py:481
 msgid "Most Recent"
 msgstr "Àìpẹ́ Rárá"
 
 #. This refers to articles.
-#: kitsune/dashboards/readouts.py:577 kitsune/dashboards/readouts.py:776
+#: kitsune/dashboards/readouts.py:585 kitsune/dashboards/readouts.py:784
 msgid "Most Visited"
 msgstr "Kàǹsí Àìpẹ́"
 
 #. Unused. A link to be displayed under the Most Visited overview table,
 #. which redirects users to the full Most Visited table
 #. (https://support.mozilla.org/contributors/most-visited).
-#: kitsune/dashboards/readouts.py:581
+#: kitsune/dashboards/readouts.py:589
 msgid "All knowledge base articles..."
 msgstr "Gbogbo Àròkọ Ìpìlẹ̀ Ìmọ̀..."
 
 #. This is a table column header that refers to article visit count.
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:5 kitsune/dashboards/readouts.py:584 kitsune/dashboards/readouts.py:651
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:5 kitsune/dashboards/readouts.py:592 kitsune/dashboards/readouts.py:659
 msgid "Visits"
 msgstr "Bẹ̀wò"
 
@@ -765,12 +796,12 @@ msgstr "Bẹ̀wò"
 #. https://support.mozilla.org/contributors/templates,
 #. https://support.mozilla.org/contributors/how-to-contribute or
 #. https://support.mozilla.org/contributors/administration.
-#: kitsune/dashboards/readouts.py:711
+#: kitsune/dashboards/readouts.py:719
 msgid "Changes Needed"
 msgstr "Nílò Àyípadà"
 
 #. This refers to articles.
-#: kitsune/dashboards/readouts.py:715 kitsune/dashboards/readouts.py:1142
+#: kitsune/dashboards/readouts.py:723 kitsune/dashboards/readouts.py:1150
 msgid "Changes Not Ready For Localization"
 msgstr "Àyípadà Kòìtó Fún Ìsọdìbílẹ̀"
 
@@ -779,33 +810,33 @@ msgstr "Àyípadà Kòìtó Fún Ìsọdìbílẹ̀"
 #. locales),
 #. which redirects users to the full Templates table
 #. (https://support.mozilla.org/localization/template-translations).
-#: kitsune/dashboards/readouts.py:738 kitsune/dashboards/readouts.py:904
+#: kitsune/dashboards/readouts.py:746 kitsune/dashboards/readouts.py:912
 msgid "All templates..."
 msgstr "Gbogbo àwòṣe..."
 
 #. This is a table header displayed on
 #. https://support.mozilla.org/contributors/how-to-contribute. It refers to the
 #. article topic.
-#: kitsune/dashboards/readouts.py:745
+#: kitsune/dashboards/readouts.py:753
 msgid "How To Contribute"
 msgstr "Ọ̀nà Ìdasí"
 
 #. Unused. A link to be displayed under the How To Contribute overview table,
 #. which redirects users to the full How To Contribute table.
-#: kitsune/dashboards/readouts.py:749
+#: kitsune/dashboards/readouts.py:757
 msgid "All How To Contribute articles..."
 msgstr "Gbogbo bí a Ṣe ń Dá sí Àwọn Aròkọ..."
 
 #. This is a table header displayed on
 #. https://support.mozilla.org/contributors/administration. It refers to the
 #. article topic.
-#: kitsune/dashboards/readouts.py:756 kitsune/wiki/config.py:100
+#: kitsune/dashboards/readouts.py:764 kitsune/wiki/config.py:100
 msgid "Administration"
 msgstr "Àbójútó"
 
 #. Unused. A link to be displayed under the Administration overview table,
 #. which redirects users to the full Administration table.
-#: kitsune/dashboards/readouts.py:760
+#: kitsune/dashboards/readouts.py:768
 msgid "All Administration articles..."
 msgstr "Gbogbo aròkọ Àbójútó..."
 
@@ -815,7 +846,7 @@ msgstr "Gbogbo aròkọ Àbójútó..."
 #. which redirects users to the full Most Visited table
 #. (https://support.mozilla.org/localization/most-visited-translations for
 #. non-en-US locales).
-#: kitsune/dashboards/readouts.py:782
+#: kitsune/dashboards/readouts.py:790
 msgid "All translations..."
 msgstr "Gbogbo àwọn ògbufọ̀..."
 
@@ -824,7 +855,7 @@ msgstr "Gbogbo àwọn ògbufọ̀..."
 #. and https://support.mozilla.org/localization/unreviewed.
 #. It refers not just to changes to translations but also to unreviewed changes to
 #. docs in this locale that are not translations.
-#: kitsune/dashboards/readouts.py:987
+#: kitsune/dashboards/readouts.py:995
 msgid "Unreviewed Changes"
 msgstr "Àwọn Àyípadà Aiṣàgbéyẹ̀wò"
 
@@ -834,7 +865,7 @@ msgstr "Àwọn Àyípadà Aiṣàgbéyẹ̀wò"
 #. and https://support.mozilla.org/localization/unreviewed.
 #. It refers not just to changes to translations but also to unreviewed changes to
 #. docs in this locale that are not translations.
-#: kitsune/dashboards/readouts.py:994
+#: kitsune/dashboards/readouts.py:1002
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "Aiṣàgbéyẹ̀wò"
@@ -843,7 +874,7 @@ msgstr "Aiṣàgbéyẹ̀wò"
 #. (https://support.mozilla.org/localization#unreviewed for non-en-US locales),
 #. which redirects users to the full Unreviewed Changes table
 #. (https://support.mozilla.org/localization/unreviewed).
-#: kitsune/dashboards/readouts.py:998
+#: kitsune/dashboards/readouts.py:1006
 msgid "All articles requiring review..."
 msgstr "Gbogbo aròko tí ó nílò àgbeyẹwò..."
 
@@ -851,19 +882,19 @@ msgstr "Gbogbo aròko tí ó nílò àgbeyẹwò..."
 #. https://support.mozilla.org/localization#unreviewed (for non-en-US locales)
 #. and https://support.mozilla.org/localization/unreviewed.
 #. It refers to the time an article was last changed.
-#: kitsune/dashboards/readouts.py:1004
+#: kitsune/dashboards/readouts.py:1012
 msgid "Changed"
 msgstr "Ti yípadà"
 
 #. This is a table header displayed on
 #. https://support.mozilla.org/contributors/unhelpful.
-#: kitsune/dashboards/readouts.py:1067
+#: kitsune/dashboards/readouts.py:1075
 msgid "Unhelpful Documents"
 msgstr "Àwọn Àkọsílẹ̀ Àìnírànwọ́"
 
 #. Unused. This is a short name for the Unhelpful Documents table,
 #. displayed on https://support.mozilla.org/contributors/unhelpful.
-#: kitsune/dashboards/readouts.py:1071
+#: kitsune/dashboards/readouts.py:1079
 msgctxt "document"
 msgid "Unhelpful"
 msgstr "Àìrannilọ́wọ́"
@@ -872,14 +903,14 @@ msgstr "Àìrannilọ́wọ́"
 #. table,
 #. which redirects users to the full Unhelpful Documents table
 #. (https://support.mozilla.org/contributors/unhelpful).
-#: kitsune/dashboards/readouts.py:1074
+#: kitsune/dashboards/readouts.py:1082
 msgid "All unhelpful articles..."
 msgstr "Gbogbo àwọn aròkọ àìrannilọ́wọ́..."
 
 #. This is a column header for the Unhelpful Documents table, displayed on
 #. https://support.mozilla.org/contributors/unhelpful.
 #. It refers to the article's helpful/unhelpful vote count.
-#: kitsune/dashboards/readouts.py:1079
+#: kitsune/dashboards/readouts.py:1087
 msgid "Total Votes"
 msgstr "Àpapọ̀ Àwọn Ibò"
 
@@ -887,13 +918,13 @@ msgstr "Àpapọ̀ Àwọn Ibò"
 #. https://support.mozilla.org/contributors/unhelpful.
 #. It refers to the article's helpful vote percentage (out of total
 #. helpful/unhelpful vote count).
-#: kitsune/dashboards/readouts.py:1083
+#: kitsune/dashboards/readouts.py:1091
 msgid "Helpfulness"
 msgstr "Ìrannilọ́wọ́"
 
 #. Unused. This is a description for the Changes Not Ready For Localization table,
 #. displayed on https://support.mozilla.org/contributors/unready.
-#: kitsune/dashboards/readouts.py:1145
+#: kitsune/dashboards/readouts.py:1154
 msgid "Articles which have approved revisions newer than the latest ready-for-localization one"
 msgstr "Aròko tóní ìbọwọ́lù àwọn àtúnyẹ̀wò tó titun ju ọ̀kan ìsọdibílẹ̀ tó ṣetán"
 
@@ -901,54 +932,54 @@ msgstr "Aròko tóní ìbọwọ́lù àwọn àtúnyẹ̀wò tó titu
 #. Localization overview table,
 #. which redirects users to the full Changes Not Ready For Localization table
 #. (https://support.mozilla.org/contributors/unready).
-#: kitsune/dashboards/readouts.py:1149
+#: kitsune/dashboards/readouts.py:1159
 msgid "All articles with changes not ready for localization..."
 msgstr "Àwọn aròkọ tóní àyípadà tí kò ṣetán fún ìsọdibílẹ̀..."
 
 #. This refers to article revisions.
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:155 kitsune/dashboards/readouts.py:1152 kitsune/wiki/jinja2/wiki/includes/revision_list.html:72
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:155 kitsune/dashboards/readouts.py:1162 kitsune/wiki/jinja2/wiki/includes/revision_list.html:72
 msgid "Approved"
 msgstr "Ìbọwọ́lù"
 
 #. This is a table header displayed on
 #. https://support.mozilla.org/contributors/need-changes.
-#: kitsune/dashboards/readouts.py:1221
+#: kitsune/dashboards/readouts.py:1231
 msgid "Need Changes"
 msgstr "Nílò àwọn Àyípadà"
 
 #. Unused. This is a description for the Need Changes table,
 #. displayed on https://support.mozilla.org/contributors/need-changes.
-#: kitsune/dashboards/readouts.py:1224
+#: kitsune/dashboards/readouts.py:1234
 msgid "Articles that require changes."
 msgstr "Àwọn aròkọ tó nílò àwọn àyípadà."
 
 #. Unused. This is a link to be displayed under the Need Changes overview table,
 #. which redirects users to the full Need Changes table
 #. (https://support.mozilla.org/contributors/need-changes).
-#: kitsune/dashboards/readouts.py:1228
+#: kitsune/dashboards/readouts.py:1238
 msgid "All articles that require changes..."
 msgstr "Gbogbo aròko tí ó nílò ìyípadà..."
 
 #. A noun. There are comments for articles in general (on
 #. https://support.mozilla.org/contributors/need-changes) and every article
 #. revision.
-#: kitsune/dashboards/readouts.py:1231 kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:46 kitsune/wiki/jinja2/wiki/includes/revision_list.html:30
+#: kitsune/dashboards/readouts.py:1241 kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:46 kitsune/wiki/jinja2/wiki/includes/revision_list.html:30
 msgid "Comment"
 msgstr "Ìdáásí"
 
-#: kitsune/dashboards/readouts.py:1269 kitsune/wiki/config.py:103
+#: kitsune/dashboards/readouts.py:1279 kitsune/wiki/config.py:103
 msgid "Canned Responses"
 msgstr "Àwọn Èsì tí A dé"
 
 #. Unused. This is a description for the Canned Responses table.
-#: kitsune/dashboards/readouts.py:1271
+#: kitsune/dashboards/readouts.py:1281
 msgid "Localization status of all canned responses"
 msgstr "Idúrópàtó isọdibilẹ ti gbogbo àwọn Èsì tí A dé"
 
 #. Unused. This is a link to be displayed under the Canned Responses overview
 #. table,
 #. which redirects users to the full Canned Responses table.
-#: kitsune/dashboards/readouts.py:1275
+#: kitsune/dashboards/readouts.py:1285
 msgid "All canned responses articles..."
 msgstr "Gbogbo àwọn aròkọ èsì tí a dé..."
 
@@ -1008,7 +1039,7 @@ msgstr "[{product}] Ìpìlẹ̀ Pẹpẹiṣẹ́ Ìmọ̀"
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:176 kitsune/dashboards/jinja2/dashboards/includes/macros.html:191
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:201 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/products/jinja2/products/includes/product_macros.html:34
 #: kitsune/questions/jinja2/questions/product_list.html:48 kitsune/questions/jinja2/questions/question_details.html:18 kitsune/questions/jinja2/questions/question_list.html:12
-#: kitsune/search/jinja2/search/results.html:88 kitsune/search/views.py:74
+#: kitsune/search/jinja2/search/results.html:127 kitsune/search/views.py:76
 msgid "All Products"
 msgstr "Gbogbo Àwọn Ohun Ìgbéjáde"
 
@@ -1072,11 +1103,11 @@ msgid "Review Needed: {comment}"
 msgstr "Nílò Àtúnyẹ́wò: {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:34 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:39 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:46
-#: kitsune/sumo/templatetags/jinja_helpers.py:449 kitsune/sumo/views.py:62 kitsune/wiki/jinja2/wiki/includes/document_macros.html:388
+#: kitsune/sumo/templatetags/jinja_helpers.py:449 kitsune/sumo/views.py:62 kitsune/wiki/jinja2/wiki/includes/document_macros.html:380
 msgid "Yes"
 msgstr "Bẹ́ẹ̀ni"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:41 kitsune/sumo/templatetags/jinja_helpers.py:449 kitsune/sumo/views.py:63 kitsune/wiki/jinja2/wiki/includes/document_macros.html:392
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:41 kitsune/sumo/templatetags/jinja_helpers.py:449 kitsune/sumo/views.py:63 kitsune/wiki/jinja2/wiki/includes/document_macros.html:384
 msgid "No"
 msgstr "Rárá"
 
@@ -1132,7 +1163,7 @@ msgstr "Jọ̀wọ́ ṣàkíyèsí pé àwọn yíyàn yí wà fún 
 msgid "Please note that you will be subscribed to these notifications for all products. If you are only interested in specific products, please go to the dashboard for that product."
 msgstr "Jọ̀wọ́ ṣàkíyèsí wa forúkọsílẹ̀ fún àwọn ìfitoníletí àwọn ohun ìgbéjáde gbogbo. Bí o bání ifẹsi àwọn ohun ìgbéjáde yìí nìkan, jọ̀wọ́ lọsí pẹpẹiṣẹ́ fún àbájáde."
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:220 kitsune/products/api.py:102 kitsune/products/api.py:104 kitsune/questions/jinja2/questions/question_list.html:298
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:220 kitsune/products/api.py:102 kitsune/products/api.py:104 kitsune/questions/jinja2/questions/question_list.html:322
 msgid "All Topics"
 msgstr "Gbogbo àwọn Àkòrí"
 
@@ -1175,39 +1206,48 @@ msgstr "Àwọn Àtúnyẹ̀wò Àìpẹ́"
 msgid "Aggregated Metrics"
 msgstr "Ṣègbàpadà Mẹ́tíríìkì"
 
-#: kitsune/flagit/models.py:29 kitsune/wiki/jinja2/wiki/includes/flag_form.html:9
+#: kitsune/flagit/models.py:29 kitsune/wiki/jinja2/wiki/includes/flag_form.html:10
 msgid "Spam or other unrelated content"
 msgstr "Ìwé àìbèèrèfún tàbí àkóónú tí kò jọra"
 
-#: kitsune/flagit/models.py:30 kitsune/wiki/jinja2/wiki/includes/flag_form.html:13
+#: kitsune/flagit/models.py:30 kitsune/wiki/jinja2/wiki/includes/flag_form.html:14
 msgid "Inappropriate language/dialog"
 msgstr "Èdè tí kò tọ́nà/ìjíròrò"
 
-#: kitsune/flagit/models.py:31 kitsune/wiki/jinja2/wiki/includes/flag_form.html:23
+#: kitsune/flagit/models.py:31 kitsune/wiki/jinja2/wiki/includes/flag_form.html:24
 msgid "Abusive content"
 msgstr "Ọ̀rọ̀ èébú àkóónú"
 
-#: kitsune/flagit/models.py:32 kitsune/wiki/jinja2/wiki/includes/flag_form.html:27
+#: kitsune/flagit/models.py:32 kitsune/wiki/jinja2/wiki/includes/flag_form.html:28
 msgid "Other (please specify)"
 msgstr "Òmíìràn (jòwọ́ sọ nípàtó)"
 
-#: kitsune/flagit/views.py:90
+#: kitsune/flagit/views.py:92
 msgid "System account content cannot be flagged."
 msgstr ""
 
-#: kitsune/flagit/views.py:116
+#: kitsune/flagit/views.py:98
+msgid "Please select a reason for flagging this content."
+msgstr ""
+
+#: kitsune/flagit/views.py:126
 msgid "You already flagged this content."
 msgstr "O ti pe-àkíyèsí-sí àkóónú yì."
 
-#: kitsune/flagit/views.py:118
+#: kitsune/flagit/views.py:128
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr "O ti pe-àkíyèsí-sí àkóónú yì. Olùṣàkóso yóò ṣàgbéyẹ́wò ìfisílẹ̀ rẹ láìpẹ́."
+
+#: kitsune/flagit/views.py:241
+msgctxt "DB: products.Topic.title"
+msgid "title"
+msgstr ""
 
 #: kitsune/flagit/jinja2/flagit/content_moderation.html:4 kitsune/flagit/jinja2/flagit/content_moderation.html:7
 msgid "Topic and Tag Moderation Tool"
 msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:4 kitsune/flagit/jinja2/flagit/zendesk_spam.html:3 kitsune/sumo/jinja2/base.html:30 kitsune/wiki/jinja2/wiki/document.html:29
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:4 kitsune/flagit/jinja2/flagit/zendesk_spam.html:3 kitsune/sumo/jinja2/base.html:30 kitsune/wiki/jinja2/wiki/document.html:28
 msgctxt "site_title"
 msgid "Mozilla Support"
 msgstr "Àtìlẹ́hìn Mozilla"
@@ -1242,7 +1282,7 @@ msgstr "Ti ṣàfikún Ìdúrópàtó:"
 
 #. A default option for dropdown menus (displayed when none of the actual options
 #. is selected).
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:49 kitsune/flagit/jinja2/flagit/queue.html:25 kitsune/flagit/jinja2/flagit/zendesk_spam.html:30 kitsune/questions/forms.py:247
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:49 kitsune/flagit/jinja2/flagit/queue.html:25 kitsune/flagit/jinja2/flagit/zendesk_spam.html:30 kitsune/questions/forms.py:255
 msgid "Please select..."
 msgstr "Jọ̀wọ́ yàn..."
 
@@ -1259,7 +1299,7 @@ msgstr ""
 msgid "Update"
 msgstr "Ṣàfikùn"
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:55 kitsune/wiki/jinja2/wiki/includes/document_macros.html:393 kitsune/wiki/jinja2/wiki/includes/survey_form.html:14
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:55 kitsune/wiki/jinja2/wiki/includes/document_macros.html:385 kitsune/wiki/jinja2/wiki/includes/survey_form.html:14
 msgid "Please wait..."
 msgstr "Jọ̀wọ́ dúró..."
 
@@ -1356,8 +1396,8 @@ msgid "Title:"
 msgstr "Àkọlé:"
 
 #: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:4 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:10
-#: kitsune/kbforums/forms.py:34 kitsune/kbforums/forms.py:65 kitsune/kbforums/forms.py:101 kitsune/questions/forms.py:300 kitsune/wiki/forms.py:349
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:226 kitsune/wiki/jinja2/wiki/review_translation.html:99
+#: kitsune/kbforums/forms.py:34 kitsune/kbforums/forms.py:65 kitsune/kbforums/forms.py:101 kitsune/questions/forms.py:308 kitsune/wiki/forms.py:349
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:218 kitsune/wiki/jinja2/wiki/review_translation.html:99
 msgid "Content:"
 msgstr "Àkóónú:"
 
@@ -1543,7 +1583,7 @@ msgstr "O ti fẹ́ pa ọ̀rọ̀ àfiránṣẹ̀ yíì rẹ́ pátápát
 #: kitsune/kbforums/jinja2/kbforums/edit_post.html:36 kitsune/kbforums/jinja2/kbforums/edit_thread.html:27 kitsune/kbforums/jinja2/kbforums/new_thread.html:48
 #: kitsune/messages/jinja2/messages/delete.html:29 kitsune/messages/jinja2/messages/new.html:26 kitsune/questions/jinja2/questions/confirm_answer_delete.html:33
 #: kitsune/questions/jinja2/questions/confirm_question_delete.html:35 kitsune/questions/jinja2/questions/edit_answer.html:64 kitsune/questions/jinja2/questions/edit_question.html:29
-#: kitsune/questions/jinja2/questions/includes/email_subscribe.html:30 kitsune/questions/jinja2/questions/includes/question_editing_frame.html:194
+#: kitsune/questions/jinja2/questions/includes/email_subscribe.html:30 kitsune/questions/jinja2/questions/includes/question_editing_frame.html:195
 #: kitsune/questions/jinja2/questions/question_details.html:472 kitsune/tidings/jinja2/tidings/unsub.html:18 kitsune/users/jinja2/users/confirm_avatar_delete.html:23
 #: kitsune/users/jinja2/users/edit_profile.html:90 kitsune/wiki/jinja2/wiki/confirm_remove_contributor.html:15 kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:15
 #: kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:11 kitsune/wiki/jinja2/wiki/includes/review_form.html:81 kitsune/wiki/jinja2/wiki/includes/review_form.html:106
@@ -1674,7 +1714,7 @@ msgstr "Ọ̀rọ̀ àfiránṣẹ̀ Èròjà atẹ̀lélànà"
 msgid "{t} | {f} | Contributor Discussions"
 msgstr ""
 
-#: kitsune/forums/jinja2/forums/posts.html:24 kitsune/kbforums/jinja2/kbforums/posts.html:47 kitsune/search/jinja2/search/includes/result.html:39
+#: kitsune/forums/jinja2/forums/posts.html:24 kitsune/kbforums/jinja2/kbforums/posts.html:47 kitsune/search/jinja2/search/includes/result.html:48
 #, python-brace-format
 msgid "1 reply"
 msgid_plural "{n} replies"
@@ -1899,8 +1939,8 @@ msgid "Include this in wiki syntax with [[Image:title]]"
 msgstr "Fi ẹyọ ọ̀rọ̀ wiki si pẹ̀lú [[Àwòrán:àkọlé]]"
 
 #: kitsune/gallery/forms.py:32
-msgid "Provide a brief description of this media."
-msgstr "Pèsè àpejúwè ní kúkúrú fún mídíà yíì."
+msgid "Provide a brief description of this image."
+msgstr ""
 
 #: kitsune/gallery/forms.py:40 kitsune/questions/jinja2/questions/question_details.html:455 kitsune/wiki/jinja2/wiki/confirm_document_delete.html:24
 msgid "Locale"
@@ -1940,14 +1980,14 @@ msgstr "O ti fẹ́ pa àwòrán rẹ́ pátápátá. <strong> Akòle �
 
 #: kitsune/gallery/jinja2/gallery/confirm_media_delete.html:5
 #, python-brace-format
-msgid "Delete image | {t} | Media Gallery"
-msgstr "Pa àwòrán rẹ́ | {t} | Gbàgede Mídíà"
+msgid "Delete image | {t} | Image Gallery"
+msgstr ""
 
 #: kitsune/gallery/jinja2/gallery/confirm_media_delete.html:6 kitsune/gallery/jinja2/gallery/edit_media.html:7 kitsune/gallery/jinja2/gallery/gallery.html:3
 #: kitsune/gallery/jinja2/gallery/gallery.html:8 kitsune/gallery/jinja2/gallery/gallery.html:17 kitsune/gallery/jinja2/gallery/media.html:7 kitsune/gallery/jinja2/gallery/search.html:4
 #: kitsune/gallery/jinja2/gallery/search.html:8
-msgid "Media Gallery"
-msgstr "Gbàgéde Mídíà"
+msgid "Image Gallery"
+msgstr ""
 
 #: kitsune/gallery/jinja2/gallery/confirm_media_delete.html:27
 #, python-brace-format
@@ -1969,16 +2009,16 @@ msgstr "Ṣàfipámọ́ àwòrán"
 
 #: kitsune/gallery/jinja2/gallery/edit_media.html:5
 #, python-brace-format
-msgid "Edit image | {t} | Media Gallery"
-msgstr "Ṣàtúntò àwòrán | {t} | Gbàgède Mídíà"
+msgid "Edit image | {t} | Image Gallery"
+msgstr ""
 
 #: kitsune/gallery/jinja2/gallery/gallery.html:44 kitsune/gallery/jinja2/gallery/search.html:16
 msgid "Search Gallery"
 msgstr "Ṣàwarí Gbàgède"
 
 #: kitsune/gallery/jinja2/gallery/gallery.html:51 kitsune/gallery/jinja2/gallery/search.html:25
-msgid "Show media for:"
-msgstr "Ṣàfihàn mídíà fun:"
+msgid "Show images for:"
+msgstr ""
 
 #: kitsune/gallery/jinja2/gallery/gallery.html:58 kitsune/gallery/jinja2/gallery/search.html:32 kitsune/sumo/jinja2/base.html:336
 msgid "Go"
@@ -1990,8 +2030,8 @@ msgstr "Ìgbàsókè"
 
 #: kitsune/gallery/jinja2/gallery/media.html:3
 #, python-brace-format
-msgid "{title} | Media Gallery"
-msgstr "{title} | Gbàgède Mídíà"
+msgid "{title} | Image Gallery"
+msgstr ""
 
 #: kitsune/gallery/jinja2/gallery/includes/upload_media_form.html:47 kitsune/gallery/jinja2/gallery/media.html:10 kitsune/upload/jinja2/upload/attachments.html:11
 #: kitsune/upload/jinja2/upload/attachments.html:16 kitsune/upload/jinja2/upload/attachments.html:18
@@ -2020,12 +2060,12 @@ msgid "This image is not included in any articles."
 msgstr "Àwòrán yíì kòsí nínu àwọn aròkọ."
 
 #: kitsune/gallery/jinja2/gallery/search.html:2
-msgid "Media Gallery Search"
-msgstr "Ìṣàwari Gbàgède Mídíà"
+msgid "Image Gallery Search"
+msgstr ""
 
 #: kitsune/gallery/jinja2/gallery/includes/media_list.html:15
-msgid "No media files found."
-msgstr "Akòrí àwọn fáìlì mídíà."
+msgid "No images found."
+msgstr ""
 
 #: kitsune/gallery/jinja2/gallery/includes/upload_media_form.html:57
 msgid "Progress"
@@ -2040,7 +2080,28 @@ msgstr ""
 msgid "username"
 msgstr "orúkọ àṣàmúlò"
 
-#: kitsune/groups/models.py:48
+#. This is a group visibility label, displayed in group profiles (such as
+#. https://support.mozilla.org/groups/forum-contributors/) and when viewing group
+#. tickets.
+#: kitsune/groups/models.py:36
+msgid "Private – members only"
+msgstr ""
+
+#. This is a group visibility label, displayed in group profiles (such as
+#. https://support.mozilla.org/groups/forum-contributors/) and when viewing group
+#. tickets.
+#: kitsune/groups/models.py:38
+msgid "Public – visible to all"
+msgstr ""
+
+#. This is a group visibility label, displayed in group profiles (such as
+#. https://support.mozilla.org/groups/forum-contributors/) and when viewing group
+#. tickets.
+#: kitsune/groups/models.py:40
+msgid "Moderated – visible to specific groups"
+msgstr ""
+
+#: kitsune/groups/models.py:51
 msgid "Avatar"
 msgstr "Avatar"
 
@@ -2245,7 +2306,7 @@ msgid_plural "{n} members"
 msgstr[0] ""
 msgstr[1] ""
 
-#: kitsune/groups/jinja2/groups/profile.html:117 kitsune/sumo/jinja2/includes/common_macros.html:609 kitsune/users/jinja2/users/edit_profile.html:4
+#: kitsune/groups/jinja2/groups/profile.html:117 kitsune/sumo/jinja2/includes/common_macros.html:557 kitsune/users/jinja2/users/edit_profile.html:4
 msgid "Edit Profile"
 msgstr "Ṣatunṣe Àwọn àkójọ ìwífún"
 
@@ -2326,7 +2387,7 @@ msgstr ""
 msgid "Pagination"
 msgstr ""
 
-#: kitsune/groups/jinja2/groups/includes/_tickets_content.html:87 kitsune/sumo/jinja2/layout/paginator.html:11
+#: kitsune/groups/jinja2/groups/includes/_tickets_content.html:87 kitsune/search/jinja2/search/results.html:87 kitsune/sumo/jinja2/layout/paginator.html:11
 msgid "Previous"
 msgstr "Tẹ́lẹ̀"
 
@@ -2335,7 +2396,7 @@ msgstr "Tẹ́lẹ̀"
 msgid "Page {n} of {total}"
 msgstr ""
 
-#: kitsune/groups/jinja2/groups/includes/_tickets_content.html:100 kitsune/sumo/jinja2/layout/paginator.html:35
+#: kitsune/groups/jinja2/groups/includes/_tickets_content.html:100 kitsune/search/jinja2/search/results.html:94 kitsune/sumo/jinja2/layout/paginator.html:35
 msgid "Next"
 msgstr "Tókàn"
 
@@ -2495,17 +2556,17 @@ msgstr "Fọ̀rọ̀wérọ̀"
 msgid "Delete thread \"{t}\" | {d} Discussion | Knowledge Base"
 msgstr ""
 
-#. {l} is the name of the locale.
-#: kitsune/kbforums/jinja2/kbforums/discussions.html:3
+#: kitsune/kbforums/jinja2/kbforums/discussions.html:2
 #, python-brace-format
 msgid "{locale_name} Discussions | Knowledge Base"
 msgstr "{locale_name} Ìfọ̀rọ̀wérọ̀ | Ìpínlẹ̀ Ìmọ̀"
 
-#: kitsune/kbforums/jinja2/kbforums/discussions.html:4
+#: kitsune/kbforums/jinja2/kbforums/discussions.html:3
 #, python-brace-format
 msgid "{locale_name} Discussions"
 msgstr "{locale_name} Ìfọ̀rọ̀wérọ̀"
 
+#. {l} is the name of the locale.
 #: kitsune/kbforums/jinja2/kbforums/discussions.html:8
 #, python-brace-format
 msgid "{l} Knowledge Base Discussions"
@@ -2753,13 +2814,13 @@ msgstr "Nígbà tí Jamaní pàdánù ìpele ìyípadà 2, alásopọ
 msgid "<b>Important:</b> Currently we are using a simplified model, where each article accounts for 1/50=2% of visits per language"
 msgstr "<b>Pàtàkì:</b> Lọ́wọ́lọ́wọ́ a ńlò àwòṣe tí ó rọrùn, ti ọ̀kọ̀ọ̀kan àwọn àkọ́ọ́lẹ̀ fún 1/50=2% àwọn olùbẹ̀wò èdè kọ̀ọ̀kan"
 
-#: kitsune/landings/jinja2/landings/home.html:14 kitsune/questions/jinja2/questions/question_details.html:288 kitsune/questions/jinja2/questions/question_list.html:57
+#: kitsune/landings/jinja2/landings/home.html:14 kitsune/questions/jinja2/questions/question_details.html:288 kitsune/questions/jinja2/questions/question_list.html:69
 #: kitsune/search/jinja2/search/form.html:13 kitsune/search/jinja2/search/results.html:13 kitsune/sumo/jinja2/base.html:187
 #, fuzzy
 msgid "Search Support"
 msgstr "Ṣàwarí Àtìlẹ́hìn Mozilla"
 
-#: kitsune/landings/jinja2/landings/home.html:18 kitsune/products/jinja2/products/product.html:38
+#: kitsune/landings/jinja2/landings/home.html:18 kitsune/products/jinja2/products/product.html:40
 #, fuzzy
 msgid "Popular Searches:"
 msgstr "Aròkọ olùdásí"
@@ -2776,7 +2837,7 @@ msgstr ""
 msgid "Tracking Protection"
 msgstr ""
 
-#: kitsune/landings/jinja2/landings/home.html:22 kitsune/products/jinja2/products/product.html:44
+#: kitsune/landings/jinja2/landings/home.html:22 kitsune/products/jinja2/products/product.html:46
 msgid "Windows 10"
 msgstr ""
 
@@ -2790,7 +2851,7 @@ msgstr "Kò ṣèrànwọ́"
 msgid "Pick your product"
 msgstr "Mú àbájáde"
 
-#: kitsune/landings/jinja2/landings/home.html:45 kitsune/products/jinja2/products/product.html:162 kitsune/questions/jinja2/questions/includes/aaq_macros.html:191
+#: kitsune/landings/jinja2/landings/home.html:45 kitsune/products/jinja2/products/product.html:164 kitsune/questions/jinja2/questions/includes/aaq_macros.html:192
 #, fuzzy
 msgid "Featured Articles"
 msgstr "Túmọ̀ Aròkọ"
@@ -2805,7 +2866,7 @@ msgid "Grow and share your expertise with others. Answer questions and improve o
 msgstr ""
 
 #: kitsune/landings/jinja2/landings/includes/join-our-community-callout.html:7 kitsune/landings/jinja2/landings/includes/volunteer-callout.html:7
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:61 kitsune/sumo/jinja2/includes/common_macros.html:46
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:62 kitsune/sumo/jinja2/includes/common_macros.html:46
 #, fuzzy
 msgid "Learn More"
 msgstr "kàsi"
@@ -2889,7 +2950,7 @@ msgstr "Ṣé ó dá ọ lójú pé o fẹ́ pa àwọn iṣẹ́ yíì
 msgid "Are you sure you want to delete this message?"
 msgstr "Ṣé ó dá ọ lójú pé o fẹ́ pa iṣẹ́ yíì rẹ́?"
 
-#: kitsune/messages/jinja2/messages/inbox.html:3 kitsune/messages/jinja2/messages/includes/macros.html:34 kitsune/sumo/jinja2/includes/common_macros.html:642
+#: kitsune/messages/jinja2/messages/inbox.html:3 kitsune/messages/jinja2/messages/includes/macros.html:34 kitsune/sumo/jinja2/includes/common_macros.html:590
 msgid "Inbox"
 msgstr "Àpótí àgbàwọ́lé"
 
@@ -2998,7 +3059,7 @@ msgstr ""
 msgid "Message Preview:"
 msgstr "Ṣàkọ́wò Iṣé:"
 
-#: kitsune/products/jinja2/products/documents.html:22 kitsune/products/jinja2/products/product.html:14 kitsune/wiki/jinja2/wiki/document.html:29
+#: kitsune/products/jinja2/products/documents.html:22 kitsune/products/jinja2/products/product.html:14 kitsune/wiki/jinja2/wiki/document.html:28
 #, python-brace-format
 msgid "{product} Help"
 msgstr "{product} Ìrànwọ́"
@@ -3007,195 +3068,203 @@ msgstr "{product} Ìrànwọ́"
 msgid "In English"
 msgstr "Ní Gẹ̀ẹ́sì"
 
-#: kitsune/products/jinja2/products/product.html:33
-#, fuzzy
-msgid "Support"
-msgstr "Ṣàtìlẹ́hìn Àpéjọ"
+#. Alt text for a product logo.
+#: kitsune/products/jinja2/products/product.html:33 kitsune/questions/jinja2/questions/includes/aaq_macros.html:170 kitsune/questions/jinja2/questions/includes/question_editing_frame.html:33
+#, python-brace-format
+msgid "{product} logo"
+msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:41 kitsune/products/jinja2/products/product.html:107
+#. A header displayed on product pages, such as
+#. https://support.mozilla.org/products/firefox
+#: kitsune/products/jinja2/products/product.html:35
+#, python-brace-format
+msgid "{product} Support"
+msgstr ""
+
+#: kitsune/products/jinja2/products/product.html:43 kitsune/products/jinja2/products/product.html:109
 #, fuzzy
 msgid "Update Firefox"
 msgstr "Ṣafikun èròjà atẹ̀lélànà"
 
-#: kitsune/products/jinja2/products/product.html:42 kitsune/products/jinja2/products/product.html:108
+#: kitsune/products/jinja2/products/product.html:44 kitsune/products/jinja2/products/product.html:110
 #, fuzzy
 msgid "Profiles"
 msgstr "Ìrísí olùlò"
 
-#: kitsune/products/jinja2/products/product.html:43 kitsune/products/jinja2/products/product.html:47 kitsune/products/jinja2/products/product.html:109
+#: kitsune/products/jinja2/products/product.html:45 kitsune/products/jinja2/products/product.html:49 kitsune/products/jinja2/products/product.html:111
 msgid "Firefox Sync"
 msgstr "Ìmúdọ́gba Firefox"
 
-#: kitsune/products/jinja2/products/product.html:48 kitsune/products/jinja2/products/product.html:78
+#: kitsune/products/jinja2/products/product.html:50 kitsune/products/jinja2/products/product.html:80
 msgid "Bookmarks"
 msgstr "Àwọn Àmì ìwé"
 
-#: kitsune/products/jinja2/products/product.html:49 kitsune/products/jinja2/products/product.html:52
+#: kitsune/products/jinja2/products/product.html:51 kitsune/products/jinja2/products/product.html:54
 #, fuzzy
 msgid "Send tab"
 msgstr "Firánṣẹ́"
 
-#: kitsune/products/jinja2/products/product.html:53
+#: kitsune/products/jinja2/products/product.html:55
 msgid "Night mode"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:54
+#: kitsune/products/jinja2/products/product.html:56
 #, fuzzy
 msgid "Block images"
 msgstr "Ṣàgbàsókè àwòrán:"
 
-#: kitsune/products/jinja2/products/product.html:57
+#: kitsune/products/jinja2/products/product.html:59
 #, fuzzy
 msgid "Policies"
 msgstr "Ìpàtẹ ìwò pátápátá..."
 
-#: kitsune/products/jinja2/products/product.html:58
+#: kitsune/products/jinja2/products/product.html:60
 #, fuzzy
 msgid "Customization"
 msgstr "Ìsọdìbílẹ̀"
 
-#: kitsune/products/jinja2/products/product.html:59
+#: kitsune/products/jinja2/products/product.html:61
 #, fuzzy
 msgid "extensions"
 msgstr "Àwọn Ìfàgùn"
 
-#: kitsune/products/jinja2/products/product.html:62 kitsune/products/jinja2/products/product.html:82
+#: kitsune/products/jinja2/products/product.html:64 kitsune/products/jinja2/products/product.html:84
 msgid "Turbo mode"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:63
+#: kitsune/products/jinja2/products/product.html:65
 #, fuzzy
 msgid "Voice commands"
 msgstr "O ní aròkọ"
 
-#: kitsune/products/jinja2/products/product.html:64
+#: kitsune/products/jinja2/products/product.html:66
 msgid "Receive tabs"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:67
+#: kitsune/products/jinja2/products/product.html:69
 #, fuzzy
 msgid "Manage devices"
 msgstr "Ohun elò alágbèká"
 
-#: kitsune/products/jinja2/products/product.html:68
+#: kitsune/products/jinja2/products/product.html:70
 #, fuzzy
 msgid "Download VPN"
 msgstr "gbàsílẹ̀"
 
-#: kitsune/products/jinja2/products/product.html:69
+#: kitsune/products/jinja2/products/product.html:71
 msgid "Limits"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:72
+#: kitsune/products/jinja2/products/product.html:74
 msgid "Lockwise iOS"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:73
+#: kitsune/products/jinja2/products/product.html:75
 msgid "Lockwise Android"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:74
+#: kitsune/products/jinja2/products/product.html:76
 #, fuzzy
 msgid "Lockwise desktop"
 msgstr "Ti ìbéèrè yíì"
 
-#: kitsune/products/jinja2/products/product.html:77
+#: kitsune/products/jinja2/products/product.html:79
 #, fuzzy
 msgid "Voice search"
 msgstr "Lo ìṣawarí ìpìlẹ̀"
 
-#: kitsune/products/jinja2/products/product.html:79
+#: kitsune/products/jinja2/products/product.html:81
 msgid "Full screen"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:83
+#: kitsune/products/jinja2/products/product.html:85
 #, fuzzy
 msgid "Rewards"
 msgstr "Àwọn tí wọ́n gba ẹ̀bùn-ìfakọ̀yọ àìpẹ́"
 
-#: kitsune/products/jinja2/products/product.html:84
+#: kitsune/products/jinja2/products/product.html:86
 msgid "Games"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:87
+#: kitsune/products/jinja2/products/product.html:89
 msgid "Room size"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:88
+#: kitsune/products/jinja2/products/product.html:90
 #, fuzzy
 msgid "Avatars"
 msgstr "Avatar"
 
-#: kitsune/products/jinja2/products/product.html:89
+#: kitsune/products/jinja2/products/product.html:91
 #, fuzzy
 msgid "VR"
 msgstr "R"
 
-#: kitsune/products/jinja2/products/product.html:92
+#: kitsune/products/jinja2/products/product.html:94
 msgid "Autocomplete"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:93
+#: kitsune/products/jinja2/products/product.html:95
 #, fuzzy
 msgid "Default search"
 msgstr "Lo ìṣawarí ìpìlẹ̀"
 
-#: kitsune/products/jinja2/products/product.html:94
+#: kitsune/products/jinja2/products/product.html:96
 #, fuzzy
 msgid "Desktop view"
 msgstr "àtẹ iṣẹ́"
 
-#: kitsune/products/jinja2/products/product.html:97
+#: kitsune/products/jinja2/products/product.html:99
 #, fuzzy
 msgid "Capture a screenshot"
 msgstr "Ìsopọ̀ yíyà aṣàfihàn"
 
-#: kitsune/products/jinja2/products/product.html:98
+#: kitsune/products/jinja2/products/product.html:100
 #, fuzzy
 msgid "Organize a screenshot"
 msgstr "Ìsopọ̀ yíyà aṣàfihàn"
 
-#: kitsune/products/jinja2/products/product.html:99
+#: kitsune/products/jinja2/products/product.html:101
 #, fuzzy
 msgid "Create a collection"
 msgstr "Ṣẹ̀dá àkọ́ọ́lẹ̀ mi"
 
-#: kitsune/products/jinja2/products/product.html:102
+#: kitsune/products/jinja2/products/product.html:104
 #, fuzzy
 msgid "Thunderbird profiles"
 msgstr "Ẹyẹ àrá dàrú"
 
-#: kitsune/products/jinja2/products/product.html:103
+#: kitsune/products/jinja2/products/product.html:105
 msgid "Migrate"
 msgstr ""
 
-#: kitsune/products/jinja2/products/product.html:104
+#: kitsune/products/jinja2/products/product.html:106
 msgid "Themes"
 msgstr ""
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:107 kitsune/products/jinja2/products/product.html:129 kitsune/questions/jinja2/questions/includes/aaq_macros.html:199
+#: kitsune/products/jinja2/products/product.html:131 kitsune/questions/jinja2/questions/includes/aaq_macros.html:200
 msgid "Topics"
 msgstr "Àkọlé"
 
-#: kitsune/products/jinja2/products/product.html:130
+#: kitsune/products/jinja2/products/product.html:132
 #, fuzzy
 msgid "Explore the knowledge base."
 msgstr "Ìṣàwarí Ìpinlẹ̀ Ìmọ̀"
 
-#: kitsune/products/jinja2/products/product.html:141
+#: kitsune/products/jinja2/products/product.html:143
 #, fuzzy
 msgid "Download Thunderbird"
 msgstr "Thunderbird"
 
-#: kitsune/products/jinja2/products/product.html:145 kitsune/sumo/jinja2/includes/common_macros.html:927
+#: kitsune/products/jinja2/products/product.html:147 kitsune/sumo/jinja2/includes/common_macros.html:875
 msgid "Systems and Languages"
 msgstr "Àwọn ìlànà ètò àti àwọn Èdè"
 
-#: kitsune/products/jinja2/products/product.html:146
+#: kitsune/products/jinja2/products/product.html:148
 msgid "Release Notes"
 msgstr "Àkọsílẹ̀ Ọ̀rọ̀-ìyípadà"
 
-#: kitsune/products/jinja2/products/product.html:147 kitsune/sumo/jinja2/base.html:370 kitsune/sumo/jinja2/includes/common_macros.html:929
+#: kitsune/products/jinja2/products/product.html:149 kitsune/sumo/jinja2/base.html:370 kitsune/sumo/jinja2/includes/common_macros.html:877
 msgid "Privacy"
 msgstr "Àdáni"
 
@@ -3215,7 +3284,7 @@ msgstr ""
 #. https://support.mozilla.org/questions/new and in Premium product question
 #. forms).
 #: kitsune/products/jinja2/products/includes/enterprise_banner.html:23 kitsune/products/jinja2/products/includes/topic_macros.html:94 kitsune/questions/jinja2/questions/includes/aaq_macros.html:6
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:217 kitsune/questions/jinja2/questions/new_question.html:41
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:218 kitsune/questions/jinja2/questions/new_question.html:41
 #, fuzzy
 msgid "Contact Support"
 msgstr "Ṣàwarí Àtìlẹ́hìn Mozilla"
@@ -3259,7 +3328,7 @@ msgstr[1] ""
 msgid "Firefox Professional Support"
 msgstr ""
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:70 kitsune/wiki/jinja2/wiki/includes/document_macros.html:475
+#: kitsune/products/jinja2/products/includes/topic_macros.html:70 kitsune/wiki/jinja2/wiki/includes/document_macros.html:467
 #, fuzzy
 msgid "Still need help?"
 msgstr "Nílò àwọn Àyípadà"
@@ -3280,13 +3349,18 @@ msgstr ""
 msgid "Talk to an Expert"
 msgstr ""
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:96 kitsune/questions/jinja2/questions/question_list.html:118
+#: kitsune/products/jinja2/products/includes/topic_macros.html:96 kitsune/questions/jinja2/questions/question_list.html:130
 #, fuzzy
 msgid "Ask the Community"
 msgstr "Béèrè lọ́wọ́ àwọn olùdásí"
 
 #: kitsune/products/jinja2/products/includes/topic_macros.html:107
-msgid "Popular"
+#, python-brace-format
+msgid "Popular {product} topics"
+msgstr ""
+
+#: kitsune/products/jinja2/products/includes/topic_macros.html:107
+msgid "Popular topics"
 msgstr ""
 
 #. Short label for a tab listing all articles for the selected topic (the full
@@ -3355,19 +3429,19 @@ msgstr "Àwọn ìdáhùn àìpẹ́ si %s"
 
 #. Unused. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:19
+#: kitsune/questions/forms.py:20
 msgid "URL of affected site"
 msgstr "URL ti ojúle wẹ́ẹ̀bù tí ó kàn"
 
 #. Unused. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:21
+#: kitsune/questions/forms.py:22
 msgid "Crash ID(s)"
 msgstr "Ìdàrú àwọn Ìdámọ̀"
 
 #. Unused. A description of the "Crash ID(s)" field, displayed when filing a
 #. question form (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:25
+#: kitsune/questions/forms.py:26
 #, fuzzy
 msgid ""
 "If you submit information to Mozilla when you crash, you'll be given a crash ID which uniquely identifies your crash and lets us look at details that may help identify the cause. To find your "
@@ -3380,179 +3454,179 @@ msgstr ""
 
 #. Unused. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:27
+#: kitsune/questions/forms.py:28
 msgid "This happens"
 msgstr "Èyí maa ńṣẹlẹ̀"
 
 #. Unused. An option for the "This happens" field, displayed when filing a question
 #. form (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:31
+#: kitsune/questions/forms.py:32
 msgid "Not sure how often"
 msgstr "Kò dájú iye igbà"
 
 #. Unused. An option for the "This happens" field, displayed when filing a question
 #. form (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:33
+#: kitsune/questions/forms.py:34
 msgid "Just once or twice"
 msgstr "Ẹ̀èkan tàbí ẹẹmejì"
 
 #. Unused. An option for the "This happens" field, displayed when filing a question
 #. form (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:35
+#: kitsune/questions/forms.py:36
 msgid "A few times a week"
 msgstr "Ìgbà díẹ̀ ní ọ̀sẹ̀"
 
 #. Unused. An option for the "This happens" field, displayed when filing a question
 #. form (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:37
+#: kitsune/questions/forms.py:38
 msgid "Every time Firefox opened"
 msgstr "Gbogbo ìgbà tí Firefox báṣí"
 
 #. Unused. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:40
+#: kitsune/questions/forms.py:41
 msgid "This started when..."
 msgstr "Èyí bẹ̀rẹ̀ nígbà..."
 
 #. Unused. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:42
+#: kitsune/questions/forms.py:43
 msgid "Installed plugins"
 msgstr "Ṣàgbékalẹ̀ àwọn àlékún"
 
 #. Unused. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:44
+#: kitsune/questions/forms.py:45
 msgid "Extension/plugin you are having trouble with"
 msgstr "Ìfàgùn/àgbéwọnú tí o níṣòrò pẹ̀lú"
 
 #. Unused. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:46
+#: kitsune/questions/forms.py:47
 msgid "Mobile device"
 msgstr "Ohun elò alágbèká"
 
 #. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:50
+#: kitsune/questions/forms.py:51
 msgid "Troubleshooting Information"
 msgstr "Ìwifún wíwá àléébù"
 
 #. A description of the "Troubleshooting Information" field, displayed when filing
 #. a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:52
+#: kitsune/questions/forms.py:53
 msgid "This information gives details about the internal workings of your browser that will help in answering your question."
 msgstr "Ìwifún yíì pèsè ẹ̀kúnrẹ́rẹ́ nípa iṣẹ́ inú ti ìgbàwálẹ̀ rẹ tí yóò ṣe ìrànwọ́ ìdáhùn ìbéèrè rẹ."
 
 #. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:54
+#: kitsune/questions/forms.py:55
 msgid "Summarize your question"
 msgstr ""
 
 #. A description of the "Summarize your question" field, displayed when filing a
 #. question form (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:56
+#: kitsune/questions/forms.py:57
 msgid "Please summarize your question in one sentence:"
 msgstr ""
 
 #. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:58
+#: kitsune/questions/forms.py:59
 msgid "How can we help?"
 msgstr ""
 
 #. A description of the "How can we help?" field, displayed when filing a question
 #. form (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:60
+#: kitsune/questions/forms.py:61
 msgid "Please include as much detail as possible. Also, remember to follow our <a href=\"https://support.mozilla.org/kb/mozilla-support-rules-guidelines\" target=\"_blank\">rules and guidelines</a>."
 msgstr ""
 
 #. A label for a field, displayed when filing a Firefox-related question form
 #. (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:62
+#: kitsune/questions/forms.py:63
 msgid "Firefox version"
 msgstr "Ẹ̀yà Firefox"
 
 #. A label for a field, displayed when filing a Thunderbird-related question form
 #. (e.g., on https://support.mozilla.org/questions/new/thunderbird/form).
-#: kitsune/questions/forms.py:64
+#: kitsune/questions/forms.py:65
 msgid "Thunderbird version"
 msgstr ""
 
 #. A description of the "Thunderbird version" field, displayed when filing a
 #. Thunderbird (desktop) question form on
 #. https://support.mozilla.org/questions/new/thunderbird/form.
-#: kitsune/questions/forms.py:66
+#: kitsune/questions/forms.py:67
 msgid "Find your version in Thunderbird App Menu ☰ > Help > About, e.g., 140.8.0esr, 149.0 or 150.0b1."
 msgstr ""
 
 #. A description of the "Thunderbird version" field, displayed when filing a
 #. Thunderbird for Android question form on
 #. https://support.mozilla.org/questions/new/thunderbird-android/form.
-#: kitsune/questions/forms.py:68
+#: kitsune/questions/forms.py:69
 msgid "Find your version in Thunderbird App Menu ☰ > Settings > Support/About, e.g., 17.0."
 msgstr ""
 
 #. A placeholder for the "Thunderbird version" field, displayed when filing a
 #. Thunderbird (desktop) question form on
 #. https://support.mozilla.org/questions/new/thunderbird/form.
-#: kitsune/questions/forms.py:70
+#: kitsune/questions/forms.py:71
 msgid "e.g., 140.8.0esr, 149.0 or 150.0b1"
 msgstr ""
 
 #. A placeholder for the "Thunderbird version" field, displayed when filing a
 #. Thunderbird for Android question form on
 #. https://support.mozilla.org/questions/new/thunderbird-android/form.
-#: kitsune/questions/forms.py:72
+#: kitsune/questions/forms.py:73
 msgid "e.g., 17.0"
 msgstr ""
 
 #. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:74
+#: kitsune/questions/forms.py:75
 msgid "Operating system"
 msgstr "Ìlànà-ètò ìmú ṣiṣẹ́"
 
 #. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:76
+#: kitsune/questions/forms.py:77
 #, fuzzy
 msgid "Which topic best describes your question?"
 msgstr "Ìsọ̀rí wo ló ṣàpèjúwe ìṣòro rẹ?"
 
 #. A label for a checkbox, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:78
+#: kitsune/questions/forms.py:79
 msgid "Email me when someone answers the thread"
 msgstr ""
 
 #. A placeholder for the "Post a Reply" editor.
-#: kitsune/questions/forms.py:81
+#: kitsune/questions/forms.py:82
 msgid "Enter your reply here."
 msgstr "Ṣàmúlò èsì rẹ níbí."
 
 #. A placeholder for the email field, displayed when subscribing to a question
 #. while not signed in.
-#: kitsune/questions/forms.py:83
+#: kitsune/questions/forms.py:84
 msgid "Enter your email address here."
 msgstr "Wọlé pẹ̀lú àdírẹ̀sì í-meélì rẹ níbí."
 
 #. A label suffix for optional fields, displayed when filing a question form (e.g.,
 #. on https://support.mozilla.org/questions/new/firefox/form). The leading space
 #. must be preserved.
-#: kitsune/questions/forms.py:167
+#: kitsune/questions/forms.py:168
 msgid " (optional):"
 msgstr ""
 
 #. An error message displayed under the "How can we help?" field when filing a
 #. question form if the submitted value contains too few non-HTML symbols.
-#: kitsune/questions/forms.py:186
+#: kitsune/questions/forms.py:187
 msgid "Question content cannot be empty."
 msgstr ""
 
-#: kitsune/questions/forms.py:340
+#: kitsune/questions/forms.py:348
 msgid "Please provide an email."
 msgstr "Jọ̀wọ́ pèsè í-meélì kan."
 
@@ -3615,7 +3689,7 @@ msgstr ""
 
 #. This is a question sort option. It is a part of a drop-down menu with no
 #. heading.
-#: kitsune/questions/views.py:136 kitsune/sumo/jinja2/sumo/includes/thread_post.html:132
+#: kitsune/questions/views.py:136
 msgid "Updated"
 msgstr "Ti ṣàfikún"
 
@@ -3672,51 +3746,51 @@ msgstr ""
 msgid "Done! Your question is now posted on the Mozilla community support forum. You can see your post anytime by visiting the {a_open}My Questions{a_close} page in your profile."
 msgstr ""
 
-#: kitsune/questions/views.py:1320
+#: kitsune/questions/views.py:1322
 msgid "Thank you for choosing a solution!"
 msgstr "O ṣeun tí o yan ọ̀nà àbáyọ!"
 
-#: kitsune/questions/views.py:1323
+#: kitsune/questions/views.py:1325
 msgid "This question already has a solution."
 msgstr "Ìbéèrè yí ní ọ̀nà àbáyọ náa."
 
-#: kitsune/questions/views.py:1344
+#: kitsune/questions/views.py:1346
 msgid "The solution was undone successfully."
 msgstr "Ọ̀nà àbáyọ tí a se àìse dáradára."
 
-#: kitsune/questions/views.py:1373 kitsune/questions/views.py:1437
+#: kitsune/questions/views.py:1375 kitsune/questions/views.py:1439
 msgid "You've hit your voting limit for now. Please try again later."
 msgstr ""
 
-#: kitsune/questions/views.py:1447
+#: kitsune/questions/views.py:1449
 msgid "Glad to hear it!"
 msgstr "Ìdùnnú láti gbọ!"
 
-#: kitsune/questions/views.py:1449
+#: kitsune/questions/views.py:1451
 msgid "Sorry to hear that."
 msgstr "Mábinú láti gbọ."
 
-#: kitsune/questions/views.py:1464
+#: kitsune/questions/views.py:1466
 msgid "You already voted on this reply."
 msgstr "O ti dibò fún èsì yíì."
 
-#: kitsune/questions/views.py:1749
+#: kitsune/questions/views.py:1751
 msgid "We were unable to register your request. You've exceeded the limit for the number of questions allowed to watch in a day. Please try again tomorrow."
 msgstr ""
 
-#: kitsune/questions/views.py:1777
+#: kitsune/questions/views.py:1779
 msgid "Could not send a message to that email address."
 msgstr "Kòle fi iṣẹ́ ránṣẹ́ sí àdírẹ́sì í-meélì yẹn."
 
-#: kitsune/questions/views.py:1783
+#: kitsune/questions/views.py:1785
 msgid "You will be notified of updates by email."
 msgstr "A o fi tó ọ létí ti ìṣàfikún nípa í-meélì."
 
-#: kitsune/questions/views.py:1785
+#: kitsune/questions/views.py:1787
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "O gbọ́dọ̀ gba í-meélì láìpẹ́ láti jẹ́rì ìforukọsílẹ̀ rẹ."
 
-#: kitsune/questions/views.py:2002
+#: kitsune/questions/views.py:2004
 msgid "A moderator must manually approve your post before it will be visible."
 msgstr ""
 
@@ -3835,7 +3909,7 @@ msgid "When editing a question, uploading new images or deleting existing ones w
 msgstr ""
 
 #. A button displayed when editing an existing question.
-#: kitsune/questions/jinja2/questions/edit_question.html:26 kitsune/questions/jinja2/questions/includes/question_editing_frame.html:192
+#: kitsune/questions/jinja2/questions/edit_question.html:26 kitsune/questions/jinja2/questions/includes/question_editing_frame.html:193
 msgid "Save Question"
 msgstr "Ṣàfipamọ́ Ìbéèrè"
 
@@ -3864,17 +3938,17 @@ msgstr "Ṣàtìlẹ́hìn Àpéjọ"
 msgid "Ask your question"
 msgstr "Béèrè ìbéèrè"
 
-#: kitsune/questions/jinja2/questions/new_question.html:63 kitsune/wiki/jinja2/wiki/includes/document_macros.html:288 kitsune/wiki/jinja2/wiki/includes/flag_form.html:34
+#: kitsune/questions/jinja2/questions/new_question.html:63 kitsune/wiki/jinja2/wiki/includes/document_macros.html:280 kitsune/wiki/jinja2/wiki/includes/flag_form.html:35
 #: kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:10 kitsune/wiki/jinja2/wiki/includes/survey_form.html:46 kitsune/wiki/jinja2/wiki/recent_revisions.html:31
 msgid "Submit"
 msgstr "Fàkalẹ̀"
 
 #: kitsune/questions/jinja2/questions/product_list.html:4 kitsune/questions/jinja2/questions/product_list.html:5 kitsune/questions/jinja2/questions/question_list.html:22
-#: kitsune/sumo/jinja2/includes/common_macros.html:247
+#: kitsune/sumo/jinja2/includes/common_macros.html:195
 msgid "Community Forums"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/product_list.html:14 kitsune/sumo/jinja2/includes/common_macros.html:264
+#: kitsune/questions/jinja2/questions/product_list.html:14 kitsune/sumo/jinja2/includes/common_macros.html:212
 #, fuzzy
 msgid "Browse by product"
 msgstr "Mú àbájáde"
@@ -4031,7 +4105,7 @@ msgstr "Àwọn ẹ̀kunrẹ́rẹ́ ìbéèrè"
 msgid "Product"
 msgstr "Àbájáde"
 
-#: kitsune/questions/jinja2/questions/question_details.html:436 kitsune/questions/jinja2/questions/question_list.html:289
+#: kitsune/questions/jinja2/questions/question_details.html:436 kitsune/questions/jinja2/questions/question_list.html:313
 msgid "Topic"
 msgstr "Orí ọ̀rọ̀"
 
@@ -4075,93 +4149,93 @@ msgstr "Ọ̀pọ̀ Àwọn Ohun Ìgbéjáde"
 msgid "{title} Community Forum"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/question_list.html:77
+#: kitsune/questions/jinja2/questions/question_list.html:89
 #, fuzzy, python-format
 msgid "%(recent_unanswered_count)s question in the last 24 hours has no reply. <a href=\"%(url)s\">Help solve it!</a>"
 msgid_plural "%(recent_unanswered_count)s questions in the last 24 hours have no reply. <a href=\"%(url)s\">Help solve them!</a>"
 msgstr[0] "<strong>%àwọn(recent_unanswered_count)</strong> ìbéèrè ní <strong>wákàtí 24 sẹ́hìn</strong> kòní èsì. <a href=\"%(url)s\">Ṣèrànwọ́ láti yanjú rẹ!</a>"
 msgstr[1] "<strong>%àwọn(recent_unanswered_count)</strong> àwọn ìbéèrè ní <strong>wákàtí 24 sẹ́hìn</strong> kòní èsì. <a href=\"%(url)s\">Ṣèrànwọ́ láti yanjú wọn!</a>"
 
-#: kitsune/questions/jinja2/questions/question_list.html:85
+#: kitsune/questions/jinja2/questions/question_list.html:97
 #, fuzzy, python-format
 msgid "%(recent_unanswered_count)s question in the last 24 hours has no reply. <a href=\"/contribute/forum\">Learn how to help solve it!</a>"
 msgid_plural "%(recent_unanswered_count)s questions in the last 24 hours have no reply. <a href=\"/contribute/forum\">Learn how to help solve them!</a>"
 msgstr[0] "<strong>%àwọn(recent_unanswered_count)</strong> ìbéèrè ní <strong>wákàtí 24 sẹ́hìn</strong> kòní èsì. <a href=\"%(url)s\">Ṣèrànwọ́ láti yanjú rẹ!</a>"
 msgstr[1] "<strong>%àwọn(recent_unanswered_count)</strong> àwọn ìbéèrè ní <strong>wákàtí 24 sẹ́hìn</strong> kòní èsì. <a href=\"%(url)s\">Ṣèrànwọ́ láti yanjú wọn!</a>"
 
-#: kitsune/questions/jinja2/questions/question_list.html:95
+#: kitsune/questions/jinja2/questions/question_list.html:107
 #, fuzzy
 msgid "0 questions in the last 24 hours have no reply. Good job!"
 msgstr "<strong>0</strong> àwọn ìbéèrè ní <strong>wákàtí 24 sẹ́hìn</strong> kòní èsì. <strong>Iṣẹ́ dídára!</strong>"
 
-#: kitsune/questions/jinja2/questions/question_list.html:99
+#: kitsune/questions/jinja2/questions/question_list.html:111
 #, fuzzy
 msgid "0 questions in the last 24 hours have no reply. <a href=\"/contribute/forum\">Learn how to help!</a>"
 msgstr "<strong>%àwọn(recent_unanswered_count)</strong> ìbéèrè ní <strong>wákàtí 24 sẹ́hìn</strong> kòní èsì. <a href=\"%(url)s\">Ṣèrànwọ́ láti yanjú rẹ!</a>"
 
-#: kitsune/questions/jinja2/questions/question_list.html:134
+#: kitsune/questions/jinja2/questions/question_list.html:146
 msgid "Showing questions for topic:"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/question_list.html:153
+#: kitsune/questions/jinja2/questions/question_list.html:165
 msgid "Clear topic filter"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/question_list.html:167
+#: kitsune/questions/jinja2/questions/question_list.html:179
 msgid "Showing questions tagged:"
 msgstr "Ń ṣàfihàn àwọn ìbéèrè aṣàmì:"
 
-#: kitsune/questions/jinja2/questions/question_list.html:181
+#: kitsune/questions/jinja2/questions/question_list.html:193
 msgid "Clear all tag filters"
 msgstr ""
 
 #. A name of the tab displaying all questions.
-#: kitsune/questions/jinja2/questions/question_list.html:198 kitsune/users/jinja2/users/questions_contributed.html:28 kitsune/users/jinja2/users/questions_contributed.html:47
+#: kitsune/questions/jinja2/questions/question_list.html:210 kitsune/users/jinja2/users/questions_contributed.html:28 kitsune/users/jinja2/users/questions_contributed.html:47
 msgctxt "questions"
 msgid "All"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/question_list.html:203
+#: kitsune/questions/jinja2/questions/question_list.html:215
 msgid "Attention needed"
 msgstr "A nílò àfiyèsí"
 
-#: kitsune/questions/jinja2/questions/question_list.html:208
+#: kitsune/questions/jinja2/questions/question_list.html:220
 msgid "Responded"
 msgstr "Ìfèsì"
 
-#: kitsune/questions/jinja2/questions/question_list.html:213
+#: kitsune/questions/jinja2/questions/question_list.html:225
 msgid "Done"
 msgstr "Tiṣe"
 
-#: kitsune/questions/jinja2/questions/question_list.html:219 kitsune/sumo/jinja2/sumo/includes/question_entry.html:179 kitsune/users/jinja2/users/questions_contributed.html:54
+#: kitsune/questions/jinja2/questions/question_list.html:231 kitsune/sumo/jinja2/sumo/includes/question_entry.html:179 kitsune/users/jinja2/users/questions_contributed.html:54
 msgid "Spam"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/question_list.html:253
+#: kitsune/questions/jinja2/questions/question_list.html:265
 #, fuzzy
 msgid "There are no questions that match the current filter settings."
 msgstr "Kòsí àkọlé dátà fún yíyàn àkókò yíì."
 
-#: kitsune/questions/jinja2/questions/question_list.html:281
+#: kitsune/questions/jinja2/questions/question_list.html:293
 msgid "Filter by"
 msgstr "Asẹ́ lọ́wọ́"
 
 #. A default option for the question "Filter by" filter, displayed when viewing
 #. support forums (e.g., on https://support.mozilla.org/questions/firefox).
-#: kitsune/questions/jinja2/questions/question_list.html:283
+#: kitsune/questions/jinja2/questions/question_list.html:295
 msgctxt "questions filter-by"
 msgid "All"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/question_list.html:326
+#: kitsune/questions/jinja2/questions/question_list.html:302
 msgid "Show me"
 msgstr "Fihan mí"
 
-#: kitsune/questions/jinja2/questions/question_list.html:327
+#: kitsune/questions/jinja2/questions/question_list.html:303
 msgid "Posts from everyone"
 msgstr "Àwọn ìfọ̀rọ̀ránṣẹ́ láti ọ̀dọ̀ gbogbo ènìyàn"
 
-#: kitsune/questions/jinja2/questions/question_list.html:328
+#: kitsune/questions/jinja2/questions/question_list.html:304
 msgid "My contributions"
 msgstr "Ìdasí mi"
 
@@ -4221,13 +4295,6 @@ msgstr "Ìyanjú ìṣòro 1 ṣèrànwọ́ bíi 1000 àwọn olùṣa
 msgid ""
 "This email is automatically sent by a robot. Our robot can’t respond to your question, but our forum contributors can! If you want to respond to them, please <a href=\"%(url)s\">click here</a>."
 msgstr "Afi í-meélì yí ránṣẹ́ ní aládàṣe lọ́wọ́ rọ́bọ̀tì. Rọ́bọ̀tì wa kòle dáhùn ìbéèrè rẹ, ṣùgbọ́n àwọn àpèjọ àwọn olùdasí wa lè dáhùn! Bí o báfẹ́ dáwọn lóhùn, jọ̀wọ́ <a href=\"%(url)s\">tẹ̀ níbí</a>."
-
-#. This is an email. Whitespace matters!
-#: kitsune/questions/jinja2/questions/email/new_answer.ltxt:5 kitsune/questions/jinja2/questions/email/new_answer_to_asker.ltxt:4 kitsune/questions/jinja2/questions/email/solution.html:5
-#: kitsune/questions/jinja2/questions/email/solution.ltxt:5 kitsune/wiki/jinja2/wiki/email/ready_for_review_weekly_digest.html:11
-#, python-brace-format
-msgid "Hi {username},"
-msgstr "Báwo {username},"
 
 #. This is an email. Whitespace matters!
 #: kitsune/questions/jinja2/questions/email/new_answer.ltxt:10
@@ -4377,7 +4444,7 @@ msgstr "Gbogbo Àwọn Ohun Ìgbéjáde"
 msgid "Explore Solutions"
 msgstr "Ọ̀nà àbáyọ Ìrànwọ́"
 
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:109 kitsune/sumo/jinja2/includes/common_macros.html:352
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:109 kitsune/sumo/jinja2/includes/common_macros.html:300
 msgid "Ask a Question"
 msgstr "Béèrè Ìbéèrè"
 
@@ -4412,62 +4479,56 @@ msgid "Still need help? Continue to ask your question and get help."
 msgstr ""
 
 #. A button.
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:149 kitsune/questions/jinja2/questions/includes/aaq_macros.html:230 kitsune/users/jinja2/users/auth.html:39
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:149 kitsune/questions/jinja2/questions/includes/aaq_macros.html:231 kitsune/users/jinja2/users/auth.html:39
 msgid "Continue"
-msgstr ""
-
-#. Alt text for a product logo.
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:169 kitsune/questions/jinja2/questions/includes/question_editing_frame.html:32
-#, python-brace-format
-msgid "{product} logo"
 msgstr ""
 
 #. A header, displayed when asking a new question with a product selected (e.g., on
 #. https://support.mozilla.org/questions/new/firefox).
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:172
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:173
 #, python-brace-format
 msgid "{product} Solutions"
 msgstr ""
 
 #. Introduction, displayed when asking a new question with a product selected
 #. (e.g., on https://support.mozilla.org/questions/new/firefox).
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:178
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:179
 msgid "Browse our self-help options first or continue to ask your question and get help."
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:215
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:216
 msgid "Ask the community"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:223
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:224
 msgid "You can also get help by posting your question in the Community Forum."
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:225
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:226
 msgid "You can also post your question directly to our support team for assistance."
 msgstr ""
 
 #. A button for sharing troubleshooting data when asking a new question (displayed,
 #. e,g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:246
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:247
 msgid "Share Data"
 msgstr "Pín Dátà"
 
 #. Deprecated
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:252
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:253
 msgid "We can't automatically get your browser's troubleshooting data, please <a href=\"https://support.mozilla.org/kb/use-troubleshooting-information-page-fix-firefox\">try these manual steps</a>."
 msgstr ""
 
 #. Deprecated. Try these manual steps refers to
 #. https://support.mozilla.org/kb/use-troubleshooting-information-page-fix-firefox
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:259
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:260
 #, python-format
 msgid "We can't automatically get your browser's troubleshooting data, please %(a_open)stry these manual steps%(a_close)s."
 msgstr ""
 
 #. Try these manual steps refers to
 #. https://support.mozilla.org/kb/use-troubleshooting-information-page-fix-firefox
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:264
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:265
 #, python-format
 msgid "We’re unable to pull your browser’s troubleshooting data – please %(a_open)stry these manual steps%(a_close)s."
 msgstr ""
@@ -4475,20 +4536,20 @@ msgstr ""
 #. Alt text for the helpful tip icon displayed when filing a new question form
 #. (e.g., on https://support.mozilla.org/questions/new/firefox/form). Source:
 #. https://assets-prod.sumo.prod.webservices.mozgcp.net/static/highlight.975d9eebb1f0b621.svg
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:277
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:278
 msgid "Helpful Tip icon"
 msgstr ""
 
 #. A header for the Helpful Tip card displayed when filing a new question form
 #. (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:279
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:280
 #, fuzzy
 msgid "Helpful Tip!"
 msgstr "Èsì Tí ó Ranni Lọ́wọ́"
 
 #. Text for the Helpful Tip card displayed when filing a new question form (e.g.,
 #. on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:283
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:284
 msgid "Follow through. Sometimes, our volunteers would ask you for more information or to test out certain scenarios. The sooner you can do this, the sooner they would know how to fix it."
 msgstr "Tẹ̀lé jálẹ̀. Nígbà míìràn, àwọn olùfarajìn wa yóò bèèrè ìwifún si lọ́wọ rẹ tàbí láti dán àwọn ojú ìṣẹ̀lẹ̀ wò. Kíá bí o le ṣẹ ṣẹ̀yí, bẹ́ẹ̀ni wọn yóò mọ bí wọ́n a ti yanjú rẹ̀."
 
@@ -4561,42 +4622,42 @@ msgstr "Má sàmì bii ìwé àìbèèrèfún"
 #. Alt text for the illustration of community displayed when filing a new question
 #. form (e.g., on https://support.mozilla.org/questions/new/firefox/form). Source:
 #. https://assets-prod.sumo.prod.webservices.mozgcp.net/static/Mozilla-Heads-Keith-Negley-180628__400.99f12ceb616ae784.png
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:55
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:56
 msgid "Illustration of community"
 msgstr ""
 
 #. A header for the Community card displayed when filing a new question form (e.g.,
 #. on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:58
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:59
 msgid "Our Community is here to help"
 msgstr ""
 
 #. Text for the Community card displayed when filing a new question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:60
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:61
 msgid "Kindness is at the heart of our community. Our volunteers are happy to share their time and Firefox knowledge with you."
 msgstr ""
 
 #. An introduction, displayed when filing a new question form regarding sign-in
 #. troubles. To access it, try asking a question about any product while being not
 #. signed in and then click "I can't sign in to my Mozilla account".
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:86
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:87
 msgid "Can't sign in to your account and need help? You've found the right place. Complete the form below to contact our support staff."
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:93
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:94
 msgid ""
 "Submissions via this form are only visible to Mozilla employees and authorized support agents and are not publicly visible. If your issue involves sensitive information, limit the details "
 "submitted, avoiding full logs or traces."
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:97
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:98
 msgid "Be specific. Telling us “YouTube videos are always choppy” is much more helpful than “something is broken”."
 msgstr ""
 
 #. An advice, displayed when filing a new question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:104
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:105
 msgid ""
 "Be nice and be specific. Our volunteers are Mozilla users just like you who give their own time to help. Telling us “YouTube videos are always choppy” is much more helpful than “something is "
 "broken”."
@@ -4605,21 +4666,21 @@ msgstr ""
 #. Text introducing the Firefox version and the Operating system fields when filing
 #. a new question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:124
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:125
 msgid "We've made some educated guesses about your current browser and operating system."
 msgstr "Ati ṣe àwọn àbá ọ̀mọ̀wé nípa ìgbàwalẹ́ rẹ lọ́wọ́lọ́wọ́ àti ìlànà-ètò ìmú ṣiṣẹ́."
 
 #. A link that shows the Firefox version and the Operating system fields when
 #. filing a new question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:126
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:127
 msgid "Show details &raquo;"
 msgstr "Ṣàfihàn ẹ̀kúnrẹ́rẹ́ &raquo;"
 
 #. A link that hides the Firefox version and the Operating system fields when
 #. filing a new question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:128
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:129
 msgid "Hide details &raquo;"
 msgstr "Pamọ́ ẹ̀kúnrẹ́rẹ́ &raquo;"
 
@@ -4627,7 +4688,7 @@ msgstr "Pamọ́ ẹ̀kúnrẹ́rẹ́ &raquo;"
 #. form regarding sign-in troubles. To access it, try asking a question about any
 #. product while being not signed in and then click "I can't sign in to my Mozilla
 #. account".
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:151
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:152
 msgid "Include details such as your account e-mail or specifics about your sign-in issue to help us get you back into your account quicker."
 msgstr ""
 
@@ -4787,7 +4848,7 @@ msgstr ""
 msgid "Relevant to"
 msgstr "Báramu pẹ̀lú"
 
-#: kitsune/search/views.py:86
+#: kitsune/search/views.py:88
 msgid "Invalid search data."
 msgstr "Ìṣàwarí dátà àìfẹsẹ̀múlẹ̀."
 
@@ -4821,9 +4882,18 @@ msgstr "Àtìlẹ́hìn Mozilla"
 msgid "Search the Mozilla Support Knowledge Base and Support Forum."
 msgstr "Ṣàwarí Ìpínlẹ̀ Àtìlẹhìn Ìmọ̀ Mozilla àti Àpèjọ Àtìlẹ́hìn."
 
+#. Hybrid search shows a bounded ranking; {n} approximates all potential matches,
+#. not pageable results.
+#: kitsune/search/jinja2/search/results.html:28
+#, python-brace-format
+msgid "Showing the most relevant result for <strong>{q}</strong> in <strong>{product}</strong> from about <strong>{n}</strong> potential match"
+msgid_plural "Showing the most relevant results for <strong>{q}</strong> in <strong>{product}</strong> from about <strong>{n}</strong> potential matches"
+msgstr[0] ""
+msgstr[1] ""
+
 #. {n} is the number of search results, {q} is the search query, {product} is the
 #. product.
-#: kitsune/search/jinja2/search/results.html:27
+#: kitsune/search/jinja2/search/results.html:33
 #, python-brace-format
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> for <strong>{product}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> for <strong>{product}</strong>"
@@ -4831,12 +4901,12 @@ msgstr[0] "Rí <strong>{n}</strong> èsì fún <strong>{q}</strong> fún <s
 msgstr[1] "Rí <strong>{n}</strong> àwọn èsì fún <strong>{q}</strong> fún <strong>{product}</strong>"
 
 #. {q} is the search query, {l} is the language searched.
-#: kitsune/search/jinja2/search/results.html:42
+#: kitsune/search/jinja2/search/results.html:48
 #, python-brace-format
 msgid "Sorry! 0 results found for ‘{q}’ in ‘{l}’"
 msgstr ""
 
-#: kitsune/search/jinja2/search/results.html:45
+#: kitsune/search/jinja2/search/results.html:51
 msgid "Try searching again with a different keyword, or browse our featured articles and threads below instead."
 msgstr ""
 
@@ -4862,23 +4932,23 @@ msgid "Try searching again with different keywords."
 msgstr ""
 
 #. This is a question status.
-#: kitsune/search/jinja2/search/includes/result.html:32 kitsune/sumo/jinja2/sumo/includes/question_entry.html:113
+#: kitsune/search/jinja2/search/includes/result.html:41 kitsune/sumo/jinja2/sumo/includes/question_entry.html:113
 msgctxt "question"
 msgid "Solved"
 msgstr ""
 
-#: kitsune/search/jinja2/search/includes/result.html:42
+#: kitsune/search/jinja2/search/includes/result.html:51
 msgid "No replies"
 msgstr "Kòsí àwọn èsì"
 
-#: kitsune/search/jinja2/search/includes/result.html:46
+#: kitsune/search/jinja2/search/includes/result.html:55
 #, python-brace-format
 msgid "1 person has this problem"
 msgid_plural "{n} people have this problem"
 msgstr[0] "Ẹnìkan ní ìṣòro yíì"
 msgstr[1] "{n} àwọn ènìyàn ní ìṣòro yíì"
 
-#: kitsune/search/jinja2/search/includes/result.html:51
+#: kitsune/search/jinja2/search/includes/result.html:60
 #, python-brace-format
 msgid "1 new this week"
 msgid_plural "{n} new this week"
@@ -10149,7 +10219,7 @@ msgstr "Twitter"
 msgid "Join our Community"
 msgstr "Béèrè lọ́wọ́ àwọn olùdásí"
 
-#: kitsune/sumo/jinja2/base.html:260 kitsune/sumo/jinja2/includes/common_macros.html:148
+#: kitsune/sumo/jinja2/base.html:260 kitsune/sumo/jinja2/includes/common_macros.html:96
 #, fuzzy
 msgid "Explore Help Articles"
 msgstr "Túmọ̀ Aròkọ Ìrànwọ́"
@@ -10163,7 +10233,7 @@ msgstr "Firefox"
 msgid "Download"
 msgstr "gbàsílẹ̀"
 
-#: kitsune/sumo/jinja2/base.html:270 kitsune/sumo/jinja2/includes/common_macros.html:174 kitsune/sumo/jinja2/includes/common_macros.html:274 kitsune/sumo/jinja2/includes/common_macros.html:380
+#: kitsune/sumo/jinja2/base.html:270 kitsune/sumo/jinja2/includes/common_macros.html:122 kitsune/sumo/jinja2/includes/common_macros.html:222 kitsune/sumo/jinja2/includes/common_macros.html:328
 msgid "Firefox desktop"
 msgstr ""
 
@@ -10209,11 +10279,11 @@ msgstr ""
 msgid "Nightly for Android"
 msgstr "Firefox fún Android"
 
-#: kitsune/sumo/jinja2/base.html:289 kitsune/sumo/jinja2/includes/common_macros.html:410
+#: kitsune/sumo/jinja2/base.html:289 kitsune/sumo/jinja2/includes/common_macros.html:358
 msgid "Mozilla Account"
 msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:292 kitsune/sumo/jinja2/includes/common_macros.html:668
+#: kitsune/sumo/jinja2/base.html:292 kitsune/sumo/jinja2/includes/common_macros.html:616
 #, fuzzy
 msgid "Sign In/Up"
 msgstr "Wọlé"
@@ -10326,209 +10396,205 @@ msgstr ""
 msgid "<strong>Avoid support scams.</strong> We will never ask you to call or text a phone number or share personal information. Please report suspicious activity using the “Report Abuse” option."
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:153 kitsune/sumo/jinja2/includes/common_macros.html:252 kitsune/sumo/jinja2/includes/common_macros.html:357
-#: kitsune/sumo/jinja2/includes/common_macros.html:516 kitsune/sumo/jinja2/includes/common_macros.html:593
+#: kitsune/sumo/jinja2/includes/common_macros.html:101 kitsune/sumo/jinja2/includes/common_macros.html:200 kitsune/sumo/jinja2/includes/common_macros.html:305
+#: kitsune/sumo/jinja2/includes/common_macros.html:464 kitsune/sumo/jinja2/includes/common_macros.html:541
 #, fuzzy
 msgid "Close Firefox menu"
 msgstr "Ìmúdọ́gba Firefox"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:164
+#: kitsune/sumo/jinja2/includes/common_macros.html:112
 msgid "Explore by product"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:184 kitsune/sumo/jinja2/includes/common_macros.html:450
+#: kitsune/sumo/jinja2/includes/common_macros.html:132 kitsune/sumo/jinja2/includes/common_macros.html:398
 #, fuzzy
 msgid "Mozilla VPN"
 msgstr "Mozillians"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:194 kitsune/sumo/jinja2/includes/common_macros.html:294 kitsune/sumo/jinja2/includes/common_macros.html:430
+#: kitsune/sumo/jinja2/includes/common_macros.html:142 kitsune/sumo/jinja2/includes/common_macros.html:242 kitsune/sumo/jinja2/includes/common_macros.html:378
 #, fuzzy
 msgid "Firefox for iOS"
 msgstr "Firefox fún iOS"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:204 kitsune/sumo/jinja2/includes/common_macros.html:304 kitsune/sumo/jinja2/includes/common_macros.html:400
+#: kitsune/sumo/jinja2/includes/common_macros.html:152 kitsune/sumo/jinja2/includes/common_macros.html:252 kitsune/sumo/jinja2/includes/common_macros.html:348
 msgid "Thunderbird"
 msgstr "Thunderbird"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:214 kitsune/sumo/jinja2/includes/common_macros.html:314 kitsune/sumo/jinja2/includes/common_macros.html:420
+#: kitsune/sumo/jinja2/includes/common_macros.html:162 kitsune/sumo/jinja2/includes/common_macros.html:262 kitsune/sumo/jinja2/includes/common_macros.html:368
 #, fuzzy
 msgid "Firefox for Android"
 msgstr "Firefox fún Android"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:221
+#: kitsune/sumo/jinja2/includes/common_macros.html:169
 msgid "View all products"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:237
+#: kitsune/sumo/jinja2/includes/common_macros.html:185
 msgid "Explore by topic"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:284 kitsune/sumo/jinja2/includes/common_macros.html:460
+#: kitsune/sumo/jinja2/includes/common_macros.html:232 kitsune/sumo/jinja2/includes/common_macros.html:408
 #, fuzzy
 msgid "Firefox Focus"
 msgstr "Ìmúdọ́gba Firefox"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:324
+#: kitsune/sumo/jinja2/includes/common_macros.html:272
 msgid "View all forums"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:340
+#: kitsune/sumo/jinja2/includes/common_macros.html:288
 msgid "Browse all forum threads by topic"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:370
+#: kitsune/sumo/jinja2/includes/common_macros.html:318
 msgid "Get help with"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:390
+#: kitsune/sumo/jinja2/includes/common_macros.html:338
 #, fuzzy
 msgid "Firefox for Enterprise"
 msgstr "Firefox fún Android"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:440
+#: kitsune/sumo/jinja2/includes/common_macros.html:388
 msgid "Thunderbird for Android"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:470
+#: kitsune/sumo/jinja2/includes/common_macros.html:418
 #, fuzzy
 msgid "Firefox Relay"
 msgstr "Ìmúdọ́gba Firefox"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:480
+#: kitsune/sumo/jinja2/includes/common_macros.html:428
 msgid "Monitor"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:490
+#: kitsune/sumo/jinja2/includes/common_macros.html:438
 msgid "View all"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:506 kitsune/sumo/jinja2/includes/common_macros.html:511
+#: kitsune/sumo/jinja2/includes/common_macros.html:454 kitsune/sumo/jinja2/includes/common_macros.html:459
 #, fuzzy
 msgid "Contribute"
 msgstr "Ti dásí"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:530 kitsune/sumo/jinja2/includes/common_macros.html:719
+#: kitsune/sumo/jinja2/includes/common_macros.html:478 kitsune/sumo/jinja2/includes/common_macros.html:667
 msgid "Contributor discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:549 kitsune/sumo/jinja2/includes/common_macros.html:716
+#: kitsune/sumo/jinja2/includes/common_macros.html:497 kitsune/sumo/jinja2/includes/common_macros.html:664
 msgid "Contributor tools"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:572 kitsune/sumo/jinja2/includes/common_macros.html:924
+#: kitsune/sumo/jinja2/includes/common_macros.html:520 kitsune/sumo/jinja2/includes/common_macros.html:872
 #, fuzzy
 msgid "Download Firefox"
 msgstr "Gbàwálẹ̀ ìṣẹ̀dá titun"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:605
+#: kitsune/sumo/jinja2/includes/common_macros.html:553
 #, fuzzy
 msgid "Manage your information and see your contributions."
 msgstr "Ṣàkóso àwọn ìbuyìfún àti àfikún"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:625
+#: kitsune/sumo/jinja2/includes/common_macros.html:573
 msgid "Settings"
 msgstr "Aatò"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:627
+#: kitsune/sumo/jinja2/includes/common_macros.html:575
 #, fuzzy
 msgid "Manage your privacy and notification preferences."
 msgstr "Ṣàyípadà àwọn ìbuyìfún í-meélì rẹ̀"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:647
+#: kitsune/sumo/jinja2/includes/common_macros.html:595
 #, fuzzy
 msgid "Exchange messages with other contributors."
 msgstr "Fi iṣẹ́ sílẹ̀ fún {contributor}:"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:657 kitsune/users/jinja2/users/profile.html:233
+#: kitsune/sumo/jinja2/includes/common_macros.html:605 kitsune/users/jinja2/users/profile.html:233
 msgid "Sign Out"
 msgstr "Jáde"
 
 #. Text displayed above the content editor (particularly, when posting a question
 #. or a reply). Rules and guidelines refer to
 #. https://support.mozilla.org/kb/mozilla-support-rules-guidelines
-#: kitsune/sumo/jinja2/includes/common_macros.html:677
+#: kitsune/sumo/jinja2/includes/common_macros.html:625
 #, python-format
 msgid "Remember to follow our %(a_open)srules and guidelines%(a_close)s."
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:732
+#: kitsune/sumo/jinja2/includes/common_macros.html:680
 msgid "SUMO community discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:739
-msgid "Support forum discussions"
-msgstr ""
-
-#: kitsune/sumo/jinja2/includes/common_macros.html:746
+#: kitsune/sumo/jinja2/includes/common_macros.html:694
 msgid "Article discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:753
+#: kitsune/sumo/jinja2/includes/common_macros.html:701
 msgid "Localization discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:761
+#: kitsune/sumo/jinja2/includes/common_macros.html:709
 msgid "Forum moderator discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:770
+#: kitsune/sumo/jinja2/includes/common_macros.html:718
 msgid "View all discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:779
+#: kitsune/sumo/jinja2/includes/common_macros.html:727
 msgid "Knowledge base discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:786
+#: kitsune/sumo/jinja2/includes/common_macros.html:734
 msgid "Off topic discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:793
+#: kitsune/sumo/jinja2/includes/common_macros.html:741
 msgid "Lost thread discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:805
+#: kitsune/sumo/jinja2/includes/common_macros.html:753
 msgid "Moderate forum content"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:813
+#: kitsune/sumo/jinja2/includes/common_macros.html:761
 msgid "Knowledge base dashboards"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:820
+#: kitsune/sumo/jinja2/includes/common_macros.html:768
 msgid "Guides"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:836
-msgid "Media gallery"
+#: kitsune/sumo/jinja2/includes/common_macros.html:784
+msgid "Image gallery"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:843
+#: kitsune/sumo/jinja2/includes/common_macros.html:791
 msgid "Recent revisions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:850
+#: kitsune/sumo/jinja2/includes/common_macros.html:798
 msgid "Community hub"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:859 kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/jinja2/wiki/locale_details.html:9
+#: kitsune/sumo/jinja2/includes/common_macros.html:807 kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/jinja2/wiki/locale_details.html:9
 #: kitsune/wiki/jinja2/wiki/locale_list.html:4 kitsune/wiki/jinja2/wiki/locale_list.html:10
 msgid "Locales"
 msgstr "Tìbílẹ̀"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:866
+#: kitsune/sumo/jinja2/includes/common_macros.html:814
 msgid "Locale metrics"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:872
+#: kitsune/sumo/jinja2/includes/common_macros.html:820
 msgid "Aggregated metrics"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:878
+#: kitsune/sumo/jinja2/includes/common_macros.html:826
 msgid "Show More"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:928
+#: kitsune/sumo/jinja2/includes/common_macros.html:876
 msgid "What's New"
 msgstr "Kíni Titun"
 
@@ -10648,32 +10714,56 @@ msgstr ""
 msgid "Ticket #{id}"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:200 kitsune/sumo/jinja2/sumo/includes/thread_post.html:76
+#. A tooltip for the product title link on question cards, which will filter
+#. questions by the given product. Question cards are displayed when viewing a
+#. question list, e.g., on a support forum:
+#. https://support.mozilla.org/questions/firefox
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:202 kitsune/sumo/jinja2/sumo/includes/thread_post.html:77
 #, python-brace-format
 msgid "{product} questions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:225 kitsune/sumo/jinja2/sumo/includes/thread_post.html:94
+#. A tooltip for the topic title link on question cards, which will filter
+#. questions by the given topic. Question cards are displayed when viewing a
+#. question list, e.g., on a support forum:
+#. https://support.mozilla.org/questions/firefox
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:229 kitsune/sumo/jinja2/sumo/includes/thread_post.html:96
 #, python-brace-format
 msgid "{topic} questions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:241
-msgid "asked by"
+#. This is a label displayed on question cards for contributors. `name` is the
+#. display name of the question author, `when` is how long ago the question was
+#. posted, and the other variables are HTML markup. Question cards are displayed
+#. when viewing a question list, e.g., on a support forum:
+#. https://support.mozilla.org/questions/firefox
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:247
+#, python-format
+msgid "asked by %(b_open)s%(name)s%(b_close)s %(when)s"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:246 kitsune/sumo/jinja2/sumo/includes/thread_post.html:112
+#. This is a label displayed on question cards. `when` is how long ago the question
+#. was posted. Question cards are displayed when viewing a question list, e.g., on
+#. a support forum: https://support.mozilla.org/questions/firefox
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:254 kitsune/sumo/jinja2/sumo/includes/thread_post.html:116
 #, python-brace-format
 msgid "asked {when}"
 msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:252 kitsune/sumo/jinja2/sumo/includes/thread_post.html:118
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:261 kitsune/sumo/jinja2/sumo/includes/thread_post.html:123
 #, python-brace-format
 msgid "Last reply by {user}"
 msgstr "Èsì ìkẹhìn lọ́wọ́ {user}"
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:259 kitsune/sumo/jinja2/sumo/includes/thread_post.html:125
-msgid "replied"
+#. This is a label displayed on question cards and at the top of question pages,
+#. providing info about the latest reply in the thread (if present). `name` is the
+#. display name of the reply author, `when` is how long ago the reply was posted,
+#. and the other variables are HTML markup. Question cards are displayed when
+#. viewing a question list, e.g., on a support forum:
+#. https://support.mozilla.org/questions/firefox
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:269 kitsune/sumo/jinja2/sumo/includes/thread_post.html:131
+#, python-format
+msgid "%(b_open)s%(name)s%(b_close)s replied %(a_open)s%(when)s%(a_close)s"
 msgstr ""
 
 #: kitsune/sumo/jinja2/sumo/includes/thread_post.html:37
@@ -10694,6 +10784,11 @@ msgid "view"
 msgid_plural "views"
 msgstr[0] "Àtúnyẹ́wò"
 msgstr[1] "Àtúnyẹ́wò"
+
+#: kitsune/sumo/jinja2/sumo/includes/thread_post.html:141
+#, python-brace-format
+msgid "Updated {when}"
+msgstr ""
 
 #: kitsune/sumo/templatetags/jinja_helpers.py:180
 msgid "read more"
@@ -11562,10 +11657,6 @@ msgstr "Ìrísí olùlò mi"
 msgid "Edit my profile"
 msgstr "Ṣàtúntò ìrísí olùlò mi"
 
-#: kitsune/users/jinja2/users/includes/macros.html:8
-msgid "Edit settings"
-msgstr "Ṣàtúntò ààtò"
-
 #: kitsune/users/jinja2/users/includes/macros.html:9
 #, fuzzy
 msgid "Edit contribution areas"
@@ -11612,7 +11703,7 @@ msgid ""
 "  account."
 msgstr ""
 
-#: kitsune/users/templatetags/jinja_helpers.py:78 kitsune/users/templatetags/jinja_helpers.py:90
+#: kitsune/users/templatetags/jinja_helpers.py:79 kitsune/users/templatetags/jinja_helpers.py:91
 msgid "Private message"
 msgstr "Iṣẹ́ àdáni"
 
@@ -11819,7 +11910,7 @@ msgstr "Nílò àyípadà:"
 msgid "Comment:"
 msgstr "Ìdáásí:"
 
-#: kitsune/wiki/forms.py:329 kitsune/wiki/jinja2/wiki/includes/document_macros.html:214 kitsune/wiki/jinja2/wiki/review_revision.html:73 kitsune/wiki/jinja2/wiki/review_translation.html:85
+#: kitsune/wiki/forms.py:329 kitsune/wiki/jinja2/wiki/includes/document_macros.html:206 kitsune/wiki/jinja2/wiki/review_revision.html:73 kitsune/wiki/jinja2/wiki/review_translation.html:85
 #: kitsune/wiki/jinja2/wiki/translate.html:154
 msgid "Keywords:"
 msgstr "Àwọn kókó ọ̀rọ̀:"
@@ -12059,86 +12150,86 @@ msgstr "gbàsílẹ̀"
 msgid "browserID"
 msgstr "aṣàwákiriID"
 
-#: kitsune/wiki/views.py:977
+#: kitsune/wiki/views.py:987
 msgid "You cannot translate this document."
 msgstr "O kòle túmọ̀ àkọsílẹ̀ yìí."
 
-#: kitsune/wiki/views.py:1314 kitsune/wiki/views.py:1333
+#: kitsune/wiki/views.py:1324 kitsune/wiki/views.py:1343
 msgid "Thanks for your feedback!"
 msgstr ""
 
-#: kitsune/wiki/views.py:1390
+#: kitsune/wiki/views.py:1400
 msgid "You voted \"Yes 👍\" Please tell us more"
 msgstr ""
 
-#: kitsune/wiki/views.py:1392
+#: kitsune/wiki/views.py:1402
 msgid "Article is accurate"
 msgstr ""
 
-#: kitsune/wiki/views.py:1395
+#: kitsune/wiki/views.py:1405
 msgid "Article is easy to understand"
 msgstr ""
 
-#: kitsune/wiki/views.py:1397
+#: kitsune/wiki/views.py:1407
 msgid "The visuals are helpful"
 msgstr ""
 
-#: kitsune/wiki/views.py:1400
+#: kitsune/wiki/views.py:1410
 msgid "Article provided the information I needed"
 msgstr ""
 
-#: kitsune/wiki/views.py:1402 kitsune/wiki/views.py:1422
+#: kitsune/wiki/views.py:1412 kitsune/wiki/views.py:1432
 msgid "Other"
 msgstr "Òmíìràn"
 
-#: kitsune/wiki/views.py:1410
+#: kitsune/wiki/views.py:1420
 msgid "You voted \"No 👎\" Please tell us more"
 msgstr ""
 
-#: kitsune/wiki/views.py:1412
+#: kitsune/wiki/views.py:1422
 msgid "Article is inaccurate"
 msgstr ""
 
-#: kitsune/wiki/views.py:1413
+#: kitsune/wiki/views.py:1423
 msgid "Article is confusing"
 msgstr ""
 
-#: kitsune/wiki/views.py:1416
+#: kitsune/wiki/views.py:1426
 msgid "Missing, unclear, or unhelpful visuals"
 msgstr ""
 
-#: kitsune/wiki/views.py:1420
+#: kitsune/wiki/views.py:1430
 msgid "Article didn't provide the information I needed"
 msgstr ""
 
-#: kitsune/wiki/views.py:1494
+#: kitsune/wiki/views.py:1504
 #, python-format
 msgid "Revision %s"
 msgstr "Àtúnyẹ̀wò %s"
 
-#: kitsune/wiki/views.py:1502
+#: kitsune/wiki/views.py:1512
 msgid "Firefox Releases"
 msgstr "Àgbéjáde Firefox"
 
-#: kitsune/wiki/views.py:1510
+#: kitsune/wiki/views.py:1520
 msgid "Article Revisions"
 msgstr "Àtúnyẹ̀wò Aròkọ"
 
-#: kitsune/wiki/views.py:1626
+#: kitsune/wiki/views.py:1636
 #, python-brace-format
 msgid "{users} added to the contributors successfully!"
 msgstr "{users} ṣàfikún àwọn olùdasí dáradára!"
 
-#: kitsune/wiki/views.py:1633
+#: kitsune/wiki/views.py:1643
 msgid "There were errors adding new contributors, see below."
 msgstr "Àṣìṣe wáyé ní ṣíṣàfikún àwọn olùdásí titun, wo ìsàlẹ̀."
 
-#: kitsune/wiki/views.py:1653
+#: kitsune/wiki/views.py:1663
 #, python-brace-format
 msgid "{user} removed from the contributors successfully!"
 msgstr "{user} ṣàyọkúrò nínu àwọn olùdasí dáradára!"
 
-#: kitsune/wiki/views.py:1915
+#: kitsune/wiki/views.py:1925
 msgid "Sorry, that article wasn't found."
 msgstr ""
 
@@ -12255,19 +12346,11 @@ msgstr "<strong>Ìkilọ̀:</strong> Àtúnyẹ̀wò yíi ní ìgbimọ̀
 msgid "You are about to permanently delete this revision. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "O ti fẹ́ pa àtúnyẹ̀wò yí rẹ́ pátápátá. <strong>A kòle ṣàyípadà rẹ̀!</strong> Ṣé ó dá ọ lójú pé o fẹ́ tẹ̀siwájú?"
 
-#: kitsune/wiki/jinja2/wiki/document.html:56
-msgid "Now through August 31, get unlimited bandwidth with more locations in built-in VPN. Head to Connect for more details."
-msgstr ""
-
-#: kitsune/wiki/jinja2/wiki/document.html:57
-msgid "Details"
-msgstr "Ẹ̀kúnrẹ́rẹ́"
-
-#: kitsune/wiki/jinja2/wiki/document.html:103 kitsune/wiki/jinja2/wiki/edit.html:23
+#: kitsune/wiki/jinja2/wiki/document.html:94 kitsune/wiki/jinja2/wiki/edit.html:23
 msgid "This document is restricted."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/document.html:122
+#: kitsune/wiki/jinja2/wiki/document.html:113
 #, python-brace-format
 msgid "Share this article: {link}"
 msgstr "Pín aròkọ yìí: {link}"
@@ -12539,7 +12622,7 @@ msgstr "Àtúnyẹ̀wò Àkóónú"
 msgid "This document does not have a current revision."
 msgstr "Àkọsílẹ̀ yíì kòní àtúnṣe titun."
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:220 kitsune/wiki/jinja2/wiki/review_revision.html:77 kitsune/wiki/jinja2/wiki/review_translation.html:92
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:212 kitsune/wiki/jinja2/wiki/review_revision.html:77 kitsune/wiki/jinja2/wiki/review_translation.html:92
 msgid "Search results summary:"
 msgstr "Ṣàwarí àwọn èsì ìsoníṣókí:"
 
@@ -12622,7 +12705,7 @@ msgstr "{default_locale} ẹ̀yà kòní àkóónú tí a gbà láti f
 msgid "Approved {default_locale} version:"
 msgstr "Ẹ̀yà tí a gbàá wọlé {default_locale}:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:199 kitsune/wiki/jinja2/wiki/includes/document_macros.html:211 kitsune/wiki/jinja2/wiki/review_translation.html:79
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:191 kitsune/wiki/jinja2/wiki/includes/document_macros.html:203 kitsune/wiki/jinja2/wiki/review_translation.html:79
 #: kitsune/wiki/jinja2/wiki/review_translation.html:83
 #, python-brace-format
 msgid "Revision {id} by {user} on {date}"
@@ -13077,114 +13160,114 @@ msgstr ""
 msgid "This article doesn't have approved content yet."
 msgstr "Aròkọ yí kòní àkóónú tí a gbà báyì."
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:167
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:159
 msgid "Warning: There are newer unreviewed revisions of this article."
 msgstr "Ìkilọ̀: Àwọn ẹ̀yà àìṣàtúnyẹwò àtúnyẹ̀wò aròkọ yí wà."
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:169
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:161
 #, python-format
 msgid "See <a href=\"%(url)s\">the history</a> to base your edit on an existing unreviewed revision."
 msgstr "Wò <a href=\"%(url)s\">ìtàn náà</a> láti mú ìsọ̀dọ̀tun rẹ lé àìṣàtúnyẹwò àtúnyẹ̀wò tí ó ti wà."
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:186
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:178
 msgid "Change Revisions"
 msgstr "Àyípadà Àtúnyẹ̀wò"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:195 kitsune/wiki/jinja2/wiki/includes/document_macros.html:207
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:187 kitsune/wiki/jinja2/wiki/includes/document_macros.html:199
 #, python-brace-format
 msgid "Revision {num}:"
 msgstr "Àtúnyẹ̀wò {num}:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:242
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:234
 msgid "Stop article emails"
 msgstr "Dá aròkọ í-meélì dúró"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:247
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:239
 msgid "Email me article changes"
 msgstr "Fi àyípadà aròkọ ránṣẹ́ sími"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:256
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:248
 msgid "Submit for Review"
 msgstr "Jọ̀wọ́ Àtúnyẹ̀wò"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:258
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:250
 msgid "Save as Draft"
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:260
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:252
 msgid "Preview Content"
 msgstr "Ṣàtúnyẹ̀wò Àkóónú"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:262
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:254
 msgid "Preview Changes"
 msgstr "Ṣàtúnyẹ̀wò Àyípadà"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:268
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:260
 msgid "Submit Your Changes"
 msgstr "Jọ̀wọ́ Àyípadà Rẹ"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:270
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:262
 msgid "You rock! We'll send an email to let you know if your changes get approved. You can follow the discussion about this article by clicking the Discussion tab."
 msgstr "O gbìyànjú! A ó fi í-meélì ránṣẹ́ láti jẹkí o mọ̀ bóyá a gba àyípadà re. O lè tẹ̀lé ìfọ̀rọ̀wérọ̀ nípa aròkọ nípa ṣíṣíra tẹ̀ táábù Ìfọ̀rọ̀wérọ̀."
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:274
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:266
 msgid "Briefly describe your changes:"
 msgstr "Sọ nípa àyípadà rẹ níṣókí:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:280
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:272
 msgid "This edit does not make this article up to date. The English differences should not change on the next edit."
 msgstr "Ìṣàtúntò yíì kò sọ aròkọ yí di lọ́wọ́lọ́wọ́. Ìyàtọ̀ Gẹ̀ẹ́sì kò gbọdọ̀ yípadà ní ìṣàtúnto tó kàn."
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:285
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:277
 msgid "Notify me of any future changes to this page"
 msgstr "Fi tómi létí àyípadà ọjọ́ iwájú ní ojú ewé yìí"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:298
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:290
 msgid "Help with:"
 msgstr "Ìrànwọ́ pẹ̀lú:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:306
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:298
 msgid "Customize this article"
 msgstr "Ṣàdáni aròkọ yìí"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:371
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:363
 msgid "Was this article helpful?"
 msgstr "Ṣé aròkọ yìí ṣèrànwọ́?"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:403
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:395
 #, fuzzy, python-brace-format
 msgid "Leave a message for {contributor}: "
 msgstr "Fi iṣẹ́ sílẹ̀ fún {contributor}:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:405
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:397
 #, python-brace-format
 msgid "Leave a message for {rest} and {last}:"
 msgstr "Fi iṣẹ́ sílẹ̀ fún {rest} àti {last}:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:414
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:406
 #, fuzzy, python-format
 msgid "Warning: This page is also being edited by %(user)s!"
 msgstr "Ìkilọ̀: Ojú ewé yìi ni %àwọn(user) ń ṣàtúnṣe rẹ̀ pẹ̀lú!"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:417
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:409
 msgid "If you know what you are doing, you can edit the document anyway."
 msgstr "Bí o bá mọ ohun tí o ń ṣe, o lè ṣàtúnṣe àkọsílẹ̀ náà bákan náà."
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:421
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:413
 msgid "Edit anyway"
 msgstr "Ṣàtúntò ṣá"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:432
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:424
 #, fuzzy
 msgid "Related Articles"
 msgstr "Túmọ̀ Aròkọ"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:478
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:470
 msgid "If you've tried the steps above and you're still unable to sign in, send a message to our support team."
 msgstr ""
 
 #. A button in a CTA displayed at the end of some Mozilla accounts articles.
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:488
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:480
 msgctxt "CTA button"
 msgid "Contact Support"
 msgstr ""
@@ -13197,11 +13280,11 @@ msgstr "Ìṣàfisùn Àṣìlò"
 msgid "Report this"
 msgstr "Jábọ̀ èyí"
 
-#: kitsune/wiki/jinja2/wiki/includes/flag_form.html:18
+#: kitsune/wiki/jinja2/wiki/includes/flag_form.html:19
 msgid "Misplaced bug report or support request"
 msgstr "Ìjábọ̀ àṣìgbé kòkòrò tàbí ìbéèrè àtìlẹ́hìn"
 
-#: kitsune/wiki/jinja2/wiki/includes/flag_form.html:30
+#: kitsune/wiki/jinja2/wiki/includes/flag_form.html:31
 msgid "Have more to say?"
 msgstr "O ní láti sọ si?"
 
@@ -13433,6 +13516,40 @@ msgstr "Àwọn ìyatọ̀"
 #: kitsune/wiki/jinja2/wikiparser/hook_refresh_button.html:1
 msgid "Refresh Firefox"
 msgstr "Sọ Firefox dọ̀tun"
+
+#~ msgid "Provide a brief description of this media."
+#~ msgstr "Pèsè àpejúwè ní kúkúrú fún mídíà yíì."
+
+#, python-brace-format
+#~ msgid "Delete image | {t} | Media Gallery"
+#~ msgstr "Pa àwòrán rẹ́ | {t} | Gbàgede Mídíà"
+
+#~ msgid "Media Gallery"
+#~ msgstr "Gbàgéde Mídíà"
+
+#, python-brace-format
+#~ msgid "Edit image | {t} | Media Gallery"
+#~ msgstr "Ṣàtúntò àwòrán | {t} | Gbàgède Mídíà"
+
+#~ msgid "Show media for:"
+#~ msgstr "Ṣàfihàn mídíà fun:"
+
+#, python-brace-format
+#~ msgid "{title} | Media Gallery"
+#~ msgstr "{title} | Gbàgède Mídíà"
+
+#~ msgid "Media Gallery Search"
+#~ msgstr "Ìṣàwari Gbàgède Mídíà"
+
+#~ msgid "No media files found."
+#~ msgstr "Akòrí àwọn fáìlì mídíà."
+
+#, fuzzy
+#~ msgid "Support"
+#~ msgstr "Ṣàtìlẹ́hìn Àpéjọ"
+
+#~ msgid "Details"
+#~ msgstr "Ẹ̀kúnrẹ́rẹ́"
 
 #~ msgid "New"
 #~ msgstr "Titun"
