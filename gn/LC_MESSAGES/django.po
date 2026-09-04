@@ -6,9 +6,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kitsune 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/mozilla-l10n/sumo-l10n/issues\n"
+"POT-Creation-Date: 2026-09-04 01:02-0700\n"
 "Language: gn\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Pontoon\n"
@@ -145,7 +147,7 @@ msgstr "Japopyre {query} peg̃uarã"
 msgid "No users were found for your search query."
 msgstr "Ndojejuhúi poruhára rehekávape g̃uarã."
 
-#: kitsune/community/jinja2/community/search.html:40 kitsune/community/jinja2/community/top_contributors.html:117 kitsune/sumo/jinja2/includes/common_macros.html:603
+#: kitsune/community/jinja2/community/search.html:40 kitsune/community/jinja2/community/top_contributors.html:117 kitsune/sumo/jinja2/includes/common_macros.html:551
 msgid "View Profile"
 msgstr "Ehecha mba’ete"
 
@@ -183,11 +185,14 @@ msgstr "Ñepytyvõ 90 ára ohasaramóvape: {count}"
 msgid "Days since last activity:"
 msgstr "Arakuéra ohasaramóva tembiapo rehegua:"
 
+#. This is an email. Whitespace matters!
 #. This is an email.  Whitespace matters!
-#: kitsune/community/jinja2/community/email/first_answer.html:4 kitsune/community/jinja2/community/email/first_answer.ltxt:3 kitsune/users/jinja2/users/email/contributor.html:4
-#: kitsune/users/jinja2/users/email/contributor.ltxt:3
-msgid "Hi"
-msgstr "Mba’éichapa"
+#: kitsune/community/jinja2/community/email/first_answer.html:4 kitsune/community/jinja2/community/email/first_answer.ltxt:3 kitsune/questions/jinja2/questions/email/new_answer.ltxt:5
+#: kitsune/questions/jinja2/questions/email/new_answer_to_asker.ltxt:4 kitsune/questions/jinja2/questions/email/solution.html:5 kitsune/questions/jinja2/questions/email/solution.ltxt:5
+#: kitsune/users/jinja2/users/email/contributor.html:4 kitsune/users/jinja2/users/email/contributor.ltxt:3 kitsune/wiki/jinja2/wiki/email/ready_for_review_weekly_digest.html:11
+#, python-brace-format
+msgid "Hi {username},"
+msgstr "Mba’éichapa {username},"
 
 #: kitsune/community/jinja2/community/email/first_answer.html:7 kitsune/community/jinja2/community/email/first_answer.ltxt:5
 msgid "Thank you and congratulations on your first contribution to the Mozilla Support Community Forums! You just made somebody's day, and we're so glad you're here."
@@ -226,6 +231,10 @@ msgstr "¡Rovy’aitereíta añetehápe roikuaáramo! Eñeñandu porãramo, emom
 msgid "Keep yourself updated"
 msgstr "Eime tekopyahúpe"
 
+#: kitsune/community/jinja2/community/email/first_answer.html:36 kitsune/users/jinja2/users/includes/macros.html:8
+msgid "Edit settings"
+msgstr "Ñemboheko mbosako’i"
+
 #: kitsune/community/jinja2/community/email/first_answer.html:39
 #, python-format
 msgid "Consider updating your <a href=\"%(prefs_url)s\">notification preferences</a> to make sure you stay in the loop on threads you've participated in."
@@ -238,8 +247,8 @@ msgstr "Eikuaa sa’imi ha umi mba’e iporãvéva."
 #: kitsune/community/jinja2/community/email/first_answer.html:46
 #, python-format
 msgid ""
-"Check out our <a href=\"%(get_started_url)s\">get started guidelines</a> and <a href=\"%(best_practices_url)s\">best practices</a> for contributing in the forums. These resources will help you up to"
-" speed quickly and help you make a meaningful impact in the Mozilla Support Community."
+"Check out our <a href=\"%(get_started_url)s\">get started guidelines</a> and <a href=\"%(best_practices_url)s\">best practices</a> for contributing in the forums. These resources will help you up "
+"to speed quickly and help you make a meaningful impact in the Mozilla Support Community."
 msgstr ""
 
 #: kitsune/community/jinja2/community/email/first_answer.html:51
@@ -250,6 +259,10 @@ msgstr "👉 <a href=\"%(video_url)s\">Ehecha ko ta’ãngamýi</a> eipotárõ t
 #: kitsune/community/jinja2/community/email/first_answer.html:56 kitsune/community/jinja2/community/email/first_answer.ltxt:68
 msgid "Stay updated"
 msgstr "Eime tekopyahúpe"
+
+#: kitsune/community/jinja2/community/email/first_answer.html:58 kitsune/sumo/jinja2/includes/common_macros.html:687
+msgid "Support forum discussions"
+msgstr "Ñomongeta pytyvõha aty rehegua"
 
 #: kitsune/community/jinja2/community/email/first_answer.html:61
 #, python-format
@@ -313,8 +326,8 @@ msgstr "Eñeha’ã embohekopyahu marandu’i ehayhuvéva eikuaa porã hag̃ua m
 
 #: kitsune/community/jinja2/community/email/first_answer.ltxt:52
 msgid ""
-"Check out our get started guidelines and best practices for contributing in the forums. These resources will help you up to speed quickly and help you make a meaningful impact in the Mozilla Support"
-" Community."
+"Check out our get started guidelines and best practices for contributing in the forums. These resources will help you up to speed quickly and help you make a meaningful impact in the Mozilla "
+"Support Community."
 msgstr ""
 
 #: kitsune/community/jinja2/community/email/first_answer.ltxt:61
@@ -387,43 +400,63 @@ msgstr "Android VPN"
 msgid "iOS"
 msgstr "iOS"
 
-#: kitsune/customercare/forms.py:89
+#: kitsune/customercare/forms.py:50
+msgid "Select urgency"
+msgstr ""
+
+#: kitsune/customercare/forms.py:54
+msgid "Normal - Non-critical Firefox issue, minor defect, or integration/deployment question"
+msgstr ""
+
+#: kitsune/customercare/forms.py:60
+msgid "High - Key functionality is degraded for multiple users or teams, but a workaround exists"
+msgstr ""
+
+#: kitsune/customercare/forms.py:67
+msgid "Critical - Production outage, critical blockage, or material security risk with no workaround"
+msgstr ""
+
+#: kitsune/customercare/forms.py:119
 msgid "Contact e-mail"
 msgstr "Ñanduti veve ñe’ẽmondorã"
 
-#: kitsune/customercare/forms.py:92
+#: kitsune/customercare/forms.py:122
 msgid "What do you need help with?"
 msgstr "¿Mba’épepa eikotevẽ ñepytyvõ?"
 
-#: kitsune/customercare/forms.py:95
+#: kitsune/customercare/forms.py:125
+msgid "What is the impact to your org?"
+msgstr ""
+
+#: kitsune/customercare/forms.py:131
 msgid "What operating system does your device use?"
 msgstr "¿Mba’eichagua apopyvusu oiporu ne mba’e’oka?"
 
-#: kitsune/customercare/forms.py:111 kitsune/groups/jinja2/groups/includes/_tickets_content.html:52
+#: kitsune/customercare/forms.py:147 kitsune/groups/jinja2/groups/includes/_tickets_content.html:52
 msgid "Subject"
 msgstr "Jokopyre"
 
-#: kitsune/customercare/forms.py:112
+#: kitsune/customercare/forms.py:148
 msgid "Tell us more"
 msgstr "Emombe’uve"
 
-#: kitsune/customercare/forms.py:146
+#: kitsune/customercare/forms.py:182
 msgid "Select a reason for contacting"
 msgstr "Eiporavo ma’erãpa eñomongetase"
 
-#: kitsune/customercare/forms.py:185
+#: kitsune/customercare/forms.py:226
 msgid "Please enter a valid email address."
 msgstr "Ehai ñanduti veve kundaharape oikóva."
 
-#: kitsune/customercare/forms.py:260 kitsune/messages/jinja2/messages/read.html:19
+#: kitsune/customercare/forms.py:306 kitsune/messages/jinja2/messages/read.html:19
 msgid "Reply"
 msgstr "Mbohovái"
 
-#: kitsune/customercare/forms.py:264
+#: kitsune/customercare/forms.py:310
 msgid "Please enter a reply."
 msgstr "Ikatu ehai ñembohovái."
 
-#: kitsune/customercare/forms.py:265
+#: kitsune/customercare/forms.py:311
 #, python-format
 msgid "Replies are limited to %(limit_value)d characters."
 msgstr "Ñembohovái orekóta  %(limit_value)d tairenda."
@@ -488,31 +521,31 @@ msgstr "Ko voléto oñemoĩporãma"
 msgid "This ticket has been closed"
 msgstr "Ko voléto oñembotýma"
 
-#: kitsune/customercare/models.py:264 kitsune/groups/jinja2/groups/profile.html:228
+#: kitsune/customercare/models.py:265 kitsune/groups/jinja2/groups/profile.html:228
 msgid "Inactive"
 msgstr "Jokopyre"
 
-#: kitsune/customercare/models.py:265
+#: kitsune/customercare/models.py:266
 msgid "Submitted"
 msgstr "Mondopyre"
 
-#: kitsune/customercare/models.py:280
+#: kitsune/customercare/models.py:281
 msgid "This ticket is no longer active and can no longer receive replies"
 msgstr "Ko voléto ndoikovéima ha ndaikatuvéima omog̃uahẽ ñembohovái"
 
-#: kitsune/customercare/models.py:284
+#: kitsune/customercare/models.py:285
 msgid "This ticket has been submitted and is being processed"
 msgstr "Ko voléto oñemondóma ha oñembohekohína."
 
-#: kitsune/customercare/views.py:49
+#: kitsune/customercare/views.py:50
 msgid "Reply here to reopen this ticket."
 msgstr "Embohovái ápe embojuruja hag̃ua ko voléto."
 
-#: kitsune/customercare/views.py:217 kitsune/groups/jinja2/groups/profile.html:135 kitsune/groups/jinja2/groups/tickets.html:4 kitsune/groups/jinja2/groups/tickets.html:25
+#: kitsune/customercare/views.py:218 kitsune/groups/jinja2/groups/profile.html:135 kitsune/groups/jinja2/groups/tickets.html:4 kitsune/groups/jinja2/groups/tickets.html:25
 msgid "Tickets"
 msgstr "Voletoita"
 
-#: kitsune/customercare/views.py:222 kitsune/sumo/jinja2/includes/common_macros.html:610 kitsune/users/jinja2/users/questions_contributed.html:16
+#: kitsune/customercare/views.py:223 kitsune/sumo/jinja2/includes/common_macros.html:558 kitsune/users/jinja2/users/questions_contributed.html:16
 msgid "My Questions"
 msgstr "Che porandu"
 
@@ -654,96 +687,96 @@ msgstr "20 jehaipyre iporãvéva"
 
 #. This is an entry description for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:403
+#: kitsune/dashboards/readouts.py:404
 #, python-format
 msgid "These are the top 20 most visited articles in the last 30 days, which account for over 50% of the traffic to the Knowledge Base."
 msgstr "Ko’ãva ha’e umi 20 jehaipyre ojehechavéva ko 30 ára pukukue ohasaramóvape, ohupytýva 50 % oikéva kuaapy rendápe."
 
 #. This is an entry header for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:408
+#: kitsune/dashboards/readouts.py:410
 msgid "Top 50 Articles"
 msgstr "50 jehaipyre iporãvéva"
 
 #. This is an entry description for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:414
+#: kitsune/dashboards/readouts.py:416
 msgid "These are the top 50 most visited articles in the last 30 days."
 msgstr "Ko’ãva niko umi 50 jehaipyre ojehechaveva’ekue 30 ára ohasaramóvape."
 
 #. This is an entry header for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:419
+#: kitsune/dashboards/readouts.py:421
 msgid "Top 100 Articles"
 msgstr "100 jehaipyre iporãvéva"
 
 #. This is an entry description for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:425
+#: kitsune/dashboards/readouts.py:428
 #, python-format
 msgid "These are the top 100 most visited articles in the last 30 days, which account for over 99% of the traffic to the Knowledge Base."
 msgstr "Ko’ãva ha’e 100 jehaipyre ojehechavéva ko 30 ára ohasava’ekuépe, ha oñondivepa ojapove 99% tembikuaarenda ñemongu’e."
 
-#: kitsune/dashboards/readouts.py:429 kitsune/dashboards/readouts.py:731 kitsune/dashboards/readouts.py:898 kitsune/dashboards/readouts.py:899 kitsune/sumo/jinja2/includes/common_macros.html:828
+#: kitsune/dashboards/readouts.py:433 kitsune/dashboards/readouts.py:739 kitsune/dashboards/readouts.py:906 kitsune/dashboards/readouts.py:907 kitsune/sumo/jinja2/includes/common_macros.html:776
 #: kitsune/wiki/config.py:102
 msgid "Templates"
 msgstr "Plantílla"
 
 #. This is an entry description for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:436
+#: kitsune/dashboards/readouts.py:441
 msgid "Templates are a way of reusing pieces of content across KB articles. You can create and update a set of instructions in one place, and then refer to it in other pages."
 msgstr "Terarysyikuérape ikatu ojeporujey umi jehaipyre oĩva kuaapy rendápe. Ikatu emoheñói ha embohekopyahu peteĩ sãmbyhyha aty ha upéi eporomomandu’ajey ambue kuatiaroguépe."
 
 #. This is an entry header for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:441
+#: kitsune/dashboards/readouts.py:447
 msgid "All Knowledge Base Articles"
 msgstr "Opaite jehaipyre kuaapy ñepurũha pegua"
 
 #. This is an entry description for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:447
+#: kitsune/dashboards/readouts.py:454
 msgid "This is the number of all Knowledge Base articles that are ready to be localized."
 msgstr "Kóvapa ha’e papapy opaite jehaipyre kuaapy ñepyrũha pegua iñe’ẽasámava."
 
 #. This is a column header for an abstract Localization Dashboard table. It refers
 #. to articles.
-#: kitsune/dashboards/readouts.py:466
+#: kitsune/dashboards/readouts.py:474
 msgid "Visits in last 30 days"
 msgstr "Jeike hague 30 ára ohasaramóvape"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:6 kitsune/dashboards/readouts.py:468 kitsune/groups/jinja2/groups/includes/_tickets_content.html:54
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:6 kitsune/dashboards/readouts.py:476 kitsune/groups/jinja2/groups/includes/_tickets_content.html:54
 #: kitsune/wiki/jinja2/wiki/includes/revision_list.html:23
 msgid "Status"
 msgstr "Tekotee"
 
 #. This is a sorting option for an abstract Localization Dashboard table. It refers
 #. to articles.
-#: kitsune/dashboards/readouts.py:471
+#: kitsune/dashboards/readouts.py:479
 msgid "Most Viewed"
 msgstr "Ojehechavéva"
 
 #. This is a sorting option for an abstract Localization Dashboard table. It refers
 #. to articles.
-#: kitsune/dashboards/readouts.py:473
+#: kitsune/dashboards/readouts.py:481
 msgid "Most Recent"
 msgstr "Ipyahuvéva"
 
 #. This refers to articles.
-#: kitsune/dashboards/readouts.py:577 kitsune/dashboards/readouts.py:776
+#: kitsune/dashboards/readouts.py:585 kitsune/dashboards/readouts.py:784
 msgid "Most Visited"
 msgstr "Ojeikeveha"
 
 #. Unused. A link to be displayed under the Most Visited overview table,
 #. which redirects users to the full Most Visited table
 #. (https://support.mozilla.org/contributors/most-visited).
-#: kitsune/dashboards/readouts.py:581
+#: kitsune/dashboards/readouts.py:589
 msgid "All knowledge base articles..."
 msgstr "Opaite jehaipyre kuaapy ñepyrũha pegua..."
 
 #. This is a table column header that refers to article visit count.
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:5 kitsune/dashboards/readouts.py:584 kitsune/dashboards/readouts.py:651
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:5 kitsune/dashboards/readouts.py:592 kitsune/dashboards/readouts.py:659
 msgid "Visits"
 msgstr "Jeikepyre"
 
@@ -752,12 +785,12 @@ msgstr "Jeikepyre"
 #. https://support.mozilla.org/contributors/templates,
 #. https://support.mozilla.org/contributors/how-to-contribute or
 #. https://support.mozilla.org/contributors/administration.
-#: kitsune/dashboards/readouts.py:711
+#: kitsune/dashboards/readouts.py:719
 msgid "Changes Needed"
 msgstr "Oikotevẽ ñemoambue"
 
 #. This refers to articles.
-#: kitsune/dashboards/readouts.py:715 kitsune/dashboards/readouts.py:1142
+#: kitsune/dashboards/readouts.py:723 kitsune/dashboards/readouts.py:1150
 msgid "Changes Not Ready For Localization"
 msgstr "Ñemoambue ndoikóiva gueteri ñe’ẽasarãme g̃uarã"
 
@@ -766,33 +799,33 @@ msgstr "Ñemoambue ndoikóiva gueteri ñe’ẽasarãme g̃uarã"
 #. locales),
 #. which redirects users to the full Templates table
 #. (https://support.mozilla.org/localization/template-translations).
-#: kitsune/dashboards/readouts.py:738 kitsune/dashboards/readouts.py:904
+#: kitsune/dashboards/readouts.py:746 kitsune/dashboards/readouts.py:912
 msgid "All templates..."
 msgstr "Opaite plantílla..."
 
 #. This is a table header displayed on
 #. https://support.mozilla.org/contributors/how-to-contribute. It refers to the
 #. article topic.
-#: kitsune/dashboards/readouts.py:745
+#: kitsune/dashboards/readouts.py:753
 msgid "How To Contribute"
 msgstr "Mba’éicha eipytyvõta"
 
 #. Unused. A link to be displayed under the How To Contribute overview table,
 #. which redirects users to the full How To Contribute table.
-#: kitsune/dashboards/readouts.py:749
+#: kitsune/dashboards/readouts.py:757
 msgid "All How To Contribute articles..."
 msgstr "Opaite jehaipyre mba’éichapa eipytyvõta..."
 
 #. This is a table header displayed on
 #. https://support.mozilla.org/contributors/administration. It refers to the
 #. article topic.
-#: kitsune/dashboards/readouts.py:756 kitsune/wiki/config.py:100
+#: kitsune/dashboards/readouts.py:764 kitsune/wiki/config.py:100
 msgid "Administration"
 msgstr "Ñeñangareko"
 
 #. Unused. A link to be displayed under the Administration overview table,
 #. which redirects users to the full Administration table.
-#: kitsune/dashboards/readouts.py:760
+#: kitsune/dashboards/readouts.py:768
 msgid "All Administration articles..."
 msgstr "Opaite jehaipyre ñeñangareko rehegua…"
 
@@ -802,7 +835,7 @@ msgstr "Opaite jehaipyre ñeñangareko rehegua…"
 #. which redirects users to the full Most Visited table
 #. (https://support.mozilla.org/localization/most-visited-translations for
 #. non-en-US locales).
-#: kitsune/dashboards/readouts.py:782
+#: kitsune/dashboards/readouts.py:790
 msgid "All translations..."
 msgstr "Opaite ñe’ẽasa…"
 
@@ -811,7 +844,7 @@ msgstr "Opaite ñe’ẽasa…"
 #. and https://support.mozilla.org/localization/unreviewed.
 #. It refers not just to changes to translations but also to unreviewed changes to
 #. docs in this locale that are not translations.
-#: kitsune/dashboards/readouts.py:987
+#: kitsune/dashboards/readouts.py:995
 msgid "Unreviewed Changes"
 msgstr "Ñemoambue ojehechajey’ỹva"
 
@@ -821,7 +854,7 @@ msgstr "Ñemoambue ojehechajey’ỹva"
 #. and https://support.mozilla.org/localization/unreviewed.
 #. It refers not just to changes to translations but also to unreviewed changes to
 #. docs in this locale that are not translations.
-#: kitsune/dashboards/readouts.py:994
+#: kitsune/dashboards/readouts.py:1002
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "Ojehechajey’ỹva"
@@ -830,7 +863,7 @@ msgstr "Ojehechajey’ỹva"
 #. (https://support.mozilla.org/localization#unreviewed for non-en-US locales),
 #. which redirects users to the full Unreviewed Changes table
 #. (https://support.mozilla.org/localization/unreviewed).
-#: kitsune/dashboards/readouts.py:998
+#: kitsune/dashboards/readouts.py:1006
 msgid "All articles requiring review..."
 msgstr "Opaite jehaipyre oikotevẽva jehechajey..."
 
@@ -838,19 +871,19 @@ msgstr "Opaite jehaipyre oikotevẽva jehechajey..."
 #. https://support.mozilla.org/localization#unreviewed (for non-en-US locales)
 #. and https://support.mozilla.org/localization/unreviewed.
 #. It refers to the time an article was last changed.
-#: kitsune/dashboards/readouts.py:1004
+#: kitsune/dashboards/readouts.py:1012
 msgid "Changed"
 msgstr "Moambuepyre"
 
 #. This is a table header displayed on
 #. https://support.mozilla.org/contributors/unhelpful.
-#: kitsune/dashboards/readouts.py:1067
+#: kitsune/dashboards/readouts.py:1075
 msgid "Unhelpful Documents"
 msgstr "Kuatia ndojeporúiva"
 
 #. Unused. This is a short name for the Unhelpful Documents table,
 #. displayed on https://support.mozilla.org/contributors/unhelpful.
-#: kitsune/dashboards/readouts.py:1071
+#: kitsune/dashboards/readouts.py:1079
 msgctxt "document"
 msgid "Unhelpful"
 msgstr "Ndojeporúiva"
@@ -859,14 +892,14 @@ msgstr "Ndojeporúiva"
 #. table,
 #. which redirects users to the full Unhelpful Documents table
 #. (https://support.mozilla.org/contributors/unhelpful).
-#: kitsune/dashboards/readouts.py:1074
+#: kitsune/dashboards/readouts.py:1082
 msgid "All unhelpful articles..."
 msgstr "Opaite jehaipyre ndojeporúiva…"
 
 #. This is a column header for the Unhelpful Documents table, displayed on
 #. https://support.mozilla.org/contributors/unhelpful.
 #. It refers to the article's helpful/unhelpful vote count.
-#: kitsune/dashboards/readouts.py:1079
+#: kitsune/dashboards/readouts.py:1087
 msgid "Total Votes"
 msgstr "Opaite poravopyre"
 
@@ -874,13 +907,13 @@ msgstr "Opaite poravopyre"
 #. https://support.mozilla.org/contributors/unhelpful.
 #. It refers to the article's helpful vote percentage (out of total
 #. helpful/unhelpful vote count).
-#: kitsune/dashboards/readouts.py:1083
+#: kitsune/dashboards/readouts.py:1091
 msgid "Helpfulness"
 msgstr "Jeporurã"
 
 #. Unused. This is a description for the Changes Not Ready For Localization table,
 #. displayed on https://support.mozilla.org/contributors/unready.
-#: kitsune/dashboards/readouts.py:1145
+#: kitsune/dashboards/readouts.py:1154
 msgid "Articles which have approved revisions newer than the latest ready-for-localization one"
 msgstr "Jehaipyre jehechapyre ipyahuvéva moneĩmbyre tysýi paha pegua ñe’ẽasarãva"
 
@@ -888,54 +921,54 @@ msgstr "Jehaipyre jehechapyre ipyahuvéva moneĩmbyre tysýi paha pegua ñe’�
 #. Localization overview table,
 #. which redirects users to the full Changes Not Ready For Localization table
 #. (https://support.mozilla.org/contributors/unready).
-#: kitsune/dashboards/readouts.py:1149
+#: kitsune/dashboards/readouts.py:1159
 msgid "All articles with changes not ready for localization..."
 msgstr "Opavave jehaipy moambuepyre ndaikatúi oñemoñe’ẽasa..."
 
 #. This refers to article revisions.
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:155 kitsune/dashboards/readouts.py:1152 kitsune/wiki/jinja2/wiki/includes/revision_list.html:72
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:155 kitsune/dashboards/readouts.py:1162 kitsune/wiki/jinja2/wiki/includes/revision_list.html:72
 msgid "Approved"
 msgstr "Moneĩmbyre"
 
 #. This is a table header displayed on
 #. https://support.mozilla.org/contributors/need-changes.
-#: kitsune/dashboards/readouts.py:1221
+#: kitsune/dashboards/readouts.py:1231
 msgid "Need Changes"
 msgstr "Oikotevẽ ñemoambue"
 
 #. Unused. This is a description for the Need Changes table,
 #. displayed on https://support.mozilla.org/contributors/need-changes.
-#: kitsune/dashboards/readouts.py:1224
+#: kitsune/dashboards/readouts.py:1234
 msgid "Articles that require changes."
 msgstr "Jehaipyre oikotevẽva ñemoambue"
 
 #. Unused. This is a link to be displayed under the Need Changes overview table,
 #. which redirects users to the full Need Changes table
 #. (https://support.mozilla.org/contributors/need-changes).
-#: kitsune/dashboards/readouts.py:1228
+#: kitsune/dashboards/readouts.py:1238
 msgid "All articles that require changes..."
 msgstr "Opaite jehaipyre oikotevẽva ñemoambue..."
 
 #. A noun. There are comments for articles in general (on
 #. https://support.mozilla.org/contributors/need-changes) and every article
 #. revision.
-#: kitsune/dashboards/readouts.py:1231 kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:46 kitsune/wiki/jinja2/wiki/includes/revision_list.html:30
+#: kitsune/dashboards/readouts.py:1241 kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:46 kitsune/wiki/jinja2/wiki/includes/revision_list.html:30
 msgid "Comment"
 msgstr "Je’erei"
 
-#: kitsune/dashboards/readouts.py:1269 kitsune/wiki/config.py:103
+#: kitsune/dashboards/readouts.py:1279 kitsune/wiki/config.py:103
 msgid "Canned Responses"
 msgstr "Mbohovái ijypykuéva"
 
 #. Unused. This is a description for the Canned Responses table.
-#: kitsune/dashboards/readouts.py:1271
+#: kitsune/dashboards/readouts.py:1281
 msgid "Localization status of all canned responses"
 msgstr "Ñe’ẽasa reko opaite jehaipyre ijypykuéva rehegua"
 
 #. Unused. This is a link to be displayed under the Canned Responses overview
 #. table,
 #. which redirects users to the full Canned Responses table.
-#: kitsune/dashboards/readouts.py:1275
+#: kitsune/dashboards/readouts.py:1285
 msgid "All canned responses articles..."
 msgstr "Opaite jehaipyre mbohovái ijypykuéva rehegua..."
 
@@ -995,7 +1028,7 @@ msgstr "[{product}] Kuaapy ñepyrũha ra’ãngarupa"
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:176 kitsune/dashboards/jinja2/dashboards/includes/macros.html:191
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:201 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/products/jinja2/products/includes/product_macros.html:34
 #: kitsune/questions/jinja2/questions/product_list.html:48 kitsune/questions/jinja2/questions/question_details.html:18 kitsune/questions/jinja2/questions/question_list.html:12
-#: kitsune/search/jinja2/search/results.html:88 kitsune/search/views.py:74
+#: kitsune/search/jinja2/search/results.html:127 kitsune/search/views.py:76
 msgid "All Products"
 msgstr "Opaite japopyre"
 
@@ -1059,11 +1092,11 @@ msgid "Review Needed: {comment}"
 msgstr "Tekotevẽ jehechajey : {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:34 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:39 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:46
-#: kitsune/sumo/templatetags/jinja_helpers.py:449 kitsune/sumo/views.py:62 kitsune/wiki/jinja2/wiki/includes/document_macros.html:388
+#: kitsune/sumo/templatetags/jinja_helpers.py:449 kitsune/sumo/views.py:62 kitsune/wiki/jinja2/wiki/includes/document_macros.html:380
 msgid "Yes"
 msgstr "Néi"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:41 kitsune/sumo/templatetags/jinja_helpers.py:449 kitsune/sumo/views.py:63 kitsune/wiki/jinja2/wiki/includes/document_macros.html:392
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:41 kitsune/sumo/templatetags/jinja_helpers.py:449 kitsune/sumo/views.py:63 kitsune/wiki/jinja2/wiki/includes/document_macros.html:384
 msgid "No"
 msgstr "Nahániri"
 
@@ -1119,7 +1152,7 @@ msgstr "Ehechakuaake umi jeporavopyre omboha’etéva apopyre ojeiporavóva."
 msgid "Please note that you will be subscribed to these notifications for all products. If you are only interested in specific products, please go to the dashboard for that product."
 msgstr "Nemandu’áke reñemboheraguapyha og̃uahẽ hag̃ua ndéve marandu opaichagua mba’erepýgui. Oimérõ oĩ mba’erepy ndepy’ara’ãvéva, tereho umi mba’erupa heseguápe."
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:220 kitsune/products/api.py:102 kitsune/products/api.py:104 kitsune/questions/jinja2/questions/question_list.html:298
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:220 kitsune/products/api.py:102 kitsune/products/api.py:104 kitsune/questions/jinja2/questions/question_list.html:322
 msgid "All Topics"
 msgstr "Opavave téma"
 
@@ -1161,39 +1194,48 @@ msgstr "Jehechajey ipyahuvéva"
 msgid "Aggregated Metrics"
 msgstr "Ta’ãha mbojuajuvepyre"
 
-#: kitsune/flagit/models.py:29 kitsune/wiki/jinja2/wiki/includes/flag_form.html:9
+#: kitsune/flagit/models.py:29 kitsune/wiki/jinja2/wiki/includes/flag_form.html:10
 msgid "Spam or other unrelated content"
 msgstr "Ñandutiveve térã ambue tetepy eipota’ỹva"
 
-#: kitsune/flagit/models.py:30 kitsune/wiki/jinja2/wiki/includes/flag_form.html:13
+#: kitsune/flagit/models.py:30 kitsune/wiki/jinja2/wiki/includes/flag_form.html:14
 msgid "Inappropriate language/dialog"
 msgstr "Ñe’ẽ hendape’ỹva/dialog"
 
-#: kitsune/flagit/models.py:31 kitsune/wiki/jinja2/wiki/includes/flag_form.html:23
+#: kitsune/flagit/models.py:31 kitsune/wiki/jinja2/wiki/includes/flag_form.html:24
 msgid "Abusive content"
 msgstr "Tetepy ipohýiva"
 
-#: kitsune/flagit/models.py:32 kitsune/wiki/jinja2/wiki/includes/flag_form.html:27
+#: kitsune/flagit/models.py:32 kitsune/wiki/jinja2/wiki/includes/flag_form.html:28
 msgid "Other (please specify)"
 msgstr "Ambue (ikatúrõ, emoha’eño)"
 
-#: kitsune/flagit/views.py:90
+#: kitsune/flagit/views.py:92
 msgid "System account content cannot be flagged."
 msgstr "Nerembosa’ykuaái tetepy apopyvusu mba’etéva."
 
-#: kitsune/flagit/views.py:116
+#: kitsune/flagit/views.py:98
+msgid "Please select a reason for flagging this content."
+msgstr ""
+
+#: kitsune/flagit/views.py:126
 msgid "You already flagged this content."
 msgstr "Embosa’ýma ko tetepy."
 
-#: kitsune/flagit/views.py:118
+#: kitsune/flagit/views.py:128
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr "Embosa’ýma ko jehaipy. Sapy’aitépe peteĩ mboguataha ohecháta ne remimbou."
+
+#: kitsune/flagit/views.py:241
+msgctxt "DB: products.Topic.title"
+msgid "title"
+msgstr ""
 
 #: kitsune/flagit/jinja2/flagit/content_moderation.html:4 kitsune/flagit/jinja2/flagit/content_moderation.html:7
 msgid "Topic and Tag Moderation Tool"
 msgstr "Tembiporu téma mbohapeha ha teramoĩ"
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:4 kitsune/flagit/jinja2/flagit/zendesk_spam.html:3 kitsune/sumo/jinja2/base.html:30 kitsune/wiki/jinja2/wiki/document.html:29
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:4 kitsune/flagit/jinja2/flagit/zendesk_spam.html:3 kitsune/sumo/jinja2/base.html:30 kitsune/wiki/jinja2/wiki/document.html:28
 msgctxt "site_title"
 msgid "Mozilla Support"
 msgstr "Mozilla Pytyvõha"
@@ -1228,7 +1270,7 @@ msgstr "Tekotee Ñembohekopyahu"
 
 #. A default option for dropdown menus (displayed when none of the actual options
 #. is selected).
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:49 kitsune/flagit/jinja2/flagit/queue.html:25 kitsune/flagit/jinja2/flagit/zendesk_spam.html:30 kitsune/questions/forms.py:247
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:49 kitsune/flagit/jinja2/flagit/queue.html:25 kitsune/flagit/jinja2/flagit/zendesk_spam.html:30 kitsune/questions/forms.py:255
 msgid "Please select..."
 msgstr "Eiporavosépa..."
 
@@ -1245,7 +1287,7 @@ msgstr "Pe tetepy oñemohenda hekopete."
 msgid "Update"
 msgstr "Mbohekopyahu"
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:55 kitsune/wiki/jinja2/wiki/includes/document_macros.html:393 kitsune/wiki/jinja2/wiki/includes/survey_form.html:14
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:55 kitsune/wiki/jinja2/wiki/includes/document_macros.html:385 kitsune/wiki/jinja2/wiki/includes/survey_form.html:14
 msgid "Please wait..."
 msgstr "Ikatúpa eha’ãrõmi…"
 
@@ -1342,8 +1384,8 @@ msgid "Title:"
 msgstr "Teratee:"
 
 #: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:4 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:10
-#: kitsune/kbforums/forms.py:34 kitsune/kbforums/forms.py:65 kitsune/kbforums/forms.py:101 kitsune/questions/forms.py:300 kitsune/wiki/forms.py:349
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:226 kitsune/wiki/jinja2/wiki/review_translation.html:99
+#: kitsune/kbforums/forms.py:34 kitsune/kbforums/forms.py:65 kitsune/kbforums/forms.py:101 kitsune/questions/forms.py:308 kitsune/wiki/forms.py:349
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:218 kitsune/wiki/jinja2/wiki/review_translation.html:99
 msgid "Content:"
 msgstr "Tetepy:"
 
@@ -1529,7 +1571,7 @@ msgstr "Emboguete’íntema ko kuatia. <strong>¡Kóva ndaikatúi emboguevi!</st
 #: kitsune/kbforums/jinja2/kbforums/edit_post.html:36 kitsune/kbforums/jinja2/kbforums/edit_thread.html:27 kitsune/kbforums/jinja2/kbforums/new_thread.html:48
 #: kitsune/messages/jinja2/messages/delete.html:29 kitsune/messages/jinja2/messages/new.html:26 kitsune/questions/jinja2/questions/confirm_answer_delete.html:33
 #: kitsune/questions/jinja2/questions/confirm_question_delete.html:35 kitsune/questions/jinja2/questions/edit_answer.html:64 kitsune/questions/jinja2/questions/edit_question.html:29
-#: kitsune/questions/jinja2/questions/includes/email_subscribe.html:30 kitsune/questions/jinja2/questions/includes/question_editing_frame.html:194
+#: kitsune/questions/jinja2/questions/includes/email_subscribe.html:30 kitsune/questions/jinja2/questions/includes/question_editing_frame.html:195
 #: kitsune/questions/jinja2/questions/question_details.html:472 kitsune/tidings/jinja2/tidings/unsub.html:18 kitsune/users/jinja2/users/confirm_avatar_delete.html:23
 #: kitsune/users/jinja2/users/edit_profile.html:90 kitsune/wiki/jinja2/wiki/confirm_remove_contributor.html:15 kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:15
 #: kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:11 kitsune/wiki/jinja2/wiki/includes/review_form.html:81 kitsune/wiki/jinja2/wiki/includes/review_form.html:106
@@ -1659,7 +1701,7 @@ msgstr "Téma ñeguenohẽ"
 msgid "{t} | {f} | Contributor Discussions"
 msgstr "{t} | {f} | Pytyvõharakuéra ñomongeta"
 
-#: kitsune/forums/jinja2/forums/posts.html:24 kitsune/kbforums/jinja2/kbforums/posts.html:47 kitsune/search/jinja2/search/includes/result.html:39
+#: kitsune/forums/jinja2/forums/posts.html:24 kitsune/kbforums/jinja2/kbforums/posts.html:47 kitsune/search/jinja2/search/includes/result.html:48
 #, python-brace-format
 msgid "1 reply"
 msgid_plural "{n} replies"
@@ -1883,8 +1925,8 @@ msgid "Include this in wiki syntax with [[Image:title]]"
 msgstr "Emoinge kóva wiki ñe’ẽjuajungatúpe [[Image:title]] ndive"
 
 #: kitsune/gallery/forms.py:32
-msgid "Provide a brief description of this media."
-msgstr "Ehai mbykymi ñemoha’ãnga marandurenda hekoetáva rehe."
+msgid "Provide a brief description of this image."
+msgstr ""
 
 #: kitsune/gallery/forms.py:40 kitsune/questions/jinja2/questions/question_details.html:455 kitsune/wiki/jinja2/wiki/confirm_document_delete.html:24
 msgid "Locale"
@@ -1924,14 +1966,14 @@ msgstr "Embogue’íntema opa ararã ko ta’ãnga. <strong>¡Ndaikatúi ojepe�
 
 #: kitsune/gallery/jinja2/gallery/confirm_media_delete.html:5
 #, python-brace-format
-msgid "Delete image | {t} | Media Gallery"
-msgstr "Ta’ãnga mbogue i {t} i Ta’ãngakuéra renda"
+msgid "Delete image | {t} | Image Gallery"
+msgstr ""
 
 #: kitsune/gallery/jinja2/gallery/confirm_media_delete.html:6 kitsune/gallery/jinja2/gallery/edit_media.html:7 kitsune/gallery/jinja2/gallery/gallery.html:3
 #: kitsune/gallery/jinja2/gallery/gallery.html:8 kitsune/gallery/jinja2/gallery/gallery.html:17 kitsune/gallery/jinja2/gallery/media.html:7 kitsune/gallery/jinja2/gallery/search.html:4
 #: kitsune/gallery/jinja2/gallery/search.html:8
-msgid "Media Gallery"
-msgstr "Tendaguasu hekoetáva"
+msgid "Image Gallery"
+msgstr ""
 
 #: kitsune/gallery/jinja2/gallery/confirm_media_delete.html:27
 #, python-brace-format
@@ -1953,16 +1995,16 @@ msgstr "Eñongatu ta’ãnga"
 
 #: kitsune/gallery/jinja2/gallery/edit_media.html:5
 #, python-brace-format
-msgid "Edit image | {t} | Media Gallery"
-msgstr "Embosako’i ta’ãnga | {t} | Tendaguasu hekoetáva"
+msgid "Edit image | {t} | Image Gallery"
+msgstr ""
 
 #: kitsune/gallery/jinja2/gallery/gallery.html:44 kitsune/gallery/jinja2/gallery/search.html:16
 msgid "Search Gallery"
 msgstr "Eheka ta’ãngakuéra rendápe"
 
 #: kitsune/gallery/jinja2/gallery/gallery.html:51 kitsune/gallery/jinja2/gallery/search.html:25
-msgid "Show media for:"
-msgstr "Ehechauka heko’etávape g̃uarã:"
+msgid "Show images for:"
+msgstr ""
 
 #: kitsune/gallery/jinja2/gallery/gallery.html:58 kitsune/gallery/jinja2/gallery/search.html:32 kitsune/sumo/jinja2/base.html:336
 msgid "Go"
@@ -1974,8 +2016,8 @@ msgstr "Hupi"
 
 #: kitsune/gallery/jinja2/gallery/media.html:3
 #, python-brace-format
-msgid "{title} | Media Gallery"
-msgstr "{title} | Tendaguasu hekoetáva"
+msgid "{title} | Image Gallery"
+msgstr ""
 
 #: kitsune/gallery/jinja2/gallery/includes/upload_media_form.html:47 kitsune/gallery/jinja2/gallery/media.html:10 kitsune/upload/jinja2/upload/attachments.html:11
 #: kitsune/upload/jinja2/upload/attachments.html:16 kitsune/upload/jinja2/upload/attachments.html:18
@@ -2004,12 +2046,12 @@ msgid "This image is not included in any articles."
 msgstr "Ko ta’ãnga ndoikéi mavavéva jehaipyrépe."
 
 #: kitsune/gallery/jinja2/gallery/search.html:2
-msgid "Media Gallery Search"
-msgstr "Eheka hekoetáva renda"
+msgid "Image Gallery Search"
+msgstr ""
 
 #: kitsune/gallery/jinja2/gallery/includes/media_list.html:15
-msgid "No media files found."
-msgstr "Ndojejuhúi marandurenda hekoetáva"
+msgid "No images found."
+msgstr ""
 
 #: kitsune/gallery/jinja2/gallery/includes/upload_media_form.html:57
 msgid "Progress"
@@ -2024,7 +2066,28 @@ msgstr "Ehupi ta’ãnga ñongatuha (JPG térã PNG). Ñongatuha tuichavéva: {s
 msgid "username"
 msgstr "poruhára réra"
 
-#: kitsune/groups/models.py:48
+#. This is a group visibility label, displayed in group profiles (such as
+#. https://support.mozilla.org/groups/forum-contributors/) and when viewing group
+#. tickets.
+#: kitsune/groups/models.py:36
+msgid "Private – members only"
+msgstr ""
+
+#. This is a group visibility label, displayed in group profiles (such as
+#. https://support.mozilla.org/groups/forum-contributors/) and when viewing group
+#. tickets.
+#: kitsune/groups/models.py:38
+msgid "Public – visible to all"
+msgstr ""
+
+#. This is a group visibility label, displayed in group profiles (such as
+#. https://support.mozilla.org/groups/forum-contributors/) and when viewing group
+#. tickets.
+#: kitsune/groups/models.py:40
+msgid "Moderated – visible to specific groups"
+msgstr ""
+
+#: kitsune/groups/models.py:51
 msgid "Avatar"
 msgstr "Avatar"
 
@@ -2228,7 +2291,7 @@ msgid_plural "{n} members"
 msgstr[0] "{n} atygua"
 msgstr[1] "{n} atygua"
 
-#: kitsune/groups/jinja2/groups/profile.html:117 kitsune/sumo/jinja2/includes/common_macros.html:609 kitsune/users/jinja2/users/edit_profile.html:4
+#: kitsune/groups/jinja2/groups/profile.html:117 kitsune/sumo/jinja2/includes/common_macros.html:557 kitsune/users/jinja2/users/edit_profile.html:4
 msgid "Edit Profile"
 msgstr "Embosako’i mba’ete"
 
@@ -2309,7 +2372,7 @@ msgstr "Ñemboheko ramovéva"
 msgid "Pagination"
 msgstr "Ñembopapapy"
 
-#: kitsune/groups/jinja2/groups/includes/_tickets_content.html:87 kitsune/sumo/jinja2/layout/paginator.html:11
+#: kitsune/groups/jinja2/groups/includes/_tickets_content.html:87 kitsune/search/jinja2/search/results.html:87 kitsune/sumo/jinja2/layout/paginator.html:11
 msgid "Previous"
 msgstr "Mboyvegua"
 
@@ -2318,7 +2381,7 @@ msgstr "Mboyvegua"
 msgid "Page {n} of {total}"
 msgstr "Kuatiarogue {n} {total}"
 
-#: kitsune/groups/jinja2/groups/includes/_tickets_content.html:100 kitsune/sumo/jinja2/layout/paginator.html:35
+#: kitsune/groups/jinja2/groups/includes/_tickets_content.html:100 kitsune/search/jinja2/search/results.html:94 kitsune/sumo/jinja2/layout/paginator.html:35
 msgid "Next"
 msgstr "Upeigua"
 
@@ -2478,17 +2541,17 @@ msgstr "Ñomongeta"
 msgid "Delete thread \"{t}\" | {d} Discussion | Knowledge Base"
 msgstr "Embogue inimbo \"{t}\" | {d} Ñomongeta | Kuapyeta rendagua"
 
-#. {l} is the name of the locale.
-#: kitsune/kbforums/jinja2/kbforums/discussions.html:3
+#: kitsune/kbforums/jinja2/kbforums/discussions.html:2
 #, python-brace-format
 msgid "{locale_name} Discussions | Knowledge Base"
 msgstr "Ñemongetaita {locale_name} rehegua | Kuaapy ñepyrũha"
 
-#: kitsune/kbforums/jinja2/kbforums/discussions.html:4
+#: kitsune/kbforums/jinja2/kbforums/discussions.html:3
 #, python-brace-format
 msgid "{locale_name} Discussions"
 msgstr "Ñomongeta {locale_name} mba’éva"
 
+#. {l} is the name of the locale.
 #: kitsune/kbforums/jinja2/kbforums/discussions.html:8
 #, python-brace-format
 msgid "{l} Knowledge Base Discussions"
@@ -2569,7 +2632,9 @@ msgstr "Ko atýpe oñeñomongeta mba’éicha ikatu iporãve pe jehaipyre \"%(ti
 msgid ""
 "This forum is a discussion about improving the localization of the \"%(title)s\" article. If you want to improve the article content, go to the <a rel=\"ugc nofollow\" href=\"%(url)s\">English "
 "article discussion</a>."
-msgstr "Ko atýpe oñeñomongeta mba’éicha ikatu iporãve jehaipyre moñe’ẽasa rehegua \"%(title)s\". Emoporãsevéramo hetepy, eho <a rel=\"ugc nofollow\" href=\"%(url)s\">Ñomongeta jehaipyre rehe inglés ñe’ẽme</a>."
+msgstr ""
+"Ko atýpe oñeñomongeta mba’éicha ikatu iporãve jehaipyre moñe’ẽasa rehegua \"%(title)s\". Emoporãsevéramo hetepy, eho <a rel=\"ugc nofollow\" href=\"%(url)s\">Ñomongeta jehaipyre rehe inglés ñe’ẽme</"
+"a>."
 
 #: kitsune/kbforums/jinja2/kbforums/includes/macros.html:30
 #, python-format
@@ -2736,12 +2801,12 @@ msgstr "Alemán ñe’ẽ omoambuepotápe tenda 2-hápe, ñemo’ãguasu ho’a 
 msgid "<b>Important:</b> Currently we are using a simplified model, where each article accounts for 1/50=2% of visits per language"
 msgstr "<b>Tuichamba’éva:</b> Ko’ág̃a roiporuhína peteĩ mba’e mombykypyre ohechaukáva peteĩteĩva jehaipyre rehegua 1/50=2 % oikéva peteĩ ñe’ẽ megua"
 
-#: kitsune/landings/jinja2/landings/home.html:14 kitsune/questions/jinja2/questions/question_details.html:288 kitsune/questions/jinja2/questions/question_list.html:57
+#: kitsune/landings/jinja2/landings/home.html:14 kitsune/questions/jinja2/questions/question_details.html:288 kitsune/questions/jinja2/questions/question_list.html:69
 #: kitsune/search/jinja2/search/form.html:13 kitsune/search/jinja2/search/results.html:13 kitsune/sumo/jinja2/base.html:187
 msgid "Search Support"
 msgstr "Eheka Pytyvõha"
 
-#: kitsune/landings/jinja2/landings/home.html:18 kitsune/products/jinja2/products/product.html:38
+#: kitsune/landings/jinja2/landings/home.html:18 kitsune/products/jinja2/products/product.html:40
 msgid "Popular Searches:"
 msgstr "Jehaipyre ojehechavéva:"
 
@@ -2757,7 +2822,7 @@ msgstr "VPN"
 msgid "Tracking Protection"
 msgstr "Tapykuehoha Ñemo’ã"
 
-#: kitsune/landings/jinja2/landings/home.html:22 kitsune/products/jinja2/products/product.html:44
+#: kitsune/landings/jinja2/landings/home.html:22 kitsune/products/jinja2/products/product.html:46
 msgid "Windows 10"
 msgstr "Windows 10"
 
@@ -2769,7 +2834,7 @@ msgstr "Eipota pytyvõ"
 msgid "Pick your product"
 msgstr "Eiporavo apopyre"
 
-#: kitsune/landings/jinja2/landings/home.html:45 kitsune/products/jinja2/products/product.html:162 kitsune/questions/jinja2/questions/includes/aaq_macros.html:191
+#: kitsune/landings/jinja2/landings/home.html:45 kitsune/products/jinja2/products/product.html:164 kitsune/questions/jinja2/questions/includes/aaq_macros.html:192
 msgid "Featured Articles"
 msgstr "Mba’ekuéra Ojuehegua"
 
@@ -2782,7 +2847,7 @@ msgid "Grow and share your expertise with others. Answer questions and improve o
 msgstr "Ekakuaa ha emoherakuã nerembiapokue ambuéndi. Embohovái porandu ha embotuichave ore kuaapy."
 
 #: kitsune/landings/jinja2/landings/includes/join-our-community-callout.html:7 kitsune/landings/jinja2/landings/includes/volunteer-callout.html:7
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:61 kitsune/sumo/jinja2/includes/common_macros.html:46
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:62 kitsune/sumo/jinja2/includes/common_macros.html:46
 msgid "Learn More"
 msgstr "Kuaave"
 
@@ -2865,7 +2930,7 @@ msgstr "¿Emboguesépa añetehápe ko’ã ñe’ẽmondo?"
 msgid "Are you sure you want to delete this message?"
 msgstr "¿Emboguesépa añetehápe ko’ã ñe’ẽmondo?"
 
-#: kitsune/messages/jinja2/messages/inbox.html:3 kitsune/messages/jinja2/messages/includes/macros.html:34 kitsune/sumo/jinja2/includes/common_macros.html:642
+#: kitsune/messages/jinja2/messages/inbox.html:3 kitsune/messages/jinja2/messages/includes/macros.html:34 kitsune/sumo/jinja2/includes/common_macros.html:590
 msgid "Inbox"
 msgstr "Ñe’ẽmondo g̃uahẽha"
 
@@ -2974,7 +3039,7 @@ msgstr "G̃uarã"
 msgid "Message Preview:"
 msgstr "Ñe’ẽmondo Jehecha’ypy:"
 
-#: kitsune/products/jinja2/products/documents.html:22 kitsune/products/jinja2/products/product.html:14 kitsune/wiki/jinja2/wiki/document.html:29
+#: kitsune/products/jinja2/products/documents.html:22 kitsune/products/jinja2/products/product.html:14 kitsune/wiki/jinja2/wiki/document.html:28
 #, python-brace-format
 msgid "{product} Help"
 msgstr "{product} Pytyvõ"
@@ -2983,171 +3048,180 @@ msgstr "{product} Pytyvõ"
 msgid "In English"
 msgstr "Inglés ñe’ẽme"
 
-#: kitsune/products/jinja2/products/product.html:33
-msgid "Support"
-msgstr "Ñepytyvõ"
+#. Alt text for a product logo.
+#: kitsune/products/jinja2/products/product.html:33 kitsune/questions/jinja2/questions/includes/aaq_macros.html:170 kitsune/questions/jinja2/questions/includes/question_editing_frame.html:33
+#, python-brace-format
+msgid "{product} logo"
+msgstr "{product} ra’ãnga’i"
 
-#: kitsune/products/jinja2/products/product.html:41 kitsune/products/jinja2/products/product.html:107
+#. A header displayed on product pages, such as
+#. https://support.mozilla.org/products/firefox
+#: kitsune/products/jinja2/products/product.html:35
+#, python-brace-format
+msgid "{product} Support"
+msgstr ""
+
+#: kitsune/products/jinja2/products/product.html:43 kitsune/products/jinja2/products/product.html:109
 msgid "Update Firefox"
 msgstr "Firefox mbohekopyahu"
 
-#: kitsune/products/jinja2/products/product.html:42 kitsune/products/jinja2/products/product.html:108
+#: kitsune/products/jinja2/products/product.html:44 kitsune/products/jinja2/products/product.html:110
 msgid "Profiles"
 msgstr "Mba’etekuéra"
 
-#: kitsune/products/jinja2/products/product.html:43 kitsune/products/jinja2/products/product.html:47 kitsune/products/jinja2/products/product.html:109
+#: kitsune/products/jinja2/products/product.html:45 kitsune/products/jinja2/products/product.html:49 kitsune/products/jinja2/products/product.html:111
 msgid "Firefox Sync"
 msgstr "Firefox Sync"
 
-#: kitsune/products/jinja2/products/product.html:48 kitsune/products/jinja2/products/product.html:78
+#: kitsune/products/jinja2/products/product.html:50 kitsune/products/jinja2/products/product.html:80
 msgid "Bookmarks"
 msgstr "Techaukaha"
 
-#: kitsune/products/jinja2/products/product.html:49 kitsune/products/jinja2/products/product.html:52
+#: kitsune/products/jinja2/products/product.html:51 kitsune/products/jinja2/products/product.html:54
 msgid "Send tab"
 msgstr "Emondo tendayke"
 
-#: kitsune/products/jinja2/products/product.html:53
+#: kitsune/products/jinja2/products/product.html:55
 msgid "Night mode"
 msgstr "Pyharegua ayvu"
 
-#: kitsune/products/jinja2/products/product.html:54
+#: kitsune/products/jinja2/products/product.html:56
 msgid "Block images"
 msgstr "Ta’ãnga jejoko"
 
-#: kitsune/products/jinja2/products/product.html:57
+#: kitsune/products/jinja2/products/product.html:59
 msgid "Policies"
 msgstr "Porureko"
 
-#: kitsune/products/jinja2/products/product.html:58
+#: kitsune/products/jinja2/products/product.html:60
 msgid "Customization"
 msgstr "Ñemboava"
 
-#: kitsune/products/jinja2/products/product.html:59
+#: kitsune/products/jinja2/products/product.html:61
 msgid "extensions"
 msgstr "jepysokue"
 
-#: kitsune/products/jinja2/products/product.html:62 kitsune/products/jinja2/products/product.html:82
+#: kitsune/products/jinja2/products/product.html:64 kitsune/products/jinja2/products/product.html:84
 msgid "Turbo mode"
 msgstr "Turbo ayvu"
 
-#: kitsune/products/jinja2/products/product.html:63
+#: kitsune/products/jinja2/products/product.html:65
 msgid "Voice commands"
 msgstr "Ñe’ẽ mbohapeha"
 
-#: kitsune/products/jinja2/products/product.html:64
+#: kitsune/products/jinja2/products/product.html:66
 msgid "Receive tabs"
 msgstr "Emog̃uahẽ tendayke"
 
-#: kitsune/products/jinja2/products/product.html:67
+#: kitsune/products/jinja2/products/product.html:69
 msgid "Manage devices"
 msgstr "Mba’e’oka ñangarekohára"
 
-#: kitsune/products/jinja2/products/product.html:68
+#: kitsune/products/jinja2/products/product.html:70
 msgid "Download VPN"
 msgstr "Emboguejy VPN"
 
-#: kitsune/products/jinja2/products/product.html:69
+#: kitsune/products/jinja2/products/product.html:71
 msgid "Limits"
 msgstr "Tembe’y"
 
-#: kitsune/products/jinja2/products/product.html:72
+#: kitsune/products/jinja2/products/product.html:74
 msgid "Lockwise iOS"
 msgstr "Lockwise iOS"
 
-#: kitsune/products/jinja2/products/product.html:73
+#: kitsune/products/jinja2/products/product.html:75
 msgid "Lockwise Android"
 msgstr "Lockwise Android"
 
-#: kitsune/products/jinja2/products/product.html:74
+#: kitsune/products/jinja2/products/product.html:76
 msgid "Lockwise desktop"
 msgstr "Lockwise mesa arigua"
 
-#: kitsune/products/jinja2/products/product.html:77
+#: kitsune/products/jinja2/products/product.html:79
 msgid "Voice search"
 msgstr "Ñe’ẽ jeheka"
 
-#: kitsune/products/jinja2/products/product.html:79
+#: kitsune/products/jinja2/products/product.html:81
 msgid "Full screen"
 msgstr "Mba’erechaha tuichakue"
 
-#: kitsune/products/jinja2/products/product.html:83
+#: kitsune/products/jinja2/products/product.html:85
 msgid "Rewards"
 msgstr "Jopói"
 
-#: kitsune/products/jinja2/products/product.html:84
+#: kitsune/products/jinja2/products/product.html:86
 msgid "Games"
 msgstr "Ñembosarái"
 
-#: kitsune/products/jinja2/products/product.html:87
+#: kitsune/products/jinja2/products/product.html:89
 msgid "Room size"
 msgstr "Kotykeha tuichakue"
 
-#: kitsune/products/jinja2/products/product.html:88
+#: kitsune/products/jinja2/products/product.html:90
 msgid "Avatars"
 msgstr "Avatars"
 
-#: kitsune/products/jinja2/products/product.html:89
+#: kitsune/products/jinja2/products/product.html:91
 msgid "VR"
 msgstr "VR"
 
-#: kitsune/products/jinja2/products/product.html:92
+#: kitsune/products/jinja2/products/product.html:94
 msgid "Autocomplete"
 msgstr "Moĩmbajehegui"
 
-#: kitsune/products/jinja2/products/product.html:93
+#: kitsune/products/jinja2/products/product.html:95
 msgid "Default search"
 msgstr "Jeheka ijypykuéva"
 
-#: kitsune/products/jinja2/products/product.html:94
+#: kitsune/products/jinja2/products/product.html:96
 msgid "Desktop view"
 msgstr "Jehecha mesa arigua"
 
-#: kitsune/products/jinja2/products/product.html:97
+#: kitsune/products/jinja2/products/product.html:99
 msgid "Capture a screenshot"
 msgstr "Ejapyhy mba’erechaha japyhypyre"
 
-#: kitsune/products/jinja2/products/product.html:98
+#: kitsune/products/jinja2/products/product.html:100
 msgid "Organize a screenshot"
 msgstr "Emohendaoporã mba’erechaha japyhypyre"
 
-#: kitsune/products/jinja2/products/product.html:99
+#: kitsune/products/jinja2/products/product.html:101
 msgid "Create a collection"
 msgstr "Emoheñói ñembyatypy"
 
-#: kitsune/products/jinja2/products/product.html:102
+#: kitsune/products/jinja2/products/product.html:104
 msgid "Thunderbird profiles"
 msgstr "Thunderbird mba’ete"
 
-#: kitsune/products/jinja2/products/product.html:103
+#: kitsune/products/jinja2/products/product.html:105
 msgid "Migrate"
 msgstr "Jeho"
 
-#: kitsune/products/jinja2/products/product.html:104
+#: kitsune/products/jinja2/products/product.html:106
 msgid "Themes"
 msgstr "Temakuéra"
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:107 kitsune/products/jinja2/products/product.html:129 kitsune/questions/jinja2/questions/includes/aaq_macros.html:199
+#: kitsune/products/jinja2/products/product.html:131 kitsune/questions/jinja2/questions/includes/aaq_macros.html:200
 msgid "Topics"
 msgstr "Téma"
 
-#: kitsune/products/jinja2/products/product.html:130
+#: kitsune/products/jinja2/products/product.html:132
 msgid "Explore the knowledge base."
 msgstr "Eheka kuaapy ñepyrũhápe."
 
-#: kitsune/products/jinja2/products/product.html:141
+#: kitsune/products/jinja2/products/product.html:143
 msgid "Download Thunderbird"
 msgstr "Emboguejy Thunderbird"
 
-#: kitsune/products/jinja2/products/product.html:145 kitsune/sumo/jinja2/includes/common_macros.html:927
+#: kitsune/products/jinja2/products/product.html:147 kitsune/sumo/jinja2/includes/common_macros.html:875
 msgid "Systems and Languages"
 msgstr "Apopyvusu ha ñe’ẽ"
 
-#: kitsune/products/jinja2/products/product.html:146
+#: kitsune/products/jinja2/products/product.html:148
 msgid "Release Notes"
 msgstr "Jehaipy rehegua"
 
-#: kitsune/products/jinja2/products/product.html:147 kitsune/sumo/jinja2/base.html:370 kitsune/sumo/jinja2/includes/common_macros.html:929
+#: kitsune/products/jinja2/products/product.html:149 kitsune/sumo/jinja2/base.html:370 kitsune/sumo/jinja2/includes/common_macros.html:877
 msgid "Privacy"
 msgstr "Ñemigua"
 
@@ -3167,7 +3241,7 @@ msgstr ""
 #. https://support.mozilla.org/questions/new and in Premium product question
 #. forms).
 #: kitsune/products/jinja2/products/includes/enterprise_banner.html:23 kitsune/products/jinja2/products/includes/topic_macros.html:94 kitsune/questions/jinja2/questions/includes/aaq_macros.html:6
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:217 kitsune/questions/jinja2/questions/new_question.html:41
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:218 kitsune/questions/jinja2/questions/new_question.html:41
 msgid "Contact Support"
 msgstr "Eheka Ñepytyvõ"
 
@@ -3208,7 +3282,7 @@ msgstr[1] "Ehecha opaite {n} jehaipy"
 msgid "Firefox Professional Support"
 msgstr "Firefox ñepytyvõ oikóva"
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:70 kitsune/wiki/jinja2/wiki/includes/document_macros.html:475
+#: kitsune/products/jinja2/products/includes/topic_macros.html:70 kitsune/wiki/jinja2/wiki/includes/document_macros.html:467
 msgid "Still need help?"
 msgstr "¿Eikotevẽ pytyvõ?"
 
@@ -3228,13 +3302,18 @@ msgstr "Roime ápe nde rehehápe. Eporandu ore aty pytyvõhápe ha erekóta ñem
 msgid "Talk to an Expert"
 msgstr "Eñe’ẽ ha’evéva ndive"
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:96 kitsune/questions/jinja2/questions/question_list.html:118
+#: kitsune/products/jinja2/products/includes/topic_macros.html:96 kitsune/questions/jinja2/questions/question_list.html:130
 msgid "Ask the Community"
 msgstr "Eporandu tekohápe"
 
 #: kitsune/products/jinja2/products/includes/topic_macros.html:107
-msgid "Popular"
-msgstr "Herakuãva"
+#, python-brace-format
+msgid "Popular {product} topics"
+msgstr ""
+
+#: kitsune/products/jinja2/products/includes/topic_macros.html:107
+msgid "Popular topics"
+msgstr ""
 
 #. Short label for a tab listing all articles for the selected topic (the full
 #. version is "All articles"). Displayed on mobile on topic pages, such as
@@ -3301,202 +3380,202 @@ msgstr "Ñembohavái opyahuvéva %s-pe"
 
 #. Unused. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:19
+#: kitsune/questions/forms.py:20
 msgid "URL of affected site"
 msgstr "URL tenda imarãva"
 
 #. Unused. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:21
+#: kitsune/questions/forms.py:22
 msgid "Crash ID(s)"
 msgstr "ID jejavy rehegua"
 
 #. Unused. A description of the "Crash ID(s)" field, displayed when filing a
 #. question form (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:25
+#: kitsune/questions/forms.py:26
 msgid ""
 "If you submit information to Mozilla when you crash, you'll be given a crash ID which uniquely identifies your crash and lets us look at details that may help identify the cause. To find your "
-"recently submitted crash IDs, go to <strong>about:crashes</strong> in your location bar. <a href='https://support.mozilla.com/en-"
-"US/kb/Firefox+crashes#Getting_the_most_accurate_help_with_your_Firefox_crash' target='_blank'>Click for detailed instructions</a>."
+"recently submitted crash IDs, go to <strong>about:crashes</strong> in your location bar. <a href='https://support.mozilla.com/en-US/kb/"
+"Firefox+crashes#Getting_the_most_accurate_help_with_your_Firefox_crash' target='_blank'>Click for detailed instructions</a>."
 msgstr ""
-"Eguerahaukáramo marandu Mozilla-pe ne kundaha ndoikóirõ, og̃uahẽta ndéve peteĩ ID omoha’eño pe jejavy ha upévare ikatu rohecha mba’emimi ore pytyvõtava roikuaávo mba’épa oikova’ekue. Rojuhu hag̃ua "
-"pe ID jejavy rehegua embouva’ekue angetete, eho <strong>about:crashes</strong> ne kundaharape rupápe. <a href='https://support.mozilla.com/en-"
-"US/kb/Firefox+crashes#Getting_the_most_accurate_help_with_your_Firefox_crash' target='_blank'>Eikutu eguereko hag̃ua tembiaporape mba’emimíva</a>."
+"Eguerahaukáramo marandu Mozilla-pe ne kundaha ndoikóirõ, og̃uahẽta ndéve peteĩ ID omoha’eño pe jejavy ha upévare ikatu rohecha mba’emimi ore pytyvõtava roikuaávo mba’épa oikova’ekue. Rojuhu hag̃ua pe "
+"ID jejavy rehegua embouva’ekue angetete, eho <strong>about:crashes</strong> ne kundaharape rupápe. <a href='https://support.mozilla.com/en-US/kb/"
+"Firefox+crashes#Getting_the_most_accurate_help_with_your_Firefox_crash' target='_blank'>Eikutu eguereko hag̃ua tembiaporape mba’emimíva</a>."
 
 #. Unused. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:27
+#: kitsune/questions/forms.py:28
 msgid "This happens"
 msgstr "Kóva oiko"
 
 #. Unused. An option for the "This happens" field, displayed when filing a question
 #. form (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:31
+#: kitsune/questions/forms.py:32
 msgid "Not sure how often"
 msgstr "Ndaikuaaporãi pe py’ỹingue"
 
 #. Unused. An option for the "This happens" field, displayed when filing a question
 #. form (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:33
+#: kitsune/questions/forms.py:34
 msgid "Just once or twice"
 msgstr "Peteĩ térã mokõi jey"
 
 #. Unused. An option for the "This happens" field, displayed when filing a question
 #. form (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:35
+#: kitsune/questions/forms.py:36
 msgid "A few times a week"
 msgstr "Ndahetái jey arapokõindýpe"
 
 #. Unused. An option for the "This happens" field, displayed when filing a question
 #. form (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:37
+#: kitsune/questions/forms.py:38
 msgid "Every time Firefox opened"
 msgstr "Peteĩteĩ jey Firefox emoñepyrũvo"
 
 #. Unused. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:40
+#: kitsune/questions/forms.py:41
 msgid "This started when..."
 msgstr "Kóva oñepyrũhína..."
 
 #. Unused. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:42
+#: kitsune/questions/forms.py:43
 msgid "Installed plugins"
 msgstr "Mboguejyrã’i mohendapyre"
 
 #. Unused. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:44
+#: kitsune/questions/forms.py:45
 msgid "Extension/plugin you are having trouble with"
 msgstr "Jepysokue//plugin nemoapañuáiva"
 
 #. Unused. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:46
+#: kitsune/questions/forms.py:47
 msgid "Mobile device"
 msgstr "Mba’e’oka oku’éva"
 
 #. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:50
+#: kitsune/questions/forms.py:51
 msgid "Troubleshooting Information"
 msgstr "Marandu’i apañuái ñemoĩporã rehegua"
 
 #. A description of the "Troubleshooting Information" field, displayed when filing
 #. a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:52
+#: kitsune/questions/forms.py:53
 msgid "This information gives details about the internal workings of your browser that will help in answering your question."
 msgstr "Ko marandu ome’ẽ mba’emimi kundaha rembiapoite pypeguáva orepytyvõtava rombahováivo ne porandu."
 
 #. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:54
+#: kitsune/questions/forms.py:55
 msgid "Summarize your question"
 msgstr "Emombyky ne porandu"
 
 #. A description of the "Summarize your question" field, displayed when filing a
 #. question form (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:56
+#: kitsune/questions/forms.py:57
 msgid "Please summarize your question in one sentence:"
 msgstr "Eikatúpiko emombyky ne porandu peteĩ je’épe:"
 
 #. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:58
+#: kitsune/questions/forms.py:59
 msgid "How can we help?"
 msgstr "¿Mba’éicha roipytyvõkuaa?"
 
 #. A description of the "How can we help?" field, displayed when filing a question
 #. form (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:60
+#: kitsune/questions/forms.py:61
 msgid "Please include as much detail as possible. Also, remember to follow our <a href=\"https://support.mozilla.org/kb/mozilla-support-rules-guidelines\" target=\"_blank\">rules and guidelines</a>."
 msgstr ""
 
 #. A label for a field, displayed when filing a Firefox-related question form
 #. (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:62
+#: kitsune/questions/forms.py:63
 msgid "Firefox version"
 msgstr "Firefox peteĩchagua"
 
 #. A label for a field, displayed when filing a Thunderbird-related question form
 #. (e.g., on https://support.mozilla.org/questions/new/thunderbird/form).
-#: kitsune/questions/forms.py:64
+#: kitsune/questions/forms.py:65
 msgid "Thunderbird version"
 msgstr "Thunderbird peteĩchagua"
 
 #. A description of the "Thunderbird version" field, displayed when filing a
 #. Thunderbird (desktop) question form on
 #. https://support.mozilla.org/questions/new/thunderbird/form.
-#: kitsune/questions/forms.py:66
+#: kitsune/questions/forms.py:67
 msgid "Find your version in Thunderbird App Menu ☰ > Help > About, e.g., 140.8.0esr, 149.0 or 150.0b1."
 msgstr "Eheka Thunderbird rembiporu’i pyahu ☰ > Pytyvõ > rehegua, techapyrãrõ, 140.8.0esr, 149.0 térã 150.0b1."
 
 #. A description of the "Thunderbird version" field, displayed when filing a
 #. Thunderbird for Android question form on
 #. https://support.mozilla.org/questions/new/thunderbird-android/form.
-#: kitsune/questions/forms.py:68
+#: kitsune/questions/forms.py:69
 msgid "Find your version in Thunderbird App Menu ☰ > Settings > Support/About, e.g., 17.0."
 msgstr "Ejuhu versión Thunderbird rembiporu’i poravorãme ☰ > Ñemboheko > Pytyvõ/Upéva, jehecharã, 17.0."
 
 #. A placeholder for the "Thunderbird version" field, displayed when filing a
 #. Thunderbird (desktop) question form on
 #. https://support.mozilla.org/questions/new/thunderbird/form.
-#: kitsune/questions/forms.py:70
+#: kitsune/questions/forms.py:71
 msgid "e.g., 140.8.0esr, 149.0 or 150.0b1"
 msgstr "e.g., 140.8.0esr, 149.0 térã 150.0b1"
 
 #. A placeholder for the "Thunderbird version" field, displayed when filing a
 #. Thunderbird for Android question form on
 #. https://support.mozilla.org/questions/new/thunderbird-android/form.
-#: kitsune/questions/forms.py:72
+#: kitsune/questions/forms.py:73
 msgid "e.g., 17.0"
 msgstr "e.g., 17.0"
 
 #. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:74
+#: kitsune/questions/forms.py:75
 msgid "Operating system"
 msgstr "Apopyvusu oku’éva"
 
 #. A label for a field, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:76
+#: kitsune/questions/forms.py:77
 msgid "Which topic best describes your question?"
 msgstr "¿Mba’e téma pe omoesakãva ne porandu?"
 
 #. A label for a checkbox, displayed when filing a question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/forms.py:78
+#: kitsune/questions/forms.py:79
 msgid "Email me when someone answers the thread"
 msgstr "Embou ñanduti veve oñembohovái vove"
 
 #. A placeholder for the "Post a Reply" editor.
-#: kitsune/questions/forms.py:81
+#: kitsune/questions/forms.py:82
 msgid "Enter your reply here."
 msgstr "Emoinge nembohovái ko’ápe."
 
 #. A placeholder for the email field, displayed when subscribing to a question
 #. while not signed in.
-#: kitsune/questions/forms.py:83
+#: kitsune/questions/forms.py:84
 msgid "Enter your email address here."
 msgstr "Ehai ne ñandutiveve ko’ápe."
 
 #. A label suffix for optional fields, displayed when filing a question form (e.g.,
 #. on https://support.mozilla.org/questions/new/firefox/form). The leading space
 #. must be preserved.
-#: kitsune/questions/forms.py:167
+#: kitsune/questions/forms.py:168
 msgid " (optional):"
 msgstr "(eipotárõ):"
 
 #. An error message displayed under the "How can we help?" field when filing a
 #. question form if the submitted value contains too few non-HTML symbols.
-#: kitsune/questions/forms.py:186
+#: kitsune/questions/forms.py:187
 msgid "Question content cannot be empty."
 msgstr "Porandu retepy ndaikatúi inandívo."
 
-#: kitsune/questions/forms.py:340
+#: kitsune/questions/forms.py:348
 msgid "Please provide an email."
 msgstr "Ikatúpa emoĩ ne ñanduti kundaharape"
 
@@ -3559,7 +3638,7 @@ msgstr "Ikurusúva po rupive"
 
 #. This is a question sort option. It is a part of a drop-down menu with no
 #. heading.
-#: kitsune/questions/views.py:136 kitsune/sumo/jinja2/sumo/includes/thread_post.html:132
+#: kitsune/questions/views.py:136
 msgid "Updated"
 msgstr "Mbohekopyahupyre"
 
@@ -3616,51 +3695,51 @@ msgstr "Che ñe’ẽ sãsogua ndaipóri térã oñembyaipáma."
 msgid "Done! Your question is now posted on the Mozilla community support forum. You can see your post anytime by visiting the {a_open}My Questions{a_close} page in your profile."
 msgstr "¡Oĩma! Ne porandu ko’ág̃a ojehupi Mozilla rekoha pytyvõha atýpe. Ikatu ehecha ne moherakuãngue ehechase vove eikévo {a_open}Che porandu{a_close} kuatiarogue ne mba’etépe."
 
-#: kitsune/questions/views.py:1320
+#: kitsune/questions/views.py:1322
 msgid "Thank you for choosing a solution!"
 msgstr "¡Aguyje eiporavóre peteĩ ñemoĩporã!"
 
-#: kitsune/questions/views.py:1323
+#: kitsune/questions/views.py:1325
 msgid "This question already has a solution."
 msgstr "Ko porandu oñemoĩporãma."
 
-#: kitsune/questions/views.py:1344
+#: kitsune/questions/views.py:1346
 msgid "The solution was undone successfully."
 msgstr "Pe ñemoĩporã oñemboyke hekoitépe."
 
-#: kitsune/questions/views.py:1373 kitsune/questions/views.py:1437
+#: kitsune/questions/views.py:1375 kitsune/questions/views.py:1439
 msgid "You've hit your voting limit for now. Please try again later."
 msgstr "Ehupytýma nde vóto ru’ã ko’ág̃a pevegua. Eha’ã jey ag̃amieve."
 
-#: kitsune/questions/views.py:1447
+#: kitsune/questions/views.py:1449
 msgid "Glad to hear it!"
 msgstr "¡Orembovy’a eréva!"
 
-#: kitsune/questions/views.py:1449
+#: kitsune/questions/views.py:1451
 msgid "Sorry to hear that."
 msgstr "Naorembovy’ái pe eréva."
 
-#: kitsune/questions/views.py:1464
+#: kitsune/questions/views.py:1466
 msgid "You already voted on this reply."
 msgstr "Eme’ẽma ne ñe’ẽ ko porandúpe g̃uarã."
 
-#: kitsune/questions/views.py:1749
+#: kitsune/questions/views.py:1751
 msgid "We were unable to register your request. You've exceeded the limit for the number of questions allowed to watch in a day. Please try again tomorrow."
 msgstr "Ndaikatúi romboajévo nemba’ejerure. Ehasáma rupi porandu ojehechakuaáva peteĩ árape. Eha’ã jey ko’ẽrõ."
 
-#: kitsune/questions/views.py:1777
+#: kitsune/questions/views.py:1779
 msgid "Could not send a message to that email address."
 msgstr "Ndaikatúi oho ñe’ẽmondo ko ñandutiveve kundaharapépe."
 
-#: kitsune/questions/views.py:1783
+#: kitsune/questions/views.py:1785
 msgid "You will be notified of updates by email."
 msgstr "Eñemomarandúta ñembohekopyahu rehegua ñanduti veve rupive."
 
-#: kitsune/questions/views.py:1785
+#: kitsune/questions/views.py:1787
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "Og̃uahẽta ndéve peteĩ ñanduti veve ag̃aite emoneĩ hag̃ua ne ñemboheraguapy."
 
-#: kitsune/questions/views.py:2002
+#: kitsune/questions/views.py:2004
 msgid "A moderator must manually approve your post before it will be visible."
 msgstr "Pe moakãha omoneĩva’erã ipo rupive iñemyerakuã ojehecha mboyve."
 
@@ -3779,7 +3858,7 @@ msgid "When editing a question, uploading new images or deleting existing ones w
 msgstr "Embosako’ívo ñeporandu, ta’ãnga pyahu ñemyanyhẽ térã umi oĩmavavoi oguetéta sapy’aitépe."
 
 #. A button displayed when editing an existing question.
-#: kitsune/questions/jinja2/questions/edit_question.html:26 kitsune/questions/jinja2/questions/includes/question_editing_frame.html:192
+#: kitsune/questions/jinja2/questions/edit_question.html:26 kitsune/questions/jinja2/questions/includes/question_editing_frame.html:193
 msgid "Save Question"
 msgstr "Eñongatu pe porandu"
 
@@ -3806,17 +3885,17 @@ msgstr "Eheka Pytyvõ"
 msgid "Ask your question"
 msgstr "Eporandumína"
 
-#: kitsune/questions/jinja2/questions/new_question.html:63 kitsune/wiki/jinja2/wiki/includes/document_macros.html:288 kitsune/wiki/jinja2/wiki/includes/flag_form.html:34
+#: kitsune/questions/jinja2/questions/new_question.html:63 kitsune/wiki/jinja2/wiki/includes/document_macros.html:280 kitsune/wiki/jinja2/wiki/includes/flag_form.html:35
 #: kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:10 kitsune/wiki/jinja2/wiki/includes/survey_form.html:46 kitsune/wiki/jinja2/wiki/recent_revisions.html:31
 msgid "Submit"
 msgstr "Mondo"
 
 #: kitsune/questions/jinja2/questions/product_list.html:4 kitsune/questions/jinja2/questions/product_list.html:5 kitsune/questions/jinja2/questions/question_list.html:22
-#: kitsune/sumo/jinja2/includes/common_macros.html:247
+#: kitsune/sumo/jinja2/includes/common_macros.html:195
 msgid "Community Forums"
 msgstr "Tekohakuéra Aty"
 
-#: kitsune/questions/jinja2/questions/product_list.html:14 kitsune/sumo/jinja2/includes/common_macros.html:264
+#: kitsune/questions/jinja2/questions/product_list.html:14 kitsune/sumo/jinja2/includes/common_macros.html:212
 msgid "Browse by product"
 msgstr "Eikundaha apopyre reheve"
 
@@ -3894,8 +3973,8 @@ msgid ""
 "In order to prevent spam, we are limiting the number of answers that can be posted within a short period of time. If you want to post more please create a post on the <a "
 "href=\"%(url)s\">contributors forum</a> requesting that you be white-listed."
 msgstr ""
-"Emboyke hag̃ua ñanduti veve eipota’ỹva, romomichĩ porandu papapy ikatúva oñeguenohẽ ndahetái ára. Eguenohẽsevéramo ikatúpa emoheñói peteĩ ñeguenohẽ <a href=\"%(url)s\">aty pytyvõhápe</a> ejerurehápe"
-" eñemoĩ hag̃ua tysýi morotĩme."
+"Emboyke hag̃ua ñanduti veve eipota’ỹva, romomichĩ porandu papapy ikatúva oñeguenohẽ ndahetái ára. Eguenohẽsevéramo ikatúpa emoheñói peteĩ ñeguenohẽ <a href=\"%(url)s\">aty pytyvõhápe</a> ejerurehápe "
+"eñemoĩ hag̃ua tysýi morotĩme."
 
 #: kitsune/questions/jinja2/questions/question_details.html:232
 msgid "I am providing the requested information"
@@ -3968,7 +4047,7 @@ msgstr "Porandu mba’emimi"
 msgid "Product"
 msgstr "Apopyre"
 
-#: kitsune/questions/jinja2/questions/question_details.html:436 kitsune/questions/jinja2/questions/question_list.html:289
+#: kitsune/questions/jinja2/questions/question_details.html:436 kitsune/questions/jinja2/questions/question_list.html:313
 msgid "Topic"
 msgstr "Téma"
 
@@ -4011,90 +4090,90 @@ msgstr "Apopyre opaichagua"
 msgid "{title} Community Forum"
 msgstr "{title} Tekoha Aty"
 
-#: kitsune/questions/jinja2/questions/question_list.html:77
+#: kitsune/questions/jinja2/questions/question_list.html:89
 #, python-format
 msgid "%(recent_unanswered_count)s question in the last 24 hours has no reply. <a href=\"%(url)s\">Help solve it!</a>"
 msgid_plural "%(recent_unanswered_count)s questions in the last 24 hours have no reply. <a href=\"%(url)s\">Help solve them!</a>"
 msgstr[0] "%(recent_unanswered_count)s porandu 24 aravo ohasaramóva noñembohovái. <a href=\"%(url)s\">¡Eipytyvõ oĩporã hag̃ua!</a>"
 msgstr[1] "%(recent_unanswered_count)s porandu 24 aravo ohasaramóva noñembohovái. <a href=\"%(url)s\">¡Eipytyvõ oĩporã hag̃ua!"
 
-#: kitsune/questions/jinja2/questions/question_list.html:85
+#: kitsune/questions/jinja2/questions/question_list.html:97
 #, python-format
 msgid "%(recent_unanswered_count)s question in the last 24 hours has no reply. <a href=\"/contribute/forum\">Learn how to help solve it!</a>"
 msgid_plural "%(recent_unanswered_count)s questions in the last 24 hours have no reply. <a href=\"/contribute/forum\">Learn how to help solve them!</a>"
 msgstr[0] "Porandu %(recent_unanswered_count)s 24 aravo ohasaramóvape noñembohovái. <a href=\"/contribute/forum\">¡Mba’éichapa eipytyvõkuaa!</a>"
 msgstr[1] "Pe porandu %(recent_unanswered_count)s ojapóva 24 aravo ohasaramóvape. <a href=\"/get-involved\"> ¡Eikuaa mba’éichapa eipytyvõta oĩporãvo!</a>"
 
-#: kitsune/questions/jinja2/questions/question_list.html:95
+#: kitsune/questions/jinja2/questions/question_list.html:107
 msgid "0 questions in the last 24 hours have no reply. Good job!"
 msgstr "0 porandu 24 aravo ohasaramóvape noñembohovái. ¡Emba’apo porã!"
 
-#: kitsune/questions/jinja2/questions/question_list.html:99
+#: kitsune/questions/jinja2/questions/question_list.html:111
 msgid "0 questions in the last 24 hours have no reply. <a href=\"/contribute/forum\">Learn how to help!</a>"
 msgstr "0 porandu 24 aravo ohasaramóvape noñembohovái. <a href=\"/get-involved\">¡Eñeha’ã eipytyvõ!</a>"
 
-#: kitsune/questions/jinja2/questions/question_list.html:134
+#: kitsune/questions/jinja2/questions/question_list.html:146
 msgid "Showing questions for topic:"
 msgstr "Ehechauka porandu téma rehegua:"
 
-#: kitsune/questions/jinja2/questions/question_list.html:153
+#: kitsune/questions/jinja2/questions/question_list.html:165
 msgid "Clear topic filter"
 msgstr "Embogue téma mbogua"
 
-#: kitsune/questions/jinja2/questions/question_list.html:167
+#: kitsune/questions/jinja2/questions/question_list.html:179
 msgid "Showing questions tagged:"
 msgstr "Ehechauka porandu heramoĩpyréva:"
 
-#: kitsune/questions/jinja2/questions/question_list.html:181
+#: kitsune/questions/jinja2/questions/question_list.html:193
 msgid "Clear all tag filters"
 msgstr "Emboguepaite teramoĩ mboguaha"
 
 #. A name of the tab displaying all questions.
-#: kitsune/questions/jinja2/questions/question_list.html:198 kitsune/users/jinja2/users/questions_contributed.html:28 kitsune/users/jinja2/users/questions_contributed.html:47
+#: kitsune/questions/jinja2/questions/question_list.html:210 kitsune/users/jinja2/users/questions_contributed.html:28 kitsune/users/jinja2/users/questions_contributed.html:47
 msgctxt "questions"
 msgid "All"
 msgstr "Opavave"
 
-#: kitsune/questions/jinja2/questions/question_list.html:203
+#: kitsune/questions/jinja2/questions/question_list.html:215
 msgid "Attention needed"
 msgstr "Oikotevẽ ñema’ẽ"
 
-#: kitsune/questions/jinja2/questions/question_list.html:208
+#: kitsune/questions/jinja2/questions/question_list.html:220
 msgid "Responded"
 msgstr "Mbohavaipyre"
 
-#: kitsune/questions/jinja2/questions/question_list.html:213
+#: kitsune/questions/jinja2/questions/question_list.html:225
 msgid "Done"
 msgstr "Oikóma"
 
-#: kitsune/questions/jinja2/questions/question_list.html:219 kitsune/sumo/jinja2/sumo/includes/question_entry.html:179 kitsune/users/jinja2/users/questions_contributed.html:54
+#: kitsune/questions/jinja2/questions/question_list.html:231 kitsune/sumo/jinja2/sumo/includes/question_entry.html:179 kitsune/users/jinja2/users/questions_contributed.html:54
 msgid "Spam"
 msgstr "Span"
 
-#: kitsune/questions/jinja2/questions/question_list.html:253
+#: kitsune/questions/jinja2/questions/question_list.html:265
 msgid "There are no questions that match the current filter settings."
 msgstr "Ndaipóri porandu ojogueraháva mboguaha ag̃agua ñembohekopyahu ndive."
 
-#: kitsune/questions/jinja2/questions/question_list.html:281
+#: kitsune/questions/jinja2/questions/question_list.html:293
 msgid "Filter by"
 msgstr "Embogua"
 
 #. A default option for the question "Filter by" filter, displayed when viewing
 #. support forums (e.g., on https://support.mozilla.org/questions/firefox).
-#: kitsune/questions/jinja2/questions/question_list.html:283
+#: kitsune/questions/jinja2/questions/question_list.html:295
 msgctxt "questions filter-by"
 msgid "All"
 msgstr "Opavave"
 
-#: kitsune/questions/jinja2/questions/question_list.html:326
+#: kitsune/questions/jinja2/questions/question_list.html:302
 msgid "Show me"
 msgstr "Ehechaukána"
 
-#: kitsune/questions/jinja2/questions/question_list.html:327
+#: kitsune/questions/jinja2/questions/question_list.html:303
 msgid "Posts from everyone"
 msgstr "Opavave jeikekue"
 
-#: kitsune/questions/jinja2/questions/question_list.html:328
+#: kitsune/questions/jinja2/questions/question_list.html:304
 msgid "My contributions"
 msgstr "Che pytyvõngue"
 
@@ -4151,15 +4230,9 @@ msgstr "¡1 ñemoĩporã oipytyvõkuaa 1,000 poruhárape peteĩ árape!"
 
 #: kitsune/questions/jinja2/questions/email/new_answer.html:35 kitsune/questions/jinja2/questions/email/new_answer_to_asker.html:44
 #, python-format
-msgid "This email is automatically sent by a robot. Our robot can’t respond to your question, but our forum contributors can! If you want to respond to them, please <a href=\"%(url)s\">click here</a>."
+msgid ""
+"This email is automatically sent by a robot. Our robot can’t respond to your question, but our forum contributors can! If you want to respond to them, please <a href=\"%(url)s\">click here</a>."
 msgstr "Ko ñanduti veve ombou peteĩ avara’ãnga. Ore avara’ãnga ndaikatúi ombohovái ne porandu, ¡hákatu ore aty pytyvõha ikatu! Embohovaiséramo ikatúpa ejapo <a href=\"%(url)s\">eikutu ápe</a>."
-
-#. This is an email. Whitespace matters!
-#: kitsune/questions/jinja2/questions/email/new_answer.ltxt:5 kitsune/questions/jinja2/questions/email/new_answer_to_asker.ltxt:4 kitsune/questions/jinja2/questions/email/solution.html:5
-#: kitsune/questions/jinja2/questions/email/solution.ltxt:5 kitsune/wiki/jinja2/wiki/email/ready_for_review_weekly_digest.html:11
-#, python-brace-format
-msgid "Hi {username},"
-msgstr "Mba’éichapa {username},"
 
 #. This is an email. Whitespace matters!
 #: kitsune/questions/jinja2/questions/email/new_answer.ltxt:10
@@ -4246,8 +4319,8 @@ msgstr "Ehecha ñemoĩporã"
 #: kitsune/questions/jinja2/questions/email/solution.html:28
 #, python-format
 msgid ""
-"Did you know that %(answerer)s is a Firefox user just like you? Get started helping other Firefox users by <a href=\"https://%(host)s/questions?filter=unsolved\"> browsing questions</a> -- you might"
-" just make someone's day!"
+"Did you know that %(answerer)s is a Firefox user just like you? Get started helping other Firefox users by <a href=\"https://%(host)s/questions?filter=unsolved\"> browsing questions</a> -- you "
+"might just make someone's day!"
 msgstr ""
 "¿Eikuaápa %(answerer)s ha’eha Firefox poruhára ndeichaguánte? Eñepyrũ eipytyvõ poruhára Firefox peguápe <a href=\"https://%(host)s/questions?filter=unsolved\">ema’ẽag̃uihápe porandúre</a> -¡Ikatu "
 "embovy’a peteĩva tapichápe!"
@@ -4302,7 +4375,7 @@ msgstr "Eiporavo Apopyre"
 msgid "Explore Solutions"
 msgstr "Ejeporeka Ñemoĩporãrãre"
 
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:109 kitsune/sumo/jinja2/includes/common_macros.html:352
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:109 kitsune/sumo/jinja2/includes/common_macros.html:300
 msgid "Ask a Question"
 msgstr "Ejapo peteĩ porandu"
 
@@ -4337,62 +4410,56 @@ msgid "Still need help? Continue to ask your question and get help."
 msgstr "¿Eikotevẽ gueteri ñepytyvõ? Eporandu ore atýpe eñepytyvõ hag̃ua."
 
 #. A button.
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:149 kitsune/questions/jinja2/questions/includes/aaq_macros.html:230 kitsune/users/jinja2/users/auth.html:39
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:149 kitsune/questions/jinja2/questions/includes/aaq_macros.html:231 kitsune/users/jinja2/users/auth.html:39
 msgid "Continue"
 msgstr "Ku’ejey"
 
-#. Alt text for a product logo.
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:169 kitsune/questions/jinja2/questions/includes/question_editing_frame.html:32
-#, python-brace-format
-msgid "{product} logo"
-msgstr "{product} ra’ãnga’i"
-
 #. A header, displayed when asking a new question with a product selected (e.g., on
 #. https://support.mozilla.org/questions/new/firefox).
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:172
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:173
 #, python-brace-format
 msgid "{product} Solutions"
 msgstr "{product} Ñemoĩporã"
 
 #. Introduction, displayed when asking a new question with a product selected
 #. (e.g., on https://support.mozilla.org/questions/new/firefox).
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:178
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:179
 msgid "Browse our self-help options first or continue to ask your question and get help."
 msgstr "Ñepyrũrã, eheka ore ñepytyvõha térã eporandu jey ha péicha eñepytyvõta."
 
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:215
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:216
 msgid "Ask the community"
 msgstr "Eporandu tekohápe"
 
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:223
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:224
 msgid "You can also get help by posting your question in the Community Forum."
 msgstr "Ikatu avei rehupyty pytyvõ remoĩvo ne porandu Foro Comunitario-pe."
 
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:225
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:226
 msgid "You can also post your question directly to our support team for assistance."
 msgstr "Ikatu avei emondo ne porandu ore aty pytyvõhápe eguerekokuaa hag̃ua ñepytyvõ."
 
 #. A button for sharing troubleshooting data when asking a new question (displayed,
 #. e,g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:246
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:247
 msgid "Share Data"
 msgstr "Mba’ekuaarã moherakuã"
 
 #. Deprecated
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:252
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:253
 msgid "We can't automatically get your browser's troubleshooting data, please <a href=\"https://support.mozilla.org/kb/use-troubleshooting-information-page-fix-firefox\">try these manual steps</a>."
 msgstr "Ndaikatúi roreko orejehegui mba’ekuaarã kundahára apañuái myatyrõha. <a href=\"https://support.mozilla.org/kb/use-troubleshooting-information-page-fix-firefox\">eiporu kóicha nde po rupi</a>."
 
 #. Deprecated. Try these manual steps refers to
 #. https://support.mozilla.org/kb/use-troubleshooting-information-page-fix-firefox
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:259
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:260
 #, python-format
 msgid "We can't automatically get your browser's troubleshooting data, please %(a_open)stry these manual steps%(a_close)s."
 msgstr "Ndaikatúi ohupyty ijehegui umi kundahára mba’ekuaarã myatyrõrã, ikatu %(a_open)sejapo ko’ã jeku’e poguáva%(a_close)s."
 
 #. Try these manual steps refers to
 #. https://support.mozilla.org/kb/use-troubleshooting-information-page-fix-firefox
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:264
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:265
 #, python-format
 msgid "We’re unable to pull your browser’s troubleshooting data – please %(a_open)stry these manual steps%(a_close)s."
 msgstr "Ndaikatúi rohupyty umi kundahára mba’ekuaarã myatyrõrã, ikatu %(a_open)sejapo ko’ã jeku’e poguáva%(a_close)s."
@@ -4400,19 +4467,19 @@ msgstr "Ndaikatúi rohupyty umi kundahára mba’ekuaarã myatyrõrã, ikatu %(a
 #. Alt text for the helpful tip icon displayed when filing a new question form
 #. (e.g., on https://support.mozilla.org/questions/new/firefox/form). Source:
 #. https://assets-prod.sumo.prod.webservices.mozgcp.net/static/highlight.975d9eebb1f0b621.svg
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:277
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:278
 msgid "Helpful Tip icon"
 msgstr "Ñemoñe’ẽ oikóva"
 
 #. A header for the Helpful Tip card displayed when filing a new question form
 #. (e.g., on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:279
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:280
 msgid "Helpful Tip!"
 msgstr "¡Ñe’ẽporã oikóva!"
 
 #. Text for the Helpful Tip card displayed when filing a new question form (e.g.,
 #. on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:283
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:284
 msgid "Follow through. Sometimes, our volunteers would ask you for more information or to test out certain scenarios. The sooner you can do this, the sooner they would know how to fix it."
 msgstr "Ehapykueho. Hetajey, ore pytyvõhára ojeruréta marandu térã eha’ã hag̃ua ñemoĩporã. Ejapóramo pya’emi, oikuaa voivéta avei mba’éichapa osẽta iñapañuáigui."
 
@@ -4484,42 +4551,42 @@ msgstr "Embosa’y’o spam ramo"
 #. Alt text for the illustration of community displayed when filing a new question
 #. form (e.g., on https://support.mozilla.org/questions/new/firefox/form). Source:
 #. https://assets-prod.sumo.prod.webservices.mozgcp.net/static/Mozilla-Heads-Keith-Negley-180628__400.99f12ceb616ae784.png
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:55
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:56
 msgid "Illustration of community"
 msgstr "Tekoha ñemoha’ãnga"
 
 #. A header for the Community card displayed when filing a new question form (e.g.,
 #. on https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:58
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:59
 msgid "Our Community is here to help"
 msgstr "Ñande rekoha oĩ nepytyvõ hag̃ua"
 
 #. Text for the Community card displayed when filing a new question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:60
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:61
 msgid "Kindness is at the heart of our community. Our volunteers are happy to share their time and Firefox knowledge with you."
 msgstr "Torypavẽ oguereko ore rekoha ikorasõme. Ore pytyvõhára ovy’a ome’ẽvo hi’aravo ha imba’ekuaa Firefox rehegua nendive."
 
 #. An introduction, displayed when filing a new question form regarding sign-in
 #. troubles. To access it, try asking a question about any product while being not
 #. signed in and then click "I can't sign in to my Mozilla account".
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:86
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:87
 msgid "Can't sign in to your account and need help? You've found the right place. Complete the form below to contact our support staff."
 msgstr "Ndereikekuaáipa ne mba’etépe ha eikotevẽ ñepytyvõ. Ejuhu tenda oikóva. Ehai ko myanehẽha eñe’ẽkuaa hag̃ua ore mba’apohára ndive."
 
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:93
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:94
 msgid ""
-"Submissions via this form are only visible to Mozilla employees and authorized support agents and are not publicly visible. If your issue involves sensitive information, limit the details submitted,"
-" avoiding full logs or traces."
+"Submissions via this form are only visible to Mozilla employees and authorized support agents and are not publicly visible. If your issue involves sensitive information, limit the details "
+"submitted, avoiding full logs or traces."
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:97
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:98
 msgid "Be specific. Telling us “YouTube videos are always choppy” is much more helpful than “something is broken”."
 msgstr "Ere porã. Ro’e “Umi ta’ãngamýi YouTube-pegua akóinte oso oso ojehechakuévo” iporãve erévo “oĩ ndoikóiva”."
 
 #. An advice, displayed when filing a new question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:104
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:105
 msgid ""
 "Be nice and be specific. Our volunteers are Mozilla users just like you who give their own time to help. Telling us “YouTube videos are always choppy” is much more helpful than “something is "
 "broken”."
@@ -4528,21 +4595,21 @@ msgstr ""
 #. Text introducing the Firefox version and the Operating system fields when filing
 #. a new question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:124
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:125
 msgid "We've made some educated guesses about your current browser and operating system."
 msgstr "Rojapo peteĩ mba’e jehechaukapy oĩporãva ha mávapa ha’e pe apopyvusu oku’eva ha kundaha eiporúva ko’ág̃a rupi."
 
 #. A link that shows the Firefox version and the Operating system fields when
 #. filing a new question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:126
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:127
 msgid "Show details &raquo;"
 msgstr "Ehechauka mba’emimi &raquo;"
 
 #. A link that hides the Firefox version and the Operating system fields when
 #. filing a new question form (e.g., on
 #. https://support.mozilla.org/questions/new/firefox/form).
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:128
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:129
 msgid "Hide details &raquo;"
 msgstr "Eñomi mba’emimi &raquo;"
 
@@ -4550,7 +4617,7 @@ msgstr "Eñomi mba’emimi &raquo;"
 #. form regarding sign-in troubles. To access it, try asking a question about any
 #. product while being not signed in and then click "I can't sign in to my Mozilla
 #. account".
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:151
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:152
 msgid "Include details such as your account e-mail or specifics about your sign-in issue to help us get you back into your account quicker."
 msgstr "Oĩhápe mba’emimi ha’éva mba’ete ñanduti veve térã mba’emimi apañuái tembiapo ñepyrũ rehegua ore pytyvõkuaáva rojevykuaávo ne mba’etépe pya’eve."
 
@@ -4710,7 +4777,7 @@ msgstr "Pe kuatiarogue papapy michĩve 1-gui"
 msgid "Relevant to"
 msgstr "Imba’eguasúva"
 
-#: kitsune/search/views.py:86
+#: kitsune/search/views.py:88
 msgid "Invalid search data."
 msgstr "Mba’ekuaarã jeheka ndoikóiva."
 
@@ -4744,9 +4811,18 @@ msgstr "Mozilla Pytyvõha"
 msgid "Search the Mozilla Support Knowledge Base and Support Forum."
 msgstr "Eheka kuaapy ñepyrũháme ha Mozilla Pytyvõha atýpe."
 
+#. Hybrid search shows a bounded ranking; {n} approximates all potential matches,
+#. not pageable results.
+#: kitsune/search/jinja2/search/results.html:28
+#, python-brace-format
+msgid "Showing the most relevant result for <strong>{q}</strong> in <strong>{product}</strong> from about <strong>{n}</strong> potential match"
+msgid_plural "Showing the most relevant results for <strong>{q}</strong> in <strong>{product}</strong> from about <strong>{n}</strong> potential matches"
+msgstr[0] ""
+msgstr[1] ""
+
 #. {n} is the number of search results, {q} is the search query, {product} is the
 #. product.
-#: kitsune/search/jinja2/search/results.html:27
+#: kitsune/search/jinja2/search/results.html:33
 #, python-brace-format
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> for <strong>{product}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> for <strong>{product}</strong>"
@@ -4754,12 +4830,12 @@ msgstr[0] "Juhupyre <strong>{n}</strong> juhupyre <strong>{q}</strong> peg̃uar�
 msgstr[1] "Juhupyre <strong>{n}</strong> juhupyre <strong>{q}</strong> peg̃uarã <strong>{product}</strong>-pe"
 
 #. {q} is the search query, {l} is the language searched.
-#: kitsune/search/jinja2/search/results.html:42
+#: kitsune/search/jinja2/search/results.html:48
 #, python-brace-format
 msgid "Sorry! 0 results found for ‘{q}’ in ‘{l}’"
 msgstr "¡Ambyasy! 0 apopyre ‘{q}’ peg̃uarã ‘{l}’-pe"
 
-#: kitsune/search/jinja2/search/results.html:45
+#: kitsune/search/jinja2/search/results.html:51
 msgid "Try searching again with a different keyword, or browse our featured articles and threads below instead."
 msgstr "Ehekajey peteĩ ñe’ẽ kañymby ambuévape, térã eikundaha ore haipyre ha téma ojehayhúvape ko’águi rire."
 
@@ -4785,23 +4861,23 @@ msgid "Try searching again with different keywords."
 msgstr "Eheka pyahujey heta ñe’ẽ ñemigua ndive."
 
 #. This is a question status.
-#: kitsune/search/jinja2/search/includes/result.html:32 kitsune/sumo/jinja2/sumo/includes/question_entry.html:113
+#: kitsune/search/jinja2/search/includes/result.html:41 kitsune/sumo/jinja2/sumo/includes/question_entry.html:113
 msgctxt "question"
 msgid "Solved"
 msgstr "Oĩporãmava"
 
-#: kitsune/search/jinja2/search/includes/result.html:42
+#: kitsune/search/jinja2/search/includes/result.html:51
 msgid "No replies"
 msgstr "Mbohavai’ỹre"
 
-#: kitsune/search/jinja2/search/includes/result.html:46
+#: kitsune/search/jinja2/search/includes/result.html:55
 #, python-brace-format
 msgid "1 person has this problem"
 msgid_plural "{n} people have this problem"
 msgstr[0] "1 yvypóra oguereko ko apañuái"
 msgstr[1] "{n} yvypóra oguereko ko apañuái"
 
-#: kitsune/search/jinja2/search/includes/result.html:51
+#: kitsune/search/jinja2/search/includes/result.html:60
 #, python-brace-format
 msgid "1 new this week"
 msgid_plural "{n} new this week"
@@ -9828,7 +9904,7 @@ msgstr "Twitter"
 msgid "Join our Community"
 msgstr "Ejuaju ore Rekoháre"
 
-#: kitsune/sumo/jinja2/base.html:260 kitsune/sumo/jinja2/includes/common_macros.html:148
+#: kitsune/sumo/jinja2/base.html:260 kitsune/sumo/jinja2/includes/common_macros.html:96
 msgid "Explore Help Articles"
 msgstr "Ehapykuereka jehaipyre pytyvõrã"
 
@@ -9840,7 +9916,7 @@ msgstr "Firefox"
 msgid "Download"
 msgstr "Mboguejy"
 
-#: kitsune/sumo/jinja2/base.html:270 kitsune/sumo/jinja2/includes/common_macros.html:174 kitsune/sumo/jinja2/includes/common_macros.html:274 kitsune/sumo/jinja2/includes/common_macros.html:380
+#: kitsune/sumo/jinja2/base.html:270 kitsune/sumo/jinja2/includes/common_macros.html:122 kitsune/sumo/jinja2/includes/common_macros.html:222 kitsune/sumo/jinja2/includes/common_macros.html:328
 msgid "Firefox desktop"
 msgstr "Firefox mesa arigua"
 
@@ -9880,11 +9956,11 @@ msgstr "Nightly"
 msgid "Nightly for Android"
 msgstr "Nightly Android peg̃uarã"
 
-#: kitsune/sumo/jinja2/base.html:289 kitsune/sumo/jinja2/includes/common_macros.html:410
+#: kitsune/sumo/jinja2/base.html:289 kitsune/sumo/jinja2/includes/common_macros.html:358
 msgid "Mozilla Account"
 msgstr "Mozilla mba’ete"
 
-#: kitsune/sumo/jinja2/base.html:292 kitsune/sumo/jinja2/includes/common_macros.html:668
+#: kitsune/sumo/jinja2/base.html:292 kitsune/sumo/jinja2/includes/common_macros.html:616
 msgid "Sign In/Up"
 msgstr "Eñemboheraguapy / Yvate"
 
@@ -9992,197 +10068,193 @@ msgstr "Eheka porandu, jehaikue térã téma (techapyrã: eñongatu ñe’ẽñe
 msgid "<strong>Avoid support scams.</strong> We will never ask you to call or text a phone number or share personal information. Please report suspicious activity using the “Report Abuse” option."
 msgstr "<strong>Emboyke pytyvõha apovai.</strong> Ndorojeruremo’ãi ehenói térã eñe’ẽmondóvo pumbyrýpe ha emoherakuãvo marandu nemba’etéva. Emombe’u tembiapo imarãkuaáva ko “Marandu iñañáva” rupive."
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:153 kitsune/sumo/jinja2/includes/common_macros.html:252 kitsune/sumo/jinja2/includes/common_macros.html:357
-#: kitsune/sumo/jinja2/includes/common_macros.html:516 kitsune/sumo/jinja2/includes/common_macros.html:593
+#: kitsune/sumo/jinja2/includes/common_macros.html:101 kitsune/sumo/jinja2/includes/common_macros.html:200 kitsune/sumo/jinja2/includes/common_macros.html:305
+#: kitsune/sumo/jinja2/includes/common_macros.html:464 kitsune/sumo/jinja2/includes/common_macros.html:541
 msgid "Close Firefox menu"
 msgstr "Emboty Firefox poravorã"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:164
+#: kitsune/sumo/jinja2/includes/common_macros.html:112
 msgid "Explore by product"
 msgstr "Ehecha peteĩteĩva apopyre"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:184 kitsune/sumo/jinja2/includes/common_macros.html:450
+#: kitsune/sumo/jinja2/includes/common_macros.html:132 kitsune/sumo/jinja2/includes/common_macros.html:398
 msgid "Mozilla VPN"
 msgstr "Mozilla VPN"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:194 kitsune/sumo/jinja2/includes/common_macros.html:294 kitsune/sumo/jinja2/includes/common_macros.html:430
+#: kitsune/sumo/jinja2/includes/common_macros.html:142 kitsune/sumo/jinja2/includes/common_macros.html:242 kitsune/sumo/jinja2/includes/common_macros.html:378
 msgid "Firefox for iOS"
 msgstr "Firefox iOS pegua"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:204 kitsune/sumo/jinja2/includes/common_macros.html:304 kitsune/sumo/jinja2/includes/common_macros.html:400
+#: kitsune/sumo/jinja2/includes/common_macros.html:152 kitsune/sumo/jinja2/includes/common_macros.html:252 kitsune/sumo/jinja2/includes/common_macros.html:348
 msgid "Thunderbird"
 msgstr "Thunderbird"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:214 kitsune/sumo/jinja2/includes/common_macros.html:314 kitsune/sumo/jinja2/includes/common_macros.html:420
+#: kitsune/sumo/jinja2/includes/common_macros.html:162 kitsune/sumo/jinja2/includes/common_macros.html:262 kitsune/sumo/jinja2/includes/common_macros.html:368
 msgid "Firefox for Android"
 msgstr "Firefox Android pegua"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:221
+#: kitsune/sumo/jinja2/includes/common_macros.html:169
 msgid "View all products"
 msgstr "Ehechapaite apopyre"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:237
+#: kitsune/sumo/jinja2/includes/common_macros.html:185
 msgid "Explore by topic"
 msgstr "Ehecha peteĩteĩva téma"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:284 kitsune/sumo/jinja2/includes/common_macros.html:460
+#: kitsune/sumo/jinja2/includes/common_macros.html:232 kitsune/sumo/jinja2/includes/common_macros.html:408
 msgid "Firefox Focus"
 msgstr "Firefox Focus"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:324
+#: kitsune/sumo/jinja2/includes/common_macros.html:272
 msgid "View all forums"
 msgstr "Ehechapaite atykuéra"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:340
+#: kitsune/sumo/jinja2/includes/common_macros.html:288
 msgid "Browse all forum threads by topic"
 msgstr "Ehechapaite aty peteĩteĩva téma rupive"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:370
+#: kitsune/sumo/jinja2/includes/common_macros.html:318
 msgid "Get help with"
 msgstr "Eñepytyvõkuaáta"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:390
+#: kitsune/sumo/jinja2/includes/common_macros.html:338
 msgid "Firefox for Enterprise"
 msgstr "Firefox mba’apohaguasúpe g̃uarã"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:440
+#: kitsune/sumo/jinja2/includes/common_macros.html:388
 msgid "Thunderbird for Android"
 msgstr "Thunderbird Android-pe g̃uarã"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:470
+#: kitsune/sumo/jinja2/includes/common_macros.html:418
 msgid "Firefox Relay"
 msgstr "Firefox Relay"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:480
+#: kitsune/sumo/jinja2/includes/common_macros.html:428
 msgid "Monitor"
 msgstr "Monitor"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:490
+#: kitsune/sumo/jinja2/includes/common_macros.html:438
 msgid "View all"
 msgstr "Ehechapa"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:506 kitsune/sumo/jinja2/includes/common_macros.html:511
+#: kitsune/sumo/jinja2/includes/common_macros.html:454 kitsune/sumo/jinja2/includes/common_macros.html:459
 msgid "Contribute"
 msgstr "Pytyvõ"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:530 kitsune/sumo/jinja2/includes/common_macros.html:719
+#: kitsune/sumo/jinja2/includes/common_macros.html:478 kitsune/sumo/jinja2/includes/common_macros.html:667
 msgid "Contributor discussions"
 msgstr "Pytyvõharakuéra ñomongeta"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:549 kitsune/sumo/jinja2/includes/common_macros.html:716
+#: kitsune/sumo/jinja2/includes/common_macros.html:497 kitsune/sumo/jinja2/includes/common_macros.html:664
 msgid "Contributor tools"
 msgstr "Tembiporu pytyvõharakuérape g̃uarã"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:572 kitsune/sumo/jinja2/includes/common_macros.html:924
+#: kitsune/sumo/jinja2/includes/common_macros.html:520 kitsune/sumo/jinja2/includes/common_macros.html:872
 msgid "Download Firefox"
 msgstr "Firefox ñemboguejy"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:605
+#: kitsune/sumo/jinja2/includes/common_macros.html:553
 msgid "Manage your information and see your contributions."
 msgstr "Eñangareko ne marandúre ha ehecha umi pytyvõhárape."
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:625
+#: kitsune/sumo/jinja2/includes/common_macros.html:573
 msgid "Settings"
 msgstr "Ñemboheko"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:627
+#: kitsune/sumo/jinja2/includes/common_macros.html:575
 msgid "Manage your privacy and notification preferences."
 msgstr "Eñangareko ne ñemigua eguerohoryvéva ha momarandúre."
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:647
+#: kitsune/sumo/jinja2/includes/common_macros.html:595
 msgid "Exchange messages with other contributors."
 msgstr "Oho ha oúta ñe’ẽmondo ñemigua ambue pytyvõhára ndive."
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:657 kitsune/users/jinja2/users/profile.html:233
+#: kitsune/sumo/jinja2/includes/common_macros.html:605 kitsune/users/jinja2/users/profile.html:233
 msgid "Sign Out"
 msgstr "Ñesẽ"
 
 #. Text displayed above the content editor (particularly, when posting a question
 #. or a reply). Rules and guidelines refer to
 #. https://support.mozilla.org/kb/mozilla-support-rules-guidelines
-#: kitsune/sumo/jinja2/includes/common_macros.html:677
+#: kitsune/sumo/jinja2/includes/common_macros.html:625
 #, python-format
 msgid "Remember to follow our %(a_open)srules and guidelines%(a_close)s."
 msgstr "Nemandu’áke ejapo hag̃ua ore %(a_open)srekoguata ha je’epy%(a_close)s."
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:732
+#: kitsune/sumo/jinja2/includes/common_macros.html:680
 msgid "SUMO community discussions"
 msgstr "Ñomongeta SUMO rekoha rehegua"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:739
-msgid "Support forum discussions"
-msgstr "Ñomongeta pytyvõha aty rehegua"
-
-#: kitsune/sumo/jinja2/includes/common_macros.html:746
+#: kitsune/sumo/jinja2/includes/common_macros.html:694
 msgid "Article discussions"
 msgstr "Ñomongeta jehaipy rehe"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:753
+#: kitsune/sumo/jinja2/includes/common_macros.html:701
 msgid "Localization discussions"
 msgstr "Ñomongeta moñe’ẽasa rehegua"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:761
+#: kitsune/sumo/jinja2/includes/common_macros.html:709
 msgid "Forum moderator discussions"
 msgstr "Ñomongeta aty mboguatahagua"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:770
+#: kitsune/sumo/jinja2/includes/common_macros.html:718
 msgid "View all discussions"
 msgstr "Ehechapaite ñomongeta"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:779
+#: kitsune/sumo/jinja2/includes/common_macros.html:727
 msgid "Knowledge base discussions"
 msgstr "Ñomongeta Kuaapy renda rehegua"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:786
+#: kitsune/sumo/jinja2/includes/common_macros.html:734
 msgid "Off topic discussions"
 msgstr "Ñombohovake oka gotyo"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:793
+#: kitsune/sumo/jinja2/includes/common_macros.html:741
 msgid "Lost thread discussions"
 msgstr "Ñomongeta hekopegua’ỹva"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:805
+#: kitsune/sumo/jinja2/includes/common_macros.html:753
 msgid "Moderate forum content"
 msgstr "Aty retepy mboguataha"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:813
+#: kitsune/sumo/jinja2/includes/common_macros.html:761
 msgid "Knowledge base dashboards"
 msgstr "Kuaapy ñepyrũha ra’ãngarupa"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:820
+#: kitsune/sumo/jinja2/includes/common_macros.html:768
 msgid "Guides"
 msgstr "Mboguataha"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:836
-msgid "Media gallery"
-msgstr "Tendaguasu hekoetáva"
+#: kitsune/sumo/jinja2/includes/common_macros.html:784
+msgid "Image gallery"
+msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:843
+#: kitsune/sumo/jinja2/includes/common_macros.html:791
 msgid "Recent revisions"
 msgstr "Jehechajey ipyahuvéva"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:850
+#: kitsune/sumo/jinja2/includes/common_macros.html:798
 msgid "Community hub"
 msgstr "Tekoha róga"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:859 kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/jinja2/wiki/locale_details.html:9
+#: kitsune/sumo/jinja2/includes/common_macros.html:807 kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/jinja2/wiki/locale_details.html:9
 #: kitsune/wiki/jinja2/wiki/locale_list.html:4 kitsune/wiki/jinja2/wiki/locale_list.html:10
 msgid "Locales"
 msgstr "Ñe’ẽnguéra"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:866
+#: kitsune/sumo/jinja2/includes/common_macros.html:814
 msgid "Locale metrics"
 msgstr "Ñe’ẽasa ra’ãha"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:872
+#: kitsune/sumo/jinja2/includes/common_macros.html:820
 msgid "Aggregated metrics"
 msgstr "Ta’ãha mbojuajuvepyre"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:878
+#: kitsune/sumo/jinja2/includes/common_macros.html:826
 msgid "Show More"
 msgstr "Ehechaukave"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:928
+#: kitsune/sumo/jinja2/includes/common_macros.html:876
 msgid "What's New"
 msgstr "Mba’e oĩmi ipyahúva"
 
@@ -10302,33 +10374,57 @@ msgstr "Ko porandu oñemarkáma peteĩ spam ramo"
 msgid "Ticket #{id}"
 msgstr "Voléto #{id}"
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:200 kitsune/sumo/jinja2/sumo/includes/thread_post.html:76
+#. A tooltip for the product title link on question cards, which will filter
+#. questions by the given product. Question cards are displayed when viewing a
+#. question list, e.g., on a support forum:
+#. https://support.mozilla.org/questions/firefox
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:202 kitsune/sumo/jinja2/sumo/includes/thread_post.html:77
 #, python-brace-format
 msgid "{product} questions"
 msgstr "{product} poranduita"
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:225 kitsune/sumo/jinja2/sumo/includes/thread_post.html:94
+#. A tooltip for the topic title link on question cards, which will filter
+#. questions by the given topic. Question cards are displayed when viewing a
+#. question list, e.g., on a support forum:
+#. https://support.mozilla.org/questions/firefox
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:229 kitsune/sumo/jinja2/sumo/includes/thread_post.html:96
 #, python-brace-format
 msgid "{topic} questions"
 msgstr "{topic} porandu"
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:241
-msgid "asked by"
-msgstr "oporandúva"
+#. This is a label displayed on question cards for contributors. `name` is the
+#. display name of the question author, `when` is how long ago the question was
+#. posted, and the other variables are HTML markup. Question cards are displayed
+#. when viewing a question list, e.g., on a support forum:
+#. https://support.mozilla.org/questions/firefox
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:247
+#, python-format
+msgid "asked by %(b_open)s%(name)s%(b_close)s %(when)s"
+msgstr ""
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:246 kitsune/sumo/jinja2/sumo/includes/thread_post.html:112
+#. This is a label displayed on question cards. `when` is how long ago the question
+#. was posted. Question cards are displayed when viewing a question list, e.g., on
+#. a support forum: https://support.mozilla.org/questions/firefox
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:254 kitsune/sumo/jinja2/sumo/includes/thread_post.html:116
 #, python-brace-format
 msgid "asked {when}"
 msgstr "oprandu {when}"
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:252 kitsune/sumo/jinja2/sumo/includes/thread_post.html:118
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:261 kitsune/sumo/jinja2/sumo/includes/thread_post.html:123
 #, python-brace-format
 msgid "Last reply by {user}"
 msgstr "Mbohovái paha {user}"
 
-#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:259 kitsune/sumo/jinja2/sumo/includes/thread_post.html:125
-msgid "replied"
-msgstr "ombohovái"
+#. This is a label displayed on question cards and at the top of question pages,
+#. providing info about the latest reply in the thread (if present). `name` is the
+#. display name of the reply author, `when` is how long ago the reply was posted,
+#. and the other variables are HTML markup. Question cards are displayed when
+#. viewing a question list, e.g., on a support forum:
+#. https://support.mozilla.org/questions/firefox
+#: kitsune/sumo/jinja2/sumo/includes/question_entry.html:269 kitsune/sumo/jinja2/sumo/includes/thread_post.html:131
+#, python-format
+msgid "%(b_open)s%(name)s%(b_close)s replied %(a_open)s%(when)s%(a_close)s"
+msgstr ""
 
 #: kitsune/sumo/jinja2/sumo/includes/thread_post.html:37
 msgid "reply"
@@ -10347,6 +10443,11 @@ msgid "view"
 msgid_plural "views"
 msgstr[0] "Hecha"
 msgstr[1] "Hecha"
+
+#: kitsune/sumo/jinja2/sumo/includes/thread_post.html:141
+#, python-brace-format
+msgid "Updated {when}"
+msgstr ""
 
 #: kitsune/sumo/templatetags/jinja_helpers.py:180
 msgid "read more"
@@ -11040,15 +11141,15 @@ msgstr "Mboheraguapy Ñangareko"
 #: kitsune/users/jinja2/users/email/contributor.html:8
 #, python-format
 msgid ""
-"I'm %(name)s, your SUMO Community Manager. On behalf of the Customer Experience team, I'd love to thank you for registering as a contributor at SUMO a.k.a. <a "
-"href=\"%(home_url)s\">SUpport.MOzilla.org</a>. We're so excited you've joined us! Mozilla wouldn't be what it is today without the passionate contributions from people like you."
+"I'm %(name)s, your SUMO Community Manager. On behalf of the Customer Experience team, I'd love to thank you for registering as a contributor at SUMO a.k.a. <a href=\"%(home_url)s\">SUpport.MOzilla."
+"org</a>. We're so excited you've joined us! Mozilla wouldn't be what it is today without the passionate contributions from people like you."
 msgstr ""
 
 #: kitsune/users/jinja2/users/email/contributor.html:14
 #, python-format
 msgid ""
-"On behalf of the Customer Experience team, we'd love to thank you for registering as a contributor at SUMO a.k.a. <a href=\"%(home_url)s\">SUpport.MOzilla.org</a>. We're so excited you've joined us!"
-" Mozilla wouldn't be what it is today without the passionate contributions from people like you."
+"On behalf of the Customer Experience team, we'd love to thank you for registering as a contributor at SUMO a.k.a. <a href=\"%(home_url)s\">SUpport.MOzilla.org</a>. We're so excited you've joined "
+"us! Mozilla wouldn't be what it is today without the passionate contributions from people like you."
 msgstr ""
 
 #. This is an email.  Whitespace matters!
@@ -11200,10 +11301,6 @@ msgstr "Che mba’ete"
 msgid "Edit my profile"
 msgstr "Ambosako’íta che mba’ete"
 
-#: kitsune/users/jinja2/users/includes/macros.html:8
-msgid "Edit settings"
-msgstr "Ñemboheko mbosako’i"
-
 #: kitsune/users/jinja2/users/includes/macros.html:9
 msgid "Edit contribution areas"
 msgstr "Embosako’i pytyvõhára vore"
@@ -11248,7 +11345,7 @@ msgstr ""
 "Erekómapa peteĩ Mozilla  mba’ete. Eiporu ne mba’ete Mozilla pegua Mozilla pytyvõha rendaguépe\n"
 "  mba’ete."
 
-#: kitsune/users/templatetags/jinja_helpers.py:78 kitsune/users/templatetags/jinja_helpers.py:90
+#: kitsune/users/templatetags/jinja_helpers.py:79 kitsune/users/templatetags/jinja_helpers.py:91
 msgid "Private message"
 msgstr "Ñe’ẽmondo ñemigua"
 
@@ -11274,8 +11371,8 @@ msgid ""
 "This will notify localizers and translations will be marked as \"needing updates\" on dashboards. Most changes&mdash;updating an image, fixing {for} markup, adding or removing non-critical "
 "sections&mdash;should use this."
 msgstr ""
-"Kóva omomarandúta ñe’ẽasahárape ha umi ñe’ẽasapyre oñemongurusúta “oikotevẽva ñembohekopyahu” ñangarekoha rupápe. Hetave moambuepy &mdash;ta’ãnga mbohekopyahu, moĩporã {for} mongurusupyre, embojuaju"
-" térã embogue vore noĩvaíriva&mdash oiporuva’erã kóva."
+"Kóva omomarandúta ñe’ẽasahárape ha umi ñe’ẽasapyre oñemongurusúta “oikotevẽva ñembohekopyahu” ñangarekoha rupápe. Hetave moambuepy &mdash;ta’ãnga mbohekopyahu, moĩporã {for} mongurusupyre, "
+"embojuaju térã embogue vore noĩvaíriva&mdash oiporuva’erã kóva."
 
 #: kitsune/wiki/config.py:80
 msgid ""
@@ -11455,7 +11552,7 @@ msgstr "Oikotevẽ ñemoambue:"
 msgid "Comment:"
 msgstr "Je’erei:"
 
-#: kitsune/wiki/forms.py:329 kitsune/wiki/jinja2/wiki/includes/document_macros.html:214 kitsune/wiki/jinja2/wiki/review_revision.html:73 kitsune/wiki/jinja2/wiki/review_translation.html:85
+#: kitsune/wiki/forms.py:329 kitsune/wiki/jinja2/wiki/includes/document_macros.html:206 kitsune/wiki/jinja2/wiki/review_revision.html:73 kitsune/wiki/jinja2/wiki/review_translation.html:85
 #: kitsune/wiki/jinja2/wiki/translate.html:154
 msgid "Keywords:"
 msgstr "Ñe’ẽ ñemigua:"
@@ -11686,86 +11783,86 @@ msgstr "mboguejy"
 msgid "browserID"
 msgstr "browserID"
 
-#: kitsune/wiki/views.py:977
+#: kitsune/wiki/views.py:987
 msgid "You cannot translate this document."
 msgstr "Ndaikatúi emoñe’ẽasa ko kuatia."
 
-#: kitsune/wiki/views.py:1314 kitsune/wiki/views.py:1333
+#: kitsune/wiki/views.py:1324 kitsune/wiki/views.py:1343
 msgid "Thanks for your feedback!"
 msgstr "¡Aguyje nde jehaipyrére!"
 
-#: kitsune/wiki/views.py:1390
+#: kitsune/wiki/views.py:1400
 msgid "You voted \"Yes 👍\" Please tell us more"
 msgstr "Evota \"Héẽ 👍\" Ikatúpa emombe’uvemi."
 
-#: kitsune/wiki/views.py:1392
+#: kitsune/wiki/views.py:1402
 msgid "Article is accurate"
 msgstr "Pe jehaipy iporã"
 
-#: kitsune/wiki/views.py:1395
+#: kitsune/wiki/views.py:1405
 msgid "Article is easy to understand"
 msgstr "Ko jehaipy iñeikumby rei."
 
-#: kitsune/wiki/views.py:1397
+#: kitsune/wiki/views.py:1407
 msgid "The visuals are helpful"
 msgstr "Ta’ãngakuéra ojeporukuaa"
 
-#: kitsune/wiki/views.py:1400
+#: kitsune/wiki/views.py:1410
 msgid "Article provided the information I needed"
 msgstr "Pe jahaipy ome’ẽ marandu tekotevẽva."
 
-#: kitsune/wiki/views.py:1402 kitsune/wiki/views.py:1422
+#: kitsune/wiki/views.py:1412 kitsune/wiki/views.py:1432
 msgid "Other"
 msgstr "Ambue"
 
-#: kitsune/wiki/views.py:1410
+#: kitsune/wiki/views.py:1420
 msgid "You voted \"No 👎\" Please tell us more"
 msgstr "Evota \"Nahániri 👍\" Ikatúpa emombe’uve."
 
-#: kitsune/wiki/views.py:1412
+#: kitsune/wiki/views.py:1422
 msgid "Article is inaccurate"
 msgstr "Ko jehaipy ndoikopái"
 
-#: kitsune/wiki/views.py:1413
+#: kitsune/wiki/views.py:1423
 msgid "Article is confusing"
 msgstr "Ko jehaipy nahesakãi"
 
-#: kitsune/wiki/views.py:1416
+#: kitsune/wiki/views.py:1426
 msgid "Missing, unclear, or unhelpful visuals"
 msgstr "Ta’ãnga oĩ’ỹva, nahesakãi térã oiko’ỹva"
 
-#: kitsune/wiki/views.py:1420
+#: kitsune/wiki/views.py:1430
 msgid "Article didn't provide the information I needed"
 msgstr "Pe jahaipy nome’ẽi marandu tekotevẽva."
 
-#: kitsune/wiki/views.py:1494
+#: kitsune/wiki/views.py:1504
 #, python-format
 msgid "Revision %s"
 msgstr "Jehechajey %s"
 
-#: kitsune/wiki/views.py:1502
+#: kitsune/wiki/views.py:1512
 msgid "Firefox Releases"
 msgstr "Firefox peteĩchagua"
 
-#: kitsune/wiki/views.py:1510
+#: kitsune/wiki/views.py:1520
 msgid "Article Revisions"
 msgstr "Jehaipyre jehechajey"
 
-#: kitsune/wiki/views.py:1626
+#: kitsune/wiki/views.py:1636
 #, python-brace-format
 msgid "{users} added to the contributors successfully!"
 msgstr "¡{users} ojuaju pytyvõhárare hekopete!"
 
-#: kitsune/wiki/views.py:1633
+#: kitsune/wiki/views.py:1643
 msgid "There were errors adding new contributors, see below."
 msgstr "Oiko jejavy ojuajukuévo pytyvõhára pyahu, emoñe’ẽ yvy gotyove."
 
-#: kitsune/wiki/views.py:1653
+#: kitsune/wiki/views.py:1663
 #, python-brace-format
 msgid "{user} removed from the contributors successfully!"
 msgstr "¡{user} oñembogue pytyvõháragui hekopete!"
 
-#: kitsune/wiki/views.py:1915
+#: kitsune/wiki/views.py:1925
 msgid "Sorry, that article wasn't found."
 msgstr "Rombyasy, pe jehaipyre ndojejuhúi."
 
@@ -11882,19 +11979,11 @@ msgstr "<strong>Ñatõi</strong> Ko jehechajey oguereko ijehe Poravopy ha’evé
 msgid "You are about to permanently delete this revision. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "Embogue’íntema opa árarã ko jehechajey. <strong>¡Ndaikatúi ojepe’a!</strong> ¿Añetehápe ejapose péicha?"
 
-#: kitsune/wiki/jinja2/wiki/document.html:56
-msgid "Now through August 31, get unlimited bandwidth with more locations in built-in VPN. Head to Connect for more details."
-msgstr ""
-
-#: kitsune/wiki/jinja2/wiki/document.html:57
-msgid "Details"
-msgstr "Mba’emimi"
-
-#: kitsune/wiki/jinja2/wiki/document.html:103 kitsune/wiki/jinja2/wiki/edit.html:23
+#: kitsune/wiki/jinja2/wiki/document.html:94 kitsune/wiki/jinja2/wiki/edit.html:23
 msgid "This document is restricted."
 msgstr "Pe kuatia ojejokohína."
 
-#: kitsune/wiki/jinja2/wiki/document.html:122
+#: kitsune/wiki/jinja2/wiki/document.html:113
 #, python-brace-format
 msgid "Share this article: {link}"
 msgstr "Emoherakuã ko jehaipyre: {link}"
@@ -12165,7 +12254,7 @@ msgstr "Jehechajey retepy"
 msgid "This document does not have a current revision."
 msgstr "Ko kuatia ndoguerekói jehechajey ag̃agua."
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:220 kitsune/wiki/jinja2/wiki/review_revision.html:77 kitsune/wiki/jinja2/wiki/review_translation.html:92
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:212 kitsune/wiki/jinja2/wiki/review_revision.html:77 kitsune/wiki/jinja2/wiki/review_translation.html:92
 msgid "Search results summary:"
 msgstr "Nde jehekakue rapykuere:"
 
@@ -12248,7 +12337,7 @@ msgstr "Ko tembiapokue {default_locale} ndoguerekói tetepy moneĩmbyre."
 msgid "Approved {default_locale} version:"
 msgstr "Tembiapokue {default_locale} moneĩmbyre:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:199 kitsune/wiki/jinja2/wiki/includes/document_macros.html:211 kitsune/wiki/jinja2/wiki/review_translation.html:79
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:191 kitsune/wiki/jinja2/wiki/includes/document_macros.html:203 kitsune/wiki/jinja2/wiki/review_translation.html:79
 #: kitsune/wiki/jinja2/wiki/review_translation.html:83
 #, python-brace-format
 msgid "Revision {id} by {user} on {date}"
@@ -12697,8 +12786,8 @@ msgstr ""
 #: kitsune/wiki/jinja2/wiki/includes/document_macros.html:139
 #, python-format
 msgid ""
-"This page does not exist in %(locale)s. You have been redirected to the %(fallback_locale)s version instead. If you would like to localize it into %(locale)s, <a href=\"%(help_link)s\">click "
-"here</a>. You can also see the <a href=\"%(eng_link)s\">English</a> version of this page."
+"This page does not exist in %(locale)s. You have been redirected to the %(fallback_locale)s version instead. If you would like to localize it into %(locale)s, <a href=\"%(help_link)s\">click here</"
+"a>. You can also see the <a href=\"%(eng_link)s\">English</a> version of this page."
 msgstr ""
 "Ko kuatiarogue ndaipóri %(locale)s-pe. Hendaguépe, ojegueraháma %(fallback_locale)s-pe. Emoñe’ẽasaséramo %(locale)s, <a href=\"%(help_link)s\">eikutu ko’ápe</a>. Ikatu avei eporandu peichagua <a "
 "href=\"%(eng_link)s\">inglés</a> ko kuatiarogue rehegua."
@@ -12707,113 +12796,113 @@ msgstr ""
 msgid "This article doesn't have approved content yet."
 msgstr "Ko jehaipyre ndorekói ñemoneĩ."
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:167
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:159
 msgid "Warning: There are newer unreviewed revisions of this article."
 msgstr "Kuaarã: oĩma ñe’ẽasa ipyahuvéva ko jehaipyre rehegua ndojehechajeýiva gueteri."
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:169
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:161
 #, python-format
 msgid "See <a href=\"%(url)s\">the history</a> to base your edit on an existing unreviewed revision."
 msgstr "Ehechajey <a href=\"%(url)s\">tembiasakue</a> ñembosako’i ipyenda hag̃ua jehechajey oĩmava hechajey’ỹre."
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:186
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:178
 msgid "Change Revisions"
 msgstr "Jehechajey moambue"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:195 kitsune/wiki/jinja2/wiki/includes/document_macros.html:207
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:187 kitsune/wiki/jinja2/wiki/includes/document_macros.html:199
 #, python-brace-format
 msgid "Revision {num}:"
 msgstr "Jehechajey {num}:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:242
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:234
 msgid "Stop article emails"
 msgstr "Anivéma og̃uahẽ ñandutiveve jehaipyre rehegua"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:247
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:239
 msgid "Email me article changes"
 msgstr "Embou jehaipyre moambuepy ñandutiveve ripi"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:256
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:248
 msgid "Submit for Review"
 msgstr "Emondo ojehechajey hag̃ua"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:258
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:250
 msgid "Save as Draft"
 msgstr "Eñongatu mbogueháramo"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:260
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:252
 msgid "Preview Content"
 msgstr "Tetepy jehecha ypy"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:262
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:254
 msgid "Preview Changes"
 msgstr "Moambuepy jehecha ypy"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:268
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:260
 msgid "Submit Your Changes"
 msgstr "Moambuepy ñemondo"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:270
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:262
 msgid "You rock! We'll send an email to let you know if your changes get approved. You can follow the discussion about this article by clicking the Discussion tab."
 msgstr "¡Oĩporã! Romondóta ñandutiveve roikuaauka hag̃ua oñemoneĩpa moambuepy. Ikatu ehapykueho jehaipýre ñomongeta eikutúvo tendayke Ñomongeta."
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:274
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:266
 msgid "Briefly describe your changes:"
 msgstr "Ehai mbykymi ne moambuepy rehegua:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:280
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:272
 msgid "This edit does not make this article up to date. The English differences should not change on the next edit."
 msgstr "Ko ñembosako’i nombohekopyahúi jehaipyrépe. Pe ambuepy inglés pegua nomoambuemo’ãi ñembosako’i pyahúpe."
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:285
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:277
 msgid "Notify me of any future changes to this page"
 msgstr "Chemomarandumína iñambuérõ ko kuatiarogue"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:298
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:290
 msgid "Help with:"
 msgstr "Ñepytyvõ hendive:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:306
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:298
 msgid "Customize this article"
 msgstr "Eñemomba’e ko jehaipyrére"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:371
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:363
 msgid "Was this article helpful?"
 msgstr "¿Ne pytyvõpa ko jehaipyre?"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:403
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:395
 #, python-brace-format
 msgid "Leave a message for {contributor}: "
 msgstr "Eheja peteĩ ñe’ẽmondo {contributor}-pe:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:405
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:397
 #, python-brace-format
 msgid "Leave a message for {rest} and {last}:"
 msgstr "Eheja peteĩ ñe’ẽmondo {rest} ha {last}-pe:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:414
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:406
 #, python-format
 msgid "Warning: This page is also being edited by %(user)s!"
 msgstr "Kuaarã: ¡ko kuatiarogue ambosako’i avei %(user)s!"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:417
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:409
 msgid "If you know what you are doing, you can edit the document anyway."
 msgstr "Eikuaáramo mba’épa pe ejapóva, ikatu gueteri embosako’i pe kuatia."
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:421
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:413
 msgid "Edit anyway"
 msgstr "Embosako’i opaichavorei"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:432
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:424
 msgid "Related Articles"
 msgstr "Ojuehegua haipyre"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:478
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:470
 msgid "If you've tried the steps above and you're still unable to sign in, send a message to our support team."
 msgstr "Eiporúrõ umi jeku’e mboveguáva ha neremoñepyrũkuaái gueteri tembiapo, eñe’ẽmondo ore aty pytyvõha ndive."
 
 #. A button in a CTA displayed at the end of some Mozilla accounts articles.
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:488
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:480
 msgctxt "CTA button"
 msgid "Contact Support"
 msgstr "Eñe’ẽ pytyvõhándi"
@@ -12826,11 +12915,11 @@ msgstr "Mba’evai mombe’u"
 msgid "Report this"
 msgstr "Emombe’u ãva rehegua"
 
-#: kitsune/wiki/jinja2/wiki/includes/flag_form.html:18
+#: kitsune/wiki/jinja2/wiki/includes/flag_form.html:19
 msgid "Misplaced bug report or support request"
 msgstr "Mba’ejerure pytyvõrã térã marandu’i jejavýva oñemohendaporã’ỹva"
 
-#: kitsune/wiki/jinja2/wiki/includes/flag_form.html:30
+#: kitsune/wiki/jinja2/wiki/includes/flag_form.html:31
 msgid "Have more to say?"
 msgstr "¿Mba’épa ereseve?"
 
@@ -13060,3 +13149,51 @@ msgstr "Embojuruja Jerohoryvéva"
 #: kitsune/wiki/jinja2/wikiparser/hook_refresh_button.html:1
 msgid "Refresh Firefox"
 msgstr "Firefox ñemyanyhẽ"
+
+#~ msgid "Hi"
+#~ msgstr "Mba’éichapa"
+
+#~ msgid "Provide a brief description of this media."
+#~ msgstr "Ehai mbykymi ñemoha’ãnga marandurenda hekoetáva rehe."
+
+#, python-brace-format
+#~ msgid "Delete image | {t} | Media Gallery"
+#~ msgstr "Ta’ãnga mbogue i {t} i Ta’ãngakuéra renda"
+
+#~ msgid "Media Gallery"
+#~ msgstr "Tendaguasu hekoetáva"
+
+#, python-brace-format
+#~ msgid "Edit image | {t} | Media Gallery"
+#~ msgstr "Embosako’i ta’ãnga | {t} | Tendaguasu hekoetáva"
+
+#~ msgid "Show media for:"
+#~ msgstr "Ehechauka heko’etávape g̃uarã:"
+
+#, python-brace-format
+#~ msgid "{title} | Media Gallery"
+#~ msgstr "{title} | Tendaguasu hekoetáva"
+
+#~ msgid "Media Gallery Search"
+#~ msgstr "Eheka hekoetáva renda"
+
+#~ msgid "No media files found."
+#~ msgstr "Ndojejuhúi marandurenda hekoetáva"
+
+#~ msgid "Support"
+#~ msgstr "Ñepytyvõ"
+
+#~ msgid "Popular"
+#~ msgstr "Herakuãva"
+
+#~ msgid "Media gallery"
+#~ msgstr "Tendaguasu hekoetáva"
+
+#~ msgid "asked by"
+#~ msgstr "oporandúva"
+
+#~ msgid "replied"
+#~ msgstr "ombohovái"
+
+#~ msgid "Details"
+#~ msgstr "Mba’emimi"

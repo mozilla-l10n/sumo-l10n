@@ -6,6 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kitsune 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/mozilla-l10n/sumo-l10n/issues\n"
+"POT-Creation-Date: 2026-09-04 01:02-0700\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,12 +27,12 @@ msgstr ""
 msgid "Please check you are signed in, and try again."
 msgstr "Проверите да ли сте пријављени и покушајте поново."
 
-#: kitsune/sumo/static/sumo/js/ajaxupload.js:130 kitsune/sumo/static/sumo/js/reportabuse.js:33 kitsune/sumo/static/sumo/js/upload.js:13
+#: kitsune/sumo/static/sumo/js/ajaxupload.js:130 kitsune/sumo/static/sumo/js/reportabuse.js:43 kitsune/sumo/static/sumo/js/upload.js:13
 msgid "There was an error. Please try again in a moment."
 msgstr "Дошло је до грешке. Покушајте поново за пар момената."
 
 #: kitsune/sumo/static/sumo/js/ajaxupload.js:143
-msgid "Are you sure you want delete the image?"
+msgid "Are you sure you want to delete this image?"
 msgstr ""
 
 #: kitsune/sumo/static/sumo/js/ajaxvote.js:84
@@ -244,8 +246,8 @@ msgstr "Да бисте користили чаробњака за подеша�
 #: kitsune/sumo/static/sumo/js/form-wizard.js:80
 #, javascript-format
 msgid ""
-"The setup assistant is currently unavailable for your version of Firefox. However, you can still perform a manual backup of your data by following the steps outlined in <a href='%s'>this "
-"article.</a>"
+"The setup assistant is currently unavailable for your version of Firefox. However, you can still perform a manual backup of your data by following the steps outlined in <a href='%s'>this article.</"
+"a>"
 msgstr "Чаробњак за подешавање тренутно није доступан у вашој Firefox верзији. Међутим, можете и ручно да направите резервну копију ваших података пратећи упутства у <a href='%s'>овом чланку.</a>"
 
 #: kitsune/sumo/static/sumo/js/form-wizard.js:129
@@ -396,28 +398,28 @@ msgid "Knowledge Base Article"
 msgstr "Чланак у Бази знања"
 
 #: kitsune/sumo/static/sumo/js/markup.js:762
-msgid "Insert media..."
-msgstr "Унеси медиј..."
+msgid "Insert image..."
+msgstr ""
 
 #: kitsune/sumo/static/sumo/js/markup.js:766
-msgid "media"
-msgstr "медиј"
+msgid "image"
+msgstr ""
 
 #: kitsune/sumo/static/sumo/js/markup.js:796 kitsune/sumo/static/sumo/js/markup.js:797 kitsune/sumo/static/sumo/js/markup.js:798
 msgid "Search Gallery"
 msgstr "Претражи галерију"
 
 #: kitsune/sumo/static/sumo/js/markup.js:800
-msgid "Show media for:"
-msgstr "Прикажи медије за:"
+msgid "Show images for:"
+msgstr ""
 
 #: kitsune/sumo/static/sumo/js/markup.js:805
-msgid "Insert Media"
-msgstr "Унеси медиј"
+msgid "Insert Image"
+msgstr ""
 
 #: kitsune/sumo/static/sumo/js/markup.js:807
-msgid "Upload Media"
-msgstr "Отпремите медиј"
+msgid "Upload Image"
+msgstr ""
 
 #: kitsune/sumo/static/sumo/js/markup.js:866
 msgid "Please select an image to insert."
@@ -510,6 +512,10 @@ msgstr[0] "Прикажи још %(n)s ознаку"
 msgstr[1] "Прикажи још %(n)s ознаке"
 msgstr[2] "Прикажи још %(n)s ознака"
 
+#: kitsune/sumo/static/sumo/js/reportabuse.js:25
+msgid "Please select one of these reasons."
+msgstr ""
+
 #: kitsune/sumo/static/sumo/js/sumo-tabs.js:20
 msgid "More"
 msgstr "Још"
@@ -584,11 +590,11 @@ msgid "No related documents."
 msgstr "Нема повезаних докумената."
 
 #. This is a question status.
-#: kitsune/sumo/static/sumo/tpl/macros.njk:27
+#: kitsune/sumo/static/sumo/tpl/macros.njk:36
 msgid "Solved"
 msgstr "Решено"
 
-#: kitsune/sumo/static/sumo/tpl/macros.njk:31
+#: kitsune/sumo/static/sumo/tpl/macros.njk:40
 #, python-format
 msgid "1 reply"
 msgid_plural "%s replies"
@@ -596,11 +602,11 @@ msgstr[0] "%s одговор"
 msgstr[1] "%s одговора"
 msgstr[2] "%s одговора"
 
-#: kitsune/sumo/static/sumo/tpl/macros.njk:33
+#: kitsune/sumo/static/sumo/tpl/macros.njk:42
 msgid "No replies"
 msgstr "Нема одговора"
 
-#: kitsune/sumo/static/sumo/tpl/macros.njk:37
+#: kitsune/sumo/static/sumo/tpl/macros.njk:46
 #, python-format
 msgid "1 person has this problem"
 msgid_plural "%s people have this problem"
@@ -608,7 +614,7 @@ msgstr[0] "%s особа има овај проблем"
 msgstr[1] "%s особе имају овај проблем"
 msgstr[2] "%s особа има овај проблем"
 
-#: kitsune/sumo/static/sumo/tpl/macros.njk:41
+#: kitsune/sumo/static/sumo/tpl/macros.njk:50
 #, python-format
 msgid "1 new this week"
 msgid_plural "%s new this week"
@@ -616,9 +622,19 @@ msgstr[0] "%s нови ове недеље"
 msgstr[1] "%s нове ове недеље"
 msgstr[2] "%s нових ове недеље"
 
+#. Hybrid search shows a bounded ranking; {n} approximates all potential matches,
+#. not pageable results.
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:7
+#, python-format
+msgid "Showing the most relevant result for ‘<span>%(q)s</span>’ in ‘<span>%(product)s</span>’ from about %(n)s potential match"
+msgid_plural "Showing the most relevant results for ‘<span>%(q)s</span>’ in ‘<span>%(product)s</span>’ from about %(n)s potential matches"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
 #. {n} is the number of search results, {q} is the search query, {product} is the
 #. product.
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:6
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:14
 #, python-format
 msgid "Found %(n)s result for ‘<span>%(q)s</span>’ for ‘<span>%(product)s</span>’"
 msgid_plural "Found %(n)s results for ‘<span>%(q)s</span>’ for ‘<span>%(product)s</span>’"
@@ -626,57 +642,57 @@ msgstr[0] "Пронађен је %(n)s резултат за ‘<span>%(q)s</spa
 msgstr[1] "Пронађена су %(n)s резултата за ‘<span>%(q)s</span>’ за ‘<span>%(product)s</span>’"
 msgstr[2] "Пронађено је %(n)s резултата за ‘<span>%(q)s</span>’ за ‘<span>%(product)s</span>’"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:12
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:21
 #, python-format
 msgid "Sorry! 0 results found for ‘<span>%(q)s</span>’ for ‘<span>%(product)s</span>’"
 msgstr "Жао нам је! Пронађено је 0 резултата за ‘<span>%(q)s</span>’ за ‘<span>%(product)s</span>’"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:21
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:30
 msgid "View All"
 msgstr "Прегледај све"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:26
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:35
 msgid "Help Articles Only"
 msgstr "Само чланци за помоћ"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:31
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:40
 msgid "Community Discussion Only"
 msgstr "Само за дискусију заједнице"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:44
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:53
 msgid "Try searching again with a different keyword, or browse our featured articles below instead."
 msgstr "Покушајте поново да претражите са другом кључном речи или прегледајте наше истакнуте чланке испод."
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:72
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:87
 #, python-format
 msgid "Page %(current)s of %(total)s"
 msgstr "Страница %(current)s од %(total)s"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:85
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:101
 msgid "Previous"
 msgstr "Претходно"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:109
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:127
 msgid "Next"
 msgstr "Следеће"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:136
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:154
 msgid "Still need help?"
 msgstr "И даље требате помоћ?"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:141
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:159
 msgid "We’re here for you! If you haven’t found a solution after exploring our help articles, you can get in touch with our support team."
 msgstr "Ту смо за вас! Ако нисте пронашли решење након прегледа наших чланака помоћи, можете се обратити нашем тиму за подршку."
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:143
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:161
 msgid "We’re here for you. Post a question to our support forums and get answers from our community of experts."
 msgstr "Ту смо за вас. Поставите питање на нашим форумима за подршку и добијте одговоре од наше заједнице стручњака."
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:153
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:171
 msgid "Contact Support"
 msgstr "Контактирајте подршку"
 
-#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:155
+#: kitsune/sumo/static/sumo/tpl/search-results-list.njk:173
 msgid "Ask the Community"
 msgstr "Питајте заједницу"
 
@@ -700,7 +716,7 @@ msgstr "Mozilla подршка"
 msgid "Support forum"
 msgstr "Форум подршке"
 
-#: svelte/contribute/Contribute.svelte:63 svelte/contribute/Contribute.svelte:117 svelte/contribute/Contribute.svelte:173
+#: svelte/contribute/Contribute.svelte:63 svelte/contribute/Contribute.svelte:114 svelte/contribute/Contribute.svelte:170
 msgid "Learn the basic guidelines"
 msgstr "Научите основне смернице"
 
@@ -734,83 +750,75 @@ msgstr "Где се сва акција одвија"
 
 #: svelte/contribute/Contribute.svelte:95
 msgid ""
-"From hardcore web developers to \"how do I install Firefox\"\n"
-"                    first time users, everybody needs your help in the forum!\n"
-"                    Share your knowledge by pointing people to the right help\n"
-"                    articles and providing troubleshooting steps for their\n"
-"                    individual questions."
+"From hardcore web developers to \"how do I install Firefox\" first-time users, everybody needs your help in the forum! Share your knowledge by pointing people to the right help articles and "
+"providing troubleshooting steps for their individual questions."
 msgstr ""
-"Од окорелих веб програмера до почетника који се питају\n"
-"                    како да инсталирају Firefox, свакоме на форуму треба ваша помоћ!\n"
-"                    Делите знање, усмерите кориснике на праву документацију\n"
-"                    и пружите одговоре у виду корака који ће решити њихова\n"
-"                    појединачна питања."
 
-#: svelte/contribute/Contribute.svelte:105
+#: svelte/contribute/Contribute.svelte:102
 msgid "Help articles"
 msgstr "Помоћни чланци"
 
-#: svelte/contribute/Contribute.svelte:124
+#: svelte/contribute/Contribute.svelte:121
 msgid "Explore the Knowledge Base Dashboard"
 msgstr "Истражите командну таблу базе знања"
 
-#: svelte/contribute/Contribute.svelte:133
+#: svelte/contribute/Contribute.svelte:130
 msgid "Check the Needs Update column and start editing articles!"
 msgstr "Погледајте „Потребно ажурирање” колону и почните да уређујете!"
 
-#: svelte/contribute/Contribute.svelte:142
+#: svelte/contribute/Contribute.svelte:139
 msgid "Learn more about KB contribution"
 msgstr "Сазнајте више о доприношењу у базу знања"
 
-#: svelte/contribute/Contribute.svelte:147 svelte/contribute/Contribute.svelte:203
+#: svelte/contribute/Contribute.svelte:144 svelte/contribute/Contribute.svelte:200
 msgid "400 → 70+"
 msgstr "400 → 70+"
 
-#: svelte/contribute/Contribute.svelte:148 svelte/contribute/Contribute.svelte:204
+#: svelte/contribute/Contribute.svelte:145 svelte/contribute/Contribute.svelte:201
 msgid "One article can be viewed by 400 million users and translated into 70+ languages"
 msgstr "Један чланак може да види 400 милиона корисника и буде преведен на преко 70 језика"
 
-#: svelte/contribute/Contribute.svelte:154
+#: svelte/contribute/Contribute.svelte:151
 msgid "Help us write help articles"
 msgstr "Помозите нам да саставимо помоћне чланке"
 
-#: svelte/contribute/Contribute.svelte:155
+#: svelte/contribute/Contribute.svelte:152
 msgid "Share your wisdom with the world!"
 msgstr "Поделите ваше знање са светом!"
 
-#: svelte/contribute/Contribute.svelte:157
+#: svelte/contribute/Contribute.svelte:154
 msgid ""
-"If you like writing and teaching, then the Knowledge Base (KB) is the place for you. We need contributors that can write, edit or proofread articles in English. Thousands of people are accessing our"
-" Knowledge Base every week. Imagine how many will be helped by you!"
+"If you like writing and teaching, then the Knowledge Base (KB) is the place for you. We need contributors that can write, edit or proofread articles in English. Thousands of people are accessing "
+"our Knowledge Base every week. Imagine how many will be helped by you!"
 msgstr ""
 "Ако волите да пишете и подучавате, онда је база знања право место за вас. Потребни су нам сарадници који могу да пишу, уређују или лекторишу чланке на енглеском. Хиљаде људи користи нашу базу знања "
 "сваке недеље. Замислите колико од њих можете да помогнете!"
 
-#: svelte/contribute/Contribute.svelte:165
+#: svelte/contribute/Contribute.svelte:162
 msgid "Localization"
 msgstr "Превођење"
 
-#: svelte/contribute/Contribute.svelte:180
+#: svelte/contribute/Contribute.svelte:177
 msgid "Check if your locale is available and go to your localization dashboard"
 msgstr "Проверите да ли је ваш језик доступан и идите на командну таблу за превод"
 
-#: svelte/contribute/Contribute.svelte:189
+#: svelte/contribute/Contribute.svelte:186
 msgid "Start localizing an article!"
 msgstr "Почните да преводите чланак!"
 
-#: svelte/contribute/Contribute.svelte:196
+#: svelte/contribute/Contribute.svelte:193
 msgid "Learn more about localization contribution"
 msgstr "Сазнајте више о преводилачким доприносима"
 
-#: svelte/contribute/Contribute.svelte:210
+#: svelte/contribute/Contribute.svelte:207
 msgid "Help us localize support articles"
 msgstr "Помозите нам да преведемо чланке подршке"
 
-#: svelte/contribute/Contribute.svelte:212
+#: svelte/contribute/Contribute.svelte:209
 msgid "Let’s make Mozilla Support speak your language!"
 msgstr "Нека Mozilla подршка говори вашим језиком!"
 
-#: svelte/contribute/Contribute.svelte:215
+#: svelte/contribute/Contribute.svelte:212
 msgid "Help articles are not available in your language yet? You want to join the amazing team translating them? You will help millions of users in your language. Pretty heroic, right?"
 msgstr "Чланци подршке још увек нису доступни на вашем језику? Желите ли да се придружите слајном тиму који га преводи? Помоћи ћете милионима корисника на вашем језику. Прилично херојски, зар не?"
 
@@ -873,3 +881,31 @@ msgstr "Пријавите се као волонтер"
 #: svelte/contribute/Steps.svelte:42
 msgid "Take the contributor's CPG training."
 msgstr "Похађајте CPG обуку за сараднике."
+
+#~ msgid "Insert media..."
+#~ msgstr "Унеси медиј..."
+
+#~ msgid "media"
+#~ msgstr "медиј"
+
+#~ msgid "Show media for:"
+#~ msgstr "Прикажи медије за:"
+
+#~ msgid "Insert Media"
+#~ msgstr "Унеси медиј"
+
+#~ msgid "Upload Media"
+#~ msgstr "Отпремите медиј"
+
+#~ msgid ""
+#~ "From hardcore web developers to \"how do I install Firefox\"\n"
+#~ "                    first time users, everybody needs your help in the forum!\n"
+#~ "                    Share your knowledge by pointing people to the right help\n"
+#~ "                    articles and providing troubleshooting steps for their\n"
+#~ "                    individual questions."
+#~ msgstr ""
+#~ "Од окорелих веб програмера до почетника који се питају\n"
+#~ "                    како да инсталирају Firefox, свакоме на форуму треба ваша помоћ!\n"
+#~ "                    Делите знање, усмерите кориснике на праву документацију\n"
+#~ "                    и пружите одговоре у виду корака који ће решити њихова\n"
+#~ "                    појединачна питања."
