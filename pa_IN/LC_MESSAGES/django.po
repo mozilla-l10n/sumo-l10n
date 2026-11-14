@@ -50,7 +50,7 @@ msgstr "ਵਰਤੋਂਕਾਰ ਨਾਂ, ਵਿਖਾਉਣ ਵਾਲਾ ਨ�
 
 #: kitsune/community/jinja2/community/index.html:17 kitsune/community/jinja2/community/search.html:19 kitsune/forums/jinja2/forums/threads.html:45 kitsune/gallery/jinja2/gallery/gallery.html:45
 #: kitsune/gallery/jinja2/gallery/search.html:5 kitsune/gallery/jinja2/gallery/search.html:17 kitsune/search/jinja2/search/base.html:3 kitsune/search/jinja2/search/basic-form.html:18
-#: kitsune/search/jinja2/search/basic-form.html:33 kitsune/search/jinja2/search/basic-form.html:45 kitsune/sumo/jinja2/includes/common_macros.html:15
+#: kitsune/search/jinja2/search/basic-form.html:33 kitsune/search/jinja2/search/basic-form.html:45 kitsune/sumo/jinja2/includes/common_macros.html:16
 msgid "Search"
 msgstr "ਖੋਜ"
 
@@ -147,7 +147,7 @@ msgstr "ਨਤੀਜੇ: {query}"
 msgid "No users were found for your search query."
 msgstr "ਤੁਹਾਡੀ ਖੋਜ ਪੁੱਛਗਿੱਛ ਲਈ ਕੋਈ ਉਪਭੋਗਤਾ ਨਹੀਂ ਮਿਲੇ।"
 
-#: kitsune/community/jinja2/community/search.html:40 kitsune/community/jinja2/community/top_contributors.html:117 kitsune/sumo/jinja2/includes/common_macros.html:575
+#: kitsune/community/jinja2/community/search.html:40 kitsune/community/jinja2/community/top_contributors.html:117 kitsune/sumo/jinja2/includes/common_macros.html:614
 msgid "View Profile"
 msgstr "ਪਰੋਫਾਇਲ ਦੇਖੋ"
 
@@ -260,7 +260,7 @@ msgstr ""
 msgid "Stay updated"
 msgstr ""
 
-#: kitsune/community/jinja2/community/email/first_answer.html:58 kitsune/sumo/jinja2/includes/common_macros.html:719
+#: kitsune/community/jinja2/community/email/first_answer.html:58 kitsune/sumo/jinja2/includes/common_macros.html:766
 msgid "Support forum discussions"
 msgstr ""
 
@@ -360,87 +360,183 @@ msgstr ""
 msgid "Kind Regards, The Mozilla Support Community Team"
 msgstr ""
 
-#: kitsune/customercare/forms.py:12
+#: kitsune/customercare/forms.py:13
 #, fuzzy
 msgid "Select platform"
 msgstr "ਭਾਸ਼ਾ ਚੁਣੋ"
 
-#: kitsune/customercare/forms.py:13
+#: kitsune/customercare/forms.py:14
 msgid "Windows 64-bit"
 msgstr ""
 
-#: kitsune/customercare/forms.py:14
+#: kitsune/customercare/forms.py:15
 msgid "Windows ARM64/AArch64"
 msgstr ""
 
-#: kitsune/customercare/forms.py:15
+#: kitsune/customercare/forms.py:16
 msgid "Windows 32-bit"
 msgstr ""
 
-#: kitsune/customercare/forms.py:16
+#: kitsune/customercare/forms.py:17
 msgid "macOS"
 msgstr ""
 
-#: kitsune/customercare/forms.py:17
+#: kitsune/customercare/forms.py:18
 msgid "Linux 64-bit"
 msgstr ""
 
-#: kitsune/customercare/forms.py:18
+#: kitsune/customercare/forms.py:19
 msgid "Linux ARM64/AArch64"
 msgstr ""
 
-#: kitsune/customercare/forms.py:19
+#: kitsune/customercare/forms.py:20
 msgid "Linux 32-bit"
 msgstr ""
 
-#: kitsune/customercare/forms.py:20
+#: kitsune/customercare/forms.py:21
 #, fuzzy
 msgid "Android"
 msgstr "ਐਂਡਰੌਇਡ ਬਰਾਊਜ਼ਰ"
 
-#: kitsune/customercare/forms.py:21
+#: kitsune/customercare/forms.py:22
 msgid "iOS"
 msgstr ""
 
-#: kitsune/customercare/forms.py:107
+#: kitsune/customercare/forms.py:26
+msgid "Select update channel"
+msgstr ""
+
+#. "ESR" is short for Extended Support Release, a Firefox update channel.
+#: kitsune/customercare/forms.py:28
+msgid "ESR"
+msgstr ""
+
+#: kitsune/customercare/forms.py:29
+msgid "Rapid Release"
+msgstr ""
+
+#: kitsune/customercare/forms.py:30
+msgid "Full Release"
+msgstr ""
+
+#: kitsune/customercare/forms.py:31 kitsune/sumo/jinja2/base.html:301
+msgid "Beta"
+msgstr ""
+
+#: kitsune/customercare/forms.py:32 kitsune/wiki/views.py:1501 kitsune/wiki/views.py:1521
+msgid "Other"
+msgstr "ਹੋਰ"
+
+#: kitsune/customercare/forms.py:36
+msgid "Select policy distribution method"
+msgstr ""
+
+#: kitsune/customercare/forms.py:37
+msgid "Firefox Enterprise Admin Console"
+msgstr ""
+
+#. Please don't translate "ADMX". It's a Windows file type.
+#: kitsune/customercare/forms.py:39
+msgid "Windows Group Policy (ADMX)"
+msgstr ""
+
+#. Please don't translate "Intune", "OMA-URI", or "ADMX". They're technical names.
+#: kitsune/customercare/forms.py:41
+msgid "Windows MDM (Intune / OMA-URI / ADMX-backed)"
+msgstr ""
+
+#. Please don't translate ".mobileconfig", ".plist", or "Jamf". The first two
+#. are file types and Jamf is a product name.
+#: kitsune/customercare/forms.py:47
+msgid "macOS Configuration Profiles (.mobileconfig / .plist, including MDM tools like Jamf)"
+msgstr ""
+
+#. Please don't translate "policies.json". It's a file name.
+#: kitsune/customercare/forms.py:51
+msgid "policies.json (manual deployment, all platforms)"
+msgstr ""
+
+#. Please don't translate "mozilla.cfg" or "autoconfig.js". They're file names.
+#: kitsune/customercare/forms.py:53
+msgid "Autoconfig (mozilla.cfg + autoconfig.js)"
+msgstr ""
+
+#: kitsune/customercare/forms.py:54
+msgid "Not sure / Need help selecting"
+msgstr ""
+
+#: kitsune/customercare/forms.py:58
+msgid "Select urgency"
+msgstr ""
+
+#. Please don't translate "SEV3". It's a standard severity level name.
+#: kitsune/customercare/forms.py:62
+msgid "SEV3 (Normal) – Minor issue; no urgent business impact"
+msgstr ""
+
+#. Please don't translate "SEV2". It's a standard severity level name.
+#: kitsune/customercare/forms.py:67
+msgid "SEV2 (High) – Major degradation; workaround available"
+msgstr ""
+
+#. Please don't translate "SEV1". It's a standard severity level name.
+#: kitsune/customercare/forms.py:72
+msgid "SEV1 (Critical) – Production outage or security risk"
+msgstr ""
+
+#: kitsune/customercare/forms.py:120
 msgid "Contact e-mail"
 msgstr ""
 
-#: kitsune/customercare/forms.py:110
+#: kitsune/customercare/forms.py:123
 #, fuzzy
 msgid "What do you need help with?"
 msgstr "ਤੁਸੀ ਕਿਹੜੇ ਪ੍ਰੋਡੱਕਟ ਬਾਰੇ ਇੱਕ ਸਵਾਲ ਪੋਸਟ ਕਰਨਾ ਚਾਹੰਦੇ ਹੋ?"
 
-#: kitsune/customercare/forms.py:119
+#: kitsune/customercare/forms.py:126
+msgid "What is the impact to your org?"
+msgstr ""
+
+#: kitsune/customercare/forms.py:132
 msgid "What operating system does your device use?"
 msgstr ""
 
-#: kitsune/customercare/forms.py:135 kitsune/groups/jinja2/groups/includes/_tickets_content.html:52
+#: kitsune/customercare/forms.py:137
+msgid "What update channel are you using?"
+msgstr ""
+
+#. These are Firefox enterprise policies: settings that IT admins apply to
+#. every copy of Firefox in their company.
+#: kitsune/customercare/forms.py:145
+msgid "How are you distributing policies?"
+msgstr ""
+
+#: kitsune/customercare/forms.py:150 kitsune/groups/jinja2/groups/includes/_tickets_content.html:52
 #, fuzzy
 msgid "Subject"
 msgstr "ਵਿਸ਼ਾ:"
 
-#: kitsune/customercare/forms.py:136
+#: kitsune/customercare/forms.py:151
 msgid "Tell us more"
 msgstr ""
 
-#: kitsune/customercare/forms.py:164
+#: kitsune/customercare/forms.py:179
 msgid "Select a reason for contacting"
 msgstr ""
 
-#: kitsune/customercare/forms.py:195
+#: kitsune/customercare/forms.py:215
 msgid "Please enter a valid email address."
 msgstr ""
 
-#: kitsune/customercare/forms.py:250 kitsune/messages/jinja2/messages/read.html:19
+#: kitsune/customercare/forms.py:270 kitsune/messages/jinja2/messages/read.html:19
 msgid "Reply"
 msgstr "ਜਵਾਬ"
 
-#: kitsune/customercare/forms.py:254
+#: kitsune/customercare/forms.py:274
 msgid "Please enter a reply."
 msgstr ""
 
-#: kitsune/customercare/forms.py:255
+#: kitsune/customercare/forms.py:275
 #, python-format
 msgid "Replies are limited to %(limit_value)d characters."
 msgstr ""
@@ -537,7 +633,7 @@ msgstr ""
 msgid "Tickets"
 msgstr ""
 
-#: kitsune/customercare/views.py:299 kitsune/sumo/jinja2/includes/common_macros.html:582 kitsune/users/jinja2/users/questions_contributed.html:16
+#: kitsune/customercare/views.py:299 kitsune/sumo/jinja2/includes/common_macros.html:621 kitsune/users/jinja2/users/questions_contributed.html:16
 msgid "My Questions"
 msgstr "ਮੇਰੇ ਸਵਾਲ"
 
@@ -676,108 +772,108 @@ msgstr "ਤੁਰੱਤ ਅੱਪਡੇਟ ਕਰਨ ਦੀ ਲੋੜ ਹੈ"
 #. https://support.mozilla.org/localization or
 #. https://support.mozilla.org/localization/most-visited-translations (for
 #. non-en-US locales).
-#: kitsune/dashboards/readouts.py:149
+#: kitsune/dashboards/readouts.py:150
 msgid "Translation Needed"
 msgstr "ਟਰਾਸ਼ਲੇਸ਼ਨ ਚਾਹੀਦੀ ਹੈ"
 
 #. This is an entry header for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:413
+#: kitsune/dashboards/readouts.py:415
 msgid "Top 20 Articles"
 msgstr "ਚੋਟੀ ਦੇ 20 ਲੇਖਾਂ"
 
 #. This is an entry description for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:420
+#: kitsune/dashboards/readouts.py:422
 #, python-format
 msgid "These are the top 20 most visited articles in the last 30 days, which account for over 50% of the traffic to the Knowledge Base."
 msgstr ""
 
 #. This is an entry header for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:426
+#: kitsune/dashboards/readouts.py:428
 msgid "Top 50 Articles"
 msgstr "ਉੱਚ 50 ਲੇਖਾ"
 
 #. This is an entry description for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:432
+#: kitsune/dashboards/readouts.py:434
 msgid "These are the top 50 most visited articles in the last 30 days."
 msgstr ""
 
 #. This is an entry header for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:437
+#: kitsune/dashboards/readouts.py:439
 msgid "Top 100 Articles"
 msgstr "ਚੋਟੀ ਦੇ 100 ਲੇਖਾ"
 
 #. This is an entry description for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:444
+#: kitsune/dashboards/readouts.py:446
 #, python-format
 msgid "These are the top 100 most visited articles in the last 30 days, which account for over 99% of the traffic to the Knowledge Base."
 msgstr ""
 
-#: kitsune/dashboards/readouts.py:449 kitsune/dashboards/readouts.py:755 kitsune/dashboards/readouts.py:897 kitsune/dashboards/readouts.py:898 kitsune/sumo/jinja2/includes/common_macros.html:808
+#: kitsune/dashboards/readouts.py:451 kitsune/dashboards/readouts.py:760 kitsune/dashboards/readouts.py:902 kitsune/dashboards/readouts.py:903 kitsune/sumo/jinja2/includes/common_macros.html:855
 #: kitsune/wiki/config.py:102
 msgid "Templates"
 msgstr "ਟੈਪਲੇਟ"
 
 #. This is an entry description for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:457
+#: kitsune/dashboards/readouts.py:459
 msgid "Templates are a way of reusing pieces of content across KB articles. You can create and update a set of instructions in one place, and then refer to it in other pages."
 msgstr "ਸਾਰੇ KB ਲੇਖ ਦਾ ਤਤਕਰਾ ਵਰਤਨ ਦਾ ਤਰੀਕਾ ਟੈਪਲੇਟ ਹੈ। ਤੁਸੀ ਇਕ ਜਗਾ ਤੇ ਹਿਦਾਇਤ ਦਾ ਸ਼ੈਟ ਬਣਾ ਅਤੇ ਅਪਡੇਟ ਕਰ ਸਕਦੇ ਹੋ, ਅਤੇ ਫਿਰ ਦੁਸਰੇ ਪੇਜ਼ਾ ਨੂੰ ਰੇਫਰ ਕਰ ਸਕਦੇ ਹੋ।"
 
 #. This is an entry header for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:463
+#: kitsune/dashboards/readouts.py:465
 msgid "All Knowledge Base Articles"
 msgstr "ਸਾਰੇ ਨਾਲਿਜ ਬੇਸ਼ ਲੇਖ"
 
 #. This is an entry description for the Overview table, displayed on
 #. https://support.mozilla.org/localization (for non-en-US locales).
-#: kitsune/dashboards/readouts.py:470
+#: kitsune/dashboards/readouts.py:472
 msgid "This is the number of all Knowledge Base articles that are ready to be localized."
 msgstr "ਇਹ ਨਾਲਿਜ ਬੇਸ਼ ਲੇਖ ਜੋ ਲੋਕਲਾਇਜ ਕਨਨ ਲਈ ਤਿਆਰ ਹਨ।"
 
 #. This is a column header for an abstract Localization Dashboard table. It refers
 #. to articles.
-#: kitsune/dashboards/readouts.py:490
+#: kitsune/dashboards/readouts.py:492
 msgid "Visits in last 30 days"
 msgstr "ਪਿਛਲੇ 30 ਦਿਨ 'ਚ ਦੌਰੇ"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:6 kitsune/dashboards/readouts.py:492 kitsune/groups/jinja2/groups/includes/_tickets_content.html:54
-#: kitsune/groups/jinja2/groups/includes/enterprise_invitations.html:11 kitsune/wiki/jinja2/wiki/includes/revision_list.html:23
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:6 kitsune/dashboards/readouts.py:494 kitsune/groups/jinja2/groups/includes/_tickets_content.html:54
+#: kitsune/groups/jinja2/groups/includes/enterprise_invitations.html:11 kitsune/wiki/jinja2/wiki/includes/revision_list.html:24
 msgid "Status"
 msgstr "ਦਰਜਾ"
 
 #. This is a sorting option for an abstract Localization Dashboard table. It refers
 #. to articles.
-#: kitsune/dashboards/readouts.py:495
+#: kitsune/dashboards/readouts.py:497
 msgid "Most Viewed"
 msgstr "ਸਭ ਤੋ ਜਿਆਦਾ ਦੇਖੀ ਗਈ"
 
 #. This is a sorting option for an abstract Localization Dashboard table. It refers
 #. to articles.
-#: kitsune/dashboards/readouts.py:497
+#: kitsune/dashboards/readouts.py:499
 msgid "Most Recent"
 msgstr "ਸਭ ਤੋਂ ਤਾਜ਼ਾ"
 
 #. This refers to articles.
-#: kitsune/dashboards/readouts.py:601 kitsune/dashboards/readouts.py:800
+#: kitsune/dashboards/readouts.py:603 kitsune/dashboards/readouts.py:805
 msgid "Most Visited"
 msgstr "ਸਭ ਤੋ ਜਿਆਦਾ ਗਏ"
 
 #. Unused. A link to be displayed under the Most Visited overview table,
 #. which redirects users to the full Most Visited table
 #. (https://support.mozilla.org/contributors/most-visited).
-#: kitsune/dashboards/readouts.py:605
+#: kitsune/dashboards/readouts.py:607
 msgid "All knowledge base articles..."
 msgstr "ਸਾਰੇ ਨਾਲਿਜਬੇਸ ਲੇਂਖ..."
 
 #. This is a table column header that refers to article visit count.
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:5 kitsune/dashboards/readouts.py:608 kitsune/dashboards/readouts.py:675
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:5 kitsune/dashboards/readouts.py:610 kitsune/dashboards/readouts.py:678
 msgid "Visits"
 msgstr "ਵੇਖੇ"
 
@@ -786,12 +882,12 @@ msgstr "ਵੇਖੇ"
 #. https://support.mozilla.org/contributors/templates,
 #. https://support.mozilla.org/contributors/how-to-contribute or
 #. https://support.mozilla.org/contributors/administration.
-#: kitsune/dashboards/readouts.py:735
+#: kitsune/dashboards/readouts.py:740
 msgid "Changes Needed"
 msgstr "ਬਦਲਾਅ ਦੀ ਲੋੜ"
 
 #. This refers to articles.
-#: kitsune/dashboards/readouts.py:739 kitsune/dashboards/readouts.py:1122
+#: kitsune/dashboards/readouts.py:744 kitsune/dashboards/readouts.py:1138
 msgid "Changes Not Ready For Localization"
 msgstr "ਲੋਕੇਲਾਇਜੇਲਨ ਲਈ ਬਦਲ ਤਿਆਰ ਨਹੀ ਹੈ"
 
@@ -800,33 +896,33 @@ msgstr "ਲੋਕੇਲਾਇਜੇਲਨ ਲਈ ਬਦਲ ਤਿਆਰ ਨਹ�
 #. locales),
 #. which redirects users to the full Templates table
 #. (https://support.mozilla.org/localization/template-translations).
-#: kitsune/dashboards/readouts.py:762 kitsune/dashboards/readouts.py:903
+#: kitsune/dashboards/readouts.py:767 kitsune/dashboards/readouts.py:908
 msgid "All templates..."
 msgstr "ਸਭ ਟੇਪਲੇਟ..."
 
 #. This is a table header displayed on
 #. https://support.mozilla.org/contributors/how-to-contribute. It refers to the
 #. article topic.
-#: kitsune/dashboards/readouts.py:769
+#: kitsune/dashboards/readouts.py:774
 msgid "How To Contribute"
 msgstr "ਯੋਗਦਾਨ ਕਿਵੇਂ ਕਰੀਏ"
 
 #. Unused. A link to be displayed under the How To Contribute overview table,
 #. which redirects users to the full How To Contribute table.
-#: kitsune/dashboards/readouts.py:773
+#: kitsune/dashboards/readouts.py:778
 msgid "All How To Contribute articles..."
 msgstr "ਸਾਰੇ ਲੇਖਾ ਵਿੱਚ ਕਿਵੇ ਯੋਗਦਾਨ ਪਾਉਗੇ..."
 
 #. This is a table header displayed on
 #. https://support.mozilla.org/contributors/administration. It refers to the
 #. article topic.
-#: kitsune/dashboards/readouts.py:780 kitsune/wiki/config.py:100
+#: kitsune/dashboards/readouts.py:785 kitsune/wiki/config.py:100
 msgid "Administration"
 msgstr "ਪਰਸ਼ਾਸ਼ਨ"
 
 #. Unused. A link to be displayed under the Administration overview table,
 #. which redirects users to the full Administration table.
-#: kitsune/dashboards/readouts.py:784
+#: kitsune/dashboards/readouts.py:789
 msgid "All Administration articles..."
 msgstr "ਸਭ ਪਰਸ਼ਾਸ਼ਨ ਲੇਖਾਂ..."
 
@@ -836,7 +932,7 @@ msgstr "ਸਭ ਪਰਸ਼ਾਸ਼ਨ ਲੇਖਾਂ..."
 #. which redirects users to the full Most Visited table
 #. (https://support.mozilla.org/localization/most-visited-translations for
 #. non-en-US locales).
-#: kitsune/dashboards/readouts.py:806
+#: kitsune/dashboards/readouts.py:811
 msgid "All translations..."
 msgstr "ਸਾਰੇ ਅਨੁਵਾਦਾ..."
 
@@ -845,7 +941,7 @@ msgstr "ਸਾਰੇ ਅਨੁਵਾਦਾ..."
 #. and https://support.mozilla.org/localization/unreviewed.
 #. It refers not just to changes to translations but also to unreviewed changes to
 #. docs in this locale that are not translations.
-#: kitsune/dashboards/readouts.py:967
+#: kitsune/dashboards/readouts.py:972
 msgid "Unreviewed Changes"
 msgstr "ਬਿਨ-ਪੜਤਾਲ ਕੀਤੇ ਗਏ ਬਦਾਲਅ"
 
@@ -855,7 +951,7 @@ msgstr "ਬਿਨ-ਪੜਤਾਲ ਕੀਤੇ ਗਏ ਬਦਾਲਅ"
 #. and https://support.mozilla.org/localization/unreviewed.
 #. It refers not just to changes to translations but also to unreviewed changes to
 #. docs in this locale that are not translations.
-#: kitsune/dashboards/readouts.py:974
+#: kitsune/dashboards/readouts.py:979
 msgctxt "document"
 msgid "Unreviewed"
 msgstr "ਬਿਨਾਂ-ਪੜਾਤਲ ਕੀਤੇ"
@@ -864,7 +960,7 @@ msgstr "ਬਿਨਾਂ-ਪੜਾਤਲ ਕੀਤੇ"
 #. (https://support.mozilla.org/localization#unreviewed for non-en-US locales),
 #. which redirects users to the full Unreviewed Changes table
 #. (https://support.mozilla.org/localization/unreviewed).
-#: kitsune/dashboards/readouts.py:978
+#: kitsune/dashboards/readouts.py:983
 msgid "All articles requiring review..."
 msgstr "ਸਭ ਲੇਖਾਂ ਲਈ ਪੜਤਾਲ ਦੀ ਲੋੜ ਹੈ..."
 
@@ -872,19 +968,19 @@ msgstr "ਸਭ ਲੇਖਾਂ ਲਈ ਪੜਤਾਲ ਦੀ ਲੋੜ ਹੈ...
 #. https://support.mozilla.org/localization#unreviewed (for non-en-US locales)
 #. and https://support.mozilla.org/localization/unreviewed.
 #. It refers to the time an article was last changed.
-#: kitsune/dashboards/readouts.py:984
+#: kitsune/dashboards/readouts.py:989
 msgid "Changed"
 msgstr "ਬਦਲਿਆ"
 
 #. This is a table header displayed on
 #. https://support.mozilla.org/contributors/unhelpful.
-#: kitsune/dashboards/readouts.py:1047
+#: kitsune/dashboards/readouts.py:1053
 msgid "Unhelpful Documents"
 msgstr "ਨਾ-ਮਦਦਗਾਰ ਦਸਤਾਵੇਜ਼ਾਂ"
 
 #. Unused. This is a short name for the Unhelpful Documents table,
 #. displayed on https://support.mozilla.org/contributors/unhelpful.
-#: kitsune/dashboards/readouts.py:1051
+#: kitsune/dashboards/readouts.py:1057
 msgctxt "document"
 msgid "Unhelpful"
 msgstr "ਨਾਂ-ਮਦਦਗਾਰ"
@@ -893,14 +989,14 @@ msgstr "ਨਾਂ-ਮਦਦਗਾਰ"
 #. table,
 #. which redirects users to the full Unhelpful Documents table
 #. (https://support.mozilla.org/contributors/unhelpful).
-#: kitsune/dashboards/readouts.py:1054
+#: kitsune/dashboards/readouts.py:1060
 msgid "All unhelpful articles..."
 msgstr "ਸਭ ਮਦਦਗਾਰ ਲੇਖਾ..."
 
 #. This is a column header for the Unhelpful Documents table, displayed on
 #. https://support.mozilla.org/contributors/unhelpful.
 #. It refers to the article's helpful/unhelpful vote count.
-#: kitsune/dashboards/readouts.py:1059
+#: kitsune/dashboards/readouts.py:1065
 msgid "Total Votes"
 msgstr "ਕੁੱਲ ਵੋਟਾ"
 
@@ -908,13 +1004,13 @@ msgstr "ਕੁੱਲ ਵੋਟਾ"
 #. https://support.mozilla.org/contributors/unhelpful.
 #. It refers to the article's helpful vote percentage (out of total
 #. helpful/unhelpful vote count).
-#: kitsune/dashboards/readouts.py:1063
+#: kitsune/dashboards/readouts.py:1069
 msgid "Helpfulness"
 msgstr "ਅਸਹਾਇਤਾ"
 
 #. Unused. This is a description for the Changes Not Ready For Localization table,
 #. displayed on https://support.mozilla.org/contributors/unready.
-#: kitsune/dashboards/readouts.py:1126
+#: kitsune/dashboards/readouts.py:1142
 msgid "Articles which have approved revisions newer than the latest ready-for-localization one"
 msgstr "ਲੇਖ ਜੋ ਸੰਸ਼ੋਧਨ ਨਵੀਨਤਮ ਤਿਆਰ ਲਈ ਸਥਾਨੀਇਕਰਣ ਦੀ ਤੁਲਣਾ ਵਿੱਚ ਨਵੇਂ ਮਨਜ਼ੂਰੀ  ਦੇ ਦਿੱਤੀ ਹੈ"
 
@@ -922,54 +1018,54 @@ msgstr "ਲੇਖ ਜੋ ਸੰਸ਼ੋਧਨ ਨਵੀਨਤਮ ਤਿਆਰ �
 #. Localization overview table,
 #. which redirects users to the full Changes Not Ready For Localization table
 #. (https://support.mozilla.org/contributors/unready).
-#: kitsune/dashboards/readouts.py:1131
+#: kitsune/dashboards/readouts.py:1147
 msgid "All articles with changes not ready for localization..."
 msgstr "ਸਥਾਨੀਇਕਰਣ ਲਈ ਤਿਆਰ ਨਹੀਂ ਹੈ ਬਦਲਾਵ ਦੇ ਨਾਲ ਸਾਰੇ ਲੇਖ..."
 
 #. This refers to article revisions.
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:155 kitsune/dashboards/readouts.py:1134 kitsune/wiki/jinja2/wiki/includes/revision_list.html:70
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:155 kitsune/dashboards/readouts.py:1150 kitsune/wiki/jinja2/wiki/includes/revision_list.html:74
 msgid "Approved"
 msgstr "ਸਵੀਕਾਰ"
 
 #. This is a table header displayed on
 #. https://support.mozilla.org/contributors/need-changes.
-#: kitsune/dashboards/readouts.py:1203
+#: kitsune/dashboards/readouts.py:1219
 msgid "Need Changes"
 msgstr "ਬਦਾਲਅ ਦੀ ਜਰੂਰਤ"
 
 #. Unused. This is a description for the Need Changes table,
 #. displayed on https://support.mozilla.org/contributors/need-changes.
-#: kitsune/dashboards/readouts.py:1206
+#: kitsune/dashboards/readouts.py:1222
 msgid "Articles that require changes."
 msgstr "ਲੇਖਾਂ ਜਿਹਨਾ ਨੂੰ ਬਦਲਾਉ ਦੀ ਲੋੜ ਹੈ।"
 
 #. Unused. This is a link to be displayed under the Need Changes overview table,
 #. which redirects users to the full Need Changes table
 #. (https://support.mozilla.org/contributors/need-changes).
-#: kitsune/dashboards/readouts.py:1210
+#: kitsune/dashboards/readouts.py:1226
 msgid "All articles that require changes..."
 msgstr "ਸਭ ਲੇਖਾਂ ਜਿਹਨਾ ਨੂੰ ਬਦਲਾਉ ਦੀ ਲੋੜ ਹੈ..."
 
 #. A noun. There are comments for articles in general (on
 #. https://support.mozilla.org/contributors/need-changes) and every article
 #. revision.
-#: kitsune/dashboards/readouts.py:1213 kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:46 kitsune/wiki/jinja2/wiki/includes/revision_list.html:28
+#: kitsune/dashboards/readouts.py:1229 kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:46 kitsune/wiki/jinja2/wiki/includes/revision_list.html:29
 msgid "Comment"
 msgstr "ਟਿੱਪਣੀ"
 
-#: kitsune/dashboards/readouts.py:1251 kitsune/wiki/config.py:103
+#: kitsune/dashboards/readouts.py:1267 kitsune/wiki/config.py:103
 msgid "Canned Responses"
 msgstr "ਸਾਰੇ ਡੱਬਾਬੰਦ ​​ਜਵਾਬ ਦੀ ਲੋਕਲਾਈਜ਼ੇਸ਼ਨ ਸਥਿਤੀ"
 
 #. Unused. This is a description for the Canned Responses table.
-#: kitsune/dashboards/readouts.py:1253
+#: kitsune/dashboards/readouts.py:1269
 msgid "Localization status of all canned responses"
 msgstr "ਸਾਰੇ ਡੱਬਾਬੰਦ ​​ਜਵਾਬ ਦੇ ਲੋਕਲਾਈਜ਼ੇਸ਼ਨ ਸਥਿਤੀ"
 
 #. Unused. This is a link to be displayed under the Canned Responses overview
 #. table,
 #. which redirects users to the full Canned Responses table.
-#: kitsune/dashboards/readouts.py:1257
+#: kitsune/dashboards/readouts.py:1273
 msgid "All canned responses articles..."
 msgstr "ਸਭ ਡੱਬਾਬੰਦ ​​ਜਵਾਬ ਲੇਖ..."
 
@@ -1029,7 +1125,7 @@ msgstr "[{product}] ਨਾਲੇਜ ਬੇਸ ਡੈਸ਼ਬੋਰਡ"
 #: kitsune/dashboards/jinja2/dashboards/contributors_old.html:4 kitsune/dashboards/jinja2/dashboards/includes/macros.html:176 kitsune/dashboards/jinja2/dashboards/includes/macros.html:191
 #: kitsune/dashboards/jinja2/dashboards/includes/macros.html:201 kitsune/dashboards/jinja2/dashboards/localization.html:4 kitsune/products/jinja2/products/includes/product_macros.html:36
 #: kitsune/questions/jinja2/questions/product_list.html:50 kitsune/questions/jinja2/questions/question_details.html:21 kitsune/questions/jinja2/questions/question_list.html:12
-#: kitsune/search/jinja2/search/results.html:128 kitsune/search/views.py:81
+#: kitsune/search/jinja2/search/results.html:162 kitsune/search/views.py:87 kitsune/wiki/jinja2/wiki/includes/kb_macros.html:44
 msgid "All Products"
 msgstr "ਸਾਰੇ ਪ੍ਰੋਡੱਕਟ"
 
@@ -1055,7 +1151,7 @@ msgstr "ਮਦਦਗਾਰ ਵੋਟਾ"
 msgid "[{locale}][{product}] Localization Dashboard"
 msgstr "[{locale}][{product}] ਲੋਕਲਾਈਜ਼ੇਸ਼ਨ ਡੈਸ਼ਬੋਰਡ"
 
-#: kitsune/dashboards/jinja2/dashboards/localization.html:14 kitsune/questions/jinja2/questions/metrics.html:21 kitsune/wiki/forms.py:477
+#: kitsune/dashboards/jinja2/dashboards/localization.html:14 kitsune/questions/jinja2/questions/metrics.html:21 kitsune/wiki/forms.py:541
 msgid "Locale:"
 msgstr "ਲੋਕੇਲ:"
 
@@ -1093,11 +1189,11 @@ msgid "Review Needed: {comment}"
 msgstr "ਪੜਤਾਲ ਦੀ ਲੋੜ ਹੈ: {comment}"
 
 #: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:34 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:39 kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:46
-#: kitsune/sumo/templatetags/jinja_helpers.py:447 kitsune/sumo/views.py:62 kitsune/wiki/jinja2/wiki/includes/document_macros.html:381
+#: kitsune/sumo/templatetags/jinja_helpers.py:427 kitsune/sumo/views.py:62 kitsune/wiki/jinja2/wiki/includes/document_macros.html:381
 msgid "Yes"
 msgstr "ਹਾਂ"
 
-#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:41 kitsune/sumo/templatetags/jinja_helpers.py:447 kitsune/sumo/views.py:63 kitsune/wiki/jinja2/wiki/includes/document_macros.html:385
+#: kitsune/dashboards/jinja2/dashboards/includes/kb_overview.html:41 kitsune/sumo/templatetags/jinja_helpers.py:427 kitsune/sumo/views.py:63 kitsune/wiki/jinja2/wiki/includes/document_macros.html:385
 msgid "No"
 msgstr "ਨਹੀਂ"
 
@@ -1141,7 +1237,7 @@ msgstr "ਗਾਹਕ ਬਣੋਂ..."
 msgid "Waiting for review"
 msgstr "ਸਮੀਖਿਆ ਲਈ ਉਡੀਕ "
 
-#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:156 kitsune/wiki/forms.py:449 kitsune/wiki/jinja2/wiki/includes/revision_list.html:26
+#: kitsune/dashboards/jinja2/dashboards/includes/macros.html:156 kitsune/wiki/forms.py:469 kitsune/wiki/jinja2/wiki/includes/revision_list.html:27
 msgid "Ready for localization"
 msgstr "ਲੋਕੇਲਾਇਜੇਸਨ ਲਈ ਤਿਆਰ"
 
@@ -1211,19 +1307,19 @@ msgstr "ਬਦਸਲੂਕੀ ਦੀ ਸਮੱਗਰੀ"
 msgid "Other (please specify)"
 msgstr "ਹੋਰ (ਕ੍ਰਿਪਾ ਕਰਕੇ ਦੱਸੋ)"
 
-#: kitsune/flagit/views.py:93
+#: kitsune/flagit/views.py:95
 msgid "System account content cannot be flagged."
 msgstr ""
 
-#: kitsune/flagit/views.py:99
+#: kitsune/flagit/views.py:101
 msgid "Please select a reason for flagging this content."
 msgstr ""
 
-#: kitsune/flagit/views.py:127
+#: kitsune/flagit/views.py:129
 msgid "You already flagged this content."
 msgstr "ਤੁਸੀ ਪਹਿਲਾਂ ਵਲੋਂ ਹੀ ਇਸ ਸਾਮਗਰੀ ਨੂੰ ਝੰਡੀ ਦਿਖਾ ਕੇ ਰਵਾਨਾ ਕੀਤਾ।"
 
-#: kitsune/flagit/views.py:129
+#: kitsune/flagit/views.py:131
 msgid "You have flagged this content. A moderator will review your submission shortly."
 msgstr "ਤੁਸੀ ਇਸ ਸਾਮਗਰੀ ਨੂੰ ਝੰਡੀ ਦਿਖਾ ਕੇ ਰਵਾਨਾ ਕੀਤਾ। ਸੂਤਰਧਾਰ ਤੁਹਾਡੀ ਜਮਾਂ ਕੀਤੀ ਸਮੱਗਰੀ ਨੂੰ ਜਲਦੀ ਰਵਿਉ ਕਰਨਗੇ।"
 
@@ -1231,7 +1327,7 @@ msgstr "ਤੁਸੀ ਇਸ ਸਾਮਗਰੀ ਨੂੰ ਝੰਡੀ ਦਿਖ�
 msgid "Topic and Tag Moderation Tool"
 msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/content_moderation.html:4 kitsune/flagit/jinja2/flagit/zendesk_spam.html:3 kitsune/sumo/jinja2/base.html:43 kitsune/wiki/jinja2/wiki/document.html:32
+#: kitsune/flagit/jinja2/flagit/content_moderation.html:4 kitsune/flagit/jinja2/flagit/zendesk_spam.html:3 kitsune/sumo/jinja2/base.html:47 kitsune/wiki/jinja2/wiki/document.html:32
 msgctxt "site_title"
 msgid "Mozilla Support"
 msgstr "ਮੋਬਾਇਲ ਸਹਿਯੋਗ"
@@ -1375,13 +1471,13 @@ msgid "Zendesk Spam Queue"
 msgstr ""
 
 #: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:6 kitsune/kbforums/forms.py:56 kitsune/kbforums/forms.py:83
-#: kitsune/wiki/forms.py:91 kitsune/wiki/jinja2/wiki/translate.html:81
+#: kitsune/wiki/forms.py:101 kitsune/wiki/jinja2/wiki/translate.html:85
 msgid "Title:"
 msgstr "ਨਾਂ:"
 
 #: kitsune/flagit/jinja2/flagit/includes/flagged_post.html:4 kitsune/flagit/jinja2/flagit/includes/flagged_profile.html:2 kitsune/flagit/jinja2/flagit/includes/flagged_question.html:10
-#: kitsune/kbforums/forms.py:34 kitsune/kbforums/forms.py:65 kitsune/kbforums/forms.py:101 kitsune/questions/forms.py:308 kitsune/wiki/forms.py:370
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:219 kitsune/wiki/jinja2/wiki/review_translation.html:99
+#: kitsune/kbforums/forms.py:34 kitsune/kbforums/forms.py:65 kitsune/kbforums/forms.py:101 kitsune/questions/forms.py:308 kitsune/wiki/forms.py:380
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:219 kitsune/wiki/jinja2/wiki/review_translation.html:106
 msgid "Content:"
 msgstr "ਸਾਮਗਰੀ:"
 
@@ -1448,7 +1544,7 @@ msgstr ""
 msgid "Product:"
 msgstr ""
 
-#: kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:11 kitsune/wiki/forms.py:141 kitsune/wiki/jinja2/wiki/history.html:18
+#: kitsune/flagit/jinja2/flagit/includes/flagged_supportticket.html:11 kitsune/wiki/forms.py:151 kitsune/wiki/jinja2/wiki/history.html:18
 msgid "Category:"
 msgstr "ਕੈਟਾਗਰੀ:"
 
@@ -1485,7 +1581,7 @@ msgstr ""
 msgid "Recent posts in %s"
 msgstr "ਹੁਣੇ ਪੋਸ਼ਟਾ ਵਿੱਚ %s"
 
-#: kitsune/forums/forms.py:6 kitsune/gallery/forms.py:10 kitsune/kbforums/forms.py:6 kitsune/wiki/forms.py:31
+#: kitsune/forums/forms.py:6 kitsune/gallery/forms.py:13 kitsune/kbforums/forms.py:6 kitsune/wiki/forms.py:35
 msgid "Please provide a title."
 msgstr "ਨਾਂ ਦਿਓ ਜੀ।"
 
@@ -1494,7 +1590,7 @@ msgstr "ਨਾਂ ਦਿਓ ਜੀ।"
 msgid "Your title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "ਤੁਹਾਡਾ ਸਿਰਲੇਖ਼ ਬਹੁੱਤ ਛੋਟਾ ਹੈ (%(show_value)s ਸ਼ਬਦਾ). ਇਹ ਘੱਟੋ ਘੱਟ %(limit_value)s ਸ਼ਬਦਾ।"
 
-#: kitsune/forums/forms.py:12 kitsune/gallery/forms.py:16 kitsune/kbforums/forms.py:13
+#: kitsune/forums/forms.py:12 kitsune/gallery/forms.py:19 kitsune/kbforums/forms.py:13
 #, fuzzy, python-format
 msgid "Please keep the length of your title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "ਤੁਹਾਡੇ ਸਿਰਲੇਖ ਦੀ ਲੰਮਾਈ ਰੱਖਣ ਕ੍ਰਿਪਾ ਕਰਕੇ ਰੱਖੋ % (limit_value)s ਵਰਣ ਜਾਂ ਉਸਤੋਂ ਘੱਟ। ਇਹ ਵਰਤਮਾਨ ਵਿੱਚ ਹੈ %(show_value)s ਵਰਣ| "
@@ -1570,8 +1666,8 @@ msgstr "ਤੁਸੀ ਪੱਕੇ ਤੋਰ ਤੇ ਇਹ ਪੋਸਟ ਹਟਾ
 #: kitsune/questions/jinja2/questions/edit_question.html:29 kitsune/questions/jinja2/questions/includes/email_subscribe.html:30
 #: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:204 kitsune/questions/jinja2/questions/question_details.html:475 kitsune/tidings/jinja2/tidings/unsub.html:18
 #: kitsune/users/jinja2/users/confirm_avatar_delete.html:23 kitsune/users/jinja2/users/edit_profile.html:90 kitsune/wiki/jinja2/wiki/confirm_remove_contributor.html:15
-#: kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:15 kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:11 kitsune/wiki/jinja2/wiki/includes/review_form.html:81
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:106 kitsune/wiki/jinja2/wiki/includes/survey_form.html:42
+#: kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:15 kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:11 kitsune/wiki/jinja2/wiki/includes/review_form.html:86
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:111 kitsune/wiki/jinja2/wiki/includes/survey_form.html:42
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
 
@@ -1589,7 +1685,7 @@ msgstr ""
 msgid "Are you sure you want to delete this thread?"
 msgstr "ਕੀ ਤੁਸਾ ਇਸ ਥਰੈਡ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: kitsune/forums/jinja2/forums/confirm_thread_delete.html:14 kitsune/forums/jinja2/forums/threads.html:55 kitsune/gallery/forms.py:46 kitsune/kbforums/jinja2/kbforums/confirm_thread_delete.html:16
+#: kitsune/forums/jinja2/forums/confirm_thread_delete.html:14 kitsune/forums/jinja2/forums/threads.html:55 kitsune/gallery/forms.py:53 kitsune/kbforums/jinja2/kbforums/confirm_thread_delete.html:16
 #: kitsune/kbforums/jinja2/kbforums/discussions.html:34 kitsune/kbforums/jinja2/kbforums/threads.html:35 kitsune/questions/jinja2/questions/confirm_question_delete.html:20
 #: kitsune/wiki/jinja2/wiki/confirm_document_delete.html:22 kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:44
 msgid "Title"
@@ -1697,7 +1793,7 @@ msgstr "ਥਰਿੱਡ ਭੇਜੋ"
 msgid "{t} | {f} | Contributor Discussions"
 msgstr ""
 
-#: kitsune/forums/jinja2/forums/posts.html:24 kitsune/kbforums/jinja2/kbforums/posts.html:47 kitsune/search/jinja2/search/includes/result.html:49
+#: kitsune/forums/jinja2/forums/posts.html:24 kitsune/kbforums/jinja2/kbforums/posts.html:47 kitsune/search/jinja2/search/includes/result.html:50
 #, python-brace-format
 msgid "1 reply"
 msgid_plural "{n} replies"
@@ -1890,62 +1986,86 @@ msgstr "{name} ਵਲੋਂ {datetime} ਨੂੰ ਸੋਧਿਆ"
 msgid "Post Preview:"
 msgstr "ਪੋਸਟ ਪ੍ਰਵਿਇਉ"
 
-#: kitsune/gallery/forms.py:12 kitsune/wiki/forms.py:33
+#: kitsune/gallery/forms.py:15 kitsune/wiki/forms.py:37
 #, python-format
 msgid "The title is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "ਸਿਰਲੇਖ਼ ਬਹੁਤ ਛੋਟਾ ਹੈ (%(show_value)s ਸਬਦਾ). ਇਹ ਘੱਟ ਤੋ ਘੱਟ %(limit_value)s ਸਬਦਾ।"
 
-#: kitsune/gallery/forms.py:19
+#: kitsune/gallery/forms.py:22
 msgid "Please provide a description."
 msgstr " ਕ੍ਰਿਪਾ ਕਰਕੇ ਵਿਆਖਿਆ ਦਿਖਾਉ।"
 
-#: kitsune/gallery/forms.py:21
+#: kitsune/gallery/forms.py:24
 #, fuzzy, python-format
 msgid "Please keep the length of your description to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "ਤੁਹਾਡੇ ਵਿਆਖਿਆ ਦੀ ਲੰਮਾਈ ਰੱਖਣ ਕ੍ਰਿਪਾ ਕਰਕੇ ਰੱਖੋ % (limit_value)s  ਵਿਆਖਿਆ ਜਾਂ ਉਸਤੋਂ ਘੱਟ। ਇਹ ਵਰਤਮਾਨ ਵਿੱਚ ਹੈ %(show_value)s  ਵਿਆਖਿਆ।"
 
-#: kitsune/gallery/forms.py:24 kitsune/groups/forms.py:45 kitsune/upload/forms.py:6
+#: kitsune/gallery/forms.py:27 kitsune/groups/forms.py:45 kitsune/upload/forms.py:6
 msgid "You have not selected an image to upload."
 msgstr "ਤੁਸੀ ਅੱਪਲੌਡ ਕਰਨ ਲਈ ਕੋਈ ਫੋਟੋ ਨਹੀ ਚੁਣੀ ਹੈ।"
 
-#: kitsune/gallery/forms.py:26 kitsune/upload/forms.py:8
+#: kitsune/gallery/forms.py:29 kitsune/upload/forms.py:8
 #, python-format
 msgid "Please keep the length of your image filename to %(max)s characters or less. It is currently %(length)s characters."
 msgstr "ਆਪਣੀ ਫੋਟੋ ਫਾਇਲ ਦੀ ਲੰਬਾਈ %(max)s ਸ਼ਬਦ ਜਾਂ ਘੱਟ। ਇਸ ਸਮੇਂ %(length)s ਸ਼ਬਦਾਂ ਹਨ।"
 
-#: kitsune/gallery/forms.py:29
+#: kitsune/gallery/forms.py:32
 msgid "Please select a different title."
 msgstr "ਕ੍ਰਿਪਾ ਕਰਕੇ ਅਲੱਗ ਸ਼ਿਰਲੇਖ਼ ਚੁਣੋ।"
 
-#: kitsune/gallery/forms.py:31
+#: kitsune/gallery/forms.py:34
 msgid "Include this in wiki syntax with [[Image:title]]"
 msgstr "ਇਸਨੂੰ [[ਚਿੱਤਰ:ਸਿਰਲੇਖ]] ਦੇ ਨਾਲ ਵਿਕੀ ਸਿੰਟੈਕਸ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ"
 
-#: kitsune/gallery/forms.py:32
+#: kitsune/gallery/forms.py:35
 msgid "Provide a brief description of this image."
 msgstr ""
 
-#: kitsune/gallery/forms.py:40 kitsune/questions/jinja2/questions/question_details.html:458 kitsune/wiki/jinja2/wiki/confirm_document_delete.html:24
+#: kitsune/gallery/forms.py:37
+msgid "A private image shows only in the articles of its knowledge base, to their readers. Choose before selecting the image: it can't be changed after the upload."
+msgstr ""
+
+#: kitsune/gallery/forms.py:47 kitsune/questions/jinja2/questions/question_details.html:458 kitsune/wiki/jinja2/wiki/confirm_document_delete.html:24
 msgid "Locale"
 msgstr "ਲੋਕੇਲ"
 
-#: kitsune/gallery/forms.py:58 kitsune/gallery/jinja2/gallery/media.html:55
+#: kitsune/gallery/forms.py:65 kitsune/gallery/jinja2/gallery/media.html:55
 msgid "Description"
 msgstr "ਵੇਰਵਾ"
 
-#: kitsune/gallery/forms.py:86
+#: kitsune/gallery/forms.py:93
 msgid "Image"
 msgstr "ਚਿੱਤਰ"
 
-#: kitsune/gallery/forms.py:87
+#: kitsune/gallery/forms.py:94
 msgid "Accepted formats include .PNG, .JPG, .JPEG and .GIF."
 msgstr ""
 
-#: kitsune/gallery/views.py:84
+#: kitsune/gallery/forms.py:127
+msgid "Who can see this image"
+msgstr ""
+
+#: kitsune/gallery/forms.py:134
+msgid "Choose…"
+msgstr ""
+
+#: kitsune/gallery/forms.py:134
+msgid "Everyone (public)"
+msgstr ""
+
+#: kitsune/gallery/forms.py:136
+msgid "Readers of a private knowledge base"
+msgstr ""
+
+#: kitsune/gallery/views.py:126
 msgid "Unrecognized request or nothing to cancel."
 msgstr "ਬੇਪਛਾਣ ਬੇਨਤੀ ਨੂੰ ਰੱਦ ਕਰਨ ਲਈ ਕੁਝ ਵੀ ਨਾ ਕਰੋ।"
 
-#: kitsune/gallery/views.py:203
+#: kitsune/gallery/views.py:272
+msgid "Please choose who can see the image."
+msgstr ""
+
+#: kitsune/gallery/views.py:284
 msgid "Could not upload your image."
 msgstr "ਤੁਹਾਡਾ ਚਿੱਤਰ ਅੱਪਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।"
 
@@ -2003,7 +2123,7 @@ msgstr "ਗੈਲਰੀ ਲੱਭੋ"
 msgid "Show images for:"
 msgstr ""
 
-#: kitsune/gallery/jinja2/gallery/gallery.html:58 kitsune/gallery/jinja2/gallery/search.html:32 kitsune/sumo/jinja2/base.html:349
+#: kitsune/gallery/jinja2/gallery/gallery.html:58 kitsune/gallery/jinja2/gallery/search.html:32 kitsune/sumo/jinja2/base.html:356
 msgid "Go"
 msgstr "ਜਾਉ"
 
@@ -2063,7 +2183,7 @@ msgstr ""
 msgid "Upload an image file (JPG or PNG). Maximum file size: {size}MB"
 msgstr ""
 
-#: kitsune/groups/forms.py:51 kitsune/wiki/forms.py:464
+#: kitsune/groups/forms.py:51 kitsune/wiki/forms.py:528
 msgid "username"
 msgstr "ਯੂਜ਼ਰ ਨਾਂ"
 
@@ -2131,11 +2251,11 @@ msgstr ""
 msgid "Welcome to Firefox Professional Support!"
 msgstr ""
 
-#: kitsune/groups/membership.py:150
+#: kitsune/groups/membership.py:167
 msgid "A user can belong to only one enterprise company. Remove conflicting company memberships before adding another."
 msgstr ""
 
-#: kitsune/groups/membership.py:253
+#: kitsune/groups/membership.py:270
 msgid "Companies with support contracts must stay directly under the enterprise group."
 msgstr ""
 
@@ -2368,21 +2488,21 @@ msgstr "ਮੈਬਰਾ ਨੂੰ ਗਰੁੱਪਾ ਵਿੱਚ ਜੋੜਨ �
 msgid "{user} removed from the group successfully!"
 msgstr "{user} ਕਾਮਯਾਬੀ ਨਾਲ ਗਰੁੱਪ ਵਿੱਚੋਂ ਹਟਾਇਆ!"
 
-#: kitsune/groups/views.py:541
+#: kitsune/groups/views.py:539
 #, python-brace-format
 msgid "{users} added to the group leaders successfully!"
 msgstr "{users} ਗਰੁੱਪ ਲੀਡਰ ਵਿੱਚ ਕਾਮਯਾਬੀ ਨਾਲ ਜੋੜਿਆ!"
 
-#: kitsune/groups/views.py:547
+#: kitsune/groups/views.py:545
 msgid "There were errors adding leaders to the group, see below."
 msgstr "ਗਰੁੱਪ ਲੀਡਰ ਵਿੱਚ ਸਫਲਤਾਪੂਰਵਕ ਜੋੜਨ ਸਮੇ ਸਮੱਸਿਆ ਆਈ, ਹੇਠਾ ਦੇਖੋ।"
 
-#: kitsune/groups/views.py:564
+#: kitsune/groups/views.py:562
 #, python-brace-format
 msgid "{user} removed from the group leaders successfully!"
 msgstr "{user} ਕਾਮਯਾਬੀ ਨਾਲ ਗਰੁੱਪ ਲੀਡਰਾਂ ਵਿੱਚੋਂ ਹਟਾਇਆ!"
 
-#: kitsune/groups/views.py:581
+#: kitsune/groups/views.py:579
 msgid "You are now part of the Contributors group!"
 msgstr "ਤੁਸੀ ਹੁਣ ਯੋਗਦਾਨੀ ਗਰੁੱਪ ਦਾ ਹਿੱ'ਸਾ ਹੋ!"
 
@@ -2586,7 +2706,7 @@ msgid_plural "{n} members"
 msgstr[0] ""
 msgstr[1] ""
 
-#: kitsune/groups/jinja2/groups/profile.html:124 kitsune/sumo/jinja2/includes/common_macros.html:581 kitsune/users/jinja2/users/edit_profile.html:4
+#: kitsune/groups/jinja2/groups/profile.html:124 kitsune/sumo/jinja2/includes/common_macros.html:620 kitsune/users/jinja2/users/edit_profile.html:4
 msgid "Edit Profile"
 msgstr "ਪਰੋਫਾਇਲ ਸੋਧ"
 
@@ -2809,7 +2929,7 @@ msgstr ""
 msgid "Pagination"
 msgstr ""
 
-#: kitsune/groups/jinja2/groups/includes/_tickets_content.html:97 kitsune/search/jinja2/search/results.html:88 kitsune/sumo/jinja2/layout/paginator.html:11
+#: kitsune/groups/jinja2/groups/includes/_tickets_content.html:97 kitsune/search/jinja2/search/results.html:103 kitsune/sumo/jinja2/layout/paginator.html:11
 msgid "Previous"
 msgstr "ਪਿੱਛੇ"
 
@@ -2818,7 +2938,7 @@ msgstr "ਪਿੱਛੇ"
 msgid "Page {n} of {total}"
 msgstr ""
 
-#: kitsune/groups/jinja2/groups/includes/_tickets_content.html:110 kitsune/search/jinja2/search/results.html:95 kitsune/sumo/jinja2/layout/paginator.html:35
+#: kitsune/groups/jinja2/groups/includes/_tickets_content.html:110 kitsune/search/jinja2/search/results.html:110 kitsune/sumo/jinja2/layout/paginator.html:35
 msgid "Next"
 msgstr "ਅੱਗੇ"
 
@@ -3257,7 +3377,7 @@ msgid "<b>Important:</b> Currently we are using a simplified model, where each a
 msgstr "<b>ਖਾਸ:</ b> ਇਸ ਵੇਲੇ ਅਸੀ ਇੱਕ ਸਧਾਰਨ ਮਾਡਲ ਵਰਤ ਰਹੇ ਹੋ, ਜਿੱਥੇ ਹਰ ਇਕ ਲੇਖ ਹਿਸਾਬ 1/50 = 2%  ਭਾਸ਼ਾ ਪ੍ਰਤੀ ਦੌਰੇ ਦਾ ਹੈ"
 
 #: kitsune/landings/jinja2/landings/home.html:15 kitsune/questions/jinja2/questions/question_details.html:291 kitsune/questions/jinja2/questions/question_list.html:69
-#: kitsune/search/jinja2/search/form.html:13 kitsune/search/jinja2/search/results.html:14 kitsune/sumo/jinja2/base.html:200
+#: kitsune/search/jinja2/search/form.html:13 kitsune/search/jinja2/search/results.html:15 kitsune/sumo/jinja2/base.html:207
 #, fuzzy
 msgid "Search Support"
 msgstr "ਮੌਜਿਲਾ ਸਹਿਯੋਗ ਲੱਭੋ"
@@ -3283,7 +3403,7 @@ msgstr ""
 msgid "Windows 10"
 msgstr ""
 
-#: kitsune/landings/jinja2/landings/home.html:36 kitsune/sumo/jinja2/base.html:329
+#: kitsune/landings/jinja2/landings/home.html:36 kitsune/sumo/jinja2/base.html:336
 #, fuzzy
 msgid "Get Help"
 msgstr "ਮਦਦਗਾਰ ਨਹੀ"
@@ -3311,7 +3431,7 @@ msgid "Grow and share your expertise with others. Answer questions and improve o
 msgstr ""
 
 #: kitsune/landings/jinja2/landings/includes/join-our-community-callout.html:7 kitsune/landings/jinja2/landings/includes/volunteer-callout.html:7
-#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:65 kitsune/sumo/jinja2/includes/common_macros.html:48
+#: kitsune/questions/jinja2/questions/includes/question_editing_frame.html:65 kitsune/sumo/jinja2/includes/common_macros.html:49
 #, fuzzy
 msgid "Learn More"
 msgstr "ਹੋਰ ਪੜੋ"
@@ -3395,7 +3515,7 @@ msgstr "ਕੀ ਤੁਸੀਂ ਇਹ ਸੁਨੇਹੇ ਹਟਾਉਣਾ ਚ�
 msgid "Are you sure you want to delete this message?"
 msgstr "ਕੀ ਤੁਸੀਂ ਇਹ ਸੁਨੇਹਾ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: kitsune/messages/jinja2/messages/inbox.html:3 kitsune/messages/jinja2/messages/includes/macros.html:34 kitsune/sumo/jinja2/includes/common_macros.html:619
+#: kitsune/messages/jinja2/messages/inbox.html:3 kitsune/messages/jinja2/messages/includes/macros.html:34 kitsune/sumo/jinja2/includes/common_macros.html:658
 msgid "Inbox"
 msgstr "ਇਂੰਨ-ਬਾਕਸ਼"
 
@@ -3501,14 +3621,22 @@ msgid "Message Preview:"
 msgstr "ਸੁਨੇਹਾ ਝਲਕ:"
 
 #: kitsune/products/admin.py:487
+msgid "languages"
+msgstr ""
+
+#: kitsune/products/admin.py:488
+msgid "Covered users can file tickets in these languages as well as English."
+msgstr ""
+
+#: kitsune/products/admin.py:512
 msgid "The end date must be on or after the start date."
 msgstr ""
 
-#: kitsune/products/admin.py:504
+#: kitsune/products/admin.py:532
 msgid "The product of a saved coverage cannot be changed. To fix a mistake, cancel the contract and enter a new one."
 msgstr ""
 
-#: kitsune/products/admin.py:540
+#: kitsune/products/admin.py:568
 msgid "Another active or suspended contract already covers a selected product during this period."
 msgstr ""
 
@@ -3524,19 +3652,19 @@ msgstr ""
 msgid "Cancelled"
 msgstr ""
 
-#: kitsune/products/models.py:698
+#: kitsune/products/models.py:699
 msgid "Support contract"
 msgstr ""
 
-#: kitsune/products/models.py:699
+#: kitsune/products/models.py:700
 msgid "Support contracts"
 msgstr ""
 
-#: kitsune/products/models.py:748
+#: kitsune/products/models.py:749
 msgid "Support coverage"
 msgstr ""
 
-#: kitsune/products/models.py:749
+#: kitsune/products/models.py:750
 msgid "Support coverages"
 msgstr ""
 
@@ -3562,7 +3690,8 @@ msgstr ""
 #. Heading of a numbered set of recommended articles at the top of a topic page,
 #. such as https://support.mozilla.org/products/firefox/browse. It tells readers
 #. which articles to read first.
-#: kitsune/products/jinja2/products/documents.html:80
+#. Heading of the articles a knowledge base's page recommends reading first.
+#: kitsune/products/jinja2/products/documents.html:80 kitsune/wiki/jinja2/wiki/knowledge_base.html:88
 msgid "Start here"
 msgstr ""
 
@@ -3582,7 +3711,7 @@ msgstr ""
 
 #. Label for a tab listing all articles for the selected topic. Displayed on topic
 #. pages, such as https://support.mozilla.org/products/firefox/browse
-#: kitsune/products/jinja2/products/documents.html:99 kitsune/products/jinja2/products/includes/topic_macros.html:317
+#: kitsune/products/jinja2/products/documents.html:99 kitsune/products/jinja2/products/includes/topic_macros.html:317 kitsune/wiki/jinja2/wiki/knowledge_base.html:12
 msgid "All articles"
 msgstr ""
 
@@ -3609,7 +3738,7 @@ msgstr ""
 #. Sort option for the article list on topic pages, such as
 #. https://support.mozilla.org/products/firefox/browse. It lists the most recently
 #. updated articles first.
-#: kitsune/products/jinja2/products/documents.html:116
+#: kitsune/products/jinja2/products/documents.html:116 kitsune/wiki/jinja2/wiki/knowledge_base.html:119
 msgid "Recently updated"
 msgstr ""
 
@@ -3629,7 +3758,7 @@ msgstr ""
 
 #. Date a Knowledge Base article was last updated, shown under its title in topic
 #. lists. {date} is a formatted date, such as Oct 21, 2026.
-#: kitsune/products/jinja2/products/documents.html:148
+#: kitsune/products/jinja2/products/documents.html:148 kitsune/wiki/jinja2/wiki/knowledge_base.html:72
 #, python-brace-format
 msgid "Updated {date}"
 msgstr ""
@@ -3657,6 +3786,7 @@ msgid "See all articles in {topic}"
 msgstr ""
 
 #: kitsune/products/jinja2/products/documents.html:177 kitsune/products/jinja2/products/includes/curated_macros.html:28 kitsune/products/jinja2/products/includes/curated_macros.html:73
+#: kitsune/wiki/jinja2/wiki/knowledge_base.html:75
 msgid "In English"
 msgstr "ਇੰਗਲਿਸ਼ ਵਿੱਚ"
 
@@ -3838,7 +3968,7 @@ msgstr ""
 msgid "Themes"
 msgstr "ਥੀਮ"
 
-#: kitsune/products/jinja2/products/product.html:139 kitsune/questions/jinja2/questions/includes/aaq_macros.html:203
+#: kitsune/products/jinja2/products/product.html:139 kitsune/questions/jinja2/questions/includes/aaq_macros.html:203 kitsune/wiki/jinja2/wiki/knowledge_base.html:110
 msgid "Topics"
 msgstr "ਵਿਸ਼ੇ:"
 
@@ -3850,7 +3980,7 @@ msgstr ""
 msgid "Download Thunderbird"
 msgstr "ਥੰਡਰਬਰਡ ਡਾਊਨਲੋਡ ਕਰੋ"
 
-#: kitsune/products/jinja2/products/product.html:155 kitsune/sumo/jinja2/includes/common_macros.html:909
+#: kitsune/products/jinja2/products/product.html:155 kitsune/sumo/jinja2/includes/common_macros.html:956
 msgid "Systems and Languages"
 msgstr "ਸਿਸਟਮ ਅਤੇ ਭਾਸ਼ਾਵਾਂ"
 
@@ -3858,7 +3988,7 @@ msgstr "ਸਿਸਟਮ ਅਤੇ ਭਾਸ਼ਾਵਾਂ"
 msgid "Release Notes"
 msgstr "ਰੀਲਿਜ਼ ਨੋਟਿਸ"
 
-#: kitsune/products/jinja2/products/product.html:157 kitsune/sumo/jinja2/base.html:386 kitsune/sumo/jinja2/includes/common_macros.html:911
+#: kitsune/products/jinja2/products/product.html:157 kitsune/sumo/jinja2/base.html:393 kitsune/sumo/jinja2/includes/common_macros.html:958
 msgid "Privacy"
 msgstr "ਪਰਾਈਵੇਸੀ"
 
@@ -3867,7 +3997,7 @@ msgid "Products"
 msgstr "ਪ੍ਰੋਡੱਕਟ"
 
 #. This is a question status.
-#: kitsune/products/jinja2/products/includes/curated_macros.html:63 kitsune/search/jinja2/search/includes/result.html:42 kitsune/sumo/jinja2/sumo/includes/question_entry.html:133
+#: kitsune/products/jinja2/products/includes/curated_macros.html:63 kitsune/search/jinja2/search/includes/result.html:43 kitsune/sumo/jinja2/sumo/includes/question_entry.html:133
 msgctxt "question"
 msgid "Solved"
 msgstr ""
@@ -3905,7 +4035,8 @@ msgstr ""
 msgid "Download now"
 msgstr "ਡਾਊਨਲੋਡ"
 
-#: kitsune/products/jinja2/products/includes/product_macros.html:30
+#. Accessible label for the product filter on a knowledge base's page.
+#: kitsune/products/jinja2/products/includes/product_macros.html:30 kitsune/wiki/jinja2/wiki/includes/kb_macros.html:41
 msgid "Filter by product"
 msgstr ""
 
@@ -3925,7 +4056,7 @@ msgstr[1] ""
 msgid "Need dedicated support?"
 msgstr ""
 
-#: kitsune/products/jinja2/products/includes/topic_macros.html:70 kitsune/wiki/jinja2/wiki/includes/document_macros.html:468
+#: kitsune/products/jinja2/products/includes/topic_macros.html:70 kitsune/wiki/jinja2/wiki/includes/document_macros.html:468 kitsune/wiki/jinja2/wiki/knowledge_base.html:152
 #, fuzzy
 msgid "Still need help?"
 msgstr "ਬਦਾਲਅ ਦੀ ਜਰੂਰਤ"
@@ -3954,7 +4085,7 @@ msgstr ""
 #. https://support.mozilla.org/questions/new and in Premium product question
 #. forms).
 #: kitsune/products/jinja2/products/includes/topic_macros.html:93 kitsune/questions/jinja2/questions/includes/aaq_macros.html:7 kitsune/questions/jinja2/questions/includes/aaq_macros.html:221
-#: kitsune/questions/jinja2/questions/new_question.html:43 kitsune/questions/jinja2/questions/question_list.html:131
+#: kitsune/questions/jinja2/questions/new_question.html:43 kitsune/questions/jinja2/questions/question_list.html:131 kitsune/wiki/jinja2/wiki/knowledge_base.html:157
 #, fuzzy
 msgid "Contact Support"
 msgstr "ਮੌਜਿਲਾ ਸਹਿਯੋਗ ਲੱਭੋ"
@@ -4386,80 +4517,80 @@ msgstr ""
 msgid "Support is not configured for {product}. Please contact an administrator."
 msgstr ""
 
-#: kitsune/questions/views.py:981
+#: kitsune/questions/views.py:984
 #, python-brace-format
 msgid "The questions forum isn't available for {product} in {old_lang}, we have redirected you to the {new_lang} questions forum."
 msgstr ""
 
-#: kitsune/questions/views.py:986
+#: kitsune/questions/views.py:989
 #, python-brace-format
 msgid "Mozilla Support isn't available for {product} in {old_lang}, we have redirected you to Mozilla Support in {new_lang}."
 msgstr ""
 
-#: kitsune/questions/views.py:1018
+#: kitsune/questions/views.py:1021
 #, python-brace-format
 msgid "Continue in {language}"
 msgstr ""
 
-#: kitsune/questions/views.py:1059
+#: kitsune/questions/views.py:1062
 #, python-brace-format
 msgid "Done! Your question is now posted on the Mozilla community support forum. You can see your post anytime by visiting the {a_open}My Questions{a_close} page in your profile."
 msgstr ""
 
-#: kitsune/questions/views.py:1110
+#: kitsune/questions/views.py:1113
 #, python-brace-format
 msgid "Thank you for reaching out to Mozilla Support. We're reviewing your submission and will send a confirmation email to {email} shortly."
 msgstr ""
 
-#: kitsune/questions/views.py:1121
+#: kitsune/questions/views.py:1124
 msgid "You've exceeded the number of submissions for today."
 msgstr ""
 
-#: kitsune/questions/views.py:1361
+#: kitsune/questions/views.py:1364
 msgid "Thank you for choosing a solution!"
 msgstr "ਇੱਕ ਹੱਲ ਹੈ ਦੀ ਚੋਣ ਕਰਨ ਲਈ ਤੁਹਾਡਾ ਧੰਨਵਾਦ!"
 
-#: kitsune/questions/views.py:1364
+#: kitsune/questions/views.py:1367
 msgid "This question already has a solution."
 msgstr ""
 
-#: kitsune/questions/views.py:1385
+#: kitsune/questions/views.py:1388
 msgid "The solution was undone successfully."
 msgstr "ਜਬਾਬ ਨੂੰ ਸਫਲਤਾਪੂਰਕ ਵਾਪਸ ਕੀਤਾ ਗਿਆ ਸੀ।"
 
-#: kitsune/questions/views.py:1414 kitsune/questions/views.py:1478
+#: kitsune/questions/views.py:1417 kitsune/questions/views.py:1481
 msgid "You've hit your voting limit for now. Please try again later."
 msgstr ""
 
-#: kitsune/questions/views.py:1488
+#: kitsune/questions/views.py:1491
 msgid "Glad to hear it!"
 msgstr "ਇਸ ਨੂੰ ਸੁਣ ਕੇ ਖੁਸ਼ੀ ਹੋਈ!"
 
-#: kitsune/questions/views.py:1490
+#: kitsune/questions/views.py:1493
 msgid "Sorry to hear that."
 msgstr "ਇਹ ਸੁਣ ਕੇ ਅਫਸ਼ੋਸ ਹੋਇਆ।"
 
-#: kitsune/questions/views.py:1505
+#: kitsune/questions/views.py:1508
 msgid "You already voted on this reply."
 msgstr "ਤੁਸੀ ਪਹਿਲਾ ਤੋ ਇਸ ਦੇ ਜਵਾਬ ਤੇ ਵੋਟ ਕੀਤਾ ਹੈ।"
 
-#: kitsune/questions/views.py:1790
+#: kitsune/questions/views.py:1793
 msgid "We were unable to register your request. You've exceeded the limit for the number of questions allowed to watch in a day. Please try again tomorrow."
 msgstr ""
 
-#: kitsune/questions/views.py:1818
+#: kitsune/questions/views.py:1821
 msgid "Could not send a message to that email address."
 msgstr "ਇਸ ਈ-ਮੇਲ ਪਤੇ ਤੇ ਸੁਨੇਹਾ ਨਹੀ ਭੇਜਿਆ ਜਾ ਸਕਦਾ ਹੈ।"
 
-#: kitsune/questions/views.py:1824
+#: kitsune/questions/views.py:1827
 msgid "You will be notified of updates by email."
 msgstr "ਤੁਹਾਨੂੰ ਈਮੇਲ ਦੁਆਰਾ ਅੱਪਡੇਟ ਦੇ ਕੇ ਸੂਚਿਤ ਕੀਤਾ ਜਾਵੇਗਾ।"
 
-#: kitsune/questions/views.py:1826
+#: kitsune/questions/views.py:1829
 msgid "You should receive an email shortly to confirm your subscription."
 msgstr "ਤੁਹਾਨੂੰ ਤੁਹਾਡੀ ਗਾਹਕੀ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਛੇਤੀ ਹੀ ਇੱਕ ਈਮੇਲ ਪ੍ਰਾਪਤ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।"
 
-#: kitsune/questions/views.py:2043
+#: kitsune/questions/views.py:2046
 msgid "A moderator must manually approve your post before it will be visible."
 msgstr ""
 
@@ -4633,11 +4764,11 @@ msgid "Submit"
 msgstr "ਭੇਜੋ"
 
 #: kitsune/questions/jinja2/questions/product_list.html:4 kitsune/questions/jinja2/questions/product_list.html:5 kitsune/questions/jinja2/questions/question_list.html:22
-#: kitsune/sumo/jinja2/includes/common_macros.html:197
+#: kitsune/sumo/jinja2/includes/common_macros.html:236
 msgid "Community Forums"
 msgstr ""
 
-#: kitsune/questions/jinja2/questions/product_list.html:14 kitsune/sumo/jinja2/includes/common_macros.html:214
+#: kitsune/questions/jinja2/questions/product_list.html:14 kitsune/sumo/jinja2/includes/common_macros.html:253
 #, fuzzy
 msgid "Browse by product"
 msgstr "ਲੋਕੇਲ ਚੁਣੋ:"
@@ -5131,7 +5262,7 @@ msgstr "ਸਾਰੇ ਪ੍ਰੋਡੱਕਟ"
 msgid "Explore Solutions"
 msgstr "ਮਦਦਗਾਰ ਹੱਲ"
 
-#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:112 kitsune/sumo/jinja2/includes/common_macros.html:302
+#: kitsune/questions/jinja2/questions/includes/aaq_macros.html:112 kitsune/sumo/jinja2/includes/common_macros.html:341
 msgid "Ask a Question"
 msgstr "ਸਵਾਲ ਪੁੱਛੋ"
 
@@ -5531,11 +5662,25 @@ msgstr ""
 msgid "That page number is less than 1"
 msgstr ""
 
-#: kitsune/search/forms.py:37
+#: kitsune/search/forms.py:39
 msgid "Relevant to"
 msgstr "ਲਈ ਉਚਿਤ"
 
-#: kitsune/search/views.py:93
+#: kitsune/search/forms.py:57
+msgid "Select a valid knowledge base."
+msgstr ""
+
+#. %(name)s is the name of a knowledge base.
+#: kitsune/search/hybrid.py:265
+#, python-format
+msgid "From %(name)s"
+msgstr ""
+
+#: kitsune/search/hybrid.py:267
+msgid "From your knowledge bases"
+msgstr ""
+
+#: kitsune/search/views.py:122
 msgid "Invalid search data."
 msgstr "ਗਲਤ ਭਾਲ ਡਾਟਾ"
 
@@ -5548,7 +5693,7 @@ msgctxt "button"
 msgid "Search"
 msgstr "ਭਾਲ"
 
-#: kitsune/search/jinja2/search/basic-form.html:32 kitsune/search/jinja2/search/basic-form.html:44 kitsune/search/jinja2/search/includes/macros.html:13
+#: kitsune/search/jinja2/search/basic-form.html:32 kitsune/search/jinja2/search/basic-form.html:44 kitsune/search/jinja2/search/includes/macros.html:14
 msgid "Search Mozilla Support"
 msgstr "ਮੌਜਿਲਾ ਸਹਿਯੋਗ ਲੱਭੋ"
 
@@ -5560,7 +5705,7 @@ msgstr "ਭਾਲ ਮੌਜੂਦ ਨਹੀ ਹੈ"
 msgid "Search is temporarily unavailable. Please try again in a few minutes."
 msgstr "ਭਾਲ ਅਸਥਾਈ ਰੂਪ ਵਿੱਚ ਮੌਜੂਦ ਨਹੀ ਹੈ। ਕ੍ਰਿਪਾ ਕਰਕੇ ਕੁੱਝ ਹੀ ਮਿੰਟਾਂ ਵਿੱਚ ਫਿਰ ਵਲੋਂ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
-#: kitsune/search/jinja2/search/plugin.html:3 kitsune/sumo/jinja2/base.html:48 kitsune/sumo/jinja2/email/base.html:240
+#: kitsune/search/jinja2/search/plugin.html:3 kitsune/sumo/jinja2/base.html:52 kitsune/sumo/jinja2/email/base.html:240
 msgid "Mozilla Support"
 msgstr "ਮੋਜਿਲਾ ਸਹਿਯੋਗ"
 
@@ -5571,7 +5716,7 @@ msgstr ""
 
 #. Hybrid search shows a bounded ranking; {n} approximates all potential matches,
 #. not pageable results.
-#: kitsune/search/jinja2/search/results.html:29
+#: kitsune/search/jinja2/search/results.html:30
 #, python-brace-format
 msgid "Showing the most relevant result for <strong>{q}</strong> in <strong>{product}</strong> from about <strong>{n}</strong> potential match"
 msgid_plural "Showing the most relevant results for <strong>{q}</strong> in <strong>{product}</strong> from about <strong>{n}</strong> potential matches"
@@ -5580,7 +5725,7 @@ msgstr[1] ""
 
 #. {n} is the number of search results, {q} is the search query, {product} is the
 #. product.
-#: kitsune/search/jinja2/search/results.html:34
+#: kitsune/search/jinja2/search/results.html:35
 #, python-brace-format
 msgid "Found <strong>{n}</strong> result for <strong>{q}</strong> for <strong>{product}</strong>"
 msgid_plural "Found <strong>{n}</strong> results for <strong>{q}</strong> for <strong>{product}</strong>"
@@ -5588,13 +5733,21 @@ msgstr[0] "ਲੱਭਾ <strong>{n}</strong> ਨਤੀਜਾ <strong>{q}</strong
 msgstr[1] "ਲੱਭਾ <strong>{n}</strong> ਨਤੀਜੇ ਲਈ <strong>{q}</strong> ਲਈ <strong>{product}</strong>"
 
 #. {q} is the search query, {l} is the language searched.
-#: kitsune/search/jinja2/search/results.html:49
+#: kitsune/search/jinja2/search/results.html:61
 #, python-brace-format
 msgid "Sorry! 0 results found for ‘{q}’ in ‘{l}’"
 msgstr ""
 
-#: kitsune/search/jinja2/search/results.html:52
+#: kitsune/search/jinja2/search/results.html:66
 msgid "Try searching again with a different keyword, or browse our featured articles and threads below instead."
+msgstr ""
+
+#: kitsune/search/jinja2/search/results.html:144
+msgid "Filter by knowledge base"
+msgstr ""
+
+#: kitsune/search/jinja2/search/results.html:147
+msgid "All results"
 msgstr ""
 
 #: kitsune/search/jinja2/search/search-results.html:4
@@ -5618,18 +5771,18 @@ msgstr ""
 msgid "Try searching again with different keywords."
 msgstr ""
 
-#: kitsune/search/jinja2/search/includes/result.html:52
+#: kitsune/search/jinja2/search/includes/result.html:53
 msgid "No replies"
 msgstr "ਕੋਈ ਜਵਾਬ ਨਹੀ"
 
-#: kitsune/search/jinja2/search/includes/result.html:56
+#: kitsune/search/jinja2/search/includes/result.html:57
 #, python-brace-format
 msgid "1 person has this problem"
 msgid_plural "{n} people have this problem"
 msgstr[0] "1 ਵਿਅਕਤੀ ਨੂੰ ਇਹ ਸਮੱਸਿਆ ਹੈ"
 msgstr[1] " {n} ਵਿਅਕਤਿਆ ਨੂੰ ਇਹ ਸਮੱਸਿਆ ਹੈ"
 
-#: kitsune/search/jinja2/search/includes/result.html:61
+#: kitsune/search/jinja2/search/includes/result.html:62
 #, python-brace-format
 msgid "1 new this week"
 msgid_plural "{n} new this week"
@@ -9818,568 +9971,748 @@ msgctxt "DB: products.Topic.description"
 msgid "Signup, login, password reset and more."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:958
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:959
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "I can't sign in to my Mozilla account or subscription"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:961
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "Account, sign-in, or single sign-on (SSO) problems"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:963
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "A website or web app isn’t working"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:965
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "Backing up, recovering and syncing data or profiles"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:967
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "Configuring or troubleshooting PDF.js"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:969
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "My security code isn't working or is lost"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:971
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "I can't recover my account using email"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:973
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "I'm having issues signing in with my Google or Apple ID"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:975
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "I forgot my password"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:977
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "I want to share feedback or suggest a feature"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:979
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "Help configuring or troubleshooting policies"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:981
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "Issues with installation, deployment, or updates"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:983
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "Managing extensions or add-ons"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:985
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "My data removal is taking too long"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:987
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "I'm seeing results that don't belong to me"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:989
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "I want to delete my Mozilla account"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:991
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "I want to change the email on my Mozilla account"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:993
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "I need help with Firefox Sync"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:995
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "Network, certificate or single sign-on (SSO) problems"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:997
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "Network, proxy, or certificate problems"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:999
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "My issue isn't listed here"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:1001
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "I need help with a billing or subscription question"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:1003
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "I want to change my Relay email domain"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:1005
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "I'm not receiving emails to my Relay mask"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:1007
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "Report security concerns or suspected vulnerabilities"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:1009
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "Sending, receiving, filtering mail or calendar problems"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:1011
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "Troubleshooting crashes, performance, or unexpected behavior"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:1013
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "I can't connect to Mozilla VPN"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:1015
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "I need help installing or updating Mozilla VPN"
+msgstr ""
+
+#. A reason for contacting support, listed in the support form.
+#: kitsune/sumo/db_strings.py:1017
+msgctxt "DB: products.ZendeskTopic.form_title"
+msgid "I can't choose a VPN location"
+msgstr ""
+
+#: kitsune/sumo/db_strings.py:1018
 msgctxt "DB: kbadge.Badge.title"
 msgid "Thunderbolt hunt"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:959
+#: kitsune/sumo/db_strings.py:1019
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors who can find 5 thunderbolts emoji ⚡ in the Firefox KB articles during the Ask a Fox event"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:960
+#: kitsune/sumo/db_strings.py:1020
 msgctxt "DB: kbadge.Badge.title"
 msgid "Fox hunt"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:961
+#: kitsune/sumo/db_strings.py:1021
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors who can find 5 fox emoji 🦊 in the Firefox KB articles during the Ask a Fox event"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:962
+#: kitsune/sumo/db_strings.py:1022
 msgctxt "DB: kbadge.Badge.title"
 msgid "Ask a Fox"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:963
+#: kitsune/sumo/db_strings.py:1023
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors who replied to 5 or more questions during the Ask a Fox event."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:964
+#: kitsune/sumo/db_strings.py:1024
 msgctxt "DB: kbadge.Badge.title"
 msgid "Forum Moderator Training"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:965
+#: kitsune/sumo/db_strings.py:1025
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to Forum Moderators who completed the Moderator Training in Teachable."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:966
+#: kitsune/sumo/db_strings.py:1026
 msgctxt "DB: kbadge.Badge.title"
 msgid "2025 Support Forum Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:967
+#: kitsune/sumo/db_strings.py:1027
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 30 support forum replies during 2025."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:968
+#: kitsune/sumo/db_strings.py:1028
 msgctxt "DB: kbadge.Badge.title"
 msgid "2024 Support Forum Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:969
+#: kitsune/sumo/db_strings.py:1029
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 30 support forum replies during 2024."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:970
+#: kitsune/sumo/db_strings.py:1030
 msgctxt "DB: kbadge.Badge.title"
 msgid "2023 Support Forum Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:971
+#: kitsune/sumo/db_strings.py:1031
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 30 support forum replies during 2023."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:972
+#: kitsune/sumo/db_strings.py:1032
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2022 Support Forum Badge"
 msgstr "2012 ਸਹਿਯੋਗ ਫੋਰਮ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:973
+#: kitsune/sumo/db_strings.py:1033
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 30 support forum replies during 2022."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:974
+#: kitsune/sumo/db_strings.py:1034
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2021 Support Forum Badge"
 msgstr "2011 ਸਹਿਯੋਗ ਫੋਰਮ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:975
+#: kitsune/sumo/db_strings.py:1035
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 30 support forum replies during 2021."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:976
+#: kitsune/sumo/db_strings.py:1036
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2020 Support Forum Badge"
 msgstr "2010 ਸਹਿਯੋਗ ਫੋਰਮ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:977
+#: kitsune/sumo/db_strings.py:1037
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 30 support forum replies during 2020."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:978
+#: kitsune/sumo/db_strings.py:1038
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2019 Support Forum Badge"
 msgstr "2014 ਸਹਿਯੋਗ ਫੋਰਮ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:979
+#: kitsune/sumo/db_strings.py:1039
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 30 support forum replies during 2019."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:980
+#: kitsune/sumo/db_strings.py:1040
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2018 Support Forum Badge"
 msgstr "2014 ਸਹਿਯੋਗ ਫੋਰਮ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:981
+#: kitsune/sumo/db_strings.py:1041
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 30 support forum replies during 2018."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:982
+#: kitsune/sumo/db_strings.py:1042
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2017 Support Forum Badge"
 msgstr "2014 ਸਹਿਯੋਗ ਫੋਰਮ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:983
+#: kitsune/sumo/db_strings.py:1043
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 30 support forum replies during 2017."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:984
+#: kitsune/sumo/db_strings.py:1044
 msgctxt "DB: kbadge.Badge.title"
 msgid "2025 L10n Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:985
+#: kitsune/sumo/db_strings.py:1045
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2025."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:986
+#: kitsune/sumo/db_strings.py:1046
 msgctxt "DB: kbadge.Badge.title"
 msgid "2025 KB Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:987
+#: kitsune/sumo/db_strings.py:1047
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved English edits during 2025."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:988
+#: kitsune/sumo/db_strings.py:1048
 msgctxt "DB: kbadge.Badge.title"
 msgid "2024 L10n Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:989
+#: kitsune/sumo/db_strings.py:1049
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2024."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:990
+#: kitsune/sumo/db_strings.py:1050
 msgctxt "DB: kbadge.Badge.title"
 msgid "2024 KB Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:991
+#: kitsune/sumo/db_strings.py:1051
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved English edits during 2024."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:992
+#: kitsune/sumo/db_strings.py:1052
 msgctxt "DB: kbadge.Badge.title"
 msgid "2023 L10n Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:993
+#: kitsune/sumo/db_strings.py:1053
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2023."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:994
+#: kitsune/sumo/db_strings.py:1054
 msgctxt "DB: kbadge.Badge.title"
 msgid "2023 KB Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:995
+#: kitsune/sumo/db_strings.py:1055
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved English edits during 2023."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:996
+#: kitsune/sumo/db_strings.py:1056
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2022 L10n Badge"
 msgstr "2012 L10n ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:997
+#: kitsune/sumo/db_strings.py:1057
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2022."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:998
+#: kitsune/sumo/db_strings.py:1058
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2022 KB Badge"
 msgstr "2012 KB ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:999
+#: kitsune/sumo/db_strings.py:1059
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved English edits during 2022."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1000
+#: kitsune/sumo/db_strings.py:1060
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2021 L10n Badge"
 msgstr "2011 L10n ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1001
+#: kitsune/sumo/db_strings.py:1061
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2021."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1002
+#: kitsune/sumo/db_strings.py:1062
 msgctxt "DB: kbadge.Badge.title"
 msgid "2021 KB Badge"
 msgstr "2021 KB ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1003
+#: kitsune/sumo/db_strings.py:1063
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved English edits during 2021."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1004
+#: kitsune/sumo/db_strings.py:1064
 msgctxt "DB: kbadge.Badge.title"
 msgid "Honorary badge for Social Support and Mobile Store Support contributors"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1005
+#: kitsune/sumo/db_strings.py:1065
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to those who left significant impact to the Social Support and Mobile Store Support programs"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1006
+#: kitsune/sumo/db_strings.py:1066
 msgctxt "DB: kbadge.Badge.title"
 msgid "2025 Top Social Support Contributor Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1007
+#: kitsune/sumo/db_strings.py:1067
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to top 3 contributors of the Social Support program in 2025"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1008
+#: kitsune/sumo/db_strings.py:1068
 msgctxt "DB: kbadge.Badge.title"
 msgid "2025 Top Mobile Store Support Contributor Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1009
+#: kitsune/sumo/db_strings.py:1069
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to top 3 contributors of the Mobile Store Support program in 2025"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1010
+#: kitsune/sumo/db_strings.py:1070
 msgctxt "DB: kbadge.Badge.title"
 msgid "2024 Top Social Support Contributor Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1011
+#: kitsune/sumo/db_strings.py:1071
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to top 3 contributors of the Social Support program in 2024"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1012
+#: kitsune/sumo/db_strings.py:1072
 msgctxt "DB: kbadge.Badge.title"
 msgid "2024 Top Mobile Store Support Contributor Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1013
+#: kitsune/sumo/db_strings.py:1073
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to top 3 contributors of the Mobile Store Support program in 2024"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1014
+#: kitsune/sumo/db_strings.py:1074
 msgctxt "DB: kbadge.Badge.title"
 msgid "2023 Top Social Support Contributor Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1015
+#: kitsune/sumo/db_strings.py:1075
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to top 3 contributors of the Social Support program in 2023"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1016
+#: kitsune/sumo/db_strings.py:1076
 msgctxt "DB: kbadge.Badge.title"
 msgid "2023 Top Mobile Store Support Contributor Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1017
+#: kitsune/sumo/db_strings.py:1077
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to top 3 contributors of the Mobile Store Support program in 2023"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1018
+#: kitsune/sumo/db_strings.py:1078
 msgctxt "DB: kbadge.Badge.title"
 msgid "Firefox 20th Anniversary Badge"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1019
+#: kitsune/sumo/db_strings.py:1079
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with >=100 contributions within 2024, when we celebrate Firefox 20th anniversary on November 9, 2024."
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1020
+#: kitsune/sumo/db_strings.py:1080
 msgctxt "DB: kbadge.Badge.title"
 msgid "2020 KB Badge"
 msgstr "2020 KB ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1021
+#: kitsune/sumo/db_strings.py:1081
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved English edits during 2020."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1022
+#: kitsune/sumo/db_strings.py:1082
 msgctxt "DB: kbadge.Badge.title"
 msgid "2019 KB Badge"
 msgstr "2019 KB ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1023
+#: kitsune/sumo/db_strings.py:1083
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved English edits during 2019."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1024
+#: kitsune/sumo/db_strings.py:1084
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2020 Army of Awesome Badge"
 msgstr "2010 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1025
+#: kitsune/sumo/db_strings.py:1085
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2020."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1026
+#: kitsune/sumo/db_strings.py:1086
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2019 Army of Awesome Badge"
 msgstr "2014 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਦਾ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1027
+#: kitsune/sumo/db_strings.py:1087
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2019."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1028
+#: kitsune/sumo/db_strings.py:1088
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2020 L10n Badge"
 msgstr "2010 L10n ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1029
+#: kitsune/sumo/db_strings.py:1089
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2020."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1030
+#: kitsune/sumo/db_strings.py:1090
 msgctxt "DB: kbadge.Badge.title"
 msgid "2019 L10n Badge"
 msgstr "2019 L10n ਬਿੱਲਾ"
 
-#: kitsune/sumo/db_strings.py:1031
+#: kitsune/sumo/db_strings.py:1091
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2019."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1032
+#: kitsune/sumo/db_strings.py:1092
 msgctxt "DB: kbadge.Badge.title"
 msgid "2018 L10n Badge"
 msgstr "2018 L10n ਬਿੱਲਾ"
 
-#: kitsune/sumo/db_strings.py:1033
+#: kitsune/sumo/db_strings.py:1093
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2018."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1034
+#: kitsune/sumo/db_strings.py:1094
 msgctxt "DB: kbadge.Badge.title"
 msgid "2018 KB Badge"
 msgstr "2018 KB ਬਿੱਲਾ"
 
-#: kitsune/sumo/db_strings.py:1035
+#: kitsune/sumo/db_strings.py:1095
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved English edits during 2018."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1036
+#: kitsune/sumo/db_strings.py:1096
 msgctxt "DB: kbadge.Badge.title"
 msgid "2018 Army of Awesome Badge"
 msgstr "2018 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਦਾ ਬਿੱਲਾ"
 
-#: kitsune/sumo/db_strings.py:1037
+#: kitsune/sumo/db_strings.py:1097
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2018."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1038
+#: kitsune/sumo/db_strings.py:1098
 msgctxt "DB: kbadge.Badge.title"
 msgid "2017 L10n Badge"
 msgstr "2017 L10n ਬਿੱਲਾ"
 
-#: kitsune/sumo/db_strings.py:1039
+#: kitsune/sumo/db_strings.py:1099
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2017."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1040
+#: kitsune/sumo/db_strings.py:1100
 msgctxt "DB: kbadge.Badge.title"
 msgid "2017 KB Badge"
 msgstr "2017 KB ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1041
+#: kitsune/sumo/db_strings.py:1101
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved English edits during 2017."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1042
+#: kitsune/sumo/db_strings.py:1102
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2017 Army of Awesome Badge"
 msgstr "2014 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਦਾ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1043
+#: kitsune/sumo/db_strings.py:1103
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2017."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1044
+#: kitsune/sumo/db_strings.py:1104
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2016 L10n Badge"
 msgstr "2014 L10n ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1045
+#: kitsune/sumo/db_strings.py:1105
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2016."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1046
+#: kitsune/sumo/db_strings.py:1106
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2016 Support Forum Badge"
 msgstr "2014 ਸਹਿਯੋਗ ਫੋਰਮ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1047
+#: kitsune/sumo/db_strings.py:1107
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 30 support forum replies during 2016."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1048
+#: kitsune/sumo/db_strings.py:1108
 msgctxt "DB: kbadge.Badge.title"
 msgid "2016 KB Badge"
 msgstr "2016 KB ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1049
+#: kitsune/sumo/db_strings.py:1109
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved English edits during 2016."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1050
+#: kitsune/sumo/db_strings.py:1110
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2016 Army of Awesome Badge"
 msgstr "2014 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਦਾ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1051
+#: kitsune/sumo/db_strings.py:1111
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2016."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1052
+#: kitsune/sumo/db_strings.py:1112
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2015 Support Forum Badge"
 msgstr "2014 ਸਹਿਯੋਗ ਫੋਰਮ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1053
+#: kitsune/sumo/db_strings.py:1113
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 30 support forum replies during 2015."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1054
+#: kitsune/sumo/db_strings.py:1114
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2015 Army of Awesome Badge"
 msgstr "2014 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਦਾ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1055
+#: kitsune/sumo/db_strings.py:1115
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 50 Army of Awesome tweets during 2015."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1056
+#: kitsune/sumo/db_strings.py:1116
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2015 KB Badge"
 msgstr "2014 KB ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1057
+#: kitsune/sumo/db_strings.py:1117
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved English edits during 2015."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1058
+#: kitsune/sumo/db_strings.py:1118
 msgctxt "DB: kbadge.Badge.title"
 msgid "2015 L10n Badge"
 msgstr "2015 L10n ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1059
+#: kitsune/sumo/db_strings.py:1119
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2015."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1060
+#: kitsune/sumo/db_strings.py:1120
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2014 Army of Awesome Badge"
 msgstr "2014 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਦਾ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1061
+#: kitsune/sumo/db_strings.py:1121
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10390,13 +10723,13 @@ msgstr ""
 "The SUMO 2014 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਦਾ ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਹ 2014 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ; ਇਸ ਕੇਸ ਵਿੱਚ: 50 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਨੇ ਟਵੀਟ ਕੀਤਾ। SUMO ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ 2014 ਬੈਜ ਪਾ੍ਪਤ"
 " ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1064
+#: kitsune/sumo/db_strings.py:1124
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2014 L10n Badge"
 msgstr "2014 L10n ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1065
+#: kitsune/sumo/db_strings.py:1125
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10407,12 +10740,12 @@ msgstr ""
 "The SUMO L10n 2014 ਮਿੰਨੀ-ਬੈਜ SUMO ਦੀ ਲੜੀ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਹ 2014 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ; ਇਸ ਕੇਸ ਵਿੱਚ: SUMO ਨੌਲੇਜ ਬੇਸ ਦੇ 10 ਲੇਖ਼ਾ ਨੂੰ ਪ੍ਰਵਾਨਗੀ ਦੇ ਦਿੱਤੀ ਹੈ।ਸਾਰਿਆ SUMO L10n 2014 ਬੈਜ "
 "ਪਾ੍ਪਤ ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1068
+#: kitsune/sumo/db_strings.py:1128
 msgctxt "DB: kbadge.Badge.title"
 msgid "2014 KB Badge"
 msgstr "2014 KB ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1069
+#: kitsune/sumo/db_strings.py:1129
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10423,13 +10756,13 @@ msgstr ""
 "The SUMO KB 2014 ਮਿੰਨੀ-ਬੈਜ SUMO ਦੀ ਲੜੀ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਹ 2014 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ; ਇਸ ਕੇਸ ਵਿੱਚ: 10 ਲੇਖ਼ਾ ਨੂੰ ਅੰਗਰੇਜ਼ੀ SUMO ਨੌਲੇਜ ਬੇਸ ਨੇ ਪ੍ਰਵਾਨਗੀ ਦੇ ਦਿੱਤੀ ਹੈ।ਸਾਰਿਆ SUMO KB 2014 ਬੈਜ"
 " ਪਾ੍ਪਤ ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1072
+#: kitsune/sumo/db_strings.py:1132
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2014 Support Forum Badge"
 msgstr "2014 ਸਹਿਯੋਗ ਫੋਰਮ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1073
+#: kitsune/sumo/db_strings.py:1133
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10440,13 +10773,13 @@ msgstr ""
 "The SUMO ਫੋਰਮ 2014 ਮਿੰਨੀ-ਬੈਜ SUMO ਦੀ ਲੜੀ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਹ 2014 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ: 30 ਜਵਾਬ ਅੰਗਰੇਜੀ SUMO ਫੋਰਮ ਵਿੱਚ। ਮੋਜ਼ੀਲਾ ਮਿਸ਼ਨ ਆਧਾਖਰਤ ਲਈ ਸਭ ਸੂਮੋ ਫੋਰਮ 2014 ਬੈਜ earners ਨੂੰ "
 "ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1076
+#: kitsune/sumo/db_strings.py:1136
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "Firefox 29 Launch Team"
 msgstr "ਫਾਇਰਫਾਕਸ ਘਰ"
 
-#: kitsune/sumo/db_strings.py:1077
+#: kitsune/sumo/db_strings.py:1137
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
 "Awarded to support contributors who contributed (KB article documentation, answering Forum Questions, localizing KB article documentation, tweets, etc) to the launch of Firefox 29, thanks! \n"
@@ -10463,35 +10796,35 @@ msgid ""
 "https://sumo.etherpad.mozilla.org/sumo-australis-badges"
 msgstr ""
 
-#: kitsune/sumo/db_strings.py:1089
+#: kitsune/sumo/db_strings.py:1149
 msgctxt "DB: kbadge.Badge.title"
 msgid "2008 L10n Badge"
 msgstr "2008 L10n ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1090
+#: kitsune/sumo/db_strings.py:1150
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2008."
 msgstr "2008 ਦੇ ਦੌਰਾਨ ਇਹ ਬੈਜ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦੀ ਯੋਗਦਾਨਿਆ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1091
+#: kitsune/sumo/db_strings.py:1151
 msgctxt "DB: kbadge.Badge.title"
 msgid "2009 L10n Badge"
 msgstr "2009 L10n ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1092
+#: kitsune/sumo/db_strings.py:1152
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "This badge is awarded to contributors with 10 approved translations edits during 2009."
 msgstr "ਇਹ ਬੈਜ ਯੋਗਦਾਨਿਆ ਨੂੰ 2009 ਵਿੱਚ 10 ਪ੍ਰਵਾਨਗੀ ਅਨੁਵਾਦਾ ਲਈ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: kitsune/sumo/db_strings.py:1093
+#: kitsune/sumo/db_strings.py:1153
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2012 Army of Awesome Badge"
 msgstr "2012 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1094
+#: kitsune/sumo/db_strings.py:1154
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10502,13 +10835,13 @@ msgstr ""
 "The SUMO ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ 2012 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਹ 2012 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ; ਇਸ ਕੇਸ ਵਿੱਚ: 50 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਨੇ ਟਵਿੱਟ ਕੀਤਾ। SUMO ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ 2012 ਬੈਜ ਪਾ੍ਪਤ "
 "ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1097
+#: kitsune/sumo/db_strings.py:1157
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2013 Army of Awesome Badge"
 msgstr "2013 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1098
+#: kitsune/sumo/db_strings.py:1158
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10519,13 +10852,13 @@ msgstr ""
 "The SUMO ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ 2013 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਹ 2013 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ; ਇਸ ਕੇਸ ਵਿੱਚ: 50 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਨੇ ਟਵਿੱਟ ਕੀਤਾ। SUMO ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ 2013 ਬੈਜ ਪਾ੍ਪਤ "
 "ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1101
+#: kitsune/sumo/db_strings.py:1161
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2010 Army of Awesome Badge"
 msgstr "2010 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1102
+#: kitsune/sumo/db_strings.py:1162
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10536,13 +10869,13 @@ msgstr ""
 "The SUMO ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ 2010 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਹ 2010 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ; ਇਸ ਕੇਸ ਵਿੱਚ: 50 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਨੇ ਟਵਿੱਟ ਕੀਤਾ। SUMO ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ 2010 ਬੈਜ ਪਾ੍ਪਤ "
 "ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1105
+#: kitsune/sumo/db_strings.py:1165
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2011 Army of Awesome Badge"
 msgstr "2011 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1106
+#: kitsune/sumo/db_strings.py:1166
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10553,13 +10886,13 @@ msgstr ""
 "The SUMO ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ 2011 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਹ 2011 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ; ਇਸ ਕੇਸ ਵਿੱਚ: 50 ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ ਨੇ ਟਵੀਟ ਕੀਤਾ। SUMO ਸਿਰਕੱਢਾਂ ਦੀ ਫੌਜ 2011 ਬੈਜ ਪਾ੍ਪਤ "
 "ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1109
+#: kitsune/sumo/db_strings.py:1169
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2012 Support Forum Badge"
 msgstr "2012 ਸਹਿਯੋਗ ਫੋਰਮ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1110
+#: kitsune/sumo/db_strings.py:1170
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10570,12 +10903,12 @@ msgstr ""
 "The SUMO 2014 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਸ ਕੇਸ ਵਿੱਚ ਇਹ 2012 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ: 30 ਜਬਾਬ ਇੰਗਲਿਸ SUMO ਫੋਰਮ ਵਿੱਚ ਹਨ। SUMO ਫੋਰਮ 2012 ਬੈਜ ਪਾ੍ਪਤ ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ "
 "ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1113
+#: kitsune/sumo/db_strings.py:1173
 msgctxt "DB: kbadge.Badge.title"
 msgid "2010 KB Badge"
 msgstr "2010 KB ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1114
+#: kitsune/sumo/db_strings.py:1174
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10586,12 +10919,12 @@ msgstr ""
 "The SUMO KB 2010 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਹ 2010 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ; ਇਸ ਕੇਸ ਵਿੱਚ: 10 ਅੰਗਰੇਜ਼ੀ SUMO ਨੌਲੇਜ ਬੇਸ ਦੇ 10 ਸੋਧੇ ਹੋਏ ਲੇਖਾ ਨੂੰ ਪ੍ਰਵਾਨਗੀ ਦੇ ਦਿੱਤੀ ਹੈ। SUMO KB "
 "2010 ਬੈਜ ਪਾ੍ਪਤ ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1117
+#: kitsune/sumo/db_strings.py:1177
 msgctxt "DB: kbadge.Badge.title"
 msgid "2010 L10n Badge"
 msgstr "2010 L10n ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1118
+#: kitsune/sumo/db_strings.py:1178
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10602,13 +10935,13 @@ msgstr ""
 "The SUMO L10n 2010 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਹ 2010 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ; ਇਸ ਕੇਸ ਵਿੱਚ: SUMO ਨੌਲੇਜ ਬੇਸ ਦੇ 10 ਸੋਧੇ ਹੋਏ ਲੇਖਾ ਨੂੰ ਪ੍ਰਵਾਨਗੀ ਦੇ ਦਿੱਤੀ ਹੈ। SUMO L10n 2010 ਬੈਜ "
 "ਪਾ੍ਪਤ ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1121
+#: kitsune/sumo/db_strings.py:1181
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2010 Support Forum Badge"
 msgstr "2010 ਸਹਿਯੋਗ ਫੋਰਮ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1122
+#: kitsune/sumo/db_strings.py:1182
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10619,12 +10952,12 @@ msgstr ""
 "The SUMO ਫੋਰਮ 2010 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਸ ਕੇਸ ਵਿੱਚ ਇਹ 2010 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ: ਅੰਗਰੇਜੀ SUMO ਫੋਰਮ ਦੇ 30 ਜਵਾਬ। SUMO ਫੋਰਮ 2010 ਬੈਜ ਪਾ੍ਪਤ ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ "
 "ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1125
+#: kitsune/sumo/db_strings.py:1185
 msgctxt "DB: kbadge.Badge.title"
 msgid "2011 KB Badge"
 msgstr "2011 KB ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1126
+#: kitsune/sumo/db_strings.py:1186
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10635,13 +10968,13 @@ msgstr ""
 "The SUMO KB 2011 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਸ ਕੇਸ ਵਿੱਚ ਇਹ 2011 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ: SUMO ਨੌਲੇਜ ਬੇਸ ਅੰਗਰੇਜੀ ਦੇ 10 ਸੋਧੇ ਹੋਏ ਲੇਖਾ ਨੂੰ ਪ੍ਰਵਾਨਗੀ ਦੇ ਦਿੱਤੀ ਹੈ। SUMO KB 2011 ਬੈਜ"
 " ਪਾ੍ਪਤ ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1129
+#: kitsune/sumo/db_strings.py:1189
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2011 L10n Badge"
 msgstr "2011 L10n ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1130
+#: kitsune/sumo/db_strings.py:1190
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10652,13 +10985,13 @@ msgstr ""
 "The SUMO L10n 2011 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਹ 2011 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ; ਇਸ ਕੇਸ ਵਿੱਚ: SUMO ਨੌਲੇਜ ਬੇਸ ਨੇ10 ਸੋਧੇ ਹੋਏ ਲੇਖਾ ਨੂੰ ਪ੍ਰਵਾਨਗੀ ਦੇ ਦਿੱਤੀ ਹੈ। SUMO L10n  2011 ਬੈਜ "
 "ਪਾ੍ਪਤ ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1133
+#: kitsune/sumo/db_strings.py:1193
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2011 Support Forum Badge"
 msgstr "2011 ਸਹਿਯੋਗ ਫੋਰਮ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1134
+#: kitsune/sumo/db_strings.py:1194
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10669,12 +11002,12 @@ msgstr ""
 "The SUMO Forum 2011 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਹ 2011 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ; ਇਸ ਕੇਸ ਵਿੱਚ: ਇੰਗਲਿਸ਼ SUMO ਨੌਲੇਜ ਬੇਸ ਨੈ 30 ਸੋਧੇ ਹੋਏ ਲੇਖਾ ਨੂੰ ਪ੍ਰਵਾਨਗੀ ਦੇ ਦਿੱਤੀ ਹੈ। SUMO L10n "
 "2011 ਬੈਜ ਪਾ੍ਪਤ ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1138
+#: kitsune/sumo/db_strings.py:1198
 msgctxt "DB: kbadge.Badge.title"
 msgid "2012 KB Badge"
 msgstr "2012 KB ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1139
+#: kitsune/sumo/db_strings.py:1199
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10685,12 +11018,12 @@ msgstr ""
 "The SUMO KB 2012 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਹ 2011 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ; ਇਸ ਕੇਸ ਵਿੱਚ: ਇੰਗਲਿਸ਼ SUMO ਨੌਲੇਜ ਬੇਸ ਨੈ 30 ਸੋਧੇ ਹੋਏ ਲੇਖਾ ਨੂੰ ਪ੍ਰਵਾਨਗੀ ਦੇ ਦਿੱਤੀ ਹੈ। SUMO KB 2012 "
 "ਬੈਜ ਪਾ੍ਪਤ ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1142
+#: kitsune/sumo/db_strings.py:1202
 msgctxt "DB: kbadge.Badge.title"
 msgid "2013 KB Badge"
 msgstr "2013 KB ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1143
+#: kitsune/sumo/db_strings.py:1203
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10701,12 +11034,12 @@ msgstr ""
 "The SUMO KB 2013 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਹ 2011 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ; ਇਸ ਕੇਸ ਵਿੱਚ: ਅੰਗਰੇਜ਼ੀ SUMO ਨੌਲੇਜ ਬੇਸ ਨੇ 10 ਨੂੰ ਪ੍ਰਵਾਨਗੀ ਦੇ ਦਿੱਤੀ ਹੈ। SUMO KB 2013 ਬੈਜ ਪਾ੍ਪਤ ਕਰਤਾ "
 "ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1146
+#: kitsune/sumo/db_strings.py:1206
 msgctxt "DB: kbadge.Badge.title"
 msgid "2013 L10n Badge"
 msgstr "2013 L10n ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1147
+#: kitsune/sumo/db_strings.py:1207
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10717,13 +11050,13 @@ msgstr ""
 "The SUMO L10n 2013 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਸ ਕੇਸ ਵਿੱਚ ਇਹ 2013 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ: SUMO ਨੌਲੇਜ ਬੇਸ 10 ਸੋਧੇ ਹੋਏ ਲੇਖਾ ਨੂੰ ਪ੍ਰਵਾਨਗੀ ਦੇ ਦਿੱਤੀ ਹੈ। SUMO L10n 2013 ਬੈਜ ਪਾ੍ਪਤ "
 "ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1150
+#: kitsune/sumo/db_strings.py:1210
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "2013 Support Forum Badge"
 msgstr "2013 ਸਹਿਯੋਗ ਫੋਰਮ ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1151
+#: kitsune/sumo/db_strings.py:1211
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10734,12 +11067,12 @@ msgstr ""
 "The SUMO ਫੋਰਮ 2013 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਸ ਕੇਸ ਵਿੱਚ ਇਹ 2013 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ: SUMO ਨੌਲੇਜ ਬੇਸ ਅੰਗਰੇਜੀ ਦੇ 0 ਸੋਧੇ ਹੋਏ ਲੇਖਾ ਨੂੰ ਪ੍ਰਵਾਨਗੀ ਦੇ ਦਿੱਤੀ ਹੈ। SUMO ਫੋਰਮ 2013 "
 "ਬੈਜ ਪਾ੍ਪਤ ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1154
+#: kitsune/sumo/db_strings.py:1214
 msgctxt "DB: kbadge.Badge.title"
 msgid "2012 L10n Badge"
 msgstr "2012 L10n ਬੈਜ"
 
-#: kitsune/sumo/db_strings.py:1155
+#: kitsune/sumo/db_strings.py:1215
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid ""
@@ -10750,13 +11083,13 @@ msgstr ""
 "The SUMO L10n 2012 ਮਿੰਨੀ-ਬੈਜ SUMO ਸੀਰਿਜ ਦਾ ਹਿੱਸਾ ਹੈ। ਇਹ 2012 ਵਿੱਚ SUMO ਦੇ ਯੋਗਦਾਨ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰਦਾ ਹੈ; ਇਸ ਕੇਸ ਵਿੱਚ: SUMO ਨੌਲੇਜ ਬੇਸ ਦੇ 10 ਸੋਧੇ ਹੋਏ ਲੇਖਾ ਨੂੰ ਪ੍ਰਵਾਨਗੀ ਦੇ ਦਿੱਤੀ ਹੈ। SUMO L10n 2012 ਬੈਜ "
 "ਪਾ੍ਪਤ ਕਰਤਾ ਨੂੰ ਮੌਜਿਲਾ ਮਿਸ਼ਨ ਨੂੰ ਅੱਗੇ ਲਿਆਣ ਲਈ ਵਧਾਇਆ!"
 
-#: kitsune/sumo/db_strings.py:1158
+#: kitsune/sumo/db_strings.py:1218
 #, fuzzy
 msgctxt "DB: kbadge.Badge.title"
 msgid "Kitsune Contributor"
 msgstr "Kitsune ਹਿੱਸੇਦਾਰੀ"
 
-#: kitsune/sumo/db_strings.py:1159
+#: kitsune/sumo/db_strings.py:1219
 #, fuzzy
 msgctxt "DB: kbadge.Badge.description"
 msgid "Badge awarded to those who have contributed to the Kitsune code base."
@@ -10771,26 +11104,26 @@ msgstr "ਖੇਤਰ ਦੀ ਲੋੜ ਹੈ।"
 msgid "{name} is not a valid username."
 msgstr ""
 
-#: kitsune/sumo/parser.py:375
+#: kitsune/sumo/parser.py:378
 msgid "Page does not exist."
 msgstr "ਪੰਨਾ ਮੌਜੂਦ ਨਹੀ ਹੈ।"
 
-#: kitsune/sumo/parser.py:387
+#: kitsune/sumo/parser.py:396
 #, python-format
 msgid "The image \"%s\" does not exist."
 msgstr "ਫੋਟੋ \"%s\" ਮੌਜੁਦ ਨਹੀ ਹੈ।"
 
-#: kitsune/sumo/parser.py:410
+#: kitsune/sumo/parser.py:419
 #, python-format
 msgid "The video \"%s\" does not exist."
 msgstr "ਇਹ ਵੀਡਿਉ \"%s\" ਉਪਲੱਬਦ ਨਹੀ ਹੈ।"
 
-#: kitsune/sumo/parser.py:422
+#: kitsune/sumo/parser.py:431
 #, python-format
 msgid "Button of type \"%s\" does not exist."
 msgstr ""
 
-#: kitsune/sumo/parser.py:428
+#: kitsune/sumo/parser.py:437
 #, python-format
 msgid "The UI component \"%s\" does not exist."
 msgstr ""
@@ -10800,158 +11133,154 @@ msgstr ""
 msgid "Would you like to view this page in %(language)s instead?"
 msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:108
+#: kitsune/sumo/jinja2/base.html:115
 msgid "Skip to main content"
 msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:109 kitsune/sumo/jinja2/sumo/locales.html:2
+#: kitsune/sumo/jinja2/base.html:116 kitsune/sumo/jinja2/sumo/locales.html:2
 msgid "Switch language"
 msgstr "ਭਾਸ਼ਾ ਬਦਲੋ"
 
-#: kitsune/sumo/jinja2/base.html:110
+#: kitsune/sumo/jinja2/base.html:117
 #, fuzzy
 msgid "Skip to search"
 msgstr "ਖੋਜ"
 
-#: kitsune/sumo/jinja2/base.html:115 kitsune/sumo/jinja2/includes/common_macros.html:33 kitsune/sumo/jinja2/includes/common_macros.html:50 kitsune/sumo/jinja2/includes/common_macros.html:878
+#: kitsune/sumo/jinja2/base.html:122 kitsune/sumo/jinja2/includes/common_macros.html:34 kitsune/sumo/jinja2/includes/common_macros.html:51 kitsune/sumo/jinja2/includes/common_macros.html:925
 msgid "Close"
 msgstr "ਬੰਦ"
 
-#: kitsune/sumo/jinja2/base.html:116
+#: kitsune/sumo/jinja2/base.html:123
 #, fuzzy
 msgid "This is a staging site, the content gets overwritten on the 1st of every month.<br>The production site is <a href=\"https://support.mozilla.org\">here</a>."
 msgstr "ਇਹ ਇੱਕ ਸਟੇਜਿੰਗ ਸਾਈਟ ਹੈ, ਸਮੱਗਰੀ ਨੂੰ ਹਰ ਮਹੀਨੇ ਦੀ 1 ਨੂੰ ਲਿਖਿਆ ਜਾਦਾ ਹੈ।<br> ਪਰੋਡਕਸਨ ਸਾਇਟ ਇੱਥੇ <a href=\"http://support.mozilla.org\"> ਹੈ</a>।"
 
-#: kitsune/sumo/jinja2/base.html:254 kitsune/sumo/jinja2/base.html:257
+#: kitsune/sumo/jinja2/base.html:261 kitsune/sumo/jinja2/base.html:264
 msgid "Mozilla"
 msgstr "ਮੋਜ਼ੀਲਾ"
 
-#: kitsune/sumo/jinja2/base.html:259
+#: kitsune/sumo/jinja2/base.html:266
 msgid "Report Trademark Abuse"
 msgstr "ਟਰੇਡਮਾਰਕ ਦੁਰਵਿਅਵਹਾਰ ਰਿਪੋਰਟ"
 
-#: kitsune/sumo/jinja2/base.html:260
+#: kitsune/sumo/jinja2/base.html:267
 #, fuzzy
 msgid "Source code"
 msgstr "ਸੋਰਸ ਕੋਡ"
 
-#: kitsune/sumo/jinja2/base.html:261 kitsune/users/jinja2/users/profile.html:112
+#: kitsune/sumo/jinja2/base.html:268 kitsune/users/jinja2/users/profile.html:112
 msgid "Twitter"
 msgstr "ਟਵਿੱਟਰ"
 
-#: kitsune/sumo/jinja2/base.html:266
+#: kitsune/sumo/jinja2/base.html:273
 #, fuzzy
 msgid "Join our Community"
 msgstr "ਮੋਬਾਇਲ ਸਹਿਯੋਗ"
 
-#: kitsune/sumo/jinja2/base.html:273 kitsune/sumo/jinja2/includes/common_macros.html:98
+#: kitsune/sumo/jinja2/base.html:280 kitsune/sumo/jinja2/includes/common_macros.html:99
 #, fuzzy
 msgid "Explore Help Articles"
 msgstr "ਅਨੁਵਾਦ ਹੋਏ ਮਦਦਗਾਰ ਲੇਖਾਂ"
 
-#: kitsune/sumo/jinja2/base.html:280
+#: kitsune/sumo/jinja2/base.html:287
 msgid "Firefox"
 msgstr "ਫਾਇਰਫਾਕਸ"
 
-#: kitsune/sumo/jinja2/base.html:282
+#: kitsune/sumo/jinja2/base.html:289
 msgid "Download"
 msgstr "ਡਾਊਨਲੋਡ"
 
-#: kitsune/sumo/jinja2/base.html:283 kitsune/sumo/jinja2/includes/common_macros.html:124 kitsune/sumo/jinja2/includes/common_macros.html:224 kitsune/sumo/jinja2/includes/common_macros.html:330
+#: kitsune/sumo/jinja2/base.html:290 kitsune/sumo/jinja2/includes/common_macros.html:125 kitsune/sumo/jinja2/includes/common_macros.html:263 kitsune/sumo/jinja2/includes/common_macros.html:369
 msgid "Firefox desktop"
 msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:284
+#: kitsune/sumo/jinja2/base.html:291
 msgid "Android Browser"
 msgstr "ਐਂਡਰੌਇਡ ਬਰਾਊਜ਼ਰ"
 
-#: kitsune/sumo/jinja2/base.html:285
+#: kitsune/sumo/jinja2/base.html:292
 msgid "iOS Browser"
 msgstr "iOS ਬਰਾਊਜ਼ਰ"
 
-#: kitsune/sumo/jinja2/base.html:286
+#: kitsune/sumo/jinja2/base.html:293
 #, fuzzy
 msgid "Focus Browser"
 msgstr "iOS ਬਰਾਊਜ਼ਰ"
 
-#: kitsune/sumo/jinja2/base.html:291
+#: kitsune/sumo/jinja2/base.html:298
 #, fuzzy
 msgid "Firefox for Developers"
 msgstr "ਡੈਸਕਟਾਪ ਲਈ ਫਾਇਰਫਾਕਸ"
 
-#: kitsune/sumo/jinja2/base.html:293
+#: kitsune/sumo/jinja2/base.html:300
 #, fuzzy
 msgid "Developer Edition"
 msgstr "ਡਿਵੈਲਪਰ ਹੱਬ"
 
-#: kitsune/sumo/jinja2/base.html:294
-msgid "Beta"
-msgstr ""
-
-#: kitsune/sumo/jinja2/base.html:295
+#: kitsune/sumo/jinja2/base.html:302
 #, fuzzy
 msgid "Beta for Android"
 msgstr "ਐਨਡਰਾਇਡ ਲਈ ਫਾਇਰਫਾਕਸ"
 
-#: kitsune/sumo/jinja2/base.html:296
+#: kitsune/sumo/jinja2/base.html:303
 msgid "Nightly"
 msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:297
+#: kitsune/sumo/jinja2/base.html:304
 #, fuzzy
 msgid "Nightly for Android"
 msgstr "ਐਨਡਰਾਇਡ ਲਈ ਫਾਇਰਫਾਕਸ"
 
-#: kitsune/sumo/jinja2/base.html:302 kitsune/sumo/jinja2/includes/common_macros.html:360
+#: kitsune/sumo/jinja2/base.html:309 kitsune/sumo/jinja2/includes/common_macros.html:399
 msgid "Mozilla Account"
 msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:305 kitsune/sumo/jinja2/includes/common_macros.html:648
+#: kitsune/sumo/jinja2/base.html:312 kitsune/sumo/jinja2/includes/common_macros.html:687
 #, fuzzy
 msgid "Sign In/Up"
 msgstr "ਸਾਇਨ ਇਨ"
 
-#: kitsune/sumo/jinja2/base.html:311
+#: kitsune/sumo/jinja2/base.html:318
 msgid "What Is It?"
 msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:314
+#: kitsune/sumo/jinja2/base.html:321
 msgid "Reset Password"
 msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:319
+#: kitsune/sumo/jinja2/base.html:326
 msgid "Sync Your Data"
 msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:340 kitsune/sumo/jinja2/base.html:341
+#: kitsune/sumo/jinja2/base.html:347 kitsune/sumo/jinja2/base.html:348
 msgid "Language"
 msgstr "ਭਾਸ਼ਾ"
 
-#: kitsune/sumo/jinja2/base.html:363
+#: kitsune/sumo/jinja2/base.html:370
 #, python-format
 msgid "Visit %(moco_link_open)sMozilla Corporation's%(link_close)s not-for-profit parent, the %(mofo_link_open)sMozilla Foundation%(link_close)s."
 msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:373
+#: kitsune/sumo/jinja2/base.html:380
 #, python-format
 msgid "Portions of this content are ©1998–%(year)s by individual mozilla.org contributors. Content available under a %(link_open)sCreative Commons license%(link_close)s."
 msgstr ""
 
-#: kitsune/sumo/jinja2/base.html:384
+#: kitsune/sumo/jinja2/base.html:391
 #, fuzzy
 msgid "mozilla.org"
 msgstr "ਮੋਜ਼ੀਲਾ"
 
-#: kitsune/sumo/jinja2/base.html:385
+#: kitsune/sumo/jinja2/base.html:392
 #, fuzzy
 msgid "Terms of Service"
 msgstr "ਲੇਖ ਦੀ ਕਿਸਮ"
 
-#: kitsune/sumo/jinja2/base.html:387
+#: kitsune/sumo/jinja2/base.html:394
 msgid "Cookies"
 msgstr "ਕੂਕੀਜ਼"
 
-#: kitsune/sumo/jinja2/base.html:388
+#: kitsune/sumo/jinja2/base.html:395
 #, fuzzy
 msgid "Contact"
 msgstr "ਸੰਪਰਕ"
@@ -11010,233 +11339,245 @@ msgstr "ਇਕ ਗਲਤੀ ਲੱਭੀ"
 msgid "Oh, no! It looks like an unexpected error occurred. We've already notified the site administrators. Please try again now, or in a few minutes."
 msgstr "ਓਹ ਹੋ! ਅਚਾਨਕ ਗਲਤੀ ਆਈ ਜਾਪਦੀ ਹੈ। ਅਸੀਂ ਸਾਈਟ ਦੇ ਪਰਸ਼ਾਸ਼ਕਾਂ ਨੂੰ ਪਹਿਲਾਂ ਹੀ ਸੂਚਿਤ ਕਰ ਚੁੱਕੇ ਹਾਂ। ਹੁਣੇ ਜਾਂ ਕੁਝ ਮਿੰਟਾਂ ਵਿੱਚ ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:3
+#: kitsune/sumo/jinja2/includes/common_macros.html:4
 msgid "Search questions, articles, or topics (example: saving passwords in Firefox)"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:45
+#: kitsune/sumo/jinja2/includes/common_macros.html:46
 msgid "<strong>Avoid support scams.</strong> We will never ask you to call or text a phone number or share personal information. Please report suspicious activity using the “Report Abuse” option."
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:103 kitsune/sumo/jinja2/includes/common_macros.html:202 kitsune/sumo/jinja2/includes/common_macros.html:307
-#: kitsune/sumo/jinja2/includes/common_macros.html:466 kitsune/sumo/jinja2/includes/common_macros.html:565
+#: kitsune/sumo/jinja2/includes/common_macros.html:104 kitsune/sumo/jinja2/includes/common_macros.html:241 kitsune/sumo/jinja2/includes/common_macros.html:346
+#: kitsune/sumo/jinja2/includes/common_macros.html:505 kitsune/sumo/jinja2/includes/common_macros.html:604
 #, fuzzy
 msgid "Close Firefox menu"
 msgstr "ਫਾਇਰਫਾਕਸ ਸਿੰਕ"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:114
+#: kitsune/sumo/jinja2/includes/common_macros.html:115
 msgid "Explore by product"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:134 kitsune/sumo/jinja2/includes/common_macros.html:400
+#: kitsune/sumo/jinja2/includes/common_macros.html:135 kitsune/sumo/jinja2/includes/common_macros.html:439
 #, fuzzy
 msgid "Mozilla VPN"
 msgstr "ਮੋਜ਼ੀਲਾ ਫਾਇਰਫਾਕਸ"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:144 kitsune/sumo/jinja2/includes/common_macros.html:244 kitsune/sumo/jinja2/includes/common_macros.html:380
+#: kitsune/sumo/jinja2/includes/common_macros.html:145 kitsune/sumo/jinja2/includes/common_macros.html:283 kitsune/sumo/jinja2/includes/common_macros.html:419
 msgid "Firefox for iOS"
 msgstr "iOS ਲਈ ਫਾਇਰਫਾਕਸ"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:154 kitsune/sumo/jinja2/includes/common_macros.html:254 kitsune/sumo/jinja2/includes/common_macros.html:350
+#: kitsune/sumo/jinja2/includes/common_macros.html:155 kitsune/sumo/jinja2/includes/common_macros.html:293 kitsune/sumo/jinja2/includes/common_macros.html:389
 msgid "Thunderbird"
 msgstr "ਥੰਡਰਬਰਡ"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:164 kitsune/sumo/jinja2/includes/common_macros.html:264 kitsune/sumo/jinja2/includes/common_macros.html:370
+#: kitsune/sumo/jinja2/includes/common_macros.html:165 kitsune/sumo/jinja2/includes/common_macros.html:303 kitsune/sumo/jinja2/includes/common_macros.html:409
 #, fuzzy
 msgid "Firefox for Android"
 msgstr "ਐਨਡਰਾਇਡ ਲਈ ਫਾਇਰਫਾਕਸ"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:171
+#: kitsune/sumo/jinja2/includes/common_macros.html:172
 msgid "View all products"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:187
+#: kitsune/sumo/jinja2/includes/common_macros.html:188
 msgid "Explore by topic"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:234 kitsune/sumo/jinja2/includes/common_macros.html:410
+#. Heading of the main menu's list of knowledge bases, collections of help articles
+#. written for a particular team, company or community.
+#: kitsune/sumo/jinja2/includes/common_macros.html:207 kitsune/wiki/jinja2/wiki/knowledge_base.html:6 kitsune/wiki/jinja2/wiki/knowledge_bases.html:3
+msgid "Knowledge Bases"
+msgstr ""
+
+#. The last link of the main menu's list of knowledge bases, which leads to the
+#. page listing them all.
+#: kitsune/sumo/jinja2/includes/common_macros.html:225
+msgid "See all knowledge bases"
+msgstr ""
+
+#: kitsune/sumo/jinja2/includes/common_macros.html:273 kitsune/sumo/jinja2/includes/common_macros.html:449
 msgid "Firefox Focus"
 msgstr "ਫਾਇਰਫੌਕਸ ਫੋਕਸ"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:274
+#: kitsune/sumo/jinja2/includes/common_macros.html:313
 msgid "View all forums"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:290
+#: kitsune/sumo/jinja2/includes/common_macros.html:329
 msgid "Browse all forum threads by topic"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:320
+#: kitsune/sumo/jinja2/includes/common_macros.html:359
 msgid "Get help with"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:340
+#: kitsune/sumo/jinja2/includes/common_macros.html:379
 msgid "Firefox for Enterprise"
 msgstr "ਇੰਟਰਪਰਾਈਜ਼ ਲਈ  ਫਾਇਰਫਾਕਸ"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:390
+#: kitsune/sumo/jinja2/includes/common_macros.html:429
 msgid "Thunderbird for Android"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:420
+#: kitsune/sumo/jinja2/includes/common_macros.html:459
 #, fuzzy
 msgid "Firefox Relay"
 msgstr "ਫਾਇਰਫਾਕਸ ਅਸਲੀਅਤ"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:430
+#: kitsune/sumo/jinja2/includes/common_macros.html:469
 msgid "Monitor"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:440
+#: kitsune/sumo/jinja2/includes/common_macros.html:479
 msgid "View all"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:456 kitsune/sumo/jinja2/includes/common_macros.html:461
+#: kitsune/sumo/jinja2/includes/common_macros.html:495 kitsune/sumo/jinja2/includes/common_macros.html:500
 msgid "Contribute"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:480 kitsune/sumo/jinja2/includes/common_macros.html:699
+#: kitsune/sumo/jinja2/includes/common_macros.html:519 kitsune/sumo/jinja2/includes/common_macros.html:746
 msgid "Contributor discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:499 kitsune/sumo/jinja2/includes/common_macros.html:696
+#: kitsune/sumo/jinja2/includes/common_macros.html:538 kitsune/sumo/jinja2/includes/common_macros.html:743
 msgid "Contributor tools"
 msgstr ""
 
 #. Heading above the choices of color theme: System, Light and Dark.
-#: kitsune/sumo/jinja2/includes/common_macros.html:519 kitsune/users/forms.py:80
+#: kitsune/sumo/jinja2/includes/common_macros.html:558 kitsune/users/forms.py:80
 msgid "Appearance"
 msgstr ""
 
 #. Color theme that follows the device's light or dark setting.
-#: kitsune/sumo/jinja2/includes/common_macros.html:522 kitsune/users/forms.py:50
+#: kitsune/sumo/jinja2/includes/common_macros.html:561 kitsune/users/forms.py:50
 msgid "System"
 msgstr "ਸਿਸਟਮ"
 
 #. Color theme with a light background.
-#: kitsune/sumo/jinja2/includes/common_macros.html:524 kitsune/users/forms.py:51
+#: kitsune/sumo/jinja2/includes/common_macros.html:563 kitsune/users/forms.py:51
 msgid "Light"
 msgstr ""
 
 #. Color theme with a dark background.
-#: kitsune/sumo/jinja2/includes/common_macros.html:526 kitsune/users/forms.py:52
+#: kitsune/sumo/jinja2/includes/common_macros.html:565 kitsune/users/forms.py:52
 msgid "Dark"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:544 kitsune/sumo/jinja2/includes/common_macros.html:906
+#: kitsune/sumo/jinja2/includes/common_macros.html:583 kitsune/sumo/jinja2/includes/common_macros.html:953
 msgid "Download Firefox"
 msgstr "ਫਾਇਰਫਾਕਸ ਡਾਊਨਲੋਡ ਕਰੋ"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:577
+#: kitsune/sumo/jinja2/includes/common_macros.html:616
 #, fuzzy
 msgid "Manage your information and see your contributions."
 msgstr "ਮੋਬਾਇਲ ਐਡ-ਆਨ"
 
 #. A user menu link to the support section of the user's company page.
-#: kitsune/sumo/jinja2/includes/common_macros.html:586
+#: kitsune/sumo/jinja2/includes/common_macros.html:625
 msgid "My support"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:602
+#: kitsune/sumo/jinja2/includes/common_macros.html:641
 msgid "Settings"
 msgstr "ਸੈਟਿਗਾ"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:604
+#: kitsune/sumo/jinja2/includes/common_macros.html:643
 #, fuzzy
 msgid "Manage your privacy and notification preferences."
 msgstr "ਆਪਣੇ ਈਮੇਲ ਪਸੰਦਾ ਨੂੰ ਤਬਦੀਲ ਕਰੋ"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:624
+#: kitsune/sumo/jinja2/includes/common_macros.html:663
 #, fuzzy
 msgid "Exchange messages with other contributors."
 msgstr "ਹਟਾਓ"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:637 kitsune/users/jinja2/users/profile.html:233
+#: kitsune/sumo/jinja2/includes/common_macros.html:676 kitsune/users/jinja2/users/profile.html:233
 msgid "Sign Out"
 msgstr "ਸਾਈਨ ਆਉਟ"
 
 #. Text displayed above the content editor (particularly, when posting a question
 #. or a reply). Rules and guidelines refer to
 #. https://support.mozilla.org/kb/mozilla-support-rules-guidelines
-#: kitsune/sumo/jinja2/includes/common_macros.html:657
+#: kitsune/sumo/jinja2/includes/common_macros.html:696
 #, python-format
 msgid "Remember to follow our %(a_open)srules and guidelines%(a_close)s."
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:712
+#: kitsune/sumo/jinja2/includes/common_macros.html:759
 msgid "SUMO community discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:726
+#: kitsune/sumo/jinja2/includes/common_macros.html:773
 msgid "Knowledge base discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:733
+#: kitsune/sumo/jinja2/includes/common_macros.html:780
 msgid "Localization discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:741
+#: kitsune/sumo/jinja2/includes/common_macros.html:788
 msgid "Forum moderator discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:750
+#: kitsune/sumo/jinja2/includes/common_macros.html:797
 msgid "View all discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:759
+#: kitsune/sumo/jinja2/includes/common_macros.html:806
 msgid "Article discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:766
+#: kitsune/sumo/jinja2/includes/common_macros.html:813
 msgid "Off topic discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:773
+#: kitsune/sumo/jinja2/includes/common_macros.html:820
 msgid "Lost thread discussions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:785
+#: kitsune/sumo/jinja2/includes/common_macros.html:832
 msgid "Moderate forum content"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:793
+#: kitsune/sumo/jinja2/includes/common_macros.html:840
 msgid "Knowledge base dashboards"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:800
+#: kitsune/sumo/jinja2/includes/common_macros.html:847
 msgid "Guides"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:816
+#: kitsune/sumo/jinja2/includes/common_macros.html:863
 msgid "Image gallery"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:823
+#: kitsune/sumo/jinja2/includes/common_macros.html:870
 msgid "Recent revisions"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:830
+#: kitsune/sumo/jinja2/includes/common_macros.html:877
 msgid "Community hub"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:839 kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/jinja2/wiki/locale_details.html:9
+#: kitsune/sumo/jinja2/includes/common_macros.html:886 kitsune/wiki/jinja2/wiki/confirm_remove_from_locale.html:3 kitsune/wiki/jinja2/wiki/locale_details.html:9
 #: kitsune/wiki/jinja2/wiki/locale_list.html:4 kitsune/wiki/jinja2/wiki/locale_list.html:10
 msgid "Locales"
 msgstr "ਲੋਕੇਲਸ"
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:846
+#: kitsune/sumo/jinja2/includes/common_macros.html:893
 msgid "Locale metrics"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:852
+#: kitsune/sumo/jinja2/includes/common_macros.html:899
 msgid "Aggregated metrics"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:858
+#: kitsune/sumo/jinja2/includes/common_macros.html:905
 msgid "Show More"
 msgstr ""
 
-#: kitsune/sumo/jinja2/includes/common_macros.html:910
+#: kitsune/sumo/jinja2/includes/common_macros.html:957
 msgid "What's New"
 msgstr "ਕੀ ਨਵਾਂ ਹੈ"
 
@@ -11439,54 +11780,54 @@ msgstr ""
 msgid "read more"
 msgstr "ਹੋਰ ਪੜੋ"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:310
+#: kitsune/sumo/templatetags/jinja_helpers.py:290
 #, python-format
 msgid "Today at %s"
 msgstr "ਅੱਜ਼ %s"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:397
+#: kitsune/sumo/templatetags/jinja_helpers.py:377
 #, python-format
 msgid "%(number)d year ago"
 msgid_plural "%(number)d years ago"
 msgstr[0] "%(number)d ਸਾਲ ਪਹਿਲਾ"
 msgstr[1] "%(number)d ਸਾਲਾ ਪਹਿਲਾ"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:401
+#: kitsune/sumo/templatetags/jinja_helpers.py:381
 #, python-format
 msgid "%(number)d month ago"
 msgid_plural "%(number)d months ago"
 msgstr[0] "%(number)d ਮਹੀਨਾ ਪਹਿਲਾ"
 msgstr[1] "%(number)d ਮਹੀਨੇ ਪਹਿਲਾ"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:405
+#: kitsune/sumo/templatetags/jinja_helpers.py:385
 #, python-format
 msgid "%(number)d week ago"
 msgid_plural "%(number)d weeks ago"
 msgstr[0] "%(number)d ਹਫਤਾ ਪਹਿਲਾ"
 msgstr[1] "%(number)d ਹਫਤੇ ਪਹਿਲਾ"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:409
+#: kitsune/sumo/templatetags/jinja_helpers.py:389
 #, python-format
 msgid "%(number)d day ago"
 msgid_plural "%(number)d days ago"
 msgstr[0] "%(number)d ਦਿਨ ਪਹਿਲਾ"
 msgstr[1] "%(number)d ਦਿਨਾ ਪਹਿਲਾ"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:413
+#: kitsune/sumo/templatetags/jinja_helpers.py:393
 #, python-format
 msgid "%(number)d hour ago"
 msgid_plural "%(number)d hours ago"
 msgstr[0] "%(number)d ਘੰਟਾ ਪਹਿਲਾ"
 msgstr[1] "%(number)d ਘੰਟੇ ਪਹਿਲਾ"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:415
+#: kitsune/sumo/templatetags/jinja_helpers.py:395
 #, python-format
 msgid "%(number)d minute ago"
 msgid_plural "%(number)d minutes ago"
 msgstr[0] "%(number)d ਮਿੰਟ ਪਹਿਲਾ"
 msgstr[1] "%(number)d ਮਿੰਟਾਂ ਪਹਿਲਾ"
 
-#: kitsune/sumo/templatetags/jinja_helpers.py:416
+#: kitsune/sumo/templatetags/jinja_helpers.py:396
 #, python-format
 msgid "%(number)d second ago"
 msgid_plural "%(number)d seconds ago"
@@ -12348,35 +12689,41 @@ msgstr ""
 msgid "Private message"
 msgstr "ਨਿੱਜੀ ਸੁਣੇਹੇ"
 
-#: kitsune/wiki/admin.py:26 kitsune/wiki/models.py:91
+#: kitsune/wiki/admin.py:27 kitsune/wiki/models.py:113
 msgid "knowledge base"
 msgstr ""
 
-#: kitsune/wiki/admin.py:30
+#: kitsune/wiki/admin.py:31
 msgid "No knowledge base"
 msgstr ""
 
-#: kitsune/wiki/admin.py:123
+#: kitsune/wiki/admin.py:124
 msgid "Publish its articles"
 msgstr ""
 
-#: kitsune/wiki/admin.py:125
-msgid "Making this knowledge base public makes every article in it readable by everyone."
+#: kitsune/wiki/admin.py:126
+msgid ""
+"Making this knowledge base public makes every article in it readable by everyone. Its images become readable by anyone with their address and stop showing in its articles until uploaded again as "
+"public images."
 msgstr ""
 
-#: kitsune/wiki/admin.py:138
+#: kitsune/wiki/admin.py:141
 msgid "A public knowledge base cannot have groups."
 msgstr ""
 
-#: kitsune/wiki/admin.py:140
+#: kitsune/wiki/admin.py:143
 msgid "The default knowledge base is always public."
 msgstr ""
 
-#: kitsune/wiki/admin.py:149
-msgid "Confirm that its articles become readable by everyone."
+#: kitsune/wiki/admin.py:153
+msgid "Confirm that its articles and images become readable by everyone."
 msgstr ""
 
-#: kitsune/wiki/admin.py:167
+#: kitsune/wiki/admin.py:174
+msgid "Choose an original article that is assigned to this knowledge base."
+msgstr ""
+
+#: kitsune/wiki/admin.py:218
 msgid "Documents"
 msgstr "ਦਸਤਾਵੇਜਾ"
 
@@ -12439,6 +12786,30 @@ msgstr "%(old)s ਰੀ-ਡਾਇਰੈਕਟ %(number)i"
 msgid "%(old)s-redirect-%(number)i"
 msgstr "%(old)s-ਰੀ-ਡਾਇਰੈਕਟ-%(number)i"
 
+#: kitsune/wiki/config.py:122
+msgid "Violet"
+msgstr ""
+
+#: kitsune/wiki/config.py:123
+msgid "Blue"
+msgstr ""
+
+#: kitsune/wiki/config.py:124
+msgid "Teal"
+msgstr ""
+
+#: kitsune/wiki/config.py:125
+msgid "Green"
+msgstr ""
+
+#: kitsune/wiki/config.py:126
+msgid "Orange"
+msgstr ""
+
+#: kitsune/wiki/config.py:127
+msgid "Red"
+msgstr ""
+
 #: kitsune/wiki/events.py:106
 #, python-brace-format
 msgid "{title} was edited by {creator}"
@@ -12459,172 +12830,194 @@ msgstr "{title} ਦਾ ਰੀਵਿਜ਼ਨ ਤਰਜਮੇ ਲਈ ਤਿਆਰ �
 msgid "{title} ({locale}) has a new approved revision ({reviewer})"
 msgstr "{title} ({locale}) ਦਾ ਨਵਾਂ ਮਨਜ਼ੂਰ ਕੀਤਾ ਰੀਵਿਜ਼ਨ ਹੈ ({reviewer})"
 
-#: kitsune/wiki/forms.py:37
+#: kitsune/wiki/forms.py:41
 #, fuzzy, python-format
 msgid "Please keep the length of the title to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "ਕ੍ਰਿਪਾ (limit_value)% ਜਾਂ ਉਸਤੋਂ ਘੱਟ ਅੱਖਰ ਲਈ ਸਿਰਲੇਖ ਦੀ ਲੰਮਾਈ ਰੱਖਣ। ਇਹ ਵਰਤਮਾਨ ਵਿੱਚ ਹੈ %( show_value) ਵਰਣ।"
 
-#: kitsune/wiki/forms.py:41
+#: kitsune/wiki/forms.py:45
 msgid "Please provide a slug."
 msgstr "ਕ੍ਰਿਪਾ ਕਰਕੇ ਸਲੱਗ ਪੇਸ਼ ਕਰੋ।"
 
-#: kitsune/wiki/forms.py:42
+#: kitsune/wiki/forms.py:46
 msgid "The slug provided is not valid."
 msgstr "ਸਲੱਗ ਪੇਸ਼ ਕੀਤੀ ਵੈਧ ਨਹੀ ਹੈ।"
 
-#: kitsune/wiki/forms.py:44
+#: kitsune/wiki/forms.py:48
 #, python-format
 msgid "The slug is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "ਇਹ ਸਲੱਗ ਬਹੁੱਤ ਛੋਟੀ ਹੈ (%(show_value)s ਵਰਣ). ਇਹ ਘੱਟੋ ਘੋਟ %(limit_value)s ਵਰਣ ਹੋਣੇ ਚਾਹੀਦੇ ਹਨ।."
 
-#: kitsune/wiki/forms.py:48
+#: kitsune/wiki/forms.py:52
 #, python-format
 msgid "Please keep the length of the slug to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "ਕ੍ਰਿਪਾ ਕਰਕੇ ਸਲੱਗ ਦੀ ਲੰਬਾਈ %(limit_value)s ਵਰਨ ਜਾ ਇਸ ਤੋ ਘੱਟ ਰੱਖੋ। ਇਹ ਮੋਜੁਦਾ %(show_value)s ਵਰਣ ਹੈ।"
 
-#: kitsune/wiki/forms.py:52
+#: kitsune/wiki/forms.py:56
 msgid "Please provide a summary."
 msgstr "ਸੰਖੇਪ ਜਾਣਕਾਰੀ ਦਿਓ ਜੀ।"
 
-#: kitsune/wiki/forms.py:54
+#: kitsune/wiki/forms.py:58
 #, python-format
 msgid "The summary is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "ਇਹ ਸੱਮਰੀ ਬਹੁਤ ਛੋਟੀ ਹੈ (%(show_value)s ਵਰਣ)। ਇਹ ਘੱਟੋ ਘੋਟ %(limit_value)s ਵਰਣ ਹੋਣੇ ਚਾਹੀਦੇ ਹਨ।."
 
-#: kitsune/wiki/forms.py:58
+#: kitsune/wiki/forms.py:62
 #, python-format
 msgid "Please keep the length of the summary to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "ਕ੍ਰਿਪਾ ਕਰਕੇ ਸੱਮਰੀ ਦੀ ਲੰਬਾਈ %(limit_value)s ਵਰਨ ਜਾ ਇਸ ਤੋ ਘੱਟ ਰੱਖੋ। ਇਹ ਮੋਜੁਦਾ %(show_value)s ਵਰਣ ਹੈ।"
 
-#: kitsune/wiki/forms.py:62
+#: kitsune/wiki/forms.py:66
 msgid "Please provide content."
 msgstr "ਕ੍ਰਿਪਾ ਕਰਕੇ ਕੰਨਟੇਟ ਉਪਲੱਬਦ ਕਰਾਉ।"
 
-#: kitsune/wiki/forms.py:64
+#: kitsune/wiki/forms.py:68
 #, python-format
 msgid "The content is too short (%(show_value)s characters). It must be at least %(limit_value)s characters."
 msgstr "ਸਮੱਗਰੀ ਬਹੁਤ ਛੋਟੀ ਹੈ (%(show_value)s ਅੱਖਰ)। ਇਹ ਘੱਟੋ-ਘੱਟ %(limit_value)s ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।"
 
-#: kitsune/wiki/forms.py:68
+#: kitsune/wiki/forms.py:72
 #, fuzzy, python-format
 msgid "Please keep the length of the content to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr "ਕ੍ਰਿੱਪਾ ਕਰਕੇ ਘੱਟੋ ਘੱਟ ਇੱਕ ਉਤਪਾਦ ਦੀ ਚੋਣ ਕਰੋ ਜੀ।"
 
-#: kitsune/wiki/forms.py:73
+#: kitsune/wiki/forms.py:77
 #, python-format
 msgid "Please keep the length of the comment to %(limit_value)s characters or less. It is currently %(show_value)s characters."
 msgstr ""
 
-#: kitsune/wiki/forms.py:77
+#: kitsune/wiki/forms.py:81
 msgid "Please select at least one product."
 msgstr "ਕਿ੍ੱਪਾ ਕਰਕੇ ਘੱਟੋ ਘੱਟ ਇੱਕ ਉਤਪਾਦ ਦੀ ਚੋਣ ਕਰੋ ਜੀ।"
 
-#: kitsune/wiki/forms.py:78
+#: kitsune/wiki/forms.py:82
 msgid "Please select at least one topic."
 msgstr "ਕਿ੍ੱਪਾ ਕਰਕੇ ਘੱਟੋ ਘੱਟ ਇੱਕ ਵਿੱਸ਼ੇ ਦੀ ਚੋਣ ਕਰੋ ਜੀ।"
 
-#: kitsune/wiki/forms.py:80
+#: kitsune/wiki/forms.py:84
 msgid "Related documents are not allowed for Templates and Canned Responses."
 msgstr ""
 
-#: kitsune/wiki/forms.py:92
+#: kitsune/wiki/forms.py:86
+msgid "Choose a time on the hour or half hour."
+msgstr ""
+
+#: kitsune/wiki/forms.py:87
+msgid "Choose a time in the future."
+msgstr ""
+
+#: kitsune/wiki/forms.py:89
+msgid "This time happens twice or not at all in your timezone because of a daylight saving change. Choose another time."
+msgstr ""
+
+#: kitsune/wiki/forms.py:102
 msgid "Title of article"
 msgstr "ਲੇਖ ਦਾ ਸਿਰਲੇਖ"
 
-#: kitsune/wiki/forms.py:107 kitsune/wiki/jinja2/wiki/translate.html:91
+#: kitsune/wiki/forms.py:117 kitsune/wiki/jinja2/wiki/translate.html:95
 msgid "Slug:"
 msgstr "ਸਲੱਗ:"
 
-#: kitsune/wiki/forms.py:108
+#: kitsune/wiki/forms.py:118
 msgid "Article URL"
 msgstr "ਲੇਖ਼ URL"
 
-#: kitsune/wiki/forms.py:117
+#: kitsune/wiki/forms.py:127
 msgid "Allow translations:"
 msgstr "ਅਨੁਵਾਦ ਮਨਜ਼ੂਰ:"
 
-#: kitsune/wiki/forms.py:120
+#: kitsune/wiki/forms.py:130
 msgid "Obsolete:"
 msgstr "ਅਪ੍ਰਚਲਿਤ:"
 
-#: kitsune/wiki/forms.py:125 kitsune/wiki/jinja2/wiki/edit_metadata.html:39 kitsune/wiki/jinja2/wiki/new_document.html:27
+#: kitsune/wiki/forms.py:135 kitsune/wiki/jinja2/wiki/edit_metadata.html:39 kitsune/wiki/jinja2/wiki/new_document.html:27
 msgid "Knowledge bases"
 msgstr ""
 
-#: kitsune/wiki/forms.py:127
+#: kitsune/wiki/forms.py:137
 msgid "Readers of any selected knowledge base can read this article. A public knowledge base makes it readable by everyone."
 msgstr ""
 
-#: kitsune/wiki/forms.py:133
+#: kitsune/wiki/forms.py:143
 msgid "Allow discussion on this article?"
 msgstr "ਇਸ ਲੇਖ਼ ਤੇ ਗੱਲ-ਬਾਤ ਕਰਨ ਦੀ ਆਗਿਆ?"
 
-#: kitsune/wiki/forms.py:142
+#: kitsune/wiki/forms.py:152
 msgid "Type of article"
 msgstr "ਲੇਖ ਦੀ ਕਿਸਮ"
 
-#: kitsune/wiki/forms.py:146
+#: kitsune/wiki/forms.py:156
 msgid "Select topic(s)"
 msgstr ""
 
-#: kitsune/wiki/forms.py:152
+#: kitsune/wiki/forms.py:162
 msgid "Select product(s)"
 msgstr ""
 
-#: kitsune/wiki/forms.py:160
+#: kitsune/wiki/forms.py:170
 msgid "Related documents:"
 msgstr "ਸਬੰਧਤ ਦਸਤਾਵੇਜ਼:"
 
-#: kitsune/wiki/forms.py:166
+#: kitsune/wiki/forms.py:176
 msgid "Needs change:"
 msgstr "ਬਦਲ ਚਾਹੀਦਾ ਹੈ:"
 
-#: kitsune/wiki/forms.py:169 kitsune/wiki/forms.py:381 kitsune/wiki/forms.py:433 kitsune/wiki/forms.py:455 kitsune/wiki/jinja2/wiki/revision.html:36
+#: kitsune/wiki/forms.py:179 kitsune/wiki/forms.py:391 kitsune/wiki/forms.py:453 kitsune/wiki/forms.py:475 kitsune/wiki/jinja2/wiki/revision.html:36
 msgid "Comment:"
 msgstr "ਟਿੱਪਣੀ:"
 
-#: kitsune/wiki/forms.py:350 kitsune/wiki/jinja2/wiki/includes/document_macros.html:207 kitsune/wiki/jinja2/wiki/review_revision.html:73 kitsune/wiki/jinja2/wiki/review_translation.html:85
-#: kitsune/wiki/jinja2/wiki/translate.html:154
+#: kitsune/wiki/forms.py:360 kitsune/wiki/jinja2/wiki/includes/document_macros.html:207 kitsune/wiki/jinja2/wiki/review_revision.html:81 kitsune/wiki/jinja2/wiki/review_translation.html:92
+#: kitsune/wiki/jinja2/wiki/translate.html:158
 msgid "Keywords:"
 msgstr "ਸ਼ਬਦ:"
 
-#: kitsune/wiki/forms.py:351
+#: kitsune/wiki/forms.py:361
 msgid "Affects search results"
 msgstr "ਖੋਜ਼ ਨਤੀਜ਼ੇ ਪ੍ਰਭਾਵਿਤ ਹੋਏ"
 
-#: kitsune/wiki/forms.py:358 kitsune/wiki/jinja2/wiki/translate.html:164
+#: kitsune/wiki/forms.py:368 kitsune/wiki/jinja2/wiki/translate.html:168
 msgid "Search result summary:"
 msgstr "ਨਤੀਜ਼ਾ ਸਾਰਆਸ ਲੱਭੋ:"
 
-#: kitsune/wiki/forms.py:359
+#: kitsune/wiki/forms.py:369
 msgid "Only displayed on search results page"
 msgstr "ਨਤੀਜਾ ਸਿਰਫ ਭਾਲ ਪੇਜ਼ ਤੇ ਦਿਖਾਵੇ"
 
-#: kitsune/wiki/forms.py:379
+#: kitsune/wiki/forms.py:389
 msgid "Expiry date:"
 msgstr ""
 
-#: kitsune/wiki/forms.py:439
+#: kitsune/wiki/forms.py:459
 msgid "Significance:"
 msgstr "ਅਹਿਮੀਅਤ:"
 
-#: kitsune/wiki/forms.py:452
+#: kitsune/wiki/forms.py:472
 msgid "Needs change"
 msgstr "ਬਦਾਲਅ ਚਾਹੀਦਾ"
 
-#: kitsune/wiki/forms.py:478
+#: kitsune/wiki/forms.py:479
+msgid "Publish at"
+msgstr ""
+
+#. {timezone} is a timezone name, such as Europe/Berlin.
+#: kitsune/wiki/forms.py:492
+#, python-brace-format
+msgid "Leave empty to publish now. Times are in {timezone}; articles go live on the hour and half hour."
+msgstr ""
+
+#: kitsune/wiki/forms.py:542
 msgid "Users:"
 msgstr "ਯੂਜ਼ਰਾ:"
 
-#: kitsune/wiki/forms.py:479
+#: kitsune/wiki/forms.py:543
 msgid "Bots:"
 msgstr ""
 
-#: kitsune/wiki/forms.py:480
+#: kitsune/wiki/forms.py:544
 msgid "Start:"
 msgstr "ਸ਼ੁਰੂ:"
 
-#: kitsune/wiki/forms.py:481
+#: kitsune/wiki/forms.py:545
 msgid "End:"
 msgstr "ਖ਼ਤਮ:"
 
@@ -12698,61 +13091,85 @@ msgstr ""
 msgid "{user} removed successfully!"
 msgstr ""
 
-#: kitsune/wiki/models.py:83
+#: kitsune/wiki/models.py:84
 msgid "public"
 msgstr ""
 
-#: kitsune/wiki/models.py:84
+#: kitsune/wiki/models.py:85
 msgid "Readable by everyone, including signed-out visitors."
 msgstr ""
 
-#: kitsune/wiki/models.py:168
+#: kitsune/wiki/models.py:90
+msgid "listed"
+msgstr ""
+
+#: kitsune/wiki/models.py:92
+msgid "Show as a knowledge base: its own page, and a place in menus, the directory and search filters."
+msgstr ""
+
+#: kitsune/wiki/models.py:101
+msgid "Up to three characters. Blank uses the initials of the name."
+msgstr ""
+
+#: kitsune/wiki/models.py:107
+msgid "The help ribbon on the knowledge base page is shown only when set."
+msgstr ""
+
+#: kitsune/wiki/models.py:191
 msgid "If checked, this wiki page will be hidden from basic searches and dashboards. When viewed, the page will warn that it is no longer maintained."
 msgstr "ਜੇਕਰ ਜਾਂਚ ਕੀਤੀ ਹੈ, ਇਸ ਵਿਕੀ ਵਰਕੇ ਬੁਨਿਆਦੀ ਕਾਢਾਂ ਅਤੇ ਡੈਸ਼ਬੋਰਡਸ ਵਲੋਂ ਲੁੱਕਾ ਹੋ ਜਾਵੇਗਾ। ਜਦੋਂ ਵੇਖੀ, ਵਰਕੇ ਚਿਤਾਵਨੀ ਦਿੱਤੀ ਜਾਵੇਗੀ ਕਿ ਇਹ ਹੁਣ ਅਤੇ ਨਹੀਂ ਬਣਾਏ ਰੱਖਿਆ ਹੈ।"
 
-#: kitsune/wiki/models.py:178
+#: kitsune/wiki/models.py:201
 msgid "If checked, this document allows discussion in an associated forum. Uncheck to hide/disable the forum."
 msgstr "ਜੇਕਰ ਜਾਂਚ ਕੀਤੀ ਹੈ ,ਇਸ ਦਸਤਾਵੇਜ਼ ਨੂੰ ਇੱਕ ਜੁੜਿਆ ਰੰਗ ਮੰਚ ਵਿੱਚ ਚਰਚਾ ਦੀ ਆਗਿਆ ਦਿੰਦਾ ਹੈ। ਫੋਰਮ ਨੂੰ ਛਿਪਾਨ ਲਈ/ਬੰਦ ਕਰਨ ਲਈ।"
 
-#: kitsune/wiki/models.py:196
+#: kitsune/wiki/models.py:219
 msgid "If checked, this document needs updates."
 msgstr "ਜੇਕਰ ਚੈਕ ਹੈ, ਇਸ ਦਸਤਾਵੇਜ਼ ਨੂੰ ਅਪਡੇਟ ਚਾਹੀਦੇ ਹਨ।"
 
-#: kitsune/wiki/models.py:307
+#: kitsune/wiki/models.py:330
 msgid "Please choose a category."
 msgstr "ਕ੍ਰਿਪਾ ਕਰਕੇ ਕਿਸਮ ਚੁਣੋ।"
 
-#: kitsune/wiki/models.py:317
+#: kitsune/wiki/models.py:340
 #, python-brace-format
 msgid "Documents in the Template category must have titles that start with \"{prefix}\". (Current title is \"{title}\")"
 msgstr ""
 
-#: kitsune/wiki/models.py:325
+#: kitsune/wiki/models.py:348
 #, python-brace-format
 msgid "Documents with titles that start with \"{prefix}\" must be in the templates category. (Current category is \"{category}\". Current title is \"{title}\".)"
 msgstr ""
 
-#: kitsune/wiki/models.py:1019
+#: kitsune/wiki/models.py:953
+msgid "featured article"
+msgstr ""
+
+#: kitsune/wiki/models.py:954
+msgid "featured articles"
+msgstr ""
+
+#: kitsune/wiki/models.py:1062
 #, fuzzy, python-format
 msgid "A revision must be based on the English article. Revision ID %(id)s does not fit this criterion."
 msgstr "ਸੰਸ਼ੋਧਨ ਅੰਗਰੇਜ਼ੀ ਲੇਖ ਉੱਤੇ ਆਧਾਰਿਤ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ। ਸੰਸ਼ੋਧਨ ID % (id ) ਇਸ ਕਸੌਟੀ ਫਿਟ ਨਹੀਂ ਹੈ|"
 
-#: kitsune/wiki/parser.py:69
-msgid "Table of Contents"
-msgstr "ਭਾਗ ਸਾਰਣੀ"
-
 #. This error is displayed if a template is included into itself.
-#: kitsune/wiki/parser.py:378
+#: kitsune/wiki/parser.py:369
 #, python-format
 msgid "[Recursive inclusion of \"%s\"]"
 msgstr "[ਦੀ ਪੁਨਰਾਵਰਤੀ ਸ਼ਾਮਿਲ ਕੀਤੇ ਜਾਣ ਤੇ \"%s\"]"
 
-#: kitsune/wiki/parser.py:456
+#: kitsune/wiki/parser.py:432
+msgid "Table of Contents"
+msgstr "ਭਾਗ ਸਾਰਣੀ"
+
+#: kitsune/wiki/parser.py:463
 #, python-format
 msgid "The document \"%s\" does not exist."
 msgstr "ਇਹ ਦਸਤਾਵੇਜ਼ \"%s\" ਮੌਜੁਦ ਨਹੀ ਹਨ।"
 
-#: kitsune/wiki/parser.py:486
+#: kitsune/wiki/parser.py:493
 #, python-format
 msgid "The template \"%s\" does not exist or has no approved revision."
 msgstr "ਇਹ ਟੈਪਲੇਟ \"%s\" ਮੌਜੁਦ ਨਹੀ ਹਨ ਜਾ ਸੰਸ਼ੋਧਨ ਲਈ ਸਹਿਮਤੀ ਨਹੀ ਹੈ।"
@@ -12782,7 +13199,7 @@ msgstr "ਤੁਹਾਡੇ ਵਲੋਂ ਯੋਗਦਾਨ ਦਿੱਤੇ ਗ�
 msgid "[Reviews Pending: %s] SUMO needs your help!"
 msgstr ""
 
-#: kitsune/wiki/tasks.py:561
+#: kitsune/wiki/tasks.py:564
 msgid "Other products"
 msgstr ""
 
@@ -12823,90 +13240,97 @@ msgstr "ਡਾਊਨਲੋਡ ਕਰੋ"
 msgid "browserID"
 msgstr "ਬਰਾਊਜ਼ਰ ID"
 
-#: kitsune/wiki/views.py:92
+#. Heading over the private knowledge bases the user belongs to, in the main menu
+#. and the directory.
+#: kitsune/wiki/utils.py:399
+msgid "Your knowledge bases"
+msgstr ""
+
+#. Heading over the public knowledge bases, in the main menu and the directory.
+#: kitsune/wiki/utils.py:401
+msgid "Open to everyone"
+msgstr ""
+
+#: kitsune/wiki/views.py:90
 msgid "The draft you are trying to restore no longer exists."
 msgstr ""
 
-#: kitsune/wiki/views.py:1035
+#: kitsune/wiki/views.py:1049
 msgid "You cannot translate this document."
 msgstr "ਤੁਸੀ ਇਹ ਦਸਤਾਬੇਜ ਦਾ ਅਨੁਵਾਦ ਨਹੀ ਕਰ ਸਕਦੇ।"
 
-#: kitsune/wiki/views.py:1380 kitsune/wiki/views.py:1399
+#: kitsune/wiki/views.py:1413 kitsune/wiki/views.py:1432
 msgid "Thanks for your feedback!"
 msgstr ""
 
-#: kitsune/wiki/views.py:1456
+#: kitsune/wiki/views.py:1489
 msgid "You voted \"Yes 👍\" Please tell us more"
 msgstr ""
 
-#: kitsune/wiki/views.py:1458
+#: kitsune/wiki/views.py:1491
 msgid "Article is accurate"
 msgstr ""
 
-#: kitsune/wiki/views.py:1461
+#: kitsune/wiki/views.py:1494
 msgid "Article is easy to understand"
 msgstr ""
 
-#: kitsune/wiki/views.py:1463
+#: kitsune/wiki/views.py:1496
 msgid "The visuals are helpful"
 msgstr ""
 
-#: kitsune/wiki/views.py:1466
+#: kitsune/wiki/views.py:1499
 msgid "Article provided the information I needed"
 msgstr ""
 
-#: kitsune/wiki/views.py:1468 kitsune/wiki/views.py:1488
-msgid "Other"
-msgstr "ਹੋਰ"
-
-#: kitsune/wiki/views.py:1476
+#: kitsune/wiki/views.py:1509
 msgid "You voted \"No 👎\" Please tell us more"
 msgstr ""
 
-#: kitsune/wiki/views.py:1478
+#: kitsune/wiki/views.py:1511
 msgid "Article is inaccurate"
 msgstr ""
 
-#: kitsune/wiki/views.py:1479
+#: kitsune/wiki/views.py:1512
 msgid "Article is confusing"
 msgstr ""
 
-#: kitsune/wiki/views.py:1482
+#: kitsune/wiki/views.py:1515
 msgid "Missing, unclear, or unhelpful visuals"
 msgstr ""
 
-#: kitsune/wiki/views.py:1486
+#: kitsune/wiki/views.py:1519
 msgid "Article didn't provide the information I needed"
 msgstr ""
 
-#: kitsune/wiki/views.py:1559
+#: kitsune/wiki/views.py:1592
 #, python-format
 msgid "Revision %s"
 msgstr "ਰਵੀਜਿਨ %s"
 
-#: kitsune/wiki/views.py:1567
+#: kitsune/wiki/views.py:1600
 msgid "Firefox Releases"
 msgstr "ਫਾਇਰਫਾਕਸ ਰਲੀਜ਼"
 
-#: kitsune/wiki/views.py:1575
+#: kitsune/wiki/views.py:1608
 msgid "Article Revisions"
 msgstr "ਆਰਟੀਕਲ ਰੀਵੀਜ਼ਿਨਾ"
 
-#: kitsune/wiki/views.py:1691
+#: kitsune/wiki/views.py:1743
 #, python-brace-format
 msgid "{users} added to the contributors successfully!"
 msgstr "{users} ਨੂੰ ਕਾਮਯਾਬੀ ਨਾਲ ਯੋਗਦਾਨੀਆਂ ਵਿੱਚ ਜੋੜਿਆ!"
 
-#: kitsune/wiki/views.py:1698
+#: kitsune/wiki/views.py:1750
 msgid "There were errors adding new contributors, see below."
 msgstr " ਨਵੇ ਸਹਿਯੋਗਿਆ ਨੂੰ ਜੋੜਨ ਵਿਚ ਗਲਤੀ ਆਈ, ਹੇਠਾ ਦੇਖੋ।"
 
-#: kitsune/wiki/views.py:1718
+#: kitsune/wiki/views.py:1770
 #, python-brace-format
 msgid "{user} removed from the contributors successfully!"
 msgstr "{user} ਨੂੰ ਕਾਮਯਾਬੀ ਨਾਲ ਯੋਗਦਾਨੀਆਂ ਵਿੱਚੋਂ ਹਟਾਇਆ ਗਿਆ!"
 
-#: kitsune/wiki/views.py:1980
+#: kitsune/wiki/views.py:2043
 msgid "Sorry, that article wasn't found."
 msgstr ""
 
@@ -13023,11 +13447,19 @@ msgstr "<strong>ਚਿਤਾਵਨੀ :</strong> ਉੱਤੇ ਇਸ ਸੰਸ�
 msgid "You are about to permanently delete this revision. <strong>This cannot be undone!</strong> Are you sure you want to continue?"
 msgstr "ਤੁਸੀ ਸਥਾਈ ਰੂਪ ਵਲੋਂ ਇਸ ਸੰਸ਼ੋਧਨ ਨੂੰ ਹਟਾਣ ਲੱਗੇ ਹੋ। <strong>! ਪੂਰਵਵਤ ਨਹੀਂ ਕੀਤਾ ਕਰ ਸੱਕਦੇ ਹੋ!</strong>ਤੁਸੀ ਸੁਨਿਸਚਿਤ ਹੋ ਕਿ ਤੁਸੀ ਜਾਰੀ ਰੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ ?"
 
-#: kitsune/wiki/jinja2/wiki/document.html:98 kitsune/wiki/jinja2/wiki/edit.html:23
+#: kitsune/wiki/jinja2/wiki/document.html:61
+msgid "Now through January 31st, 2027 get unlimited bandwidth with built-in VPN. Head to Mozilla Connect for more details."
+msgstr ""
+
+#: kitsune/wiki/jinja2/wiki/document.html:62
+msgid "Details"
+msgstr ""
+
+#: kitsune/wiki/jinja2/wiki/document.html:108 kitsune/wiki/jinja2/wiki/edit.html:23
 msgid "This document is restricted."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/document.html:117
+#: kitsune/wiki/jinja2/wiki/document.html:127
 #, python-brace-format
 msgid "Share this article: {link}"
 msgstr "ਇਹ ਲੇਖ ਸਾੰਝਾ ਕਰੋ: {link}"
@@ -13041,16 +13473,16 @@ msgstr "ਲੇਖ ਸੋਧੋ | {document}"
 msgid "Edit Article"
 msgstr "ਲੇਖ਼ ਸੋਧੋ"
 
-#: kitsune/wiki/jinja2/wiki/edit.html:30 kitsune/wiki/jinja2/wiki/translate.html:33
+#: kitsune/wiki/jinja2/wiki/edit.html:30 kitsune/wiki/jinja2/wiki/translate.html:37
 #, python-brace-format
 msgid "You have a draft revision for this article saved on {date_time}"
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/edit.html:33 kitsune/wiki/jinja2/wiki/translate.html:36
+#: kitsune/wiki/jinja2/wiki/edit.html:33 kitsune/wiki/jinja2/wiki/translate.html:40
 msgid "Restore"
 msgstr "ਮੁੜ-ਸਟੋਰ ਕਰੋ"
 
-#: kitsune/wiki/jinja2/wiki/edit.html:34 kitsune/wiki/jinja2/wiki/translate.html:37
+#: kitsune/wiki/jinja2/wiki/edit.html:34 kitsune/wiki/jinja2/wiki/translate.html:41
 msgid "Discard"
 msgstr "ਬਰਖਾਸਤ ਕਰੋ"
 
@@ -13069,7 +13501,7 @@ msgstr "<label>ਬਦਲਣ ਦੀ ਲੋੜ ਹੈ:</label> %(comment)s"
 msgid "For help with writing articles, check out the <a href=\"%(url)s\">Support Document Guide</a>."
 msgstr "ਲੇਖੱ ਲਿੱਖਣ ਲਈ ਮਦਦ, ਦੇਖੋ <a href=\"%(url)s\"> ਸਪੋਟ ਦਸਤਾਵੇਜ ਗਾਇਡ</a>।"
 
-#: kitsune/wiki/jinja2/wiki/edit.html:71 kitsune/wiki/jinja2/wiki/includes/survey_form.html:36 kitsune/wiki/jinja2/wiki/new_document.html:73 kitsune/wiki/jinja2/wiki/translate.html:170
+#: kitsune/wiki/jinja2/wiki/edit.html:71 kitsune/wiki/jinja2/wiki/includes/survey_form.html:36 kitsune/wiki/jinja2/wiki/new_document.html:73 kitsune/wiki/jinja2/wiki/translate.html:174
 msgid "characters remaining."
 msgstr "ਬਾਕੀ ਰਹਿੰਦੇ ਅੱਖਰ।"
 
@@ -13128,6 +13560,33 @@ msgstr "ਯੋਗਦਾਨੀ ਜੋੜੋ"
 #: kitsune/wiki/jinja2/wiki/history.html:74
 msgid "Delete this document"
 msgstr "ਇਸ ਪੋਸਟ ਨੂੰ ਹਟਾਓ"
+
+#. Placeholder of the search box on a knowledge base's page, which searches only
+#. that knowledge base. {name} is the knowledge base's name.
+#: kitsune/wiki/jinja2/wiki/knowledge_base.html:35
+#, python-brace-format
+msgid "Search {name}"
+msgstr ""
+
+#. Shown on a knowledge base's page when it has no articles yet.
+#: kitsune/wiki/jinja2/wiki/knowledge_base.html:48
+msgid "There are no articles here yet."
+msgstr ""
+
+#. Link on a knowledge base's page to the list of all its articles.
+#: kitsune/wiki/jinja2/wiki/knowledge_base.html:121
+msgid "Browse all articles"
+msgstr ""
+
+#. Introduction of the page that lists the knowledge bases a visitor can open.
+#: kitsune/wiki/jinja2/wiki/knowledge_bases.html:16
+msgid "Collections of help articles, each written for a particular team or community."
+msgstr ""
+
+#. Shown on the page that lists knowledge bases when there are none to show.
+#: kitsune/wiki/jinja2/wiki/knowledge_bases.html:39
+msgid "There are no knowledge bases here yet."
+msgstr ""
 
 #: kitsune/wiki/jinja2/wiki/list_documents.html:5
 msgid "All Articles"
@@ -13216,8 +13675,13 @@ msgstr "ਨਵਾ ਲੇਖ਼"
 msgid "Create a New Knowledge Base Article"
 msgstr "ਨਵਾ ਨਾਲਿਜ ਬੇਸ ਲੇਖ ਬਣਾਉ"
 
-#: kitsune/wiki/jinja2/wiki/preview.html:2 kitsune/wiki/jinja2/wiki/review_revision.html:69 kitsune/wiki/jinja2/wiki/review_revision.html:103 kitsune/wiki/jinja2/wiki/review_translation.html:114
-#: kitsune/wiki/jinja2/wiki/review_translation.html:148 kitsune/wiki/jinja2/wiki/revision.html:104
+#: kitsune/wiki/jinja2/wiki/preview.html:4
+#, python-brace-format
+msgid "Anyone can see these images: {titles}"
+msgstr ""
+
+#: kitsune/wiki/jinja2/wiki/preview.html:7 kitsune/wiki/jinja2/wiki/review_revision.html:77 kitsune/wiki/jinja2/wiki/review_revision.html:111 kitsune/wiki/jinja2/wiki/review_translation.html:121
+#: kitsune/wiki/jinja2/wiki/review_translation.html:155 kitsune/wiki/jinja2/wiki/revision.html:110
 msgid "Article is for:"
 msgstr "ਦੇ ਲਈ ਲੇਖ਼:"
 
@@ -13245,79 +13709,79 @@ msgstr "{id} ਰੀਵਿਜ਼ਨ ਦੀ ਪੜਤਾਲ {user} ਕਰ ਰਿਹ�
 msgid "Revision Comment: {comment}"
 msgstr "ਪੜਤਾਲ ਦੀ ਲੋੜ ਹੈ"
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:24 kitsune/wiki/jinja2/wiki/review_translation.html:24
+#: kitsune/wiki/jinja2/wiki/review_revision.html:32 kitsune/wiki/jinja2/wiki/review_translation.html:32
 msgid "Unreviewed Revision:"
 msgid_plural "Unreviewed Revisions:"
 msgstr[0] "ਬਿਨਾਂ ਪੜਚੋਲ ਦੀ ਦੁਹਰਾਈ:"
 msgstr[1] "ਬਿਨਾਂ ਪੜਚੋਲ ਦੀਆਂ ਦੁਹਰਾਈਆਂ:"
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:29 kitsune/wiki/jinja2/wiki/review_translation.html:29
+#: kitsune/wiki/jinja2/wiki/review_revision.html:37 kitsune/wiki/jinja2/wiki/review_translation.html:37
 #, fuzzy, python-brace-format
 msgid "Revision {id} by {user}."
 msgstr "{id} ਰੀਵਿਜ਼ਨ ਦੀ ਪੜਤਾਲ {user} ਕਰ ਰਿਹਾ/ਰਹੀ ਹੈ"
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:31 kitsune/wiki/jinja2/wiki/review_translation.html:31
+#: kitsune/wiki/jinja2/wiki/review_revision.html:39 kitsune/wiki/jinja2/wiki/review_translation.html:39
 #, fuzzy, python-brace-format
 msgid "<label>Revision Comment:</label> {comment}"
 msgstr "ਪੜਤਾਲ ਦੀ ਲੋੜ ਹੈ"
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:33 kitsune/wiki/jinja2/wiki/review_translation.html:33
+#: kitsune/wiki/jinja2/wiki/review_revision.html:41 kitsune/wiki/jinja2/wiki/review_translation.html:41
 #, fuzzy, python-brace-format
 msgid "Review Revision {id}"
 msgstr "ਸਮੀਕਸ਼ਾ ਦੁਹਰਾਈ"
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:42
+#: kitsune/wiki/jinja2/wiki/review_revision.html:50
 #, python-brace-format
 msgid "This revision was already reviewed by {user} on {date}."
 msgstr "ਇਹ ਰੀਵਿਜ਼ਨ ਦੀ ਪੜਤਾਲ ਪਹਿਲਾਂ ਹੀ {user} ਵਲੋਂ {date} ਨੂੰ ਕੀਤੀ ਗਈ।"
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:47
+#: kitsune/wiki/jinja2/wiki/review_revision.html:55
 msgid "This revision is outdated, but there is a new revision available."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:48
+#: kitsune/wiki/jinja2/wiki/review_revision.html:56
 #, fuzzy
 msgid "Please review the latest revision."
 msgstr "ਕਿ੍ਪਾ ਕਰਕੇ ਸੰਚਾਰ ID ਦਿਓ ਜੀ।"
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:50
+#: kitsune/wiki/jinja2/wiki/review_revision.html:58
 #, fuzzy
 msgid "A newer revision has already been reviewed."
 msgstr "ਤੁਹਾਡਾ ਰੀਵਿਜ਼ਨ ਸਮੀਖਿਆ ਕੀਤੀ ਗਈ ਹੈ।"
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:55
+#: kitsune/wiki/jinja2/wiki/review_revision.html:63
 msgid "Submitted Revision Changes"
 msgstr "ਦਿੱਤੇ ਗਏ ਰੀਵਿਜ਼ਨ ਤਬਦੀਲੀਆਂ"
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:56
+#: kitsune/wiki/jinja2/wiki/review_revision.html:64
 msgid "Current public revision:"
 msgstr "ਮੌਜੂਦਾ ਜਨਤਕ ਰੀਵਿਜ਼ਨ:"
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:56
+#: kitsune/wiki/jinja2/wiki/review_revision.html:64
 msgid "Submitted revision:"
 msgstr "ਦਿੱਤਾ ਗਿਆ ਰੀਵਿਜ਼ਨ:"
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:59 kitsune/wiki/jinja2/wiki/revision.html:84
+#: kitsune/wiki/jinja2/wiki/review_revision.html:67 kitsune/wiki/jinja2/wiki/revision.html:90
 msgid "Revision Source"
 msgstr "ਸਰੋਤ ਰੀਵਿਜ਼ਨ"
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:65 kitsune/wiki/jinja2/wiki/review_translation.html:110 kitsune/wiki/jinja2/wiki/revision.html:90
+#: kitsune/wiki/jinja2/wiki/review_revision.html:73 kitsune/wiki/jinja2/wiki/review_translation.html:117 kitsune/wiki/jinja2/wiki/revision.html:96
 msgid "Revision Content"
 msgstr "ਰੀਵਿਜ਼ਨ ਸਮੱਗਰੀ"
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:72
+#: kitsune/wiki/jinja2/wiki/review_revision.html:80
 msgid "This document does not have a current revision."
 msgstr "ਇਸ ਦਸਤਾਵੇਜ ਵਿੱਚ ਮੌਜੁਦਾ ਰੀਵਿਜ਼ਨ ਨਹੀ ਹੈ।"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:213 kitsune/wiki/jinja2/wiki/review_revision.html:77 kitsune/wiki/jinja2/wiki/review_translation.html:92
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:213 kitsune/wiki/jinja2/wiki/review_revision.html:85 kitsune/wiki/jinja2/wiki/review_translation.html:99
 msgid "Search results summary:"
 msgstr "ਖੋਜ ਨਤੀਜਾ ਸਾਰ:"
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:81
+#: kitsune/wiki/jinja2/wiki/review_revision.html:89
 msgid "Revision source:"
 msgstr "ਰੀਵਿਜ਼ਨ ਸਰੋਤ:"
 
-#: kitsune/wiki/jinja2/wiki/review_revision.html:85
+#: kitsune/wiki/jinja2/wiki/review_revision.html:93
 msgid "Revision rendered html:"
 msgstr "ਰੀਵਿਜ਼ਨ ਰੈਂਡਰ ਕੀਤਾ html:"
 
@@ -13345,83 +13809,83 @@ msgstr "{id} ਦੇ {language} ਤਰਜਮੇ ਦੀ ਪੜਤਾਲ {user} ਕ
 msgid "Translation Comment: {comment}"
 msgstr "ਪੜਤਾਲ ਦੀ ਲੋੜ ਹੈ"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:42
+#: kitsune/wiki/jinja2/wiki/review_translation.html:50
 #, python-brace-format
 msgid "This translation was already reviewed by {user} on {date}."
 msgstr "ਇਹ ਤਰਜਮੇ ਦੀ ਪੜਤਾਲ ਪਹਿਲਾਂ ਹੀ {user} ਵਲੋਂ {date} ਨੂੰ ਕੀਤੀ ਗਈ।"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:47
+#: kitsune/wiki/jinja2/wiki/review_translation.html:55
 msgid "This version is outdated, but there is a new version available."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:48
+#: kitsune/wiki/jinja2/wiki/review_translation.html:56
 #, fuzzy
 msgid "Please review the latest version."
 msgstr "ਕਿ੍ਪਾ ਕਰਕੇ ਸੰਚਾਰ ID ਦਿਓ ਜੀ।"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:50
+#: kitsune/wiki/jinja2/wiki/review_translation.html:58
 #, fuzzy
 msgid "A newer version has already been reviewed."
 msgstr "ਤੁਹਾਡਾ ਰੀਵਿਜ਼ਨ ਸਮੀਖਿਆ ਕੀਤੀ ਗਈ ਹੈ।"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:58
+#: kitsune/wiki/jinja2/wiki/review_translation.html:65
 msgid "Recent English Changes"
 msgstr "ਮੌਜੁਦਾ ਇੰਗਲਿਸ਼ ਬਦਲਾਵ"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:64
+#: kitsune/wiki/jinja2/wiki/review_translation.html:71
 msgid "Submitted Translation Changes"
 msgstr "ਮੌਜੁਦਾ ਅਨੁਵਾਦ ਬਦਲਾਵ"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:66
+#: kitsune/wiki/jinja2/wiki/review_translation.html:73
 msgid "Current public translation:"
 msgstr "ਮੌਜੁਦਾ ਸਰਵਜਨਿਕ ਅਨੁਵਾਦ:"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:66
+#: kitsune/wiki/jinja2/wiki/review_translation.html:73
 msgid "Submitted translation:"
 msgstr "ਜਮਾ ਕਰਾਇਆ ਅਨੁਵਾਦ:"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:69
+#: kitsune/wiki/jinja2/wiki/review_translation.html:76
 msgid "Full Article Sources"
 msgstr "ਪੁਰਾ ਲੇਖ਼ ਸਰੋਤ"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:72
+#: kitsune/wiki/jinja2/wiki/review_translation.html:79
 #, python-brace-format
 msgid "The {default_locale} version has no approved content to show."
 msgstr "{default_locale} ਵਰਜ਼ਨ ਲਈ ਕੋਈ ਮਨਜ਼ੂਰੀ ਪ੍ਰਾਪਤ ਸਮੱਗਰੀ ਵਿਖਾਉਣ ਲਈ ਨਹੀਂ ਹੈ।"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:78 kitsune/wiki/jinja2/wiki/translate.html:176
+#: kitsune/wiki/jinja2/wiki/review_translation.html:85 kitsune/wiki/jinja2/wiki/translate.html:180
 #, python-brace-format
 msgid "Approved {default_locale} version:"
 msgstr " ਮੰਜੂਰ {default_locale} ਵਰਜਨ:"
 
-#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:192 kitsune/wiki/jinja2/wiki/includes/document_macros.html:204 kitsune/wiki/jinja2/wiki/review_translation.html:79
-#: kitsune/wiki/jinja2/wiki/review_translation.html:83
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:192 kitsune/wiki/jinja2/wiki/includes/document_macros.html:204 kitsune/wiki/jinja2/wiki/review_translation.html:86
+#: kitsune/wiki/jinja2/wiki/review_translation.html:90
 #, python-brace-format
 msgid "Revision {id} by {user} on {date}"
 msgstr "{id} ਰੀਵਿਜ਼ਨ {user} ਵਲੋਂ {date} ਨੂੰ ਦਿੱਤਾ"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:82
+#: kitsune/wiki/jinja2/wiki/review_translation.html:89
 #, python-brace-format
 msgid "Submitted {locale} translation:"
 msgstr "ਅਨੁਵਾਦ {locale} ਜਮਾ ਕਰਾਇਆ:"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:117
+#: kitsune/wiki/jinja2/wiki/review_translation.html:124
 msgid "This document does not have a current translation."
 msgstr "ਇਸ ਲੇਖ਼ ਦੀ ਮੌਜੁਦਾ ਅਨੁਵਾਦ ਉੱਪਲਭਦ ਨਹੀ ਹੈ।"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:118
+#: kitsune/wiki/jinja2/wiki/review_translation.html:125
 msgid "Translation keywords:"
 msgstr "ਅਨੁਵਾਦ ਕੀ-ਵਰਡ:"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:122
+#: kitsune/wiki/jinja2/wiki/review_translation.html:129
 msgid "Translation search results summary:"
 msgstr "ਅਨੁਵਾਦ ਖੋਜ ਨਤੀਜੇ ਸਮਰੀ:"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:126
+#: kitsune/wiki/jinja2/wiki/review_translation.html:133
 msgid "Translation source:"
 msgstr "ਅਨੁਵਾਦ ਸਰੋਤ:"
 
-#: kitsune/wiki/jinja2/wiki/review_translation.html:130
+#: kitsune/wiki/jinja2/wiki/review_translation.html:137
 msgid "Translation rendered html:"
 msgstr "ਅਨੁਵਾਦ ਦਿੱਤੀ ਗਈ html:"
 
@@ -13445,35 +13909,35 @@ msgstr "ਅਨੁਵਾਦ ਜਾਣਕਾਰੀ"
 msgid "Revision id:"
 msgstr "ਅਨੁਵਾਦ id:"
 
-#: kitsune/wiki/jinja2/wiki/revision.html:40 kitsune/wiki/jinja2/wiki/revision.html:45
+#: kitsune/wiki/jinja2/wiki/revision.html:40 kitsune/wiki/jinja2/wiki/revision.html:51
 msgid "Reviewed:"
 msgstr "ਜਾਚ ਲਿਆ ਹੈ:"
 
-#: kitsune/wiki/jinja2/wiki/revision.html:49
+#: kitsune/wiki/jinja2/wiki/revision.html:55
 msgid "Reviewed by:"
 msgstr "ਦੁਆਰਾ ਜਾਚਿਆ ਗਿਆ:"
 
-#: kitsune/wiki/jinja2/wiki/revision.html:53
+#: kitsune/wiki/jinja2/wiki/revision.html:59
 msgid "Is approved?"
 msgstr "ਪਰਵਾਨ ਹੈ?"
 
-#: kitsune/wiki/jinja2/wiki/revision.html:57
+#: kitsune/wiki/jinja2/wiki/revision.html:63
 msgid "Is current revision?"
 msgstr "ਕੀ ਮੌਜੁਦਾ ਰੀਵਿਜ਼ਨ?"
 
-#: kitsune/wiki/jinja2/wiki/revision.html:62
+#: kitsune/wiki/jinja2/wiki/revision.html:68
 msgid "Ready for localization:"
 msgstr "ਲੋਕੇਲਾਇਜੇਸਨ ਲਈ ਤਿਆਰ:"
 
-#: kitsune/wiki/jinja2/wiki/revision.html:67
+#: kitsune/wiki/jinja2/wiki/revision.html:73
 msgid "Readied for localization:"
 msgstr "ਲੋਕਾਲਾਈਜ਼ੇਸ਼ਨ ਲਈ ਰਿਡਾਇਡ:"
 
-#: kitsune/wiki/jinja2/wiki/revision.html:73
+#: kitsune/wiki/jinja2/wiki/revision.html:79
 msgid "Readied for localization by:"
 msgstr "ਲੋਕਾਲਾਈਜ਼ੇਸ਼ਨ ਰਿਡਾਇਡ ਦੁਆਰਾ:"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:122 kitsune/wiki/jinja2/wiki/revision.html:78
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:126 kitsune/wiki/jinja2/wiki/revision.html:84
 msgid "Edit article based on this revision"
 msgstr "ਇਸ ਰੀਵਿਜ਼ਨ ਦੇ ਆਧਾਰ ਤੇ ਲੇਖ਼ ਸੋਧੋ"
 
@@ -13518,74 +13982,74 @@ msgstr "ਲੇਖ਼ ਅਨੁਵਾਦ । {document}"
 msgid "Translate Article"
 msgstr "ਲੇਖ਼ ਅਨੁਵਾਦ"
 
-#: kitsune/wiki/jinja2/wiki/translate.html:25
+#: kitsune/wiki/jinja2/wiki/translate.html:29
 msgid "You are translating an English document which is not yet ready for localization."
 msgstr "ਤੁਸੀ ਇਕ ਇੰਗਲਿਸ ਲੇਖ਼ ਦਾ ਅਨੁਵਾਦ ਕਰ ਰਹੇ ਹੋ ਜੋ ਲੋਕੇਲਾਇਜੇਸਨ ਲਈ ਤਿਆਰ ਨਹੀ ਹੈ।"
 
-#: kitsune/wiki/jinja2/wiki/translate.html:44
+#: kitsune/wiki/jinja2/wiki/translate.html:48
 #, python-brace-format
 msgid "This version is outdated, but there is a new version <a href=\"{link}\">{revision}</a> available."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/translate.html:51
+#: kitsune/wiki/jinja2/wiki/translate.html:55
 #, python-brace-format
 msgid "Translating {title}"
 msgstr "ਅਨੁਵਾਦ {title}"
 
-#: kitsune/wiki/jinja2/wiki/translate.html:54
+#: kitsune/wiki/jinja2/wiki/translate.html:58
 #, fuzzy, python-brace-format
 msgid "Translating article to {locale}."
 msgstr "ਲੇਖ਼ ਅਨੁਵਾਦ {locale}"
 
-#: kitsune/wiki/jinja2/wiki/translate.html:67
+#: kitsune/wiki/jinja2/wiki/translate.html:71
 msgid "Translate Description"
 msgstr "ਅਨੁਵਾਦ ਵੇਰਵਾ"
 
-#: kitsune/wiki/jinja2/wiki/translate.html:85
+#: kitsune/wiki/jinja2/wiki/translate.html:89
 #, python-brace-format
 msgid "Title in {locale}:"
 msgstr "ਸਿੱਰਲੇਖ਼ ਵਿੱਚ {locale}:"
 
-#: kitsune/wiki/jinja2/wiki/translate.html:95
+#: kitsune/wiki/jinja2/wiki/translate.html:99
 #, python-brace-format
 msgid "Slug in {locale}:"
 msgstr "ਸਲੱਗ ਵਿੱਚ {locale}:"
 
-#: kitsune/wiki/jinja2/wiki/translate.html:106
+#: kitsune/wiki/jinja2/wiki/translate.html:110
 msgid "Save description"
 msgstr "ਵਿਵਰਨ ਸੰਭਾਲੋ"
 
-#: kitsune/wiki/jinja2/wiki/translate.html:116
+#: kitsune/wiki/jinja2/wiki/translate.html:120
 msgid "Translate Content"
 msgstr "ਅਨੁਵਾਦ ਸਮੱਗਰੀ"
 
-#: kitsune/wiki/jinja2/wiki/translate.html:129
+#: kitsune/wiki/jinja2/wiki/translate.html:133
 msgid "Recently approved updates"
 msgstr "ਹਾਲ ਹੀ ਪ੍ਰਵਾਨਗੀ ਦੇ ਦਿੱਤੇ ਅੱਪਡੇਟਸ"
 
-#: kitsune/wiki/jinja2/wiki/translate.html:141
+#: kitsune/wiki/jinja2/wiki/translate.html:145
 msgid "Differences"
 msgstr "ਫ਼ਰਕ"
 
-#: kitsune/wiki/jinja2/wiki/translate.html:147
+#: kitsune/wiki/jinja2/wiki/translate.html:151
 msgid "Note: This article has no revisions ready for localization."
 msgstr "ਨੋਟ: ਇਹ ਲੇਖ਼ ਦਾ ਕੋਈ ਸਾਰਾਸ਼ ਲੋਕੇਲਾਇਜੇਸਨ ਲਈ ਤਿਆਰ ਹੈ।"
 
-#: kitsune/wiki/jinja2/wiki/translate.html:149
+#: kitsune/wiki/jinja2/wiki/translate.html:153
 msgid "Note: There are no approved translations for this article."
 msgstr "ਨੋਟ: ਇਸ ਲੇਖ਼ ਲਈ ਕੋਈ ਅਨੁਵਾਦ ਮਾਨਤਾ ਪ੍ਰਾਪਤ ਨਹੀ ਹੈ।"
 
-#: kitsune/wiki/jinja2/wiki/translate.html:158
+#: kitsune/wiki/jinja2/wiki/translate.html:162
 #, python-brace-format
 msgid "Keywords in {locale}:"
 msgstr "ਕੀਵਰਡ ਵਿੱਚ {locale}:"
 
-#: kitsune/wiki/jinja2/wiki/translate.html:168
+#: kitsune/wiki/jinja2/wiki/translate.html:172
 #, python-brace-format
 msgid "Search result summary in {locale}:"
 msgstr "ਸੱਮਰੀ ਵਿੱਚ ਨਤੀਜਾ {locale}:"
 
-#: kitsune/wiki/jinja2/wiki/translate.html:182
+#: kitsune/wiki/jinja2/wiki/translate.html:186
 #, python-brace-format
 msgid "{locale} translation:"
 msgstr "{locale} ਅਨੁਵਾਦ:"
@@ -13950,6 +14414,27 @@ msgctxt "CTA button"
 msgid "Contact Support"
 msgstr ""
 
+#. {time} is the date and time the revision goes live.
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:493
+#, python-brace-format
+msgid "Scheduled for {time}"
+msgstr ""
+
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:495
+msgid "Cancel schedule"
+msgstr ""
+
+#. {id} is a revision number and {time} the date and time that revision goes live.
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:504
+#, python-brace-format
+msgid "Revision {id} is scheduled to go live on {time}. Approving or scheduling this revision cancels that schedule."
+msgstr ""
+
+#: kitsune/wiki/jinja2/wiki/includes/document_macros.html:506
+#, python-brace-format
+msgid "Revision {id} is scheduled to go live on {time} and will replace this one. Scheduling this revision cancels that schedule."
+msgstr ""
+
 #: kitsune/wiki/jinja2/wiki/includes/flag_form.html:2
 msgid "Report Abuse"
 msgstr "ਦੁਰਵਿਅਵਹਾਰ ਦੀ ਰਿਪੋਰਟ"
@@ -13965,6 +14450,21 @@ msgstr "ਗਲਤ ਬੱਗ ਰਿਪੋਰਟ ਜਾਂ ਸਮਰਥਨ ਅਨ�
 #: kitsune/wiki/jinja2/wiki/includes/flag_form.html:31
 msgid "Have more to say?"
 msgstr "ਕਹਿਣ ਲਈ ਹੋਰ ਹੈ?"
+
+#: kitsune/wiki/jinja2/wiki/includes/kb_macros.html:6
+msgid "Private"
+msgstr ""
+
+#. Shown under the search box of a public knowledge base's page.
+#: kitsune/wiki/jinja2/wiki/includes/kb_macros.html:14
+msgid "Open to everyone."
+msgstr ""
+
+#. Shown under the search box of a private knowledge base's page, whose articles
+#. only the members of a team or company can read.
+#: kitsune/wiki/jinja2/wiki/includes/kb_macros.html:18
+msgid "Only members can see these articles."
+msgstr ""
 
 #: kitsune/wiki/jinja2/wiki/includes/ready_for_l10n_modal.html:2
 msgid "Mark as Ready for Localization"
@@ -13982,12 +14482,12 @@ msgstr "ਫ਼ਰਕ ਦੇਖੋ"
 msgid "Close Diff"
 msgstr "ਬੰਦ ਫ਼ਰਕ"
 
-#: kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:42 kitsune/wiki/jinja2/wiki/includes/revision_list.html:22
+#: kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:42 kitsune/wiki/jinja2/wiki/includes/revision_list.html:23
 #, fuzzy
 msgid "Revision"
 msgstr "ਰਵੀਜਿਨ %s"
 
-#: kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:47 kitsune/wiki/jinja2/wiki/includes/revision_list.html:25
+#: kitsune/wiki/jinja2/wiki/includes/recent_revisions_fragment.html:47 kitsune/wiki/jinja2/wiki/includes/revision_list.html:26
 msgid "Editor"
 msgstr "ਸੰਪਾਦਕ"
 
@@ -14001,60 +14501,62 @@ msgstr "ਫੋਰਮ ਵਿੱਚ ਲੱਭੋ"
 msgid "No related documents."
 msgstr "ਦਸਤਾਵੇਜ਼ ਹਟਾਓ"
 
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:10
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:11
 msgid "Approve Translation"
 msgstr "ਅਨੁਵਾਦ ਮੰਜੂਰ"
 
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:10
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:11
 msgid "Approve Revision"
 msgstr "ਰੀਵਿਜ਼ਨ ਮੰਜੂਰ"
 
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:11
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:12
 msgid "Defer Translation"
 msgstr "ਟਾਲ ਅਨੁਵਾਦ"
 
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:11
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:12
 msgid "Defer Revision"
 msgstr "ਦੁਹਰਾਈ ਟਾਲ"
 
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:12
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:13
 msgid "Cancel Review"
 msgstr "ਮੁੜ ਜਾਚ ਰੱਦ ਕਰੋ"
 
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:18
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:19
 msgid "Accept this Translation"
 msgstr "ਇਹ ਅਨੁਵਾਦ ਮਨਜ਼ੂਰ ਕਰੋ"
 
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:18
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:19
 msgid "Accept this Revision"
 msgstr "ਇਹ ਰੀਵਿਜ਼ਨ ਮਨਜ਼ੂਰ ਕਰੋ"
 
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:25
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:26
 #, python-format
 msgid "You are about to approve your own edit. Please consider asking our <a href=\"%(url)s\">reviewers</a> instead."
 msgstr "ਤੁਸੀ ਆਪਣੀ ਸੋਧ ਆਪ ਮਨਜੂਰ ਕਰਨ ਲੱਗੇ ਹੋ। ਕ੍ਰਿਪਾ ਕਰਕੇ ਸਾਡੇ ਸਮੀਖਕਾਂ </a> ਦੇ ਬਜਾਏ ਪੂੱਛ <a href=\"%(url)s\"> ਉੱਤੇ ਵਿਚਾਰ ਕਰੋ।"
 
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:32
-msgid "Clicking Accept will make this version of the article live! Please take a moment to be sure all options are correct."
-msgstr "ਸਵੀਕਾਰੇਂ ਕਲਿਕ ਕਰਣਾ ਇਸ ਸੰਸਕਰਣ ਦੇ ਲੇਖ ਰਹਿੰਦੇ ਹਨ ਕਰ ਦੇਵੇਗਾ ! ਕ੍ਰਿਪਾ ਇੱਕ ਪਲ ਲੈਣ ਲਈ ਸੁਨਿਸਚਿਤ ਕਰੀਏ ਕਿ ਸਾਰੇ ਵਿਕਲਪ ਠੀਕ ਹਨ।"
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:33
+msgid "Clicking Accept will make this version of the article live now, or at the time you choose. Please take a moment to be sure all options are correct."
+msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:46
-msgid "Thanks for taking the time to review these changes. Clicking Accept will make this version of the article live! Please take a moment to be sure all options are correct."
-msgstr "ਸਮਾਂ ਲੈਣ ਲਈ ਇਸ ਪਰਿਵਰਤਨਾਂ ਦੀ ਸਮਿਖਿਅਕ ਲਈ ਧੰਨਵਾਦ। ਸਵੀਕਾਰੇਂ ਕਲਿਕ ਕਰਣਾ ਇਸ ਸੰਸਕਰਣ  ਦੇ ਲੇਖ ਰਹਿੰਦੇ ਹਨ ਕਰ ਦੇਵੇਗਾ ! ਕ੍ਰਿਪਾ ਇੱਕ ਪਲ ਲੈਣ ਲਈ ਸੁਨਿਸਚਿਤ ਕਰੀਏ ਕਿ ਸਾਰੇ ਵਿਕਲਪ ਠੀਕ ਹਨ।"
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:47
+msgid ""
+"Thanks for taking the time to review these changes. Clicking Accept will make this version of the article live now, or at the time you choose. Please take a moment to be sure all options are "
+"correct."
+msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:80
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:85
 msgid "Accept"
 msgstr "ਮਨਜ਼ੂਰ"
 
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:85
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:90
 msgid "Defer this Translation"
 msgstr "ਇਸ ਨੂੰ ਅਨੁਵਾਦ ਕਰਨਾ ਟਾਲੋ"
 
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:85
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:90
 msgid "Defer this Revision"
 msgstr "ਦੁਹਰਾਈ ਨੂੰ ਟਾਲ"
 
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:91
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:96
 msgid ""
 "Thanks for taking the time to review these changes. Please thank the editor and then give specific, constructive feedback about what you feel needs to change in order for the revision to be "
 "acceptable."
@@ -14062,79 +14564,79 @@ msgstr ""
 "ਸਮਾਂ ਲੈਣ ਲਈ ਇਸ ਪਰਿਵਰਤਨਾਂ ਦੀ ਸਮਿਖਿਅਕ ਲਈ ਧੰਨਵਾਦ। ਸੰਪਾਦਕ ਲਈ ਧੰਨਵਾਦ ਅਤੇ ਫਿਰ ਵਿਸ਼ੇਸ਼ , ਤੂੰ ਕੀ ਕਰਣ ਲਈ ਸੰਸ਼ੋਧਨ ਲਈ ਆਦੇਸ਼ ਵਿੱਚ ਬਦਲਨ ਲਈ ਮੰਨਣਯੋਗ ਹੋ ਕਰਣ ਦੀ ਜ਼ਰੂਰਤ ਹੈ ਲੱਗਦਾ ਹੈ  ਦੇ ਬਾਰੇ ਵਿੱਚ ਸਕਾਰਾਤਮਕ ਪ੍ਰਤੀਕਿਰਆ ਜੋ"
 " ਤੁਸੀ ਬਦਲਨ ਦੀ ਜਰੂਰਤ ਹੈ।"
 
-#: kitsune/wiki/jinja2/wiki/includes/review_form.html:105
+#: kitsune/wiki/jinja2/wiki/includes/review_form.html:110
 msgid "Defer"
 msgstr "ਟਾਲਨਾ"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:7 kitsune/wiki/jinja2/wiki/includes/revision_list.html:139
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:8 kitsune/wiki/jinja2/wiki/includes/revision_list.html:143
 msgid "Compare Selected Translations"
 msgstr "ਚੁਣੇ ਹੋਏ ਅਨੁਵਾਦਾ ਦੀ ਤੁਲਣਾ"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:7 kitsune/wiki/jinja2/wiki/includes/revision_list.html:139
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:8 kitsune/wiki/jinja2/wiki/includes/revision_list.html:143
 #, fuzzy
 msgid "Compare Selected Revisions"
 msgstr "ਚੁਣੇ ਹੋਏ ਅਨੁਵਾਦਾ ਦੀ ਤੁਲਣਾ"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:24
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:25
 msgid "Significance - MT: Major Content Changes. M: Content Changes. Empty: Minor Changes."
 msgstr "ਮਹੱਤਤਾ- MT: ਮੇਜਰ ਸਾਮਗਰੀ ਵਿੱਚ ਤਬਦੀਲੀ। M: ਸਾਮਗਰੀ ਤਬਦੀਲੀ। ਖਾਲੀ: ਥੋੜੀ ਤਬਦੀਲੀ।"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:24
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:25
 msgctxt "First letter of 'Significance'"
 msgid "S"
 msgstr "S"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:26
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:27
 msgctxt "First letter of 'Ready for localization'"
 msgid "R"
 msgstr "R"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:61
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:62
 msgid "Review"
 msgstr "ਸਮਿਖਿਆ"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:63
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:64
 msgctxt "revision"
 msgid "Unreviewed"
 msgstr "ਨਾ-ਸਮਿਖਿਆ"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:67
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:71
 msgid "Current"
 msgstr "ਮੌਜੁਦਾ"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:72
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:76
 msgid "Reviewed"
 msgstr "ਸਮੀਖਿਆ ਕੀਤੀ"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:94
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:98
 msgid "This revision is ready for localization."
 msgstr "ਇਹ ਰੀਵਿਜ਼ਨ ਲੋਕੇਲਾਇਜੇਸਨ ਲਈ ਤਿਆਰ ਹੈ।"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:99 kitsune/wiki/jinja2/wiki/includes/revision_list.html:102
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:103 kitsune/wiki/jinja2/wiki/includes/revision_list.html:106
 msgid "This revision is not ready for localization."
 msgstr "ਇਹ ਰੀਵਿਜ਼ਨ ਲੋਕੇਲਾਇਜੇਸਨ ਲਈ ਤਿਆਰ ਨਹੀ ਹੈ।"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:105
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:109
 msgid "This revision is not approved yet."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:107
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:111
 msgid "This revision has trivial changes only."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:109
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:113
 msgid "This revision cannot be marked ready for localization."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:114
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:118
 msgid "This is a translated document."
 msgstr ""
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:127
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:131
 msgid "Delete this revision"
 msgstr "ਇਸ ਰਵੀਜਨ ਨੂੰ ਹਟਾਓ"
 
-#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:144
+#: kitsune/wiki/jinja2/wiki/includes/revision_list.html:151
 msgid "This document has no revisions."
 msgstr "ਇਸ ਲੇਖ਼ ਦਾ ਕੋਈ ਰੀਵਿਜ਼ਨ ਨਹੀ ਹੈ।"
 
