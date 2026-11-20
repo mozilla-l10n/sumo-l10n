@@ -1,25 +1,30 @@
-name: Synchronize Swedish
+name: Synchronize locales
 on: [push]
 jobs:
-  synchronize-swedish:
+  synchronize-locales:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
+      # Pontoon writes to sv_SE and nb_NO, but SUMO reads sv and no.
       - name: Copy sv-SE into sv
         run: |
           cp -pr ./sv_SE/* ./sv
           sed -i'' -e 's/Language: sv_SE/Language: sv/g' ./sv/LC_MESSAGES/*.po
+      - name: Copy nb-NO into no
+        run: |
+          cp -pr ./nb_NO/* ./no
+          sed -i'' -e 's/Language: nb_NO/Language: no/g' ./no/LC_MESSAGES/*.po
       - name: Commit changes
         run: |
           # Only try to commit if there are pending changes
           if [[ $(git diff --exit-code) || $(git ls-files --other --exclude-standard) ]]
           then
             git config user.email 'sumodev@mozilla.com'
-            git config user.name 'github-action-sycnhronize-swedish'
+            git config user.name 'github-action-synchronize-locales'
             git add .
             git status
-            git commit -m "copy sv-SE into sv"
+            git commit -m "copy sv-SE into sv and nb-NO into no"
             git push origin HEAD:master
           else
             echo "No changes found."
